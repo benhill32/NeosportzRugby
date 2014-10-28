@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+    <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
+    <script type="text/javascript" src="../js/settings.js"></script>
+
+<style>
+    #btn1,#btn2{
+
+        padding:10px;
+
+    }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="divmainmenu">
+    <div id="backicondiv"   onclick="weblink('../index.html')">
+        <img src="../img/back_off.png"  style="vertical-align:middle;height:20px;">
+    </div>
+    <div class="mainheaderimgicon"  onclick="weblink('../index.html')">
+        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+        Neosportz Football
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div style="height:50px; float:left;">
+                        <img src="../img/Loading.gif" id="busy1" align="left"  height="30px" style="padding-right:10px;" >
+
+                    </div>
+
+                    <div style="float:left;">
+                       Resyncing Data,<br>
+                        this may take a while if you aren't<br>
+                        on a high speed network.
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <Div class="mainmenuwifi" align="left" >
+    <div class="floatleftsettings">
+        <strong>Mobile Data</strong>
+        <p>Only Sync on Wi-Fi network</p>
+    </div>
+
+    <div class="floatleftsettings">
+        <div class="btn-group btn-toggle" style="padding-left: 40px;">
+            <button id="btn1" class="btn btn-xs btn-default"  onclick="chkmobiledata('btn1')">ON</button>
+            <button id="btn2" class="btn btn-xs btn-primary active"   onclick="chkmobiledata('btn2')">OFF</button>
+        </div>
+    </div>
+
+
+
+</Div>
+
+    <Div class="mainmenusettings" align="left" id="settingsync" onclick="onclicksyncloaddata()" >
+       <strong>Sync</strong>
+        <p>This will download everything since the last time your device synced</p>
+        <p id="lastsyncdate"></p>
+    </Div>
+    <Div class="mainmenusettings" align="left"  id="settingdeleteall" onclick="cleardata()" >
+        <strong>Delete all data & Sync</strong>
+        <p>Sometimes things just don't go right, you may need to delete all the data for this app and start again.</p>
+
+    </Div>
+
+<Div class="mainmenusettings" align="left" id="idhelp" onclick="weblink('../pages/Help.html')" >
+    <strong>Application tutorial</strong>
+    <p>Some handy hints</p>
+</Div>
+
+<!--<Div class="mainmenusettings" id="divclearfav" onclick="clearfavteam()" align="left" >
+    <strong>Clear favourite club</strong>
+    <p>If you selected incorrect club to follow you can remove it here.</p>
+</Div>-->
+
+
+    <Div class="mainmenusettings"  align="left" >
+        <strong>Device ID</strong>
+        <p id="deviceid"></p>
+    </Div>
+
+
+
+</div>
+<div class="footer">
+    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+    <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
+</div>
+
+</body>
+</html>

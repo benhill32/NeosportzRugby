@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/clubs.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            refreshdata();
+        }
+    </script>
+
+
+    <title></title>
+<style>
+  #mainmenu img{
+        padding-left:5px;
+        padding-right: 5px;
+    }
+
+</style>
+
+</head>
+<body>
+<div class="divmainmenu">
+    <div id="backicondiv"   onclick="weblink('../index.html')">
+        <img src="../img/back_off.png"  style="vertical-align:middle;height:20px;">
+    </div>
+    <div class="mainheaderimgicon"  onclick="weblink('../index.html')">
+        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+        Neosportz Football
+    </div>
+
+</div>
+
+<div class="modal" id="basicModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="divmainheader" data-dismiss="modal">
+                    <img src="../img/info.png" height="20">
+                    Club History</div>
+            </div>
+            <div class="modal-body">
+                <div  id="modelhistory">
+
+
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal" id="basicModalContact" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="divmainheader">
+                    <img src="../img/info.png" height="20">
+                    Club Contact</div>
+            </div>
+            <div class="modal-body" id="modelcontact">
+
+            </div>
+            <div class="modal-footer" data-dismiss="modal" align="center">
+                Close
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+<div id="mainmenu">
+
+</div>
+</div>
+<div class="footer">
+    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+    <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
+</div>
+
+</body>
+</html>

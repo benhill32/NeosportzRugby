@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/schedule.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+
+    <style>
+    #btn1, #btn2{
+        padding-bottom:5px;
+        padding-top:5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+</style>
+
+<script type="text/javascript">
+    $(function(){
+        $("ul li").click(function(){
+            $("ul li").removeClass("on");
+            $(this).addClass("on");
+        });
+    });
+    document.addEventListener("deviceready", onDeviceReadysch, false);
+    function onDeviceReadysch() {
+        refreshdata();
+    }
+
+
+</script>
+
+</head>
+<body>
+<div class="divmainmenu">
+    <div id="backicondiv"   onclick="weblink('../pages/ScheduleMenu.html')">
+        <img src="../img/back_off.png"  style="vertical-align:bottom;height:20px;">
+    </div>
+    <div class="mainheaderimgicon"  onclick="weblink('../index.html')">
+        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+        Neosportz Football
+    </div>
+    <div class="mainheaderimgicon" id="filterswitch">
+
+
+        <div class="btn-group btn-toggle">
+        <button id="btn1" class="btn btn-xs btn-default"  onclick="allowfilter(1)">ON</button>
+        <button id="btn2" class="btn btn-xs btn-primary active"   onclick="allowfilter(0)">OFF</button>
+
+    </div>
+
+
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="modal" id="basicModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-footer" id="remind" data-dismiss="modal" align="center">
+
+                </div>
+                <div class="modal-footer" id="Directions" data-dismiss="modal" align="center">
+                    Directions to park
+
+                </div>
+                <div class="modal-footer" id="score" data-dismiss="modal" align="center">
+
+                </div>
+                <div class="modal-footer" id="modelfooter" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="basicModalyesno" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Would you like to add a reminder for this game?
+
+            </div>
+            <div class="modal-footer" data-dismiss="modal" align="center">
+                <div class="modelfloat50 left"  align="center">
+
+                    No
+                </div>
+                <div class="modelfloat50"  align="center" data-toggle="modal" data-target="#basicModaltime">
+
+                    Yes
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal" id="basicModaltime" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                       Remind Me
+                    </div>
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(1440)">
+                        1 Day before
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(120)">
+                    2 Hours before
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(60)">
+                    1 Hour before
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(30)">
+                   30 Minutes before
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="divschedules" align="center">
+
+</div>
+
+</div>
+
+<div class="footer">
+    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+    <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
+</div>
+
+</body>
+</html>

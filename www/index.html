@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Hello World</title>
+
+
+
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+       <script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="cordova.js"  charset="utf-8"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/CreateOpenDB.js"></script>
+        <script type="text/javascript" src="js/mainindex.js"></script>
+        <script type="text/javascript" src="js/loaddata.js"></script>
+
+
+
+
+        <script type="text/javascript"  charset="utf-8">
+
+
+
+    document.addEventListener("deviceready", onDeviceReadyindex, false);
+
+    function onDeviceReadyindex() {
+        //db.transaction(createDB, errorCBfunc, successCBfunc);
+        refreshdata();
+
+    }
+
+
+
+        </script>
+<style>
+    .modal-footer{
+
+        padding:0px !important;
+    }
+    .container-fluid{
+        padding-top:0px;
+    }
+
+</style>
+    </head>
+    <body>
+
+    <div class="divmainmenu">
+        <div id="backicondiv">
+
+            &nbsp;
+        </div>
+        <div class="mainheaderimgicon"  >
+
+            <img src="img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+
+            Neosportz Football
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div id="mainbackground" android:alpha=".75">
+    </div>
+    <div id="mainfore" class="mainforeground">
+    <div class="container-fluid">
+        <div class="modal" id="basicModalnofav" tabindex="-1"  role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                      It appears to be that you haven't set your favourite club yet. Would you like to set it now?
+                       You can do this anythime by viewing the teams of a club an pressing the star button in the
+                        navigation bar.
+
+
+                    </div>
+                    <div class="modal-footer"  data-dismiss="modal" align="center">
+
+                        <div class="modelfloatleftfirst left" id="dontshow"  align="center" onclick="hadclubfunction()">
+
+                            Don't show this again
+                        </div>
+
+                        <div class="modelfloatleft left" id="notnow" align="center"  onclick="hadclubchecklater()">
+                            Not now
+                        </div>
+                        <div class="modelfloatright" id="indexyes"  align="center" onclick="showclubsfun()">
+                            <div style="width:100%;" align="center">
+                                Yes
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="basicModalteams" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="divmainheader">
+
+                            Select a Favourite club
+                        </div>
+                    </div>
+                    <div id="clubfav">
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <div style="height:50px; float:left;">
+                            <img src="img/Loading.gif" id="busy1" align="left"  height="30px" style="padding-right:10px;" >
+
+                        </div>
+
+                        <div style="float:left;">
+                            Loading data for the first time,<br>
+                            this may take a while if you aren't<br>
+                            on a high speed network.
+
+                        </div>
+
+
+
+                    </div>
+                 </div>
+
+
+
+            </div>
+        </div>
+
+
+
+        <div id="indexdiv" style="">
+    <div class="divmain" onclick="weblink('pages/ScheduleMenu.html')">
+    Schedules
+    </div>
+    <div class="divmain"  onclick="weblink('pages/ResultsMenu.html')">
+        Results
+    </div>
+    <div class="divmain" onclick="weblink('pages/standings.html?id=61')">
+        Standings
+    </div>
+    <div class="divmain"  onclick="weblink('pages/clubs.html')">
+        Clubs
+    </div>
+    <div class="divmain"  onclick="weblink('pages/news.html')">
+       News
+    </div>
+    <div class="divmain"  onclick="weblink('pages/settings.html')">
+        Settings
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+    <div class="footer" >
+        <img src="img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+        <img src="img/Loading.gif" id="busy" align="right"  height="40px" >
+    </div>
+
+    </body>
+<script type="application/javascript">
+
+
+
+</script>
+
+</html>

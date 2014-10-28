@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/clubsteams.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            refreshdata();
+        }
+    </script>
+    <title></title>
+</head>
+<body>
+<div class="divmainmenu">
+    <div id="backicondiv"   onclick="weblink('../pages/clubs.html')">
+        <img src="../img/back_off.png"  style="vertical-align:middle;height:20px;">
+    </div>
+    <div class="mainheaderimgicon"  onclick="weblink('../pages/clubs.html')">
+        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+        Neosportz Football
+    </div>
+    <div> <img id="imgfavfollow" align="right" height="30px" style="margin-top: 15px;">
+
+
+    </div>
+</div>
+
+
+<div class="container-fluid">
+<div id="teamsdiv">
+
+</div>
+</div>
+
+
+<div class="footer">
+    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+    <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
+</div>
+</body>
+</html>

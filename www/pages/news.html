@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <link href="../Bootstrap/css/docs.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/news.js"></script>
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+
+    <title></title>
+
+
+    <style>
+        a {
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="divmainmenu">
+    <div id="backicondiv"   onclick="weblink('../index.html')">
+        <img src="../img/back_off.png"  style="vertical-align:middle;height:20px;">
+    </div>
+    <div class="mainheaderimgicon"  onclick="weblink('../index.html')">
+        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+        Neosportz Football
+    </div>
+    <div id="loadnews">
+
+      <!--  <img src="../img/refresh.png"  onclick="loadnewdata()"  align="right" style="margin-top: 15px;"  height="30px"  >-->
+    </div>
+</div>
+<div class="container-fluid-news">
+    <div class="modal" id="basicModalteams" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Select a Favourite club
+                    </div>
+                </div>
+                <div id="clubfav">
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="basicModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader"  data-dismiss="modal">
+
+                        <div id="newtitle"></div>
+                      </div>
+                </div>
+                <div class="modal-body" >
+                    <div id="modelnews">
+
+
+                    </div>
+
+                    <div class="modal-footer" data-dismiss="modal" align="center">
+                        Close
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="newsmain">
+
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+    <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
+</div>
+</body>
+</html>
