@@ -132,7 +132,7 @@ function successCBfunc() {
 function passscoretoserver(testvar){
 
     var http = new XMLHttpRequest();
-    var url = "http://centralfootball.neosportz.com/loaddatafromapp.aspx";
+    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
     var params = "?" + testvar;
    // alert(url + params);
     http.open("POST", url + params, true);
@@ -164,9 +164,9 @@ function blankLastUpdatesec(){
     xmlHttp = new XMLHttpRequest();
 
    // $('#busy').show();
-    xmlHttp.open("GET", 'http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
     xmlHttp.send();
-  //  alert('http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
+  //  alert('http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
     db.transaction(function(tx) {
