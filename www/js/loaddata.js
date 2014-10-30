@@ -184,7 +184,7 @@ function getchecksync(tx, results) {
                     $('#indexloadingdata').modal('hide')
                     $('#mainfore').removeClass('mainforeground2');
                     $('#mainfore').addClass('mainforeground');
-               //    window.plugins.toast.showLongCenter('Your App is Updated!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+            //       window.plugins.toast.showLongCenter('Your App is Updated!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
                 }, 5000);
             });
 
@@ -277,7 +277,7 @@ function tokenHandler (result) {
    // alert('tokenB: '+ result);
     //$('#busy').show();
     var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
-  //  navigator.notification.alert(strur);
+    navigator.notification.alert(strur);
     xmlHttptt.open("GET",strur ,false);
     xmlHttptt.send();
    // $('#busy').hide();

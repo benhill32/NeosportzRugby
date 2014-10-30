@@ -184,7 +184,10 @@ var randfunc = function() {
 
 function updatemenutables(obj){
 
-
+    db.transaction(function(tx) {
+        tx.executeSql('Drop TABLE MobileApp_Results_Table_Menu ');
+        console.log("MobileApp_Results_Table_Menu table is Dropped");
+    });
 
     db.transaction(function(tx) {
         tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
@@ -201,6 +204,17 @@ function updatemenutables(obj){
     db.transaction(function(tx) {
         tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
         console.log("MobileApp_Results_Menu table is created");
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_Menu (_id INTEGER NOT NULL, TournamentName TEXT NOT NULL, UpdateDateUTC TEXT NOT NULL,OrderID INTEGER NOT NULL)');
+        console.log("MobileApp_Results_Table_Men table is created");
+    });
+
+    $.each(obj.vwApp_Results_Table_Men, function (idx, obj) {
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO MobileApp_Results_Table_Menu (_id, TournamentName,UpdateDateUTC ,OrderID ) VALUES (' + obj._id + ',"' + obj.TournamentName + '", "' + obj.UpdateDateUTC + '",' + obj.OrderID + ')');
+            console.log("INSERT INTO MobileApp_Results_Table_Menu is created");
+        });
     });
 
 
@@ -328,7 +342,7 @@ function syncmaintables(obj){
             tx.executeSql('Delete from MobilevwApp_Base_Players where ID =' + obj.ID);
             console.log('Delete MobilevwApp_Base_Players where ID');
         });
-        db.transaction(function (tx) {
+  db.transaction(function (tx) {
             tx.executeSql('INSERT INTO MobilevwApp_Base_Players(ID,_id,ClubID,FullName,Base64,TeamID,UpdateSecondsUTC,UpdateSecondsUTCBase64,UpdateDateUTC,UpdateDateUTCBase64,Position,DeletedateUTC) VALUES (' + obj.ID + ',' + obj._id + ',' + obj.ClubID + ',"' + obj.FullName + '","' + obj.Base64 + '","' + obj.TeamID + '","' + obj.UpdateSecondsUTC + '","' + obj.UpdateSecondsUTCBase64 + '","' + obj.UpdateDateUTC + '","' + obj.UpdateDateUTCBase64 + '","' + obj.Position + '","' + obj.DeletedateUTC + '")');
             console.log("INSERT INTO MobilevwApp_Base_Players is created");
         });

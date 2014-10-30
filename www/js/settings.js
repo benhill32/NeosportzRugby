@@ -161,7 +161,7 @@ function clearfavteam(){
 }
 
 function cleardata(){
-  //  onOfflinesetting();
+    //onOfflinesetting();
 
 
    // if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {

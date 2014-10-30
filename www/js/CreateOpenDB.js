@@ -78,6 +78,8 @@ function droptables(){
         console.log("Mobilescreenimage table is Dropped");
     });
 
+
+
 }
 
 function createDB(tx) {
@@ -110,7 +112,7 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_vwApp_Teams (ID INTEGER NOT NULL,_id INTEGER NOT NULL,Name TEXT NOT NULL,Base64 TEXT NULL,ClubID INTEGER NOT NULL,DivisionID INTEGER NOT NULL,DivisionName TEXT NOT NULL,UpdateSecondsUTC TEXT NOT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL,UpdateDateUTC TEXT NOT NULL,UpdateDateUTCBase64 TEXT NOT NULL,DeletedateUTC TEXT NOT NULL)');
     console.log("MobileApp_vwApp_Teams table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Base_Players (ID INTEGER NOT NULL,_id INTEGER NOT NULL,ClubID INTEGER NOT NULL,FullName TEXT NOT NULL,Base64 TEXT NULL,TeamID INTEGER NOT NULL,UpdateSecondsUTC TEXT NOT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL,UpdateDateUTC TEXT NOT NULL,UpdateDateUTCBase64 TEXT NOT NULL,Position TEXT NOT NULL,DeletedateUTC TEXT NOT NULL)');
+     tx.executeSql('CREATE TABLE IF NOT EXISTS MobilevwApp_Base_Players (ID INTEGER NOT NULL,_id INTEGER NOT NULL,ClubID INTEGER NOT NULL,FullName TEXT NOT NULL,Base64 TEXT NULL,TeamID INTEGER NOT NULL,UpdateSecondsUTC TEXT NOT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL,UpdateDateUTC TEXT NOT NULL,UpdateDateUTCBase64 TEXT NOT NULL,Position TEXT NOT NULL,DeletedateUTC TEXT NOT NULL)');
     console.log("MobilevwApp_Base_Players table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Players_Images (ID INTEGER NOT NULL,_id INTEGER NOT NULL,Base64 TEXT NULL,UpdateDateUTCBase64 TEXT NOT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL,DeletedateUTC TEXT NOT NULL)');
