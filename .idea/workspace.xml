@@ -46,8 +46,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5191257" vertical-offset="4458" max-vertical-offset="7344">
-              <caret line="279" column="2" selection-start-line="279" selection-start-column="2" selection-end-line="279" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="1075" max-vertical-offset="7344">
+              <caret line="74" column="17" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -679,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5191257" vertical-offset="4458" max-vertical-offset="7344">
-          <caret line="279" column="2" selection-start-line="279" selection-start-column="2" selection-end-line="279" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="1075" max-vertical-offset="7344">
+          <caret line="74" column="17" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="17" />
           <folding />
         </state>
       </provider>
