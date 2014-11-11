@@ -47,12 +47,15 @@ function getMenu_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
+        $('#mainmenustandingmenu').append('<Div class="divmainmenunew" onclick="redirectstandings(' + menu._id + ')" >' +
 
-
-        $('#mainmenustandingmenu').append('<Div class="divmainmenunew"><a href="standings.html?id=' + menu._id + '">' +
-
-            '<span >' + menu.TournamentName + '</span></a></Div>');
+            '<span >' + menu.TournamentName + '</span></Div>');
     }
 
 
+}
+
+function redirectstandings(ID){
+
+    window.location = "../pages/standings.html?id=" + ID;
 }

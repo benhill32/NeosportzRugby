@@ -7,6 +7,7 @@ function onDeviceReady() {
     deviceIDfunc = device.uuid;
     loadindexmessage();
 }
+db.transaction(getbackground, errorCBfunc, successCBfunc);
 
 function loadindexmessage() {
     db.transaction(checkclubsinsert, errorCBfunc, successCBfunc);

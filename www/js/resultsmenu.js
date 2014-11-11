@@ -45,10 +45,15 @@ function getMenu_success(tx, results) {
 
 
 
-        $('#mainmenuresultsch').append('<Div class="divmainmenunew"><a href="results.html?id=' + menu.DivisionID + '">' +
+        $('#mainmenuresultsch').append('<Div class="divmainmenunew" onclick="redirectresults(' + menu.DivisionID + ')" >' +
 
-            '<span >' + menu.DivisionName + '</span></a></Div>');
+            '<span >' + menu.DivisionName + '</span></Div>');
     }
 
     db = null;
+}
+
+function redirectresults(ID){
+
+    window.location = "../pages/results.html?id=" + ID;
 }

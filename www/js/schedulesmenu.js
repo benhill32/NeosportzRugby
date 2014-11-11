@@ -47,11 +47,17 @@ function getMenu_success(tx, results) {
         var menu = results.rows.item(i);
 
 
+        $('#mainmenuschmenu').append('<Div class="divmainmenunew" onclick="redirectschedules(' + menu.DivisionID + ')" >' +
 
-        $('#mainmenuschmenu').append('<Div class="divmainmenunew"><a href="schedules.html?id=' + menu.DivisionID + '">' +
+       // $('#mainmenuschmenu').append('<Div class="divmainmenunew"><a href="schedules.html?id=' + menu.DivisionID + '">' +
 
-            '<span >' + menu.DivisionName + '</span></a></Div>');
+            '<span >' + menu.DivisionName + '</span></Div>');
     }
 
 
+}
+
+function redirectschedules(ID){
+
+    window.location = "../pages/schedules.html?id=" + ID;
 }
