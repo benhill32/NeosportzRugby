@@ -45,11 +45,11 @@
 </head>
 <body>
 <div class="divmainmenu">
-    <div id="backicondiv"   onclick="weblink('../pages/ResultsMenu.html')">
+    <div id="backicondiv"   onclick="weblink('../index.html')">
         <img src="../img/back_off.png"  style="vertical-align:middle;height:20px;">
     </div>
     <div class="mainheaderimgicon"  onclick="weblink('../index.html')">
-        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+        <img src="../img/Soccer_ball.png"  style="vertical-align:middle;height:40px;" align="middle">
         Neosportz Football
     </div>
     <div class="mainheaderimgicon" id="filterswitch">
@@ -65,7 +65,55 @@
 </div>
 
 <div class="container-fluid">
+    <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <div class="modal-body">
+                    <div style="height:50px; float:left;">
+                        <img src="../img/Loading.gif" id="busy1" align="left"  height="30px" style="padding-right:10px;" >
+                    </div>
+                    <div style="float:left;">
+                        Checking for new data,<br>
+                        this may take a while if you aren't<br>
+                        on a high speed network.
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="modal" id="basicModalresults" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" >
+                <div class="modal-body" >
+                <div style="padding-bottom: 10px;clear: both;min-height: 40px;border-bottom: 1px solid #e5e5e5;">
+                    <div id="resulthometeam" style="width:45%;float: left; text-align: center;"></div>
+                    <div id="resultscore" style="width:10%;float: left; text-align: center;"></div>
+                    <div id="resultawayteam" style="width:45%;float: left; text-align: center;"></div>
+
+                </div>
+                    <div style="padding-top: 10px;" id="divscorers">
+                        <div id="resulthomegoals" style="width:45%;float: left;"></div>
+                        <div id="resultvs1" style="width:10%;float: left;">&nbsp;</div>
+                        <div id="resultawaygoals" style="width:45%;float: left;"></div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" id="modelfooter" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 <div id="divresults" align="center">
 
 </div>

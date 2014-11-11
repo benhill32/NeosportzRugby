@@ -35,6 +35,7 @@ body {
   //      color-stop(0, #A7A7A7),
   //      color-stop(0.51, #E4E4E4)
   //  );
+
     background-attachment:fixed;
     font-family:"Helvetica Neue",Helvetica,sans-serif;
     font-size:12px;
@@ -46,17 +47,37 @@ body {
 
 }
 
+#resulthomegoals,#resultawaygoals{
+
+    font-size: 12px !important;
+}
+#duvimgfollow{
+
+    text-align: right;
+    width: 100px;
+    float: right;
+    padding-right: 20px;
+}
+#resultsmore{
+
+    padding:10px;
+}
+#divtime{
+    clear:both;
+    padding-top: 30px;
+}
 
 
-
-
-
+#divplayers{
+    clear:both;
+    padding-top: 30px;
+}
 
 #backicondiv{
     width: 20px;
    padding-top: 25px;
     float: left;
-
+    padding-bottom: 10px;
 }
 #filterswitch{
     padding-top: 7px;
@@ -65,6 +86,7 @@ body {
 }
 .divmainmenu
 {
+    padding-top: 5px;
     width: 100%;
     position: fixed;
     top:0;
@@ -78,6 +100,25 @@ body {
     min-height: 60px;
 }
 
+.divmainmenunew{
+    padding-top: 5px;
+    width: 100%;
+
+    top:0;
+text-align: center;
+    border-bottom: 1px solid grey;
+
+    font-size:18px;
+
+    vertical-align: middle;
+    min-height: 60px;
+
+}
+
+.divmainmenunew a{
+    color: black;
+
+}
 
 .imgheader{
 
@@ -115,7 +156,22 @@ body {
 
 
 }
+.mainmenuscore select{
+    width:80%;
 
+}
+.floatleftnew{
+    float:left;
+    width:15%;
+    padding:1px;
+}
+.floatleft2{
+
+    float:left;
+    width:40%;
+    padding:1px;
+
+}
 
 .floatleft3{
 
@@ -352,7 +408,7 @@ position: fixed;
 
 
 .mainmenuwifi{
-    height: 60px;
+    height: 70px;
     text-align: left;
     background-color: #ffffff;
     border-bottom: 1px solid gray;
@@ -360,7 +416,7 @@ position: fixed;
 //    margin-bottom: 5px;
     left:5%;
 //  width:80%;
-    padding:6px;
+    padding:10px;
 
 
 }
@@ -394,6 +450,7 @@ position: fixed;
         position: fixed; /* Display modal in the centre of your screen */
         overflow-y: scroll; /*  Ensure that the modal is scroll-able */
         -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
+
     }
     .modal.fade.in{
         top: 5px; /* Use more screen real estate */
@@ -404,6 +461,15 @@ position: fixed;
         max-height: 2400px;
     }
 }
+@media (max-width: 480px) {
+    #divstandings{
+        font-size:12px;
+
+    }
+}
+
+
+
 
 /* Now adjust the height so it handles various screen sizes & orientations */
 /* You could make this as granular as you like, or have it more granular at common screen sizes
@@ -423,12 +489,24 @@ position: fixed;
     text-decoration: none !important;
     padding-bottom: 200px;
 }
+
+#addnewfeed,a:hover, a:focus{
+    padding-top: 80px;
+    color: #333 !important;
+    text-decoration: none !important;
+    padding-bottom: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #loadnews{
     height: 50px;
     top: 15px;
-    float:right;
-
-    
+    float:left;
+    padding-left: 30px;
+    padding-top: 12px;
+    padding-right: 30px;
+    min-height: 60px;
 }
 .container-fluid{
     padding-left:0px !important;
@@ -462,8 +540,9 @@ position: fixed;
     z-index: 10;
  //   background:#7f7f7f;
     background:rgba(255,255,255,0.75);
-    top: 40px;
-
+    top: 60px;
+    bottom: 60px;
+    overflow-y: scroll;
 }
 .sponsordiv{
 
@@ -517,7 +596,7 @@ position: fixed;
 
 }
 .mainmenuplayers{
-    height: 90px;
+    height: 120px;
     text-align: left;
     background-color: #ffffff;
     border-bottom: 1px solid gray;
@@ -673,7 +752,10 @@ position: fixed;
     clear: both;
 
 }
+.padding2 {
+    padding:2px;
 
+}
 
 .bold{
     font-weight: bold;
@@ -699,6 +781,12 @@ position: fixed;
 
     color: #428bca;
 }
+#divmainheadercancel{
+    padding:15px;
+    clear: both;
+
+}
+
 .divmainheader
 {
     height: 20%;
@@ -709,7 +797,16 @@ position: fixed;
     clear: both;
     color: blue;
 }
+.divmainplayer{
+    height: 20%;
+    text-align: center;
+  //  border-bottom: 1px solid blue;
+    font-size:18px;
+  //  padding:15px;
+    clear: both;
+    color: blue;
 
+}
 .divmainheader a{
     text-decoration: none;
     text-align: center;
@@ -727,27 +824,6 @@ position: fixed;
     padding:15px;
     clear: both;
 }
-.divmainmenunew
-{
-    height: 20%;
-    text-align: center;
-    border-bottom: 1px solid gray;
-    font-size:16px;
-    padding:15px;
-    clear: both;
-}
-
-
-
-
-.divmainmenunew a{
-    text-decoration: none;
-    text-align: center;
-    vertical-align: middle;
-    color: #000000;
-
-}
-
 
 .divmain a{
     text-decoration: none;
@@ -762,6 +838,27 @@ text-align: center !important;
 }
 
 .divmain:hover{
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+
+}
+#divhalffull{
+
+    padding-top: 35px;
+    clear: both;
+}
+#divhalffull button{
+
+    margin :8px;
+}
+#cancelyes:hover{
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+
+}
+#cancelno:hover{
     background-color: #339900;
     color: white;
     opacity:0.7;

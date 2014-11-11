@@ -27,7 +27,7 @@ function onDeviceReadyloaddata() {
     console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
-     getnetworkdetails();
+    getnetworkdetails();
     $('#busy').hide();
 
     document.addEventListener("offline", onOffline, false);
@@ -35,7 +35,7 @@ function onDeviceReadyloaddata() {
 
 function onOffline()
 {
-  //  window.plugins.toast.showShortCenter('You are offline', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+    //  window.plugins.toast.showShortCenter('You are offline', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
     $('#settingdeleteall').prop('disabled', false);
     $('#settingsync').prop('disabled', false);
 
@@ -65,14 +65,14 @@ function checkonline(){
 }
 
 function refreshdata(){
-    chkrefreshdata =0;
+
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
 
 function loadnewtable(){
- //   $('#busy').show();
-  //  blankLastUpdatesec();
-  //  pushnotifiy();
+    //   $('#busy').show();
+    //  blankLastUpdatesec();
+    //  pushnotifiy();
 
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
@@ -85,46 +85,34 @@ function populateDB(tx){
 }
 
 function populateDB1(tx,results) {
-  //  checkonline();
-        var row = results.rows.item(0);
-     //   alert(row.Datesecs);
-
+    checkonline();
+    var row = results.rows.item(0);
 
     if(row.Count ==0){
-       // navigator.splashscreen.show();
-      //  window.plugins.toast.showShortCenter('Welcome to NeoSportz', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
-   //    window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
         if(document.getElementById("indexdiv")!=null) {
             $('#mainfore').removeClass('mainforeground');
             $('#mainfore').addClass('mainforeground2');
             // alert($('#mainfore').attr('class'));
             $('#indexloadingdata').modal('show');
         }
-
-       blankLastUpdatesec();
-      pushnotifiy();
-
-
-        db.transaction(populateDB, errorCBfunc, successCBfunc);
+        $.when(blankLastUpdatesec()).done(function() {
+            $.when( pushnotifiy()).done(function() {
+                db.transaction(populateDB, errorCBfunc, successCBfunc);
+            });
+        });
     }else{
-        chkrefreshdata = 1;
+
         var sql = "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
 
         if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
-             tx.executeSql(sql, [], getchecksync,errorCBfunc);
+            tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
             $('#indexloadingdata').modal('hide')
             $('#mainfore').removeClass('mainforeground2');
             $('#mainfore').addClass('mainforeground');
         }
-
-
     }
-
 }
-
-
-
 
 function passdatatoserver(){
 
@@ -146,59 +134,146 @@ function getchecksync(tx, results) {
 
     var row = results.rows.item(0);
 
-        var datemenus= row.datemenus;
-        var datenowsecsync = row.Datesecs;
+    var datemenus= row.datemenus;
 
-        var datenow = new Date();
-        var timenow = datenow.getTime();
-
-        var dif = (timenow/1000)-(datenowsecsync);
-
-        if (document.getElementById("newsmain") != null) {
-            dif = 100000000;
-        }
-
-       // console.log(new Date((row.Datesecs) * 1000) + "\n\r" + dif);
-        //  alert(new Date((row.Datesecs)*1000) + "\n\r" + datenowsecsync  + "\n\r" + dif);
-
-        if (dif >= "600") {
-           if(chkrefreshdata == 1){
-          //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
-           }
-            var xmlHttp = null;
-            xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
-            xmlHttp.send();
-
-            var json = xmlHttp.responseText;
-            var obj = JSON.parse(json);
-
-            updatemenutables(obj);
+    var datenowsecsync = row.Datesecs;
 
 
+    var datenow = new Date();
+    var timenow = datenow.getTime();
 
+    var dif = (timenow/1000)-(datenowsecsync);
 
-            $.when(syncmaintables(obj)).done(function() {
-                db.transaction(CleanDB, errorCBfunc, successCBfunc);
-                setTimeout(function (){
-                    $('#indexloadingdata').modal('hide')
-                    $('#mainfore').removeClass('mainforeground2');
-                    $('#mainfore').addClass('mainforeground');
-            //       window.plugins.toast.showLongCenter('Your App is Updated!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-                }, 5000);
-            });
+    if (document.getElementById("newsmain") != null) {
+        dif = 100000000;
+    }
 
-            if(document.getElementById("indexdiv")!=null){
-             //   loadindexmessage();
+    if (dif >= "600") {
+        if(document.getElementById("indexdiv")!=null) {
+
+            if($("#mainfore").hasClass("mainforeground2")){
+
+            }else{
+                $('#mainfore').removeClass('mainforeground');
+                $('#mainfore').addClass('mainforeground2');
+                $('#indexloadingdata').modal('show');
             }
 
-            if (document.getElementById("settingsync") != null) {
-                db.transaction(getsyncdate, errorCBfunc, successCBfunc);
-            }
-
+        }else{
+            $('#indexloadingdata').modal('show');
         }
+        var xmlHttp = null;
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
+        xmlHttp.send();
+
+        var json = xmlHttp.responseText;
+        var obj = JSON.parse(json);
+
+
+
+        syncmaintables(obj);
+    }
 
 }
+
+
+
+function closemodel(){
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+    $('#indexloadingdata').modal('hide');
+    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    randomfunctions();
+
+}
+
+
+function randomfunctions(){
+    if (document.getElementById("settingsync") != null) {
+        db.transaction(getsyncdate, errorCBfunc, successCBfunc);
+    }
+
+    if (document.getElementById("divschedules") != null) {
+        db.transaction(getfliter, errorCBfunc, successCBfunc);
+    }
+    if (document.getElementById("divresults") != null) {
+        db.transaction(getfliter, errorCBfunc, successCBfunc);
+    }
+
+}
+
+
+function countProperties(obj) {
+
+    var prop;
+    var prop2;
+    var propCount = 0;
+
+    $.each(obj.App_Results, function (idx, obj) {
+        propCount++;
+    });
+
+
+    $.each(obj.clubs, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.App_Schedule, function (idx, obj) {
+        propCount++;
+    });
+
+
+    $.each(obj.clubsimages, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.vwApp_Teams, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.vwApp_News_v_2, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.App_Players, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.App_Players_Images, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.ScoringTable, function (idx, obj) {
+        propCount++;
+    });
+
+    db.transaction(function (tx) {
+        propCount++;
+    });
+
+    $.each(obj.Standings, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.sponsorsclub, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.screenimage, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.scoringbreakdown, function (idx, obj) {
+        propCount++;
+    });
+
+    $.each(obj.Isadmin, function (idx, obj) {
+        propCount++;
+    });
+    return propCount;
+}
+
 
 function onclicksyncloaddata(){
 
@@ -218,24 +293,22 @@ function onclickresync(tx, results) {
 
     var row = results.rows.item(0);
 
-    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
+    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))) {
+        $('#indexloadingdata').modal('show');
 
-        window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
+        var datemenus = row.datemenus;
+        var datenowsecsync = row.Datesecs;
 
+        var datenow = new Date();
+        var timenow = datenow.getTime();
 
-        var datemenus= row.datemenus;
-    var datenowsecsync = row.Datesecs;
+        var dif = timenow - (datenowsecsync);
 
-    var datenow = new Date();
-    var timenow = datenow.getTime();
-
-    var dif = timenow-(datenowsecsync);
-
-        window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
+        //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
-       xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync,false);
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
 
         xmlHttp.send();
 
@@ -243,44 +316,51 @@ function onclickresync(tx, results) {
 
         var obj = JSON.parse(json);
 
-        if(datemenus != datemenus) {
+        if (datemenus != datemenus) {
             updatemenutables(obj);
         }
 
-        $.when( syncmaintables(obj)).done(function() {
-            db.transaction(CleanDB, errorCBfunc, successCBfunc);
-            setTimeout(function (){
-                window.plugins.toast.showLongCenter('Your App is Updated!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-            }, 5000);
+        var totaljson = (countProperties(obj) / 18) * 1000;
 
+        //  setTimeout(function () {
+        //          $('#indexloadingdata').modal('hide');
+
+        //          window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        //      }
+        //      , totaljson);
+
+
+        $.when(syncmaintables(obj)).done(function () {
+            randomfunctions();
         });
 
-        if(document.getElementById("settingsync")!=null){
-            db.transaction(getsyncdate, errorCBfunc, successCBfunc);
-        }
+
+
+
+
     }
 }
 
 
 function successHandler (result) {
- //   alert('result = ' + result);
+    //   alert('result = ' + result);
 }
 
 function errorHandler (error) {
- //   alert('error = ' + error);
+    //   alert('error = ' + error);
 }
 
 function tokenHandler (result) {
     var xmlHttptt = null;
     xmlHttptt = new XMLHttpRequest();
 
-   // alert('tokenB: '+ result);
+    // alert('tokenB: '+ result);
     //$('#busy').show();
     var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
-    alert(strur);
+    //  navigator.notification.alert(strur);
     xmlHttptt.open("GET",strur ,false);
     xmlHttptt.send();
-   // $('#busy').hide();
+    // $('#busy').hide();
     // Your iOS push server needs to know the token before it can push to this device
     // here is where you might want to send it the token for later use.
 }
@@ -313,41 +393,41 @@ function pushnotifiy() {
             });
     } else {
         pushNotification.register(
-        tokenHandler,
-        errorHandler,
-        {
-            "badge":"true",
-            "sound":"true",
-            "alert":"true",
-            "ecb":"onNotificationAPN"
-        });
-}
+            tokenHandler,
+            errorHandler,
+            {
+                "badge":"true",
+                "sound":"true",
+                "alert":"true",
+                "ecb":"onNotificationAPN"
+            });
+    }
 }
 
 function onNotification(e) {
- //   $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+    //   $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
     var xmlHttpt = null;
     xmlHttpt = new XMLHttpRequest();
- //  alert(e.event);
+    //  alert(e.event);
     switch( e.event )
     {
         case 'registered':
             if ( e.regid.length > 0 )
             {
-              //  $("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+                //  $("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
                 // Your GCM push server needs to know the regID before it can push to this device
                 // here is where you might want to send it the regID for later use.
                 console.log("regID = " + e.regid);
 
 
-              //  $('#busy').show();
-                             var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
+                //  $('#busy').show();
+                var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
                 xmlHttpt.open("GET",strur ,false);
                 //   alert(strur);
                 xmlHttpt.send();
                 //   $('#busy').hide();
 
-             //   alert(json);
+                //   alert(json);
             }
             break;
 
@@ -359,9 +439,9 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-              //  alert(e.payload.msgcnt);
+                //  alert(e.payload.msgcnt);
 
-             //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+                //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
                 // on Android soundname is outside the payload.
                 // On Amazon FireOS all custom attributes are contained within payload
@@ -372,15 +452,15 @@ function onNotification(e) {
             }
             else
             {
-            // otherwise we were launched because the user touched a notification in the notification tray.
+                // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
 
-             //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+                    //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-              //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+                    //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
 
@@ -393,11 +473,11 @@ function onNotification(e) {
             break;
 
         case 'error':
-          //  $("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+            //  $("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
             break;
 
         default:
-         //   $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+            //   $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
             break;
     }
 }
@@ -405,20 +485,22 @@ function onNotification(e) {
 function onNotificationAPN(e) {
 
     if (e.alert) {
-       // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+        // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
 // showing an alert also requires the org.apache.cordova.dialogs plugin
-       navigator.notification.alert(e.alert);
+        navigator.notification.alert(e.alert);
 
     }
     if (e.sound) {
 // playing a sound also requires the org.apache.cordova.media plugin
         var snd = new Media(e.sound);
-       snd.play();
+        snd.play();
     }
     if (e.badge) {
         pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);
     }
 }
+
+
 
 
 
