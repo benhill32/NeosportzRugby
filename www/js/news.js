@@ -14,11 +14,43 @@ document.addEventListener("deviceready", onDeviceReadynews, false);
 function onDeviceReadynews() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
-    db.transaction(getdatanews, errorCBfunc, successCBfunc);
+    db.transaction(getadmin, errorCBfunc, successCBfunc);
+
   //  checkfb();
 }
+//db.transaction(getadmin, errorCBfunc, successCBfunc);
 
-//db.transaction(getdatanews, errorCBfunc, successCBfunc);
+
+
+function getadmin(tx) {
+
+    var sql = "select isadmin from MobileApp_LastUpdatesec";
+    //alert(sql);
+    tx.executeSql(sql, [], getadmin_success);
+}
+
+
+function getadmin_success(tx, results) {
+
+    var len = results.rows.length;
+
+
+      if(len != 0) {
+        var menu = results.rows.item(0);
+        if(menu.isadmin ==1){
+            $('#loadnews').empty();
+            $('#loadnews').append('<img src="../img/plus2.png"  style="height:30px;" title="Add New Feed">' +'</Div>');
+            $('#loadnews').click(function(){
+                weblink('../pages/addnewfeed.html')
+            });
+        }
+    }
+
+
+    db.transaction(getdatanews, errorCBfunc, successCBfunc);
+}
+
+
 
 
 function checkfb(){
@@ -114,10 +146,14 @@ function numbersponsers_success(tx, results) {
 }
 
 function getdata2(tx) {
-    var sql = "select ID,_id,UpdateDateUTC,Title,Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC from MobilevwApp_News_v_2 where ClubID=" + clubidtop + " and DeletedateUTC = 'null' order by DisplayDateUTC Desc";
+    var sql = "select ID,_id,UpdateDateUTC,Title,Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + clubidtop + " and DeletedateUTC = 'null' order by DisplayDateUTC Desc";
 //alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
+
+
+
+
 
 
 
@@ -125,10 +161,12 @@ function getnewfeed_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
+    $('#newsmain').empty();
+
     if(len!= 0) {
 
         var count = 0;
-        $('#newsmain').empty();
+
         for (var i = 0; i < len; i++) {
             var menu = results.rows.item(i);
             var imgg = "";
@@ -154,7 +192,6 @@ function getnewfeed_success(tx, results) {
                     URLnow = menu.URL;
                 }
 
-
                 if ((menu.Body).length <= 200) {
 
                     $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left">' +
@@ -163,7 +200,7 @@ function getnewfeed_success(tx, results) {
                         '</Div>' +
 
                         '<Div id="divnew2"> ' +
-                        '<div class="bold size13"   >' + menu.Title + '</div>' +
+                        '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
 
@@ -177,7 +214,7 @@ function getnewfeed_success(tx, results) {
                         '</Div>' +
 
                         '<Div id="divnew2"> ' +
-                        '<div class="bold size13"   >' + menu.Title + '</div>' +
+                        '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModal" onclick="loadnewfeed(' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>');
@@ -185,7 +222,9 @@ function getnewfeed_success(tx, results) {
 
             } else {
                 imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
-
+                if(menu.FromPhone == 'true'){
+                    imgicon = "<img src='../img/phone.png' style='padding-right: 10px' height='30' align='left'>";
+                }
 
                 if ((menu.Body).length <= 200) {
 
@@ -196,7 +235,7 @@ function getnewfeed_success(tx, results) {
                         '</Div>' +
 
                         '<Div id="divnew2"> ' +
-                        '<div class="bold size13"   >' + menu.Title + '</div>' +
+                        '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
@@ -210,7 +249,7 @@ function getnewfeed_success(tx, results) {
 
 
                         '<Div id="divnew2"> ' +
-                        '<div class="bold size13"   >' + menu.Title + '</div>' +
+                        '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModal" onclick="loadnewfeed(' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
@@ -274,13 +313,16 @@ function getsponsors_success(tx, results) {
     var count = 1;
 
 
+
+
+
     for (var i=0; i<len; i++) {
 
         if (len != 0) {
             var menu = results.rows.item(i);
 
             if (menu.Base64 != "null") {
-                imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  >';
+                imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  height="80" >';
             }
          //   alert(menu.Name);
 

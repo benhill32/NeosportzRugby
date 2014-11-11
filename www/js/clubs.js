@@ -8,12 +8,13 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
-    db.transaction(getMenu, errorCBfunc, successCBfunc);
+    db.transaction(getdata, errorCBfunc, successCBfunc);
 }
+//db.transaction(getdata, errorCBfunc, successCBfunc);
 
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-console.log("LOCALDB - Database ready");
-db.transaction(getdata, errorCBfunc, successCBfunc);
+
+
+
 
 
 function getdata(tx) {
@@ -34,12 +35,12 @@ function getMenu_success(tx, results) {
             }
 
             $('#mainmenu').append('<Div class="mainmenuresult" align="left"  >' +
-                '<div class="bold size13"   >' + imgg + menu.name  +
-                '<img src="../img/info.png" height="20" align="right" data-toggle="modal" data-target="#basicModalContact" onclick="loadcontacts(' + menu.ID + ')">' +
-                '<img src="../img/team.png" onclick="redirectplayer(' + menu.ID + ')"    align="right" height="20">' +
+                '<div class="bold size13" style="padding-bottom:7px;"   >' + imgg + menu.name  +
+                '<img src="../img/info.png" height="25" align="right" data-toggle="modal" data-target="#basicModalContact" onclick="loadcontacts(' + menu.ID + ')">' +
+                '<img src="../img/team.png" onclick="redirectplayer(' + menu.ID + ')"    align="right" height="25">' +
                 '</div>' +
-                '<div class="size11">' + menu.History.substring(0,200) + '....<span ' +
-                'data-toggle="modal" class="size11 blue" data-target="#basicModal" onclick="loadhistory(' + menu.ID + ')"  >Read More</span></div>' +
+                '<div class="size11" data-toggle="modal" data-target="#basicModalclub" onclick="loadhistory(' + menu.ID + ')">' + menu.History.substring(0,200) + '....<span' +
+                'data-toggle="modal" class="size11 blue" data-target="#basicModalclub" onclick="loadhistory(' + menu.ID + ')"  >Read More</span></div>' +
                 '</Div>');
     }
 
