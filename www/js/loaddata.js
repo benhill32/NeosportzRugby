@@ -170,7 +170,7 @@ function getchecksync(tx, results) {
         var json = xmlHttp.responseText;
         var obj = JSON.parse(json);
 
-
+        var totaljson  =  (countProperties(obj)/18)* 1000;
 
         syncmaintables(obj);
     }

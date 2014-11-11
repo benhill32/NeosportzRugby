@@ -87,6 +87,11 @@ function droptables(){
           console.log("MobileApp_Schedule_Menu table is Dropped");
     });
 
+    db.transaction(function(tx) {
+        tx.executeSql('Drop TABLE MobileApp_Results_Table_Menu)');
+        console.log("MobileApp_Results_Table_Menu table is created");
+    });
+
 
 }
 
@@ -99,6 +104,10 @@ function createDB(tx) {
     });
     db.transaction(function(tx) {
         tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL UNIQUE, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
+        console.log("MobileApp_Results_Menu table is created");
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_Menu (_id INTEGER NOT NULL UNIQUE, TournamentName TEXT NOT NULL,UpdateDateUTC TEXT NULL,OrderID INTEGER NOT NULL)');
         console.log("MobileApp_Results_Menu table is created");
     });
     //  tx.executeSql('Drop TABLE MobileApp_LastUpdatesec ');

@@ -268,6 +268,16 @@ function syncmaintables(obj){
 
 
 
+
+
+    $.each(obj.vwApp_Results_Table_Men, function (idx, obj) {
+            db.transaction(function(tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileApp_Results_Table_Menu (_id, TournamentName,OrderID ,UpdateDateUTC ) VALUES (' + obj._id + ',"' + obj.TournamentName + '", ' + obj.OrderID + ',"' + obj.UpdateDateUTC + '")');
+                //     console.log("INSERT INTO MobileApp_Schedule_Menu is created");
+            });
+    });
+
+
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
         db.transaction(function(tx) {
             tx.executeSql('INSERT OR IGNORE INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
