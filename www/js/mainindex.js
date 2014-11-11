@@ -1,13 +1,14 @@
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadymainindex, false);
 var deviceIDfunc;
-function onDeviceReady() {
+function onDeviceReadymainindex() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
-    db.transaction(getbackground, errorCBfunc, successCBfunc);
+
     deviceIDfunc = device.uuid;
     loadindexmessage();
+    db.transaction(getbackground, errorCBfunc, successCBfunc);
 }
-db.transaction(getbackground, errorCBfunc, successCBfunc);
+
 
 function loadindexmessage() {
     db.transaction(checkclubsinsert, errorCBfunc, successCBfunc);

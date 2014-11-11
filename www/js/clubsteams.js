@@ -3,13 +3,15 @@ var id = getUrlVars()["ID"];
 var favtop  = 0;
 var followtop =0;
 
+document.addEventListener("deviceready", onDeviceReadyclubteam, false);
 
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-console.log("LOCALDB - Database ready");
-db.transaction(getdata, errorCBfunc, successCBfunc);
+function onDeviceReadyclubteam() {
+    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    console.log("LOCALDB - Database ready");
+    db.transaction(getdata, errorCBfunc, successCBfunc);
 
-db.transaction(getimgfav, errorCBfunc, successCBfunc);
-
+    db.transaction(getimgfav, errorCBfunc, successCBfunc);
+}
 
 
 function getdata(tx) {

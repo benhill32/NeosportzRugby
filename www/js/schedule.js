@@ -13,9 +13,9 @@ var devicePlatformsch =0;
 var remindtext = 0;
 var reminddate =0;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadysch, false);
 
-function onDeviceReady() {
+function onDeviceReadysch() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
    //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
@@ -24,7 +24,7 @@ function onDeviceReady() {
     devicePlatformsch = device.platform;
 }
 
-db.transaction(getfliter, errorCBfunc, successCBfunc);
+//db.transaction(getfliter, errorCBfunc, successCBfunc);
 
 function onError(error) {
     alert('code: '    + error.code    + '\n' +

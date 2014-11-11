@@ -1,17 +1,15 @@
 var db;
 var dbCreated = false;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadyschmenu, false);
 
-function onDeviceReady() {
+function onDeviceReadyschmenu() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     db.transaction(getMenu, errorCB, successCB);
 }
 
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-console.log("LOCALDB - Database ready");
-db.transaction(getMenu, errorCB, successCB);
+
 
 
 

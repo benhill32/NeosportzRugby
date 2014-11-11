@@ -3,9 +3,9 @@ var db;
 
 var IDhist = 0;
 var IDcon = 0;
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadyclub, false);
 
-function onDeviceReady() {
+function onDeviceReadyclub() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     db.transaction(getdata, errorCBfunc, successCBfunc);

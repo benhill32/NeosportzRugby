@@ -115,6 +115,8 @@ text-align: center;
 
 }
 
+
+
 .divmainmenunew a{
     color: black;
 
@@ -637,7 +639,12 @@ position: fixed;
     color: white;
     opacity:0.7;
 }
+.divmainmenunew:hover{
 
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+}
 
 #basicModal .modal-footer:hover{
     background-color: #339900;

@@ -5,9 +5,9 @@ var id = getUrlVars()["ID"];
 var gtoken =0;
 
 var deviceIDscorecard;
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadyscore, false);
 
-function onDeviceReady() {
+function onDeviceReadyscore() {
 
     deviceIDscorecard = device.uuid;
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
