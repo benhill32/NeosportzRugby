@@ -1,9 +1,9 @@
 var db;
 var dbCreated = false;
 
-document.addEventListener("deviceready", onDeviceReadyschmenu, false);
+document.addEventListener("deviceready", onDeviceReadysstandmenu, false);
 
-function onDeviceReadyschmenu() {
+function onDeviceReadysstandmenu() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     db.transaction(getMenu, errorCB, successCB);
@@ -21,7 +21,6 @@ function successCB() {
     //  alert("success!");
 }
 
-tx.executeSql('INSERT INTO MobileApp_Results_Table_Menu (_id, TournamentName,UpdateDateUTC ,OrderID ) VALUES (' + obj._id + ',"' + obj.TournamentName + '", "' + obj.UpdateDateUTC + '",' + obj.OrderID + ')');
 
 
 function getMenu(tx) {
