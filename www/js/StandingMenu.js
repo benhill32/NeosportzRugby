@@ -8,6 +8,7 @@ function onDeviceReadysstandmenu() {
     console.log("LOCALDB - Database ready");
     db.transaction(getMenu, errorCB, successCB);
 }
+db.transaction(getMenu, errorCB, successCB);
 
 function errorCB(err) {
     console.log("Error processing SQL: "+err.message);

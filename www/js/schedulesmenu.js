@@ -10,7 +10,7 @@ function onDeviceReadyschmenu() {
 }
 
 
-
+db.transaction(getMenu, errorCB, successCB);
 
 
 function errorCB(err) {
