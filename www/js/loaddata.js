@@ -23,11 +23,11 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
-    getnetworkdetails();
+     getnetworkdetails();
     $('#busy').hide();
 
     document.addEventListener("offline", onOffline, false);
@@ -37,7 +37,7 @@ function onDeviceReadyloaddata() {
 
 function onOffline()
 {
-    //  window.plugins.toast.showShortCenter('You are offline', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+  //  window.plugins.toast.showShortCenter('You are offline', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
     $('#settingdeleteall').prop('disabled', false);
     $('#settingsync').prop('disabled', false);
 
@@ -72,9 +72,9 @@ function refreshdata(){
 }
 
 function loadnewtable(){
-    //   $('#busy').show();
-    //  blankLastUpdatesec();
-    //  pushnotifiy();
+ //   $('#busy').show();
+  //  blankLastUpdatesec();
+  //  pushnotifiy();
 
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
@@ -82,7 +82,7 @@ function loadnewtable(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,syncwifi,Datesecs from MobileApp_LastUpdatesec";
-      alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
@@ -106,10 +106,10 @@ function createtables(){
 function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
-    //   alert(row);
-    //  alert(row.Count);
+ //   alert(row);
+  //  alert(row.Count);
     if(row.Count ==0){
-        if(document.getElementById("indexdiv")!=null) {
+      if(document.getElementById("indexdiv")!=null) {
             $('#mainfore').removeClass('mainforeground');
             $('#mainfore').addClass('mainforeground2');
             // alert($('#mainfore').attr('class'));
@@ -128,7 +128,7 @@ function populateDB1(tx,results) {
 
         if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
 
-            tx.executeSql(sql, [], getchecksync,errorCBfunc);
+             tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
             $('#indexloadingdata').modal('hide')
             $('#mainfore').removeClass('mainforeground2');
@@ -157,7 +157,7 @@ function passdatatoserver(){
 
     var deviceid = "dsdsadsadasd";
     var http = new XMLHttpRequest();
-    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
+    var url = "http://centralfootball.neosportz.com/loaddatafromapp.aspx";
     var params = "?token=" + golbaltoken + "&deviceid=" + deviceid;
     http.open("POST", url + params, true);
 
@@ -171,56 +171,56 @@ function passdatatoserver(){
 
 function getchecksync(tx, results) {
 
-    var row = results.rows.item(0);
+        var row = results.rows.item(0);
 
-    var datemenus= row.datemenus;
+        var datemenus= row.datemenus;
 
-    var datenowsecsync = row.Datesecs;
+        var datenowsecsync = row.Datesecs;
 
 
-    var datenow = new Date();
-    var timenow = datenow.getTime();
+        var datenow = new Date();
+        var timenow = datenow.getTime();
 
-    var dif = (timenow/1000)-(datenowsecsync);
+        var dif = (timenow/1000)-(datenowsecsync);
 
-    if (document.getElementById("newsmain") != null) {
-        dif = 100000000;
-    }
+        if (document.getElementById("newsmain") != null) {
+            dif = 100000000;
+        }
 
-    if (dif >= "600") {
-        if (document.getElementById("indexdiv") != null) {
+        if (dif >= "600") {
+            if (document.getElementById("indexdiv") != null) {
 
-            if ($("#mainfore").hasClass("mainforeground2")) {
+                if ($("#mainfore").hasClass("mainforeground2")) {
+
+                } else {
+                    $('#mainfore').removeClass('mainforeground');
+                    $('#mainfore').addClass('mainforeground2');
+                    $('#indexloadingdata').modal('show');
+                }
 
             } else {
-                $('#mainfore').removeClass('mainforeground');
-                $('#mainfore').addClass('mainforeground2');
                 $('#indexloadingdata').modal('show');
             }
+            var xmlHttp = null;
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+           // xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx', false);
+            xmlHttp.send();
 
-        } else {
-            $('#indexloadingdata').modal('show');
-        }
-        var xmlHttp = null;
-        xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
-        // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
-        xmlHttp.send();
+            var json = xmlHttp.responseText;
 
-        var json = xmlHttp.responseText;
+            if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
 
-        if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
-
-            errorclosemodel();
-        } else {
+                errorclosemodel();
+            } else {
 
             var obj = JSON.parse(json);
 
 
 
             syncmaintables(obj);
+            }
         }
-    }
 
 }
 
@@ -356,8 +356,8 @@ function onclickresync(tx, results) {
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
-        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
-        //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+       xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+    //xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx', false);
 
         xmlHttp.send();
 
@@ -378,24 +378,24 @@ function onclickresync(tx, results) {
 
 
 function successHandler (result) {
-    //   alert('result = ' + result);
+ //   alert('result = ' + result);
 }
 
 function errorHandler (error) {
-    //   alert('error = ' + error);
+ //   alert('error = ' + error);
 }
 
 function tokenHandler (result) {
     var xmlHttptt = null;
     xmlHttptt = new XMLHttpRequest();
 
-    // alert('tokenB: '+ result);
+   // alert('tokenB: '+ result);
     //$('#busy').show();
-    var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
-    //  navigator.notification.alert(strur);
+    var strur = 'http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
+  //  navigator.notification.alert(strur);
     xmlHttptt.open("GET",strur ,false);
     xmlHttptt.send();
-    // $('#busy').hide();
+   // $('#busy').hide();
     // Your iOS push server needs to know the token before it can push to this device
     // here is where you might want to send it the token for later use.
 }
@@ -428,41 +428,41 @@ function pushnotifiy() {
             });
     } else {
         pushNotification.register(
-            tokenHandler,
-            errorHandler,
-            {
-                "badge":"true",
-                "sound":"true",
-                "alert":"true",
-                "ecb":"onNotificationAPN"
-            });
-    }
+        tokenHandler,
+        errorHandler,
+        {
+            "badge":"true",
+            "sound":"true",
+            "alert":"true",
+            "ecb":"onNotificationAPN"
+        });
+}
 }
 
 function onNotification(e) {
-    //   $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+ //   $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
     var xmlHttpt = null;
     xmlHttpt = new XMLHttpRequest();
-    //  alert(e.event);
+ //  alert(e.event);
     switch( e.event )
     {
         case 'registered':
             if ( e.regid.length > 0 )
             {
-                //  $("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+              //  $("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
                 // Your GCM push server needs to know the regID before it can push to this device
                 // here is where you might want to send it the regID for later use.
                 console.log("regID = " + e.regid);
 
 
-                //  $('#busy').show();
-                var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
+              //  $('#busy').show();
+                             var strur = 'http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
                 xmlHttpt.open("GET",strur ,false);
                 //   alert(strur);
                 xmlHttpt.send();
                 //   $('#busy').hide();
 
-                //   alert(json);
+             //   alert(json);
             }
             break;
 
@@ -474,9 +474,9 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-                //  alert(e.payload.msgcnt);
+              //  alert(e.payload.msgcnt);
 
-                //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
+             //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
                 // on Android soundname is outside the payload.
                 // On Amazon FireOS all custom attributes are contained within payload
@@ -487,15 +487,15 @@ function onNotification(e) {
             }
             else
             {
-                // otherwise we were launched because the user touched a notification in the notification tray.
+            // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
 
-                    //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
+             //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+              //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
 
@@ -508,11 +508,11 @@ function onNotification(e) {
             break;
 
         case 'error':
-            //  $("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
+          //  $("#app-status-ul").append('<li>ERROR -> MSG:' + e.msg + '</li>');
             break;
 
         default:
-            //   $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+         //   $("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
             break;
     }
 }
@@ -520,15 +520,15 @@ function onNotification(e) {
 function onNotificationAPN(e) {
 
     if (e.alert) {
-        // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
+       // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
 // showing an alert also requires the org.apache.cordova.dialogs plugin
-        navigator.notification.alert(e.alert);
+       navigator.notification.alert(e.alert);
 
     }
     if (e.sound) {
 // playing a sound also requires the org.apache.cordova.media plugin
         var snd = new Media(e.sound);
-        snd.play();
+       snd.play();
     }
     if (e.badge) {
         pushNotification.setApplicationIconBadgeNumber(successHandler, e.badge);

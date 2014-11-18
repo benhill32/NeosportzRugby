@@ -1,5 +1,4 @@
 var db;
-console.log("LOCALDB - Database ready");
 var networkconnectionset = 0;
 var wifiallset = 0;
 
@@ -9,10 +8,11 @@ document.addEventListener("deviceready", onDeviceReadyset, false);
 
 
 function onDeviceReadyset() {
-
+ //   db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+ //   console.log("LOCALDB - Database ready");
     onOfflinesetting();
-    db.transaction(checkfavteam, errorCBfunc, successCBfunc);
-    db.transaction(getsyncdate, errorCBfunc, successCBfunc);
+        db.transaction(checkfavteam, errorCBfunc, successCBfunc);
+        db.transaction(getsyncdate, errorCBfunc, successCBfunc);
 
 }
 
@@ -44,13 +44,13 @@ function onOfflinesetting(){
 
 function getsyncdate(tx) {
     var sql = "select Datesecs, syncwifi from MobileApp_LastUpdatesec";
-    //  alert(sql);
+   //  alert(sql);
     tx.executeSql(sql, [], getsyncdate_success2);
 }
 
 function checkfavteam(tx) {
     var sql = "select Count(Fav) as Count from MobileApp_clubs where Fav =1";
-    //   alert(sql);
+   //   alert(sql);
     tx.executeSql(sql, [], checkfavteam_success);
 }
 
@@ -58,7 +58,7 @@ function checkfavteam_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    //alert(menu.Count);
+ //alert(menu.Count);
     if(menu.Count ==0){
 
         $('#divclearfav').unbind('click');
@@ -71,8 +71,8 @@ function checkfavteam_success(tx, results) {
 
     var stringapp = device.uuid;
 
-    $("#deviceid").empty();
-    $("#deviceid").append(stringapp);
+   $("#deviceid").empty();
+   $("#deviceid").append(stringapp);
 
 }
 function syncnewdata(){
@@ -98,7 +98,7 @@ function getsyncdate_success2(tx, results) {
     var len = results.rows.length;
 
     var menu = results.rows.item(0);
-    //   alert(menu.Datesecs);
+ //   alert(menu.Datesecs);
     var dateme = new Date((menu.Datesecs)*1000);
     var wifi = menu.syncwifi;
     wifiallset = wifi;
@@ -120,7 +120,7 @@ function getsyncdate_success2(tx, results) {
     if(dateme.getFullYear() != 1970) {
         $('#lastsyncdate').append("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2))
     }
-    console.log("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2) );
+        console.log("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2) );
 
 
     if((wifi ==1 &&  networkconnectionset==2) || ((wifi ==0))){
@@ -165,17 +165,17 @@ function cleardata(){
     onOfflinesetting();
 
 
-    if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {
+   if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {
         $('#indexloadingdata').modal('show');
         db.transaction(droptables, errorCBfunc, createtables);
-    }
+   }
 
 
 }
 
 function createtables(){
-    // window.plugins.toast.showShortCenter('Creating Tables!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-    //  window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
+  // window.plugins.toast.showShortCenter('Creating Tables!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+  //  window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
 
     db.transaction(createDB, errorCBfunc, loadnewtable);
 }
@@ -192,32 +192,32 @@ var rand = function() {
 function chkmobiledata(id){
     onOfflinesetting();
 
-    if(id=="btn1")
-    {
+   if(id=="btn1")
+   {
 
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 1');
-            console.log("syncwifi on");
-        });
+       db.transaction(function(tx) {
+           tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 1');
+           console.log("syncwifi on");
+       });
 
-        $('#btn2').removeClass("btn btn-xs btn-primary active");
-        $('#btn2').addClass("btn btn-xs btn-default");
-        $('#btn1').removeClass("btn btn-xs btn-default");
-        $('#btn1').addClass("btn btn-xs btn-primary active");
-        wifiallset = 1;
-    }
-    else if(id== "btn2")
-    {
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 0');
-            console.log("syncwifi off");
-        });
-        wifiallset =0;
-        $('#btn1').removeClass("btn btn-xs btn-primary active");
-        $('#btn1').addClass("btn btn-xs btn-default");
-        $('#btn2').removeClass("btn btn-xs btn-default");
-        $('#btn2').addClass("btn btn-xs btn-primary active");
-    }
+       $('#btn2').removeClass("btn btn-xs btn-primary active");
+       $('#btn2').addClass("btn btn-xs btn-default");
+       $('#btn1').removeClass("btn btn-xs btn-default");
+       $('#btn1').addClass("btn btn-xs btn-primary active");
+       wifiallset = 1;
+   }
+   else if(id== "btn2")
+   {
+       db.transaction(function(tx) {
+           tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 0');
+           console.log("syncwifi off");
+       });
+       wifiallset =0;
+       $('#btn1').removeClass("btn btn-xs btn-primary active");
+       $('#btn1').addClass("btn btn-xs btn-default");
+       $('#btn2').removeClass("btn btn-xs btn-default");
+       $('#btn2').addClass("btn btn-xs btn-primary active");
+   }
 
 
     if((id=="btn1" &&  networkconnectionset==2) || ((id== "btn2"))){
@@ -241,7 +241,7 @@ function manualupdateben(){
     var xmlHttpp = null;
     xmlHttpp = new XMLHttpRequest();
 
-    // $('#busy').show();
+   // $('#busy').show();
     xmlHttpp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx?deviceID=a07883508d108e26&token=9D190637-2FEB-4A26-BA72-9A158A220A2A&sec=0',false);
     console.log("http://centralfootball.neosportz.com/databen.aspx?deviceID=a07883508d108e26&token=9D190637-2FEB-4A26-BA72-9A158A220A2A&sec=0");
 

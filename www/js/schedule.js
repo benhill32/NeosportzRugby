@@ -12,10 +12,12 @@ var devicePlatformsch =0;
 
 var remindtext = 0;
 var reminddate =0;
+var networkconnectionsch = 0;
+document.addEventListener("deviceready", onDeviceReady, false);
 
-document.addEventListener("deviceready", onDeviceReadysch, false);
 
-function onDeviceReadysch() {
+function onDeviceReady() {
+    checkonlinesch();
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
    //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
@@ -23,8 +25,38 @@ function onDeviceReadysch() {
     $(".tooltip").draggable("enable");
     devicePlatformsch = device.platform;
 }
+//function updateadmin() {
+//    db.transaction(function (tx) {
+ //       tx.executeSql('Update MobileApp_LastUpdatesec set isadmin = 1');
+//        console.log("Update INTO MobileApp_LastUpdatesec");
+ //   });
 
+//}
 //db.transaction(getfliter, errorCBfunc, successCBfunc);
+
+//db.transaction(function(tx) {
+//   tx.executeSql('Update MobileApp_LastUpdatesec set isadmin = 1');
+//    console.log("Update MobileApp_LastUpdatesec");
+//});
+
+
+function checkonlinesch(){
+
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = '0';
+    states[Connection.ETHERNET] = '2';
+    states[Connection.WIFI]     = '2';
+    states[Connection.CELL_2G]  = '1';
+    states[Connection.CELL_3G]  = '1';
+    states[Connection.CELL_4G]  = '1';
+    states[Connection.NONE]     = '0';
+
+    networkconnectionsch = states[networkState];
+//alert(states[networkState]);
+
+}
 
 function onError(error) {
     alert('code: '    + error.code    + '\n' +
@@ -67,9 +99,16 @@ function allowfilter(id){
 
 
 function getfliter(tx) {
+
+  //  updateadmin();
+
+
     var sql = "select fliterON,isadmin from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getfliter_success);
+
+
+
 }
 
 
@@ -111,6 +150,7 @@ function getClubID_success(tx, results) {
 
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 }
+
 
 
 function getdata2(tx) {
@@ -174,9 +214,7 @@ function getdata(tx) {
 
     }
 
-
-
-  // alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -232,7 +270,7 @@ function getMenu_success(tx, results) {
 
 function loadinfo(ID) {
     IDhist = ID;
-
+//alert(ID);
     db.transaction(loadinfo_success1, errorCBfunc, successCBfunc);
 
 }
@@ -260,28 +298,39 @@ function loadinfo_success2(tx, results) {
     var d = new Date();
 
     var text =  menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
+    var text2 =menu.HomeName + ' vs ' + menu.AwayName;
 
+    $('#score').hide();
+    $('#cancell').hide();
 
-   // alert(("0" + (d.getMonth()+1)).slice(-2));
+    // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
         if(isadmin==1) {
             $('#score').show();
             $('#score').empty().append('<Div >Score Card</div>');
             $("#score").click(function () {
-                window.open("scorecard.html?ID=" + menu.ID);
+                window.open("scorecard.html?ID=" + IDhist);
             });
+
+            $('#cancell').show();
+
+            $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+
+
         }
         $('#remind').hide();
 
     }else {
 
         $('#score').hide();
+        $('#cancell').hide();
         $('#remind').show();
         //$("#remind").click(addreminder(menu.ID,menu.DatetimeStart));
         $("#remind").empty().append('<Div data-toggle="modal" data-target="#basicModalyesno" onclick="createvarforremind(\'' + menu.DatetimeStart + '\',\'' + text + '\')" >  Remind Me</div>');
 
     }
+
 
     if(menu.Latitude != "null" || menu.Longitude != "null" ) {
         $('#Directions').show();
@@ -290,6 +339,29 @@ function loadinfo_success2(tx, results) {
         });
     }
 }
+function onConfirm(button) {
+    checkonlinesch();
+    if(networkconnectionsch != 0){
+        if(button ==1){
+
+            alert('You selected button ' + button);
+        }else{
+
+            alert('You selected button ' + button);
+        }
+
+    }else{
+        alert("You don't have access to internet!");
+
+    }
+
+
+
+}
+
+
+
+
 
 function getUrlVars() {
     var vars = [], hash;
@@ -304,9 +376,6 @@ function getUrlVars() {
 }
 
 function addreminder(IDd){
-
-
-
     var res = (reminddate).split("T");
     var text = (remindtext).split("||");
     var split = res[0].split("-");
@@ -321,13 +390,13 @@ function addreminder(IDd){
     var mins = split2[1]
 
     var startDate = new Date(year,(month),day,hours,mins,0,0,0); // beware: month 0 = january, 11 = december
-   // alert(startDate);
+    // alert(startDate);
     var endDate = new Date(year,(month),day,hours,mins,0,0,0);
     var title = text[0];
     var location = text[2];
     var notes = text[1];
-    var successremind = function(message) { alert("Success: " + JSON.stringify(message)); };
-    var errorremind = function(message) { alert("Error: " + message); };
+    var successremind = function(message) { alert("Event added to calendar!"); };
+    var errorremind =function(message) { alert("Something went wrong event not added to calendar!"); };
 
     var calOptions = window.plugins.calendar.getCalendarOptions(); // grab the defaults
     calOptions.firstReminderMinutes = IDd; // default is 60, pass in null for no reminder (alarm)
@@ -349,6 +418,16 @@ function createvarforremind(DatetimeStart,text){
 
     reminddate =DatetimeStart;
     remindtext = text;
+}
+
+function cancelgame(){
+
+
+
+    cancelgamenow(IDhist);
+
+
+
 }
 
 

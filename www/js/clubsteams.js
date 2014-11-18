@@ -3,11 +3,11 @@ var id = getUrlVars()["ID"];
 var favtop  = 0;
 var followtop =0;
 
-document.addEventListener("deviceready", onDeviceReadyclubteam, false);
+document.addEventListener("deviceready", onDeviceReadyct, false);
 
-function onDeviceReadyclubteam() {
-//    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-  //  console.log("LOCALDB - Database ready");
+function onDeviceReadyct() {
+  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    console.log("LOCALDB - Database ready");
     db.transaction(getdata, errorCBfunc, successCBfunc);
 
     db.transaction(getimgfav, errorCBfunc, successCBfunc);
@@ -41,11 +41,11 @@ var img = "";
     }else if(favtop == 0 && followtop ==1){
         $("#imgfavfollow").attr("src","../img/halfstar.png");
     }
-    $("#imgfavfollow").click(updatefollow);
+    $("#duvimgfollow").click(updatefollow);
 }
 
 function updatefollow(){
-    $("#imgfavfollow").attr('onclick','').unbind('click');
+    $("#duvimgfollow").attr('onclick','').unbind('click');
     if(favtop == 0 && followtop ==0){
 
 

@@ -18,53 +18,53 @@
     under the License.
 -->
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <title>Hello World</title>
-
-
-
-
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <script type="text/javascript" src="js/dbconnection.js"></script>
-
-    <script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="cordova.js"  charset="utf-8"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
-    <script type="text/javascript" src="js/CreateOpenDB.js"></script>
-    <script type="text/javascript" src="js/mainindex.js"></script>
-    <script type="text/javascript" src="js/loaddata.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>Hello World</title>
 
 
 
 
-    <script type="text/javascript"  charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <script type="text/javascript" src="js/dbconnection.js"></script>
+
+       <script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="cordova.js"  charset="utf-8"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/CreateOpenDB.js"></script>
+        <script type="text/javascript" src="js/mainindex.js"></script>
+        <script type="text/javascript" src="js/loaddata.js"></script>
 
 
 
-        document.addEventListener("deviceready", onDeviceReadyindex, false);
 
-        function onDeviceReadyindex() {
-            //db.transaction(createDB, errorCBfunc, successCBfunc);
-            refreshdata();
-            db.transaction(getbackground, errorCBfunc, successCBfunc);
-        }
+        <script type="text/javascript"  charset="utf-8">
 
 
 
-    </script>
+    document.addEventListener("deviceready", onDeviceReadyindex, false);
+
+    function onDeviceReadyindex() {
+        //db.transaction(createDB, errorCBfunc, successCBfunc);
+        refreshdata();
+        db.transaction(getbackground, errorCBfunc, successCBfunc);
+    }
+
+
+
+        </script>
 <style>
     .modal-footer{
 
@@ -85,15 +85,10 @@
         </div>
         <div class="mainheaderimgicon"  >
 
-            <img src="img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
+            <img src="img/Soccer_ball.png"  style="vertical-align:middle;height:40px;" align="middle">
 
-            Neosportz Rugby
+            Neosportz Football
         </div>
-
-
-
-
-
 
     </div>
 
@@ -146,11 +141,12 @@
                             Select a Favourite club
                         </div>
                     </div>
-                    <div id="clubfav">
+                    <div class="modal-body" >
+                        <div id="clubfav">
 
 
+                        </div>
                     </div>
-
 
                 </div>
             </div>
@@ -185,13 +181,13 @@
 
 
         <div id="indexdiv" style="">
-    <div class="divmain" onclick="weblink('pages/ScheduleMenu.html')">
+    <div class="divmain" onclick="weblink('pages/schedules.html?id=48')">
     Schedules
     </div>
-    <div class="divmain"  onclick="weblink('pages/ResultsMenu.html')">
+    <div class="divmain"  onclick="weblink('pages/results.html?id=48')">
         Results
     </div>
-    <div class="divmain" onclick="weblink('pages/StandingMenu.html')">
+    <div class="divmain" onclick="weblink('pages/standings.html?id=61')">
         Standings
     </div>
     <div class="divmain"  onclick="weblink('pages/clubs.html')">
@@ -208,9 +204,9 @@
 
     </div>
     </div>
-    <div class="footer" >
+    <div class="footer">
         <img src="img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-        <img src="img/Loading.gif" id="busy" align="right"  height="40px" >
+
     </div>
 
     </body>

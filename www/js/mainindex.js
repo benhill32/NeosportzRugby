@@ -1,15 +1,13 @@
 var db;
-
 var deviceIDfunc;
+
+
 document.addEventListener("deviceready", onDeviceReadymainindex, false);
 
 function onDeviceReadymainindex() {
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
-
     deviceIDfunc = device.uuid;
+
     loadindexmessage();
-    db.transaction(getbackground, errorCBfunc, successCBfunc);
 }
 
 
@@ -43,6 +41,7 @@ function getbackground(tx) {
 function getbackground_success(tx, results) {
 
     var len = results.rows.length;
+    //alert(len);
     if(len != 0) {
         var menu = results.rows.item(0);
 
@@ -75,13 +74,14 @@ function gethasclub_success(tx, results) {
     var dif = na4-hasclubdate;
 
 
-    if(hasclub == 0){
- //   if(hasclub == 0 && dif > "600000"){
-      //  alert($('#mainfore').attr('class'));
-            $('#mainfore').removeClass('mainforeground');
-            $('#mainfore').addClass('mainforeground2');
-      // alert($('#mainfore').attr('class'));
-            $('#basicModalnofav').modal('show');
+    if(hasclub == 0) {
+        //   if(hasclub == 0 && dif > "600000"){
+        //  alert($('#mainfore').attr('class'));
+        $('#mainfore').removeClass('mainforeground');
+        $('#mainfore').addClass('mainforeground2');
+        // alert($('#mainfore').attr('class'));
+        $('#basicModalnofav').modal('show');
+
     }
 
 }

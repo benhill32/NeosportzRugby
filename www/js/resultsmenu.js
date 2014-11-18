@@ -1,13 +1,15 @@
 var db;
 var dbCreated = false;
 
-document.addEventListener("deviceready", onDeviceReadyresmenu, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReadyresmenu() {
-   // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-   // console.log("LOCALDB - Database ready");
+function onDeviceReady() {
+    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    console.log("LOCALDB - Database ready");
     db.transaction(getMenu, errorCB, successCB);
 }
+db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+console.log("LOCALDB - Database ready");
 db.transaction(getMenu, errorCB, successCB);
 
 function errorCB(err) {
@@ -43,15 +45,10 @@ function getMenu_success(tx, results) {
 
 
 
-        $('#mainmenuresultsch').append('<Div class="divmainmenunew" onclick="redirectresults(' + menu.DivisionID + ')" >' +
+        $('#mainmenu').append('<Div class="divmain"><a href="results.html?id=' + menu.DivisionID + '">' +
 
-            '<span >' + menu.DivisionName + '</span></Div>');
+            '<span >' + menu.DivisionName + '</span></a></Div>');
     }
 
     db = null;
-}
-
-function redirectresults(ID){
-
-    window.location = "../pages/results.html?id=" + ID;
 }

@@ -1,13 +1,6 @@
+
 function droptables(){
 
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
-        console.log("MobileApp_Results_Menu table is Dropped");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Schedule_Menu ');
-        console.log("MobileApp_Schedule_Menu table is Dropped");
-    });
 
     db.transaction(function(tx) {
         tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
@@ -63,47 +56,31 @@ function droptables(){
         console.log("Mobilesponsorsclub table is Dropped");
     });
 
-
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE Mobilescreenimage ');
-        console.log("Mobilescreenimage table is Dropped");
+        tx.executeSql('Drop TABLE Mobilesponsorsclub ');
+        console.log("Mobilesponsorsclub table is Dropped");
     });
 
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
-         console.log("MobileApp_Results_Menu table is Dropped");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Schedule_Menu ');
-          console.log("MobileApp_Schedule_Menu table is Dropped");
-    });
+        tx.executeSql('Drop TABLE MobileScoringTable ');
+        console.log("MobileScoringTable table is Dropped");
+    })
 
     db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Results_Table_Menu)');
-        console.log("MobileApp_Results_Table_Menu table is created");
+        tx.executeSql('Drop TABLE Mobilescoringbreakdown ');
+        console.log("Mobilescoringbreakdown table is Dropped");
     });
-
 
 }
 
 function createDB(tx) {
 
 
-    db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Schedule_Menu (_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
-        console.log("MobileApp_Schedule_Menu table is created");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
-        console.log("MobileApp_Results_Menu table is created");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_Menu (_id INTEGER NOT NULL primary key, TournamentName TEXT NOT NULL,UpdateDateUTC TEXT NULL,OrderID INTEGER NOT NULL)');
-        console.log("MobileApp_Results_Menu table is created");
-    });
+
+
     //  tx.executeSql('Drop TABLE MobileApp_LastUpdatesec ');
     //  console.log("MobileApp_LastUpdatesec table is Dropped");
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec ( Datesecs TEXT NULL, datemenus TEXT NULL,syncwifi INTEGER NOT NULL,isadmin INTERGER NOT NULL,token TEXT NOT NULL,hasclub INTERGER NOT NULL,hasclubdate TEXT NULL,fliterON INTERGER  NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL, datemenus TEXT NULL,syncwifi INTEGER NOT NULL,isadmin INTERGER NOT NULL,token TEXT NOT NULL,hasclub INTERGER NOT NULL,hasclubdate TEXT NULL,fliterON INTERGER  NULL)');
     console.log("MobileApp_LastUpdatesec table is created");
     //   tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus) VALUES ("0", "0" )');
     //   console.log("INSERT INTO MobileApp_LastUpdatesec");
@@ -145,10 +122,8 @@ function createDB(tx) {
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS Mobilescoringbreakdown (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NULL,UpdatedateUTC TEXT NULL,DeletedateUTC TEXT NULL,TeamID INTEGER NOT NULL,GameID INTEGER NOT NULL,PlayerID INTEGER NOT NULL,ScoringID INTEGER NOT NULL,Time TEXT NULL)');
     console.log("Mobilescoringbreakdown table is created");
-
-
-
 }
+
 
 
 function CleanDB() {

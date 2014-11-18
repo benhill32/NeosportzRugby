@@ -10,7 +10,7 @@ var awayid = 0;
 document.addEventListener("deviceready", onDeviceReadyresult, false);
 
 function onDeviceReadyresult() {
-    //db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+   // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
     db.transaction(getfliter, errorCBfunc, successCBfunc);
 }
@@ -129,8 +129,8 @@ function getdata(tx) {
     var year = d.getFullYear();
     var day = d.getDate();
 
-    var midnight = new Date(Date.UTC(year,month,day,"00","00","00","01"));
-    var midnightsec = ((midnight.getTime())/1000);
+    var midnight = new Date(Date.UTC(year,month,day,"23","59","59","01"));
+    var midnightsec = Math.round(((midnight.getTime())/1000));
 
 
     if(fliter == 0){
@@ -151,7 +151,7 @@ function getdata(tx) {
     }
 
 
-    //alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 

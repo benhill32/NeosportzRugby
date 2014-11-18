@@ -100,27 +100,6 @@ body {
     min-height: 60px;
 }
 
-.divmainmenunew{
-    padding-top: 5px;
-    width: 100%;
-
-    top:0;
-text-align: center;
-    border-bottom: 1px solid grey;
-
-    font-size:18px;
-
-    vertical-align: middle;
-    min-height: 60px;
-
-}
-
-
-
-.divmainmenunew a{
-    color: black;
-
-}
 
 .imgheader{
 
@@ -448,12 +427,12 @@ position: fixed;
 @media (max-width: 480px) {
 
     .modal {
-        height: 500px; /* Set a default max height of the modal (adjusted later)*/
-        position: fixed; /* Display modal in the centre of your screen */
-        overflow-y: scroll; /*  Ensure that the modal is scroll-able */
-        -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
+         height: 500px; /* Set a default max height of the modal (adjusted later)*/
+         position: fixed; /* Display modal in the centre of your screen */
+         overflow-y: scroll; /*  Ensure that the modal is scroll-able */
+         -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
 
-    }
+     }
     .modal.fade.in{
         top: 5px; /* Use more screen real estate */
     }
@@ -529,7 +508,7 @@ position: fixed;
      z-index: 10;
    // background:#7f7f7f;
     background:rgba(255,255,255,0.75);
-    top: 60px;
+    top: 65px;
     bottom: 60px;
     overflow-y: scroll;
     
@@ -615,6 +594,14 @@ position: fixed;
     -webkit-overflow-scrolling:touch
     overflow-y: scroll !important;
 }
+
+#clubfav{
+    padding: 10px !important;
+    -webkit-overflow-scrolling:touch
+overflow-y: scroll !important;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+}
 .mainmenuresult{
 
 
@@ -639,12 +626,7 @@ position: fixed;
     color: white;
     opacity:0.7;
 }
-.divmainmenunew:hover{
 
-    background-color: #339900;
-    color: white;
-    opacity:0.7;
-}
 
 #basicModal .modal-footer:hover{
     background-color: #339900;

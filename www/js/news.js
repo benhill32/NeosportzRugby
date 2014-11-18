@@ -13,7 +13,7 @@ document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-   // console.log("LOCALDB - Database ready");
+    console.log("LOCALDB - Database ready");
     db.transaction(getadmin, errorCBfunc, successCBfunc);
 
   //  checkfb();
@@ -375,6 +375,15 @@ function choosefacteam(ID){
     clearfavteam();
 
     addfavteam(ID);
+
+
+    var daaa = new Date();
+    var naaa = daaa.getTime();
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 1, hasclubdate = "' + naaa + '"');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
 
     db.transaction(getdatanews, errorCBfunc, successCBfunc);
 }
