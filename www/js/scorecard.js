@@ -10,8 +10,8 @@ document.addEventListener("deviceready", onDeviceReadyscore, false);
 function onDeviceReadyscore() {
 
     deviceIDscorecard = device.uuid;
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
+  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+  //  console.log("LOCALDB - Database ready");
     db.transaction(getdata, errorCBfunc, successCBfunc);
     db.transaction(getscoredata, errorCBfunc, successCBfunc);
 

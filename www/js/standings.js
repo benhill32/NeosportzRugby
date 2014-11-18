@@ -5,8 +5,8 @@ var orientationstand = "";
 document.addEventListener("deviceready", onDeviceReadystand(), false);
 
 function onDeviceReadystand() {
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
+  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+  //  console.log("LOCALDB - Database ready");
     db.transaction(getstandings, errorCBfunc, successCBfunc);
 
 

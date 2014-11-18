@@ -1,5 +1,5 @@
 document.addEventListener("deviceready", onDeviceReadyfunc, false);
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+var db;
 var deviceIDfunc;
 var devicemodelfunc;
 var deviceCordovafunc;
@@ -693,6 +693,11 @@ function CleanDB() {
         tx.executeSql('Delete from Mobilesponsorsclub where DeletedateUTC != "null"');
         console.log('Clean Mobilesponsorsclub');
     });
+
+
+
+
+
 
 
 

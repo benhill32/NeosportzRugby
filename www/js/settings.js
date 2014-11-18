@@ -1,4 +1,4 @@
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+var db;
 console.log("LOCALDB - Database ready");
 var networkconnectionset = 0;
 var wifiallset = 0;

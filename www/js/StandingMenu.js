@@ -4,8 +4,8 @@ var dbCreated = false;
 document.addEventListener("deviceready", onDeviceReadysstandmenu, false);
 
 function onDeviceReadysstandmenu() {
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
+  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+  //  console.log("LOCALDB - Database ready");
     db.transaction(getMenu, errorCB, successCB);
 }
 db.transaction(getMenu, errorCB, successCB);

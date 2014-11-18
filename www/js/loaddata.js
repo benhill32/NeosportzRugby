@@ -23,8 +23,8 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
+   // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+  //  console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
@@ -80,7 +80,24 @@ function loadnewtable(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,syncwifi,Datesecs from MobileApp_LastUpdatesec";
-    tx.executeSql(sql, [], populateDB1,errorCBfunc);
+    tx.executeSql(sql, [], populateDB1,errorCreatetable);
+
+}
+
+
+function errorCreatetable(err) {
+
+    createtables();
+
+}
+
+function createtables(){
+    $.when(db.transaction(createDB, errorCBfunc, successCBfunc)).done(function() {
+
+        db.transaction(populateDB, errorCBfunc, successCBfunc);
+    });
+
+
 
 }
 
@@ -130,6 +147,21 @@ function passdatatoserver(){
 
 }
 
+function getresultids(tx) {
+    sql = "select ID from MobileApp_Results";
+    tx.executeSql(sql, [], getresultids_success);
+}
+
+function getresultids_success(tx, results) {
+
+    var len = results.rows.length;
+    stringresultID =0;
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        stringresultID = stringresultID + menu.ID + ",";
+    }
+}
+
 function getchecksync(tx, results) {
 
     var row = results.rows.item(0);
@@ -170,14 +202,28 @@ function getchecksync(tx, results) {
         var json = xmlHttp.responseText;
         var obj = JSON.parse(json);
 
-        var totaljson  =  (countProperties(obj)/18)* 1000;
+        if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
 
-        syncmaintables(obj);
+            errorclosemodel();
+        } else {
+
+            var obj = JSON.parse(json);
+
+
+
+            syncmaintables(obj);
+        }
     }
 
 }
 
-
+function errorclosemodel(){
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+    $('#indexloadingdata').modal('hide');
+    window.plugins.toast.showLongCenter('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    randomfunctions();
+}
 
 function closemodel(){
     $('#mainfore').removeClass('mainforeground2');
@@ -316,23 +362,16 @@ function onclickresync(tx, results) {
 
         var obj = JSON.parse(json);
 
-        if (datemenus != datemenus) {
-            updatemenutables(obj);
+        if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
+
+            errorclosemodel();
+
+        } else {
+            var obj = JSON.parse(json);
+            $.when(syncmaintables(obj)).done(function () {
+                randomfunctions();
+            });
         }
-
-        var totaljson = (countProperties(obj) / 18) * 1000;
-
-        //  setTimeout(function () {
-        //          $('#indexloadingdata').modal('hide');
-
-        //          window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-        //      }
-        //      , totaljson);
-
-
-        $.when(syncmaintables(obj)).done(function () {
-            randomfunctions();
-        });
 
 
 
