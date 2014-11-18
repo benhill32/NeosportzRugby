@@ -159,7 +159,7 @@ function successCBfunc() {
 function passscoretoserver(testvar){
 
     var http = new XMLHttpRequest();
-    var url = "http://centralfootball.neosportz.com/loaddatafromapp.aspx";
+    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
     var params = "?" + testvar;
 
     http.open("POST", url + params, true);
@@ -178,7 +178,7 @@ function passscoretoserver(testvar){
 function passnewfeedtoserver(testvar){
 
     var http = new XMLHttpRequest();
-    var url = "http://centralfootball.neosportz.com/apploadnewsfeed.aspx";
+    var url = "http://rugby.neosportz.com/apploadnewsfeed.aspx";
     var params = "?" + testvar;
     http.open("POST", url + params, true);
 
@@ -195,7 +195,7 @@ function passnewfeedtoserver(testvar){
 function passcancelgametoserver(testvar){
 
     var http = new XMLHttpRequest();
-    var url = "http://centralfootball.neosportz.com/apploadcancelgame.aspx";
+    var url = "http://rugby.neosportz.com/apploadcancelgame.aspx";
     var params = "?" + testvar;
     http.open("POST", url + params, true);
     http.onreadystatechange = function() {//Call a function when the state changes.
@@ -227,9 +227,9 @@ function blankLastUpdatesec(){
     xmlHttp = new XMLHttpRequest();
 
    // $('#busy').show();
-    xmlHttp.open("GET", 'http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
     xmlHttp.send();
-  //  alert('http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
+  //  alert('http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
     db.transaction(function(tx) {
@@ -309,6 +309,45 @@ function syncmaintables(obj){
     //    errorclosemodel();
 
    // });
+    $.each(obj.App_Schedule_Menu, function (idx, obj) {
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
+            console.log("INSERT INTO MobileApp_Schedule_Menu is created");
+        });
+    });
+
+    $.each(obj.App_Results_Menu, function (idx, obj) {
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
+            console.log("INSERT INTO MobileApp_Results_Menu is created");
+        });
+    });
+
+    $.each(obj.vwApp_Results_Table_Men, function (idx, obj) {
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO MobileApp_Results_Table_Menu (TournamentName, _id,DivisionID ,OrderID ,UpdateDateUTC ) VALUES ("' + obj.TournamentName + '",' + obj._id + ', ' + obj.DivisionID + ',' + obj.OrderID + ', "' + obj.UpdateDateUTC + '", ' + obj.DivisionOrderID + ' )');
+            console.log("INSERT INTO MobileApp_Results_Table_Menu is created");
+        });
+    });
+
+
+    db.transaction(function(tx) {
+        tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
+        console.log("MobileApp_Results_Menu table is Dropped");
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('Drop TABLE MobileApp_Schedule_Menu ');
+        console.log("MobileApp_Schedule_Menu table is Dropped");
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Schedule_Menu (_id INTEGER NOT NULL, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
+        console.log("MobileApp_Schedule_Menu table is created");
+    });
+    db.transaction(function(tx) {
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
+        console.log("MobileApp_Results_Menu table is created");
+    });
+
 
     $.each(obj.App_Results2, function (idx, obj) {
 

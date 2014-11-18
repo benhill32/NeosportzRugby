@@ -157,7 +157,7 @@ function passdatatoserver(){
 
     var deviceid = "dsdsadsadasd";
     var http = new XMLHttpRequest();
-    var url = "http://centralfootball.neosportz.com/loaddatafromapp.aspx";
+    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
     var params = "?token=" + golbaltoken + "&deviceid=" + deviceid;
     http.open("POST", url + params, true);
 
@@ -203,8 +203,8 @@ function getchecksync(tx, results) {
             }
             var xmlHttp = null;
             xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
-           // xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx', false);
+            xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+           // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
             xmlHttp.send();
 
             var json = xmlHttp.responseText;
@@ -356,8 +356,8 @@ function onclickresync(tx, results) {
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
-       xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
-    //xmlHttp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx', false);
+       xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+    //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
 
         xmlHttp.send();
 
@@ -391,7 +391,7 @@ function tokenHandler (result) {
 
    // alert('tokenB: '+ result);
     //$('#busy').show();
-    var strur = 'http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
+    var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + result;
   //  navigator.notification.alert(strur);
     xmlHttptt.open("GET",strur ,false);
     xmlHttptt.send();
@@ -456,7 +456,7 @@ function onNotification(e) {
 
 
               //  $('#busy').show();
-                             var strur = 'http://centralfootball.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
+                             var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&regid=' + e.regid;
                 xmlHttpt.open("GET",strur ,false);
                 //   alert(strur);
                 xmlHttpt.send();
