@@ -7,10 +7,10 @@ function onDeviceReadydbconn() {
     deviceplatformdb = device.platform;
 
     if(deviceplatformdb == "iOS"){
-      //  alert(deviceplatformdb);
-        db = window.sqlitePlugin.openDatabase("../Library/Caches/NeosportzFootball", "1.1", "Neosportz_Football", 200000);
+        alert(deviceplatformdb);
+        db = window.sqlitePlugin.openDatabase("../Library/Caches/NeosportzRugby", "1.1", "NeosportzRugby", 200000);
     }else if(deviceplatformdb == "Android"){
-       // alert(deviceplatformdb);
-        db = window.sqlitePlugin.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+        alert(deviceplatformdb);
+        db = window.sqlitePlugin.openDatabase("NeosportzRugby", "1.1", "NeosportzRugby", 200000);
     }
 }
