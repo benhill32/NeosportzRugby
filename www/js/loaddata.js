@@ -65,7 +65,7 @@ function checkonline(){
 }
 
 function refreshdata(){
-
+alert("refresh");
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
 
@@ -80,6 +80,7 @@ function loadnewtable(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,syncwifi,Datesecs from MobileApp_LastUpdatesec";
+    alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
