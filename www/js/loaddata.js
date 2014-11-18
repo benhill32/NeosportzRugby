@@ -7,7 +7,7 @@ var day = d.getDate();
 var month = d.getMonth();
 var year = d.getFullYear();
 var hours= d.getHours();
-
+var stringresultID = 0;
 var datenow = (day + '' + month+ '' + year);
 var milliesecs = d.getTime();
 var datenowsec = Math.round((milliesecs/1000));
@@ -23,15 +23,17 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
 
-   // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-  //  console.log("LOCALDB - Database ready");
+    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
     getnetworkdetails();
     $('#busy').hide();
 
     document.addEventListener("offline", onOffline, false);
+    db.transaction(getresultids, errorCBfunc, successCBfunc);
 }
+//db.transaction(getresultids, errorCBfunc, successCBfunc);
 
 function onOffline()
 {
@@ -65,7 +67,7 @@ function checkonline(){
 }
 
 function refreshdata(){
-alert("refresh");
+
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
 
@@ -80,11 +82,10 @@ function loadnewtable(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,syncwifi,Datesecs from MobileApp_LastUpdatesec";
-    alert(sql);
+    //  alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
-
 
 function errorCreatetable(err) {
 
@@ -105,7 +106,8 @@ function createtables(){
 function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
-
+    //   alert(row);
+    //  alert(row.Count);
     if(row.Count ==0){
         if(document.getElementById("indexdiv")!=null) {
             $('#mainfore').removeClass('mainforeground');
@@ -113,6 +115,8 @@ function populateDB1(tx,results) {
             // alert($('#mainfore').attr('class'));
             $('#indexloadingdata').modal('show');
         }
+
+
         $.when(blankLastUpdatesec()).done(function() {
             $.when( pushnotifiy()).done(function() {
                 db.transaction(populateDB, errorCBfunc, successCBfunc);
@@ -123,6 +127,7 @@ function populateDB1(tx,results) {
         var sql = "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
 
         if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
+
             tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
             $('#indexloadingdata').modal('hide')
@@ -130,22 +135,6 @@ function populateDB1(tx,results) {
             $('#mainfore').addClass('mainforeground');
         }
     }
-}
-
-function passdatatoserver(){
-
-    var deviceid = "dsdsadsadasd";
-    var http = new XMLHttpRequest();
-    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
-    var params = "?token=" + golbaltoken + "&deviceid=" + deviceid;
-    http.open("POST", url + params, true);
-
-    http.onreadystatechange = function() {//Call a function when the state changes.
-        if(http.readyState == 4 && http.status == 200) {
-        }
-    }
-    http.send();
-
 }
 
 function getresultids(tx) {
@@ -161,6 +150,23 @@ function getresultids_success(tx, results) {
         var menu = results.rows.item(i);
         stringresultID = stringresultID + menu.ID + ",";
     }
+}
+
+
+function passdatatoserver(){
+
+    var deviceid = "dsdsadsadasd";
+    var http = new XMLHttpRequest();
+    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
+    var params = "?token=" + golbaltoken + "&deviceid=" + deviceid;
+    http.open("POST", url + params, true);
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+        }
+    }
+    http.send();
+
 }
 
 function getchecksync(tx, results) {
@@ -182,26 +188,26 @@ function getchecksync(tx, results) {
     }
 
     if (dif >= "600") {
-        if(document.getElementById("indexdiv")!=null) {
+        if (document.getElementById("indexdiv") != null) {
 
-            if($("#mainfore").hasClass("mainforeground2")){
+            if ($("#mainfore").hasClass("mainforeground2")) {
 
-            }else{
+            } else {
                 $('#mainfore').removeClass('mainforeground');
                 $('#mainfore').addClass('mainforeground2');
                 $('#indexloadingdata').modal('show');
             }
 
-        }else{
+        } else {
             $('#indexloadingdata').modal('show');
         }
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+        // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
-        var obj = JSON.parse(json);
 
         if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
 
@@ -232,7 +238,6 @@ function closemodel(){
     $('#indexloadingdata').modal('hide');
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
-
 }
 
 
@@ -247,7 +252,6 @@ function randomfunctions(){
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliter, errorCBfunc, successCBfunc);
     }
-
 }
 
 
@@ -323,10 +327,7 @@ function countProperties(obj) {
 
 
 function onclicksyncloaddata(){
-
-
     db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc)
-
 }
 
 function onclicksyncloaddata2(tx){
@@ -355,28 +356,22 @@ function onclickresync(tx, results) {
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
-        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync, false);
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+        //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
 
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
 
-        var obj = JSON.parse(json);
-
         if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
 
             errorclosemodel();
-
         } else {
             var obj = JSON.parse(json);
             $.when(syncmaintables(obj)).done(function () {
                 randomfunctions();
             });
         }
-
-
-
-
 
     }
 }
