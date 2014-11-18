@@ -27,8 +27,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.433275" vertical-offset="2920" max-vertical-offset="9333">
-              <caret line="458" column="51" selection-start-line="458" selection-start-column="51" selection-end-line="458" selection-end-column="51" />
+            <state vertical-scroll-proportion="-0.050259966" vertical-offset="1219" max-vertical-offset="9333">
+              <caret line="70" column="29" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -37,8 +37,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0384617" vertical-offset="507" max-vertical-offset="3893">
-              <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+            <state vertical-scroll-proportion="-9.923077" vertical-offset="762" max-vertical-offset="3893">
+              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -775,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0384617" vertical-offset="507" max-vertical-offset="3893">
-          <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/dbconnection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
@@ -809,10 +801,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.923077" vertical-offset="762" max-vertical-offset="3893">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.433275" vertical-offset="2920" max-vertical-offset="9333">
-          <caret line="458" column="51" selection-start-line="458" selection-start-column="51" selection-end-line="458" selection-end-column="51" />
+        <state vertical-scroll-proportion="-0.050259966" vertical-offset="1219" max-vertical-offset="9333">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="29" />
           <folding />
         </state>
       </provider>
