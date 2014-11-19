@@ -5,21 +5,10 @@ document.addEventListener("deviceready", onDeviceReadyresmenu, false);
 
 function onDeviceReadyresmenu() {
 
-    db.transaction(getMenu, errorCB, successCB);
+    db.transaction(getMenu, errorCBfunc, successCBfunc);
 }
 
 
-function errorCB(err) {
-    console.log("Error processing SQL: "+err.message);
-    //alert("Error processing SQL loaddata: "+err.code);
-}
-
-
-// Transaction success callback
-//
-function successCB() {
-    //  alert("success!");
-}
 
 
 

@@ -5,22 +5,7 @@ document.addEventListener("deviceready", onDeviceReadyschmenu, false);
 
 function onDeviceReadyschmenu() {
 
-    db.transaction(getMenu, errorCB, successCB);
-}
-
-
-
-
-function errorCB(err) {
-    console.log("Error processing SQL: "+err.message);
-    //alert("Error processing SQL loaddata: "+err.code);
-}
-
-
-// Transaction success callback
-//
-function successCB() {
-    //  alert("success!");
+        db.transaction(getMenu, errorCBfunc, successCBfunc);
 }
 
 
