@@ -4,11 +4,10 @@ var dbCreated = false;
 document.addEventListener("deviceready", onDeviceReadysstandmenu, false);
 
 function onDeviceReadysstandmenu() {
-  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-  //  console.log("LOCALDB - Database ready");
+
     db.transaction(getMenu, errorCB, successCB);
 }
-db.transaction(getMenu, errorCB, successCB);
+
 
 function errorCB(err) {
     console.log("Error processing SQL: "+err.message);
@@ -43,7 +42,7 @@ function getMenu_success(tx, results) {
 
         $('#mainmenustandingmenu').append('<Div class="divmainmenunew" onclick="redirectstandings(' + menu._id + ')" >' +
 
-            '<span >' + menu.TournamentName + '</span></Div>');
+        '<span >' + menu.TournamentName + '</span></Div>');
     }
 
 

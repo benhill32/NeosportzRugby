@@ -1,16 +1,14 @@
 var db;
 var dbCreated = false;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadyresmenu, false);
 
-function onDeviceReady() {
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
+function onDeviceReadyresmenu() {
+  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+   // console.log("LOCALDB - Database ready");
     db.transaction(getMenu, errorCB, successCB);
 }
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-console.log("LOCALDB - Database ready");
-db.transaction(getMenu, errorCB, successCB);
+
 
 function errorCB(err) {
     console.log("Error processing SQL: "+err.message);
@@ -28,7 +26,7 @@ function successCB() {
 
 function getMenu(tx) {
     var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
-   // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
+    // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
 
 
     //alert(sql);
@@ -45,10 +43,15 @@ function getMenu_success(tx, results) {
 
 
 
-        $('#mainmenu').append('<Div class="divmain"><a href="results.html?id=' + menu.DivisionID + '">' +
+        $('#mainmenuresultsch').append('<Div class="divmainmenunew" onclick="redirectresults(' + menu.DivisionID + ')" >' +
 
-            '<span >' + menu.DivisionName + '</span></a></Div>');
+        '<span >' + menu.DivisionName + '</span></Div>');
     }
 
     db = null;
+}
+
+function redirectresults(ID){
+
+    window.location = "../pages/results.html?id=" + ID;
 }

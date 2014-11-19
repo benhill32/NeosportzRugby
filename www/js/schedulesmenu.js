@@ -1,17 +1,13 @@
 var db;
 var dbCreated = false;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadyschmenu, false);
 
-function onDeviceReady() {
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    console.log("LOCALDB - Database ready");
+function onDeviceReadyschmenu() {
+
     db.transaction(getMenu, errorCB, successCB);
 }
 
-db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-console.log("LOCALDB - Database ready");
-db.transaction(getMenu, errorCB, successCB);
 
 
 
@@ -47,11 +43,17 @@ function getMenu_success(tx, results) {
         var menu = results.rows.item(i);
 
 
+        $('#mainmenuschmenu').append('<Div class="divmainmenunew" onclick="redirectschedules(' + menu.DivisionID + ')" >' +
 
-        $('#mainmenu').append('<Div class="divmain"><a href="schedules.html?id=' + menu.DivisionID + '">' +
+            // $('#mainmenuschmenu').append('<Div class="divmainmenunew"><a href="schedules.html?id=' + menu.DivisionID + '">' +
 
-            '<span >' + menu.DivisionName + '</span></a></Div>');
+        '<span >' + menu.DivisionName + '</span></Div>');
     }
 
 
+}
+
+function redirectschedules(ID){
+
+    window.location = "../pages/schedules.html?id=" + ID;
 }
