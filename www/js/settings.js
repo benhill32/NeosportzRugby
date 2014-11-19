@@ -174,6 +174,7 @@ function cleardata(){
 }
 
 function createtables(){
+
   // window.plugins.toast.showShortCenter('Creating Tables!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
   //  window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
 

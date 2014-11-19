@@ -334,10 +334,13 @@ position: fixed;
 }
 
 #mainmenuschmenu,#mainmenustandingmenu,#mainmenuresultsch{
-    padding-top: 15px;
-    padding-bottom: 50px;
-    padding-left:15px;
-    padding-right: 15px;
+    height: 20%;
+    text-align: center;
+    border-bottom: 1px solid blue;
+    font-size:18px;
+    padding:15px;
+    clear: both;
+
 }
 
 

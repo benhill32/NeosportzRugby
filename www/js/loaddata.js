@@ -21,6 +21,9 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 // Cordova is ready
 //
 
+
+
+
 function onDeviceReadyloaddata() {
 
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
@@ -82,7 +85,7 @@ function loadnewtable(){
 function populateDB(tx){
     // $('#busy').show();
     var sql = "select Count(Datesecs) as Count,syncwifi,Datesecs from MobileApp_LastUpdatesec";
-  //  alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], populateDB1,errorCreatetable);
 
 }
@@ -118,7 +121,7 @@ function populateDB1(tx,results) {
 
 
         $.when(blankLastUpdatesec()).done(function() {
-            $.when( pushnotifiy()).done(function() {
+           $.when( pushnotifiy()).done(function() {
                 db.transaction(populateDB, errorCBfunc, successCBfunc);
             });
         });
