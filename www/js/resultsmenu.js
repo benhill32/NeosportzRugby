@@ -29,7 +29,7 @@ function getMenu(tx) {
     // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
 
 
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -37,7 +37,7 @@ function getMenu(tx) {
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-
+    alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
