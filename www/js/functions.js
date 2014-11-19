@@ -311,41 +311,23 @@ function syncmaintables(obj){
    // });
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
         db.transaction(function(tx) {
-            tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
+            tx.executeSql('INSERT OR IGNORE INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
             console.log("INSERT INTO MobileApp_Schedule_Menu is created");
         });
     });
 
     $.each(obj.App_Results_Menu, function (idx, obj) {
         db.transaction(function(tx) {
-            tx.executeSql('INSERT INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
+            tx.executeSql('INSERT OR IGNORE INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
             console.log("INSERT INTO MobileApp_Results_Menu is created");
         });
     });
 
     $.each(obj.vwApp_Results_Table_Men, function (idx, obj) {
         db.transaction(function(tx) {
-            tx.executeSql('INSERT INTO MobileApp_Results_Table_Menu (TournamentName, _id,DivisionID ,OrderID ,UpdateDateUTC ) VALUES ("' + obj.TournamentName + '",' + obj._id + ', ' + obj.DivisionID + ',' + obj.OrderID + ', "' + obj.UpdateDateUTC + '", ' + obj.DivisionOrderID + ' )');
+            tx.executeSql('INSERT OR IGNORE INTO MobileApp_Results_Table_Menu (TournamentName, _id,DivisionID ,OrderID ,UpdateDateUTC ) VALUES ("' + obj.TournamentName + '",' + obj._id + ', ' + obj.DivisionID + ',' + obj.OrderID + ', "' + obj.UpdateDateUTC + '", ' + obj.DivisionOrderID + ' )');
             console.log("INSERT INTO MobileApp_Results_Table_Menu is created");
         });
-    });
-
-
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
-        console.log("MobileApp_Results_Menu table is Dropped");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('Drop TABLE MobileApp_Schedule_Menu ');
-        console.log("MobileApp_Schedule_Menu table is Dropped");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Schedule_Menu (_id INTEGER NOT NULL, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
-        console.log("MobileApp_Schedule_Menu table is created");
-    });
-    db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
-        console.log("MobileApp_Results_Menu table is created");
     });
 
 
