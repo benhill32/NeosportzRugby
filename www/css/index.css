@@ -333,6 +333,14 @@ position: fixed;
     padding-right: 15px;
 }
 
+#mainmenuschmenu,#mainmenustandingmenu,#mainmenuresultsch{
+    padding-top: 15px;
+    padding-bottom: 50px;
+    padding-left:15px;
+    padding-right: 15px;
+}
+
+
 
 #teamsdiv{
 // padding-top: 30px;
