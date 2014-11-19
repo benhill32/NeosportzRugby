@@ -216,7 +216,7 @@ function getgoals(tx){
    var sql= "select m.ID,m.CreatedateUTC,m.UpdatedateUTC,m.DeletedateUTC,m.TeamID,m.GameID,m.PlayerID,m.ScoringID,m.Time,p.FullName from Mobilescoringbreakdown as m INNER JOIN " +
        "MobilevwApp_Base_Players as p  ON p.ID = m.PlayerID " +
        "where GameID = " + gameid + " order by m.Time";
-// alert(sql);
+ alert(sql);
     tx.executeSql(sql, [], getgoals_success);
 }
 
