@@ -87,6 +87,8 @@ function droptables(){
 
 }
 
+
+
 function createDB(tx) {
 
     db.transaction(function(tx) {
