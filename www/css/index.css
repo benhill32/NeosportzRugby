@@ -336,13 +336,18 @@ position: fixed;
 .divmainmenunew{
     height: 20%;
     text-align: center;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
     font-size:18px;
     padding:15px;
     clear: both;
 
 }
+.divmainmenunew:hover{
 
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+}
 
 
 #teamsdiv{
