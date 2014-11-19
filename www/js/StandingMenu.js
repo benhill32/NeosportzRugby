@@ -10,7 +10,7 @@ function onDeviceReadysstandmenu() {
 
 function getMenu(tx) {
     var sql = "select _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_Menu  order by OrderID,TournamentName";
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -18,7 +18,7 @@ function getMenu(tx) {
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+   // alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
