@@ -201,6 +201,7 @@ function getMenu_success(tx, results) {
 
 function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd){
 
+    alert(ID + " - " + hometeam + " - " +awayteam+ " - " +homescore+ " - " +awayscore+ " - " +homeidd+ " - " +awayidd);
     gameid =ID;
     homeid = homeidd;
     awayid = awayidd;
