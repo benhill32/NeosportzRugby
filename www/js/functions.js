@@ -64,6 +64,11 @@ function weblink(htmllink){
     }
 
 
+function weblinkbackmenu(){
+
+    parent.history.back();
+}
+
 function clearfavteam(){
 
     db.transaction(function(tx) {
