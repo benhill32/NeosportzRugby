@@ -462,7 +462,7 @@ position: fixed;
 }
 @media (max-width: 480px) {
     #divstandings{
-        font-size:12px;
+        font-size:11px;
 
     }
 }

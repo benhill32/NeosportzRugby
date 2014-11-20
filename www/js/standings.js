@@ -3,12 +3,12 @@ var dbCreated = false;
 var id = getUrlVarsfunc()["id"];
 var orientationstand = "";
 document.addEventListener("deviceready", onDeviceReadystand(), false);
-
+var devicePlatformfstand;
 function onDeviceReadystand() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
  //   console.log("LOCALDB - Database ready");
     db.transaction(getstandings, errorCBfunc, successCBfunc);
-
+    devicePlatformfstand = device.platform;
 
 }
 //db.transaction(getstandings, errorCBfunc, successCBfunc);
@@ -78,7 +78,9 @@ function getstandings_success(tx, results) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         if (orientationstand == "portrait") {
+
             $('#idteamname').append('<Div class="score3  bold"  >' + menu.abbreviation + '</Div>');
+
         }else{
             $('#idteamname').append('<Div class="score3  bold"  >' + menu.Name + '</Div>');
         }
