@@ -215,7 +215,7 @@ body {
     padding:10px;
     background-color: lightgray;
     float:left;
-    width:5.5%;
+    width:6.0%;
     border-right:1px solid lightgray;
 }
 .standheader2{
@@ -241,7 +241,7 @@ position: fixed;
 
 }
 .score1{
-    width:5.5%;
+    width:6.0%;
     border-right:1px solid lightgray;
   // padding:8px;
     text-align: center;
