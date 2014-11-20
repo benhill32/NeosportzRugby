@@ -201,7 +201,7 @@ body {
     float:left;
     padding:10px;
     border-right:1px solid lightgray;
-    font-size:11px;
+
 }
 #divstandings{
 
@@ -235,6 +235,7 @@ body {
     width:100%;
     clear:both;
     //position: fixed;
+    font-size:11px;
 }
 #divstandingsheader{
     width:100%;
