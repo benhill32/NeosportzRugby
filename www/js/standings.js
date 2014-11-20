@@ -87,7 +87,7 @@ function getstandings_success(tx, results) {
         $('#idgamesF').append('<Div class="score3" >' + menu.ForScore + '</Div>');
         $('#idgamesA').append('<Div class="score3" >' + menu.AgainstScore + '</Div>');
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
-        $('#idgamesFP').append('<Div class="score3" >' + menu.FlagPoints + '</Div>');
+        $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
 
     }
 
