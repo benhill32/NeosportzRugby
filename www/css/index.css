@@ -467,7 +467,12 @@ position: fixed;
     }
 }
 
+@media (max-width: 640px) {
+    #divstandings{
+        font-size:12px;
 
+    }
+}
 
 
 /* Now adjust the height so it handles various screen sizes & orientations */
