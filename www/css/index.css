@@ -235,7 +235,7 @@ body {
     width:100%;
     clear:both;
     //position: fixed;
-    font-size:11px;
+    font-size:11px !important;
 }
 #divstandingsheader{
     width:100%;
