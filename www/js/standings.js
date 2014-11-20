@@ -21,7 +21,7 @@ function getorient(strorein){
 
 function getstandings(tx) {
 
-    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = '" + id + "' order by FlagPoints DESC,Difference DESC";
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = '" + id + "' order by FlagPoints DESC,Difference DESC";
    // alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
