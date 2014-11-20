@@ -45,8 +45,8 @@ function getstandings_success(tx, results) {
         $('#divmenustandings').append('<Div  class="standheader bold" >B</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >F</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >A</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >Diff</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >PTS</Div>');
+        $('#divmenustandings').append('<Div  class="standheader bold" >DF</Div>');
+        $('#divmenustandings').append('<Div  class="standheader bold" >PT</Div>');
 
     $('#divstandings').append('<Div align="left" id="idgamesp" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesW" class="score1"  style="float: left;" ></Div>');
