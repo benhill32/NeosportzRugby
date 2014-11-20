@@ -77,8 +77,11 @@ function getstandings_success(tx, results) {
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-
-        $('#idteamname').append('<Div class="score3  bold"  >' + menu.Name + '</Div>');
+        if (orientationstand == "portrait") {
+            $('#idteamname').append('<Div class="score3  bold"  >' + menu.abbreviation + '</Div>');
+        }else{
+            $('#idteamname').append('<Div class="score3  bold"  >' + menu.Name + '</Div>');
+        }
         $('#idgamesp').append('<Div class="score3"  >' + menu.Games + '</Div>');
         $('#idgamesW').append('<Div class="score3" >' + menu.Won + '</Div>');
         $('#idgamesD').append('<Div class="score3"  >' + menu.Drawn + '</Div>');
