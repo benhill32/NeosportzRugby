@@ -95,7 +95,7 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileScoringTable (ID INTEGER NOT NULL primary key,Name TEXT NOT NULL, Value INTEGER NOT NULL,UpdatedateUTC TEXT NOT NULL,DeletedateUTC TEXT NOT NULL)');
     console.log("MobileScoringTable table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileStandings (_id INTEGER NOT NULL primary key,Games INTEGER NOT NULL,Won INTEGER NOT NULL,Drawn INTEGER NOT NULL,Lost INTEGER NOT NULL,ForScore INTEGER NOT NULL,AgainstScore INTEGER NOT NULL,Difference INTEGER NOT NULL,ClubID INTEGER NOT NULL,Name TEXT NULL,TournamentID INTEGER NOT NULL,FlagPoints INTEGER NOT NULL,UpdateDateUTC TEXT NULL,TournamentName TEXT NULL,DeletedateUTC TEXT NOT NULL,Bonus INTEGER NOT NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileStandings (_id INTEGER NOT NULL primary key,Games INTEGER NOT NULL,Won INTEGER NOT NULL,Drawn INTEGER NOT NULL,Lost INTEGER NOT NULL,ForScore INTEGER NOT NULL,AgainstScore INTEGER NOT NULL,Difference INTEGER NOT NULL,ClubID INTEGER NOT NULL,Name TEXT NULL,abbreviation TEXT NULL,TournamentID INTEGER NOT NULL,FlagPoints INTEGER NOT NULL,UpdateDateUTC TEXT NULL,TournamentName TEXT NULL,DeletedateUTC TEXT NOT NULL,Bonus INTEGER NOT NULL)');
     console.log("MobileStandings table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS Mobilesponsorsclub (ID INTEGER NOT NULL primary key,Datetime TEXT NULL,Club INTEGER NOT NULL,Name TEXT NOT NULL,Website TEXT NULL,Image TEXT NULL,UserID TEXT NULL,OrderBy INTEGER NULL,Base64 TEXT NULL,CreatedateUTC TEXT NULL,UpdatedateUTC TEXT NULL,DeletedateUTC TEXT NULL,UpdatedateUTCBase64 TEXT NULL)');
