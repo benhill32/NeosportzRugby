@@ -207,7 +207,7 @@ body {
   //padding-top:40px;
     clear: both;
     margin: 42px 0;
-    overflow:scroll;
+    
 }
 .standheader{
 
@@ -239,7 +239,7 @@ body {
     width:100%;
     clear:both;
 position: fixed;
-    overflow:scroll;
+
 
 }
 .score1{
