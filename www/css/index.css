@@ -207,7 +207,7 @@ body {
   //padding-top:40px;
     clear: both;
     margin: 42px 0;
-    
+
 }
 .standheader{
 
@@ -216,7 +216,7 @@ body {
     padding:10px;
     background-color: lightgray;
     float:left;
-    width:7.0%;
+    width:6.5%;
     border-right:1px solid lightgray;
 }
 .standheader2{
@@ -243,7 +243,7 @@ position: fixed;
 
 }
 .score1{
-    width:7.0%;
+    width:6.5%;
     border-right:1px solid lightgray;
   // padding:8px;
     text-align: center;
