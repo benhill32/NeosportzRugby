@@ -21,7 +21,7 @@ function getorient(strorein){
 
 function getstandings(tx) {
 
-    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName from MobileStandings where TournamentID = '" + id + "' order by FlagPoints DESC,Difference DESC";
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = '" + id + "' order by FlagPoints DESC,Difference DESC";
    // alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
@@ -42,15 +42,17 @@ function getstandings_success(tx, results) {
         $('#divmenustandings').append('<Div  class="standheader bold" >W</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >D</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >L</Div>');
+        $('#divmenustandings').append('<Div  class="standheader bold" >B</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >F</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >A</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >GD</Div>');
+        $('#divmenustandings').append('<Div  class="standheader bold" >Diff</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >PTS</Div>');
 
     $('#divstandings').append('<Div align="left" id="idgamesp" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesW" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesD" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesL" class="score1"  style="float: left;" ></Div>');
+        $('#divstandings').append('<Div align="left" id="idgamesB" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesF" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesA" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesGD" class="score1"  style="float: left;" ></Div>');
@@ -81,6 +83,7 @@ function getstandings_success(tx, results) {
         $('#idgamesW').append('<Div class="score3" >' + menu.Won + '</Div>');
         $('#idgamesD').append('<Div class="score3"  >' + menu.Drawn + '</Div>');
         $('#idgamesL').append( '<Div class="score3" >' + menu.Lost + '</Div>');
+        $('#idgamesB').append( '<Div class="score3" >' + menu.Bonus + '</Div>');
         $('#idgamesF').append('<Div class="score3" >' + menu.ForScore + '</Div>');
         $('#idgamesA').append('<Div class="score3" >' + menu.AgainstScore + '</Div>');
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
@@ -92,6 +95,7 @@ function getstandings_success(tx, results) {
     $('#idgamesp').append('<Div  class="standfooter" ></Div>');
     $('#idgamesW').append('<Div  class="standfooter" ></Div>');
     $('#idgamesD').append('<Div  class="standfooter" ></Div>');
+    $('#idgamesB').append('<Div  class="standfooter" ></Div>');
     $('#idgamesL').append('<Div  class="standfooter" ></Div>');
     $('#idgamesF').append('<Div  class="standfooter" ></Div>');
     $('#idgamesA').append('<Div  class="standfooter" ></Div>');
