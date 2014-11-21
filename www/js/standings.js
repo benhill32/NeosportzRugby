@@ -96,7 +96,6 @@ var height= 0;
 
     if(height <= $("#idteamname").height()){
         height = $("#idteamname").height();
-
     }
 
     }
