@@ -95,6 +95,14 @@ function getstandings_success(tx, results) {
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
 
         $("#idteamname").height($("#idgamesp").height());
+        $("#idteamname").height($("#idgamesW").height());
+        $("#idteamname").height($("#idgamesD").height());
+        $("#idteamname").height($("#idgamesL").height());
+        $("#idteamname").height($("#idgamesB").height());
+        $("#idteamname").height($("#idgamesF").height());
+        $("#idteamname").height($("#idgamesA").height());
+        $("#idteamname").height($("#idgamesGD").height());
+        $("#idteamname").height($("#idgamesFP").height());
 
     }
 
