@@ -111,6 +111,7 @@ function createDB(tx) {
 
 
 
+
 function CleanDB() {
 
         db.transaction(function (tx) {

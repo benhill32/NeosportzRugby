@@ -304,11 +304,12 @@ var checkintvalue = function (val){
 
 
 function syncmaintables(obj){
-    $('#busy').hide();
+
+console.log(obj);
 
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
+        alert(obj._id);
         db.transaction(function(tx) {
-
             tx.executeSql('INSERT OR IGNORE INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ' )');
             console.log("INSERT INTO MobileApp_Schedule_Menu is created");
         });
