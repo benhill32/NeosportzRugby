@@ -94,22 +94,10 @@ var height= 0;
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
 
-    if(height <= $("#idteamname").height()){
-        height = $("#idteamname").height();
-    }
+
 
     }
-    'padding-right:2px';'padding-left:2px';'padding-top: 8px';'padding-bottom: 8px';
 
-    $("#idgamesp").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesW").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesD").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesL").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesB").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesF").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesA").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesGD").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
-    $("#idgamesFP").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
 
 
 
@@ -133,36 +121,7 @@ var height= 0;
 }
 
 
-function equalheight(container){
 
-    var currentTallest = 0,
-        currentRowStart = 0,
-        rowDivs = new Array(),
-        $el,
-        topPosition = 0;
-    $(container).each(function() {
-
-        $el = $(this);
-        $($el).height('auto')
-        topPostion = $el.position().top;
-
-        if (currentRowStart != topPostion) {
-            for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-                rowDivs[currentDiv].height(currentTallest);
-            }
-            rowDivs.length = 0; // empty the array
-            currentRowStart = topPostion;
-            currentTallest = $el.height();
-            rowDivs.push($el);
-        } else {
-            rowDivs.push($el);
-            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-        }
-        for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-            rowDivs[currentDiv].height(currentTallest);
-        }
-    });
-}
 
 
 
