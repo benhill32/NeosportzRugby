@@ -107,13 +107,47 @@ function getstandings_success(tx, results) {
     $('#idgamesGD').append('<Div  class="standfooter" ></Div>');
     $('#idgamesFP').append('<Div  class="standfooter" ></Div>');
 
-
+    equalheight('.score3');
 
  //   '<Div class="floatL hide">' + menu.AgainstScore + '</Div>' +
   //  '<Div class="floatL hide">' + menu.Difference + '</Div>' +
   //  '<Div class="floatL">' + menu.FlagPoints + '</Div>' +
 
 }
+
+
+function equalheight(container){
+
+    var currentTallest = 0,
+        currentRowStart = 0,
+        rowDivs = new Array(),
+        $el,
+        topPosition = 0;
+    $(container).each(function() {
+
+        $el = $(this);
+        $($el).height('auto')
+        topPostion = $el.position().top;
+
+        if (currentRowStart != topPostion) {
+            for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+                rowDivs[currentDiv].height(currentTallest);
+            }
+            rowDivs.length = 0; // empty the array
+            currentRowStart = topPostion;
+            currentTallest = $el.height();
+            rowDivs.push($el);
+        } else {
+            rowDivs.push($el);
+            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+        }
+        for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+            rowDivs[currentDiv].height(currentTallest);
+        }
+    });
+}
+
+
 
 
 
