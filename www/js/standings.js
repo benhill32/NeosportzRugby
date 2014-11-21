@@ -94,17 +94,23 @@ function getstandings_success(tx, results) {
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
 
-        $("#idteamname").height($("#idgamesp").height());
-        $("#idteamname").height($("#idgamesW").height());
-        $("#idteamname").height($("#idgamesD").height());
-        $("#idteamname").height($("#idgamesL").height());
-        $("#idteamname").height($("#idgamesB").height());
-        $("#idteamname").height($("#idgamesF").height());
-        $("#idteamname").height($("#idgamesA").height());
-        $("#idteamname").height($("#idgamesGD").height());
-        $("#idteamname").height($("#idgamesFP").height());
+
+        $("#idgamesp").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesW").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesD").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesL").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesB").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesF").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesA").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesGD").css({'height':($("#idteamname").height()+'px')});
+        $("#idgamesFP").css({'height':($("#idteamname").height()+'px')});
+
+       alert($("#idteamname").height() + " - " + $("#idgamesp").height());
 
     }
+
+
+
 
     $('#idteamname').append('<Div  class="standfooter" ></Div>');
     $('#idgamesp').append('<Div  class="standfooter" ></Div>');
