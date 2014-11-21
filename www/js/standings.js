@@ -84,7 +84,7 @@ var height= 0;
         }else{
             $('#idteamname').append('<Div class="score3 bold"  >' + menu.Name + '</Div>');
         }
-        $('#idgamesp').append('<Div class="score3"  >' + menu.Games + '</Div>');
+        $('#idgamesp').append('<Div class="score3" style="border-left:1px solid lightgray;"  >' + menu.Games + '</Div>');
         $('#idgamesW').append('<Div class="score3" >' + menu.Won + '</Div>');
         $('#idgamesD').append('<Div class="score3"  >' + menu.Drawn + '</Div>');
         $('#idgamesL').append( '<Div class="score3" >' + menu.Lost + '</Div>');

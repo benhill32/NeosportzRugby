@@ -189,7 +189,7 @@ body {
 }
 #idteamname{
     width:40%;
-    border-right:1px solid lightgray;
+   // border-right:1px solid lightgray;
    // padding:8px;
     text-align: left;
     height: 40px;
