@@ -79,10 +79,10 @@ var height= 0;
         var menu = results.rows.item(i);
         if (orientationstand == "portrait") {
 
-            $('#idteamname').append('<Div class="score3  bold"  >' + menu.abbreviation + '</Div>');
+            $('#idteamname').append('<Div class="score3 bold"  >' + menu.abbreviation + '</Div>');
 
         }else{
-            $('#idteamname').append('<Div class="score3  bold"  >' + menu.Name + '</Div>');
+            $('#idteamname').append('<Div class="score3 bold"  >' + menu.Name + '</Div>');
         }
         $('#idgamesp').append('<Div class="score3"  >' + menu.Games + '</Div>');
         $('#idgamesW').append('<Div class="score3" >' + menu.Won + '</Div>');
