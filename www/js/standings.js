@@ -94,6 +94,8 @@ function getstandings_success(tx, results) {
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
 
+        $("#idteamname").height($("#idgamesp").height());
+
     }
 
     $('#idteamname').append('<Div  class="standfooter" ></Div>');
@@ -107,7 +109,7 @@ function getstandings_success(tx, results) {
     $('#idgamesGD').append('<Div  class="standfooter" ></Div>');
     $('#idgamesFP').append('<Div  class="standfooter" ></Div>');
 
-    equalheight('.score3');
+
 
  //   '<Div class="floatL hide">' + menu.AgainstScore + '</Div>' +
   //  '<Div class="floatL hide">' + menu.Difference + '</Div>' +
