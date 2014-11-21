@@ -99,15 +99,17 @@ var height= 0;
     }
 
     }
-    $("#idgamesp").css({'height':(height+'px')});
-    $("#idgamesW").css({'height':(height+'px')});
-    $("#idgamesD").css({'height':(height+'px')});
-    $("#idgamesL").css({'height':(height+'px')});
-    $("#idgamesB").css({'height':(height+'px')});
-    $("#idgamesF").css({'height':(height+'px')});
-    $("#idgamesA").css({'height':(height+'px')});
-    $("#idgamesGD").css({'height':(height+'px')});
-    $("#idgamesFP").css({'height':(height+'px')});
+    'padding-right:2px';'padding-left:2px';'padding-top: 8px';'padding-bottom: 8px';
+
+    $("#idgamesp").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesW").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesD").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesL").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesB").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesF").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesA").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesGD").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
+    $("#idgamesFP").css({'height':(height+'px'),'padding-right':'2px','padding-left':'2px','padding-top': '8px','padding-bottom': '8px'});
 
 
 
