@@ -258,7 +258,7 @@ function getregionsdata(tx, results) {
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1', false);
-    alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=0');
+    alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
@@ -331,19 +331,16 @@ function syncmaintablesregions(obj){
 
         db.transaction(function(tx) {
             tx.executeSql('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+            alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
             console.log("INSERT INTO MobileRegion is created");
         });
     });
 
     $.each(obj.Isadmin, function (idx, obj) {
-
-        +
             db.transaction(function(tx) {
-                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
-                //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
-                // alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
+                alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
                 closemodelRegion();
-                // alert(Math.round((timenow/1000)));
             });
     });
 
