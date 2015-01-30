@@ -145,7 +145,7 @@ function showregion(){
 
 function getshowregion(tx) {
     var sql = "select ID ,Name from MobileRegion order by name";
-    alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], getshowregion_success);
 }
 
@@ -158,7 +158,7 @@ function getshowregion_success(tx, results) {
         var imgg = "";
 
         $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
-        '<div class="bold size13"   >' + menu.name  +
+        '<div class="bold size13"   >' + menu.Name  +
         '</div>' +
         '</Div>');
     }

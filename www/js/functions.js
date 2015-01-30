@@ -331,7 +331,7 @@ function syncmaintablesregions(obj){
 
         db.transaction(function(tx) {
             tx.executeSql('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
-            alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+          //  alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
             console.log("INSERT INTO MobileRegion is created");
         });
     });
@@ -339,7 +339,7 @@ function syncmaintablesregions(obj){
     $.each(obj.Isadmin, function (idx, obj) {
             db.transaction(function(tx) {
                 tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
-                alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
+          //      alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
                 closemodelRegion();
             });
     });
