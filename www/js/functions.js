@@ -246,7 +246,7 @@ function blankLastUpdatesec(){
 
 function gettokenregion(tx) {
     var sql =     "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
-
+alert(sql);
     tx.executeSql(sql, [], getregionsdata,errorCBfunc);
 }
 
@@ -258,7 +258,7 @@ function getregionsdata(tx, results) {
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=0', false);
-    // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+    alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=0');
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
