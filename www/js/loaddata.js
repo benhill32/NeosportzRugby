@@ -122,12 +122,19 @@ function populateDB1(tx,results) {
 
         $.when(blankLastUpdatesec()).done(function() {
            $.when( pushnotifiy()).done(function() {
-                db.transaction(populateDB, errorCBfunc, successCBfunc);
+               // db.transaction(populateDB, errorCBfunc, successCBfunc);
+               db.transaction(gettokenregion, errorCBfunc, successCBfunc);
+
             });
         });
+
+
+
+
+
     }else{
 
-        var sql = "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
+        var sql = "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
 
         if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
 
@@ -180,7 +187,7 @@ function getchecksync(tx, results) {
 
         var datenowsecsync = row.Datesecs;
 
-
+        var region = row.Region;
         var datenow = new Date();
         var timenow = datenow.getTime();
 
@@ -206,7 +213,7 @@ function getchecksync(tx, results) {
             }
             var xmlHttp = null;
             xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+            xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region, false);
            // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
             xmlHttp.send();
 
@@ -242,6 +249,21 @@ function closemodel(){
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
+
+function closemodelRegion(){
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+    $('#indexloadingdata').modal('hide');
+    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+    showregion();
+
+
+}
+
+
+
+
 
 
 function randomfunctions(){
@@ -335,7 +357,7 @@ function onclicksyncloaddata(){
 
 function onclicksyncloaddata2(tx){
     checkonline();
-    var sql = "select Datesecs,datemenus,syncwifi,token,isadmin from MobileApp_LastUpdatesec";
+    var sql = "select Datesecs,datemenus,syncwifi,token,isadmin,Region from MobileApp_LastUpdatesec";
     tx.executeSql(sql, [], onclickresync,errorCBfunc);
 
 }
@@ -349,7 +371,7 @@ function onclickresync(tx, results) {
 
         var datemenus = row.datemenus;
         var datenowsecsync = row.Datesecs;
-
+        var region = row.Region;
         var datenow = new Date();
         var timenow = datenow.getTime();
 
@@ -359,7 +381,7 @@ function onclickresync(tx, results) {
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
-       xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID, false);
+       xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region, false);
     //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
 
         xmlHttp.send();

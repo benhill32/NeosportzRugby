@@ -133,6 +133,51 @@ function choosefacteam(ID){
 
 }
 
+function showregion(){
+
+    db.transaction(getshowregion, errorCBfunc, successCBfunc);
+    $('#basicModalregions').modal('show');
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+
+}
+
+
+function getshowregion(tx) {
+    var sql = "select ID ,Name from MobileRegion order by name";
+    //alert(sql);
+    tx.executeSql(sql, [], getshowregion_success);
+}
+
+function getshowregion_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
+        '<div class="bold size13"   >' + menu.name  +
+        '</div>' +
+        '</Div>');
+    }
+}
+
+function chooseregion(ID){
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+
+    refreshdata();
+
+}
+
+
 
 function showclubsfun(){
 
@@ -155,7 +200,7 @@ function getclubsfav(tx) {
 
 function getclubsfav_success(tx, results) {
    // $('#busy').hide();
-    var len = results.rows.length;choosefacteam
+    var len = results.rows.length;
 //alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);

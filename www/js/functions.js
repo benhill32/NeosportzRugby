@@ -242,10 +242,34 @@ function blankLastUpdatesec(){
         console.log("INSERT INTO MobileApp_LastUpdatesec");
      //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
     });
+}
+
+function gettokenregion(tx) {
+    var sql =     "select Datesecs,datemenus,token from MobileApp_LastUpdatesec";
+
+    tx.executeSql(sql, [], getregionsdata,errorCBfunc);
+}
 
 
+function getregionsdata(tx, results) {
+
+    var row = results.rows.item(0);
+    var datenowsecsync2 = row.Datesecs;
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=0', false);
+    // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+    xmlHttp.send();
+
+    var json = xmlHttp.responseText;
+
+    var obj = JSON.parse(json);
+    syncmaintablesregions(obj);
 
 }
+
+
+
 
 var randfunc = function() {
     return Math.random().toString(36).substr(2); // remove `0.`
@@ -300,6 +324,31 @@ var checkintvalue = function (val){
     }
 
 }
+
+function syncmaintablesregions(obj){
+
+    $.each(obj.Regions, function (idx, obj) {
+
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+            console.log("INSERT INTO MobileRegion is created");
+        });
+    });
+
+    $.each(obj.Isadmin, function (idx, obj) {
+
+        +
+            db.transaction(function(tx) {
+                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
+                // alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                closemodelRegion();
+                // alert(Math.round((timenow/1000)));
+            });
+    });
+
+}
+
 
 
 

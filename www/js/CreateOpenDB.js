@@ -50,6 +50,10 @@ function droptables(tx){
         tx.executeSql('Drop TABLE Mobilescoringbreakdown ');
         console.log("Mobilescoringbreakdown table is Dropped");
 
+    tx.executeSql('Drop TABLE MobileRegion ');
+    console.log("MobileRegion table is Dropped");
+
+
 }
 
 
@@ -68,7 +72,7 @@ function createDB(tx) {
         tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_Menu (_id INTEGER NOT NULL primary key, TournamentName TEXT NOT NULL,UpdateDateUTC TEXT NULL,OrderID INTEGER NOT NULL)');
         console.log("MobileApp_ResuTable_lts_Menu table is created");
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL, datemenus TEXT NULL,syncwifi INTEGER NOT NULL,isadmin INTERGER NOT NULL,token TEXT NOT NULL,hasclub INTERGER NOT NULL,hasclubdate TEXT NULL,fliterON INTERGER  NULL)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL, datemenus TEXT NULL,syncwifi INTEGER NOT NULL,isadmin INTERGER NOT NULL,token TEXT NOT NULL,hasclub INTERGER NOT NULL,hasclubdate TEXT NULL,fliterON INTERGER  NULL,Region INTERGER NULL)');
     console.log("MobileApp_LastUpdatesec table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results (ID INTEGER NOT NULL primary key,_id INTEGER NOT NULL,DatetimeStart TEXT NOT NULL,HomeName TEXT NOT NULL,AwayName TEXT NOT NULL,Field TEXT NOT NULL,Latitude TEXT NOT NULL,Longitude TEXT NOT NULL,DivisionID INTEGER NOT NULL,DivisionName TEXT NOT NULL,HomeClubID INTEGER NOT NULL,AwayClubID INTEGER NOT NULL,HomeTeamID INTEGER NOT NULL,AwayTeamID INTEGER NOT NULL,HomeScore INTEGER NOT NULL,AwayScore INTEGER NOT NULL,UpdateDateUTC TEXT NOT NULL,TournamentName TEXT NOT NULL,TournamentID INTEGER NOT NULL,DatetimeStartSeconds TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL,ShowToAll INTEGER NOT NULL,Semi INTEGER NOT NULL,Final INTEGER NOT NULL,DeletedateUTC TEXT NOT NULL,halftime TEXT NOT NULL,fulltime TEXT NOT NULL )');
@@ -107,6 +111,10 @@ function createDB(tx) {
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS Mobilescoringbreakdown (ID INTEGER NOT NULL primary key,CreatedateUTC TEXT NULL,UpdatedateUTC TEXT NULL,DeletedateUTC TEXT NULL,TeamID INTEGER NOT NULL,GameID INTEGER NOT NULL,PlayerID INTEGER NOT NULL,ScoringID INTEGER NOT NULL,Time TEXT NULL)');
     console.log("Mobilescoringbreakdown table is created");
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileRegion (ID INTEGER NOT NULL primary key,DeletedateUTC TEXT NULL,Name TEXT NOT NULL)');
+    console.log("MobileRegion table is created");
+
 }
 
 
