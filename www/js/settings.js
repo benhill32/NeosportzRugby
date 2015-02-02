@@ -163,7 +163,7 @@ function getsyncdate_success2(tx, results) {
 function getregionName2(tx) {
 
     var sql = "select Name from MobileRegion where ID=" + regionID;
-      alert(sql);
+   //   alert(sql);
     tx.executeSql(sql, [], getregionName_success);
 }
 
