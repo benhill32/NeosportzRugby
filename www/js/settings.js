@@ -116,8 +116,9 @@ function getsyncdate_success2(tx, results) {
     month[10] = "November";
     month[11] = "December";
     regionID =(menu.Region)
-    getregionName
 
+
+    db.transaction(getregionName2, errorCBfunc, successCBfunc);
     $('#lastsyncdate').empty();
     if(dateme.getFullYear() != 1970) {
         $('#lastsyncdate').append("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2))
