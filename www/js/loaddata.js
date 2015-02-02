@@ -366,6 +366,7 @@ function onclickloadregiondata_OK(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
+    $('#regiondivID').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
