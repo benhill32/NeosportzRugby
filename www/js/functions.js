@@ -657,11 +657,9 @@ function syncmaintables(obj){
     });
 
     $.each(obj.ArchiveYears, function (idx, obj) {
-
-
-            db.transaction(function(tx) {
+             db.transaction(function(tx) {
                 tx.executeSql('INSERT OR IGNORE INTO MobileArchiveYears (Year) VALUES (' + obj.Year + ')');
-                //  alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+                  alert('INSERT OR IGNORE INTO MobileArchiveYears (Year) VALUES (' + obj.Year + ')');
                 console.log("INSERT INTO MobileArchiveYears is created");
             });
     });
@@ -676,7 +674,7 @@ function syncmaintables(obj){
             db.transaction(function(tx) {
                 tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
                 //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
-               // alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
                 closemodel();
                // alert(Math.round((timenow/1000)));
             });
