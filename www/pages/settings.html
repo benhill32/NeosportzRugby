@@ -68,7 +68,25 @@
 
         </div>
     </div>
+    <div class="modal" id="basicModalregions" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
 
+                        Select a Region
+                    </div>
+                </div>
+                <div class="modal-body" >
+                    <div id="regiondivID">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
     <Div class="mainmenuwifi" align="left" >
@@ -87,7 +105,11 @@
 
 
 </Div>
+    <Div class="mainmenusettings" align="left" id="regioniddiv" onclick="onclickloadregion()" >
+        <strong>Region</strong>
 
+        <p id="regionlbl"></p>
+    </Div>
     <Div class="mainmenusettings" align="left" id="settingsync" onclick="onclicksyncloaddata()" >
        <strong>Sync</strong>
         <p>This will download everything since the last time your device synced</p>

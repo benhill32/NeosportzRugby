@@ -329,11 +329,25 @@ function syncmaintablesregions(obj){
 
     $.each(obj.Regions, function (idx, obj) {
 
-        db.transaction(function(tx) {
-            tx.executeSql('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
-          //  alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
-            console.log("INSERT INTO MobileRegion is created");
-        });
+        if(obj.DeletedateUTC == null){
+
+            db.transaction(function(tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+                //  alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+                console.log("INSERT INTO MobileRegion is created");
+            });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileRegion SET Name = "' + obj.Name + '", DeletedateUTC = "' + obj.DeletedateUTC + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+                // console.log(sql);
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileRegion where ID =' + obj.ID);
+                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+            });
+        }
+
     });
 
     $.each(obj.Isadmin, function (idx, obj) {
@@ -586,6 +600,7 @@ function syncmaintables(obj){
     });
 
     $.each(obj.sponsorsclub, function (idx, obj) {
+
         if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
@@ -640,6 +655,17 @@ function syncmaintables(obj){
 
         }
     });
+
+    $.each(obj.ArchiveYears, function (idx, obj) {
+
+
+            db.transaction(function(tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobileArchiveYears (Year) VALUES (' + obj.Year + ')');
+                //  alert('INSERT OR IGNORE INTO MobileRegion (ID,Name,DeletedateUTC ) VALUES (' + obj.ID + ',"' + obj.Name + '", "' + obj.DeletedateUTC + '")');
+                console.log("INSERT INTO MobileArchiveYears is created");
+            });
+    });
+
 
     var datenow1 = new Date();
     var timenow = datenow1.getTime();

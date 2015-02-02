@@ -1,7 +1,7 @@
 var db;
 var networkconnectionset = 0;
 var wifiallset = 0;
-
+var regionID = 0;
 
 
 document.addEventListener("deviceready", onDeviceReadyset, false);
@@ -43,7 +43,7 @@ function onOfflinesetting(){
 
 
 function getsyncdate(tx) {
-    var sql = "select Datesecs, syncwifi from MobileApp_LastUpdatesec";
+    var sql = "select Datesecs, syncwifi,Region from MobileApp_LastUpdatesec";
    //  alert(sql);
     tx.executeSql(sql, [], getsyncdate_success2);
 }
@@ -115,6 +115,8 @@ function getsyncdate_success2(tx, results) {
     month[9] = "October";
     month[10] = "November";
     month[11] = "December";
+    regionID =(menu.Region)
+    getregionName
 
     $('#lastsyncdate').empty();
     if(dateme.getFullYear() != 1970) {
@@ -145,12 +147,36 @@ function getsyncdate_success2(tx, results) {
 
     }
 
+    db.transaction(getregionName2, errorCBfunc, successCBfunc);
 
     $('#busy').hide();
 
 
 }
 
+
+
+
+
+
+function getregionName2(tx) {
+
+    var sql = "select Name from MobileRegion where ID=" + regionID;
+    //  alert(sql);
+    tx.executeSql(sql, [], getregionName_success);
+}
+
+function getregionName_success(tx, results) {
+
+    var len = results.rows.length;
+
+    var menu = results.rows.item(0);
+    $('#regionlbl').empty();
+
+    $('#regionlbl').append(menu.Name);
+
+
+}
 function clearfavteam(){
 
     db.transaction(function(tx) {

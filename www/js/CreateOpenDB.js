@@ -53,7 +53,8 @@ function droptables(tx){
     tx.executeSql('Drop TABLE MobileRegion ');
     console.log("MobileRegion table is Dropped");
 
-
+    tx.executeSql('Drop TABLE MobileArchiveYears ');
+    console.log("MobileArchiveYears table is Dropped");
 }
 
 
@@ -115,6 +116,8 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileRegion (ID INTEGER NOT NULL primary key,DeletedateUTC TEXT NULL,Name TEXT NOT NULL)');
     console.log("MobileRegion table is created");
 
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileArchiveYears (Year INTEGER NOT NULL primary key)');
+    console.log("MobileArchiveYears table is created");
 }
 
 

@@ -190,6 +190,7 @@ function getchecksync(tx, results) {
         var region = row.Region;
         var datenow = new Date();
         var timenow = datenow.getTime();
+        var yearnow = datenow.getFullYear()
 
         var dif = (timenow/1000)-(datenowsecsync);
 
@@ -213,7 +214,7 @@ function getchecksync(tx, results) {
             }
             var xmlHttp = null;
             xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region, false);
+            xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
            // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
             xmlHttp.send();
 
@@ -351,6 +352,48 @@ function countProperties(obj) {
 }
 
 
+function onclickloadregion(){
+    db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)
+}
+
+function onclickloadregiondata(tx){
+    $('#basicModalregions').modal('show');
+    var sql = "select ID ,Name from MobileRegion order by name";
+    tx.executeSql(sql, [], onclickloadregiondata_OK,errorCBfunc);
+
+}
+function onclickloadregiondata_OK(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregionloaddata('+ menu.ID + ')"  >' +
+        '<div class="bold size13"   >' + menu.Name  +
+        '</div>' +
+        '</Div>');
+    }
+}
+
+function chooseregionloaddata(ID){
+
+    $('#indexloadingdata').modal('show')
+
+
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+
+
+
+    refreshdata();
+
+}
+
 function onclicksyncloaddata(){
     db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc)
 }
@@ -361,6 +404,8 @@ function onclicksyncloaddata2(tx){
     tx.executeSql(sql, [], onclickresync,errorCBfunc);
 
 }
+
+
 
 function onclickresync(tx, results) {
 
@@ -374,14 +419,14 @@ function onclickresync(tx, results) {
         var region = row.Region;
         var datenow = new Date();
         var timenow = datenow.getTime();
-
+        var yearnow = currentTime.getFullYear()
         var dif = timenow - (datenowsecsync);
 
         //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
-       xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region, false);
+       xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
     //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
 
         xmlHttp.send();
