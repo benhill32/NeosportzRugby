@@ -115,10 +115,10 @@ function getsyncdate_success2(tx, results) {
     month[9] = "October";
     month[10] = "November";
     month[11] = "December";
-    regionID =(menu.Region)
+    regionID =menu.Region;
 
 
-    db.transaction(getregionName2, errorCBfunc, successCBfunc);
+
     $('#lastsyncdate').empty();
     if(dateme.getFullYear() != 1970) {
         $('#lastsyncdate').append("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2))
@@ -163,7 +163,7 @@ function getsyncdate_success2(tx, results) {
 function getregionName2(tx) {
 
     var sql = "select Name from MobileRegion where ID=" + regionID;
-    //  alert(sql);
+      alert(sql);
     tx.executeSql(sql, [], getregionName_success);
 }
 
