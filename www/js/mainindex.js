@@ -148,13 +148,13 @@ function loadarchiveyear(){
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
     alert("1");
-    db.transaction(archiveyear, errorCBfunc, successCBfunc);
+    db.transaction(archiveyearben, errorCBfunc, successCBfunc);
     alert("2");
 
 
 }
 
-function archiveyear(tx) {
+function archiveyearben(tx) {
     var sql = "select Year from MobileArchiveYears order by Year";
       alert(sql);
     tx.executeSql(sql, [], archiveyear_success);
