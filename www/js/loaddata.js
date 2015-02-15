@@ -397,7 +397,7 @@ function chooseregionloaddata(ID){
 }
 
 function onclicksyncloaddata(){
-    db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc)
+    db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc);
 }
 
 function onclicksyncloaddata2(tx){
@@ -452,7 +452,7 @@ function onclickresync(tx, results) {
 
 function loadarchiveyeardata(ID){
     archiveyear =ID;
-    db.transaction(loadarchiveyeardata2, errorCBfunc, successCBfunc)
+    db.transaction(loadarchiveyeardata2, errorCBfunc, successCBfunc);
 }
 
 function loadarchiveyeardata2(tx){

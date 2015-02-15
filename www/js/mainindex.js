@@ -147,7 +147,7 @@ function loadarchiveyear(){
     $('#basicarchivemodel').modal('show');
     db.transaction(archiveyear, errorCBfunc, successCBfunc);
 
-    $('#mainfore').removeClass('mainforeground');
+       $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
 
 }
