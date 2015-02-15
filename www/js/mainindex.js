@@ -143,7 +143,7 @@ function showregion(){
 }
 
 function loadarchiveyear(){
-    alert("dsadsadsadsad");
+
     $('#basicarchivemodel').modal('show');
     db.transaction(archiveyear, errorCBfunc, successCBfunc);
 
@@ -161,7 +161,7 @@ function archiveyear(tx) {
 function archiveyear_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-alert(len);
+    alert(len);
     $('#archiveyeardiv').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
