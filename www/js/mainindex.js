@@ -241,7 +241,7 @@ function loadarchiveresults(){
 
 function showresultsmodel_data(tx) {
    // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Table_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
-    var sql = "select Distinct DivisionName,DivisionID from App_Results_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
+    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
       alert(sql);
     tx.executeSql(sql, [], showresultsmodel_dataa_success);
 }

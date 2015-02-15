@@ -84,8 +84,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.92" vertical-offset="1932" max-vertical-offset="2737">
-              <caret line="140" column="81" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="81" />
+            <state vertical-scroll-proportion="-15.2" vertical-offset="1932" max-vertical-offset="2737">
+              <caret line="136" column="75" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="75" />
               <folding>
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
               </folding>
@@ -106,12 +106,12 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24844721" vertical-offset="3931" max-vertical-offset="6511">
-              <caret line="243" column="83" selection-start-line="243" selection-start-column="60" selection-end-line="243" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.31180125" vertical-offset="3982" max-vertical-offset="6511">
+              <caret line="249" column="25" selection-start-line="249" selection-start-column="25" selection-end-line="249" selection-end-column="25" />
               <folding>
-                <marker date="1424042736981" expanded="true" signature="4189:4222" placeholder="..." />
-                <marker date="1424042736981" expanded="true" signature="5659:5692" placeholder="..." />
-                <marker date="1424042736981" expanded="true" signature="6724:6757" placeholder="..." />
+                <marker date="1424043550288" expanded="true" signature="4189:4222" placeholder="..." />
+                <marker date="1424043550288" expanded="true" signature="5659:5692" placeholder="..." />
+                <marker date="1424043550288" expanded="true" signature="6730:6763" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -837,16 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.92" vertical-offset="1932" max-vertical-offset="2737">
-          <caret line="140" column="81" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="81" />
-          <folding>
-            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/resultsmenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
@@ -855,14 +845,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.2" vertical-offset="1932" max-vertical-offset="2737">
+          <caret line="136" column="75" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="75" />
+          <folding>
+            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24844721" vertical-offset="3931" max-vertical-offset="6511">
-          <caret line="243" column="83" selection-start-line="243" selection-start-column="60" selection-end-line="243" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.31180125" vertical-offset="3982" max-vertical-offset="6511">
+          <caret line="249" column="25" selection-start-line="249" selection-start-column="25" selection-end-line="249" selection-end-column="25" />
           <folding>
-            <marker date="1424042736981" expanded="true" signature="4189:4222" placeholder="..." />
-            <marker date="1424042736981" expanded="true" signature="5659:5692" placeholder="..." />
-            <marker date="1424042736981" expanded="true" signature="6724:6757" placeholder="..." />
+            <marker date="1424043550288" expanded="true" signature="4189:4222" placeholder="..." />
+            <marker date="1424043550288" expanded="true" signature="5659:5692" placeholder="..." />
+            <marker date="1424043550288" expanded="true" signature="6730:6763" placeholder="..." />
           </folding>
         </state>
       </provider>
