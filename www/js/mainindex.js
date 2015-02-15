@@ -194,7 +194,7 @@ function checkresultsloadedarchive(tx) {
 function checkresultsloadedarchive_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-    //  alert(len);
+      alert(len);
 
    if(len != 0){
        showresultssatndingmodel();
