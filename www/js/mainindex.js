@@ -205,6 +205,13 @@ function checkresultsloadedarchive_success(tx, results) {
    }
 
 }
+function backtonormal(){
+
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+}
+
+
 function showresultssatndingmodel() {
     $('#basicstandingresultmodel').modal('show');
 }
@@ -283,11 +290,7 @@ function showresultssatndingmodel_data_success(tx, results) {
 }
 
 
-function loadarchiveresults(){
 
-    alert(year);
-
-}
 
 
 function getshowregion(tx) {

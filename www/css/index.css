@@ -346,7 +346,6 @@ position: fixed;
     font-size:18px;
     padding:15px;
     clear: both;
-
 }
 #archiveyeardiv:hover{
 
@@ -374,11 +373,16 @@ position: fixed;
 }
 #closeregion2:hover{
 
+     background-color: #339900;
+     color: white;
+     opacity:0.7;
+ }
+.closeregion:hover{
+
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-
 #teamsdiv{
 // padding-top: 30px;
     padding-bottom: 50px;
