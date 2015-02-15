@@ -142,6 +142,38 @@ function showregion(){
 
 }
 
+function loadarchiveyear(){
+    db.transaction(archiveyear, errorCBfunc, successCBfunc);
+    $('#basicarchivemodel').modal('show');
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+
+}
+
+function archiveyear(tx) {
+    var sql = "select Year from MobileArchiveYears order by Year";
+    //  alert(sql);
+    tx.executeSql(sql, [], archiveyear_success);
+}
+
+function archiveyear_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#archiveyeardiv').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
+        '<div class="bold size13"   >' + menu.Year  +
+        '</div>' +
+        '</Div>');
+    }
+}
+
+
+
+
 
 function getshowregion(tx) {
     var sql = "select ID ,Name from MobileRegion order by name";
