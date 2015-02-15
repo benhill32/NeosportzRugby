@@ -179,6 +179,17 @@ function archiveyear_success(tx, results) {
 function getresultstandings(ID){
     year = ID;
     $('#basicarchiveyesno').modal('show');
+
+    $('#archiveyearyesNO').empty();
+    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearyes" data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyeardata('+ ID + ')"  >' +
+    '<div class="bold size13"   >Yes' +
+    '</div>' +
+    '</Div>');
+    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearmo" data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyear()"  >' +
+    '<div class="bold size13"   >No ' +
+    '</div>' +
+    '</Div>');
+    
 }
 
 
