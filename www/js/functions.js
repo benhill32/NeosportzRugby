@@ -154,7 +154,7 @@ function goBack() {
 
 function errorCBfunc(err) {
     console.log("Error processing SQL: "+err.code);
-    //alert("Error processing SQL loaddata: "+err.code);
+    alert("Error processing SQL loaddata: "+err.code);
 }
 
 function successCBfunc() {
