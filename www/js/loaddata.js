@@ -16,6 +16,7 @@ var networkconnection = "";
 var deviceIDfunc;
 var devicePlatformfunc;
 var chkrefreshdata = 0;
+var archiveyear=0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 // Cordova is ready
@@ -440,12 +441,69 @@ function onclickresync(tx, results) {
         } else {
             var obj = JSON.parse(json);
             $.when(syncmaintables(obj)).done(function () {
-                randomfunctions();
+
             });
         }
 
     }
 }
+
+
+
+function loadarchiveyeardata(ID){
+    archiveyear =ID;
+    db.transaction(loadarchiveyeardata2, errorCBfunc, successCBfunc)
+}
+
+function loadarchiveyeardata2(tx){
+    checkonline();
+    var sql = "select Datesecs,datemenus,syncwifi,token,isadmin,Region from MobileApp_LastUpdatesec";
+    tx.executeSql(sql, [], loadarchiveyeardata2_sync,errorCBfunc);
+
+}
+
+
+
+function loadarchiveyeardata2_sync(tx, results) {
+
+    var row = results.rows.item(0);
+
+    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))) {
+        $('#indexloadingdata').modal('show');
+
+        var datemenus = row.datemenus;
+        var datenowsecsync = row.Datesecs;
+        var region = row.Region;
+        var datenow = new Date();
+        var timenow = datenow.getTime();
+        var yearnow = archiveyear;
+        var dif = timenow - (datenowsecsync);
+
+        //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
+        var xmlHttp = null;
+        xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
+        //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+
+        xmlHttp.send();
+
+        var json = xmlHttp.responseText;
+
+        if (json == "{'Error' : [{'Message': 'Something went wrong'}]") {
+
+            errorclosemodel();
+        } else {
+            var obj = JSON.parse(json);
+            $.when(syncmaintables(obj)).done(function () {
+
+            });
+        }
+
+    }
+}
+
+
 
 
 function successHandler (result) {
