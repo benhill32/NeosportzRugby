@@ -55,6 +55,18 @@ function droptables(tx){
 
     tx.executeSql('Drop TABLE MobileArchiveYears ');
     console.log("MobileArchiveYears table is Dropped");
+
+    tx.executeSql('Drop TABLE MobileStandingsArchive ');
+    console.log("MobileStandingsArchive table is Dropped");
+
+    tx.executeSql('Drop TABLE MobileApp_Results_MenuArchive ');
+    console.log("MobileApp_Results_MenuArchive table is Dropped");
+
+    tx.executeSql('Drop TABLE MobileApp_Results_Table_MenuArchive ');
+    console.log("MobileApp_Results_Table_MenuArchive table is Dropped");
+
+    tx.executeSql('Drop TABLE MobileApp_ResultsArchive ');
+    console.log("MobileApp_ResultsArchive table is Dropped");
 }
 
 
@@ -118,6 +130,20 @@ function createDB(tx) {
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileArchiveYears (Year INTEGER NOT NULL primary key)');
     console.log("MobileArchiveYears table is created");
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileStandingsArchive (_id INTEGER NOT NULL primary key,Games INTEGER NOT NULL,Won INTEGER NOT NULL,Drawn INTEGER NOT NULL,Lost INTEGER NOT NULL,ForScore INTEGER NOT NULL,AgainstScore INTEGER NOT NULL,Difference INTEGER NOT NULL,ClubID INTEGER NOT NULL,Name TEXT NULL,abbreviation TEXT NULL,TournamentID INTEGER NOT NULL,FlagPoints INTEGER NOT NULL,UpdateDateUTC TEXT NULL,TournamentName TEXT NULL,DeletedateUTC TEXT NOT NULL,Bonus INTEGER NOT NULL)');
+    console.log("MobileStandings table is created");
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_MenuArchive (_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
+    console.log("MobileApp_Results_Menu table is created");
+
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_MenuArchive (_id INTEGER NOT NULL primary key, TournamentName TEXT NOT NULL,UpdateDateUTC TEXT NULL,OrderID INTEGER NOT NULL)');
+    console.log("MobileApp_ResuTable_lts_Menu table is created");
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_ResultsArchive (ID INTEGER NOT NULL primary key,_id INTEGER NOT NULL,DatetimeStart TEXT NOT NULL,HomeName TEXT NOT NULL,AwayName TEXT NOT NULL,Field TEXT NOT NULL,Latitude TEXT NOT NULL,Longitude TEXT NOT NULL,DivisionID INTEGER NOT NULL,DivisionName TEXT NOT NULL,HomeClubID INTEGER NOT NULL,AwayClubID INTEGER NOT NULL,HomeTeamID INTEGER NOT NULL,AwayTeamID INTEGER NOT NULL,HomeScore INTEGER NOT NULL,AwayScore INTEGER NOT NULL,UpdateDateUTC TEXT NOT NULL,TournamentName TEXT NOT NULL,TournamentID INTEGER NOT NULL,DatetimeStartSeconds TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL,ShowToAll INTEGER NOT NULL,Semi INTEGER NOT NULL,Final INTEGER NOT NULL,DeletedateUTC TEXT NOT NULL,halftime TEXT NOT NULL,fulltime TEXT NOT NULL )');
+    console.log("MobileApp_Results table is created");
+
 }
 
 

@@ -173,7 +173,7 @@ function archiveyear_success(tx, results) {
 
 function getresultstandings(ID){
     year = ID;
-    $('#basicstandingresultmodel').modal('show');
+    $('#basicarchiveyesno').modal('show');
 }
 
 
