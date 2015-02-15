@@ -194,7 +194,7 @@ function checkresultsloadedarchive(tx) {
 function checkresultsloadedarchive_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-    alert(len);
+  //  alert(len);
 
    if(len == 0){
 
@@ -211,7 +211,6 @@ function showresultssatndingmodel() {
 
 function showyesnomodel(){
     $('#basicarchiveyesno').modal('show');
-
     $('#archiveyearyesNO').empty();
     $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearyes" data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyeardata('+ year + ')"  >' +
     '<div class="bold size13"   >Yes' +
@@ -222,12 +221,71 @@ function showyesnomodel(){
     '<div class="bold size13"   >No ' +
     '</div>' +
     '</Div>');
-
 }
 
-function loadarchivestandresults(id){
 
-    alert(id + "-" + year);
+
+
+function loadarchiveresults(){
+
+    $('#basicmodelarchiveresults').modal('show');
+    db.transaction(showresultsmodel_data, errorCBfunc, successCBfunc);
+}
+
+function showresultsmodel_data(tx) {
+    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Table_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
+
+    //  alert(sql);
+    tx.executeSql(sql, [], showresultsmodel_dataa_success);
+}
+
+function showresultsmodel_dataa_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#archivechoosedivisionresults').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu._id + ')"  >' +
+        '<div class="bold size13"   >' + menu.DivisionName  +
+        '</div>' +
+        '</Div>');
+    }
+}
+
+function loadarchivestandings(){
+
+    $('#basicmodelarchivestand').modal('show');
+    db.transaction(showresultssatndingmodel_data, errorCBfunc, successCBfunc);
+}
+
+function showresultssatndingmodel_data(tx) {
+
+    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_MenuArchive order by OrderID,TournamentName";
+    //  alert(sql);
+    tx.executeSql(sql, [], showresultssatndingmodel_data_success);
+}
+
+function showresultssatndingmodel_data_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#archivechoosedivisionstand').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu._id + ')"  >' +
+        '<div class="bold size13"   >' + menu.TournamentName  +
+        '</div>' +
+        '</Div>');
+    }
+}
+
+
+function loadarchiveresults(){
+
+    alert(year);
 
 }
 
