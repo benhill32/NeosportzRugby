@@ -66,12 +66,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0" vertical-offset="2493" max-vertical-offset="3757">
-              <caret line="208" column="47" selection-start-line="208" selection-start-column="33" selection-end-line="208" selection-end-column="47" />
+            <state vertical-scroll-proportion="-13.923077" vertical-offset="3497" max-vertical-offset="4879">
+              <caret line="227" column="161" selection-start-line="227" selection-start-column="138" selection-end-line="227" selection-end-column="161" />
               <folding>
-                <element signature="n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,10 +80,10 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2819277" vertical-offset="2435" max-vertical-offset="4505">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5325301" vertical-offset="2635" max-vertical-offset="4658">
+              <caret line="181" column="27" selection-start-line="181" selection-start-column="27" selection-end-line="181" selection-end-column="27" />
               <folding>
-                <marker date="1424028539156" expanded="true" signature="4132:4165" placeholder="..." />
+                <marker date="1424029159523" expanded="true" signature="4141:4174" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -749,22 +749,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.0" vertical-offset="2493" max-vertical-offset="3757">
-          <caret line="208" column="47" selection-start-line="208" selection-start-column="33" selection-end-line="208" selection-end-column="47" />
+        <state vertical-scroll-proportion="-13.923077" vertical-offset="3497" max-vertical-offset="4879">
+          <caret line="227" column="161" selection-start-line="227" selection-start-column="138" selection-end-line="227" selection-end-column="161" />
           <folding>
-            <element signature="n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2819277" vertical-offset="2435" max-vertical-offset="4505">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5325301" vertical-offset="2635" max-vertical-offset="4658">
+          <caret line="181" column="27" selection-start-line="181" selection-start-column="27" selection-end-line="181" selection-end-column="27" />
           <folding>
-            <marker date="1424028539156" expanded="true" signature="4132:4165" placeholder="..." />
+            <marker date="1424029159523" expanded="true" signature="4141:4174" placeholder="..." />
           </folding>
         </state>
       </provider>

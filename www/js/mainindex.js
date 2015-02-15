@@ -1,6 +1,6 @@
 var db;
 var deviceIDfunc;
-
+var year;
 
 document.addEventListener("deviceready", onDeviceReadymainindex, false);
 
@@ -164,15 +164,24 @@ function archiveyear_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archiveyeardiv').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
+        $('#archiveyeardiv').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="getresultstandings('+ menu.Year + ')"  >' +
         '<div class="bold size13"   >' + menu.Year  +
         '</div>' +
         '</Div>');
     }
 }
 
+function getresultstandings(ID){
+    year = ID;
+    $('#basicstandingresultmodel').modal('show');
+}
 
 
+function loadarchivestandresults(id){
+
+    alert(id + "-" + year);
+
+}
 
 
 function getshowregion(tx) {
