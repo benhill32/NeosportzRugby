@@ -152,14 +152,14 @@ function loadarchiveyear(){
 
 function archiveyear(tx) {
     var sql = "select Year from MobileArchiveYears order by Year";
-    //  alert(sql);
+      alert(sql);
     tx.executeSql(sql, [], archiveyear_success);
 }
 
 function archiveyear_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     $('#archiveyeardiv').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
