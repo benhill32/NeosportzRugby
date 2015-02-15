@@ -242,19 +242,19 @@ function loadarchiveresults(){
 function showresultsmodel_data(tx) {
     var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Table_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
 
-    //  alert(sql);
+      alert(sql);
     tx.executeSql(sql, [], showresultsmodel_dataa_success);
 }
 
 function showresultsmodel_dataa_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionresults').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu._id + ')"  >' +
+        $('#archivechoosedivisionresults').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;"  >' +
         '<div class="bold size13"   >' + menu.DivisionName  +
         '</div>' +
         '</Div>');
