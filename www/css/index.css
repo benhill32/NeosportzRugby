@@ -383,6 +383,10 @@ position: fixed;
     color: white;
     opacity:0.7;
 }
+.closeregion{
+
+    padding:5px;
+}
 #teamsdiv{
 // padding-top: 30px;
     padding-bottom: 50px;

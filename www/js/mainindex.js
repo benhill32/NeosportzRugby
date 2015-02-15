@@ -242,14 +242,14 @@ function loadarchiveresults(){
 function showresultsmodel_data(tx) {
    // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Table_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
     var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
-      alert(sql);
+     // alert(sql);
     tx.executeSql(sql, [], showresultsmodel_dataa_success);
 }
 
 function showresultsmodel_dataa_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-alert(len);
+//alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
@@ -269,7 +269,7 @@ function loadarchivestandings(){
 
 function showresultssatndingmodel_data(tx) {
 
-    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from vwApp_Results_Table_MenArchive order by OrderID,TournamentName";
+    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_MenuArchive order by OrderID,TournamentName";
     //  alert(sql);
     tx.executeSql(sql, [], showresultssatndingmodel_data_success);
 }
@@ -277,7 +277,7 @@ function showresultssatndingmodel_data(tx) {
 function showresultssatndingmodel_data_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
