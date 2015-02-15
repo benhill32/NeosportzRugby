@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.48" vertical-offset="10799" max-vertical-offset="12971">
-              <caret line="727" column="30" selection-start-line="727" selection-start-column="30" selection-end-line="727" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.33291924" vertical-offset="10527" max-vertical-offset="12971">
+              <caret line="704" column="22" selection-start-line="704" selection-start-column="15" selection-end-line="704" selection-end-column="22" />
               <folding>
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
@@ -75,8 +75,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.96" vertical-offset="1932" max-vertical-offset="2737">
-              <caret line="143" column="74" selection-start-line="143" selection-start-column="72" selection-end-line="143" selection-end-column="74" />
+            <state vertical-scroll-proportion="-13.16" vertical-offset="1932" max-vertical-offset="2737">
+              <caret line="133" column="68" selection-start-line="133" selection-start-column="46" selection-end-line="133" selection-end-column="68" />
               <folding>
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
               </folding>
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35403726" vertical-offset="3251" max-vertical-offset="5474">
-              <caret line="208" column="49" selection-start-line="208" selection-start-column="49" selection-end-line="208" selection-end-column="49" />
+            <state vertical-scroll-proportion="-5.96" vertical-offset="3047" max-vertical-offset="5474">
+              <caret line="188" column="54" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="54" />
               <folding>
                 <marker date="1424038787106" expanded="true" signature="4189:4222" placeholder="..." />
                 <marker date="1424038787106" expanded="true" signature="5530:5563" placeholder="..." />
@@ -161,10 +161,10 @@
         <option value="$PROJECT_DIR$/www/pages/settings.html" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
       </list>
     </option>
   </component>
@@ -766,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.96" vertical-offset="1932" max-vertical-offset="2737">
-          <caret line="143" column="74" selection-start-line="143" selection-start-column="72" selection-end-line="143" selection-end-column="74" />
-          <folding>
-            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.08" vertical-offset="4125" max-vertical-offset="4930">
@@ -804,16 +794,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+    <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.48" vertical-offset="10799" max-vertical-offset="12971">
-          <caret line="727" column="30" selection-start-line="727" selection-start-column="30" selection-end-line="727" selection-end-column="30" />
+        <state vertical-scroll-proportion="-5.96" vertical-offset="3047" max-vertical-offset="5474">
+          <caret line="188" column="54" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="54" />
           <folding>
-            <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-            <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
-            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
-            <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
+            <marker date="1424038787106" expanded="true" signature="4189:4222" placeholder="..." />
+            <marker date="1424038787106" expanded="true" signature="5530:5563" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -828,13 +815,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35403726" vertical-offset="3251" max-vertical-offset="5474">
-          <caret line="208" column="49" selection-start-line="208" selection-start-column="49" selection-end-line="208" selection-end-column="49" />
+        <state vertical-scroll-proportion="-13.16" vertical-offset="1932" max-vertical-offset="2737">
+          <caret line="133" column="68" selection-start-line="133" selection-start-column="46" selection-end-line="133" selection-end-column="68" />
           <folding>
-            <marker date="1424038787106" expanded="true" signature="4189:4222" placeholder="..." />
-            <marker date="1424038787106" expanded="true" signature="5530:5563" placeholder="..." />
+            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33291924" vertical-offset="10527" max-vertical-offset="12971">
+          <caret line="704" column="22" selection-start-line="704" selection-start-column="15" selection-end-line="704" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+            <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
+            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
+            <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
           </folding>
         </state>
       </provider>
