@@ -143,8 +143,10 @@ function showregion(){
 }
 
 function loadarchiveyear(){
-    db.transaction(archiveyear, errorCBfunc, successCBfunc);
+    alert("dsadsadsadsad");
     $('#basicarchivemodel').modal('show');
+    db.transaction(archiveyear, errorCBfunc, successCBfunc);
+
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
 
