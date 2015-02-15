@@ -160,6 +160,7 @@ function archiveyear_success(tx, results) {
     // $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
+    $('#archiveyeardiv').empty();
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         var imgg = "";
