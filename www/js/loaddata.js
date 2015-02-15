@@ -230,7 +230,7 @@ function getchecksync(tx, results) {
 
 
 
-            syncmaintables(obj);
+            syncmaintables(obj,yearnow);
             }
         }
 
@@ -251,6 +251,19 @@ function closemodel(){
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
+function closemodelarchive(){
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+    $('#indexloadingdata').modal('hide');
+    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+
+  //  randomfunctions();
+    showresultssatndingmodel();
+
+
+}
+
 
 function closemodelRegion(){
     $('#mainfore').removeClass('mainforeground2');
@@ -440,7 +453,7 @@ function onclickresync(tx, results) {
             errorclosemodel();
         } else {
             var obj = JSON.parse(json);
-            $.when(syncmaintables(obj)).done(function () {
+            $.when(syncmaintables(obj,yearnow)).done(function () {
 
             });
         }
@@ -495,7 +508,7 @@ function loadarchiveyeardata2_sync(tx, results) {
             errorclosemodel();
         } else {
             var obj = JSON.parse(json);
-            $.when(syncmaintables(obj)).done(function () {
+            $.when(syncmaintables(obj,yearnow)).done(function () {
 
             });
         }

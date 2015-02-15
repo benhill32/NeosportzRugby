@@ -154,7 +154,7 @@ function goBack() {
 
 function errorCBfunc(err) {
     console.log("Error processing SQL: "+err.code);
-    alert("Error processing SQL loaddata: "+err.code);
+    //alert("Error processing SQL loaddata: "+err.code);
 }
 
 function successCBfunc() {
@@ -178,6 +178,7 @@ function passscoretoserver(testvar){
     http.send();
 
 }
+
 
 
 function passnewfeedtoserver(testvar){
@@ -363,9 +364,9 @@ function syncmaintablesregions(obj){
 
 
 
-function syncmaintables(obj){
+function syncmaintables(obj,year){
 
-
+    var datenow = new Date();
 
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
 
@@ -720,7 +721,13 @@ function syncmaintables(obj){
                 tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
                 //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
               //  alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
-                closemodel();
+
+                             if(datenow.getFullYear() == year){
+                    closemodel();
+                }else{
+                    closemodelarchive();
+                }
+
                // alert(Math.round((timenow/1000)));
             });
     });

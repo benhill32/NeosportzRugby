@@ -178,6 +178,38 @@ function archiveyear_success(tx, results) {
 
 function getresultstandings(ID){
     year = ID;
+
+    db.transaction(checkresultsloadedarchive, errorCBfunc, successCBfunc);
+
+
+}
+
+
+function checkresultsloadedarchive(tx) {
+    var sql = "select ID from MobileApp_ResultsArchive order by ID";
+    // alert(sql);
+    tx.executeSql(sql, [], checkresultsloadedarchive_success);
+}
+
+function checkresultsloadedarchive_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    //  alert(len);
+
+   if(len != 0){
+       showresultssatndingmodel();
+
+   }else{
+       showyesnomodel();
+
+   }
+
+}
+function showresultssatndingmodel() {
+    $('#basicstandingresultmodel').modal('show');
+}
+
+function showyesnomodel(){
     $('#basicarchiveyesno').modal('show');
 
     $('#archiveyearyesNO').empty();
@@ -189,9 +221,8 @@ function getresultstandings(ID){
     '<div class="bold size13"   >No ' +
     '</div>' +
     '</Div>');
-    
-}
 
+}
 
 function loadarchivestandresults(id){
 
