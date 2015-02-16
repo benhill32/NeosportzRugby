@@ -142,6 +142,16 @@ function showregion(){
 
 }
 
+
+
+function loadarchiveyear2() {
+    $('#basicarchiveyesno').modal('show');
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+    db.transaction(archiveyearben, errorCBfunc, successCBfunc);
+}
+
+
 function loadarchiveyear(){
 
     $('#basicstandingresultmodel').modal('show');
