@@ -412,7 +412,8 @@ function onclickresync(tx, results) {
         var region = row.Region;
         var datenow = new Date();
         var timenow = datenow.getTime();
-        var yearnow = currentTime.getFullYear()
+       // var yearnow = currentTime.getFullYear()
+        var yearnow = datenow.getFullYear()
         var dif = timenow - (datenowsecsync);
 
         //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
@@ -420,7 +421,7 @@ function onclickresync(tx, results) {
         xmlHttp = new XMLHttpRequest();
 
        xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
-    //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+        alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow);
 
         xmlHttp.send();
 
@@ -431,9 +432,7 @@ function onclickresync(tx, results) {
             errorclosemodel();
         } else {
             var obj = JSON.parse(json);
-            $.when(syncmaintables(obj,yearnow)).done(function () {
-
-            });
+            syncmaintables(obj,yearnow);
         }
 
     }
