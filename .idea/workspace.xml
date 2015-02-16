@@ -42,8 +42,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7689487" vertical-offset="3111" max-vertical-offset="18445">
-              <caret line="220" column="13" selection-start-line="220" selection-start-column="13" selection-end-line="220" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.35330072" vertical-offset="3927" max-vertical-offset="18445">
+              <caret line="248" column="13" selection-start-line="248" selection-start-column="13" selection-end-line="248" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -96,8 +96,8 @@
       <file leaf-file-name="standingsarchive.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/standingsarchive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2312">
-              <caret line="49" column="63" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2312">
+              <caret line="59" column="78" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="78" />
               <folding>
                 <marker date="1424044948775" expanded="true" signature="1356:1368" placeholder="..." />
                 <marker date="1424044948775" expanded="true" signature="1454:1466" placeholder="..." />
@@ -893,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/standingsarchive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2312">
-          <caret line="49" column="63" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2312">
+          <caret line="59" column="78" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="78" />
           <folding>
             <marker date="1424044948775" expanded="true" signature="1356:1368" placeholder="..." />
             <marker date="1424044948775" expanded="true" signature="1454:1466" placeholder="..." />
@@ -919,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7689487" vertical-offset="3111" max-vertical-offset="18445">
-          <caret line="220" column="13" selection-start-line="220" selection-start-column="13" selection-end-line="220" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.35330072" vertical-offset="3927" max-vertical-offset="18445">
+          <caret line="248" column="13" selection-start-line="248" selection-start-column="13" selection-end-line="248" selection-end-column="13" />
           <folding />
         </state>
       </provider>
