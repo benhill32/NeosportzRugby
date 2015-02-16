@@ -362,31 +362,11 @@ function countProperties(obj) {
 
 
 function onclickloadregion(){
-    $('#basicModalregions').modal('show');
+    $('#basicModalregions2').modal('show');
     //db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)
 }
 
-function onclickloadregiondata(tx){
 
-    var sql = "select ID ,Name from MobileRegion order by name";
-    tx.executeSql(sql, [], onclickloadregiondata_OK,errorCBfunc);
-
-}
-function onclickloadregiondata_OK(tx, results) {
-    // $('#busy').hide();
-    var len = results.rows.length;
-//alert(len);
-    $('#regiondivID').empty();
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
-        var imgg = "";
-
-        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregionloaddata('+ menu.ID + ')"  >' +
-        '<div class="bold size13"   >' + menu.Name  +
-        '</div>' +
-        '</Div>');
-    }
-}
 
 function chooseregionloaddata(ID){
 

@@ -24,10 +24,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5810" max-vertical-offset="14144">
+              <caret line="357" column="25" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
+              <folding>
+                <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
+                <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
+                <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8431373" vertical-offset="1164" max-vertical-offset="2839">
+            <state vertical-scroll-proportion="11.725491" vertical-offset="2060" max-vertical-offset="2839">
               <caret line="86" column="146" selection-start-line="86" selection-start-column="146" selection-end-line="86" selection-end-column="146" />
               <folding>
                 <element signature="n#style#0;n#Div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -50,26 +64,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25060242" vertical-offset="2937" max-vertical-offset="5270">
-              <caret line="185" column="7" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2938" max-vertical-offset="5270">
+              <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.32" vertical-offset="4356" max-vertical-offset="7021">
-              <caret line="267" column="16" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="16" />
-              <folding>
-                <marker date="1424051116353" expanded="true" signature="4200:4233" placeholder="..." />
-                <marker date="1424051116353" expanded="true" signature="5694:5727" placeholder="..." />
-                <marker date="1424051116353" expanded="true" signature="6784:6817" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,12 +115,9 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.92" vertical-offset="5276" max-vertical-offset="10268">
-              <caret line="390" column="33" selection-start-line="390" selection-start-column="33" selection-end-line="390" selection-end-column="33" />
-              <folding>
-                <element signature="n#!!block;n#countProperties#0" expanded="false" />
-                <element signature="n#!!block;n#chooseregionloaddata#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-7.32" vertical-offset="6056" max-vertical-offset="11373">
+              <caret line="367" column="0" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,16 +151,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0784316" vertical-offset="1526" max-vertical-offset="3009">
-              <caret line="198" column="48" selection-start-line="198" selection-start-column="31" selection-end-line="198" selection-end-column="48" />
+            <state vertical-scroll-proportion="1.885751" vertical-offset="707" max-vertical-offset="2924">
+              <caret line="329" column="68" selection-start-line="329" selection-start-column="34" selection-end-line="329" selection-end-column="68" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -221,9 +218,9 @@
         <option value="$PROJECT_DIR$/www/js/standingsarchive.js" />
         <option value="$PROJECT_DIR$/www/js/resultsarchive.js" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
-        <option value="$PROJECT_DIR$/www/js/settings.js" />
-        <option value="$PROJECT_DIR$/www/pages/settings.html" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/pages/settings.html" />
+        <option value="$PROJECT_DIR$/www/js/settings.js" />
       </list>
     </option>
   </component>
@@ -546,7 +543,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7922">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
             <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
             <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
             <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
@@ -794,27 +790,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.92" vertical-offset="11350" max-vertical-offset="13583">
-          <caret line="727" column="30" selection-start-line="727" selection-start-column="30" selection-end-line="727" selection-end-column="30" />
-          <folding>
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-            <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
-            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
-            <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.32" vertical-offset="4356" max-vertical-offset="7021">
           <caret line="267" column="16" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="16" />
           <folding>
-            <marker date="1424051116353" expanded="true" signature="4200:4233" placeholder="..." />
-            <marker date="1424051116353" expanded="true" signature="5694:5727" placeholder="..." />
-            <marker date="1424051116353" expanded="true" signature="6784:6817" placeholder="..." />
+            <marker date="1424051116353" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424051116353" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1424051116353" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -888,26 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0784316" vertical-offset="1526" max-vertical-offset="3009">
-          <caret line="198" column="48" selection-start-line="198" selection-start-column="31" selection-end-line="198" selection-end-column="48" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#7;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#7;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#8;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#8;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3009" max-vertical-offset="7514">
@@ -935,20 +898,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5810" max-vertical-offset="14144">
+          <caret line="357" column="25" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
+            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
+            <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.92" vertical-offset="5276" max-vertical-offset="10268">
-          <caret line="390" column="33" selection-start-line="390" selection-start-column="33" selection-end-line="390" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!block;n#countProperties#0" expanded="false" />
-            <element signature="n#!!block;n#chooseregionloaddata#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-7.32" vertical-offset="6056" max-vertical-offset="11373">
+          <caret line="367" column="0" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8431373" vertical-offset="1164" max-vertical-offset="2839">
+        <state vertical-scroll-proportion="11.725491" vertical-offset="2060" max-vertical-offset="2839">
           <caret line="86" column="146" selection-start-line="86" selection-start-column="146" selection-end-line="86" selection-end-column="146" />
           <folding>
             <element signature="n#style#0;n#Div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -959,9 +931,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25060242" vertical-offset="2937" max-vertical-offset="5270">
-          <caret line="185" column="7" selection-start-line="185" selection-start-column="7" selection-end-line="185" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2938" max-vertical-offset="5270">
+          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.885751" vertical-offset="707" max-vertical-offset="2924">
+          <caret line="329" column="68" selection-start-line="329" selection-start-column="34" selection-end-line="329" selection-end-column="68" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#7;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#8;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#8;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

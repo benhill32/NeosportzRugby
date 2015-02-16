@@ -202,8 +202,8 @@ function cleardata4Changeregaion(){
 
 function createtables4Changeregaion(){
 
-   refreshdata();
 
+    weblink('index.html')
 }
 
 
