@@ -286,7 +286,7 @@ function redirectresultsarchive(ID,newyear){
     $('#basicmodelarchiveresults').modal('hide');
     weblink("pages/resultsarchive.html?id=" + ID + '&year=' + newyear);
 }
-function redirectstandingsarchive(ID){
+function redirectstandingsarchive(ID,newyear){
     $('#basicmodelarchivestand').modal('hide');
     weblink("pages/standingsarchive.html?id=" + ID + '&year=' + newyear);
 }
@@ -312,7 +312,7 @@ function showresultssatndingmodel_data_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionstand').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectstandingsarchive(' + menu._id + ',' + year + ')"  >' +
+        $('#archivechoosedivisionstand').append('<Div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectstandingsarchive(' + menu._id + ',' + year + ')"  >' +
         '<div class="bold size13"   >' + menu.TournamentName  +
         '</div>' +
         '</Div>');
@@ -337,7 +337,7 @@ function getshowregion_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
+        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
         '<div class="bold size13"   >' + menu.Name  +
         '</div>' +
         '</Div>');
