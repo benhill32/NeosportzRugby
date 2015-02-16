@@ -7,14 +7,14 @@ var fliter = 0;
 var gameid = 0;
 var homeid = 0;
 var awayid = 0;
-var year = getUrlVarsfunc()["year"];
+var yearsarchive = getUrlVarsfunc()["year"];
 document.addEventListener("deviceready", onDeviceReadyresultarchive, false);
 
 function onDeviceReadyresultarchive() {
    // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
     db.transaction(getfliter, errorCBfunc, successCBfunc);
-    alert(year);
+    alert(yearsarchive);
 }
 
 //db.transaction(getfliter, errorCBfunc, successCBfunc);
@@ -141,14 +141,14 @@ function getdata(tx) {
         $('#btn1').addClass("btn btn-xs btn-default");
         $('#btn2').removeClass("btn btn-xs btn-default");
         $('#btn2').addClass("btn btn-xs btn-primary active");
-        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_ResultsArchive where DivisionID = '" + id + "' and DatetimeStartSeconds <= " + midnightsec + " and DeletedateUTC = 'null'  order by DatetimeStart DESC";
+        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_ResultsArchive where Year = " + yearsarchive + " and  DivisionID = '" + id + "' and DatetimeStartSeconds <= " + midnightsec + " and DeletedateUTC = 'null'  order by DatetimeStart DESC";
 
     }else{
         $('#btn2').removeClass("btn btn-xs btn-primary active");
         $('#btn2').addClass("btn btn-xs btn-default");
         $('#btn1').removeClass("btn btn-xs btn-default");
         $('#btn1').addClass("btn btn-xs btn-primary active");
-        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_ResultsArchive where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DatetimeStartSeconds <= " + midnightsec + " and DivisionID = '" + id + "'  and DeletedateUTC = 'null' order by DatetimeStart DESC";
+        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_ResultsArchive where  Year = " + yearsarchive + " and (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DatetimeStartSeconds <= " + midnightsec + " and DivisionID = '" + id + "'  and DeletedateUTC = 'null' order by DatetimeStart DESC";
 
     }
 

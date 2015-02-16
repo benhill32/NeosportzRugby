@@ -1,6 +1,6 @@
 var db;
 var deviceIDfunc;
-var year;
+var yearmainindex;
 
 document.addEventListener("deviceready", onDeviceReadymainindex, false);
 
@@ -177,7 +177,7 @@ function archiveyear_success(tx, results) {
 }
 
 function getresultstandings(ID){
-    year = ID;
+    yearmainindex = ID;
 
     db.transaction(checkresultsloadedarchive, errorCBfunc, successCBfunc);
 
@@ -219,7 +219,7 @@ function showresultssatndingmodel() {
 function showyesnomodel(){
     $('#basicarchiveyesno').modal('show');
     $('#archiveyearyesNO').empty();
-    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearyes" data-dismiss="modal" " align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyeardata('+ year + ')"  >' +
+    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearyes" data-dismiss="modal" " align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyeardata('+ yearmainindex + ')"  >' +
     '<div class="bold size13"   >Yes' +
     '</div>' +
     '</Div>');
@@ -241,7 +241,7 @@ function loadarchiveresults(){
 
 function showresultsmodel_data(tx) {
    // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Table_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
-    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
+    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_MenuArchive Where Year = " + year + " Group by DivisionName,DivisionID  order by DivisionOrderID";
      // alert(sql);
     tx.executeSql(sql, [], showresultsmodel_dataa_success);
 }
@@ -254,7 +254,7 @@ function showresultsmodel_dataa_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionresults').append('<Div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectresultsarchive(' + menu.DivisionID + ',' + year + ')"  >' +
+        $('#archivechoosedivisionresults').append('<Div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectresultsarchive(' + menu.DivisionID + ',' + yearmainindex + ')"  >' +
         '<div class="bold size13"   >' + menu.DivisionName  +
         '</div>' +
         '</Div>');
@@ -299,7 +299,7 @@ function loadarchivestandings(){
 
 function showresultssatndingmodel_data(tx) {
 
-    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_MenuArchive order by OrderID,TournamentName";
+    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_MenuArchive Where Year = " + year + "  order by OrderID,TournamentName";
     //  alert(sql);
     tx.executeSql(sql, [], showresultssatndingmodel_data_success);
 }

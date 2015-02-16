@@ -1,7 +1,7 @@
 var db;
 var dbCreated = false;
 var id = getUrlVarsfunc()["id"];
-var year = getUrlVarsfunc()["year"];
+var yearrarchive = getUrlVarsfunc()["year"];
 var orientationstand = "";
 document.addEventListener("deviceready", onDeviceReadystandarchive(), false);
 var devicePlatformfstand;
@@ -11,7 +11,7 @@ function onDeviceReadystandarchive() {
  //   console.log("LOCALDB - Database ready");
     db.transaction(getstandings, errorCBfunc, successCBfunc);
     devicePlatformfstand = device.platform;
-    alert(year);
+    alert(yearrarchive);
 }
 //db.transaction(getstandings, errorCBfunc, successCBfunc);
 
@@ -23,7 +23,7 @@ function getorient(strorein){
 
 function getstandings(tx) {
 
-    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandingsArchive where TournamentID = '" + id + "' order by FlagPoints DESC,Difference DESC";
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandingsArchive where TournamentID = '" + id + "' and Year = " + yearrarchive + " order by FlagPoints DESC,Difference DESC";
    // alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
