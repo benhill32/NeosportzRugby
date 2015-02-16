@@ -183,14 +183,15 @@ function getscoredata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
       //  alert(len);
-
+    $('#divscore').empty()
+    
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        alert(menu.Name);
+      //  alert(menu.Name);
         var plus = menu.Value;
         var minus =menu.Value*-1;
 
-        $('#divscore').empty().append('<Div class="mainmenuscore" >' +
+        $('#divscore').append('<Div class="mainmenuscore" >' +
             '<div class="bold size13 floatleft3" align="center"  ><img src="../img/minus.png" onclick="getscore(1,'+ minus +',\''+ menu.Name + '\')" height="40">' +
             '<img src="../img/plus.png"  height="40" onclick="getscore(1,'+ plus +',\''+ menu.Name + '\')"> </div>' +
             '<div class="bold size13 floatleft3" align="center"  >' + menu.Name + '</div>' +
