@@ -182,10 +182,11 @@ function gamestate(IDD,id){
 function getscoredata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-        alert(len);
+      //  alert(len);
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
+        alert(menu.Name);
         var plus = menu.Value;
         var minus =menu.Value*-1;
 
