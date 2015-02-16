@@ -184,7 +184,7 @@ function getscoredata_success(tx, results) {
     var len = results.rows.length;
       //  alert(len);
     $('#divscore').empty()
-    
+
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
       //  alert(menu.Name);
