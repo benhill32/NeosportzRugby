@@ -362,11 +362,12 @@ function countProperties(obj) {
 
 
 function onclickloadregion(){
-    db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)
+    $('#basicModalregions').modal('show');
+    //db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)
 }
 
 function onclickloadregiondata(tx){
-    $('#basicModalregions').modal('show');
+
     var sql = "select ID ,Name from MobileRegion order by name";
     tx.executeSql(sql, [], onclickloadregiondata_OK,errorCBfunc);
 
