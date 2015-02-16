@@ -193,7 +193,7 @@ function cleardata4Changeregaion(){
 
 
     if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {
-        $('#indexloadingdata').modal('show');
+       // $('#indexloadingdata').modal('show');
         db.transaction(droptables, errorCBfunc, createtables4Changeregaion);
     }
 
@@ -203,7 +203,7 @@ function cleardata4Changeregaion(){
 function createtables4Changeregaion(){
 
 
-    weblink('index.html')
+    weblink('../index.html')
 }
 
 
