@@ -169,7 +169,7 @@ function archiveyear_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archiveyeardiv').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="getresultstandings('+ menu.Year + ')"  >' +
+        $('#archiveyeardiv').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="getresultstandings('+ menu.Year + ')"  >' +
         '<div class="bold size13"   >' + menu.Year  +
         '</div>' +
         '</Div>');
@@ -224,7 +224,7 @@ function showyesnomodel(){
     '</div>' +
     '</Div>');
 
-    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearmo" data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyear()"  >' +
+    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearmo" data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyear()"  >' +
     '<div class="bold size13"   >No ' +
     '</div>' +
     '</Div>');
@@ -254,7 +254,7 @@ function showresultsmodel_dataa_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionresults').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectresultsarchive(' + menu.DivisionID + ')"  >' +
+        $('#archivechoosedivisionresults').append('<Div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectresultsarchive(' + menu.DivisionID + ')"  >' +
         '<div class="bold size13"   >' + menu.DivisionName  +
         '</div>' +
         '</Div>');
