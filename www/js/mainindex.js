@@ -265,11 +265,11 @@ function showresultsmodel_dataa_success(tx, results) {
 
 function redirectresultsarchive(ID){
     $('#basicmodelarchiveresults').modal('hide');
-    weblink("../pages/resultsarchive.html?id=" + ID);
+    weblink("pages/resultsarchive.html?id=" + ID);
 }
 function redirectstandingsarchive(ID){
     $('#basicmodelarchivestand').modal('hide');
-    weblink("../pages/standingsarchive.html?id=" + ID);
+    weblink("pages/standingsarchive.html?id=" + ID);
 }
 
 function loadarchivestandings(){
