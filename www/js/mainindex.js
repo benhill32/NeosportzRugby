@@ -241,8 +241,8 @@ function loadarchiveresults(){
 
 function showresultsmodel_data(tx) {
    // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Table_MenuArchive Group by DivisionName,DivisionID  order by DivisionOrderID";
-    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_MenuArchive Where Year = " + year + " Group by DivisionName,DivisionID  order by DivisionOrderID";
-     // alert(sql);
+    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_MenuArchive Where Year = " + yearmainindex + " Group by DivisionName,DivisionID  order by DivisionOrderID";
+      alert(sql);
     tx.executeSql(sql, [], showresultsmodel_dataa_success);
 }
 
@@ -299,8 +299,8 @@ function loadarchivestandings(){
 
 function showresultssatndingmodel_data(tx) {
 
-    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_MenuArchive Where Year = " + year + "  order by OrderID,TournamentName";
-    //  alert(sql);
+    var sql = "select  _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_MenuArchive Where Year = " + yearmainindex + "  order by OrderID,TournamentName";
+      alert(sql);
     tx.executeSql(sql, [], showresultssatndingmodel_data_success);
 }
 
@@ -312,7 +312,7 @@ function showresultssatndingmodel_data_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionstand').append('<Div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectstandingsarchive(' + menu._id + ',' + year + ')"  >' +
+        $('#archivechoosedivisionstand').append('<Div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectstandingsarchive(' + menu._id + ',' + yearmainindex + ')"  >' +
         '<div class="bold size13"   >' + menu.TournamentName  +
         '</div>' +
         '</Div>');
