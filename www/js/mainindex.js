@@ -213,8 +213,7 @@ function backtonormal(){
 
 
 function showresultssatndingmodel() {
-    $('#basicarchivemodel').modal('show');
-    db.transaction(archiveyearben, errorCBfunc, successCBfunc);
+    $('#basicstandingresultmodel').modal('show');
 }
 
 function showyesnomodel(){
