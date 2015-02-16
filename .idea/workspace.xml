@@ -42,8 +42,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35330072" vertical-offset="3927" max-vertical-offset="18445">
-              <caret line="248" column="13" selection-start-line="248" selection-start-column="13" selection-end-line="248" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.33251834" vertical-offset="3570" max-vertical-offset="18445">
+              <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -96,7 +96,7 @@
       <file leaf-file-name="standingsarchive.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/standingsarchive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2312">
+            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2312">
               <caret line="59" column="78" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="78" />
               <folding>
                 <marker date="1424044948775" expanded="true" signature="1356:1368" placeholder="..." />
@@ -853,16 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.32" vertical-offset="4237" max-vertical-offset="10438">
-          <caret line="260" column="31" selection-start-line="260" selection-start-column="31" selection-end-line="260" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!block;n#countProperties#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/resultsarchive.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27172583" vertical-offset="1444" max-vertical-offset="2261">
@@ -891,9 +881,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.32" vertical-offset="4237" max-vertical-offset="10438">
+          <caret line="260" column="31" selection-start-line="260" selection-start-column="31" selection-end-line="260" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#countProperties#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/standingsarchive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2312">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2312">
           <caret line="59" column="78" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="78" />
           <folding>
             <marker date="1424044948775" expanded="true" signature="1356:1368" placeholder="..." />
@@ -919,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35330072" vertical-offset="3927" max-vertical-offset="18445">
-          <caret line="248" column="13" selection-start-line="248" selection-start-column="13" selection-end-line="248" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.33251834" vertical-offset="3570" max-vertical-offset="18445">
+          <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
           <folding />
         </state>
       </provider>
