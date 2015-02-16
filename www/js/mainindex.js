@@ -213,13 +213,14 @@ function backtonormal(){
 
 
 function showresultssatndingmodel() {
-    $('#basicstandingresultmodel').modal('show');
+    $('#basicarchivemodel').modal('show');
+    db.transaction(archiveyearben, errorCBfunc, successCBfunc);
 }
 
 function showyesnomodel(){
     $('#basicarchiveyesno').modal('show');
     $('#archiveyearyesNO').empty();
-    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearyes" data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyeardata('+ year + ')"  >' +
+    $('#archiveyearyesNO').append('<Div class="modal-body"  id="archiveyearyes" data-dismiss="modal" " align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchiveyeardata('+ year + ')"  >' +
     '<div class="bold size13"   >Yes' +
     '</div>' +
     '</Div>');

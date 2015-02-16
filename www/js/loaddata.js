@@ -258,7 +258,7 @@ function closemodelarchive(){
 
 
   //  randomfunctions();
-    showresultssatndingmodel();
+    loadarchiveyear();
 }
 
 function closemodelRegion(){
