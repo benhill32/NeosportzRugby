@@ -263,6 +263,25 @@ function showresultsmodel_dataa_success(tx, results) {
 
 
 
+function gobaack1(ID){
+
+    if(ID == 4){
+        $('#basicmodelarchiveresults').modal('hide');
+        $('#basicstandingresultmodel').modal('show');
+
+    }else if(ID == 3) {
+        $('#basicmodelarchivestand').modal('hide');
+        $('#basicstandingresultmodel').modal('show');
+
+    }else if(ID == 2) {
+        $('#basicstandingresultmodel').modal('hide');
+        loadarchiveyear();
+
+    }
+
+}
+
+
 function redirectresultsarchive(ID){
     $('#basicmodelarchiveresults').modal('hide');
     weblink("pages/resultsarchive.html?id=" + ID);
