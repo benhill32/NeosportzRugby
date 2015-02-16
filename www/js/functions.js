@@ -722,7 +722,7 @@ function syncmaintables(obj,year){
                 //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
               //  alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
 
-                             if(datenow.getFullYear() == year){
+                if(datenow.getFullYear() == year){
                     closemodel();
                 }else{
                     closemodelarchive();

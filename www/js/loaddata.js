@@ -259,24 +259,16 @@ function closemodelarchive(){
 
   //  randomfunctions();
     showresultssatndingmodel();
-
-
 }
-
 
 function closemodelRegion(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
   //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-
     showregion();
 
-
 }
-
-
-
 
 
 
