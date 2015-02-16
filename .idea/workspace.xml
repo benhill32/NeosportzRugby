@@ -27,8 +27,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.4" vertical-offset="769" max-vertical-offset="13583">
-              <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="24" />
+            <state vertical-scroll-proportion="-10.72" vertical-offset="769" max-vertical-offset="13583">
+              <caret line="61" column="16" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="16" />
               <folding>
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
                 <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
@@ -82,12 +82,12 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48074535" vertical-offset="4237" max-vertical-offset="6715">
-              <caret line="272" column="24" selection-start-line="272" selection-start-column="24" selection-end-line="272" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.6708075" vertical-offset="3982" max-vertical-offset="6698">
+              <caret line="266" column="46" selection-start-line="266" selection-start-column="46" selection-end-line="266" selection-end-column="46" />
               <folding>
-                <marker date="1424045825485" expanded="true" signature="4189:4222" placeholder="..." />
-                <marker date="1424045825485" expanded="true" signature="5659:5692" placeholder="..." />
-                <marker date="1424045825485" expanded="true" signature="6712:6745" placeholder="..." />
+                <marker date="1424046097244" expanded="true" signature="4189:4222" placeholder="..." />
+                <marker date="1424046097244" expanded="true" signature="5659:5692" placeholder="..." />
+                <marker date="1424046097244" expanded="true" signature="6712:6745" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -845,19 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.4" vertical-offset="769" max-vertical-offset="13583">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-            <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
-            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
-            <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.32" vertical-offset="4237" max-vertical-offset="10438">
@@ -885,14 +872,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.72" vertical-offset="769" max-vertical-offset="13583">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+            <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
+            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
+            <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48074535" vertical-offset="4237" max-vertical-offset="6715">
-          <caret line="272" column="24" selection-start-line="272" selection-start-column="24" selection-end-line="272" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.6708075" vertical-offset="3982" max-vertical-offset="6698">
+          <caret line="266" column="46" selection-start-line="266" selection-start-column="46" selection-end-line="266" selection-end-column="46" />
           <folding>
-            <marker date="1424045825485" expanded="true" signature="4189:4222" placeholder="..." />
-            <marker date="1424045825485" expanded="true" signature="5659:5692" placeholder="..." />
-            <marker date="1424045825485" expanded="true" signature="6712:6745" placeholder="..." />
+            <marker date="1424046097244" expanded="true" signature="4189:4222" placeholder="..." />
+            <marker date="1424046097244" expanded="true" signature="5659:5692" placeholder="..." />
+            <marker date="1424046097244" expanded="true" signature="6712:6745" placeholder="..." />
           </folding>
         </state>
       </provider>

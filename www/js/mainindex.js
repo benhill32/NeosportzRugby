@@ -264,13 +264,12 @@ function showresultsmodel_dataa_success(tx, results) {
 
 
 function redirectresultsarchive(ID){
-    alert(ID);
-    window.location.href = "../pages/resultsarchive.html?id=" + ID;
+    $('#basicmodelarchiveresults').modal('hide');
+    weblink("../pages/resultsarchive.html?id=" + ID);
 }
 function redirectstandingsarchive(ID){
-
-    alert(ID);
-    window.location.href = "../pages/standingsarchive.html?id=" + ID;
+    $('#basicmodelarchivestand').modal('hide');
+    weblink("../pages/standingsarchive.html?id=" + ID);
 }
 
 function loadarchivestandings(){
