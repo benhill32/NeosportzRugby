@@ -9,7 +9,7 @@ var devicePlatformfstand;
 function onDeviceReadystandarchive() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
  //   console.log("LOCALDB - Database ready");
-    alert(yearrarchive);
+   // alert(yearrarchive);
     db.transaction(getstandings, errorCBfunc, successCBfunc);
     devicePlatformfstand = device.platform;
 

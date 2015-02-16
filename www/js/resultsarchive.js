@@ -14,7 +14,7 @@ function onDeviceReadyresultarchive() {
    // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
     db.transaction(getfliter, errorCBfunc, successCBfunc);
-    alert(yearsarchive);
+  //  alert(yearsarchive);
 }
 
 //db.transaction(getfliter, errorCBfunc, successCBfunc);
@@ -187,13 +187,13 @@ function getMenu_success(tx, results) {
 
         var date2 = new Date(menu.DatetimeStart);
        // alert(date2);
-        $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore('+menu.ID+',\''+menu.HomeName+'\',\''+menu.AwayName+'\','+menu.HomeScore+','+menu.AwayScore+','+menu.HomeTeamID+','+menu.AwayTeamID+')"  >' +
+        $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults"   >' +
             '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
             '<div class="size11"  >' + menu.DivisionName + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">' + ampm  + " " + day + '/' + month + '/' + year + '</div>' +
-            '<div class="size11 blue" style="text-align: center!important;">More</div>' +
+         
 
             '</Div>');
     }
