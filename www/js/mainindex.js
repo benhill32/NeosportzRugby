@@ -254,7 +254,7 @@ function showresultsmodel_dataa_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionresults').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectresultsarchive(' + menu.DivisionID + ')"  >' +
+        $('#archivechoosedivisionresults').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectresultsarchive(' + menu.DivisionID + ')"  >' +
         '<div class="bold size13"   >' + menu.DivisionName  +
         '</div>' +
         '</Div>');
@@ -293,7 +293,7 @@ function showresultssatndingmodel_data_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#archivechoosedivisionstand').append('<Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectstandingsarchive(' + menu._id + ')"  >' +
+        $('#archivechoosedivisionstand').append('<Div class="modal-body" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="redirectstandingsarchive(' + menu._id + ')"  >' +
         '<div class="bold size13"   >' + menu.TournamentName  +
         '</div>' +
         '</Div>');

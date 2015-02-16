@@ -2,9 +2,10 @@ var db;
 var dbCreated = false;
 var id = getUrlVarsfunc()["id"];
 var orientationstand = "";
-document.addEventListener("deviceready", onDeviceReadystand(), false);
+document.addEventListener("deviceready", onDeviceReadystandarchive(), false);
 var devicePlatformfstand;
-function onDeviceReadystand() {
+
+function onDeviceReadystandarchive() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
  //   console.log("LOCALDB - Database ready");
     db.transaction(getstandings, errorCBfunc, successCBfunc);
