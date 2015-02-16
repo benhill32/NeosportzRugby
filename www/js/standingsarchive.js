@@ -1,6 +1,7 @@
 var db;
 var dbCreated = false;
 var id = getUrlVarsfunc()["id"];
+var year = getUrlVarsfunc()["year"];
 var orientationstand = "";
 document.addEventListener("deviceready", onDeviceReadystandarchive(), false);
 var devicePlatformfstand;
@@ -10,7 +11,7 @@ function onDeviceReadystandarchive() {
  //   console.log("LOCALDB - Database ready");
     db.transaction(getstandings, errorCBfunc, successCBfunc);
     devicePlatformfstand = device.platform;
-
+    alert(year);
 }
 //db.transaction(getstandings, errorCBfunc, successCBfunc);
 
