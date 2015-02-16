@@ -310,7 +310,7 @@ function loadinfo_success2(tx, results) {
             $('#score').show();
             $('#score').empty().append('<Div >Score Card</div>');
             $("#score").click(function () {
-                window.open("scorecard.html?ID=" + IDhist);
+                window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
             });
 
             $('#cancell').show();

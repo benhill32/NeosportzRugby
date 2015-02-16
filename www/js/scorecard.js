@@ -13,7 +13,7 @@ var playeraway = 0;
 var timehome = 0;
 var timeaway = 0;
 var scoringname =0;
-
+var id = getUrlVars()["divID"];
 function onDeviceReady() {
 
     deviceIDscorecard = device.uuid;
@@ -22,10 +22,15 @@ function onDeviceReady() {
     db.transaction(getdata, errorCBfunc, successCBfunc);
     db.transaction(getscoredata, errorCBfunc, successCBfunc);
     checkonlinescore()
+
+    $('#backicondiv').click(function() {
+        weblink('../pages/schedules.html?id=48')
+    });
+
+
+
 }
 
-db.transaction(getdata, errorCBfunc, successCBfunc);
-db.transaction(getscoredata, errorCBfunc, successCBfunc);
 
 
 function checkonlinescore(){
