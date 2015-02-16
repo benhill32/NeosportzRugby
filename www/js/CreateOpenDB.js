@@ -50,23 +50,23 @@ function droptables(tx){
         tx.executeSql('Drop TABLE Mobilescoringbreakdown ');
         console.log("Mobilescoringbreakdown table is Dropped");
 
-    tx.executeSql('Drop TABLE MobileRegion ');
-    console.log("MobileRegion table is Dropped");
+        tx.executeSql('Drop TABLE MobileRegion ');
+        console.log("MobileRegion table is Dropped");
 
-    tx.executeSql('Drop TABLE MobileArchiveYears ');
-    console.log("MobileArchiveYears table is Dropped");
+        tx.executeSql('Drop TABLE MobileArchiveYears ');
+        console.log("MobileArchiveYears table is Dropped");
 
-    tx.executeSql('Drop TABLE MobileStandingsArchive ');
-    console.log("MobileStandingsArchive table is Dropped");
+        tx.executeSql('Drop TABLE MobileStandingsArchive ');
+        console.log("MobileStandingsArchive table is Dropped");
 
-    tx.executeSql('Drop TABLE MobileApp_Results_MenuArchive ');
-    console.log("MobileApp_Results_MenuArchive table is Dropped");
+        tx.executeSql('Drop TABLE MobileApp_Results_MenuArchive ');
+        console.log("MobileApp_Results_MenuArchive table is Dropped");
 
-    tx.executeSql('Drop TABLE MobileApp_Results_Table_MenuArchive ');
-    console.log("MobileApp_Results_Table_MenuArchive table is Dropped");
+        tx.executeSql('Drop TABLE MobileApp_Results_Table_MenuArchive ');
+        console.log("MobileApp_Results_Table_MenuArchive table is Dropped");
 
-    tx.executeSql('Drop TABLE MobileApp_ResultsArchive ');
-    console.log("MobileApp_ResultsArchive table is Dropped");
+        tx.executeSql('Drop TABLE MobileApp_ResultsArchive ');
+        console.log("MobileApp_ResultsArchive table is Dropped");
 }
 
 

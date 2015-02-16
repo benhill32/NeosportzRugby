@@ -193,7 +193,7 @@ function getMenu_success(tx, results) {
             '<div class="size11"  >' + menu.DivisionName + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">' + ampm  + " " + day + '/' + month + '/' + year + '</div>' +
-         
+
 
             '</Div>');
     }

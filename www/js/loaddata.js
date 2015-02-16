@@ -75,6 +75,10 @@ function refreshdata(){
     db.transaction(populateDB, errorCBfunc, successCBfunc);
 }
 
+
+
+
+
 function loadnewtable(){
  //   $('#busy').show();
   //  blankLastUpdatesec();
@@ -216,7 +220,7 @@ function getchecksync(tx, results) {
             var xmlHttp = null;
             xmlHttp = new XMLHttpRequest();
             xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
-           // xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+            alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow);
             xmlHttp.send();
 
             var json = xmlHttp.responseText;
@@ -389,8 +393,10 @@ function chooseregionloaddata(ID){
 
 
 
+
+
     db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        tx.executeSql('Update MobileApp_LastUpdatesec set Datesecs = ' + 0 + ',  Region = "' + ID + '"');
         console.log("Update MobileApp_LastUpdatesec");
     });
 

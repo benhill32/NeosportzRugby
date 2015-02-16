@@ -2,7 +2,7 @@ var db;
 var networkconnectionset = 0;
 var wifiallset = 0;
 var regionID = 0;
-
+var setregionID = 0;
 
 document.addEventListener("deviceready", onDeviceReadyset, false);
 
@@ -187,6 +187,29 @@ function clearfavteam(){
     db.transaction(checkfavteam, errorCBfunc, successCBfunc);
 }
 
+function cleardata4Changeregaion(){
+
+    onOfflinesetting();
+
+
+    if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {
+        $('#indexloadingdata').modal('show');
+        db.transaction(droptables, errorCBfunc, createtables4Changeregaion);
+    }
+
+
+}
+
+function createtables4Changeregaion(){
+
+   refreshdata();
+
+}
+
+
+
+
+
 function cleardata(){
 
     onOfflinesetting();
@@ -201,9 +224,6 @@ function cleardata(){
 }
 
 function createtables(){
-
-  // window.plugins.toast.showShortCenter('Creating Tables!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-  //  window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
 
     db.transaction(createDB, errorCBfunc, loadnewtable);
 }
