@@ -27,8 +27,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.04" vertical-offset="11139" max-vertical-offset="14450">
-              <caret line="670" column="0" selection-start-line="670" selection-start-column="0" selection-end-line="670" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.52" vertical-offset="10833" max-vertical-offset="14450">
+              <caret line="663" column="62" selection-start-line="663" selection-start-column="62" selection-end-line="663" selection-end-column="62" />
               <folding>
                 <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
                 <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
@@ -79,30 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/news.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="7259">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <marker date="1416257817705" expanded="true" signature="975:987" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="4222:4241" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="4438:4457" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="4660:4679" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="4842:4861" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="6392:6411" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="6553:6572" placeholder="..." />
-                <marker date="1416257817705" expanded="true" signature="8568:8587" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.72" vertical-offset="1789" max-vertical-offset="2737">
-              <caret line="121" column="234" selection-start-line="121" selection-start-column="234" selection-end-line="121" selection-end-column="234" />
+            <state vertical-scroll-proportion="-10.72" vertical-offset="1721" max-vertical-offset="2737">
+              <caret line="117" column="308" selection-start-line="117" selection-start-column="295" selection-end-line="117" selection-end-column="308" />
               <folding>
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
               </folding>
@@ -110,30 +91,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.020166073" vertical-offset="0" max-vertical-offset="1411">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
               <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
+      <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/pages/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.923077" vertical-offset="2120" max-vertical-offset="2924">
-              <caret line="347" column="49" selection-start-line="347" selection-start-column="49" selection-end-line="347" selection-end-column="49" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="748" max-vertical-offset="1802">
+              <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/news.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1689441" vertical-offset="1989" max-vertical-offset="7259">
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#8;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1424205925198" expanded="true" signature="975:987" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="4217:4236" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="4433:4452" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="4655:4674" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="4837:4856" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="6387:6406" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="6548:6567" placeholder="..." />
+                <marker date="1424205925198" expanded="true" signature="8563:8582" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -165,7 +156,6 @@
         <option value="$PROJECT_DIR$/www/js/clubs.js" />
         <option value="$PROJECT_DIR$/www/js/clubsteamplayer.js" />
         <option value="$PROJECT_DIR$/www/js/clubsteams.js" />
-        <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/pages/addnewfeed.html" />
         <option value="$PROJECT_DIR$/www/pages/clubteamplayers.html" />
         <option value="$PROJECT_DIR$/www/pages/clubteams.html" />
@@ -199,6 +189,7 @@
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/www/js/news.js" />
       </list>
     </option>
   </component>
@@ -284,6 +275,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neosportz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeosportzRugby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,7 +418,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -541,13 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2193">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/Help.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1581">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -783,31 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="748" max-vertical-offset="1802">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="7259">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1416257817705" expanded="true" signature="975:987" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="4222:4241" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="4438:4457" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="4660:4679" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="4842:4861" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="6392:6411" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="6553:6572" placeholder="..." />
-            <marker date="1416257817705" expanded="true" signature="8568:8587" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.923077" vertical-offset="2120" max-vertical-offset="2924">
@@ -861,18 +838,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+    <entry file="file://$PROJECT_DIR$/www/pages/Help.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1547">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.2960199" vertical-offset="374" max-vertical-offset="1581">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="748" max-vertical-offset="1802">
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.72" vertical-offset="1789" max-vertical-offset="2737">
-          <caret line="121" column="234" selection-start-line="121" selection-start-column="234" selection-end-line="121" selection-end-column="234" />
+        <state vertical-scroll-proportion="-10.72" vertical-offset="1721" max-vertical-offset="2737">
+          <caret line="117" column="308" selection-start-line="117" selection-start-column="295" selection-end-line="117" selection-end-column="308" />
           <folding>
             <element signature="n#!!block;n#CleanDB#0" expanded="false" />
           </folding>
@@ -881,8 +874,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.04" vertical-offset="11139" max-vertical-offset="14450">
-          <caret line="670" column="0" selection-start-line="670" selection-start-column="0" selection-end-line="670" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.52" vertical-offset="10833" max-vertical-offset="14450">
+          <caret line="663" column="62" selection-start-line="663" selection-start-column="62" selection-end-line="663" selection-end-column="62" />
           <folding>
             <element signature="n#!!block;n#sendnewfeed#0" expanded="false" />
             <element signature="n#!!block;n#halftimefulltimenow#0" expanded="false" />
@@ -890,11 +883,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
+    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020166073" vertical-offset="0" max-vertical-offset="1411">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1547">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1689441" vertical-offset="1989" max-vertical-offset="7259">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <marker date="1424205925198" expanded="true" signature="975:987" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="4217:4236" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="4433:4452" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="4655:4674" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="4837:4856" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="6387:6406" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="6548:6567" placeholder="..." />
+            <marker date="1424205925198" expanded="true" signature="8563:8582" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
