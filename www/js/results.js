@@ -244,15 +244,17 @@ function getgoals_success(tx, results) {
             }
         }
         if(menu.TeamID == awayid){
+
             if(menu.ScoringID == 2) {
-                $('#resulthomegoals').append('<img src="../img/image.php.png">' + ' ' + menu.FullName + " " + time + '<br>');
+                $('#resultawaygoals').append('<img src="../img/image.php.png">' + ' ' + menu.FullName + " " + time + '<br>');
             }else if(menu.ScoringID == 5) {
-                $('#resulthomegoals').append('<img src="../img/conver.png">' + ' ' + menu.FullName + " " + time + '<br>');
+                $('#resultawaygoals').append('<img src="../img/conver.png">' + ' ' + menu.FullName + " " + time + '<br>');
             }else if(menu.ScoringID == 6) {
-                $('#resulthomegoals').append('<img src="../img/dropkick.png">' + ' ' + menu.FullName + " " + time + '<br>');
+                $('#resultawaygoals').append('<img src="../img/dropkick.png">' + ' ' + menu.FullName + " " + time + '<br>');
             }else if(menu.ScoringID == 7) {
-                $('#resulthomegoals').append('<img src="../img/pen.png">' + ' ' + menu.FullName + " " + time + '<br>');
+                $('#resultawaygoals').append('<img src="../img/pen.png">' + ' ' + menu.FullName + " " + time + '<br>');
             }
+           
         }
 
         if( $('#resulthomegoals').is(':empty') ) {
