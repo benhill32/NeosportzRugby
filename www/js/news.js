@@ -133,7 +133,7 @@ function getClubID_success(tx, results) {
 
 function numbersponsers(tx) {
     var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
@@ -141,7 +141,7 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
 
     nospor = len;
-  //  alert(nospor);
+    alert(nospor);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 }
 
