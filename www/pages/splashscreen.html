@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Hello World</title>
+
+
+
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="../js/dbconnection.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../js/splashscreen.js"></script>
+    <script type="text/javascript"  charset="utf-8">
+
+
+
+        document.addEventListener("deviceready", onDeviceReadysplash, false);
+
+        function onDeviceReadysplash() {
+
+
+
+            $( window ).on( "orientationchange", function( event ) {
+                // orientation = event.orientation;
+                //    alert(event.orientation);
+                getorientsplash(event.orientation);
+            });
+            // You can also manually force this event to fire.
+            $( window ).orientationchange();
+
+
+
+
+
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+<div  id="splashscreen">
+
+
+</div>
+
+<div class="footer">
+    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+
+</div>
+</body>
+</html>

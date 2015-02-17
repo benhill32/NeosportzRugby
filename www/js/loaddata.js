@@ -474,7 +474,7 @@ function loadarchiveyeardata2_sync(tx, results) {
         xmlHttp = new XMLHttpRequest();
 
         xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
-        //xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx', false);
+
 
         xmlHttp.send();
 
