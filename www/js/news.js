@@ -132,7 +132,7 @@ function getClubID_success(tx, results) {
 
 
 function numbersponsers(tx) {
-    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC == 'null'";
+    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
     alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
