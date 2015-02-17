@@ -254,7 +254,7 @@ function getgoals_success(tx, results) {
             }else if(menu.ScoringID == 7) {
                 $('#resultawaygoals').append('<img src="../img/pen.png">' + ' ' + menu.FullName + " " + time + '<br>');
             }
-           
+
         }
 
         if( $('#resulthomegoals').is(':empty') ) {

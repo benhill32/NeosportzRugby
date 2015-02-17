@@ -203,6 +203,7 @@ function passcancelgametoserver(testvar){
     var http = new XMLHttpRequest();
     var url = "http://rugby.neosportz.com/apploadcancelgame.aspx";
     var params = "?" + testvar;
+    alert(url + params);
     http.open("POST", url + params, true);
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
