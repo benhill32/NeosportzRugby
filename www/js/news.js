@@ -180,16 +180,16 @@ function getnewfeed_success(tx, results) {
                 if(menu.Base64 == "null") {
 
                     if ((menu.URL).search("facebook.com") != -1) {
-                        imgicon = "<img src='../img/fb.png' style='padding-right: 10px' height='30' align='left'>";
+                        imgicon = "<img src='../img/fb.png' style='padding-right: 10px'  align='left'>";
                         URLnow = menu.URL;
                     } else if ((menu.URL).search(".pdf") != -1) {
-                        imgicon = "<img src='../img/adobe.png' style='padding-right: 10px' height='30' align='left'>";
+                        imgicon = "<img src='../img/adobe.png' style='padding-right: 10px'  align='left'>";
                         URLnow = menu.URL;
                     } else if ((menu.URL).search("youtu.be") != -1) {
-                        imgicon = "<img src='../img/youtube.png' style='padding-right: 10px' height='30' align='left'>";
+                        imgicon = "<img src='../img/youtube.png' style='padding-right: 10px'  align='left'>";
                         URLnow = menu.URL;
                     } else {
-                        imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px' height='30' align='left'>";
+                        imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px'  align='left'>";
                         URLnow = menu.URL;
                     }
                 }else{
@@ -231,10 +231,10 @@ function getnewfeed_success(tx, results) {
             } else {
 
                 if(menu.FromPhone == 'true'){
-                    imgicon = "<img src='../img/phone.png' style='padding-right: 10px' height='30' align='left'>";
+                    imgicon = "<img src='../img/phone.png' style='padding-right: 10px'  align='left'>";
                 }
                 if(menu.Base64 == "null") {
-                    imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
+                    imgicon = "<img src='../img/info.png' style='padding-right: 10px'  align='left'>";
                 }else{
                     imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '">';
 
