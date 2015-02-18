@@ -60,9 +60,28 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.72" vertical-offset="6196" max-vertical-offset="18683">
-              <caret line="392" column="1" selection-start-line="392" selection-start-column="1" selection-end-line="392" selection-end-column="1" />
+            <state vertical-scroll-proportion="-10.88" vertical-offset="15759" max-vertical-offset="18887">
+              <caret line="943" column="13" selection-start-line="943" selection-start-column="1" selection-end-line="943" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/news.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6385542" vertical-offset="2907" max-vertical-offset="7361">
+              <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
+              <folding>
+                <marker date="1424219151410" expanded="true" signature="975:987" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="4270:4289" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="4498:4517" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="4732:4751" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="4926:4945" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="6670:6689" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="6831:6850" placeholder="..." />
+                <marker date="1424219151410" expanded="true" signature="8856:8875" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,39 +123,23 @@
       <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="748" max-vertical-offset="1802">
-              <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/news.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44347826" vertical-offset="1989" max-vertical-offset="7259">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.274509" vertical-offset="1125" max-vertical-offset="2142">
+              <caret line="91" column="76" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="76" />
               <folding>
-                <marker date="1424207974404" expanded="true" signature="975:987" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="4220:4239" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="4436:4455" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="4658:4677" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="4840:4859" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="6390:6409" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="6551:6570" placeholder="..." />
-                <marker date="1424207974404" expanded="true" signature="8566:8585" placeholder="..." />
+                <element signature="n#style#0;n#img#0;n#Div#0;n#Div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
+      <file leaf-file-name="clubsteamplayer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.72" vertical-offset="3659" max-vertical-offset="7191">
-              <caret line="231" column="188" selection-start-line="231" selection-start-column="169" selection-end-line="231" selection-end-column="188" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2567">
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="52" />
               <folding>
-                <marker date="1424054470281" expanded="true" signature="5879:5912" placeholder="..." />
+                <marker date="1416171957423" expanded="true" signature="1715:1753" placeholder="..." />
+                <marker date="1416171957423" expanded="true" signature="1831:1869" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -159,7 +162,6 @@
         <option value="$PROJECT_DIR$/www/pages/addnewfeed.html" />
         <option value="$PROJECT_DIR$/www/pages/clubteamplayers.html" />
         <option value="$PROJECT_DIR$/www/pages/clubteams.html" />
-        <option value="$PROJECT_DIR$/www/pages/news.html" />
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
         <option value="$PROJECT_DIR$/www/pages/ResultsMenu.html" />
         <option value="$PROJECT_DIR$/www/pages/StandingMenu.html" />
@@ -185,10 +187,12 @@
         <option value="$PROJECT_DIR$/www/js/scorecard.js" />
         <option value="$PROJECT_DIR$/www/js/results.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/www/Bootstrap/css/docs.min.css" />
+        <option value="$PROJECT_DIR$/www/pages/news.html" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
       </list>
     </option>
@@ -274,24 +278,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="neosportz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeosportzRugby" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -307,6 +293,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neosportz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeosportzRugby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neosportz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeosportzRugby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -418,7 +444,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -472,13 +498,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4437">
-          <caret line="169" column="5" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1173">
@@ -536,13 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1853">
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -807,7 +819,7 @@
         <state vertical-scroll-proportion="-10.72" vertical-offset="3659" max-vertical-offset="7191">
           <caret line="231" column="188" selection-start-line="231" selection-start-column="169" selection-end-line="231" selection-end-column="188" />
           <folding>
-            <marker date="1424054470281" expanded="true" signature="5879:5912" placeholder="..." />
+            <marker date="1424054470281" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -822,42 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.72" vertical-offset="6196" max-vertical-offset="18683">
-          <caret line="392" column="1" selection-start-line="392" selection-start-column="1" selection-end-line="392" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.192308" vertical-offset="84" max-vertical-offset="1207">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/Help.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2960199" vertical-offset="374" max-vertical-offset="1581">
           <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="748" max-vertical-offset="1802">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -891,19 +871,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.192308" vertical-offset="84" max-vertical-offset="1207">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Bootstrap/css/docs.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35403726" vertical-offset="10289" max-vertical-offset="27846">
+          <caret line="622" column="5" selection-start-line="622" selection-start-column="5" selection-end-line="622" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2567">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="52" />
+          <folding>
+            <marker date="1416171957423" expanded="true" signature="1715:1753" placeholder="..." />
+            <marker date="1416171957423" expanded="true" signature="1831:1869" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="15759" max-vertical-offset="18887">
+          <caret line="943" column="13" selection-start-line="943" selection-start-column="1" selection-end-line="943" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.274509" vertical-offset="1125" max-vertical-offset="2142">
+          <caret line="91" column="76" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="76" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#Div#0;n#Div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44347826" vertical-offset="1989" max-vertical-offset="7259">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.6385542" vertical-offset="2907" max-vertical-offset="7361">
+          <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
           <folding>
-            <marker date="1424207974404" expanded="true" signature="975:987" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="4220:4239" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="4436:4455" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="4658:4677" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="4840:4859" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="6390:6409" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="6551:6570" placeholder="..." />
-            <marker date="1424207974404" expanded="true" signature="8566:8585" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="975:987" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="4270:4289" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="4498:4517" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="4732:4751" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="4926:4945" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="6670:6689" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="6831:6850" placeholder="..." />
+            <marker date="1424219151410" expanded="true" signature="8856:8875" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -177,25 +177,31 @@ function getnewfeed_success(tx, results) {
             if (menu.URL != "") {
                 var imgicon = "";
                 var URLnow = "";
+                if(menu.Base64!="null") {
 
-                if ((menu.URL).search("facebook.com") != -1) {
-                    imgicon = "<img src='../img/fb.png' style='padding-right: 10px' height='30' align='left'>";
-                    URLnow = menu.URL;
-                } else if ((menu.URL).search(".pdf") != -1) {
-                    imgicon = "<img src='../img/adobe.png' style='padding-right: 10px' height='30' align='left'>";
-                    URLnow = menu.URL;
-                } else if ((menu.URL).search("youtu.be") != -1) {
-                    imgicon = "<img src='../img/youtube.png' style='padding-right: 10px' height='30' align='left'>";
-                    URLnow = menu.URL;
-                } else {
-                    imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px' height='30' align='left'>";
-                    URLnow = menu.URL;
+                    if ((menu.URL).search("facebook.com") != -1) {
+                        imgicon = "<img src='../img/fb.png' style='padding-right: 10px' height='30' align='left'>";
+                        URLnow = menu.URL;
+                    } else if ((menu.URL).search(".pdf") != -1) {
+                        imgicon = "<img src='../img/adobe.png' style='padding-right: 10px' height='30' align='left'>";
+                        URLnow = menu.URL;
+                    } else if ((menu.URL).search("youtu.be") != -1) {
+                        imgicon = "<img src='../img/youtube.png' style='padding-right: 10px' height='30' align='left'>";
+                        URLnow = menu.URL;
+                    } else {
+                        imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px' height='30' align='left'>";
+                        URLnow = menu.URL;
+                    }
+                }else{
+                    imgicon = "<img src='data:image/png;base64,'" + menu.Base64 + "' style='width:100%;height:100%;' align='left'>";
+
                 }
+
 
                 if ((menu.Body).length <= 200) {
 
                     $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left">' +
-                        '<Div id="divnew1"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
+                        '<Div id="divnew1image"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -209,7 +215,7 @@ function getnewfeed_success(tx, results) {
 
                 } else {
                     $('#newsmain').append('<Div  id="divnewmain" class=" bs-callout bs-callout-info" align="left"  >' +
-                        '<Div id="divnew1"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
+                        '<Div id="divnew1image"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -230,7 +236,7 @@ function getnewfeed_success(tx, results) {
 
 
                     $('#newsmain').append('<Div  id="divnewmain" align="left"  class=" bs-callout bs-callout-success"  >' +
-                        '<Div id="divnew1"> ' +
+                        '<Div id="divnew1image"> ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -243,7 +249,7 @@ function getnewfeed_success(tx, results) {
                 } else {
 
                     $('#newsmain').append('<Div  id="divnewmain" align="left"  class=" bs-callout bs-callout-success"  >' +
-                        '<Div id="divnew1" > ' +
+                        '<Div id="divnew1image" > ' +
                         '' + imgicon +
                         '</Div>' +
 

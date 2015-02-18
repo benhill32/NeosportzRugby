@@ -934,27 +934,39 @@ text-align: center !important;
     opacity:0.7;
 
 }
-#divnewmain{
+#divnewmain,.divnewmain{
     clear: both;
     width:100%;
    // padding-top: 10px;
    // margin: 5px 0;
     padding-left: 5px;
 }
-#divnew1{
-
+#divnew1image{
+    padding: 20px 10px 0px 0px;
     min-height: 60px;
-    width: 15%;
+    width: 25%;
+    float:left;
+    margin: 0px 0;
+    border-top:0px solid #eee;
+    border-bottom:0px solid #eee;
+    border-right:0px;
+    position: relative;
+}
+#divnew1,.divnew1{
+padding: 20px 0px;
+    min-height: 60px;
+    width: 25%;
     float:left;
     margin: 0px 0;
     border-top:0px solid #eee;
     border-bottom:0px solid #eee;
     border-right:0px;
 }
-#divnew2{
+#divnew2,.divnew2{
+    padding: 20px 0px;
   //  min-height: 60px;
   //  float:left;
-    width:85%;
+    width:100%;
 
  //   padding: 10px 0;
   //  margin: 2px 0;
