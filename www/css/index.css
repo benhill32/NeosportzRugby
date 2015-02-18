@@ -958,7 +958,7 @@ text-align: center !important;
     //margin-bottom: 20px;
 
 }
-#divnew1image,.divnew1image,#divimagenew{
+#divnew1image,.divnew1image{
    // padding: 0px 10px 0px 0px;
     min-height: 110px;
     width: 25%;
@@ -983,7 +983,7 @@ text-align: center !important;
     border-bottom:0px solid #eee;
     border-right:0px;
     position: relative;
-    max-height: 110px;
+
 //   clear: both;
 // width: 150px;
     overflow:hidden;
