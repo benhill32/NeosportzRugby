@@ -193,7 +193,7 @@ function getnewfeed_success(tx, results) {
                         URLnow = menu.URL;
                     }
                 }else{
-                    imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '" style="width:100%;height:100%;" align="left">';
+                    imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '" height="80" align="left">';
 
                 }
 
@@ -234,7 +234,7 @@ function getnewfeed_success(tx, results) {
                 if(menu.Base64 == "null") {
                     imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
                 }else{
-                    imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '" style="width:100%;height:100%;" align="left">';
+                    imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '" height="80" align="left">';
 
                 }
                 if ((menu.Body).length <= 200) {
