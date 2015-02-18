@@ -189,7 +189,7 @@ function getnewfeed_success(tx, results) {
                 }else{
                    // imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '">';
                   //  URLnow = menu.URL;
-                    imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px'  align='left'>";
+                    imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px' height='30'  align='left'>";
                     URLnow = menu.URL;
                 }
 
