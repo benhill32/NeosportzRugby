@@ -70,17 +70,17 @@
       <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1469879" vertical-offset="2907" max-vertical-offset="7446">
+            <state vertical-scroll-proportion="1.0855422" vertical-offset="2958" max-vertical-offset="7446">
               <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
-                <marker date="1424219521497" expanded="true" signature="975:987" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="4272:4291" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="4500:4519" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="4734:4753" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="4928:4947" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="6724:6743" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="6900:6919" placeholder="..." />
-                <marker date="1424219521497" expanded="true" signature="9081:9100" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="975:987" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="4272:4291" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="4500:4519" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="4734:4753" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="4928:4947" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="6723:6742" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="6899:6918" placeholder="..." />
+                <marker date="1424219915771" expanded="true" signature="9079:9098" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -123,8 +123,8 @@
       <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.27451" vertical-offset="1074" max-vertical-offset="2142">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.27451" vertical-offset="1227" max-vertical-offset="2142">
+              <caret line="94" column="24" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -134,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2567">
-              <caret line="33" column="52" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="52" />
+              <caret line="33" column="102" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="102" />
               <folding>
                 <marker date="1416171957423" expanded="true" signature="1715:1753" placeholder="..." />
                 <marker date="1416171957423" expanded="true" signature="1831:1869" placeholder="..." />
@@ -442,7 +442,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -865,41 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2567">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="52" />
-          <folding>
-            <marker date="1416171957423" expanded="true" signature="1715:1753" placeholder="..." />
-            <marker date="1416171957423" expanded="true" signature="1831:1869" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.88" vertical-offset="15759" max-vertical-offset="18887">
-          <caret line="943" column="13" selection-start-line="943" selection-start-column="1" selection-end-line="943" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.27451" vertical-offset="1074" max-vertical-offset="2142">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.32" vertical-offset="6430" max-vertical-offset="10200">
@@ -920,19 +885,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2567">
+          <caret line="33" column="102" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="102" />
+          <folding>
+            <marker date="1416171957423" expanded="true" signature="1715:1753" placeholder="..." />
+            <marker date="1416171957423" expanded="true" signature="1831:1869" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="15759" max-vertical-offset="18887">
+          <caret line="943" column="13" selection-start-line="943" selection-start-column="1" selection-end-line="943" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.27451" vertical-offset="1227" max-vertical-offset="2142">
+          <caret line="94" column="24" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1469879" vertical-offset="2907" max-vertical-offset="7446">
+        <state vertical-scroll-proportion="1.0855422" vertical-offset="2958" max-vertical-offset="7446">
           <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
-            <marker date="1424219521497" expanded="true" signature="975:987" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="4272:4291" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="4500:4519" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="4734:4753" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="4928:4947" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="6724:6743" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="6900:6919" placeholder="..." />
-            <marker date="1424219521497" expanded="true" signature="9081:9100" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="975:987" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="4272:4291" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="4500:4519" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="4734:4753" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="4928:4947" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="6723:6742" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="6899:6918" placeholder="..." />
+            <marker date="1424219915771" expanded="true" signature="9079:9098" placeholder="..." />
           </folding>
         </state>
       </provider>
