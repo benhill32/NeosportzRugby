@@ -151,12 +151,6 @@ function getdata2(tx) {
     tx.executeSql(sql, [], getnewfeed_success);
 }
 
-
-
-
-
-
-
 function getnewfeed_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
@@ -240,7 +234,7 @@ function getnewfeed_success(tx, results) {
                 }else{
                     //imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '">';
                    // URLnow = menu.URL;
-                    imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px'  align='left'>";
+                    imgicon = "<img src='../img/info.png' style='padding-right: 10px'  align='left'>";
                   //  URLnow = menu.URL;
                 }
 
