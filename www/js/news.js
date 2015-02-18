@@ -177,7 +177,7 @@ function getnewfeed_success(tx, results) {
             if (menu.URL != "") {
                 var imgicon = "";
                 var URLnow = "";
-                if(menu.Base64!="null") {
+                if(menu.Base64 == "null") {
 
                     if ((menu.URL).search("facebook.com") != -1) {
                         imgicon = "<img src='../img/fb.png' style='padding-right: 10px' height='30' align='left'>";
@@ -227,11 +227,16 @@ function getnewfeed_success(tx, results) {
                 }
 
             } else {
-                imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
+
                 if(menu.FromPhone == 'true'){
                     imgicon = "<img src='../img/phone.png' style='padding-right: 10px' height='30' align='left'>";
                 }
+                if(menu.Base64 == "null") {
+                    imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
+                }else{
+                    imgicon = "<img src='data:image/png;base64,'" + menu.Base64 + "' style='width:100%;height:100%;' align='left'>";
 
+                }
                 if ((menu.Body).length <= 200) {
 
 
