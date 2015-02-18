@@ -201,9 +201,11 @@ function getnewfeed_success(tx, results) {
                 if ((menu.Body).length <= 200) {
 
                     $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left">' +
+
                         '<Div id="divnew1image"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
                         '' + imgicon +
                         '</Div>' +
+
 
                         '<Div id="divnew2"> ' +
                         '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
