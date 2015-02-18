@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66169155" vertical-offset="1117" max-vertical-offset="1921">
-              <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
+            <state vertical-scroll-proportion="31.192308" vertical-offset="1117" max-vertical-offset="1921">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -77,20 +77,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.28" vertical-offset="5937" max-vertical-offset="7514">
-              <caret line="357" column="0" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.18509316" vertical-offset="2367" max-vertical-offset="7582">
+              <caret line="148" column="84" selection-start-line="148" selection-start-column="78" selection-end-line="148" selection-end-column="84" />
               <folding>
-                <marker date="1424290635539" expanded="true" signature="975:987" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="4272:4291" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="4489:4508" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="4712:4731" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="4895:4914" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="6674:6693" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="6839:6858" placeholder="..." />
-                <marker date="1424290635539" expanded="true" signature="9003:9022" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="975:987" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="4272:4291" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="4489:4508" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="4712:4731" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="4895:4914" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="5220:5239" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="6824:6843" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="6989:7008" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="7249:7268" placeholder="..." />
+                <marker date="1424292447001" expanded="true" signature="9305:9324" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -143,9 +145,9 @@
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/Bootstrap/css/docs.min.css" />
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
-        <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/pages/news.html" />
+        <option value="$PROJECT_DIR$/www/js/news.js" />
       </list>
     </option>
   </component>
@@ -823,23 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.28" vertical-offset="5937" max-vertical-offset="7514">
-          <caret line="357" column="0" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
-          <folding>
-            <marker date="1424290635539" expanded="true" signature="975:987" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="4272:4291" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="4489:4508" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="4712:4731" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="4895:4914" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="6674:6693" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="6839:6858" placeholder="..." />
-            <marker date="1424290635539" expanded="true" signature="9003:9022" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.32" vertical-offset="16201" max-vertical-offset="19516">
@@ -850,10 +835,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66169155" vertical-offset="1117" max-vertical-offset="1921">
-          <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
+        <state vertical-scroll-proportion="31.192308" vertical-offset="1117" max-vertical-offset="1921">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18509316" vertical-offset="2367" max-vertical-offset="7582">
+          <caret line="148" column="84" selection-start-line="148" selection-start-column="78" selection-end-line="148" selection-end-column="84" />
+          <folding>
+            <marker date="1424292447001" expanded="true" signature="975:987" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="4272:4291" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="4489:4508" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="4712:4731" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="4895:4914" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="5220:5239" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="6824:6843" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="6989:7008" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="7249:7268" placeholder="..." />
+            <marker date="1424292447001" expanded="true" signature="9305:9324" placeholder="..." />
           </folding>
         </state>
       </provider>
