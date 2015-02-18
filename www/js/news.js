@@ -358,7 +358,7 @@ function loadnewfeed(ID) {
 
 function loadnewfeed2(tx) {
 
-    var sql = "select Title,Body,Base64 from MobilevwApp_News_v_2 where ID=" + IDNews;
+    var sql = "select Title,Body from MobilevwApp_News_v_2 where ID=" + IDNews;
      // alert(sql);
     tx.executeSql(sql, [], loadnewfeed_success);
 }
@@ -370,8 +370,8 @@ function loadnewfeed_success(tx, results) {
 
     var menu = results.rows.item(0);
 
-    $('#divimagenew').empty();
-    $('#divimagenew').append( '<img src="data:image/png;base64,' + menu.Base64 + '" >');
+  //  $('#divimagenew').empty();
+  //  $('#divimagenew').append( '<img src="data:image/png;base64,' + menu.Base64 + '" >');
 
 
     $('#newtitle').empty();
