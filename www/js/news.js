@@ -198,7 +198,7 @@ function getnewfeed_success(tx, results) {
 
                     $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left">' +
 
-                        '<Div id="divnew1image"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
+                        '<Div id="divnew1"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -213,7 +213,7 @@ function getnewfeed_success(tx, results) {
 
                 } else {
                     $('#newsmain').append('<Div  id="divnewmain" class=" bs-callout bs-callout-info" align="left"  >' +
-                        '<Div id="divnew1image"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
+                        '<Div id="divnew1"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -243,7 +243,7 @@ function getnewfeed_success(tx, results) {
 
 
                     $('#newsmain').append('<Div  id="divnewmain" align="left"  class=" bs-callout bs-callout-success"  >' +
-                        '<Div id="divnew1image"> ' +
+                        '<Div id="divnew1"> ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -256,7 +256,7 @@ function getnewfeed_success(tx, results) {
                 } else {
 
                     $('#newsmain').append('<Div  id="divnewmain" align="left"  class=" bs-callout bs-callout-success"  >' +
-                        '<Div id="divnew1image" > ' +
+                        '<Div id="divnew1" > ' +
                         '' + imgicon +
                         '</Div>' +
 
