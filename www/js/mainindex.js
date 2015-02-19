@@ -276,17 +276,17 @@ function showresultsmodel_dataa_success(tx, results) {
 function gobaack1(ID){
 
     if(ID == 4){
-        $('#basicmodelarchiveresults').modal('hide');
+        $('#basicmodelarchivestand').modal('hide');
         $('#basicstandingresultmodel').modal('show');
 
     }else if(ID == 3) {
-        $('#basicmodelarchivestand').modal('hide');
+        $('#basicmodelarchiveresults').modal('hide');
         $('#basicstandingresultmodel').modal('show');
 
     }else if(ID == 2) {
         $('#basicstandingresultmodel').modal('hide');
-        $('#basicstandingresultmodel').modal('show');
-
+        $('#basicarchivemodel').modal('show');
+        db.transaction(archiveyearben, errorCBfunc, successCBfunc);
     }
 
 }
