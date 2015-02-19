@@ -148,7 +148,7 @@ function populateDB1(tx,results) {
             $('#indexloadingdata').modal('hide')
             $('#mainfore').removeClass('mainforeground2');
             $('#mainfore').addClass('mainforeground');
-            window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+          //  window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
         }
     }
