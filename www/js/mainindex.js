@@ -280,9 +280,6 @@ function showresultsmodel_dataa_success(tx, results) {
 
 function gobaack1(ID){
 
-    alert(ID);
-
-
     if(ID == 4){
         $('#basicmodelarchivestand').modal('hide');
         $('#basicstandingresultmodel').modal('show');
