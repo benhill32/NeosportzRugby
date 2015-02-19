@@ -17,14 +17,14 @@ function loadindexmessage() {
 
 function checkclubsinsert(tx){
     var sql = "select ID from MobileApp_clubs";
-     alert(sql);
+   //  alert(sql);
     tx.executeSql(sql, [], checkclubsinsert_success);
 
 }
 
 function checkclubsinsert_success(tx, results) {
     var len = results.rows.length;
-    alert(len);
+  //  alert(len);
     if(len != 0) {
         db.transaction(gethasclub, errorCBfunc, successCBfunc);
     }
