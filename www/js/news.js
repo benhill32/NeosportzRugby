@@ -229,14 +229,7 @@ function getnewfeed_success(tx, results) {
                 if(menu.FromPhone == 'true'){
                     imgicon = "<img src='../img/phone.png' style='padding-right: 10px'  height='30'  align='left'>";
                 }
-                if(menu.Base64 == "null") {
-                    imgicon = "<img src='../img/info.png' style='padding-right: 10px'  height='30'  align='left'>";
-                }else{
-                    //imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '">';
-                   // URLnow = menu.URL;
-                    imgicon = "<img src='../img/info.png' style='padding-right: 10px'  height='30'  align='left'>";
-                  //  URLnow = menu.URL;
-                }
+
 
 
                 if ((menu.Body).length <= 200) {
