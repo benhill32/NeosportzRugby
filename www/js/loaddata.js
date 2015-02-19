@@ -141,7 +141,7 @@ function populateDB1(tx,results) {
 
         var sql = "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
 
-        if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))){
+        if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))){
 
              tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
@@ -408,7 +408,7 @@ function onclickresync(tx, results) {
 
     var row = results.rows.item(0);
 
-    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))) {
+    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))) {
         $('#indexloadingdata').modal('show');
 
         var datemenus = row.datemenus;
@@ -462,7 +462,7 @@ function loadarchiveyeardata2_sync(tx, results) {
 
     var row = results.rows.item(0);
 
-    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0))) {
+    if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))) {
         $('#indexloadingdata').modal('show');
 
         var datemenus = row.datemenus;

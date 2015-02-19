@@ -126,7 +126,7 @@ function getsyncdate_success2(tx, results) {
         console.log("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2) );
 
 
-    if((wifi ==1 &&  networkconnectionset==2) || ((wifi ==0))){
+    if((wifi ==1 &&  networkconnectionset==2) || ((wifi ==0 &&  networkconnectionset!=0))){
         $("#settingdeleteall").css('color', '#333');
         $("#settingsync").css('color', '#333');
     }else{
@@ -192,7 +192,7 @@ function cleardata4Changeregaion(){
     onOfflinesetting();
 
 
-    if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {
+    if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0 &&  networkconnectionset!=0))) {
        // $('#indexloadingdata').modal('show');
         db.transaction(droptables, errorCBfunc, createtables4Changeregaion);
     }
@@ -213,7 +213,7 @@ function createtables4Changeregaion(){
 function cleardata(){
 
     onOfflinesetting();
-   if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0))) {
+   if((wifiallset ==1 &&  networkconnectionset==2) || ((wifiallset ==0 &&  networkconnectionset!=0))) {
         $('#indexloadingdata').modal('show');
         db.transaction(droptables, errorCBfunc, createtables);
    }
@@ -264,7 +264,9 @@ function chkmobiledata(id){
    }
 
 
-    if((id=="btn1" &&  networkconnectionset==2) || ((id== "btn2"))){
+
+
+    if((id=="btn1" &&  networkconnectionset==2) || ((id== "btn2" &&  networkconnectionset!=0))){
 
         $("#settingdeleteall").css('color', '#333');
         $("#settingsync").css('color', '#333');
