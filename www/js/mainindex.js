@@ -276,25 +276,25 @@ function showresultsmodel_dataa_success(tx, results) {
     }
 }
 
-
-
-function gobaack1(ID){
-
-    if(ID == 4){
-        $('#basicmodelarchivestand').modal('hide');
-        $('#basicstandingresultmodel').modal('show');
-
-    }else if(ID == 3) {
-        $('#basicmodelarchiveresults').modal('hide');
-        $('#basicstandingresultmodel').modal('show');
-
-    }else if(ID == 2) {
-        $('#basicstandingresultmodel').modal('hide');
-        $('#basicarchivemodel').modal('show');
-        db.transaction(archiveyearben, errorCBfunc, successCBfunc);
-    }
+function gobaack4() {
+    $('#basicmodelarchivestand').modal('hide');
+    $('#basicstandingresultmodel').modal('show');
 
 }
+
+function gobaack3() {
+    $('#basicmodelarchiveresults').modal('hide');
+    $('#basicstandingresultmodel').modal('show');
+
+}
+
+function gobaack2() {
+    $('#basicstandingresultmodel').modal('hide');
+    $('#basicarchivemodel').modal('show');
+    db.transaction(archiveyearben, errorCBfunc, successCBfunc);
+
+}
+
 
 
 function redirectresultsarchive(ID,newyear){
