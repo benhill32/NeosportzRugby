@@ -285,7 +285,7 @@ function gobaack1(ID){
 
     }else if(ID == 2) {
         $('#basicstandingresultmodel').modal('hide');
-        loadarchiveyear();
+        $('#basicstandingresultmodel').modal('show');
 
     }
 

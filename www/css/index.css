@@ -506,7 +506,7 @@ position: fixed;
     .modal-body{
         /* Increase the max height of the modal body to try & avoid both it,
          * and the modal container having scroll bars which results in odd behavior */
-        max-height: 2400px;
+        max-height: 2700px;
     }
 }
 @media (max-width: 480px) {
