@@ -150,7 +150,12 @@ function loadarchiveyear2() {
     $('#mainfore').addClass('mainforeground2');
     db.transaction(archiveyearben, errorCBfunc, successCBfunc);
 }
+function loadarchiveBen() {
+    $('#basicmodelarchivestand').modal('show');
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
 
+}
 
 function loadarchiveyear(){
 
@@ -274,6 +279,9 @@ function showresultsmodel_dataa_success(tx, results) {
 
 
 function gobaack1(ID){
+
+    alert(ID);
+
 
     if(ID == 4){
         $('#basicmodelarchivestand').modal('hide');
