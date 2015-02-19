@@ -86,6 +86,8 @@ function gethasclub_success(tx, results) {
 
 }
 
+
+
 function hadclubfunction(){
 
     db.transaction(function(tx) {
@@ -151,11 +153,16 @@ function loadarchiveyear2() {
     db.transaction(archiveyearben, errorCBfunc, successCBfunc);
 }
 function loadarchiveBen() {
-    $('#basicmodelarchivestand').modal('show');
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
+    // alert($('#mainfore').attr('class'));
+    $('#basicModalnofav').modal('show');
 
 }
+
+
+
+
 
 function loadarchiveyear(){
 
