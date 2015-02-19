@@ -7,21 +7,18 @@ document.addEventListener("deviceready", onDeviceReadymainindex, false);
 function onDeviceReadymainindex() {
     deviceIDfunc = device.uuid;
 
-    loadindexmessage();
-}
 
+}
 
 function loadindexmessage() {
     db.transaction(checkclubsinsert, errorCBfunc, successCBfunc);
 }
-
 function checkclubsinsert(tx){
     var sql = "select ID from MobileApp_clubs";
    //  alert(sql);
     tx.executeSql(sql, [], checkclubsinsert_success);
 
 }
-
 function checkclubsinsert_success(tx, results) {
     var len = results.rows.length;
   //  alert(len);
@@ -29,7 +26,6 @@ function checkclubsinsert_success(tx, results) {
         db.transaction(gethasclub, errorCBfunc, successCBfunc);
     }
 }
-
 function getbackground(tx) {
    // alert($('#mainbackground').css('opacity'));
 
@@ -51,14 +47,11 @@ function getbackground_success(tx, results) {
     }
 }
 
-
-
 function gethasclub(tx) {
     var sql = "select hasclub,hasclubdate from MobileApp_LastUpdatesec";
     //  alert(sql);
     tx.executeSql(sql, [], gethasclub_success);
 }
-
 
 function gethasclub_success(tx, results) {
 

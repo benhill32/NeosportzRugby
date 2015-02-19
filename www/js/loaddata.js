@@ -287,6 +287,10 @@ function randomfunctions(){
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliter, errorCBfunc, successCBfunc);
     }
+    if (document.getElementById("indexdiv") != null) {
+        loadindexmessage();
+    }
+
 }
 
 
