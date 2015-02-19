@@ -171,7 +171,6 @@ function getnewfeed_success(tx, results) {
             if (menu.URL != "") {
                 var imgicon = "";
                 var URLnow = "";
-                if(menu.Base64 == "null") {
 
                     if ((menu.URL).search("facebook.com") != -1) {
                         imgicon = "<img src='../img/fb.png' style='padding-right: 10px'  height='30'  align='left'>";
@@ -186,12 +185,7 @@ function getnewfeed_success(tx, results) {
                         imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px'  height='30'  align='left'>";
                         URLnow = menu.URL;
                     }
-                }else{
-                   // imgicon = '<img src="data:image/png;base64,' + menu.Base64 + '">';
-                  //  URLnow = menu.URL;
-                    imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px' height='30'  align='left'>";
-                    URLnow = menu.URL;
-                }
+
 
 
                 if ((menu.Body).length <= 200) {
@@ -225,9 +219,10 @@ function getnewfeed_success(tx, results) {
                 }
 
             } else {
-
+                imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
                 if(menu.FromPhone == 'true'){
                     imgicon = "<img src='../img/phone.png' style='padding-right: 10px'  height='30'  align='left'>";
+
                 }
 
 
