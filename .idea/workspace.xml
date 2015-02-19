@@ -97,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29565218" vertical-offset="0" max-vertical-offset="7004">
+            <state vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="7429">
               <caret line="14" column="21" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="n#!!block;n#errorclosemodel#0" expanded="false" />
@@ -115,17 +115,16 @@
                 <element signature="n#!!block;n#tokenHandler#0" expanded="false" />
                 <element signature="n#!!block;n#pushnotifiy#0" expanded="false" />
                 <element signature="n#!!block;n#onNotification#0" expanded="false" />
-                <element signature="n#!!block;n#onNotificationAPN#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="5236">
-              <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.33291924" vertical-offset="3030" max-vertical-offset="5236">
+              <caret line="194" column="47" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -886,17 +885,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="5236">
-          <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29565218" vertical-offset="0" max-vertical-offset="7004">
+        <state vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="7429">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="n#!!block;n#errorclosemodel#0" expanded="false" />
@@ -911,8 +902,15 @@
             <element signature="n#!!block;n#tokenHandler#0" expanded="false" />
             <element signature="n#!!block;n#pushnotifiy#0" expanded="false" />
             <element signature="n#!!block;n#onNotification#0" expanded="false" />
-            <element signature="n#!!block;n#onNotificationAPN#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33291924" vertical-offset="3030" max-vertical-offset="5236">
+          <caret line="194" column="47" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
