@@ -622,11 +622,12 @@ function onNotification(e) {
             // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-
+                    onclicksyncloaddata();
              //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
+                    onclicksyncloaddata();
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
@@ -654,7 +655,8 @@ function onNotificationAPN(e) {
     if (e.alert) {
        // $("#app-status-ul").append('<li>push-notification: ' + e.alert + '</li>');
 // showing an alert also requires the org.apache.cordova.dialogs plugin
-       navigator.notification.alert(e.alert);
+      // navigator.notification.alert(e.alert);
+        onclicksyncloaddata();
 
     }
     if (e.sound) {
