@@ -182,7 +182,7 @@ function getnewfeed_success(tx, results) {
                         imgicon = "<img src='../img/youtube.png' style='padding-right: 10px'  height='30'  align='left'>";
                         URLnow = menu.URL;
                     } else {
-                        imgicon = "<img src='../img/infohttp.png' style='padding-right: 10px'  height='30'  align='left'>";
+                        imgicon = "<img src='../img/web.png' style='padding-right: 10px'  height='30'  align='left'>";
                         URLnow = menu.URL;
                     }
 
