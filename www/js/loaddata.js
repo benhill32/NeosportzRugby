@@ -571,6 +571,13 @@ function pushnotifiy() {
 }
 }
 
+function updatedatapush(ID){
+    alert(ID);
+    onclicksyncloaddata();
+
+}
+
+
 function onNotification(e) {
  //   $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
     var xmlHttpt = null;
@@ -606,7 +613,10 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-               alert(e.payload.title);
+                updatedatapush("\'' + e.payload.title + '\'");
+
+
+""
 
              //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
@@ -622,14 +632,12 @@ function onNotification(e) {
             // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                  //  onclicksyncloaddata();
-                    alert(e.payload.title);
+                    updatedatapush("\'' + e.payload.title + '\'");
              //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    //onclicksyncloaddata();
-                    alert(e.payload.title);
+                    updatedatapush("\'' + e.payload.title + '\'");
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
