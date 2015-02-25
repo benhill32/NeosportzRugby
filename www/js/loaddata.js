@@ -606,7 +606,7 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-               alert(e.payload.msgcnt);
+               alert(e.payload.title);
 
              //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
@@ -623,13 +623,13 @@ function onNotification(e) {
                 if ( e.coldstart )
                 {
                   //  onclicksyncloaddata();
-                    alert(e.payload.msgcnt);
+                    alert(e.payload.title);
              //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
                     //onclicksyncloaddata();
-                    alert(e.payload.msgcnt);
+                    alert(e.payload.title);
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
