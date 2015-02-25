@@ -27,8 +27,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4903846" vertical-offset="9537" max-vertical-offset="11985">
-              <caret line="585" column="30" selection-start-line="585" selection-start-column="30" selection-end-line="585" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.08054523" vertical-offset="9693" max-vertical-offset="12087">
+              <caret line="574" column="6" selection-start-line="574" selection-start-column="6" selection-end-line="574" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -813,6 +813,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="153" max-vertical-offset="2074">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.076923" vertical-offset="4447" max-vertical-offset="5253">
@@ -824,18 +832,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="153" max-vertical-offset="2074">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4903846" vertical-offset="9537" max-vertical-offset="11985">
-          <caret line="585" column="30" selection-start-line="585" selection-start-column="30" selection-end-line="585" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.08054523" vertical-offset="9693" max-vertical-offset="12087">
+          <caret line="574" column="6" selection-start-line="574" selection-start-column="6" selection-end-line="574" selection-end-column="6" />
           <folding />
         </state>
       </provider>
