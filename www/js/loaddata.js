@@ -613,7 +613,7 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-                updatedatapush("\'' + e.payload.title + '\'");
+                updatedatapush("' + e.payload.title + '");
 
 
 ""
@@ -632,12 +632,12 @@ function onNotification(e) {
             // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                    updatedatapush("\'' + e.payload.title + '\'");
+                    updatedatapush("' + e.payload.title + '");
              //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    updatedatapush("\'' + e.payload.title + '\'");
+                    updatedatapush("' + e.payload.title + '");
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
