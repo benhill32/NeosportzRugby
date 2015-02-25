@@ -606,7 +606,7 @@ function onNotification(e) {
 
             if ( e.foreground )
             {
-              //  alert(e.payload.msgcnt);
+               alert(e.payload.msgcnt);
 
              //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
@@ -622,12 +622,14 @@ function onNotification(e) {
             // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                    onclicksyncloaddata();
+                  //  onclicksyncloaddata();
+                    alert(e.payload.msgcnt);
              //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    onclicksyncloaddata();
+                    //onclicksyncloaddata();
+                    alert(e.payload.msgcnt);
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
