@@ -26,7 +26,7 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 
 function onDeviceReadyloaddata() {
-
+    pushnotifiy();
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
@@ -126,11 +126,11 @@ function populateDB1(tx,results) {
 
 
         $.when(blankLastUpdatesec()).done(function() {
-           $.when( pushnotifiy()).done(function() {
+         //  $.when( pushnotifiy()).done(function() {
                // db.transaction(populateDB, errorCBfunc, successCBfunc);
                db.transaction(gettokenregion, errorCBfunc, successCBfunc);
 
-            });
+           // });
         });
 
 
