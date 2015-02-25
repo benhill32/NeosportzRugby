@@ -573,7 +573,19 @@ function pushnotifiy() {
 
 function updatedatapush(ID){
     alert(ID);
-    onclicksyncloaddata();
+
+    if(ID == 'New News Feed'){
+        weblink('pages/news.html')
+    }else if(ID == 'Game Cancellation'){
+        onclicksyncloaddata();
+    }else if(ID == 'Half Time Score'){
+        onclicksyncloaddata();
+    }else if(ID == 'Full Time Score'){
+        onclicksyncloaddata();
+    }else{
+        onclicksyncloaddata();
+    }
+
 
 }
 
