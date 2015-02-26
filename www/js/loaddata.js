@@ -575,23 +575,48 @@ function updatedatapush(ID,mess){
     //alert(ID);
 
     if(ID == 'New News Feed'){
-        weblink('pages/news.html')
+        onclicksyncloaddata();
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     }else if(ID == 'Game Cancellation'){
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else if(ID == 'Half Time Score'){
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else if(ID == 'Full Time Score'){
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else{
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop('New News Feed ' + '\n' + ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom('New News Feed ' + '\n' + ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
+    }
+}
+
+
+function updatedatapushappclosed(ID,mess){
+    //alert(ID);
+
+    if(ID == 'New News Feed'){
+       // onclicksyncloaddata();
+        weblink('pages/news.html');
+    }else if(ID == 'Game Cancellation'){
+      //  onclicksyncloaddata();
+
+    }else if(ID == 'Half Time Score'){
+     //   onclicksyncloaddata();
+
+
+    }else if(ID == 'Full Time Score'){
+     //   onclicksyncloaddata();
+
+
+    }else{
+       // onclicksyncloaddata();
+        weblink('pages/news.html');
     }
 }
 
@@ -650,12 +675,12 @@ function onNotification(e) {
             // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart )
                 {
-                    updatedatapush(e.payload.title, e.payload.message);
+                    updatedatapushappclosed(e.payload.title, e.payload.message);
              //  $("#app-status-ul").append('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 }
                 else
                 {
-                    updatedatapush(e.payload.title, e.payload.message);
+                    updatedatapushappclosed(e.payload.title, e.payload.message);
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
