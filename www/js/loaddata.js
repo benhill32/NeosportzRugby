@@ -578,19 +578,19 @@ function updatedatapush(ID,mess){
         weblink('pages/news.html')
     }else if(ID == 'Game Cancellation'){
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else if(ID == 'Half Time Score'){
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else if(ID == 'Full Time Score'){
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else{
         onclicksyncloaddata();
-        window.plugins.toast.showLongTop(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongTop('New News Feed ' + '\n' + ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }
 }
