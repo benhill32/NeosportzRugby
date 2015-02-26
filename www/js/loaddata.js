@@ -604,20 +604,21 @@ function updatedatapushappclosed(ID,mess){
        // onclicksyncloaddata();
         weblink('pages/news.html');
     }else if(ID == 'Game Cancellation'){
-      //  onclicksyncloaddata();
-
+       // onclicksyncloaddata();
+        weblink('pages/index.html');
     }else if(ID == 'Half Time Score'){
-     //   onclicksyncloaddata();
-
+       // onclicksyncloaddata();
+        weblink('pages/index.html');
 
     }else if(ID == 'Full Time Score'){
-     //   onclicksyncloaddata();
-
+       // onclicksyncloaddata();
+        weblink('pages/index.html');
 
     }else{
-       // onclicksyncloaddata();
+      //  onclicksyncloaddata();
         weblink('pages/news.html');
     }
+    onclicksyncloaddata();
 }
 
 
@@ -680,6 +681,7 @@ function onNotification(e) {
                 }
                 else
                 {
+
                     updatedatapushappclosed(e.payload.title, e.payload.message);
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
