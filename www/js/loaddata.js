@@ -601,24 +601,24 @@ function updatedatapushappclosed(ID,mess){
     //alert(ID);
 
     if(ID == 'New News Feed'){
-       // onclicksyncloaddata();
+        onclicksyncloaddata();
         weblink('pages/news.html');
     }else if(ID == 'Game Cancellation'){
-       // onclicksyncloaddata();
+        onclicksyncloaddata();
         weblink('pages/index.html');
     }else if(ID == 'Half Time Score'){
-       // onclicksyncloaddata();
+        onclicksyncloaddata();
         weblink('pages/index.html');
 
     }else if(ID == 'Full Time Score'){
-       // onclicksyncloaddata();
+        onclicksyncloaddata();
         weblink('pages/index.html');
 
     }else{
-      //  onclicksyncloaddata();
+       onclicksyncloaddata();
         weblink('pages/news.html');
     }
-    onclicksyncloaddata();
+
 }
 
 
