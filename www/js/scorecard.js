@@ -132,7 +132,7 @@ var Gameid =menu.ID;
                 '<div id="divscore"  ></div>' +
                 '<div id="divhalffull" align="center"  >' +
                 '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
-                '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button>' +
+                '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button><br>' +
                 '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approved</button>' +
                 '</div>' +
                 '</Div>');
@@ -145,7 +145,7 @@ var Gameid =menu.ID;
             $("#btnfull").hide();
         }
     }
-
+alert(menu.halftime + " - " + menu.fulltime + " - " + menu.IsFinalScore);
     if(menu.IsFinalScore == 1){
 
         $("#btnapprove").hide();

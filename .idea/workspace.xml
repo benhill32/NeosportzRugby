@@ -92,8 +92,8 @@
       <file leaf-file-name="scorecard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38915664" vertical-offset="748" max-vertical-offset="5321">
-              <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.6074534" vertical-offset="2163" max-vertical-offset="5321">
+              <caret line="156" column="32" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -102,8 +102,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4" vertical-offset="15453" max-vertical-offset="19822">
-              <caret line="914" column="14" selection-start-line="914" selection-start-column="14" selection-end-line="914" selection-end-column="14" />
+            <state vertical-scroll-proportion="-2.72" vertical-offset="15453" max-vertical-offset="19822">
+              <caret line="913" column="1" selection-start-line="913" selection-start-column="1" selection-end-line="913" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -824,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4" vertical-offset="15453" max-vertical-offset="19822">
-          <caret line="914" column="14" selection-start-line="914" selection-start-column="14" selection-end-line="914" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/scorecard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.692308" vertical-offset="339" max-vertical-offset="1156">
@@ -867,10 +859,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.72" vertical-offset="15453" max-vertical-offset="19822">
+          <caret line="913" column="1" selection-start-line="913" selection-start-column="1" selection-end-line="913" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38915664" vertical-offset="748" max-vertical-offset="5321">
-          <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.6074534" vertical-offset="2163" max-vertical-offset="5321">
+          <caret line="156" column="32" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="32" />
           <folding />
         </state>
       </provider>
