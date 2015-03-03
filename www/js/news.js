@@ -14,17 +14,48 @@ document.addEventListener("deviceready", onDeviceReadynews, false);
 function onDeviceReadynews() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
-    db.transaction(getadmin, errorCBfunc, successCBfunc);
 
+    db.transaction(getdatanews, errorCBfunc, successCBfunc);
   //  checkfb();
 }
 //db.transaction(getadmin, errorCBfunc, successCBfunc);
 
 
 
+function getdatanews(tx) {
+    var sql = "select ID from MobileApp_clubs where Fav = 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getClubID_success);
+}
+
+function getClubID_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+
+
+    if(len != 0) {
+        var menu = results.rows.item(0);
+        clubidtop = menu.ID;
+        //  db.transaction(getdata2, errorCBfunc, successCBfunc);
+        db.transaction(getadmin, errorCBfunc, successCBfunc);
+        db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+
+    }else{
+
+        showclubsfun();
+    }
+
+
+}
+
+
+
+
+
+
 function getadmin(tx) {
 
-    var sql = "select allownewfeed from MobileApp_LastUpdatesec";
+    var sql = "select allownewfeed,Clubedit from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getadmin_success);
 }
@@ -37,7 +68,7 @@ function getadmin_success(tx, results) {
 
       if(len != 0) {
         var menu = results.rows.item(0);
-        if(menu.allownewfeed ==1){
+        if(menu.allownewfeed ==1 && menu.Clubedit == clubidtop){
             $('#loadnews').empty();
             $('#loadnews').append('<img src="../img/plus2.png"  style="height:30px;" title="Add New Feed">' +'</Div>');
             $('#loadnews').click(function(){
@@ -47,7 +78,7 @@ function getadmin_success(tx, results) {
     }
 
 
-    db.transaction(getdatanews, errorCBfunc, successCBfunc);
+
 }
 
 
@@ -87,18 +118,6 @@ function checkfb(){
     }
 }
 
-
-
-
-
-
-function getdatanews(tx) {
-    var sql = "select ID from MobileApp_clubs where Fav = 1";
-    //alert(sql);
-    tx.executeSql(sql, [], getClubID_success);
-}
-
-
 function loadnewdata(){
 
     refreshdata();
@@ -111,24 +130,7 @@ function loadnewdata(){
 
 
 
-function getClubID_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
 
-
-    if(len != 0) {
-        var menu = results.rows.item(0);
-        clubidtop = menu.ID;
-      //  db.transaction(getdata2, errorCBfunc, successCBfunc);
-        db.transaction(numbersponsers, errorCBfunc, successCBfunc);
-
-     }else{
-
-        showclubsfun();
-    }
-
-
-}
 
 
 function numbersponsers(tx) {
