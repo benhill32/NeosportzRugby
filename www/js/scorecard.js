@@ -20,9 +20,9 @@ function onDeviceReady() {
     deviceIDscorecard = device.uuid;
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
-    db.transaction(getdata, errorCBfunc, successCBfunc);
-    db.transaction(getscoredata, errorCBfunc, successCBfunc);
     db.transaction(getfliter1, errorCBfunc, successCBfunc);
+
+
     checkonlinescore()
 }
 
@@ -46,6 +46,8 @@ function getfliter1_success(tx, results) {
         var menu = results.rows.item(0);
 
         Ref= menu.Ref;
+        db.transaction(getdata, errorCBfunc, successCBfunc);
+        db.transaction(getscoredata, errorCBfunc, successCBfunc);
     }
 
 
