@@ -334,16 +334,19 @@ function loadinfo_success2(tx, results) {
             $('#cancell').show();
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
 
-        }else if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)){
+        }
+        if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
             $('#cancell').show();
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
-        }else if (allowscore ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)){
-            $('#score').show();
-            $('#score').empty().append('<Div >Score Card</div>');
-            $("#score").click(function () {
-                window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
-            });
-        }else if (Ref ==1){
+        }
+         if (allowscore ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
+             $('#score').show();
+             $('#score').empty().append('<Div >Score Card</div>');
+             $("#score").click(function () {
+                 window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
+             });
+         }
+         if (Ref ==1){
             $('#score').show();
             $('#score').empty().append('<Div >Score Card</div>');
             $("#score").click(function () {
