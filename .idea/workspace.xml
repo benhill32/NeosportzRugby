@@ -92,8 +92,8 @@
       <file leaf-file-name="scorecard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6074534" vertical-offset="2163" max-vertical-offset="5321">
-              <caret line="156" column="32" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.35900623" vertical-offset="2618" max-vertical-offset="5899">
+              <caret line="171" column="33" selection-start-line="171" selection-start-column="33" selection-end-line="171" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -122,8 +122,8 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.76" vertical-offset="5383" max-vertical-offset="8177">
-              <caret line="331" column="38" selection-start-line="331" selection-start-column="29" selection-end-line="331" selection-end-column="38" />
+            <state vertical-scroll-proportion="-16.16" vertical-offset="89" max-vertical-offset="8126">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -184,10 +184,10 @@
         <option value="$PROJECT_DIR$/www/pages/Help.html" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
-        <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
+        <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/js/scorecard.js" />
       </list>
     </option>
@@ -816,22 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.76" vertical-offset="5383" max-vertical-offset="8177">
-          <caret line="331" column="38" selection-start-line="331" selection-start-column="29" selection-end-line="331" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/scorecard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.692308" vertical-offset="339" max-vertical-offset="1156">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="398.92" vertical-offset="11656" max-vertical-offset="12461">
@@ -867,10 +851,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/scorecard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.692308" vertical-offset="339" max-vertical-offset="1156">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.16" vertical-offset="89" max-vertical-offset="8126">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6074534" vertical-offset="2163" max-vertical-offset="5321">
-          <caret line="156" column="32" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.35900623" vertical-offset="2618" max-vertical-offset="5899">
+          <caret line="171" column="33" selection-start-line="171" selection-start-column="33" selection-end-line="171" selection-end-column="33" />
           <folding />
         </state>
       </provider>

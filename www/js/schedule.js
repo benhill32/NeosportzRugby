@@ -116,12 +116,9 @@ function getfliter(tx) {
 
   //  updateadmin();
 
-
     var sql = "select fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getfliter_success);
-
-
 
 }
 

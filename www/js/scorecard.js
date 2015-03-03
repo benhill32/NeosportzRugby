@@ -13,6 +13,7 @@ var playeraway = 0;
 var timehome = 0;
 var timeaway = 0;
 var scoringname =0;
+var Ref= 0;
 var DIVid = getUrlVars()["divID"];
 function onDeviceReady() {
 
@@ -21,10 +22,35 @@ function onDeviceReady() {
   //  console.log("LOCALDB - Database ready");
     db.transaction(getdata, errorCBfunc, successCBfunc);
     db.transaction(getscoredata, errorCBfunc, successCBfunc);
+    db.transaction(getfliter1, errorCBfunc, successCBfunc);
     checkonlinescore()
 }
 
+function getfliter1(tx) {
 
+    //  updateadmin();
+
+    var sql = "select Ref from MobileApp_LastUpdatesec";
+    //alert(sql);
+    tx.executeSql(sql, [], getfliter1_success);
+
+}
+
+
+function getfliter1_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+
+
+    if(len != 0) {
+        var menu = results.rows.item(0);
+
+        Ref= menu.Ref;
+    }
+
+
+
+}
 
 function checkonlinescore(){
 
@@ -133,7 +159,7 @@ var Gameid =menu.ID;
                 '<div id="divhalffull" align="center"  >' +
                 '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
                 '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button><br>' +
-                '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approved</button>' +
+                '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approve</button>' +
                 '</div>' +
                 '</Div>');
 
@@ -142,12 +168,20 @@ var Gameid =menu.ID;
             $("#btnhalf").hide();
             $("#btnapprove").hide();
         }else{
+
             $("#btnfull").hide();
         }
     }
-alert(menu.halftime + " - " + menu.fulltime + " - " + menu.IsFinalScore);
-    if(menu.IsFinalScore == 1){
 
+    if(menu.IsFinalScore == 0 && (menu.halftime != 'null') &&(menu.fulltime != 'null')){
+
+        if(Ref == 0){
+            $("#btnapprove").hide();
+        }else{
+
+            $("#btnapprove").show();
+        }
+    }else{
         $("#btnapprove").hide();
     }
 
