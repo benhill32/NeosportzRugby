@@ -9,6 +9,11 @@ var lat = 0;
 var long = 0;
 var isadmin = 0;
 var devicePlatformsch =0;
+var allowscore = 0;
+var allowcancel= 0;
+var Clubedit= 0;
+var Ref= 0;
+var teamfollow = 0;
 
 var remindtext = 0;
 var reminddate =0;
@@ -21,23 +26,32 @@ function onDeviceReady() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
    //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
+    db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     db.transaction(getfliter, errorCBfunc, successCBfunc);
+
     $(".tooltip").draggable("enable");
     devicePlatformsch = device.platform;
 }
-//function updateadmin() {
-//    db.transaction(function (tx) {
- //       tx.executeSql('Update MobileApp_LastUpdatesec set isadmin = 1');
-//        console.log("Update INTO MobileApp_LastUpdatesec");
- //   });
 
-//}
-//db.transaction(getfliter, errorCBfunc, successCBfunc);
+function getdatanewssch(tx) {
+    var sql = "select ID from MobileApp_clubs where Fav = 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getdatanewssch_success);
+}
 
-//db.transaction(function(tx) {
-//   tx.executeSql('Update MobileApp_LastUpdatesec set isadmin = 1');
-//    console.log("Update MobileApp_LastUpdatesec");
-//});
+function getdatanewssch_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+
+
+    if(len != 0) {
+        var menu = results.rows.item(0);
+        teamfollow = menu.ID;
+    }
+
+
+}
+
 
 
 function checkonlinesch(){
@@ -103,7 +117,7 @@ function getfliter(tx) {
   //  updateadmin();
 
 
-    var sql = "select fliterON,isadmin from MobileApp_LastUpdatesec";
+    var sql = "select fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getfliter_success);
 
@@ -121,6 +135,10 @@ function getfliter_success(tx, results) {
         var menu = results.rows.item(0);
         fliter = menu.fliterON;
         isadmin = menu.isadmin;
+        allowscore = menu.allowscore;
+        allowcancel= menu.allowcancel;
+        Clubedit= menu.Clubedit;
+        Ref= menu.Ref;
     }
 
 
@@ -306,20 +324,38 @@ function loadinfo_success2(tx, results) {
     // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
+
         if(isadmin==1) {
             $('#score').show();
             $('#score').empty().append('<Div >Score Card</div>');
             $("#score").click(function () {
                 window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
             });
-
             $('#cancell').show();
-
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
 
-
+        }else if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)){
+            $('#cancell').show();
+            $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+        }else if (allowscore ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)){
+            $('#score').show();
+            $('#score').empty().append('<Div >Score Card</div>');
+            $("#score").click(function () {
+                window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
+            });
+        }else if (Ref ==1){
+            $('#score').show();
+            $('#score').empty().append('<Div >Score Card</div>');
+            $("#score").click(function () {
+                window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
+            });
+            $('#cancell').show();
+            $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
         }
         $('#remind').hide();
+
+
+
 
     }else {
 

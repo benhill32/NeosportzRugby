@@ -55,7 +55,7 @@ function getClubID_success(tx, results) {
 
 function getadmin(tx) {
 
-    var sql = "select allownewfeed,Clubedit from MobileApp_LastUpdatesec";
+    var sql = "select allownewfeed,Clubedit,isadmin from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getadmin_success);
 }
@@ -69,6 +69,12 @@ function getadmin_success(tx, results) {
       if(len != 0) {
         var menu = results.rows.item(0);
         if(menu.allownewfeed ==1 && menu.Clubedit == clubidtop){
+            $('#loadnews').empty();
+            $('#loadnews').append('<img src="../img/plus2.png"  style="height:30px;" title="Add New Feed">' +'</Div>');
+            $('#loadnews').click(function(){
+                weblink('../pages/addnewfeed.html')
+            });
+        }else if (menu.isadmin ==1){
             $('#loadnews').empty();
             $('#loadnews').append('<img src="../img/plus2.png"  style="height:30px;" title="Add New Feed">' +'</Div>');
             $('#loadnews').click(function(){
