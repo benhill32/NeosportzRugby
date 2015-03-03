@@ -133,12 +133,14 @@ var Gameid =menu.ID;
                 '<div id="divhalffull" align="center"  >' +
                 '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
                 '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button>' +
+                '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approved</button>' +
                 '</div>' +
                 '</Div>');
 
     if(menu.halftime !='null'){
         if(menu.fulltime == 'null') {
             $("#btnhalf").hide();
+            $("#btnapprove").hide();
         }else{
             $("#btnfull").hide();
         }
@@ -146,8 +148,8 @@ var Gameid =menu.ID;
 
     if(menu.halftime == 'null'){
         $("#btnfull").hide();
+        $("#btnapprove").hide();
     }else{
-
         $("#btnhalf").hide();
     }
 
@@ -165,7 +167,7 @@ function gamestate(IDD,id){
             });
 
 
-        }else{
+        }else if (IDD == 2) {
 
             db.transaction(function (tx) {
                 tx.executeSql('Update MobileApp_Results set halftime = 1, fulltime= 1 where ID = ' + id);
