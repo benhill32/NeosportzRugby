@@ -105,6 +105,9 @@ function getplayerinfo_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     //alert(len);
+
+
+
     $('#divplayers').empty().append('<Div class="mainmenuscore" >' +
         '<div class="bold size13 floatleft2" align="center"  ><select id="drphometeam"></select></div>' +
         '<div class="bold size13 floatleftnew" align="center"  >Players</div>' +
@@ -151,52 +154,58 @@ function getMenu_success(tx, results) {
 var Gameid =menu.ID;
         var res = (menu.DatetimeStart).split("T");
 
-            $('#scorecard').empty().append('<Div class="mainmenuscore" >' +
-                '<div class="bold size13 floatleft" align="center"  >' + menu.HomeName + '</div><div class="bold size13 floatleft" align="center"  >' + menu.AwayName  + '</div>' +
-                '<div class="floatleft" align="center" id="homescore"  >' + menu.HomeScore + '</div><div class="floatleft"  align="center" id="awayscore"  >' + menu.AwayScore + '</div>' +
-                '' +
-                '<div id="divplayers"></div>' +
-                '<div id="divtime"></div>' +
-                '<div id="divscore"  ></div>' +
-                '<div id="divhalffull" align="center"  >' +
-                '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
-                '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button><br>' +
-                '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approve</button>' +
-                '</div>' +
-                '</Div>');
+    if(menu.IsFinalScore == 0) {
 
-    if(menu.halftime !='null'){
-        if(menu.fulltime == 'null') {
-            $("#btnhalf").hide();
+
+        $('#scorecard').empty().append('<Div class="mainmenuscore" >' +
+        '<div class="bold size13 floatleft" align="center"  >' + menu.HomeName + '</div><div class="bold size13 floatleft" align="center"  >' + menu.AwayName + '</div>' +
+        '<div class="floatleft" align="center" id="homescore"  >' + menu.HomeScore + '</div><div class="floatleft"  align="center" id="awayscore"  >' + menu.AwayScore + '</div>' +
+        '' +
+        '<div id="divplayers"></div>' +
+        '<div id="divtime"></div>' +
+        '<div id="divscore"  ></div>' +
+        '<div id="divhalffull" align="center"  >' +
+        '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
+        '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button><br>' +
+        '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approve</button>' +
+        '</div>' +
+        '</Div>');
+
+        if (menu.halftime != 'null') {
+            if (menu.fulltime == 'null') {
+                $("#btnhalf").hide();
+                $("#btnapprove").hide();
+            } else {
+
+                $("#btnfull").hide();
+            }
+        }
+
+        if (menu.IsFinalScore == 0 && (menu.halftime != 'null') && (menu.fulltime != 'null')) {
+
+            if (Ref == 0) {
+                $("#btnapprove").hide();
+            } else {
+
+                $("#btnapprove").show();
+            }
+        } else {
             $("#btnapprove").hide();
-        }else{
+        }
 
+
+        if (menu.halftime == 'null') {
             $("#btnfull").hide();
-        }
-    }
-
-    if(menu.IsFinalScore == 0 && (menu.halftime != 'null') &&(menu.fulltime != 'null')){
-
-        if(Ref == 0){
             $("#btnapprove").hide();
-        }else{
-
-            $("#btnapprove").show();
+        } else {
+            $("#btnhalf").hide();
         }
+
+        getbothteams(menu.HomeClubID, menu.AwayClubID);
     }else{
-        $("#btnapprove").hide();
+        $('#scorecard').empty().append("Thanks for approving this game!");
+
     }
-
-
-    if(menu.halftime == 'null'){
-        $("#btnfull").hide();
-        $("#btnapprove").hide();
-    }else{
-        $("#btnhalf").hide();
-    }
-
-    getbothteams(menu.HomeClubID,menu.AwayClubID);
-
 
 }
 

@@ -292,7 +292,7 @@ function loadinfo(ID) {
 
 function loadinfo_success1(tx) {
 
-    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,Cancel from MobileApp_Schedule where ID =" + IDhist;
+    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,Cancel,IsFinalScore from MobileApp_Schedule where ID =" + IDhist;
 
      // alert(sql);
     tx.executeSql(sql, [], loadinfo_success2);
@@ -337,20 +337,24 @@ function loadinfo_success2(tx, results) {
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
         }
          if (allowscore ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
-             $('#score').show();
-             $('#score').empty().append('<Div >Score Card</div>');
-             $("#score").click(function () {
-                 window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
-             });
+             if(menu.IsFinalScore == 0) {
+                 $('#score').show();
+                 $('#score').empty().append('<Div >Score Card</div>');
+                 $("#score").click(function () {
+                     window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
+                 });
+             }
          }
          if (Ref ==1){
-            $('#score').show();
-            $('#score').empty().append('<Div >Score Card</div>');
-            $("#score").click(function () {
-                window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
-            });
-            $('#cancell').show();
-            $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+             if(menu.IsFinalScore == 0) {
+                 $('#score').show();
+                 $('#score').empty().append('<Div >Score Card</div>');
+                 $("#score").click(function () {
+                     window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
+                 });
+                 $('#cancell').show();
+                 $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+             }
         }
         $('#remind').hide();
 
