@@ -54,7 +54,7 @@ function getbothteams(team1,team2){
 
 
 function getplayerinfo(tx) {
-    var sql = "select ID,_id,ClubID,FullName,Base64,TeamID,UpdateSecondsUTC,UpdateSecondsUTCBase64,UpdateDateUTC,UpdateDateUTCBase64,Position,DeletedateUTC,NickName,Height,Weight ,DOB ,BirthPlace,SquadNo,Nationality ,Honours,Previous_Clubs,memorable_match,Favourite_player ,Toughest_Opponent,Biggest_influence ,person_admire ,Best_goal_Scored ,Hobbies ,be_anyone_for_a_day from MobilevwApp_Base_Players where ClubID in (" + team1all + "," + team2all + ") order by FullName" ;
+    var sql = "select ID,_id,ClubID,FullName from MobilevwApp_Base_Players where ClubID in (" + team1all + "," + team2all + ") order by FullName" ;
 
      // alert(sql);
     tx.executeSql(sql, [], getplayerinfo_success);
@@ -68,7 +68,7 @@ function getscoredata(tx) {
 
 
 function getdata(tx) {
-    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_Results where ID = '" + id + "'";
+    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,IsFinalScore from MobileApp_Results where ID = '" + id + "'";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
@@ -146,6 +146,12 @@ var Gameid =menu.ID;
         }
     }
 
+    if(menu.IsFinalScore == 1){
+
+        $("#btnapprove").hide();
+    }
+
+
     if(menu.halftime == 'null'){
         $("#btnfull").hide();
         $("#btnapprove").hide();
@@ -171,6 +177,12 @@ function gamestate(IDD,id){
 
             db.transaction(function (tx) {
                 tx.executeSql('Update MobileApp_Results set halftime = 1, fulltime= 1 where ID = ' + id);
+                console.log("Update INTO MobileApp_Results");
+            });
+        }else if (IDD == 3) {
+
+            db.transaction(function (tx) {
+                tx.executeSql('Update MobileApp_Results set IsFinalScore = 1 where ID = ' + id);
                 console.log("Update INTO MobileApp_Results");
             });
         }
