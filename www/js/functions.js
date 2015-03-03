@@ -716,10 +716,8 @@ function syncmaintables(obj,year){
     var timenow = datenow1.getTime();
 
     $.each(obj.Isadmin, function (idx, obj) {
-
-        +
             db.transaction(function(tx) {
-                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ',allownewfeed= ' + obj.allownewfeed + ',allowcancel= ' + obj.allowcancel + ',allowscore= ' + obj.allowscore + ',Clubedit= ' + obj.Clubedit + ',Ref= ' + obj.Ref + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
                 //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
               //  alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
 
@@ -728,8 +726,6 @@ function syncmaintables(obj,year){
                 }else{
                     closemodelarchive();
                 }
-
-               // alert(Math.round((timenow/1000)));
             });
     });
 

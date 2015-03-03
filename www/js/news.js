@@ -24,7 +24,7 @@ function onDeviceReadynews() {
 
 function getadmin(tx) {
 
-    var sql = "select isadmin from MobileApp_LastUpdatesec";
+    var sql = "select allownewfeed from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getadmin_success);
 }
@@ -37,7 +37,7 @@ function getadmin_success(tx, results) {
 
       if(len != 0) {
         var menu = results.rows.item(0);
-        if(menu.isadmin ==1){
+        if(menu.allownewfeed ==1){
             $('#loadnews').empty();
             $('#loadnews').append('<img src="../img/plus2.png"  style="height:30px;" title="Add New Feed">' +'</Div>');
             $('#loadnews').click(function(){
