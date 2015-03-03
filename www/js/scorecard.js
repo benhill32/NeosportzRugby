@@ -260,6 +260,16 @@ function getscoredata_success(tx, results) {
             '</Div>');
 
     }
+
+    $('#divscore').append('<Div class="mainmenuscore" >' +
+    '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1">' +
+    ' <input type="checkbox" id="homebonus2"> </div>' +
+    '<div class="bold size13 floatleft3" align="center"  >Bonus</div>' +
+    '<div class="bold size13 floatleft3" align="center"  >' +
+    ' <input type="checkbox" id="awaybonus2">' +
+    ' <input type="checkbox" id="awaybonus2">' +
+    '</Div>');
+
 }
 
 

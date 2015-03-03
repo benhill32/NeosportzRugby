@@ -333,8 +333,10 @@ function loadinfo_success2(tx, results) {
 
         }
         if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
-            $('#cancell').show();
-            $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+            if(menu.IsFinalScore == 0) {
+                $('#cancell').show();
+                $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+            }
         }
          if (allowscore ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
              if(menu.IsFinalScore == 0) {
