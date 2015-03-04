@@ -200,6 +200,7 @@ var Gameid =menu.ID;
             }
         } else {
             $("#btnapprove").hide();
+            $("#divbonus").hide();
         }
 
 

@@ -310,7 +310,7 @@ function loadreftosystem(Gameid1){
     passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
     window.setTimeout(function(){
         window.location = "../pages/schedules.html?id=" + id;
-    }, 1500);
+    }, 1000);
 
 
 
@@ -394,47 +394,48 @@ function loadinfo_success2(tx, results) {
                 loadreftosystem(menu.ID);
             });
 
-        }
-        if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
-            if(menu.IsFinalScore == 0) {
-                $('#cancell').show();
-                $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+        }else {
+            if (allowcancel == 1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
+                if (menu.IsFinalScore == 0) {
+                    $('#cancell').show();
+                    $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+                }
             }
-        }
-         if (allowscore ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
-             if(menu.IsFinalScore == 0) {
-                 $('#score').show();
-                 $('#score').empty().append('<Div >Score Card</div>');
-                 $("#score").click(function () {
-                     window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
-                 });
-                 $('#referee').show();
-                 $("#referee").click(function () {
-                     loadref(menu.ID);
-                 });
-                 $("#modelfooterupdate").click(function () {
-                     loadreftosystem(menu.ID);
-                 });
+            if (allowscore == 1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
+                if (menu.IsFinalScore == 0) {
+                    $('#score').show();
+                    $('#score').empty().append('<Div >Score Card</div>');
+                    $("#score").click(function () {
+                        window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
+                    });
+                    $('#referee').show();
+                    $("#referee").click(function () {
+                        loadref(menu.ID);
+                    });
+                    $("#modelfooterupdate").click(function () {
+                        loadreftosystem(menu.ID);
+                    });
 
-             }
-         }
-         if (Ref ==1){
-             if(menu.IsFinalScore == 0) {
-                 $('#score').show();
-                 $('#score').empty().append('<Div >Score Card</div>');
-                 $("#score").click(function () {
-                     window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
-                 });
-                 $('#cancell').show();
-                 $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
-                 $('#referee').show();
-                 $("#referee").click(function () {
-                     loadref(menu.ID);
-                 });
-                 $("#modelfooterupdate").click(function () {
-                     loadreftosystem(menu.ID);
-                 });
-             }
+                }
+            }
+            if (Ref == 1) {
+                if (menu.IsFinalScore == 0) {
+                    $('#score').show();
+                    $('#score').empty().append('<Div >Score Card</div>');
+                    $("#score").click(function () {
+                        window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
+                    });
+                    $('#cancell').show();
+                    $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+                    $('#referee').show();
+                    $("#referee").click(function () {
+                        loadref(menu.ID);
+                    });
+                    $("#modelfooterupdate").click(function () {
+                        loadreftosystem(menu.ID);
+                    });
+                }
+            }
         }
         $('#remind').hide();
 
