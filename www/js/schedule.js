@@ -67,8 +67,6 @@ function getdatanewssch_success(tx, results) {
         var menu = results.rows.item(0);
         teamfollow = menu.ID;
     }
-
-
 }
 
 
@@ -102,9 +100,9 @@ function allowfilter(id){
     {
 
         db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set fliterON =' + id);
-            console.log("Update MobileApp_LastUpdatesec");
-        });
+        tx.executeSql('Update MobileApp_LastUpdatesec set fliterON =' + id);
+        console.log("Update MobileApp_LastUpdatesec");
+    });
 
         $('#btn2').removeClass("btn btn-xs btn-primary active");
         $('#btn2').addClass("btn btn-xs btn-default");
@@ -124,7 +122,7 @@ function allowfilter(id){
         $('#btn2').removeClass("btn btn-xs btn-default");
         $('#btn2').addClass("btn btn-xs btn-primary active");
     }
-    db.transaction(getfliter, errorCBfunc, successCBfunc);
+    db.transaction(getflitersch, errorCBfunc, successCBfunc);
 
 }
 
@@ -137,12 +135,12 @@ function getflitersch(tx) {
 
     var sql = "select fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
     //alert(sql);
-    tx.executeSql(sql, [], getfliter_success);
+    tx.executeSql(sql, [], getflitersch_success);
 
 }
 
 
-function getfliter_success(tx, results) {
+function getflitersch_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
