@@ -18,10 +18,10 @@ var refgameid= 0;
 var remindtext = 0;
 var reminddate =0;
 var networkconnectionsch = 0;
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadysch, false);
 var tokensch = 0
 
-function onDeviceReady() {
+function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
@@ -303,13 +303,10 @@ function getMenu_success(tx, results) {
 }
 function loadreftosystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
- //   alert(Gameid1);
-  //  alert($('#txtrefname').val());
-
 
     passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
- //   onclicksyncloaddata();
-
+   onclicksyncloaddata();
+    onDeviceReadysch();
 }
 
 function loadref(ID){
@@ -326,7 +323,7 @@ function loadinfo_ref(tx) {
     tx.executeSql(sql, [], loadinfo_ref_success2);
 }
 
-function loadinfo_success2(tx, results) {
+function loadinfo_ref_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     $('#txtrefname').val(menu.RefName);
