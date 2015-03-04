@@ -154,7 +154,7 @@ function getMenu_success(tx, results) {
     var menu = results.rows.item(0);
 var Gameid =menu.ID;
         var res = (menu.DatetimeStart).split("T");
-
+    $("#divbonus").hide();
     if(menu.IsFinalScore == 0) {
 
 
