@@ -302,8 +302,12 @@ function getMenu_success(tx, results) {
 function loadreftosystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
 
-    passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
+    db.transaction(function (tx) {
+        tx.executeSql('Update MobileApp_Schedule set RefName = "' + $('#txtrefname').val() + '" where ID = ' + Gameid1);
+        console.log("Update INTO MobileApp_Results");
+    });
 
+    passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
     window.setTimeout(function(){
         window.location = "../pages/schedules.html?id=" + id;
     }, 1500);
