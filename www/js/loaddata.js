@@ -602,17 +602,17 @@ function updatedatapushappclosed(ID,mess){
 
     if(ID == 'New News Feed'){
         onclicksyncloaddata();
-        weblink('pages/news.html');
+        weblink('../pages/news.html');
     }else if(ID == 'Game Cancellation'){
         onclicksyncloaddata();
-        weblink('pages/index.html');
+        weblink('../index.html');
     }else if(ID == 'Half Time Score'){
         onclicksyncloaddata();
-        weblink('pages/index.html');
+        weblink('../index.html');
 
     }else if(ID == 'Full Time Score'){
         onclicksyncloaddata();
-        weblink('pages/index.html');
+        weblink('../index.html');
 
     }else{
        onclicksyncloaddata();
