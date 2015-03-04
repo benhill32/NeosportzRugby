@@ -303,7 +303,12 @@ function loadreftosystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
 
     passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
-   onclicksyncloaddata();
+
+    window.setTimeout(function(){
+        window.location = "../pages/schedules.html?id=" + id;
+    }, 1500);
+
+
 
 }
 

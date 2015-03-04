@@ -279,8 +279,12 @@ function randomfunctions(){
     }
 
     if (document.getElementById("divschedules") != null) {
-        var idsch = getUrlVars()["id"];
-        window.location = "../pages/schedules.html?id=" + idsch;
+       // var idsch = getUrlVars()["id"];
+      //
+      //  onDeviceReadysch();
+        db.transaction(getflitersch, errorCBfunc, successCBfunc);
+      //  db.transaction(gettokensc, errorCBfunc, successCBfunc);
+      //  db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     }
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliterresult, errorCBfunc, successCBfunc);
