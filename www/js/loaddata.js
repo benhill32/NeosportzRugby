@@ -279,7 +279,9 @@ function randomfunctions(){
     }
 
     if (document.getElementById("divschedules") != null) {
-        db.transaction(getfliter, errorCBfunc, successCBfunc);
+        db.transaction(getflitersch, errorCBfunc, successCBfunc);
+        db.transaction(gettokensc, errorCBfunc, successCBfunc);
+        db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     }
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliter, errorCBfunc, successCBfunc);

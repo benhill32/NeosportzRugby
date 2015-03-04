@@ -29,7 +29,7 @@ function onDeviceReadysch() {
    //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
     db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
-    db.transaction(getfliter, errorCBfunc, successCBfunc);
+    db.transaction(getflitersch, errorCBfunc, successCBfunc);
 
     $(".tooltip").draggable("enable");
 
@@ -131,7 +131,7 @@ function allowfilter(id){
 
 
 
-function getfliter(tx) {
+function getflitersch(tx) {
 
   //  updateadmin();
 
@@ -306,7 +306,7 @@ function loadreftosystem(Gameid1){
 
     passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
    onclicksyncloaddata();
-    onDeviceReadysch();
+
 }
 
 function loadref(ID){
