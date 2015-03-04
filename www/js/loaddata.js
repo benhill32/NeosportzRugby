@@ -280,11 +280,7 @@ function randomfunctions(){
 
     if (document.getElementById("divschedules") != null) {
         var idsch = getUrlVars()["id"];
-      //  window.location = "../pages/schedules.html?id=" + idsch;
-        onDeviceReadysch();
-      //  db.transaction(getflitersch, errorCBfunc, successCBfunc);
-      //  db.transaction(gettokensc, errorCBfunc, successCBfunc);
-      //  db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
+        window.location = "../pages/schedules.html?id=" + idsch;
     }
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliterresult, errorCBfunc, successCBfunc);
