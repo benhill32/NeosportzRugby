@@ -278,10 +278,9 @@ function getscoredata_success(tx, results) {
 function getbonus(home1,home2,away1,away2){
     db.transaction(gettoken, errorCBfunc, successCBfunc);
 
-    var homebonus = Number(home1) + Number(home2);
-    var awaybonus = Number(away1) + Number(away2);
 
-    passscoretoserver("gameidbonus=" + id + "&bonushome=" + homebonus + "&bonusaway=" + awaybonus + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
+
+    passscoretoserver("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
     onclicksyncloaddata();
 }
 
