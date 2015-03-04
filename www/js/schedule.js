@@ -19,7 +19,7 @@ var remindtext = 0;
 var reminddate =0;
 var networkconnectionsch = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
-
+var tokensch = 0
 
 function onDeviceReady() {
     checkonlinesch();
@@ -32,6 +32,23 @@ function onDeviceReady() {
     $(".tooltip").draggable("enable");
     devicePlatformsch = device.platform;
 }
+
+function gettokensc(tx) {
+    var sql = "select token from MobileApp_LastUpdatesec";
+    //  alert(sql);
+    tx.executeSql(sql, [], gettokensc_success);
+}
+
+function gettokensc_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    tokensch = menu.token;
+
+}
+
+
 
 function getdatanewssch(tx) {
     var sql = "select ID from MobileApp_clubs where Fav = 1";
@@ -282,9 +299,14 @@ function getMenu_success(tx, results) {
         }
     }
 }
-function loadreftosystem(Gameid1,Refname1){
+function loadreftosystem(Gameid1){
 
-    alert(Refname1);
+    alert(Gameid1);
+    alert($('#txtrefname').val());
+
+
+    passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + devicePlatformsch + "&token=" + tokensch)
+    onclicksyncloaddata();
 
 }
 
@@ -298,7 +320,7 @@ function loadinfo_ref(tx) {
 
     var sql = "select RefName from MobileApp_Schedule where ID =" + refgameid;
 
-     alert(sql);
+     //alert(sql);
     tx.executeSql(sql, [], loadinfo_ref_success2);
 }
 
@@ -306,9 +328,6 @@ function loadinfo_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     $('#txtrefname').val(menu.RefName);
-
-
-
 }
 
 
