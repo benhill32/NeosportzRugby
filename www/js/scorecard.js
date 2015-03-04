@@ -164,6 +164,7 @@ var Gameid =menu.ID;
         '<div id="divplayers"></div>' +
         '<div id="divtime"></div>' +
         '<div id="divscore"  ></div>' +
+        '<div id="divbonus"  ></div>' +
         '<div id="divhalffull" align="center"  >' +
         '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
         '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button><br>' +
@@ -185,8 +186,9 @@ var Gameid =menu.ID;
 
             if (Ref == 0) {
                 $("#btnapprove").hide();
+                $("#divbonus").hide();
             } else {
-
+                $("#divbonus").show();
                 $("#btnapprove").show();
             }
         } else {
@@ -242,8 +244,8 @@ function getscoredata_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
       //  alert(len);
+    $('#divbonus').empty()
     $('#divscore').empty()
-
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
       //  alert(menu.Name);
@@ -261,16 +263,26 @@ function getscoredata_success(tx, results) {
 
     }
 
-    $('#divscore').append('<Div class="mainmenuscore" >' +
-    '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1">' +
-    ' <input type="checkbox" id="homebonus2"> </div>' +
-    '<div class="bold size13 floatleft3" align="center"  >Bonus</div>' +
+    $('#divbonus').append('<Div class="mainmenuscore" >' +
+    '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus(1,0,0,0)">' +
+    ' <input type="checkbox" id="homebonus2" onclick="getbonus(0,1,0,0)"> </div>' +
+    '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
     '<div class="bold size13 floatleft3" align="center"  >' +
-    ' <input type="checkbox" id="awaybonus2">' +
-    ' <input type="checkbox" id="awaybonus2">' +
+    ' <input type="checkbox" id="awaybonus2"  onclick="getbonus(0,0,1,0)">' +
+    ' <input type="checkbox" id="awaybonus2"  onclick="getbonus(0,0,0,1)">' +
     '</Div>');
 
 }
+
+function getbonus(home1,home2,away1,away2){
+    db.transaction(gettoken, errorCBfunc, successCBfunc);
+
+    var homebonus = Number(home1) + Number(home2);
+    var awaybonus = Number(away1) + Number(away2);
+    passscoretoserver("gameidbonus=" + id + "&bonushome=" + homebonus + "&bonusaway=" + awaybonus + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
+
+}
+
 
 
 function getscore(team,value,name){

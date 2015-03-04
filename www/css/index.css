@@ -106,9 +106,9 @@ body {
     height: 20px;
     padding-top: 5px;
 }
-#divscore{
+#divscore,#divbonus{
 
-   padding-top: 30px;
+   padding-top: 15px;
     clear:both;
     //width:100px;
 }
