@@ -279,9 +279,12 @@ function randomfunctions(){
     }
 
     if (document.getElementById("divschedules") != null) {
-        db.transaction(getflitersch, errorCBfunc, successCBfunc);
-        db.transaction(gettokensc, errorCBfunc, successCBfunc);
-        db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
+        var idsch = getUrlVars()["id"];
+        alert(idsch);
+        window.location = "../pages/schedules.html?id=" + idsch;
+      //  db.transaction(getflitersch, errorCBfunc, successCBfunc);
+      //  db.transaction(gettokensc, errorCBfunc, successCBfunc);
+      //  db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     }
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliterresult, errorCBfunc, successCBfunc);
