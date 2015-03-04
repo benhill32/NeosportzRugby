@@ -717,7 +717,12 @@ overflow-y: scroll !important;
     color: white;
     opacity:0.7;
 }
+#modelfooterupdate:hover{
 
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+}
 
 #basicModal .modal-footer:hover{
     background-color: #339900;
@@ -862,6 +867,12 @@ overflow-y: scroll !important;
     color: #428bca;
 }
 #divmainheadercancel{
+    padding:15px;
+    clear: both;
+
+}
+
+#divaddref{
     padding:15px;
     clear: both;
 

@@ -14,7 +14,7 @@ var allowcancel= 0;
 var Clubedit= 0;
 var Ref= 0;
 var teamfollow = 0;
-
+var refgameid= 0;
 var remindtext = 0;
 var reminddate =0;
 var networkconnectionsch = 0;
@@ -282,6 +282,37 @@ function getMenu_success(tx, results) {
         }
     }
 }
+function loadreftosystem(Gameid1,Refname1){
+
+    alert(Refname1);
+    
+}
+
+function loadref(ID){
+
+    refgameid = ID;
+    db.transaction(loadinfo_ref, errorCBfunc, successCBfunc);
+}
+
+function loadinfo_ref(tx) {
+
+    var sql = "select RefName from MobileApp_Schedule where ID =" + refgameid;
+
+    // alert(sql);
+    tx.executeSql(sql, [], loadinfo_ref_success2);
+}
+
+function loadinfo_success2(tx, results) {
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    $('#txtrefname').val(menu.RefName);
+
+
+    $("#modelfooterupdate").click(function () {
+        loadreftosystem(refgameid,$('#txtrefname').val());
+    });
+}
+
 
 function loadinfo(ID) {
     IDhist = ID;
@@ -317,7 +348,7 @@ function loadinfo_success2(tx, results) {
 
     $('#score').hide();
     $('#cancell').hide();
-
+    $('#referee').hide();
     // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
@@ -330,7 +361,10 @@ function loadinfo_success2(tx, results) {
             });
             $('#cancell').show();
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
-
+            $('#referee').show();
+            $("#referee").click(function () {
+                loadref(menu.ID);
+            });
         }
         if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
             if(menu.IsFinalScore == 0) {
@@ -345,6 +379,11 @@ function loadinfo_success2(tx, results) {
                  $("#score").click(function () {
                      window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
                  });
+                 $('#referee').show();
+                 $("#referee").click(function () {
+                     loadref(menu.ID);
+                 });
+
              }
          }
          if (Ref ==1){
@@ -356,6 +395,10 @@ function loadinfo_success2(tx, results) {
                  });
                  $('#cancell').show();
                  $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
+                 $('#referee').show();
+                 $("#referee").click(function () {
+                     loadref(menu.ID);
+                 });
              }
         }
         $('#remind').hide();
@@ -365,6 +408,7 @@ function loadinfo_success2(tx, results) {
 
     }else {
 
+        $('#referee').hide();
         $('#score').hide();
         $('#cancell').hide();
         $('#remind').show();
