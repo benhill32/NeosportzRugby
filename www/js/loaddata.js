@@ -280,8 +280,8 @@ function randomfunctions(){
 
     if (document.getElementById("divschedules") != null) {
         var idsch = getUrlVars()["id"];
-        alert(idsch);
-        window.location = "../pages/schedules.html?id=" + idsch;
+      //  window.location = "../pages/schedules.html?id=" + idsch;
+        onDeviceReadysch();
       //  db.transaction(getflitersch, errorCBfunc, successCBfunc);
       //  db.transaction(gettokensc, errorCBfunc, successCBfunc);
       //  db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
