@@ -12,7 +12,7 @@ document.addEventListener("deviceready", onDeviceReadyresult, false);
 function onDeviceReadyresult() {
    // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
-    db.transaction(getfliter, errorCBfunc, successCBfunc);
+    db.transaction(getfliterresult, errorCBfunc, successCBfunc);
 }
 
 //db.transaction(getfliter, errorCBfunc, successCBfunc);
@@ -49,7 +49,7 @@ function allowfilter(id){
 
 }
 
-function getfliter(tx) {
+function getfliterresult(tx) {
     var sql = "select fliterON from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getfliter_success);

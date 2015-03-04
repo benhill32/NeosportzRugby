@@ -284,7 +284,7 @@ function randomfunctions(){
         db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     }
     if (document.getElementById("divresults") != null) {
-        db.transaction(getfliter, errorCBfunc, successCBfunc);
+        db.transaction(getfliterresult, errorCBfunc, successCBfunc);
     }
     if (document.getElementById("indexdiv") != null) {
         loadindexmessage();
