@@ -602,7 +602,13 @@ function updatedatapushappclosed(ID,mess){
 
     if(ID == 'New News Feed'){
         onclicksyncloaddata();
-        weblink('../pages/news.html');
+
+        if (document.getElementById("indexdiv") != null) {
+            weblink('/pages/news.html');
+        }else{
+            weblink('../pages/news.html');
+        }
+
     }else if(ID == 'Game Cancellation'){
         onclicksyncloaddata();
         weblink('../index.html');
