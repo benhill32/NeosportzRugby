@@ -604,7 +604,7 @@ function updatedatapushappclosed(ID,mess){
         onclicksyncloaddata();
 
         if (document.getElementById("indexdiv") != null) {
-            weblink('/pages/news.html');
+            weblink('../pages/news.html');
         }else{
             weblink('../pages/news.html');
         }
