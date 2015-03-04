@@ -622,7 +622,7 @@ function updatedatapushappclosed(ID,mess){
     }else if(ID == 'Full Time Score'){
 
         onclicksyncloaddata();
-       
+
 
 
     }else{
