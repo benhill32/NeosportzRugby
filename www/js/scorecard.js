@@ -20,6 +20,7 @@ function onDeviceReady() {
     deviceIDscorecard = device.uuid;
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
+   // db.transaction(gettoken, errorCBfunc, successCBfunc);
     db.transaction(getfliter1, errorCBfunc, successCBfunc);
 
 
@@ -279,6 +280,7 @@ function getbonus(home1,home2,away1,away2){
 
     var homebonus = Number(home1) + Number(home2);
     var awaybonus = Number(away1) + Number(away2);
+
     passscoretoserver("gameidbonus=" + id + "&bonushome=" + homebonus + "&bonusaway=" + awaybonus + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
     onclicksyncloaddata();
 }
