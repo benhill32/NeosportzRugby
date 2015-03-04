@@ -611,18 +611,28 @@ function updatedatapushappclosed(ID,mess){
 
     }else if(ID == 'Game Cancellation'){
         onclicksyncloaddata();
-        weblink('../index.html');
+
+
+
     }else if(ID == 'Half Time Score'){
         onclicksyncloaddata();
-        weblink('../index.html');
+
+
 
     }else if(ID == 'Full Time Score'){
+
         onclicksyncloaddata();
-        weblink('../index.html');
+       
+
 
     }else{
        onclicksyncloaddata();
-        weblink('pages/news.html');
+        if (document.getElementById("indexdiv") != null) {
+            weblink('../www/pages/news.html');
+        }else{
+            weblink('../pages/news.html');
+        }
+
     }
 
 }
