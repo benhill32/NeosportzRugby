@@ -285,7 +285,7 @@ function getMenu_success(tx, results) {
 function loadreftosystem(Gameid1,Refname1){
 
     alert(Refname1);
-    
+
 }
 
 function loadref(ID){
@@ -298,7 +298,7 @@ function loadinfo_ref(tx) {
 
     var sql = "select RefName from MobileApp_Schedule where ID =" + refgameid;
 
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], loadinfo_ref_success2);
 }
 
@@ -308,9 +308,7 @@ function loadinfo_success2(tx, results) {
     $('#txtrefname').val(menu.RefName);
 
 
-    $("#modelfooterupdate").click(function () {
-        loadreftosystem(refgameid,$('#txtrefname').val());
-    });
+
 }
 
 
@@ -365,6 +363,10 @@ function loadinfo_success2(tx, results) {
             $("#referee").click(function () {
                 loadref(menu.ID);
             });
+            $("#modelfooterupdate").click(function () {
+                loadreftosystem(menu.ID);
+            });
+
         }
         if(allowcancel ==1 && (menu.HomeClubID == Clubedit || menu.AwayClubID == Clubedit)) {
             if(menu.IsFinalScore == 0) {
@@ -383,6 +385,9 @@ function loadinfo_success2(tx, results) {
                  $("#referee").click(function () {
                      loadref(menu.ID);
                  });
+                 $("#modelfooterupdate").click(function () {
+                     loadreftosystem(menu.ID);
+                 });
 
              }
          }
@@ -398,6 +403,9 @@ function loadinfo_success2(tx, results) {
                  $('#referee').show();
                  $("#referee").click(function () {
                      loadref(menu.ID);
+                 });
+                 $("#modelfooterupdate").click(function () {
+                     loadreftosystem(menu.ID);
                  });
              }
         }
