@@ -14,6 +14,7 @@ var timehome = 0;
 var timeaway = 0;
 var scoringname =0;
 var Ref= 0;
+var isadmin =0;
 var DIVid = getUrlVars()["divID"];
 function onDeviceReady() {
 
@@ -31,7 +32,7 @@ function getfliter1(tx) {
 
     //  updateadmin();
 
-    var sql = "select Ref from MobileApp_LastUpdatesec";
+    var sql = "select Ref,isadmin from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getfliter1_success);
 
@@ -47,6 +48,7 @@ function getfliter1_success(tx, results) {
         var menu = results.rows.item(0);
 
         Ref= menu.Ref;
+        isadmin = menu.isadmin;
         db.transaction(getdata, errorCBfunc, successCBfunc);
         db.transaction(getscoredata, errorCBfunc, successCBfunc);
     }
@@ -192,6 +194,10 @@ var Gameid =menu.ID;
                 $("#divbonus").show();
                 $("#btnapprove").show();
             }
+            if(isadmin == 1){
+                $("#divbonus").show();
+                $("#btnapprove").show();
+            }
         } else {
             $("#btnapprove").hide();
         }
@@ -265,22 +271,37 @@ function getscoredata_success(tx, results) {
     }
 
     $('#divbonus').append('<Div class="mainmenuscore" >' +
-    '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus(1,0,0,0)">' +
-    ' <input type="checkbox" id="homebonus2" onclick="getbonus(0,1,0,0)"> </div>' +
+    '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
+    ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
     '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
     '<div class="bold size13 floatleft3" align="center"  >' +
-    ' <input type="checkbox" id="awaybonus2"  onclick="getbonus(0,0,1,0)">' +
-    ' <input type="checkbox" id="awaybonus2"  onclick="getbonus(0,0,0,1)">' +
+    ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
+    ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
     '</Div>');
 
 }
 
-function getbonus(home1,home2,away1,away2){
+function getbonus(){
     db.transaction(gettoken, errorCBfunc, successCBfunc);
+var home1 = 0;
+var home2 =0;
+var away1=0;
+var away2 = 0;
 
+    if ($('#homebonus1').prop('checked') == true){
+        home1 = 1;
+    }
+    if ($('#homebonus2').prop('checked') == true){
+        home2 =1;
+    }
+    if ($('#awaybonus1').prop('checked') == true){
+        away1=1;
+    }
+    if ($('#awaybonus2').prop('checked') == true){
+        away2=0;
+    }
 
-
-    passscoretoserver("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
+        passscoretoserver("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
     onclicksyncloaddata();
 }
 
