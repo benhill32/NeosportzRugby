@@ -298,7 +298,7 @@ var away2 = 0;
         away1=1;
     }
     if ($('#awaybonus2').prop('checked') == true){
-        away2=0;
+        away2=1;
     }
 
         passscoretoserver("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)

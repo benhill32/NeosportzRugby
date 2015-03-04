@@ -333,7 +333,9 @@ function loadinfo_ref(tx) {
 function loadinfo_ref_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    $('#txtrefname').val(menu.RefName);
+    if(menu.RefName != 'null') {
+        $('#txtrefname').val(menu.RefName);
+    }
 }
 
 
