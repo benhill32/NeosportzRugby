@@ -113,7 +113,7 @@ function hadclubchecklater(){
 function choosefacteam(ID){
 
     clearfavteamnow();
-    db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
     addfavteam(ID);
 
     var daaa = new Date();

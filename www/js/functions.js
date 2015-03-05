@@ -125,8 +125,12 @@ function clearotherfavteam(id){
 
 
 function addfavteam(ID){
-
+    alert(apptoken);
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
+   
+    window.setTimeout(function(){
+
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_clubs set Fav = 1,Follow= 0 where ID=' + ID);
@@ -134,7 +138,8 @@ function addfavteam(ID){
     });
 
 
-    passscoretoserver("Favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
+        passscoretoserver("Favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
+    }, 1000);
 
 // alert("favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
 }
@@ -771,7 +776,7 @@ function gettoken1_success(tx, results) {
     var menu = results.rows.item(0);
 
     apptoken = menu.token;
-
+    alert(apptoken);
 }
 
 function sendtoast(ID){
