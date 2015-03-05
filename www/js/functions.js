@@ -22,6 +22,7 @@ function onDeviceReadyFunc() {
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
 
+
 }
 //db.transaction(gettoken1, errorCBfunc, successCBfunc);
 
@@ -131,6 +132,7 @@ function addfavteam(ID){
         tx.executeSql('Update MobileApp_clubs set Fav = 1,Follow= 0 where ID=' + ID);
         console.log("Update INTO MobileApp_clubs");
     });
+
 
     passscoretoserver("Favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
 
