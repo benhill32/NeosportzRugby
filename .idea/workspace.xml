@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.48" vertical-offset="1635" max-vertical-offset="7276">
-              <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+              <caret line="116" column="12" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="14" />
               <folding>
                 <marker date="1425516196741" expanded="true" signature="6088:6121" placeholder="..." />
               </folding>
@@ -132,8 +132,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25120193" vertical-offset="1848" max-vertical-offset="15062">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47596154" vertical-offset="2681" max-vertical-offset="15062">
+              <caret line="181" column="3" selection-start-line="181" selection-start-column="3" selection-end-line="181" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -842,7 +842,7 @@
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.48" vertical-offset="1635" max-vertical-offset="7276">
-          <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+          <caret line="116" column="12" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="14" />
           <folding>
             <marker date="1425516196741" expanded="true" signature="6088:6121" placeholder="..." />
           </folding>
@@ -851,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25120193" vertical-offset="1848" max-vertical-offset="15062">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47596154" vertical-offset="2681" max-vertical-offset="15062">
+          <caret line="181" column="3" selection-start-line="181" selection-start-column="3" selection-end-line="181" selection-end-column="3" />
           <folding />
         </state>
       </provider>
