@@ -112,7 +112,7 @@ function hadclubchecklater(){
 
 function choosefacteam(ID){
 
-    clearfavteam();
+    clearfavteamnow();
 
     addfavteam(ID);
 

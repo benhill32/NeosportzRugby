@@ -69,6 +69,17 @@ function weblinkbackmenu(){
     parent.history.back();
 }
 
+function clearfavteamnow(){
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_clubs set Fav = 0');
+        console.log("Update INTO MobileApp_clubs");
+    });
+
+
+}
+
+
 function clearfavteam(){
 
     db.transaction(function(tx) {
