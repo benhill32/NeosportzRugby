@@ -230,9 +230,7 @@ var Gameid =menu.ID;
 
 function syncscore(){
 
-    if(networkconnectionscore !=0) {
-        onclicksyncloaddata();
-    }
+    onDeviceReady();
 }
 
 
