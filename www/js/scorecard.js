@@ -17,15 +17,23 @@ var Ref= 0;
 var isadmin =0;
 var DIVid = getUrlVars()["divID"];
 function onDeviceReady() {
-
+    checkonlinescore()
     deviceIDscorecard = device.uuid;
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
    // db.transaction(gettoken, errorCBfunc, successCBfunc);
-    db.transaction(getfliter1, errorCBfunc, successCBfunc);
 
 
-    checkonlinescore()
+
+
+
+        if(networkconnectionscore !=0) {
+            onclicksyncloaddata();
+        }
+
+    window.setTimeout(function(){
+        db.transaction(getfliter1, errorCBfunc, successCBfunc);
+    }, 1000);
 }
 
 function getfliter1(tx) {

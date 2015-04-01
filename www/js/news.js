@@ -15,20 +15,20 @@ function onDeviceReadynews() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
 
-    db.transaction(getdatanews, errorCBfunc, successCBfunc);
+    db.transaction(getdatanews1, errorCBfunc, successCBfunc);
   //  checkfb();
 }
 //db.transaction(getadmin, errorCBfunc, successCBfunc);
 
 
 
-function getdatanews(tx) {
+function getdatanews1(tx) {
     var sql = "select ID from MobileApp_clubs where Fav = 1";
     //alert(sql);
-    tx.executeSql(sql, [], getClubID_success);
+    tx.executeSql(sql, [], getClubID_success1);
 }
 
-function getClubID_success(tx, results) {
+function getClubID_success1(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 
@@ -90,39 +90,6 @@ function getadmin_success(tx, results) {
 
 
 
-function checkfb(){
-
-    if(device.platform == "iOS"){
-        appAvailability.check(
-            'fb://', // URI Scheme
-            function() {           // Success callback
-               // alert("facebook is available");
-                facebookchk = 1;
-            },
-            function() {           // Error callback
-              //  alert("facebook is not available");
-                facebookchk = 0;
-            }
-        );
-
-    }else  if(device.platform == "Android"){
-        appAvailability.check(
-            'com.facebook.katana', // URI Scheme
-            function() {           // Success callback
-               // alert("facebook is available");
-                facebookchk = 1;
-            },
-            function() {           // Error callback
-               // alert("facebook is not available");
-                facebookchk = 0;
-            }
-        );
-
-    }else{
-
-
-    }
-}
 
 function loadnewdata(){
 
