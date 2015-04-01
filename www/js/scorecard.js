@@ -180,6 +180,7 @@ var Gameid =menu.ID;
         '<button id="btnhalf" class="btn btn-warning" onclick="gamestate(1,' + Gameid + ')" >Its Halftime</button><br>' +
         '<button id="btnfull" class="btn btn-warning" onclick="gamestate(2,' + Gameid + ')" >Its Fulltime</button><br>' +
         '<button id="btnapprove" class="btn btn-warning" onclick="gamestate(3,' + Gameid + ')" >Approve</button>' +
+        '<button id="btnSync" class="btn btn-info" onclick="syncscore()" >Sync Data</button>' +
         '</div>' +
         '</Div>');
 
@@ -226,6 +227,16 @@ var Gameid =menu.ID;
     }
 
 }
+
+function syncscore(){
+
+    if(networkconnectionscore !=0) {
+        onclicksyncloaddata();
+    }
+}
+
+
+
 
 function gamestate(IDD,id){
 
