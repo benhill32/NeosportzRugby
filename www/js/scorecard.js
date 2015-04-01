@@ -15,6 +15,7 @@ var timeaway = 0;
 var scoringname =0;
 var Ref= 0;
 var isadmin =0;
+var clubedit = 0;
 var DIVid = getUrlVars()["divID"];
 function onDeviceReady() {
     checkonlinescore()
@@ -40,7 +41,7 @@ function getfliter1(tx) {
 
     //  updateadmin();
 
-    var sql = "select Ref,isadmin from MobileApp_LastUpdatesec";
+    var sql = "select Ref,isadmin,Clubedit from MobileApp_LastUpdatesec";
     //alert(sql);
     tx.executeSql(sql, [], getfliter1_success);
 
@@ -54,7 +55,7 @@ function getfliter1_success(tx, results) {
 
     if(len != 0) {
         var menu = results.rows.item(0);
-
+        Clubedit = menu.Clubedit;
         Ref= menu.Ref;
         isadmin = menu.isadmin;
         db.transaction(getdata, errorCBfunc, successCBfunc);
@@ -278,7 +279,8 @@ function getscoredata_success(tx, results) {
         var minus =menu.Value*-1;
 
         $('#divscore').append('<Div class="mainmenuscore" >' +
-            '<div class="bold size13 floatleft3" align="center"  ><img src="../img/minus.png" onclick="getscore(1,'+ minus +',\''+ menu.Name + '\')" height="40">' +
+            '<div class="bold size13 floatleft3" align="center"  >' +
+            '<img src="../img/minus.png" onclick="getscore(1,'+ minus +',\''+ menu.Name + '\')" height="40">' +
             '<img src="../img/plus.png"  height="40" onclick="getscore(1,'+ plus +',\''+ menu.Name + '\')"> </div>' +
             '<div class="bold size13 floatleft3" align="center"  >' + menu.Name + '</div>' +
             '<div class="bold size13 floatleft3" align="center"  >' +
