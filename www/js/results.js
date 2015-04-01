@@ -216,7 +216,7 @@ function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd
 function getgoals(tx){
    var sql= "select m.ID,m.CreatedateUTC,m.UpdatedateUTC,m.DeletedateUTC,m.TeamID,m.GameID,m.PlayerID,m.ScoringID,m.Time,p.FullName from Mobilescoringbreakdown as m INNER JOIN " +
        "MobilevwApp_Base_Players as p  ON p.ID = m.PlayerID " +
-       "where GameID = " + gameid + " order by m.Time";
+       "where GameID = " + gameid + " order by CAST(m.Time AS INTEGER) ";
  //alert(sql);
     tx.executeSql(sql, [], getgoals_success);
 }
