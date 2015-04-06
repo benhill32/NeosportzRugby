@@ -174,7 +174,7 @@ function getMenu_success(tx, results) {
         var h = timesplit[0];
         var m = timesplit[1];
 
-        var ampm = h > 12 ? h-12 +'PM' : h +'AM';
+        var ampm = h > 12 ? h-12 + ':' + m + 'PM' : h + ':' + m +'AM';
         var action = '';
 
         if(menu.halftime != 'null' && menu.fulltime != 'null') {
@@ -193,7 +193,7 @@ function getMenu_success(tx, results) {
             '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
             '<div class="size11"  >' + menu.DivisionName + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
-            '<div class="size11">' + ampm  + ':' + m + ' ' + day + '/' + month + '/' + year + '</div>' +
+            '<div class="size11">' + ampm + ' ' +  day + '/' + month + '/' + year + '</div>' +
             '<div class="size11 blue" style="text-align: center!important;">More</div>' +
 
             '</Div>');
