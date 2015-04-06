@@ -170,7 +170,10 @@ function getMenu_success(tx, results) {
         var year = split[0];
         var day = split[2];
 
-        var h = res[1].substring(0,2)
+        var timesplit = res[1].split(":")
+        var h = timesplit[0];
+        var m = timesplit[1];
+
         var ampm = h > 12 ? h-12 +'PM' : h +'AM';
         var action = '';
 
@@ -190,7 +193,7 @@ function getMenu_success(tx, results) {
             '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
             '<div class="size11"  >' + menu.DivisionName + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
-            '<div class="size11">' + ampm  + " " + day + '/' + month + '/' + year + '</div>' +
+            '<div class="size11">' + ampm  + ':' + m + ' ' + day + '/' + month + '/' + year + '</div>' +
             '<div class="size11 blue" style="text-align: center!important;">More</div>' +
 
             '</Div>');

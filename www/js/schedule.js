@@ -264,8 +264,10 @@ function getMenu_success(tx, results) {
         var year = split[0];
         var day = split[2];
 
-        var h = res[1].substring(0,2)
 
+        var timesplit = res[1].split(":")
+        var h = timesplit[0];
+    var m = timesplit[1];
      //   alert(menu.DatetimeStartSeconds);
 
         var ampm = h > 12 ? h-12 +'PM' : h +'AM';
@@ -291,7 +293,7 @@ function getMenu_success(tx, results) {
         }else{
             $('#divschedules').append('<Div class="mainmenuresultcancel" align="left" >' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-                '<div class="size11">' + ampm + '  ' + day + '/' + month + '/' + year + '</div>' +
+                '<div class="size11">' + ampm + ':' + m + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
                 '<div class="size11">' + menu.Field + '</div>' +
                 '</Div>');
