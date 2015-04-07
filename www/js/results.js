@@ -139,14 +139,14 @@ function getdata(tx) {
         $('#btn1').addClass("btn btn-xs btn-default");
         $('#btn2').removeClass("btn btn-xs btn-default");
         $('#btn2').addClass("btn btn-xs btn-primary active");
-        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_Results where DivisionID = '" + id + "' and DatetimeStartSeconds <= " + midnightsec + " and DeletedateUTC = 'null'  order by DatetimeStart DESC";
+        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,RefName,DefaultHome,DefaultAway from MobileApp_Results where DivisionID = '" + id + "' and DatetimeStartSeconds <= " + midnightsec + " and DeletedateUTC = 'null'  order by DatetimeStart DESC";
 
     }else{
         $('#btn2').removeClass("btn btn-xs btn-primary active");
         $('#btn2').addClass("btn btn-xs btn-default");
         $('#btn1').removeClass("btn btn-xs btn-default");
         $('#btn1').addClass("btn btn-xs btn-primary active");
-        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime from MobileApp_Results where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DatetimeStartSeconds <= " + midnightsec + " and DivisionID = '" + id + "'  and DeletedateUTC = 'null' order by DatetimeStart DESC";
+        sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,RefName,DefaultHome,DefaultAway from MobileApp_Results where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DatetimeStartSeconds <= " + midnightsec + " and DivisionID = '" + id + "'  and DeletedateUTC = 'null' order by DatetimeStart DESC";
 
     }
 
@@ -188,15 +188,41 @@ function getMenu_success(tx, results) {
 
         var date2 = new Date(menu.DatetimeStart);
        // alert(date2);
-        $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore('+menu.ID+',\''+menu.HomeName+'\',\''+menu.AwayName+'\','+menu.HomeScore+','+menu.AwayScore+','+menu.HomeTeamID+','+menu.AwayTeamID+')"  >' +
+        if(menu.DefaultHome == 0 && menu.DefaultAway ==0 ) {
+            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
             '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
-            '<div class="size11"  >' + menu.DivisionName + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
-            '<div class="size11">' + ampm + ' ' +  day + '/' + month + '/' + year + '</div>' +
+            '<div class="size11">Referee : ' + menu.RefName + '</div>' +
+            '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
             '<div class="size11 blue" style="text-align: center!important;">More</div>' +
-
             '</Div>');
+        }
+        else if(menu.DefaultHome == 1 && menu.DefaultAway ==0 )
+        {
+            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
+            '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+            '<div class="bold size13" >WBD - LBD  ' + action + '</div>' +
+            '<div class="size11">' + menu.TournamentName + '</div>' +
+            '<div class="size11">Referee : ' + menu.RefName + '</div>' +
+            '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
+            '<div class="size11 blue" style="text-align: center!important;">More</div>' +
+            '</Div>');
+        }
+        else if(menu.DefaultHome == 0 && menu.DefaultAway ==1 )
+        {
+            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
+            '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+            '<div class="bold size13" >LBD - WBD  ' + action + '</div>' +
+            '<div class="size11">' + menu.TournamentName + '</div>' +
+            '<div class="size11">Referee : ' + menu.RefName + '</div>' +
+            '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
+            '<div class="size11 blue" style="text-align: center!important;">More</div>' +
+            '</Div>');
+        }
+
+
+
     }
 
 
