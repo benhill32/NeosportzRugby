@@ -17,6 +17,7 @@ var teamfollow = 0;
 var refgameid= 0;
 var remindtext = 0;
 var reminddate =0;
+var defaultgames = 0;
 var networkconnectionsch = 0;
 document.addEventListener("deviceready", onDeviceReadysch, false);
 var tokensch = 0
@@ -378,10 +379,15 @@ function loadinfo_success2(tx, results) {
     $('#referee').hide();
     // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
+    $('#divdefault').hide();
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
 
         if(isadmin==1) {
             $('#score').show();
+            $('#divdefault').show();
+            $("#divdefault").click(function () {
+                loaddefaultgames(menu.ID);
+            });
             $('#score').empty().append('<Div >Score Card</div>');
             $("#score").click(function () {
                 window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
@@ -417,7 +423,10 @@ function loadinfo_success2(tx, results) {
                     $("#modelfooterupdate").click(function () {
                         loadreftosystem(menu.ID);
                     });
-
+                    $('#divdefault').show();
+                    $("#divdefault").click(function () {
+                        loaddefaultgames(menu.ID);
+                    });
                 }
             }
             if (Ref == 1) {
@@ -436,6 +445,10 @@ function loadinfo_success2(tx, results) {
                     $("#modelfooterupdate").click(function () {
                         loadreftosystem(menu.ID);
                     });
+                    $('#divdefault').show();
+                    $("#divdefault").click(function () {
+                        loaddefaultgames(menu.ID);
+                    });
                 }
             }
         }
@@ -445,7 +458,7 @@ function loadinfo_success2(tx, results) {
 
 
     }else {
-
+        $('#divdefault').hide();
         $('#referee').hide();
         $('#score').hide();
         $('#cancell').hide();
@@ -463,6 +476,32 @@ function loadinfo_success2(tx, results) {
         });
     }
 }
+
+function loaddefaultgames(ID){
+
+    defaultgames = ID;
+    db.transaction(loaddefaultgames_data, errorCBfunc, successCBfunc);
+}
+
+function loaddefaultgames_data(tx) {
+
+    var sql = "select HomeName,AwayName from MobileApp_Schedule where ID =" + defaultgames;
+
+    //alert(sql);
+    tx.executeSql(sql, [], loaddefaultgames_data_success2);
+}
+
+function loaddefaultgames_data_success2(tx, results) {
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+        $('#divhometeam').val(menu.HomeName);
+    $('#divawayteam').val(menu.AwayName);
+
+}
+
+
+
 function onConfirm(button) {
     checkonlinesch();
     if(networkconnectionsch != 0){
