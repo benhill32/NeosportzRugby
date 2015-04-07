@@ -495,8 +495,8 @@ function loaddefaultgames_data_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
 
-        $('#divhometeam').val(menu.HomeName);
-    $('#divawayteam').val(menu.AwayName);
+        $('#divhometeam').html(menu.HomeName);
+    $('#divawayteam').html(menu.AwayName);
 
 }
 
