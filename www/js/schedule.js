@@ -527,6 +527,8 @@ function sendtoserverdefault(){
     checkonlinesch();
     if(networkconnectionsch !=0) {
         passscoretoserver("gameiddefault=" + defaultgames + "&teamdefault=" + homeoraway + "&deviceid=" + device.uuid + "&token=" + tokensch)
+
+        onclicksyncloaddata();
     }else{
         alert("You don't have access to internet!");
 
