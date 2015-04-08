@@ -519,16 +519,15 @@ if(ID == 1){
 
     homeoraway = ID;
     $("#defaultyes").empty().html('Yes');
-    $("#defaultyes").click(function () {
-        sendtoserverdefault(ID);
-    });
+
 
 }
 
-function sendtoserverdefault(ID){
-
-    passscoretoserver("gameiddefault=" + defaultgames + "&teamdefault=" + ID + "&deviceid=" + device.uuid + "&token=" + tokensch)
-
+function sendtoserverdefault(){
+    checkonlinesch();
+    if(networkconnectionsch !=0) {
+        passscoretoserver("gameiddefault=" + defaultgames + "&teamdefault=" + homeoraway + "&deviceid=" + device.uuid + "&token=" + tokensch)
+    }
 }
 
 
