@@ -509,8 +509,14 @@ function loaddefaultgames_data_success2(tx, results) {
 }
 
 function checkdefaultgames(ID,TeamName){
-
+if(ID == 1){
     $('#divmainheaderyesorno').empty().append('Are you sure Home Team : ' + TeamName + ' is defaulting?')
+}else if(ID == 2){
+
+    $('#divmainheaderyesorno').empty().append('Are you sure Away Team : ' + TeamName + ' is defaulting?')
+}
+
+
     homeoraway = ID;
     $("#defaultyes").empty().html('Yes');
     $("#defaultyes").click(function () {
