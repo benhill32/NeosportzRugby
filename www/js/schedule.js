@@ -518,7 +518,7 @@ if(ID == 1){
 
 
     homeoraway = ID;
-    $("#defaultyes").empty().html('Yes');
+
 
 
 }
