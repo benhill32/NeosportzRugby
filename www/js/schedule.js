@@ -495,7 +495,7 @@ function loaddefaultgames_data(tx) {
 function loaddefaultgames_data_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
-
+    db.transaction(gettokensc, errorCBfunc, successCBfunc);
         $('#divhometeam').empty().html('Home Team : ' + menu.HomeName);
         $("#divhometeam").click(function () {
             checkdefaultgames(1,menu.HomeName);
@@ -513,10 +513,18 @@ function checkdefaultgames(ID,TeamName){
     $('#divmainheaderyesorno').empty().append('Are you sure Home Team : ' + TeamName + ' is defaulting?')
     homeoraway = ID;
 
+    $("#defaultyes").click(function () {
+        sendtoserverdefault(ID);
+    });
+    //
   //  alert(ID);
 }
 
+function sendtoserverdefault(ID){
 
+    passscoretoserver("gameiddefault=" + defaultgames + "&teamdefault=" + ID + "&deviceid=" + device.uuid + "&token=" + tokensch)
+
+}
 
 
 

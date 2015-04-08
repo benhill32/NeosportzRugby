@@ -741,7 +741,7 @@ overflow-y: scroll !important;
     color: white;
     opacity:0.7;
 }
-#divhometeam:hover{
+#divhometeam:hover,#defaultyes:hover,#defaultno:hover{
 
     background-color: #339900;
     color: white;
