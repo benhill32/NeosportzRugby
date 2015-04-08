@@ -496,23 +496,24 @@ function loaddefaultgames_data_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
 
-        $('#divhometeam').empty().html(menu.HomeName);
+        $('#divhometeam').empty().html('Home Team : ' + menu.HomeName);
         $("#divhometeam").click(function () {
-            checkdefaultgames(1);
+            checkdefaultgames(1,menu.HomeName);
         });
 
-    $('#divawayteam').empty().html(menu.AwayName);
+    $('#divawayteam').empty().html('Away Team : ' + menu.AwayName);
     $("#divawayteam").click(function () {
-        checkdefaultgames(2);
+        checkdefaultgames(2,menu.AwayName);
     });
 
 }
 
-function checkdefaultgames(ID){
+function checkdefaultgames(ID,TeamName){
 
+    $('#divmainheaderyesorno').empty().append('Are you sure' + TeamName + ' is defaulting?')
     homeoraway = ID;
 
-    alert(ID);
+  //  alert(ID);
 }
 
 
