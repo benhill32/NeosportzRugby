@@ -497,12 +497,12 @@ function loaddefaultgames_data_success2(tx, results) {
     var menu = results.rows.item(0);
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
         $('#divhometeam').empty().html('Home Team : ' + menu.HomeName);
-        $("#divhometeam").click(function () {
+        $("#divhometeam").empty().click(function () {
             checkdefaultgames(1,menu.HomeName);
         });
 
     $('#divawayteam').empty().html('Away Team : ' + menu.AwayName);
-    $("#divawayteam").click(function () {
+    $("#divawayteam").empty().click(function () {
         checkdefaultgames(2,menu.AwayName);
     });
 
