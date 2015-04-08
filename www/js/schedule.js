@@ -513,7 +513,7 @@ function checkdefaultgames(ID,TeamName){
     $('#divmainheaderyesorno').empty().append('Are you sure Home Team : ' + TeamName + ' is defaulting?')
     homeoraway = ID;
 
-    $("#defaultyes").click(function () {
+    $("#defaultyes").empty().click(function () {
         sendtoserverdefault(ID);
     });
     //
