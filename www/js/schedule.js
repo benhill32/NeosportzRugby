@@ -19,6 +19,7 @@ var remindtext = 0;
 var reminddate =0;
 var defaultgames = 0;
 var networkconnectionsch = 0;
+var homeoraway =0;
 document.addEventListener("deviceready", onDeviceReadysch, false);
 var tokensch = 0
 
@@ -496,9 +497,25 @@ function loaddefaultgames_data_success2(tx, results) {
     var menu = results.rows.item(0);
 
         $('#divhometeam').empty().html(menu.HomeName);
+        $("#divhometeam").click(function () {
+            checkdefaultgames(1);
+        });
+
     $('#divawayteam').empty().html(menu.AwayName);
+    $("#divawayteam").click(function () {
+        checkdefaultgames(2);
+    });
 
 }
+
+function checkdefaultgames(ID){
+
+    homeoraway = ID;
+
+    alert(ID);
+}
+
+
 
 
 
