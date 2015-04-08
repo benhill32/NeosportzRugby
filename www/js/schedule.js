@@ -386,20 +386,20 @@ function loadinfo_success2(tx, results) {
         if(isadmin==1) {
             $('#score').show();
             $('#divdefault').show();
-            $("#divdefault").empty().click(function () {
+            $("#divdefault").click(function () {
                 loaddefaultgames(menu.ID);
             });
             $('#score').empty().append('<Div >Score Card</div>');
-            $("#score").empty().click(function () {
+            $("#score").click(function () {
                 window.open("scorecard.html?ID=" + IDhist +"&divID=" + id);
             });
             $('#cancell').show();
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
             $('#referee').show();
-            $("#referee").empty().click(function () {
+            $("#referee").click(function () {
                 loadref(menu.ID);
             });
-            $("#modelfooterupdate").empty().click(function () {
+            $("#modelfooterupdate").click(function () {
                 loadreftosystem(menu.ID);
             });
 
@@ -414,18 +414,18 @@ function loadinfo_success2(tx, results) {
                 if (menu.IsFinalScore == 0) {
                     $('#score').show();
                     $('#score').empty().append('<Div >Score Card</div>');
-                    $("#score").empty().click(function () {
+                    $("#score").click(function () {
                         window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
                     });
                     $('#referee').show();
-                    $("#referee").empty().click(function () {
+                    $("#referee").click(function () {
                         loadref(menu.ID);
                     });
                     $("#modelfooterupdate").click(function () {
                         loadreftosystem(menu.ID);
                     });
                     $('#divdefault').show();
-                    $("#divdefault").empty().click(function () {
+                    $("#divdefault").click(function () {
                         loaddefaultgames(menu.ID);
                     });
                 }
@@ -440,14 +440,14 @@ function loadinfo_success2(tx, results) {
                     $('#cancell').show();
                     $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
                     $('#referee').show();
-                    $("#referee").empty().click(function () {
+                    $("#referee").click(function () {
                         loadref(menu.ID);
                     });
                     $("#modelfooterupdate").click(function () {
                         loadreftosystem(menu.ID);
                     });
                     $('#divdefault').show();
-                    $("#divdefault").empty().click(function () {
+                    $("#divdefault").click(function () {
                         loaddefaultgames(menu.ID);
                     });
                 }
@@ -497,12 +497,12 @@ function loaddefaultgames_data_success2(tx, results) {
     var menu = results.rows.item(0);
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
         $('#divhometeam').empty().html('Home Team : ' + menu.HomeName);
-        $("#divhometeam").empty().click(function () {
+        $("#divhometeam").click(function () {
             checkdefaultgames(1,menu.HomeName);
         });
 
     $('#divawayteam').empty().html('Away Team : ' + menu.AwayName);
-    $("#divawayteam").empty().click(function () {
+    $("#divawayteam").click(function () {
         checkdefaultgames(2,menu.AwayName);
     });
 
@@ -513,7 +513,7 @@ function checkdefaultgames(ID,TeamName){
     $('#divmainheaderyesorno').empty().append('Are you sure Home Team : ' + TeamName + ' is defaulting?')
     homeoraway = ID;
 
-    $("#defaultyes").empty().click(function () {
+    $("#defaultyes").click(function () {
         sendtoserverdefault(ID);
     });
     //
