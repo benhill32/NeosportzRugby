@@ -18,7 +18,7 @@ var devicePlatformfunc;
 var chkrefreshdata = 0;
 var archiveyear=0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
-
+var tokenldata ="";
 // Cordova is ready
 //
 
@@ -27,6 +27,7 @@ document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 
 function onDeviceReadyloaddata() {
     pushnotifiy();
+    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
@@ -46,6 +47,23 @@ function onOffline()
     $('#settingsync').prop('disabled', false);
 
 }
+
+
+function gettokenloaddata(tx) {
+    var sql = "select token from MobileApp_LastUpdatesec";
+    //  alert(sql);
+    tx.executeSql(sql, [], gettokenloaddata_success);
+}
+
+function gettokenloaddata_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+    tokenldata = menu.token;
+    //alert(apptoken);
+}
+
 
 function getnetworkdetails(){
 
@@ -71,11 +89,51 @@ function checkonline(){
 }
 
 function refreshdata(){
+    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+    checkonline();
 
-    db.transaction(populateDB, errorCBfunc, successCBfunc);
+    $('#indexloadingdata').modal('show');
+    checkdatabaseloaddata();
+
 }
 
 
+function checkdatabaseloaddata(){
+
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    var json = "0";
+    if(networkconnection!=0) {
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/checkdatabase.aspx?deviceID=' + deviceIDfunc, false);
+        xmlHttp.send();
+        // alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
+        json = xmlHttp.responseText;
+    }
+
+    // alert(json);
+    if(json == "0"){
+
+        db.transaction(populateDB, errorCBfunc, successCBfunc);
+    }else  if(json == "1"){
+        // alert(json);
+        if(document.getElementById("indexdiv")!=null) {
+            $('#indexloadingdata').modal('hide');
+            if (devicePlatformfunc == "Android") {
+                $('#modelnewdatabase').modal('show');
+            }
+            else if (devicePlatformfunc == "iOS") {
+
+                $('#modelnewdatabaseapple').modal('show');
+            }
+        }else{
+
+            db.transaction(populateDB, errorCBfunc, successCBfunc);
+        }
+
+    }else{
+        db.transaction(populateDB, errorCBfunc, successCBfunc);
+    }
+}
 
 
 

@@ -17,7 +17,7 @@ var Ref= 0;
 var isadmin =0;
 var clubedit = 0;
 var DIVid = getUrlVars()["divID"];
-function onDeviceReady() {
+function onDeviceReadyscore() {
     checkonlinescore()
     deviceIDscorecard = device.uuid;
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
@@ -231,7 +231,7 @@ var Gameid =menu.ID;
 
 function syncscore(){
 
-    onDeviceReady();
+    onDeviceReadyscore();
 }
 
 

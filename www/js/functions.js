@@ -9,6 +9,9 @@ var databaseversion;
 var appversion = -1;
 var apptoken = 0;
 var networkconnectionfun= 0;
+var functionyear = "";
+
+var appversionlocal = '1.3.5';
 
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
@@ -252,13 +255,13 @@ function blankLastUpdatesec(){
     xmlHttp = new XMLHttpRequest();
 
    // $('#busy').show();
-    xmlHttp.open("GET", 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion,false);
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
     xmlHttp.send();
   //  alert('http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
 
     db.transaction(function(tx) {
-        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON,allownewfeed ,allowcancel,allowscore,Clubedit,Ref) VALUES ("0", "0",0,0,"' + json + '",0,0,0,0,0,0,0)');
+        tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON,allownewfeed ,allowcancel,allowscore,Clubedit,Ref,Versionappnow) VALUES ("0", "0",0,0,"' + json + '",0,0,0,0,0,0,0,"' + appversionlocal + '")');
         console.log("INSERT INTO MobileApp_LastUpdatesec");
      //   alert('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON) VALUES ("0", "0",0,0,"' + json + '",0,0)');
     });
@@ -386,7 +389,7 @@ function syncmaintablesregions(obj){
 function syncmaintables(obj,year){
 
     var datenow = new Date();
-
+    functionyear = year;
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
 
         db.transaction(function(tx) {
@@ -735,15 +738,11 @@ function syncmaintables(obj,year){
 
     $.each(obj.Isadmin, function (idx, obj) {
             db.transaction(function(tx) {
-                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ',allownewfeed= ' + obj.allownewfeed + ',allowcancel= ' + obj.allowcancel + ',allowscore= ' + obj.allowscore + ',Clubedit= ' + obj.Clubedit + ',Ref= ' + obj.Ref + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ',allownewfeed= ' + obj.allownewfeed + ',allowcancel= ' + obj.allowcancel + ',allowscore= ' + obj.allowscore + ',Clubedit= ' + obj.Clubedit + ',Ref= ' + obj.Ref + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
                 //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
               //  alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
+                db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
 
-                if(datenow.getFullYear() == year){
-                    closemodel();
-                }else{
-                    closemodelarchive();
-                }
             });
     });
 
@@ -751,6 +750,66 @@ function syncmaintables(obj,year){
 
     $('#busy').hide();
 }
+
+
+function checkversionofapp(tx) {
+    var sql = "select Versionappthen,Versionappnow,Database from MobileApp_LastUpdatesec ";
+    // alert(sql);
+    tx.executeSql(sql, [], checkversionofapp_success);
+}
+
+
+function checkversionofapp_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+    //  alert(len);
+    var menu = results.rows.item(0);
+    var datenow = new Date();
+
+
+    if (appversionlocal == menu.Versionappthen) {
+        if(document.getElementById("indexdiv")==null) {
+            closemodel();
+        }else {
+
+
+            if (menu.Database == 1) {
+                $('#indexloadingdata').modal('hide');
+                if (devicePlatformfunc == "Android") {
+                    $('#modelnewdatabase').modal('show');
+                }
+                else if (devicePlatformfunc == "iOS") {
+
+                    $('#modelnewdatabaseapple').modal('show');
+                }
+            } else {
+                if (datenow.getFullYear() == functionyear) {
+                    closemodel();
+                } else {
+                    closemodelarchive();
+                }
+            }
+        }
+
+    }
+    else
+    {
+
+            $('#indexloadingdata').modal('hide');
+
+            if (devicePlatformfunc == "Android")
+            {
+                $('#modelnewversion').modal('show');
+            }
+            else if (devicePlatformfunc == "iOS")
+            {
+
+                $('#modelnewversionapple').modal('show');
+            }
+
+    }
+}
+
 
 function URLredirect(ID){
 
@@ -885,4 +944,42 @@ function CleanDB() {
 
 
 
+}
+
+
+function loadnewadatabase(){
+
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+
+    // $('#busy').show();
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=0&appver=' + appversionlocal,false);
+    xmlHttp.send();
+
+
+    db.transaction(droptables, errorCBfunc,successCBfunc);
+
+
+    window.setTimeout(function(){
+        createtablesredirect();
+    }, 1500);
+}
+
+function createtablesredirect(){
+
+
+    weblink('../index.html');
+}
+
+function loadnewapp(){
+
+    if (devicePlatformfunc == "Android")
+    {
+        window.open(encodeURI("https://play.google.com/store/apps/details?id=neocom.neosportzRugby"), '_system');
+    }
+    else if (devicePlatformfunc == "iOS")
+    {
+        window.open(encodeURI("https://itunes.apple.com/us/app/neosportz-rugby/id968943127?ls=1&mt=8"), '_system');
+    }
 }
