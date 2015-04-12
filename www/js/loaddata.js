@@ -92,7 +92,7 @@ function refreshdata(){
     db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     checkonline();
 
-    $('#indexloadingdata').modal('show');
+   // $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
 
 }
@@ -106,11 +106,11 @@ function checkdatabaseloaddata(){
     if(networkconnection!=0) {
         xmlHttp.open("GET", 'http://rugby.neosportz.com/checkdatabase.aspx?deviceID=' + deviceIDfunc, false);
         xmlHttp.send();
-        // alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
+         alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
         json = xmlHttp.responseText;
     }
 
-    // alert(json);
+    alert(json);
     if(json == "0"){
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
