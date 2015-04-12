@@ -723,6 +723,10 @@ overflow-y: scroll !important;
     color: white;
     opacity:0.7;
 }
+#opennewversion:hover,#opennewversion1:hover,#opennewdatabase:hover,#closenewdatabase:hover,#opennewdatabaseapple:hover{
+
+    background-color: #8585C2;
+}
 #modelfooterclose:hover{
 
     background-color: #339900;
