@@ -92,7 +92,7 @@ function refreshdata(){
     db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     checkonline();
 
-   // $('#indexloadingdata').modal('show');
+    $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
 
 }
@@ -118,6 +118,8 @@ function checkdatabaseloaddata(){
         // alert(json);
         if(document.getElementById("indexdiv")!=null) {
             $('#indexloadingdata').modal('hide');
+            $('#mainfore').removeClass('mainforeground');
+            $('#mainfore').addClass('mainforeground2');
             if (devicePlatformfunc == "Android") {
                 $('#modelnewdatabase').modal('show');
             }
