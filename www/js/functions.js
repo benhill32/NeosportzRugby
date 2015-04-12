@@ -969,7 +969,7 @@ function loadnewadatabase(){
 function createtablesredirect(){
 
 
-    weblink('../index.html');
+    weblink('index.html');
 }
 
 function loadnewapp(){
