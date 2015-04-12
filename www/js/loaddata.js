@@ -92,7 +92,7 @@ function refreshdata(){
     db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
     checkonline();
 
-    $('#indexloadingdata').modal('show');
+  //  $('#indexloadingdata').modal('show');
     checkdatabaseloaddata();
 
 }
@@ -110,7 +110,7 @@ function checkdatabaseloaddata(){
         json = xmlHttp.responseText;
     }
 
-   // alert(json);
+    alert(json);
     if(json == "0"){
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
