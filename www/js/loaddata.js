@@ -697,7 +697,6 @@ function updatedatapushappclosed(ID,mess){
 
 }
 
-
 function onNotification(e) {
  //   $("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
     var xmlHttpt = null;
@@ -712,15 +711,12 @@ function onNotification(e) {
                 // Your GCM push server needs to know the regID before it can push to this device
                 // here is where you might want to send it the regID for later use.
                // alert("regID = " + e.regid);
-
-
               //  $('#busy').show();
                              var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&databasever=0&deviceVersion=' + deviceVersionfunc + '&appver=' + appversionlocalf + '&regid=' + e.regid;
                 xmlHttpt.open("GET",strur ,false);
                  // alert(strur);
                 xmlHttpt.send();
                 //   $('#busy').hide();
-
              //   alert(json);
             }
             break;
