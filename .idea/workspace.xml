@@ -24,13 +24,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32572114" vertical-offset="10456" max-vertical-offset="12614">
-              <caret line="699" column="28" selection-start-line="699" selection-start-column="28" selection-end-line="699" selection-end-column="28" />
+            <state vertical-scroll-proportion="-10.307693" vertical-offset="5614" max-vertical-offset="12614">
+              <caret line="346" column="32" selection-start-line="346" selection-start-column="25" selection-end-line="346" selection-end-column="32" />
               <folding>
                 <element signature="n#!!block;n#countProperties#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.265625" vertical-offset="3009" max-vertical-offset="10880">
+              <caret line="190" column="64" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="results.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/results.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.0" vertical-offset="1211" max-vertical-offset="5049">
+              <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!block;n#allowfilter#0" expanded="false" />
+                <marker date="1428957185070" expanded="true" signature="6979:7008" placeholder="..." />
+                <marker date="1428957185070" expanded="true" signature="7932:7961" placeholder="..." />
+                <marker date="1428957185070" expanded="true" signature="8885:8914" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -56,19 +81,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/pages/clubs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1989">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="clubteamplayers.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/clubteamplayers.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,26 +89,6 @@
               <folding>
                 <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/news.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="6851">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="31" />
-              <folding>
-                <marker date="1425852680643" expanded="true" signature="1636:1648" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="1942:1954" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="3691:3710" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="3921:3940" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="4157:4176" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="4348:4367" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="5912:5931" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="6073:6092" placeholder="..." />
-                <marker date="1425852680643" expanded="true" signature="8093:8112" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -125,7 +117,7 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4101" max-vertical-offset="15572">
+            <state vertical-scroll-proportion="-10.307693" vertical-offset="4101" max-vertical-offset="15572">
               <caret line="257" column="300" selection-start-line="257" selection-start-column="273" selection-end-line="257" selection-end-column="300" />
               <folding>
                 <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
@@ -195,9 +187,7 @@
         <option value="$PROJECT_DIR$/www/pages/Help.html" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
-        <option value="$PROJECT_DIR$/www/js/results.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
-        <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/js/scorecard.js" />
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
         <option value="$PROJECT_DIR$/www/config.xml" />
@@ -206,6 +196,8 @@
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/js/results.js" />
+        <option value="$PROJECT_DIR$/www/js/schedule.js" />
       </list>
     </option>
   </component>
@@ -244,6 +236,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,7 +325,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,14 +361,10 @@
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -384,6 +372,13 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhoneGap" factoryName="PhoneGap/Cordova">
@@ -394,9 +389,6 @@
       <option name="myExtraArgs" />
       <option name="hasTarget" value="false" />
       <option name="target" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
@@ -446,7 +438,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -746,26 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/results.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2534" max-vertical-offset="5559">
-          <caret line="184" column="24" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2127" max-vertical-offset="3077">
           <caret line="231" column="23" selection-start-line="231" selection-start-column="23" selection-end-line="231" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8442" max-vertical-offset="10880">
-          <caret line="509" column="0" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,15 +766,15 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="6851">
           <caret line="17" column="31" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="31" />
           <folding>
-            <marker date="1425852680643" expanded="true" signature="1636:1648" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="1942:1954" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="3691:3710" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="3921:3940" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="4157:4176" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="4348:4367" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="5912:5931" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="6073:6092" placeholder="..." />
-            <marker date="1425852680643" expanded="true" signature="8093:8112" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425852680643" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -875,9 +851,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.307693" vertical-offset="5614" max-vertical-offset="12614">
+          <caret line="346" column="32" selection-start-line="346" selection-start-column="25" selection-end-line="346" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!block;n#countProperties#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4101" max-vertical-offset="15572">
+        <state vertical-scroll-proportion="-10.307693" vertical-offset="4101" max-vertical-offset="15572">
           <caret line="257" column="300" selection-start-line="257" selection-start-column="273" selection-end-line="257" selection-end-column="300" />
           <folding>
             <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
@@ -887,13 +873,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+    <entry file="file://$PROJECT_DIR$/www/js/results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32572114" vertical-offset="10456" max-vertical-offset="12614">
-          <caret line="699" column="28" selection-start-line="699" selection-start-column="28" selection-end-line="699" selection-end-column="28" />
+        <state vertical-scroll-proportion="-9.0" vertical-offset="1211" max-vertical-offset="5049">
+          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
           <folding>
-            <element signature="n#!!block;n#countProperties#0" expanded="false" />
+            <element signature="n#!!block;n#allowfilter#0" expanded="false" />
+            <marker date="1428957185070" expanded="true" signature="6979:7008" placeholder="..." />
+            <marker date="1428957185070" expanded="true" signature="7932:7961" placeholder="..." />
+            <marker date="1428957185070" expanded="true" signature="8885:8914" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.265625" vertical-offset="3009" max-vertical-offset="10880">
+          <caret line="190" column="64" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

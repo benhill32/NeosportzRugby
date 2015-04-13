@@ -208,7 +208,7 @@ function getdata2_success(tx, results) {
 
     listfollow = listfollow.substr(0, listfollow.length - 1);
 
-   // alert(listfollow);
+    alert(listfollow);
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
 

@@ -67,17 +67,17 @@ function getfliter_success(tx, results) {
     }
 
 
-    db.transaction(getdatanews, errorCBfunc, successCBfunc);
+    db.transaction(getdatanewsresult, errorCBfunc, successCBfunc);
 }
 
-function getdatanews(tx) {
+function getdatanewsresult(tx) {
     var sql = "select ID from MobileApp_clubs where Fav = 1";
     // alert(sql);
-    tx.executeSql(sql, [], getClubID_success);
+    tx.executeSql(sql, [], getdatanewsresult_success);
 }
 
 
-function getClubID_success(tx, results) {
+function getdatanewsresult_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     clubidtop = 0;
@@ -88,17 +88,17 @@ function getClubID_success(tx, results) {
 
     }
 
-    db.transaction(getdata2, errorCBfunc, successCBfunc);
+    db.transaction(getdata2result, errorCBfunc, successCBfunc);
 }
 
 
-function getdata2(tx) {
+function getdata2result(tx) {
     var sql = "select ID from MobileApp_clubs where Follow = 1";
     //alert(sql);
-    tx.executeSql(sql, [], getdata2_success);
+    tx.executeSql(sql, [], getdata2result_success);
 }
 
-function getdata2_success(tx, results) {
+function getdata2result_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     listfollow = 0;
@@ -113,13 +113,13 @@ function getdata2_success(tx, results) {
 
     listfollow = listfollow.substr(0, listfollow.length - 1);
 
-    // alert(listfollow);
+     alert(listfollow);
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+    db.transaction(getdataresult, errorCBfunc, successCBfunc);
 
 }
 
-function getdata(tx) {
+function getdataresult(tx) {
     var sql = "";
 
     var d = new Date();
