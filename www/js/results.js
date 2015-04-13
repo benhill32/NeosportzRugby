@@ -45,7 +45,7 @@ function allowfilter(id){
         $('#btn2').removeClass("btn btn-xs btn-default");
         $('#btn2').addClass("btn btn-xs btn-primary active");
     }
-    db.transaction(getfliter, errorCBfunc, successCBfunc);
+    db.transaction(getfliterresult, errorCBfunc, successCBfunc);
 
 }
 
@@ -113,7 +113,7 @@ function getdata2result_success(tx, results) {
 
     listfollow = listfollow.substr(0, listfollow.length - 1);
 
-     alert(listfollow);
+  //   alert(listfollow);
 
     db.transaction(getdataresult, errorCBfunc, successCBfunc);
 
