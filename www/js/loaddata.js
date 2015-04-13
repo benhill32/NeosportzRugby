@@ -717,7 +717,7 @@ function onNotification(e) {
               //  $('#busy').show();
                              var strur = 'http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&databasever=0&deviceVersion=' + deviceVersionfunc + '&appver=' + appversionlocalf + '&regid=' + e.regid;
                 xmlHttpt.open("GET",strur ,false);
-                  alert(strur);
+                 // alert(strur);
                 xmlHttpt.send();
                 //   $('#busy').hide();
 
