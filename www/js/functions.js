@@ -24,8 +24,6 @@ function onDeviceReadyFunc() {
     databaseversion = db.database_version;
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
-
-
 }
 //db.transaction(gettoken1, errorCBfunc, successCBfunc);
 
@@ -35,7 +33,6 @@ function onDeviceReadyFunc() {
 function checkonlinefunctions(){
 
     var networkState = navigator.connection.type;
-
     var states = {};
     states[Connection.UNKNOWN]  = '0';
     states[Connection.ETHERNET] = '2';
@@ -44,7 +41,6 @@ function checkonlinefunctions(){
     states[Connection.CELL_3G]  = '1';
     states[Connection.CELL_4G]  = '1';
     states[Connection.NONE]     = '0';
-
     networkconnectionfun = states[networkState];
 //alert(states[networkState]);
 

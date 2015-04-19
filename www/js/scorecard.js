@@ -24,17 +24,13 @@ function onDeviceReadyscore() {
   //  console.log("LOCALDB - Database ready");
    // db.transaction(gettoken, errorCBfunc, successCBfunc);
 
-
-
-
-
-        if(networkconnectionscore !=0) {
-            onclicksyncloaddata();
-        }
+    if(networkconnectionscore !=0) {
+        onclicksyncloaddata();
+    }
 
     window.setTimeout(function(){
         db.transaction(getfliter1, errorCBfunc, successCBfunc);
-    }, 1000);
+    }, 1500);
 }
 
 function getfliter1(tx) {
@@ -42,7 +38,7 @@ function getfliter1(tx) {
     //  updateadmin();
 
     var sql = "select Ref,isadmin,Clubedit from MobileApp_LastUpdatesec";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getfliter1_success);
 
 }
@@ -61,15 +57,10 @@ function getfliter1_success(tx, results) {
         db.transaction(getdata, errorCBfunc, successCBfunc);
         db.transaction(getscoredata, errorCBfunc, successCBfunc);
     }
-
-
-
 }
 
 function checkonlinescore(){
-
     var networkState = navigator.connection.type;
-
     var states = {};
     states[Connection.UNKNOWN]  = '0';
     states[Connection.ETHERNET] = '2';
@@ -78,7 +69,6 @@ function checkonlinescore(){
     states[Connection.CELL_3G]  = '1';
     states[Connection.CELL_4G]  = '1';
     states[Connection.NONE]     = '0';
-
     networkconnectionscore = states[networkState];
 //alert(states[networkState]);
 
