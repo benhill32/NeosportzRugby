@@ -146,6 +146,9 @@ function getplayerinfo_success(tx, results) {
         $('#drphometime').append(new Option(i,i))
         $('#drpawaytime').append(new Option(i,i))
     }
+
+
+
 }
 
 function getMenu_success(tx, results) {
@@ -174,6 +177,8 @@ var Gameid =menu.ID;
         '<button id="btnSync" class="btn btn-info" onclick="syncscore()" >Sync Data</button>' +
         '</div>' +
         '</Div>');
+
+        $('#divtime').hide();
 
         if (menu.halftime != 'null') {
             if (menu.fulltime == 'null') {
@@ -369,7 +374,7 @@ function getscorefromtable_success(tx, results) {
 
 
 
-    passscoretoserver("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=" + timehome + "&awaytime=" + timeaway + "&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
+    passscoretoserver("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
 
     onclicksyncloaddata();
 
