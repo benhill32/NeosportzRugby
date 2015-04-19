@@ -38,7 +38,7 @@ function getfliter1(tx) {
     //  updateadmin();
 
     var sql = "select Ref,isadmin,Clubedit from MobileApp_LastUpdatesec";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getfliter1_success);
 
 }
