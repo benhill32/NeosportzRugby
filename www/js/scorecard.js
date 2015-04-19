@@ -7,7 +7,7 @@ var team1all = 0;
 var team2all = 0;
 var deviceIDscorecard;
 var networkconnectionscore = 0;
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReadyscore, false);
 var playerhome = 0;
 var playeraway = 0;
 var timehome = 0;
