@@ -335,11 +335,7 @@ function loadnewfeed_success(tx, results) {
 
 
 
-if($('#modelnews').height() >= 450){
-   // $('#modelnews').height(height + 200);
-}else{
-  //  $('#modelnews').height(height1);
-}
+
 
 
     $('#newtitle').empty();
@@ -347,10 +343,18 @@ if($('#modelnews').height() >= 450){
 
     $('#modelnews').empty();
     $('#modelnews').append( '<div>' + menu.Body + '</div>');
-    
+
     var height1 = $('#modelnews').height();
 
-    alert(height1);
+    if($('#modelnews').height() >= 450){
+        alert(height1);
+        $('#modelnews').css({
+            'padding-bottom:':'300px'
+        });
+    }
+
+
+ 
     alert($('#modelnews').height());
 
 
