@@ -355,7 +355,7 @@ function loadnewfeed_success(tx, results) {
 
     alert($('#modelnews').height());
     alert($('#modelnews').outerHeight());
-    alert($('.modal-content').height());
+
 
 }
 
