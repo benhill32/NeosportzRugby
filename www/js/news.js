@@ -331,14 +331,9 @@ function loadnewfeed_success(tx, results) {
     var len = results.rows.length;
 //alert(len);
 
-
-
-
     var menu = results.rows.item(0);
 
 
-  //  $('#divimagenew').empty();
-  //  $('#divimagenew').append( '<img src="data:image/png;base64,' + menu.Base64 + '" >');
 
 
     $('#newtitle').empty();
@@ -347,7 +342,7 @@ function loadnewfeed_success(tx, results) {
     $('#modelnews').empty();
     $('#modelnews').append( '<div>' + menu.Body + '</div>');
 
-
+    alert($('#modelnews').height());
 }
 
 function choosefacteam(ID){
