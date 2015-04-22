@@ -348,8 +348,11 @@ function loadnewfeed_success(tx, results) {
 
     if($('#modelnews').height() >= 350){
         alert("Over");
-        $("#modelnews").css("padding-bottom","300px");
+       // $("#modelnews").css("padding-bottom","300px");
+        document.getElementById("modelnews").style.paddingBottom = "300px";
+
     }
+
 
     alert($("#modelnews").css("padding-bottom"));
 
