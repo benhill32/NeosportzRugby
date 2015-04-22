@@ -338,7 +338,7 @@ function loadnewfeed_success(tx, results) {
 
 
 if($('#modelnews').height() >= 450){
-    $('#modelnews').height(height +200);
+   // $('#modelnews').height(height + 200);
 }else{
     $('#modelnews').height(height);
 }
