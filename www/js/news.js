@@ -333,7 +333,15 @@ function loadnewfeed_success(tx, results) {
 
     var menu = results.rows.item(0);
 
+    var height = $('#modelnews').height();
 
+
+
+if($('#modelnews').height() >= 450){
+    $('#modelnews').height(height +200);
+}else{
+    $('#modelnews').height(height);
+}
 
 
     $('#newtitle').empty();
@@ -343,6 +351,8 @@ function loadnewfeed_success(tx, results) {
     $('#modelnews').append( '<div>' + menu.Body + '</div>');
 
     alert($('#modelnews').height());
+
+
 }
 
 function choosefacteam(ID){
