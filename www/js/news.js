@@ -337,10 +337,6 @@ function loadnewfeed_success(tx, results) {
     var menu = results.rows.item(0);
 
 
-    var count = (menu.Body.match(/######/g) || []).length;
-
-    alert(count);
-
   //  $('#divimagenew').empty();
   //  $('#divimagenew').append( '<img src="data:image/png;base64,' + menu.Base64 + '" >');
 
