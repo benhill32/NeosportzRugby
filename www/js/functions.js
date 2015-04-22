@@ -11,7 +11,7 @@ var apptoken = 0;
 var networkconnectionfun= 0;
 var functionyear = "";
 
-var appversionlocal = '1.3.7';
+var appversionlocal = '1.3.8';
 
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
