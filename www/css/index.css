@@ -1080,7 +1080,7 @@ padding: 20px 0px;
 }
 
 .modal .modal-body {
-    max-height: 420px;
+    max-height: 720px;
     overflow-y: auto;
 }
 #basicModaltime .modal-footer{
