@@ -340,8 +340,6 @@ function loadnewfeed_success(tx, results) {
   //  $('#divimagenew').empty();
   //  $('#divimagenew').append( '<img src="data:image/png;base64,' + menu.Base64 + '" >');
 
-    $('#modelnews').height("400");
-
 
     $('#newtitle').empty();
     $('#newtitle').append( '<div>' + menu.Title + '</div>');
