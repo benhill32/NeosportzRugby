@@ -524,7 +524,7 @@ position: fixed;
     .modal-body{
         /* Increase the max height of the modal body to try & avoid both it,
          * and the modal container having scroll bars which results in odd behavior */
-        max-height: 2700px;
+        max-height: 3700px;
     }
 }
 @media (max-width: 480px) {
@@ -688,7 +688,7 @@ position: fixed;
 #modelnews{
     padding: 10px !important;
     -webkit-overflow-scrolling:touch
-overflow-y: scroll !important;
+    overflow-y: scroll !important;
 }
 
 #clubfav{
@@ -766,6 +766,14 @@ overflow-y: scroll !important;
     opacity:0.7;
 
 }
+#basicModalnews .modal-footer:hover{
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+
+}
+
+
 #basicModalContact .modal-footer:hover{
     background-color: #339900;
     color: white;
