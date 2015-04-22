@@ -333,9 +333,7 @@ function loadnewfeed_success(tx, results) {
 
     var menu = results.rows.item(0);
 
-    var height1 = $('#modelnews').height();
 
-alert(height1);
 
 if($('#modelnews').height() >= 450){
    // $('#modelnews').height(height + 200);
@@ -349,7 +347,10 @@ if($('#modelnews').height() >= 450){
 
     $('#modelnews').empty();
     $('#modelnews').append( '<div>' + menu.Body + '</div>');
+    
+    var height1 = $('#modelnews').height();
 
+    alert(height1);
     alert($('#modelnews').height());
 
 
