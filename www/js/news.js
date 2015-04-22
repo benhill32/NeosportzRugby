@@ -346,16 +346,17 @@ function loadnewfeed_success(tx, results) {
 
     var height1 = $('#modelnews').height();
 
-    if($('#modelnews').height() >= 450){
-        alert(height1);
+    if($('#modelnews').height() >= 350){
+        alert("Over");
         $('#modelnews').css({
             'padding-bottom:':'300px'
         });
     }
 
 
- 
+
     alert($('#modelnews').height());
+    alert($('#modelnews').outerHeight());
 
 
 }
