@@ -121,7 +121,7 @@ function numbersponsers_success(tx, results) {
 }
 
 function getdata2(tx) {
-    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '######', '<br>') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + clubidtop + " and DeletedateUTC = 'null' order by DisplayDateUTC Desc";
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '#1##1###', '<br>') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + clubidtop + " and DeletedateUTC = 'null' order by DisplayDateUTC Desc";
 //alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
@@ -321,7 +321,7 @@ function loadnewfeed(ID) {
 
 function loadnewfeed2(tx) {
 
-    var sql = "select Title,replace(Body, '######', '<br>') as Body from MobilevwApp_News_v_2 where ID=" + IDNews;
+    var sql = "select Title,replace(Body, '##1##1##', '<br>') as Body from MobilevwApp_News_v_2 where ID=" + IDNews;
      // alert(sql);
     tx.executeSql(sql, [], loadnewfeed_success);
 }
