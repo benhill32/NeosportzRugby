@@ -337,7 +337,7 @@ function loadnewfeed_success(tx, results) {
     var menu = results.rows.item(0);
 
 
-    var count = (menu.body.match(/######/g) || []).length;
+    var count = (menu.Body.match(/######/g) || []).length;
 
     alert(count);
 
