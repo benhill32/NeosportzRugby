@@ -509,6 +509,9 @@ position: fixed;
 #modelnews{
     padding:10px !important;
 }
+#modelnews{
+    padding-bottom: 300px !important;
+}
 @media (max-width: 480px) {
 
     .modal {
