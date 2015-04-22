@@ -344,22 +344,6 @@ function loadnewfeed_success(tx, results) {
     $('#modelnews').empty();
     $('#modelnews').append( '<div>' + menu.Body + '</div>');
 
-    var height1 = $('#modelnews').height();
-
-    if($('#modelnews').height() >= 350){
-        alert("Over");
-       // $("#modelnews").css("padding-bottom","300px");
-        document.getElementById("modelnews").style.paddingBottom = "300px";
-
-    }
-
-
-    alert($("#modelnews").css("padding-bottom"));
-
-    alert($('#modelnews').height());
-    alert($('#modelnews').outerHeight());
-
-
 }
 
 function choosefacteam(ID){
