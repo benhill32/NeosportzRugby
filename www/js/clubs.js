@@ -16,7 +16,7 @@ function onDeviceReady() {
 
 
 function getdata(tx) {
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,History,Contacts,UpdateSecondsUTC,Color from MobileApp_clubs order by name";
+    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '######', '<br>') as History,replace(Contacts, '######', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs order by name";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
@@ -59,7 +59,7 @@ function loadhistory(ID){
 
 function gethistory(tx) {
 
-    var sql = "select History from MobileApp_clubs where ID=" + IDhist;
+    var sql = "select replace(History, '######', '<br>') as History from MobileApp_clubs where ID=" + IDhist;
   //  alert(sql);
     tx.executeSql(sql, [], gethistory_success);
 }
@@ -85,7 +85,7 @@ function loadcontacts(ID){
 
 function getcontacts(tx) {
 
-    var sql = "select Contacts from MobileApp_clubs where ID=" + IDcon;
+    var sql = "select replace(Contacts, '######', '<br>') as Contacts from MobileApp_clubs where ID=" + IDcon;
     //  alert(sql);
     tx.executeSql(sql, [], getcontacts_success);
 }
