@@ -680,10 +680,15 @@ position: fixed;
     clear: both;
 
 }
-#modelhistory,#modelnews{
+#modelhistory{
     padding: 10px !important;
     -webkit-overflow-scrolling:touch
     overflow-y: scroll !important;
+}
+#modelnews{
+    padding: 10px !important;
+    -webkit-overflow-scrolling:touch
+overflow-y: scroll !important;
 }
 
 #clubfav{
