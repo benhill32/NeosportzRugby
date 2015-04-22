@@ -351,7 +351,7 @@ function loadnewfeed_success(tx, results) {
         $("#modelnews").css("padding-bottom","300px");
     }
 
-    alert($("div.header").css("padding-bottom"));
+    alert($("#modelnews").css("padding-bottom"));
 
     alert($('#modelnews').height());
     alert($('#modelnews').outerHeight());
