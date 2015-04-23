@@ -52,7 +52,7 @@ window.location = "../pages/clubteams.html?ID=" + ID
 
 function loadhistory(ID){
     IDhist = ID;
-    $('body').css('position','fixed');
+    //$('body').css('position','fixed');
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     db.transaction(gethistory, errorCBfunc, successCBfunc);
 
