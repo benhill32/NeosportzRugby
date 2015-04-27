@@ -316,8 +316,13 @@ var away2 = 0;
         away2=1;
     }
 
+
         passscoretoserver("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
-    onclicksyncloaddata();
+
+    window.setTimeout(function(){
+        onclicksyncloaddata();
+    }, 1500);
+
 }
 
 
@@ -376,8 +381,9 @@ function getscorefromtable_success(tx, results) {
 
     passscoretoserver("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
 
-    onclicksyncloaddata();
-
+    window.setTimeout(function(){
+        onclicksyncloaddata();
+    }, 1500);
 
 }
 

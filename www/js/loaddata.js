@@ -22,7 +22,7 @@ var tokenldata ="";
 // Cordova is ready
 //
 
-var appversionlocalf = '1.3.8';
+var appversionlocalf = '1.3.9';
 
 
 function onDeviceReadyloaddata() {
