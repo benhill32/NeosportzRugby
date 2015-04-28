@@ -321,9 +321,12 @@ var away2 = 0;
 
     alert(response);
 
-    window.setTimeout(function(){
+    if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
+        alert(response);
         onclicksyncloaddata();
-    }, 1500);
+    }
+
+
 
 }
 
@@ -385,10 +388,11 @@ function getscorefromtable_success(tx, results) {
 
     alert(response);
 
-
-    window.setTimeout(function(){
+    if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
+        alert(response);
         onclicksyncloaddata();
-    }, 1500);
+    }
+    
 
 }
 
