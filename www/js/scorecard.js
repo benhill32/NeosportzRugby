@@ -319,10 +319,10 @@ var away2 = 0;
 
     var response =   passscoretoserverscorecard("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
 
-    alert(response);
+   // alert(response);
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
-        alert(response);
+      //  alert(response);
         onclicksyncloaddata();
     }
 
@@ -386,13 +386,13 @@ function getscorefromtable_success(tx, results) {
 
  var response = passscoretoserverscorecard("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
 
-    alert(response);
+    //alert(response);
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
-        alert(response);
+       // alert(response);
         onclicksyncloaddata();
     }
-    
+
 
 }
 
