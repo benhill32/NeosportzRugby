@@ -178,6 +178,25 @@ function successCBfunc() {
     //  alert("success!");
 }
 
+function passscoretoserverscorecard(testvar){
+
+    var Http = null;
+    Http = new XMLHttpRequest();
+
+    var url = "http://rugby.neosportz.com/loaddatafromapp.aspx";
+    var params = "?" + testvar;
+
+    Http.open("GET", url + params, false);
+    // alert(url + params);
+
+
+    Http.send();
+    var json = Http.responseText;
+
+    return json;
+}
+
+
 function passscoretoserver(testvar){
 
     var http = new XMLHttpRequest();
