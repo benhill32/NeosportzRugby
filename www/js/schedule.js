@@ -276,7 +276,7 @@ function getMenu_success(tx, results) {
         var ampm = h > 12 ? h-12 + ':' + m +'PM' : h + ':' + m +'AM';
 
         if(menu.Cancel== 0) {
-            $('#divschedules').append('<Div class="mainmenuresult" id="' + divid + '" align="left" >' +
+            $('#divschedules').append('<canvas  class="mainmenuresult" id="' + divid + '" align="left" >' +
                 '<div id="schleft">' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName  +
 
@@ -292,7 +292,7 @@ function getMenu_success(tx, results) {
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
-                '</Div>');
+                '</canvas>');
         }else{
             $('#divschedules').append('<Div class="mainmenuresultcancel" align="left" >' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
@@ -490,9 +490,20 @@ function loadinfo_success2(tx, results) {
 
 function loadsocial(ID) {
 
-    window.plugins.socialsharing.share('Message and subject', 'The subject')
+   // window.plugins.socialsharing.share('Message and subject', 'The subject')
+var name = "game" + ID;
 
+    window.canvas2ImagePlugin.saveImageDataToLibrary(
+        function(msg){
+            console.log(msg);
+        },
+        function(err){
+            console.log(err);
+        },
+        document.getElementById(name)
+    );
 
+    
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 }
 
