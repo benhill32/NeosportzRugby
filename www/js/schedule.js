@@ -492,16 +492,16 @@ function loadsocial(ID) {
 
    // window.plugins.socialsharing.share('Message and subject', 'The subject')
 var name = "game" + ID;
+    window.setTimeout(function(){
+        navigator.screenshot.save(function(error,res){
+            if(error){
+                alert(error);
+            }else{
+            //   alert('ok',res.filePath); //should be path/to/myScreenshot.jpg
+            }
+        },'jpg',50,name);
 
-    navigator.screenshot.save(function(error,res){
-        if(error){
-            alert(error);
-        }else{
-            alert('ok',res.filePath); //should be path/to/myScreenshot.jpg
-        }
-    },'jpg',50,name);
-
-
+    }, 2000);
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 }
 
