@@ -495,11 +495,11 @@ var name = "game" + ID;
 
     navigator.screenshot.save(function(error,res){
         if(error){
-            console.error(error);
+            alert(error);
         }else{
-            console.log('ok',res.filePath); //should be path/to/myScreenshot.jpg
+            alert('ok',res.filePath); //should be path/to/myScreenshot.jpg
         }
-    },'jpg',50,'myScreenShot');
+    },'jpg',50,name);
 
 
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
