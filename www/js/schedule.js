@@ -492,7 +492,7 @@ function loadsocial(ID) {
 
     var divid = "game" + ID;
 
-    html2canvas($("#widget" + ID), {
+    html2canvas($("#game" + ID), {
         onrendered: function(canvas) {
             theCanvas = canvas;
             document.body.appendChild(canvas);
