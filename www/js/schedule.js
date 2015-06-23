@@ -490,21 +490,21 @@ function loadinfo_success2(tx, results) {
 
 function loadsocial(ID) {
 
-    var divid = "game" + ID;
+    var divid = "#game" + ID;
+    $(function () {
+        html2canvas($(divid), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
 
-    html2canvas($("#game" + ID), {
-        onrendered: function(canvas) {
-            theCanvas = canvas;
-            document.body.appendChild(canvas);
-
-            // Convert and download as image
-            Canvas2Image.saveAsPNG(canvas);
-            $("#img-out").append(canvas);
+                // Convert and download as image
+                Canvas2Image.saveAsPNG(canvas);
+                $("#img-out").append(canvas);
             // Clean up
             //document.body.removeChild(canvas);
-        }
+            }
+        });
     });
-
 
 
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
