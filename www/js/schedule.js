@@ -490,20 +490,7 @@ function loadinfo_success2(tx, results) {
 
 function loadsocial(ID) {
 
-    var divid = "game" + ID;
-
-    html2canvas($("#game" + ID), {
-        onrendered: function(canvas) {
-            theCanvas = canvas;
-            document.body.appendChild(canvas);
-
-            // Convert and download as image
-            Canvas2Image.saveAsPNG(canvas);
-            $("#img-out").append(canvas);
-            // Clean up
-            //document.body.removeChild(canvas);
-        }
-    });
+    window.plugins.socialsharing.share('Message and subject', 'The subject')
 
 
 
