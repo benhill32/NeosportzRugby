@@ -489,7 +489,7 @@ function loadinfo_success2(tx, results) {
 
 function loadsocial(ID) {
 
-alert("game" + ID);
+    window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 }
 
 
