@@ -489,10 +489,10 @@ function loadinfo_success2(tx, results) {
 }
 
 function loadsocial(ID) {
-alert("1");
+
     var divid = "#game" + ID;
     $(function () {
-        html2canvas($(divid), {
+        html2canvas($("#widget"), {
             onrendered: function(canvas) {
                 theCanvas = canvas;
                 document.body.appendChild(canvas);
@@ -506,7 +506,7 @@ alert("1");
         });
     });
 
-    alert("2");
+
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 }
 
