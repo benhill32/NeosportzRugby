@@ -27,7 +27,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="13" />
     <preference name="android-installLocation" value="auto" />
-    <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />
+    <gap:plugin name="com.darktalker.cordova.screenshot" version="0.1.0" />
     <gap:plugin name="org.apache.cordova.file"/>
     <gap:plugin name="org.apache.cordova.console" />
     <gap:plugin name="org.apache.cordova.device" />

@@ -36,8 +36,8 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27415732">
-              <caret line="495" column="3" selection-start-line="495" selection-start-column="3" selection-end-line="495" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.21685393">
+              <caret line="492" column="5" selection-start-line="492" selection-start-column="5" selection-end-line="492" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
+              <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -827,14 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -842,6 +834,14 @@
           <folding>
             <element signature="n#!!block;n#countProperties#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,8 +863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27415732">
-          <caret line="495" column="3" selection-start-line="495" selection-start-column="3" selection-end-line="495" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.21685393">
+          <caret line="492" column="5" selection-start-line="492" selection-start-column="5" selection-end-line="492" selection-end-column="5" />
           <folding />
         </state>
       </provider>

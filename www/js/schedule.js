@@ -490,10 +490,16 @@ function loadinfo_success2(tx, results) {
 
 function loadsocial(ID) {
 
-    window.plugins.socialsharing.share('Message and subject', 'The subject')
+   // window.plugins.socialsharing.share('Message and subject', 'The subject')
 var name = "game" + ID;
 
-   
+    navigator.screenshot.save(function(error,res){
+        if(error){
+            console.error(error);
+        }else{
+            console.log('ok',res.filePath); //should be path/to/myScreenshot.jpg
+        }
+    },'jpg',50,'myScreenShot');
 
 
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
