@@ -7,6 +7,7 @@ var listfollow = 0;
 var fliter = 0;
 var lat = 0;
 var long = 0;
+var GameID = 0;
 var isadmin = 0;
 var devicePlatformsch =0;
 var allowscore = 0;
@@ -489,7 +490,24 @@ function loadinfo_success2(tx, results) {
 
 function loadsocial(ID) {
 
-    window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
+    var divid = "game" + ID;
+
+    html2canvas($("#widget" + ID), {
+        onrendered: function(canvas) {
+            theCanvas = canvas;
+            document.body.appendChild(canvas);
+
+            // Convert and download as image
+            Canvas2Image.saveAsPNG(canvas);
+            $("#img-out").append(canvas);
+            // Clean up
+            //document.body.removeChild(canvas);
+        }
+    });
+
+
+
+   // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 }
 
 
