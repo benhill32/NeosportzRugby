@@ -265,7 +265,7 @@ function getMenu_success(tx, results) {
         var month = split[1];
         var year = split[0];
         var day = split[2];
-
+        var divid = "game" + menu.ID;
 
         var timesplit = res[1].split(":")
         var h = timesplit[0];
@@ -275,7 +275,7 @@ function getMenu_success(tx, results) {
         var ampm = h > 12 ? h-12 + ':' + m +'PM' : h + ':' + m +'AM';
 
         if(menu.Cancel== 0) {
-            $('#divschedules').append('<Div class="mainmenuresult" align="left" >' +
+            $('#divschedules').append('<Div class="mainmenuresult" id="' + divid + '" align="left" >' +
                 '<div id="schleft">' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName  +
 
@@ -376,14 +376,23 @@ function loadinfo_success2(tx, results) {
     var text2 =menu.HomeName + ' vs ' + menu.AwayName;
 
     $('#score').hide();
+
     $('#cancell').hide();
     $('#referee').hide();
     // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
     $('#divdefault').hide();
+
+
+    $("#socialshare").click(function () {
+        loadsocial(menu.ID);
+    });
+
+
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
 
         if(isadmin==1) {
+
             $('#score').show();
             $('#divdefault').show();
             $("#divdefault").click(function () {
@@ -477,6 +486,13 @@ function loadinfo_success2(tx, results) {
         });
     }
 }
+
+function loadsocial(ID) {
+
+alert("game" + ID);
+}
+
+
 
 function loaddefaultgames(ID){
 
