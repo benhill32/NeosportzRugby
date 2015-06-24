@@ -257,20 +257,21 @@
 
                 </div>
                 <div style="width: 90%; border:1px solid black;margin: 10px;  ">
-                    <img id="target" style="max-width: 100%;max-height: 100%;"  >
-                    <script type="text/javascript">
-                    $('#target').cropper({
-                    aspectRatio: 16 / 9,
-                    autoCropArea: 1,
-                    strict: false,
-                    guides: false,
-                    highlight: false,
-                    dragCrop: false,
-                    cropBoxMovable: false,
-                    cropBoxResizable: false
-                    });
-                    </script>
+                    <img id="target" style="max-width: 100%;max-height: 100%;" src="..//img/game758.jpg" alt="Picture">
+
                 </div>
+                <script type="text/javascript">
+                    $('#target').cropper({
+                        aspectRatio: 16 / 8,
+                        autoCropArea: 1,
+                        strict: true,
+                        guides: false,
+                        highlight: false,
+                        dragCrop: true,
+                        cropBoxMovable: true,
+                        cropBoxResizable: false
+                    });
+                </script>
                 <div class="modal-footer" data-dismiss="modal" align="center">
                     <div class="modelfloat50 left"  align="center">
 
