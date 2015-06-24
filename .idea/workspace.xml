@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedules.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="schedules.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="269" column="46" selection-start-line="269" selection-start-column="46" selection-end-line="269" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.6099537">
+              <caret line="281" column="25" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cropper.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cropper.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/cropper.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41231126">
+            <state vertical-scroll-proportion="-12.24138">
               <caret line="63" column="28" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="28" />
               <folding />
             </state>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/js/jr-crop.js" />
-        <option value="$PROJECT_DIR$/www/pages/schedules.html" />
         <option value="$PROJECT_DIR$/www/css/cropper.css" />
+        <option value="$PROJECT_DIR$/www/pages/schedules.html" />
       </list>
     </option>
   </component>
@@ -784,10 +784,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/cropper.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.24138">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="269" column="46" selection-start-line="269" selection-start-column="46" selection-end-line="269" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.6099537">
+          <caret line="281" column="25" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -800,14 +808,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/cropper.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41231126">
-          <caret line="63" column="28" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
