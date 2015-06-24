@@ -261,15 +261,23 @@
 
                 </div>
                 <script type="text/javascript">
-                    $('#target').cropper({
-                        aspectRatio: 16 / 8,
-                        autoCropArea: 1,
-                        strict: true,
-                        guides: false,
-                        highlight: false,
-                        dragCrop: true,
-                        cropBoxMovable: true,
-                        cropBoxResizable: false
+                    var $image = $('#target'),
+                            cropBoxData,
+                            canvasData;
+
+                    $('#basicModalimagecrop').on('shown.bs.modal', function () {
+                        $image.cropper({
+                            autoCropArea: 0.5,
+                            built: function () {
+                                // Strict mode: set crop box data first
+                                $image.cropper('setCropBoxData', cropBoxData);
+                                $image.cropper('setCanvasData', canvasData);
+                            }
+                        });
+                    }).on('hidden.bs.modal', function () {
+                        cropBoxData = $image.cropper('getCropBoxData');
+                        canvasData = $image.cropper('getCanvasData');
+                        $image.cropper('destroy');
                     });
                 </script>
                 <div class="modal-footer" data-dismiss="modal" align="center">
