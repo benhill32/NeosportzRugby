@@ -61,7 +61,7 @@
   position: absolute;
   display: block;
   filter: alpha(opacity=50);
-  border: 0 dashed #fff;
+  border: 0 dashed lightgrey;
   opacity: .5;
 }
 .cropper-dashed.dashed-h {

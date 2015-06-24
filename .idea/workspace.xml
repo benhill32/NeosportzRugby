@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedules.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schedules.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3738426">
+            <state vertical-scroll-proportion="-12.423077">
               <caret line="269" column="46" selection-start-line="269" selection-start-column="46" selection-end-line="269" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -60,6 +60,16 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cropper.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/css/cropper.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41231126">
+              <caret line="63" column="28" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,6 +156,7 @@
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/js/jr-crop.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
+        <option value="$PROJECT_DIR$/www/css/cropper.css" />
       </list>
     </option>
   </component>
@@ -419,17 +430,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="797" column="62" selection-start-line="797" selection-start-column="19" selection-end-line="797" selection-end-column="62" />
-          <folding>
-            <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
-            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -786,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3738426">
+        <state vertical-scroll-proportion="-12.423077">
           <caret line="269" column="46" selection-start-line="269" selection-start-column="46" selection-end-line="269" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -800,6 +800,14 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/cropper.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41231126">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
