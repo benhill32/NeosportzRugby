@@ -67,8 +67,8 @@
       <file leaf-file-name="jr-crop.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/jr-crop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6050847">
-              <caret line="21" column="277" selection-start-line="21" selection-start-column="277" selection-end-line="21" selection-end-column="277" />
+            <state vertical-scroll-proportion="0.11525424">
+              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -385,7 +385,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -831,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/jr-crop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6050847">
-          <caret line="21" column="277" selection-start-line="21" selection-start-column="277" selection-end-line="21" selection-end-column="277" />
+        <state vertical-scroll-proportion="0.11525424">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
           <folding />
         </state>
       </provider>
