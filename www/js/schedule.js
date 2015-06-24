@@ -498,7 +498,7 @@ var name = "game" + ID;
                 alert(error);
             }else{
               alert('ok' + res.filePath); //should be path/to/myScreenshot.jpg
-                $('#thepicture').attr("src", res.filepath);
+                $('#thepicture').attr("src", res.URI);
                 $('#basicModalimagecrop').modal('show');
 
             }
