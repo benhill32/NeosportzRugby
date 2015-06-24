@@ -493,7 +493,7 @@ function loadsocial(ID) {
    // window.plugins.socialsharing.share('Message and subject', 'The subject')
 var name = "game" + ID;
     window.setTimeout(function(){
-        navigator.screenshot.save(function(error,res){
+        navigator.screenshot.URI(function(error,res){
             if(error){
                 alert(error);
             }else{
