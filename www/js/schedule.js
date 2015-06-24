@@ -497,12 +497,13 @@ var name = "game" + ID;
             if(error){
                 alert(error);
             }else{
+        alert(res.URI);
              alert('ok' + res.filePath); //should be path/to/myScreenshot.jpg
-                $('#thepicture').attr("src", "//Pictures//" + name + ".jpg");
+                $('#thepicture').attr("src", res.URI);
                 $('#basicModalimagecrop').modal('show');
 
             }
-        },'jpg',50,name);
+        },50);
 
     }, 1000);
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
