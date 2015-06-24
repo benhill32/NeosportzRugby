@@ -497,10 +497,10 @@ var name = "game" + ID;
             if(error){
                 alert(error);
             }else{
-              alert('ok' + res.filePath); //should be path/to/myScreenshot.jpg
+             // alert('ok' + res.filePath); //should be path/to/myScreenshot.jpg
                 $('#thepicture').attr("src", res.URI);
                 $('#basicModalimagecrop').modal('show');
-
+alert(res.URI);
             }
         },'jpg',50,name);
 
