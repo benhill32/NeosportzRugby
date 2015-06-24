@@ -267,10 +267,7 @@
 
                     $('#basicModalimagecrop').on('shown.bs.modal', function () {
                         $image.cropper({
-                            autoCropArea: 1,
-                            cropBoxResizable: false,
-                            cropBoxMovable: true,
-                            dragCrop: true,
+                            autoCropArea:0.75,
                             built: function () {
                                 // Strict mode: set crop box data first
                                 $image.cropper('setCropBoxData', cropBoxData);
