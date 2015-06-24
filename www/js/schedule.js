@@ -497,9 +497,10 @@ var name = "game" + ID;
             if(error){
                 alert(error);
             }else{
-                $('#thepicture').attr("src", res.URI);
-                var picture = $('#thepicture');
-                picture.guillotine({width: 400, height: 600});
+                $('#target').attr("src", res.URI);
+                jQuery(function($) {
+                    $('#target').Jcrop();
+                });
                 $('#basicModalimagecrop').modal('show');
 
             }
