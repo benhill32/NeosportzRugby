@@ -507,13 +507,9 @@ var name = "game" + ID;
     }, 500);
    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 
-        $('#target').Jcrop({
-            aspectRatio: 1,  //If you want to keep aspectRatio
-            boxWidth: 650,   //Maximum width you want for your bigger images
-            boxHeight: 400  //Maximum Height for your bigger images
-        });
 
 
+    $(function(){ $('#target').Jcrop(); });
 }
 
 
