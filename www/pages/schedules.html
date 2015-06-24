@@ -41,6 +41,9 @@
             $(this).addClass("on");
         });
     });
+
+
+  
 </script>
 
     <script type="text/javascript"  charset="utf-8">
@@ -48,6 +51,8 @@
     function onDeviceReadysch() {
         refreshdata();
     }
+
+
 
 
 </script>
@@ -247,12 +252,12 @@
     </div>
     <div class="modal" id="basicModalimagecrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content"  align="center">
                 <div class="modal-header">
                     Drag the image to move it or resize the window to check its responsiveness.
 
                 </div>
-                <div class="modal-body" align="center" style="width: 90%; border:1px solid black;">
+                <div class="modal-body" style="width: 90%; border:1px solid black;margin: 10px;">
                     <img id="thepicture" >
                 </div>
                 <div class="modal-footer" data-dismiss="modal" align="center">
@@ -274,7 +279,7 @@
 
 </div>
 
-<div class="footer">
+<div class="footer" data-toggle="modal" data-target="#basicModalimagecrop">
     <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
     <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
 </div>

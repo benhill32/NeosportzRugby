@@ -499,7 +499,7 @@ var name = "game" + ID;
             }else{
                 $('#thepicture').attr("src", res.URI);
                 var picture = $('#thepicture');
-                picture.guillotine({width: 400, height: 300});
+                picture.guillotine({width: 400, height: 600});
                 $('#basicModalimagecrop').modal('show');
 
             }
