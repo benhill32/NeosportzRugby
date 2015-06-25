@@ -392,7 +392,7 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
         });
     }else{
         $("#socialshare").click(function () {
-            loadsocialIOS(socialIOS);
+            loadsocialIOS2(socialIOS);
         });
 
     }
@@ -494,6 +494,28 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
         });
     }
 }
+
+function loadsocialIOS2(ID) {
+    window.setTimeout(function(){
+        navigator.screenshot.save(function(error,res){
+            if(error){
+                console.error(error);
+            }else{
+                console.log('ok',res.filePath); //should be path/to/myScreenshot.jpg
+              //  $('#target').attr("src", res.filePath);
+
+             //   $('#basicModalimagecrop').modal('show');
+            }
+        },'jpg',50,'myScreenShot');
+
+
+
+
+    }, 500);
+
+}
+
+
 
 function loadsocialIOS(ID){
 
