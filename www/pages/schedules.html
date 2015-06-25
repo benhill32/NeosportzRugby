@@ -275,7 +275,7 @@
 
                     $('#basicModalimagecrop').on('shown.bs.modal', function () {
                         $image.cropper({
-                            autoCropArea:1,
+                            autoCropArea:0.5,
                             cropBoxResizable: true,
                            // preview: '.img-preview',
                             built: function () {
@@ -325,10 +325,10 @@
 
 
                                 if (devicePlatformsch == "Android") {
-                                    window.plugins.socialsharing.share('Neosportz Image', 'Neosportz Image', dataURL, 'https://play.google.com/store/apps/details?id=neocom.neosportzRugby')
+                                    window.plugins.socialsharing.share(null, 'Neosportz Image', dataURL, 'https://play.google.com/store/apps/details?id=neocom.neosportzRugby')
                                 }else{
 
-                                    window.plugins.socialsharing.share('Neosportz Image', 'Neosportz Image', dataURL, 'https://itunes.apple.com/us/app/neosportz-rugby/id968943127?ls=1&mt=8')
+                                    window.plugins.socialsharing.share(null, 'Neosportz Image', dataURL, 'https://itunes.apple.com/us/app/neosportz-rugby/id968943127?ls=1&mt=8')
 
                                 }
                                 $('#basicModalimagecrop').modal('hide');
