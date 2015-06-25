@@ -516,8 +516,8 @@ function loadsocialIOS(ID){
 
 
 
-    var message = mess[1] + "<br>" + ampm + '  ' + day + '/' +  month + '/' + year + "<br>" + mess[2] + "<br>" + mess[3];
-    alert(message);
+    var message = mess[1] + "" + ampm + '  ' + day + '/' +  month + '/' + year + "" + mess[2] + "" + mess[3];
+    //alert(message);
         window.plugins.socialsharing.share(message, 'Neosportz App')
 }
 
