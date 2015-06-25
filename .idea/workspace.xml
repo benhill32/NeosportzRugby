@@ -36,8 +36,8 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2950058">
-              <caret line="511" column="24" selection-start-line="511" selection-start-column="24" selection-end-line="511" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.47270617">
+              <caret line="520" column="52" selection-start-line="520" selection-start-column="52" selection-end-line="520" selection-end-column="52" />
               <folding>
                 <element signature="n#!!block;n#loadinfo_success2#0" expanded="false" />
               </folding>
@@ -418,7 +418,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1697" height="1026" extended-state="1" />
+    <frame x="-8" y="0" width="1697" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26888758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -845,8 +845,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2950058">
-          <caret line="511" column="24" selection-start-line="511" selection-start-column="24" selection-end-line="511" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.47270617">
+          <caret line="520" column="52" selection-start-line="520" selection-start-column="52" selection-end-line="520" selection-end-column="52" />
           <folding>
             <element signature="n#!!block;n#loadinfo_success2#0" expanded="false" />
           </folding>
