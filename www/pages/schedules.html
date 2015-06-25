@@ -257,15 +257,15 @@
                     Drag the image to move it or resize the window to check its responsiveness.
 
                 </div>
-                <div style="width: 70%; border:1px solid black;margin: 10px;   ">
+                <div style="width: 70%;max-height: 300%; border:1px solid black;margin: 10px;   ">
                      <img id="target" style="max-width: 100%;max-height: 100%;"  alt="Picture" src="..//img/game758.jpg">
                     <!-- <img id="target" style="max-width: 100%;max-height: 100%;" src="..//img/game758.jpg" alt="Picture">-->
 
 
                 </div>
 
-                <div style="width: 70%;min-height: 150px; display: none;" id="divcanvas" >
-                    <canvas id="canvas1"></canvas>
+                <div style="width: 70%;max-height: 150px;" id="divcanvas" >
+
                 </div>
 
                 <script type="text/javascript">
@@ -319,13 +319,21 @@
 
                             result = $image.cropper(data.method, data.option);
 
-                            if (data.method === 'getCroppedCanvas') {
-                                $('#canvas1').html(result);
 
-                                var canvas = document.getElementById("canvas1");
-                                var dataURL = canvas.toDataURL("image/jpeg", 1.0);
-                             //   alert(dataURL);
-                                window.plugins.socialsharing.share(null, 'Android filename', dataURL, null)
+
+                            if (data.method === 'getCroppedCanvas') {
+                               // $('#divcanvas').html(result);
+
+
+                                   // var canvas = $('canvas');
+                                   // alert(canvas);
+                                    // var canvas =  $('#divcanvas').find('canvas');
+                                    var dataURL = result.toDataURL("image/jpeg", 1.0);
+                                 //   alert(dataURL);
+                                console.log(dataURL);
+                                     window.plugins.socialsharing.share(null, 'Android filename', dataURL, null)
+
+
                             }
 
                             if ($.isPlainObject(result) && $target) {
