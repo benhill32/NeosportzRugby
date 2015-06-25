@@ -508,15 +508,17 @@ function saveImageToPhone(url, success, error) {
             imageDataUrl = canvas.toDataURL('image/jpeg', 1.0);
             imageData = imageDataUrl.replace(/data:image\/jpeg;base64,/, '');
 
-            alert(imageDataUrl);
 
-            cordova.exec(
-                success,
-                error,
-                'Canvas2ImagePlugin',
-                'saveImageDataToLibrary',
-                [imageData]
-            );
+            $('#target').attr("src", imageDataUrl);
+
+            $('#basicModalimagecrop').modal('show');
+          //  cordova.exec(
+          //      success,
+          //      error,
+          //      'Canvas2ImagePlugin',
+          //      'saveImageDataToLibrary',
+          //      [imageData]
+          //  );
         }
         catch(e) {
             alert(e.message);
