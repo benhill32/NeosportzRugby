@@ -275,7 +275,6 @@
 
                     $('#basicModalimagecrop').on('shown.bs.modal', function () {
                         $image.cropper({
-                            aspectRatio: 16 / 5,
                             autoCropArea:1,
                             cropBoxResizable: true,
                            // preview: '.img-preview',
@@ -322,7 +321,12 @@
                                     var dataURL = result.toDataURL("image/jpeg", 1.0);
                                     //   alert(dataURL);
                                     console.log(dataURL);
-                                    window.plugins.socialsharing.share(null, 'Neosportz Image', dataURL, null)
+                                if (devicePlatformsch == "Android") {
+                                    window.plugins.socialsharing.share(null, 'Neosportz Image', dataURL, 'https://play.google.com/store/apps/details?id=neocom.neosportzRugby')
+                                }else{
+
+                                    window.plugins.socialsharing.share(null, 'Neosportz Image', dataURL, 'https://itunes.apple.com/us/app/neosportz-rugby/id968943127?ls=1&mt=8')
+                                }
                             }
 
                             if ($.isPlainObject(result) && $target) {
