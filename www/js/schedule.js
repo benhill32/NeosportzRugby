@@ -519,7 +519,7 @@ function loadsocialIOS(ID){
     var message = mess[1] + "" + ampm + '  ' + day + '/' +  month + '/' + year + "" + mess[2] + "" + mess[3];
     //alert(message);
      //   window.plugins.socialsharing.share('dsadsadsadasdad dsa dasa', null, null, 'http://www.x-services.nl');
-    window.plugins.socialsharing.share('Message, image and link', null, 'https://www.google.nl/images/srpr/logo4w.png', null);
+    window.plugins.socialsharing.share('Message, image and link', 'Message, image and link', 'https://www.google.nl/images/srpr/logo4w.png', null);
   //  window.plugins.socialsharing.shareViaFacebook("dsadsadsadasdad dsa dasa", null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
 }
 
