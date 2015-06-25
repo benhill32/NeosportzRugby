@@ -257,17 +257,15 @@
                     Drag the image to move it or resize the window to check its responsiveness.
 
                 </div>
-                <div style="width: 70%; border:1px solid black;margin: 10px;  ">
-                     <img id="target" style="max-width: 100%;max-height: 100%;"  alt="Picture">
+                <div style="width: 70%; border:1px solid black;margin: 10px;   ">
+                     <img id="target" style="max-width: 100%;max-height: 100%;"  alt="Picture" src="..//img/game758.jpg">
                     <!-- <img id="target" style="max-width: 100%;max-height: 100%;" src="..//img/game758.jpg" alt="Picture">-->
 
 
                 </div>
 
-                <div style="width: 70%;min-height: 150px;" >
-                    <div class="img-preview preview-lg" >
-
-                    </div>
+                <div style="width: 70%;min-height: 150px; display: none;" id="divcanvas" >
+                    <canvas id="canvas1"></canvas>
                 </div>
 
                 <script type="text/javascript">
@@ -280,7 +278,7 @@
                             aspectRatio: 16 / 5,
                             autoCropArea:1,
                             cropBoxResizable: false,
-                            preview: '.img-preview',
+                           // preview: '.img-preview',
                             built: function () {
                                 // Strict mode: set crop box data first
                                 $image.cropper('setCropBoxData', cropBoxData);
@@ -293,15 +291,67 @@
                         canvasData = $image.cropper('getCanvasData');
                         $image.cropper('destroy');
                     });
+
+
+                    $(document.body).on('click', '[data-method]', function () {
+                        var data = $(this).data(),
+                                $target,
+                                result;
+
+                        if (!$image.data('cropper')) {
+                            return;
+                        }
+
+                        if (data.method) {
+                            data = $.extend({}, data); // Clone a new one
+
+                            if (typeof data.target !== 'undefined') {
+                                $target = $(data.target);
+
+                                if (typeof data.option === 'undefined') {
+                                    try {
+                                        data.option = JSON.parse($target.val());
+                                    } catch (e) {
+                                        console.log(e.message);
+                                    }
+                                }
+                            }
+
+                            result = $image.cropper(data.method, data.option);
+
+                            if (data.method === 'getCroppedCanvas') {
+                                $('#canvas1').html(result);
+
+                                var canvas = document.getElementById("canvas1");
+                                var dataURL = canvas.toDataURL("image/jpeg", 1.0);
+                             //   alert(dataURL);
+                                window.plugins.socialsharing.share(null, 'Android filename', dataURL, null)
+                            }
+
+                            if ($.isPlainObject(result) && $target) {
+                                try {
+                                    $target.val(JSON.stringify(result));
+                                } catch (e) {
+                                    console.log(e.message);
+                                }
+                            }
+
+                        }
+                    });
+
+
                 </script>
-                <div class="modal-footer" data-dismiss="modal" align="center">
-                    <div class="modelfloat50 left"  align="center">
+                <div class="modal-footer"  align="center">
+                    <div class="modelfloat50 left"  align="center" data-dismiss="modal">
 
                         Close
                     </div>
-                    <div class="modelfloat50"  align="center">
+                    <div class="modelfloat50"  align="center"  data-method="getCroppedCanvas">
 
-                        Crop
+                         <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;getCroppedCanvas&quot;)">
+              Share
+            </span>
+                        </button>
                     </div>
                 </div>
             </div>
