@@ -508,7 +508,7 @@ function saveImageToPhone(url, success, error) {
             imageDataUrl = canvas.toDataURL('image/jpeg', 1.0);
             imageData = imageDataUrl.replace(/data:image\/jpeg;base64,/, '');
 
-            alert(imageData);
+            alert(imageDataUrl);
 
             cordova.exec(
                 success,
