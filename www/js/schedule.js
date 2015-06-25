@@ -497,7 +497,28 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
 
 function loadsocialIOS(ID){
     alert(ID);
+    var mess = ID.split("||");
 
+    var res = (mess[0]).split("T");
+    var split = res[0].split("-");
+    var month = split[1];
+    var year = split[0];
+    var day = split[2];
+
+
+    var split2 = res[1].split(":");
+
+    var hours = split2[0]
+    var mins = split2[1]
+
+    var ampm = hours > 12 ? hours-12 + ':' + mins +'PM' : hours + ':' + mins +'AM';
+    var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
+
+
+
+    var message = mess[1] + "<br>" + ampm + '  ' + day + '/' +  month + '/' + year + "<br>" + mess[2] + "<br>" + mess[3];
+
+        window.plugins.socialsharing.share(message, 'Neosportz App')
 }
 
 
