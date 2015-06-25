@@ -165,9 +165,9 @@ function getnewfeed_success(tx, results) {
 
                 if ((menu.Body).length <= 200) {
 
-                    $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left">' +
+                    $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
 
-                        '<Div id="divnew1"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
+                        '<Div id="divnew1"   > ' +
                         '' + imgicon +
                         '</Div>' +
 
@@ -181,15 +181,15 @@ function getnewfeed_success(tx, results) {
 
 
                 } else {
-                    $('#newsmain').append('<Div  id="divnewmain" class=" bs-callout bs-callout-info" align="left"  >' +
-                        '<Div id="divnew1"   onclick="URLredirect(\'' + URLnow + '\')"> ' +
+                    $('#newsmain').append('<Div  id="divnewmain" class=" bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
+                        '<Div id="divnew1"   > ' +
                         '' + imgicon +
                         '</Div>' +
 
                         '<Div id="divnew2"> ' +
                         '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
-                        '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeed(' + menu.ID + ')"  >Read More</span></div>' +
+                        '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>');
                 }
 
@@ -315,7 +315,19 @@ function loadnewfeed(ID) {
     db.transaction(loadnewfeed2, errorCBfunc, successCBfunc);
 }
 
+function loadnewfeedreadmore(e,ID) {
+    IDNews = ID;
 
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation){
+        e.stopPropagation();
+        $('#basicModalnews').modal('show');
+    }
+
+    // $('body').css('position','fixed');
+    db.transaction(loadnewfeed2, errorCBfunc, successCBfunc);
+}
 
 
 
