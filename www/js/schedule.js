@@ -518,7 +518,8 @@ function loadsocialIOS(ID){
 
     var message = mess[1] + "" + ampm + '  ' + day + '/' +  month + '/' + year + "" + mess[2] + "" + mess[3];
     //alert(message);
-        window.plugins.socialsharing.share(message);
+        //window.plugins.socialsharing.share(message);
+    window.plugins.socialsharing.shareViaFacebook(message, null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
 }
 
 
