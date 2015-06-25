@@ -495,18 +495,58 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
     }
 }
 
+function saveImageToPhone(url, success, error) {
+    var canvas, context, imageDataUrl, imageData;
+    var img = new Image();
+    img.onload = function() {
+        canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        context = canvas.getContext('2d');
+        context.drawImage(img, 0, 0);
+        try {
+            imageDataUrl = canvas.toDataURL('image/jpeg', 1.0);
+            imageData = imageDataUrl.replace(/data:image\/jpeg;base64,/, '');
+            cordova.exec(
+                success,
+                error,
+                'Canvas2ImagePlugin',
+                'saveImageDataToLibrary',
+                [imageData]
+            );
+        }
+        catch(e) {
+            alert(e.message);
+        }
+    };
+    try {
+        img.src = url;
+    }
+    catch(e) {
+        alert(e.message);
+    }
+}
+
+
 function loadsocialIOS2(ID) {
     window.setTimeout(function(){
         navigator.screenshot.save(function(error,res){
             if(error){
                 console.error(error);
             }else{
-                console.log('ok',res.filePath); //should be path/to/myScreenshot.jpg
-              //  $('#target').attr("src", res.filePath);
+                console.log('ok',res.filePath);
 
-             //   $('#basicModalimagecrop').modal('show');
+                var MEsuccess = function(msg){
+                    console.info(msg);
+                }   ;
+
+                var MEerror = function(err){
+                    console.error(err);
+                };
+
+                saveImageToPhone(res.filePath, MEsuccess, MEerror);
             }
-        },'jpg',50,'myScreenShot');
+        },'jpg',50);
 
 
 
