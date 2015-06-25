@@ -375,6 +375,8 @@ function loadinfo_success2(tx, results) {
 
     var text =  menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
     var text2 =menu.HomeName + ' vs ' + menu.AwayName;
+var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
+
 
     $('#score').hide();
 
@@ -384,11 +386,16 @@ function loadinfo_success2(tx, results) {
     $('#Directions').hide();
     $('#divdefault').hide();
 
+    if (devicePlatformsch == "Android") {
+        $("#socialshare").click(function () {
+            loadsocial(menu.ID);
+        });
+    }else{
+        $("#socialshare").click(function () {
+            loadsocialIOS(socialIOS);
+        });
 
-    $("#socialshare").click(function () {
-        loadsocial(menu.ID);
-    });
-
+    }
 
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
 
@@ -487,6 +494,13 @@ function loadinfo_success2(tx, results) {
         });
     }
 }
+
+function loadsocialIOS(ID){
+    alert(ID);
+
+}
+
+
 
 function loadsocial(ID) {
 
