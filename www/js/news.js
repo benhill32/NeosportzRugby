@@ -174,17 +174,6 @@ function getnewfeed_success(tx, results) {
                         '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
-                         '<script>' +
-                        '$(function(){' +
-                        '$( "#divnewmain" ).bind( "taphold", tapholdHandler );' +
-                        'function tapholdHandler( event ){' +
-                        'alert(' + URLnow + ')' +
-                        '}' +
-                        '});' +
-                        '</script>' +
-
-
-
                         '</Div>');
 
 
@@ -198,14 +187,6 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
-                        '<script>' +
-                        '$(function(){' +
-                        '$( "#divnewmain" ).bind( "taphold", tapholdHandler );' +
-                        'function tapholdHandler( event ){' +
-                        'alert(' + URLnow + ')' +
-                        '}' +
-                        '});' +
-                        '</script>' +
                         '</Div>');
                 }
 
