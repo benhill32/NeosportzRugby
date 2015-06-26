@@ -7,9 +7,12 @@ var fliter = 0;
 var gameid = 0;
 var homeid = 0;
 var awayid = 0;
+var devicePlatformresult =0;
+
 document.addEventListener("deviceready", onDeviceReadyresult, false);
 
 function onDeviceReadyresult() {
+    devicePlatformresult = device.platform;
    // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
   //  console.log("LOCALDB - Database ready");
     db.transaction(getfliterresult, errorCBfunc, successCBfunc);
