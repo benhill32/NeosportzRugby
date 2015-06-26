@@ -195,7 +195,11 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-            '<div class="size11 blue" style="text-align: center!important;">More</div>' +
+                '<div class="size11 blue" style="text-align: center!important;">' +
+                '<div style="float:left;">More</div>' +
+                '<div  style="float:left;padding-left:30px">Share</div>' +
+                '</div>' +
+                '</Div>' +
             '</Div>');
         }
         else if(menu.DefaultHome == 1 && menu.DefaultAway ==0 )
@@ -206,7 +210,11 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-            '<div class="size11 blue" style="text-align: center!important;">More</div>' +
+                '<div class="size11 blue" style="text-align: center!important;">' +
+                '<div style="float:left;">More</div>' +
+                '<div  style="float:left;padding-left:30px">Share</div>' +
+                '</div>' +
+                '</Div>' +
             '</Div>');
         }
         else if(menu.DefaultHome == 0 && menu.DefaultAway ==1 )
@@ -217,7 +225,11 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-            '<div class="size11 blue" style="text-align: center!important;">More</div>' +
+                '<div class="size11 blue" style="text-align: center!important;">' +
+                '<div style="float:left;">More</div>' +
+                '<div  style="float:left;padding-left:30px">Share</div>' +
+                '</div>' +
+                '</Div>' +
             '</Div>');
         }
 
