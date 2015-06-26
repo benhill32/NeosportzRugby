@@ -242,7 +242,7 @@ function getMenu_success(tx, results) {
 
 function resultssharemore(e,ID) {
 
-alert(ID);
+
     if (!e) var e = window.event;
     e.cancelBubble = true;
     if (e.stopPropagation){
