@@ -197,7 +197,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float:left;padding-left:30px">Share</div>' +
+                '<div  style="float:left;padding-left:30px" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -212,7 +212,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float:left;padding-left:30px">Share</div>' +
+                '<div  style="float:left;padding-left:30px" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -227,7 +227,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float:left;padding-left:30px">Share</div>' +
+                '<div  style="float:left;padding-left:30px" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -239,6 +239,46 @@ function getMenu_success(tx, results) {
 
 
 }
+
+function resultssharemore(e,ID) {
+
+
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation){
+        e.stopPropagation();
+        loadsocial(ID);
+    }
+
+}
+
+
+function loadsocial(ID) {
+
+    // window.plugins.socialsharing.share('Message and subject', 'The subject')
+    var name = "game" + ID;
+    window.setTimeout(function(){
+        navigator.screenshot.URI(function(error,res){
+            if(error){
+                alert(error);
+            }else{
+                $('#target').attr("src", res.URI);
+
+                $('#basicModalimagecrop').modal('show');
+
+            }
+        },50);
+
+    }, 500);
+    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
+
+
+
+    $(function(){ $('#target').Jcrop(); });
+}
+
+
+
 
 function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd){
 
