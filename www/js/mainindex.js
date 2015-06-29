@@ -122,9 +122,9 @@ function showregion(){
 }
 
 function showclub(){
-
+    alert("show club");
     db.transaction(getshowclubs, errorCBfunc, successCBfunc);
-    $('#basicModalclubc').modal('show');
+
   //  $('#mainfore').removeClass('mainforeground');
    // $('#mainfore').addClass('mainforeground2');
 
@@ -337,6 +337,8 @@ function getshowclubs(tx) {
 
 function getshowclubs_success(tx, results) {
     // $('#busy').hide();
+    $('#indexloadingdata').modal('hide');
+    $('#basicModalclubc').modal('show');
     var len = results.rows.length;
 //alert(len);
     for (var i=0; i<len; i++) {
@@ -420,7 +422,7 @@ function choosefacteam(ID){
 
 function chooseregion(ID){
 
-    $('#indexloadingdata').modal('show')
+    $('#indexloadingdata').modal('show');
  //   $('#mainfore').removeClass('mainforeground2');
 //    $('#mainfore').addClass('mainforeground');
     db.transaction(function(tx) {
