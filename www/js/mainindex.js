@@ -391,8 +391,10 @@ function chooseclub(ID){
         console.log("Update MobileApp_LastUpdatesec");
     });
     $('#indexloadingdata').modal('show')
-    $('#mainfore').removeClass('mainforeground2');
-    $('#mainfore').addClass('mainforeground');
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+
+
     refreshdata();
 
 
