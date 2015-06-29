@@ -331,7 +331,7 @@ function showresultssatndingmodel_data_success(tx, results) {
 
 function getshowclubs(tx) {
     var sql = "select ID ,name from MobileApp_clubs order by name";
-    //  alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getshowclubs_success);
 }
 
@@ -429,7 +429,7 @@ function chooseregion(ID){
     });
 
    // refreshdata();
- //   db.transaction(gettokenclub, errorCBfunc, successCBfunc);
+   db.transaction(gettokenclub, errorCBfunc, successCBfunc);
 
 
 }

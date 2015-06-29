@@ -322,8 +322,7 @@ alert(row.Region);
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region, false);
-    alert('http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region);
-    xmlHttp.send();
+     xmlHttp.send();
 
     var json = xmlHttp.responseText;
 
