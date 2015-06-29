@@ -308,8 +308,8 @@ function getregionsdata(tx, results) {
 
 
 function gettokenclub(tx) {
-    var sql =     "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
-alert(sql);
+    var sql = "select token,Region from MobileApp_LastUpdatesec";
+    alert(sql);
     tx.executeSql(sql, [], getclubdata,errorCBfunc);
 }
 
@@ -318,11 +318,11 @@ alert(sql);
 function getclubdata(tx, results) {
 
     var row = results.rows.item(0);
-    var datenowsecsync2 = row.Datesecs;
+    alert(row.Region);
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=2&region=' + row.Region, false);
-    alert('http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=2&region=' + row.Region);
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region, false);
+   // alert('http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=2&region=' + row.Region);
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
