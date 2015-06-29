@@ -44,8 +44,8 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1358885">
-              <caret line="353" column="44" selection-start-line="353" selection-start-column="44" selection-end-line="353" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.35307783">
+              <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
                 <element signature="n#!!block;n#showclub#0" expanded="false" />
@@ -65,7 +65,7 @@
                 <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack4#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-                <marker date="1435542292317" expanded="true" signature="6316:6349" placeholder="..." />
+                <marker date="1435542700897" expanded="true" signature="6316:6349" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -729,6 +729,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="261" column="27" selection-start-line="261" selection-start-column="27" selection-end-line="261" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -897,8 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1358885">
-          <caret line="353" column="44" selection-start-line="353" selection-start-column="44" selection-end-line="353" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.35307783">
+          <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
             <element signature="n#!!block;n#showclub#0" expanded="false" />
@@ -918,7 +919,7 @@
             <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
             <element signature="n#!!block;n#gobaack4#0" expanded="false" />
             <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-            <marker date="1435542292317" expanded="true" signature="6316:6349" placeholder="..." />
+            <marker date="1435542700897" expanded="true" signature="6316:6349" placeholder="..." />
           </folding>
         </state>
       </provider>
