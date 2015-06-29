@@ -137,6 +137,16 @@ function showregion(){
 
 }
 
+function showclub(){
+
+    db.transaction(getshowclubs, errorCBfunc, successCBfunc);
+    $('#basicModalclubc').modal('show');
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+
+}
+
+
 
 
 function loadarchiveyear2() {
@@ -335,7 +345,26 @@ function showresultssatndingmodel_data_success(tx, results) {
 }
 
 
+function getshowclubs(tx) {
+    var sql = "select ID ,name from MobileApp_clubs order by name";
+    //  alert(sql);
+    tx.executeSql(sql, [], getshowclubs_success);
+}
 
+function getshowclubs_success(tx, results) {
+    // $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var imgg = "";
+
+        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
+            '<div class="bold size13"   >' + menu.name  +
+            '</div>' +
+            '</Div>');
+    }
+}
 
 
 function getshowregion(tx) {
@@ -352,12 +381,31 @@ function getshowregion_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
+        $('#clubdivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseclub('+ menu.ID + ')"  >' +
         '<div class="bold size13"   >' + menu.Name  +
         '</div>' +
         '</Div>');
     }
 }
+
+function chooseclub(ID){
+
+    //$('#indexloadingdata').modal('show')
+  //  $('#mainfore').removeClass('mainforeground');
+  //  $('#mainfore').addClass('mainforeground2');
+
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+
+        showclub();
+
+
+
+}
+
 
 function chooseregion(ID){
 
@@ -366,8 +414,16 @@ function chooseregion(ID){
     $('#mainfore').addClass('mainforeground2');
 
 
+    clearfavteam();
+
+    addfavteam(ID);
+
+
+    var daaa = new Date();
+    var naaa = daaa.getTime();
+
     db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 1, hasclubdate = "' + naaa + '"');
         console.log("Update MobileApp_LastUpdatesec");
     });
 
