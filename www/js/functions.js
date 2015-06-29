@@ -309,7 +309,7 @@ function getregionsdata(tx, results) {
 
 function gettokenclub(tx) {
     var sql = "select token,Region from MobileApp_LastUpdatesec";
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getclubdatanow,errorCBfunc);
 }
 
