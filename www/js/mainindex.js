@@ -429,7 +429,7 @@ function chooseregion(ID){
     });
 
    // refreshdata();
-    db.transaction(gettokenclub, errorCBfunc, successCBfunc);
+ //   db.transaction(gettokenclub, errorCBfunc, successCBfunc);
 
 
 }
