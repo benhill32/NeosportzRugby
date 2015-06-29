@@ -310,13 +310,10 @@ function getregionsdata(tx, results) {
 function gettokenclub(tx) {
     var sql = "select token,Region from MobileApp_LastUpdatesec";
    // alert(sql);
-    tx.executeSql(sql, [], getclubdatanow,errorCBfuncnow);
+    tx.executeSql(sql, [], getclubdatanow,errorCBfunc);
 }
 
-function errorCBfuncnow(err) {
-    console.log("Error processing SQL: "+err.code);
-    alert("Error processing SQL loaddata: " + err.code);
-}
+
 
 function getclubdatanow(tx, results) {
 
