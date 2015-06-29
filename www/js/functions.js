@@ -305,6 +305,31 @@ function getregionsdata(tx, results) {
     syncmaintablesregions(obj);
 
 }
+function gettokenclub(tx) {
+    var sql =     "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
+//alert(sql);
+    tx.executeSql(sql, [], getclubdata,errorCBfunc);
+}
+
+
+
+function getclubdata(tx, results) {
+
+    var row = results.rows.item(0);
+    var datenowsecsync2 = row.Datesecs;
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=2&region=' + row.Region, false);
+    // alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
+    xmlHttp.send();
+
+    var json = xmlHttp.responseText;
+
+    var obj = JSON.parse(json);
+    syncmaintablesclubs(obj);
+
+
+}
 
 
 
@@ -428,7 +453,7 @@ function syncmaintablesclubs(obj){
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
             //      alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
-            closemodelRegion();
+            closemodelclubs();
         });
     });
 
