@@ -331,8 +331,8 @@ function closemodelRegion(){
 
 
 function closemodelclubs(){
-    $('#mainfore').removeClass('mainforeground2');
-    $('#mainfore').addClass('mainforeground');
+  //  $('#mainfore').removeClass('mainforeground2');
+ //   $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
     //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     showclub();
