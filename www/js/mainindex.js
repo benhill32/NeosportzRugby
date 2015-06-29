@@ -122,7 +122,7 @@ function showregion(){
 }
 
 function showclub(){
-    alert("show club");
+  //  alert("show club");
     db.transaction(getshowclubs, errorCBfunc, successCBfunc);
 
   //  $('#mainfore').removeClass('mainforeground');
@@ -331,7 +331,7 @@ function showresultssatndingmodel_data_success(tx, results) {
 
 function getshowclubs(tx) {
     var sql = "select ID ,name from MobileApp_clubs order by name";
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getshowclubs_success);
 }
 

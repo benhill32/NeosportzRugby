@@ -41,33 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.630662">
-              <caret line="397" column="0" selection-start-line="397" selection-start-column="0" selection-end-line="397" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.103449">
+              <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
               <folding>
                 <element signature="n#!!block;n#loadarchiveyear2#0" expanded="false" />
-                <element signature="n#!!block;n#loadarchiveBen#0" expanded="false" />
                 <element signature="n#!!block;n#loadarchiveyear#0" expanded="false" />
-                <element signature="n#!!block;n#archiveyearben#0" expanded="false" />
-                <element signature="n#!!block;n#archiveyear_success#0" expanded="false" />
                 <element signature="n#!!block;n#getresultstandings#0" expanded="false" />
-                <element signature="n#!!block;n#checkresultsloadedarchive#0" expanded="false" />
-                <element signature="n#!!block;n#checkresultsloadedarchive_success#0" expanded="false" />
                 <element signature="n#!!block;n#backtonormal#0" expanded="false" />
                 <element signature="n#!!block;n#showresultssatndingmodel#0" expanded="false" />
                 <element signature="n#!!block;n#showyesnomodel#0" expanded="false" />
                 <element signature="n#!!block;n#loadarchiveresults#0" expanded="false" />
-                <element signature="n#!!block;n#showresultsmodel_data#0" expanded="false" />
-                <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack4#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack3#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack2#0" expanded="false" />
-                <element signature="n#!!block;n#showresultssatndingmodel_data#0" expanded="false" />
-                <element signature="n#!!block;n#showresultssatndingmodel_data_success#0" expanded="false" />
                 <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
-                <marker date="1435614031488" expanded="true" signature="5870:5903" placeholder="..." />
+                <marker date="1435614352710" expanded="true" signature="5872:5905" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -78,16 +69,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1435279214655" expanded="true" signature="1636:1648" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="1942:1954" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="3724:3743" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="3954:3973" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="4190:4209" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="4381:4400" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="5996:6015" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="6157:6176" placeholder="..." />
+                <marker date="1435279214655" expanded="true" signature="8174:8193" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.827586">
-              <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.05691057">
+              <caret line="328" column="17" selection-start-line="328" selection-start-column="17" selection-end-line="328" selection-end-column="17" />
               <folding>
                 <element signature="n#!!block;n#countProperties#0" expanded="false" />
               </folding>
@@ -748,6 +749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -846,14 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
@@ -891,42 +885,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+    <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.827586">
-          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#countProperties#0" expanded="false" />
+            <marker date="1435279214655" expanded="true" signature="1636:1648" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="1942:1954" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="3724:3743" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="3954:3973" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="4190:4209" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="4381:4400" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="5996:6015" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="6157:6176" placeholder="..." />
+            <marker date="1435279214655" expanded="true" signature="8174:8193" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.630662">
-          <caret line="397" column="0" selection-start-line="397" selection-start-column="0" selection-end-line="397" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.103449">
+          <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
           <folding>
             <element signature="n#!!block;n#loadarchiveyear2#0" expanded="false" />
-            <element signature="n#!!block;n#loadarchiveBen#0" expanded="false" />
             <element signature="n#!!block;n#loadarchiveyear#0" expanded="false" />
-            <element signature="n#!!block;n#archiveyearben#0" expanded="false" />
-            <element signature="n#!!block;n#archiveyear_success#0" expanded="false" />
             <element signature="n#!!block;n#getresultstandings#0" expanded="false" />
-            <element signature="n#!!block;n#checkresultsloadedarchive#0" expanded="false" />
-            <element signature="n#!!block;n#checkresultsloadedarchive_success#0" expanded="false" />
             <element signature="n#!!block;n#backtonormal#0" expanded="false" />
             <element signature="n#!!block;n#showresultssatndingmodel#0" expanded="false" />
             <element signature="n#!!block;n#showyesnomodel#0" expanded="false" />
             <element signature="n#!!block;n#loadarchiveresults#0" expanded="false" />
-            <element signature="n#!!block;n#showresultsmodel_data#0" expanded="false" />
-            <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
             <element signature="n#!!block;n#gobaack4#0" expanded="false" />
             <element signature="n#!!block;n#gobaack3#0" expanded="false" />
             <element signature="n#!!block;n#gobaack2#0" expanded="false" />
-            <element signature="n#!!block;n#showresultssatndingmodel_data#0" expanded="false" />
-            <element signature="n#!!block;n#showresultssatndingmodel_data_success#0" expanded="false" />
             <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
-            <marker date="1435614031488" expanded="true" signature="5870:5903" placeholder="..." />
+            <marker date="1435614352710" expanded="true" signature="5872:5905" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05691057">
+          <caret line="328" column="17" selection-start-line="328" selection-start-column="17" selection-end-line="328" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#countProperties#0" expanded="false" />
           </folding>
         </state>
       </provider>
