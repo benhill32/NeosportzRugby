@@ -34,8 +34,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="182" column="42" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="42" />
+            <state vertical-scroll-proportion="-4.3636365">
+              <caret line="412" column="70" selection-start-line="412" selection-start-column="70" selection-end-line="412" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35307783">
-              <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.3554007">
+              <caret line="367" column="0" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
                 <element signature="n#!!block;n#showclub#0" expanded="false" />
@@ -65,7 +65,7 @@
                 <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack4#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-                <marker date="1435542700897" expanded="true" signature="6316:6349" placeholder="..." />
+                <marker date="1435543069124" expanded="true" signature="6316:6349" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -131,7 +131,7 @@
       <file leaf-file-name="ScheduleMenu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/ScheduleMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-22.76923">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -809,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/ScheduleMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/StandingMenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -859,14 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -888,18 +872,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/ScheduleMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.76923">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="182" column="42" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="42" />
+        <state vertical-scroll-proportion="-4.3636365">
+          <caret line="412" column="70" selection-start-line="412" selection-start-column="70" selection-end-line="412" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35307783">
-          <caret line="406" column="1" selection-start-line="406" selection-start-column="1" selection-end-line="406" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.3554007">
+          <caret line="367" column="0" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
             <element signature="n#!!block;n#showclub#0" expanded="false" />
@@ -919,7 +919,7 @@
             <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
             <element signature="n#!!block;n#gobaack4#0" expanded="false" />
             <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-            <marker date="1435542700897" expanded="true" signature="6316:6349" placeholder="..." />
+            <marker date="1435543069124" expanded="true" signature="6316:6349" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -369,7 +369,7 @@ function getshowclubs_success(tx, results) {
 
 function getshowregion(tx) {
     var sql = "select ID ,Name from MobileRegion order by name";
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getshowregion_success);
 }
 
