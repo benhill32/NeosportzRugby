@@ -319,7 +319,7 @@ function errorCBfuncnow(err) {
 }
 
 function getclubdatanow(tx, results) {
-
+alert("ds");
     var row = results.rows.item(0);
     alert(row.Region);
     var xmlHttp = null;

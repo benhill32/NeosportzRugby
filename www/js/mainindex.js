@@ -419,8 +419,8 @@ function choosefacteam(ID){
 function chooseregion(ID){
 
   //  $('#indexloadingdata').modal('show')
-    $('#mainfore').removeClass('mainforeground');
-    $('#mainfore').addClass('mainforeground2');
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
         console.log("Update MobileApp_LastUpdatesec");
