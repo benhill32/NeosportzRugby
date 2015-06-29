@@ -309,7 +309,7 @@ function getregionsdata(tx, results) {
 
 function gettokenclub(tx) {
     var sql = "select token,Region from MobileApp_LastUpdatesec";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getclubdatanow,errorCBfuncnow);
 }
 
@@ -319,9 +319,9 @@ function errorCBfuncnow(err) {
 }
 
 function getclubdatanow(tx, results) {
-alert("ds");
+
     var row = results.rows.item(0);
-    alert(row.Region);
+
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region, false);
