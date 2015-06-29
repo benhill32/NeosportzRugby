@@ -110,23 +110,7 @@ function hadclubchecklater(){
 
 }
 
-function choosefacteam(ID){
 
-    clearfavteamnow();
-
-    addfavteam(ID);
-
-    var daaa = new Date();
-    var naaa = daaa.getTime();
-
-    db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 1, hasclubdate = "' + naaa + '"');
-        console.log("Update MobileApp_LastUpdatesec");
-    });
-    $('#mainfore').removeClass('mainforeground2');
-    $('#mainfore').addClass('mainforeground');
-
-}
 
 function showregion(){
 
@@ -395,21 +379,46 @@ function getshowregion_success(tx, results) {
 
 function chooseclub(ID){
 
+    clearfavteamnow();
+
+    addfavteam(ID);
+
+    var daaa = new Date();
+    var naaa = daaa.getTime();
+
     db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 1, hasclubdate = "' + naaa + '"');
         console.log("Update MobileApp_LastUpdatesec");
     });
-
+    $('#indexloadingdata').modal('show')
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
     refreshdata();
 
 
 
 }
+function choosefacteam(ID){
 
+    clearfavteamnow();
+
+    addfavteam(ID);
+
+    var daaa = new Date();
+    var naaa = daaa.getTime();
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 1, hasclubdate = "' + naaa + '"');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+    $('#mainfore').removeClass('mainforeground2');
+    $('#mainfore').addClass('mainforeground');
+
+}
 
 function chooseregion(ID){
 
-    $('#indexloadingdata').modal('show')
+  //  $('#indexloadingdata').modal('show')
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
     db.transaction(function(tx) {
@@ -417,7 +426,9 @@ function chooseregion(ID){
         console.log("Update MobileApp_LastUpdatesec");
     });
 
-    refreshdata();
+   // refreshdata();
+
+    gettokenclub();
 
 }
 
@@ -436,7 +447,7 @@ function showclubsfun(){
 
 
 function getclubsfav(tx) {
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,History,Contacts,UpdateSecondsUTC,Color from MobileApp_clubs order by name";
+    var sql = "select ID ,name, from MobileApp_clubs order by name";
     //alert(sql);
     tx.executeSql(sql, [], getclubsfav_success);
 }
