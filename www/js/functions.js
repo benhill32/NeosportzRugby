@@ -318,11 +318,11 @@ function gettokenclub(tx) {
 function getclubdatanow(tx, results) {
 
     var row = results.rows.item(0);
-
+alert(row.Region);
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region, false);
-    alert('http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=2&region=' + row.Region);
+    alert('http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region);
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
