@@ -412,7 +412,10 @@ function chooseregion(ID){
     $('#indexloadingdata').modal('show')
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
-
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
 
     refreshdata();
 
