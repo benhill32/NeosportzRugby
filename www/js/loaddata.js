@@ -19,6 +19,7 @@ var chkrefreshdata = 0;
 var archiveyear=0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 var tokenldata ="";
+var favclub = 0;
 // Cordova is ready
 //
 
@@ -170,6 +171,7 @@ function createtables(){
 
 function populateDB1(tx,results) {
     checkonline();
+    db.transaction(getclubfav, errorCBfunc, successCBfunc);
     var row = results.rows.item(0);
  //   alert(row);
   //  alert(row.Count);
@@ -194,8 +196,9 @@ function populateDB1(tx,results) {
         var sql = "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
 
         if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))){
-
-             tx.executeSql(sql, [], getchecksync,errorCBfunc);
+            if(favclub != 0) {
+                tx.executeSql(sql, [], getchecksync, errorCBfunc);
+            }
         }else{
             $('#indexloadingdata').modal('hide')
             $('#mainfore').removeClass('mainforeground2');
@@ -237,6 +240,27 @@ function passdatatoserver(){
     http.send();
 
 }
+
+function getclubfav(tx) {
+    var sql = "select ID from MobileApp_clubs where Fav = 1";
+    // alert(sql);
+    tx.executeSql(sql, [], getclubfav_success);
+}
+
+
+function getclubfav_success(tx, results) {
+
+    var len = results.rows.length;
+
+
+    if(len != 0) {
+        var menu = results.rows.item(0);
+        favclub = menu.ID;
+    }
+
+
+}
+
 
 function getchecksync(tx, results) {
 
