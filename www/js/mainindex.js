@@ -359,7 +359,7 @@ function getshowclubs_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
+        $('#clubdivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseregion('+ menu.ID + ')"  >' +
             '<div class="bold size13"   >' + menu.name  +
             '</div>' +
             '</Div>');
@@ -369,7 +369,7 @@ function getshowclubs_success(tx, results) {
 
 function getshowregion(tx) {
     var sql = "select ID ,Name from MobileRegion order by name";
-  //  alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getshowregion_success);
 }
 
@@ -381,12 +381,17 @@ function getshowregion_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
 
-        $('#clubdivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseclub('+ menu.ID + ')"  >' +
+        $('#regiondivID').append('<Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="chooseclub('+ menu.ID + ')"  >' +
         '<div class="bold size13"   >' + menu.Name  +
         '</div>' +
         '</Div>');
     }
+
+
 }
+
+
+
 
 function chooseclub(ID){
 

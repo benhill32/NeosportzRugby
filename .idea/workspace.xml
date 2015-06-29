@@ -34,7 +34,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-11.769231">
               <caret line="182" column="42" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="42" />
               <folding />
             </state>
@@ -44,8 +44,8 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5808989">
-              <caret line="397" column="21" selection-start-line="397" selection-start-column="21" selection-end-line="397" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.1358885">
+              <caret line="353" column="44" selection-start-line="353" selection-start-column="44" selection-end-line="353" selection-end-column="44" />
               <folding>
                 <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
                 <element signature="n#!!block;n#showclub#0" expanded="false" />
@@ -65,7 +65,7 @@
                 <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack4#0" expanded="false" />
                 <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-                <marker date="1435541919539" expanded="true" signature="6316:6349" placeholder="..." />
+                <marker date="1435542292317" expanded="true" signature="6316:6349" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -85,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.827586">
-              <caret line="326" column="10" selection-start-line="326" selection-start-column="10" selection-end-line="326" selection-end-column="10" />
+              <caret line="326" column="11" selection-start-line="326" selection-start-column="11" selection-end-line="326" selection-end-column="11" />
               <folding>
                 <element signature="n#!!block;n#countProperties#0" expanded="false" />
               </folding>
@@ -109,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="418" column="27" selection-start-line="418" selection-start-column="27" selection-end-line="418" selection-end-column="27" />
+              <caret line="394" column="25" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="25" />
               <folding>
                 <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
@@ -840,14 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="182" column="42" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -877,7 +869,7 @@
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="418" column="27" selection-start-line="418" selection-start-column="27" selection-end-line="418" selection-end-column="27" />
+          <caret line="394" column="25" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="25" />
           <folding>
             <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
             <element signature="n#!!block;n#CleanDB#0" expanded="false" />
@@ -888,17 +880,25 @@
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.827586">
-          <caret line="326" column="10" selection-start-line="326" selection-start-column="10" selection-end-line="326" selection-end-column="10" />
+          <caret line="326" column="11" selection-start-line="326" selection-start-column="11" selection-end-line="326" selection-end-column="11" />
           <folding>
             <element signature="n#!!block;n#countProperties#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="182" column="42" selection-start-line="182" selection-start-column="33" selection-end-line="182" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5808989">
-          <caret line="397" column="21" selection-start-line="397" selection-start-column="21" selection-end-line="397" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.1358885">
+          <caret line="353" column="44" selection-start-line="353" selection-start-column="44" selection-end-line="353" selection-end-column="44" />
           <folding>
             <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
             <element signature="n#!!block;n#showclub#0" expanded="false" />
@@ -918,7 +918,7 @@
             <element signature="n#!!block;n#showresultsmodel_dataa_success#0" expanded="false" />
             <element signature="n#!!block;n#gobaack4#0" expanded="false" />
             <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-            <marker date="1435541919539" expanded="true" signature="6316:6349" placeholder="..." />
+            <marker date="1435542292317" expanded="true" signature="6316:6349" placeholder="..." />
           </folding>
         </state>
       </provider>
