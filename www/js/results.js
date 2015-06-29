@@ -200,7 +200,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float: right;padding-left: 100px;padding-right: 50px;" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
+                '<div  style="float:left;padding-left:30px" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -215,7 +215,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float: right;padding-left: 100px;padding-right: 50px;" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
+                '<div  style="float:left;padding-left:30px" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -230,7 +230,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float: right;padding-left: 100px;padding-right: 50px;" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
+                '<div  style="float:left;padding-left:30px" onclick="resultssharemore(event,' + menu.ID + ')">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');

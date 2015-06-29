@@ -295,7 +295,7 @@ function getregionsdata(tx, results) {
     var datenowsecsync2 = row.Datesecs;
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1', false);
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1', false);
    // alert('http://rugby.neosportz.com/databen.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
     xmlHttp.send();
 
@@ -303,32 +303,6 @@ function getregionsdata(tx, results) {
 
     var obj = JSON.parse(json);
     syncmaintablesregions(obj);
-
-}
-
-
-function gettokenclub(tx) {
-    var sql = "select token,Region from MobileApp_LastUpdatesec";
-   // alert(sql);
-    tx.executeSql(sql, [], getclubdatanow,errorCBfunc);
-}
-
-
-
-function getclubdatanow(tx, results) {
-
-    var row = results.rows.item(0);
-    alert(row.Region);
-    var xmlHttp = null;
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=0&start=2&region=' + row.Region, false);
-     xmlHttp.send();
-
-    var json = xmlHttp.responseText;
-
-    var obj = JSON.parse(json);
-    syncmaintablesclubs(obj);
-
 
 }
 
@@ -417,48 +391,14 @@ function syncmaintablesregions(obj){
     $.each(obj.Isadmin, function (idx, obj) {
             db.transaction(function(tx) {
                 tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
-               // alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
+          //      alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
                 closemodelRegion();
             });
     });
 
 }
 
-function syncmaintablesclubs(obj){
 
-
-
-    $.each(obj.clubs, function (idx, obj) {
-        if(obj.DeletedateUTC == null){
-
-            // console.log('Delete MobileApp_clubs where ID');
-            db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE INTO MobileApp_clubs(ID,_id ,name,UpdateDateUTC,UpdateDateUTCBase64 ,Base64,History,Contacts,UpdateSecondsUTC,UpdateSecondsUTCBase64,Color,Fav,Follow,DeletedateUTC) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.name + '","' + obj.UpdateDateUTC + '","' + obj.UpdateDateUTCBase64 + '","' + obj.Base64 + '","' + obj.History + '","' + obj.Contacts + '","' + obj.UpdateSecondsUTC + '","' + obj.UpdateSecondsUTCBase64 + '", "' + obj.Color + '",0,0,"' + obj.DeletedateUTC + '")');
-                //    console.log("INSERT INTO MobileApp_clubs is created");
-            });
-
-            db.transaction(function (tx) {
-                var sql = 'UPDATE MobileApp_clubs SET UpdateDateUTC = "' + obj.UpdateDateUTC + '", UpdateDateUTCBase64 = "' + obj.UpdateDateUTCBase64 + '", Base64 = "' + obj.Base64 + '", History ="' + obj.History + '", Contacts = "' + obj.Contacts + '", UpdateSecondsUTC = "' + obj.UpdateSecondsUTC + '", UpdateSecondsUTCBase64 = "' + obj.UpdateSecondsUTCBase64 + '", Color = "' + obj.Color + '", DeletedateUTC = "' + obj.DeletedateUTC + '" where ID = ' + obj.ID;
-                tx.executeSql(sql);
-                // console.log(sql);
-            });
-
-        }else{
-            db.transaction(function (tx) {
-                tx.executeSql('Delete from MobileApp_clubs where ID =' + obj.ID);
-            });
-
-        }
-    });
-    $.each(obj.Isadmin, function (idx, obj) {
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
-            //      alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
-            closemodelclubs();
-        });
-    });
-
-}
 
 
 function syncmaintables(obj,year){
