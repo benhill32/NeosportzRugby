@@ -292,8 +292,8 @@ function manualupdateben(){
     xmlHttpp = new XMLHttpRequest();
 
    // $('#busy').show();
-    xmlHttpp.open("GET", 'http://centralfootball.neosportz.com/databen.aspx?deviceID=a07883508d108e26&token=9D190637-2FEB-4A26-BA72-9A158A220A2A&sec=0',false);
-    console.log("http://centralfootball.neosportz.com/databen.aspx?deviceID=a07883508d108e26&token=9D190637-2FEB-4A26-BA72-9A158A220A2A&sec=0");
+    xmlHttpp.open("GET", 'http://centralfootball.neosportz.com/mobiledata.aspx?deviceID=a07883508d108e26&token=9D190637-2FEB-4A26-BA72-9A158A220A2A&sec=0',false);
+    console.log("http://centralfootball.neosportz.com/mobiledata.aspx?deviceID=a07883508d108e26&token=9D190637-2FEB-4A26-BA72-9A158A220A2A&sec=0");
 
 
     xmlHttpp.send();
