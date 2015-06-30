@@ -21,21 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="327" column="21" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.730769">
-              <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -44,22 +34,9 @@
       <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.103449">
-              <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
-              <folding>
-                <element signature="n#!!block;n#loadarchiveyear2#0" expanded="false" />
-                <element signature="n#!!block;n#loadarchiveyear#0" expanded="false" />
-                <element signature="n#!!block;n#getresultstandings#0" expanded="false" />
-                <element signature="n#!!block;n#backtonormal#0" expanded="false" />
-                <element signature="n#!!block;n#showresultssatndingmodel#0" expanded="false" />
-                <element signature="n#!!block;n#showyesnomodel#0" expanded="false" />
-                <element signature="n#!!block;n#loadarchiveresults#0" expanded="false" />
-                <element signature="n#!!block;n#gobaack4#0" expanded="false" />
-                <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-                <element signature="n#!!block;n#gobaack2#0" expanded="false" />
-                <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
-                <marker date="1435614352710" expanded="true" signature="5872:5905" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-16.931034">
+              <caret line="340" column="12" selection-start-line="340" selection-start-column="12" selection-end-line="340" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,13 +61,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4595506">
-              <caret line="328" column="22" selection-start-line="328" selection-start-column="22" selection-end-line="328" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="497" column="30" selection-start-line="497" selection-start-column="30" selection-end-line="497" selection-end-column="30" />
               <folding>
                 <element signature="n#!!block;n#countProperties#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/pages/results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6365741">
+              <caret line="230" column="90" selection-start-line="230" selection-start-column="90" selection-end-line="230" selection-end-column="90" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#5;n#Div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#Div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +113,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.793103">
-              <caret line="437" column="15" selection-start-line="437" selection-start-column="15" selection-end-line="437" selection-end-column="15" />
+            <state vertical-scroll-proportion="29.965517">
+              <caret line="376" column="15" selection-start-line="376" selection-start-column="15" selection-end-line="376" selection-end-column="15" />
               <folding>
                 <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
@@ -205,15 +195,15 @@
         <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
         <option value="$PROJECT_DIR$/www/config.xml" />
-        <option value="$PROJECT_DIR$/www/pages/results.html" />
         <option value="$PROJECT_DIR$/www/js/results.js" />
         <option value="$PROJECT_DIR$/www/pages/ScheduleMenu.html" />
         <option value="$PROJECT_DIR$/www/pages/StandingMenu.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
-        <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
+        <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/pages/results.html" />
       </list>
     </option>
   </component>
@@ -303,24 +293,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="neosportz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeosportzRugby" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,7 +433,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -791,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0">
-          <caret line="230" column="25" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/StandingMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -851,7 +816,7 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
-          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -866,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.793103">
-          <caret line="437" column="15" selection-start-line="437" selection-start-column="15" selection-end-line="437" selection-end-column="15" />
+        <state vertical-scroll-proportion="29.965517">
+          <caret line="376" column="15" selection-start-line="376" selection-start-column="15" selection-end-line="376" selection-end-column="15" />
           <folding>
             <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
             <element signature="n#!!block;n#CleanDB#0" expanded="false" />
@@ -905,31 +870,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.103449">
-          <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!block;n#loadarchiveyear2#0" expanded="false" />
-            <element signature="n#!!block;n#loadarchiveyear#0" expanded="false" />
-            <element signature="n#!!block;n#getresultstandings#0" expanded="false" />
-            <element signature="n#!!block;n#backtonormal#0" expanded="false" />
-            <element signature="n#!!block;n#showresultssatndingmodel#0" expanded="false" />
-            <element signature="n#!!block;n#showyesnomodel#0" expanded="false" />
-            <element signature="n#!!block;n#loadarchiveresults#0" expanded="false" />
-            <element signature="n#!!block;n#gobaack4#0" expanded="false" />
-            <element signature="n#!!block;n#gobaack3#0" expanded="false" />
-            <element signature="n#!!block;n#gobaack2#0" expanded="false" />
-            <element signature="n#!!block;n#choosefacteam#0" expanded="false" />
-            <marker date="1435614352710" expanded="true" signature="5872:5905" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-16.931034">
+          <caret line="340" column="12" selection-start-line="340" selection-start-column="12" selection-end-line="340" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4595506">
-          <caret line="328" column="22" selection-start-line="328" selection-start-column="22" selection-end-line="328" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="497" column="30" selection-start-line="497" selection-start-column="30" selection-end-line="497" selection-end-column="30" />
           <folding>
             <element signature="n#!!block;n#countProperties#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6365741">
+          <caret line="230" column="90" selection-start-line="230" selection-start-column="90" selection-end-line="230" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#5;n#Div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#Div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
