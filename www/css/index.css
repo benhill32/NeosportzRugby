@@ -318,7 +318,7 @@ position: fixed;
 
 #divresults {
     margin-top: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 10px;
     padding-left:15px;
     padding-right: 15px;
 
@@ -327,6 +327,7 @@ position: fixed;
     width: 110px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 50px;
 }
 .circle {
     margin-left: auto;
@@ -373,7 +374,7 @@ position: fixed;
 
 #divschedules {
     margin-top: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 10px;
  padding-left:15px;
   padding-right: 15px;
 
@@ -615,7 +616,7 @@ position: fixed;
     padding-top: 10px;
     color: #333 !important;
     text-decoration: none !important;
-    padding-bottom: 200px;
+    padding-bottom: 10px;
 }
 
 #addnewfeed,a:hover, a:focus{
