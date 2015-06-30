@@ -240,7 +240,7 @@ function getMenu_success(tx, results) {
 
     }
 
-
+    $('#divcircle').show();
 }
 
 function resultssharemore(e,ID) {

@@ -238,6 +238,7 @@ function getnewfeed_success(tx, results) {
             count++;
 
         }
+        $('#divcircle').show();
         db.transaction(getsponsors, errorCBfunc, successCBfunc);
 
     }else{

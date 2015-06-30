@@ -303,6 +303,8 @@ function getMenu_success(tx, results) {
 
         }
     }
+
+    $('#divcircle').show();
 }
 function loadreftosystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
