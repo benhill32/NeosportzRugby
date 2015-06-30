@@ -318,14 +318,15 @@ position: fixed;
 
 #divresults {
     margin-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     padding-left:15px;
     padding-right: 15px;
 
 }
 #divcircle{
     width: 110px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 .circle {
     margin-left: auto;
@@ -372,7 +373,7 @@ position: fixed;
 
 #divschedules {
     margin-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
  padding-left:15px;
   padding-right: 15px;
 
