@@ -338,7 +338,7 @@ position: fixed;
 }
 
 .circle-border {
-    border: 1px solid black;
+    border: 1px solid #339900;
 }
 
 .circle-solid{
@@ -370,6 +370,7 @@ position: fixed;
     height: 1em;
     line-height: 1em;
     font-size: 1em;
+    color: #339900;
 }
 
 #divschedules {
