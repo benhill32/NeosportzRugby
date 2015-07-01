@@ -332,7 +332,7 @@ function closemodelRegion(){
 }
 function reloadindividual(){
 
-   
+
     $('#indexloadingdata').modal('hide');
 
     location.reload();
