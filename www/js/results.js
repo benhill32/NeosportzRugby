@@ -200,7 +200,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event,' + menu.ID + ',' + socialIOS + ')">Share</div>' +
+                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -215,7 +215,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event,' + menu.ID + ',' + socialIOS + ')">Share</div>' +
+                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -230,7 +230,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '<div class="size11 blue" style="text-align: center!important;">' +
                 '<div style="float:left;">More</div>' +
-                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event,' + menu.ID + ',' + socialIOS + ')">Share</div>' +
+                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
                 '</div>' +
                 '</Div>' +
             '</Div>');
@@ -246,7 +246,7 @@ function getMenu_success(tx, results) {
     });
 }
 
-function resultssharemore(e,ID,ID2) {
+function resultssharemore(e) {
 
 
     if (!e) var e = window.event;
@@ -257,22 +257,18 @@ function resultssharemore(e,ID,ID2) {
     }
     if (devicePlatformresult == "Android") {
 
-        getsocialAndroid(ID);
-
+        getsocialAndroid();
     }else{
-
-            loadsocialIOSresult(ID2);
-
-
+            loadsocialIOSresult();
     }
 }
 
 
 
-function getsocialAndroid(ID) {
+function getsocialAndroid() {
 
     // window.plugins.socialsharing.share('Message and subject', 'The subject')
-    var name = "game" + ID;
+
     window.setTimeout(function(){
         navigator.screenshot.URI(function(error,res){
             if(error){
@@ -333,7 +329,7 @@ function saveImageToPhoneresult(url, success, error) {
 }
 
 
-function loadsocialIOSresult(ID) {
+function loadsocialIOSresult() {
     window.setTimeout(function(){
         navigator.screenshot.save(function(error,res){
             if(error){
