@@ -19,6 +19,7 @@ var chkrefreshdata = 0;
 var archiveyear=0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 var tokenldata ="";
+var start = 0;
 // Cordova is ready
 //
 
@@ -188,12 +189,12 @@ function populateDB1(tx,results) {
           // $.when( pushnotifiy()).done(function() {
                // db.transaction(populateDB, errorCBfunc, successCBfunc);
                db.transaction(gettokenregion, errorCBfunc, successCBfunc);
-
+            start =1;
          //   });
         });
 
     }else{
-
+        start=0;
         var sql = "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
 
         if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))){
@@ -640,27 +641,48 @@ function pushnotifiy() {
 
 function updatedatapush(ID,mess){
     //alert(ID);
+if(start ==0) {
+    if (ID == 'New News Feed') {
+        onclicksyncloaddata();
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {
+            console.log('toast success: ' + a)
+        }, function (b) {
+            alert('toast error: ' + b)
+        });
+    } else if (ID == 'Game Cancellation') {
+        onclicksyncloaddata();
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {
+            console.log('toast success: ' + a)
+        }, function (b) {
+            alert('toast error: ' + b)
+        });
 
-    if(ID == 'New News Feed'){
+    } else if (ID == 'Half Time Score') {
         onclicksyncloaddata();
-        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-    }else if(ID == 'Game Cancellation'){
-        onclicksyncloaddata();
-        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {
+            console.log('toast success: ' + a)
+        }, function (b) {
+            alert('toast error: ' + b)
+        });
 
-    }else if(ID == 'Half Time Score'){
+    } else if (ID == 'Full Time Score') {
         onclicksyncloaddata();
-        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {
+            console.log('toast success: ' + a)
+        }, function (b) {
+            alert('toast error: ' + b)
+        });
 
-    }else if(ID == 'Full Time Score'){
+    } else {
         onclicksyncloaddata();
-        window.plugins.toast.showLongBottom(ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-
-    }else{
-        onclicksyncloaddata();
-        window.plugins.toast.showLongBottom('New News Feed ' + '\n' + ID + '\n' + mess, function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+        window.plugins.toast.showLongBottom('New News Feed ' + '\n' + ID + '\n' + mess, function (a) {
+            console.log('toast success: ' + a)
+        }, function (b) {
+            alert('toast error: ' + b)
+        });
 
     }
+}
 }
 
 
@@ -739,7 +761,7 @@ function onNotification(e) {
                 updatedatapush(e.payload.title, e.payload.message);
 
 
-""
+
 
              //   $("#app-status-ul").append('<li>--INLINE NOTIFICATION--' + '</li>');
 
