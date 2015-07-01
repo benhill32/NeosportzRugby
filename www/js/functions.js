@@ -13,6 +13,7 @@ var functionyear = "";
 var typesend = "";
 var divisionsend = "";
 var clubsend = "";
+var teamsend = "";
 var appversionlocal = '1.4.0';
 
 function onDeviceReadyFunc() {
@@ -313,6 +314,7 @@ function sendinfotoserver(type,division,club){
     typesend = type;
     divisionsend = division;
     clubsend = club;
+    teamsend = club;
     $('#indexloadingdata').modal('show');
     db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
 }
@@ -343,7 +345,7 @@ function gettokenindividualdata(tx, results) {
     var datenowsecsync2 = row.Datesecs;
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&type=' + typesend + '&region=' + region + '&year=' + yearnow + '&club=' + clubsend + '&division=' + divisionsend, false);
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&type=' + typesend + '&region=' + region + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend, false);
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
@@ -502,6 +504,24 @@ function syncmaintableindividual(obj){
         }
 
     });
+    $.each(obj.App_Players, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_Base_Players(ID,_id,ClubID,FullName,Base64,TeamID,UpdateSecondsUTC,UpdateSecondsUTCBase64,UpdateDateUTC,UpdateDateUTCBase64,Position,DeletedateUTC,NickName,Height,Weight ,DOB ,BirthPlace,SquadNo,Nationality ,Honours ,Previous_Clubs,memorable_match,Favourite_player ,Toughest_Opponent,Biggest_influence ,person_admire ,Best_goal_Scored ,Hobbies ,be_anyone_for_a_day) VALUES (' + obj.ID + ',' + obj._id + ',' + obj.ClubID + ',"' + obj.FullName + '","' + obj.Base64 + '","' + obj.TeamID + '","' + obj.UpdateSecondsUTC + '","' + obj.UpdateSecondsUTCBase64 + '","' + obj.UpdateDateUTC + '","' + obj.UpdateDateUTCBase64 + '","' + obj.Position + '","' + obj.DeletedateUTC + '","' + obj.NickName + '","' + obj.Height + '","' + obj.Weight + '","' + obj.DOB + '","' + obj.BirthPlace + '","' + obj.SquadNo + '","' + obj.Nationality + '","' + obj.Honours + '","' + obj.Previous_Clubs + '","' + obj.memorable_match + '","' + obj.Favourite_player + '","' + obj.Toughest_Opponent + '","' + obj.Biggest_influence + '","' + obj.person_admire + '","' + obj.Best_goal_Scored + '","' + obj.Hobbies + '","' + obj.be_anyone_for_a_day + '")');
+            });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobilevwApp_Base_Players SET ClubID= ' + obj.ClubID + ', FullName = "' + obj.FullName + '", Base64 = "' + obj.Base64 + '", TeamID = ' + obj.TeamID + ', UpdateSecondsUTC = "' + obj.UpdateSecondsUTC + '", UpdateSecondsUTCBase64 = "' + obj.UpdateSecondsUTCBase64 + '",Position = "' + obj.Position + '",DeletedateUTC = "' + obj.DeletedateUTC + '",NickName = "' + obj.NickName + '",Height = "' + obj.Height + '",Weight = "' + obj.Weight + '",DOB = "' + obj.DOB + '",BirthPlace = "' + obj.BirthPlace + '",SquadNo = "' + obj.SquadNo + '",Nationality = "' + obj.Nationality + '",Honours = "' + obj.Honours + '",Previous_Clubs = "' + obj.Previous_Clubs + '",memorable_match = "' + obj.memorable_match + '",Favourite_player = "' + obj.Favourite_player + '",Toughest_Opponent = "' + obj.Toughest_Opponent + '",Biggest_influence = "' + obj.Biggest_influence + '",person_admire = "' + obj.person_admire + '",Best_goal_Scored = "' + obj.Best_goal_Scored + '",Hobbies = "' + obj.Hobbies + '",be_anyone_for_a_day = "' + obj.be_anyone_for_a_day + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+            });
+
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobilevwApp_Base_Players where ID =' + obj.ID);
+                //   console.log('Delete MobilevwApp_Base_Players where ID');
+            });
+        }
+    });
+
     $.each(obj.Isadmin, function (idx, obj) {
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);

@@ -53,6 +53,12 @@ function getteamplayer_success(tx, results) {
 
     }
 
+    $('#divcircle').show();
+    $('#divcircle').click(function() {
+        sendinfotoserver("players","0",teamID)
+    });
+
+
 }
 
 
