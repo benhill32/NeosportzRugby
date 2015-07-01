@@ -258,6 +258,13 @@ function getnewfeed_success(tx, results) {
             '<Div id="divnew2"> ' +
             '<div class="bold size13"   >No News Yet!</div>' +
             '</Div>');
+
+
+        $('#divcircle').show();
+        $('#divcircle').click(function() {
+            sendinfotoserver("newsfeed","0",clubidtop)
+        });
+
     }
 }
 
