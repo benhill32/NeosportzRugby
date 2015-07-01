@@ -241,6 +241,9 @@ function getMenu_success(tx, results) {
     }
 
     $('#divcircle').show();
+    $('#divcircle').click(function() {
+        sendinfotoserver("results",id,"0")
+    });
 }
 
 function resultssharemore(e,ID) {

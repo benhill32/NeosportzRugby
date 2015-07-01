@@ -302,9 +302,19 @@ function getMenu_success(tx, results) {
                 '</Div>');
 
         }
+
+
+
+
     }
 
     $('#divcircle').show();
+    $('#divcircle').click(function() {
+        sendinfotoserver("schedules",id,"0")
+    });
+
+
+
 }
 function loadreftosystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);

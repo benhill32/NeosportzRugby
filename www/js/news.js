@@ -239,6 +239,10 @@ function getnewfeed_success(tx, results) {
 
         }
         $('#divcircle').show();
+        $('#divcircle').click(function() {
+            sendinfotoserver("newsfeed","0",clubidtop)
+        });
+
         db.transaction(getsponsors, errorCBfunc, successCBfunc);
 
     }else{
