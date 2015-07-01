@@ -311,12 +311,22 @@ function getregionsdata(tx, results) {
 
 
 function sendinfotoserver(type,division,club){
+    
+
     typesend = type;
     divisionsend = division;
     clubsend = club;
     teamsend = club;
     $('#indexloadingdata').modal('show');
-    db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
+
+    if(networkconnectionfun !=0) {
+
+        db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
+    }else{
+
+        alert("You don't have access to internet!");
+    }
+
 }
 
 
