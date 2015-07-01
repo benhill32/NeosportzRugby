@@ -330,6 +330,10 @@ function closemodelRegion(){
     showregion();
 
 }
+function reloadindividual(){
+
+    location.reload();
+}
 
 
 
