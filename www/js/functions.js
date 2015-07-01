@@ -313,6 +313,7 @@ function sendinfotoserver(type,division,club){
     typesend = type;
     divisionsend = division;
     clubsend = club;
+    $('#indexloadingdata').modal('show');
     db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
 }
 
