@@ -282,13 +282,13 @@ function getnewfeed_success(tx, results) {
 }
 
 function loadsocialnews(e,ID){
-alert(ID);
+
 
     if (!e) var e = window.event;
     e.cancelBubble = true;
     if (e.stopPropagation){
         e.stopPropagation();
-        $('#basicModal').modal('show');
+        $('#basicModalshare').modal('show');
         $("#socialshareresut").click(function () {
             window.plugins.socialsharing.share('Neosportz', null, null, ID);
         });

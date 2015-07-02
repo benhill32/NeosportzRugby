@@ -859,7 +859,10 @@ overflow-y: scroll !important;
     max-height: 3000px;
     
 }
+#basicModalshare .modal-body{
 
+    padding: 15px;
+}
 #basicModal .modal-body{
 
     padding:0px;
