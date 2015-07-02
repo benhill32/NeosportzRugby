@@ -196,7 +196,7 @@ function getnewfeed_success(tx, results) {
                 $('#div' + i).on( "taphold",function(){
                     var baz = $(this).data('foo');
                   //  alert(baz);
-                   window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
+                   window.plugins.socialsharing.share('Neosportz', null, null, baz);
                 });
                 });
 
