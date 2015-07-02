@@ -175,11 +175,7 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
-                    $( ".divnewmain" ).on( "taphold",function(){
-                       // alert($(this).attr('id'));
-                       // alert(URLnow);
-                        window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
-                    });
+
 
                 } else {
 
@@ -194,12 +190,16 @@ function getnewfeed_success(tx, results) {
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
                         '</Div>');
-                    $( ".divnewmain" ).on( "taphold",function(){
-                       // alert($(this).attr('id'));
-                       // alert(URLnow);
-                        window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
-                    });
+
                 }
+
+                $( ".divnewmain" ).on( "taphold",function(){
+                    // alert($(this).attr('id'));
+                    // alert(URLnow);
+                    window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
+                });
+
+
 
             } else {
                 imgicon = "<img src='../img/info.png' style='padding-right: 10px' height='30' align='left'>";
