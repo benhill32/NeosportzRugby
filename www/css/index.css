@@ -564,7 +564,7 @@ position: fixed;
 }
 
 #RESULTSright{
-    width:10%;
+    //width:10%;
     float:right;
     height: 80px;
     padding-right: 15px;
@@ -1131,7 +1131,7 @@ text-align: center !important;
 #divnew1,.divnew1{
 padding: 20px 0px;
     min-height: 60px;
-    width: 18%;
+    width: 13%;
     float:left;
     margin: 0px 0;
     border-top:0px solid #eee;
@@ -1157,7 +1157,7 @@ width:100%;
     padding: 20px 0px;
 //  min-height: 60px;
     float:left;
-
+width:75%;
     padding-left: 10px;
 //   padding: 10px 0;
 //  margin: 2px 0;
