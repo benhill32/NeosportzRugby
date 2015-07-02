@@ -165,7 +165,7 @@ function getnewfeed_success(tx, results) {
 
                 if ((menu.Body).length <= 200) {
 
-                    $('#newsmain').append('<Div id="div' + i + '" class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
+                    $('#newsmain').append('<Div id="div' + i + '" data-foo="' + URLnow + '"  class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
 
                         '<Div id="divnew1"   > ' +
                         '' + imgicon +
@@ -180,7 +180,7 @@ function getnewfeed_success(tx, results) {
                 } else {
 
 
-                        $('#newsmain').append('<Div  id="div' + i + '" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
+                        $('#newsmain').append('<Div  id="div' + i + '" data-foo="' + URLnow + '" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
                             '<Div id="divnew1"   > ' +
                             '' + imgicon +
                             '</Div>' +
@@ -194,8 +194,8 @@ function getnewfeed_success(tx, results) {
                 }
                 $(function () {
                 $('#div' + i).on( "taphold",function(){
-                    // alert($(this).attr('id'));
-                    alert(URLnow);
+                    var baz = $('#div' + i).data('foo');
+                    alert(baz);
                   //  window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
                 });
                 });
