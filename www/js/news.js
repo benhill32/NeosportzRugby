@@ -294,7 +294,7 @@ function loadsocialnews(e,ID){
             window.plugins.socialsharing.share('Neosportz', null, null, socialurl);
         });
     }
-    alert(socialurl);
+ //   alert(socialurl);
 }
 
 
