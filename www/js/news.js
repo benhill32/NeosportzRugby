@@ -175,7 +175,11 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
+
+
                 } else {
+
+
                         $('#newsmain').append('<Div  id="' + menu.ID + '" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
                             '<Div id="divnew1"   > ' +
                             '' + imgicon +
@@ -188,13 +192,13 @@ function getnewfeed_success(tx, results) {
                         '</Div>');
 
                 }
-
-                $( ".divnewmain" ).bind("taphold",function(){
+                $(function () {
+                $(".divnewmain").on( "taphold",function(){
                     // alert($(this).attr('id'));
                     alert(URLnow);
-                    window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
+                  //  window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
                 });
-
+                });
 
 
             } else {
