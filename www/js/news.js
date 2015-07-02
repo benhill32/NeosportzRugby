@@ -165,7 +165,7 @@ function getnewfeed_success(tx, results) {
 
                 if ((menu.Body).length <= 200) {
 
-                    $('#newsmain').append('<Div id="divnewmain" class=" bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
+                    $('#newsmain').append('<Div id="divnewmain' + menu.ID + '" class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
 
                         '<Div id="divnew1"   > ' +
                         '' + imgicon +
@@ -175,12 +175,12 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
-                    $( "#divnewmain" ).bind( "taphold", tapholdHandler );
+                    $( "#divnewmain" + menu.ID).bind( "taphold", tapholdHandler(event,menu.ID) );
 
                 } else {
 
 
-                    $('#newsmain').append('<Div  id="divnewmain" class=" bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
+                    $('#newsmain').append('<Div  id="divnewmain' + menu.ID + '" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
                         '<Div id="divnew1"   > ' +
                         '' + imgicon +
                         '</Div>' +
@@ -190,7 +190,7 @@ function getnewfeed_success(tx, results) {
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
                         '</Div>');
-                    $( "#divnewmain" ).bind( "taphold", tapholdHandler );
+                    $( "#divnewmain" + menu.ID).bind( "taphold", tapholdHandler(event,menu.ID) );
                 }
 
             } else {
@@ -271,8 +271,8 @@ function getnewfeed_success(tx, results) {
     }
 }
 
-function tapholdHandler( event ){
-    alert("tap and hold");
+function tapholdHandler( event,ID ){
+    alert("tap and hold Game :" + ID);
 }
 
 
