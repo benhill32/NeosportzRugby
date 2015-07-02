@@ -562,6 +562,12 @@ position: fixed;
     float:right;
     height: 80px;
 }
+
+#RESULTSright{
+    width:10%;
+    float:right;
+    height: 80px;
+}
 #modelnews{
     padding:10px !important;
 }
@@ -1134,8 +1140,8 @@ padding: 20px 0px;
 #divnew2,.divnew2{
     padding: 20px 0px;
   //  min-height: 60px;
-  //  float:left;
-    width:100%;
+    float:left;
+
     padding-left: 10px;
  //   padding: 10px 0;
   //  margin: 2px 0;

@@ -174,6 +174,11 @@ function getnewfeed_success(tx, results) {
                         '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
+                        '<div  id="RESULTSright"  data-toggle="modal" data-target="#basicModal" onclick="loadsocialnews(' + menu.URL + ')">' +
+                        '<img height="30px" class="imagesch"  align="right" >' +
+                        '</div>' +
+
+
                         '</Div>');
 
 
@@ -189,16 +194,13 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
+                        '<div  id="RESULTSright"  data-toggle="modal" data-target="#basicModal" onclick="loadsocialnews(' + menu.URL + ')">' +
+                        '<img height="30px" class="imagesch"  align="right" >' +
+                        '</div>' +
                         '</Div>');
 
                 }
-                $(function () {
-                $('#div' + i).on( "taphold",function(){
-                    var baz = $(this).data('foo');
-                  //  alert(baz);
-                   window.plugins.socialsharing.share('Neosportz', null, null, baz);
-                });
-                });
+
 
 
             } else {
@@ -279,7 +281,13 @@ function getnewfeed_success(tx, results) {
     }
 }
 
+function loadsocialnews(ID){
 
+    $("#socialshareresut").click(function () {
+        window.plugins.socialsharing.share('Neosportz', null, null, ID);
+    });
+
+}
 
 
 function redirectplayer(ID){
