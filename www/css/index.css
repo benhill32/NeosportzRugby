@@ -567,6 +567,7 @@ position: fixed;
     width:10%;
     float:right;
     height: 80px;
+    padding-right: 10px;
 }
 #modelnews{
     padding:10px !important;
@@ -1140,8 +1141,8 @@ padding: 20px 0px;
 #divnew2,.divnew2{
     padding: 20px 0px;
   //  min-height: 60px;
-    float:left;
-
+   // float:left;
+width:100%;
     padding-left: 10px;
  //   padding: 10px 0;
   //  margin: 2px 0;
@@ -1152,6 +1153,22 @@ padding: 20px 0px;
 
 
 }
+#divnew3,.divnew3{
+    padding: 20px 0px;
+//  min-height: 60px;
+    float:left;
+
+    padding-left: 10px;
+//   padding: 10px 0;
+//  margin: 2px 0;
+//  padding-right: 10px;
+    border-top:0px solid #eee;
+    border-bottom:0px solid #eee;
+    border-right:0px solid #eee;
+
+
+}
+
 .facebook{
 
     border-left-color: #336699;

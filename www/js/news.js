@@ -217,7 +217,7 @@ function getnewfeed_success(tx, results) {
                         '<Div id="divnew1"> ' +
                         '' + imgicon +
                         '</Div>' +
-                        '<Div id="divnew2"> ' +
+                        '<Div id="divnew3"> ' +
                         '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
@@ -229,7 +229,7 @@ function getnewfeed_success(tx, results) {
                         '<Div id="divnew1" > ' +
                         '' + imgicon +
                         '</Div>' +
-                        '<Div id="divnew2"> ' +
+                        '<Div id="divnew3"> ' +
                         '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeed(' + menu.ID + ')"  >Read More</span></div>' +
