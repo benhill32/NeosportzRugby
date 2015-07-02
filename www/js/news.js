@@ -282,15 +282,15 @@ function getnewfeed_success(tx, results) {
 }
 
 function loadsocialnews(e,ID){
-    var baz = $(this).data('foo');
+    
 alert(ID);
     if (!e) var e = window.event;
     e.cancelBubble = true;
     if (e.stopPropagation){
         e.stopPropagation();
-       // $('#basicModalshare').modal('show');
+        $('#basicModalshare').modal('show');
         $("#socialshareresut").click(function () {
-            window.plugins.socialsharing.share('Neosportz', null, null, baz);
+            window.plugins.socialsharing.share('Neosportz', null, null, ID);
         });
     }
 
