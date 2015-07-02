@@ -193,46 +193,55 @@ function getMenu_success(tx, results) {
        // alert(date2);
         if(menu.DefaultHome == 0 && menu.DefaultAway ==0 ) {
             $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
-            '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+                '<div id="schleft" >' +
+                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-                '<div class="size11 blue" style="text-align: center!important;">' +
-                '<div style="float:left;">More</div>' +
-                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
-                '</div>' +
                 '</Div>' +
+                '<div  id="schright" onclick="resultssharemore(event)">' +
+                '<img height="30px" class="imagesch"  align="right" >' +
+                '</div>' +
+
+
             '</Div>');
+
+
+           // '<div class="size11 blue" style="text-align: center!important;">' +
+          //  '<div style="float:left;">More</div>' +
+          //  '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
+          //  '</div>' +
         }
         else if(menu.DefaultHome == 1 && menu.DefaultAway ==0 )
         {
             $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
-            '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+                '<div id="schleft" >' +
+                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >WBD - LBD  ' + action + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-                '<div class="size11 blue" style="text-align: center!important;">' +
-                '<div style="float:left;">More</div>' +
-                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
-                '</div>' +
                 '</Div>' +
+                '<div  id="schright" onclick="resultssharemore(event)">' +
+                '<img height="30px" class="imagesch"  align="right" >' +
+                '</div>' +
+
             '</Div>');
         }
         else if(menu.DefaultHome == 0 && menu.DefaultAway ==1 )
         {
             $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
-            '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+                '<div id="schleft" >' +
+                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >LBD - WBD  ' + action + '</div>' +
             '<div class="size11">' + menu.TournamentName + '</div>' +
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-                '<div class="size11 blue" style="text-align: center!important;">' +
-                '<div style="float:left;">More</div>' +
-                '<div  style="float:right;padding-left:100px;padding-right: 100px;" onclick="resultssharemore(event)">Share</div>' +
-                '</div>' +
                 '</Div>' +
+                '<div  id="schright" onclick="resultssharemore(event)">' +
+                '<img height="30px" class="imagesch"  align="right" >' +
+                '</div>' +
             '</Div>');
         }
 
@@ -253,15 +262,22 @@ function resultssharemore(e) {
     e.cancelBubble = true;
     if (e.stopPropagation){
         e.stopPropagation();
-
+        $('#basicModalshare').modal('show');
     }
+
+}
+
+
+function shareresults(){
     if (devicePlatformresult == "Android") {
 
         getsocialAndroid();
     }else{
-            loadsocialIOSresult();
+        loadsocialIOSresult();
     }
+
 }
+
 
 
 
