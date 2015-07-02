@@ -567,7 +567,7 @@ position: fixed;
     //width:10%;
     float:right;
     height: 80px;
-    padding-right: 15px;
+    //padding-right: 15px;
 }
 #modelnews{
     padding:10px !important;
@@ -1161,7 +1161,7 @@ width:100%;
 //  min-height: 60px;
     float:left;
 width:75%;
-    padding-left: 10px;
+  //  padding-left: 10px;
 //   padding: 10px 0;
 //  margin: 2px 0;
 //  padding-right: 10px;
