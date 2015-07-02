@@ -165,7 +165,7 @@ function getnewfeed_success(tx, results) {
 
                 if ((menu.Body).length <= 200) {
 
-                    $('#newsmain').append('<Div id="div' + menu.ID + '" class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
+                    $('#newsmain').append('<Div id="div' + i + '" class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
 
                         '<Div id="divnew1"   > ' +
                         '' + imgicon +
@@ -193,7 +193,7 @@ function getnewfeed_success(tx, results) {
 
                 }
                 $(function (index) {
-                $('#div' + menu.ID).on( "taphold",function(){
+                $('#div' + index).on( "taphold",function(){
                     // alert($(this).attr('id'));
                     alert(URLnow);
                   //  window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
