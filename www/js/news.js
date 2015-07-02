@@ -170,11 +170,11 @@ function getnewfeed_success(tx, results) {
                         '<Div id="divnew1"   > ' +
                         '' + imgicon +
                         '</Div>' +
-                        '<Div id="divnew2"> ' +
+                        '<Div id="divnew3"> ' +
                         '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
-                        '<div  id="RESULTSright"  data-toggle="modal" data-target="#basicModal" onclick="loadsocialnews(' + menu.URL + ')">' +
+                        '<div  id="RESULTSright" onclick="loadsocialnews(event,' + menu.URL + ')">' +
                         '<img height="30px" class="imagesch"  align="right" >' +
                         '</div>' +
 
@@ -189,12 +189,12 @@ function getnewfeed_success(tx, results) {
                             '<Div id="divnew1"   > ' +
                             '' + imgicon +
                             '</Div>' +
-                            '<Div id="divnew2"> ' +
+                            '<Div id="divnew3"> ' +
                             '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
-                        '<div  id="RESULTSright"  data-toggle="modal" data-target="#basicModal" onclick="loadsocialnews(' + menu.URL + ')">' +
+                        '<div  id="RESULTSright"  onclick="loadsocialnews(event,' + menu.URL + ')">' +
                         '<img height="30px" class="imagesch"  align="right" >' +
                         '</div>' +
                         '</Div>');
@@ -217,7 +217,7 @@ function getnewfeed_success(tx, results) {
                         '<Div id="divnew1"> ' +
                         '' + imgicon +
                         '</Div>' +
-                        '<Div id="divnew3"> ' +
+                        '<Div id="divnew2"> ' +
                         '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
@@ -229,7 +229,7 @@ function getnewfeed_success(tx, results) {
                         '<Div id="divnew1" > ' +
                         '' + imgicon +
                         '</Div>' +
-                        '<Div id="divnew3"> ' +
+                        '<Div id="divnew2"> ' +
                         '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeed(' + menu.ID + ')"  >Read More</span></div>' +
@@ -283,9 +283,18 @@ function getnewfeed_success(tx, results) {
 
 function loadsocialnews(ID){
 
-    $("#socialshareresut").click(function () {
-        window.plugins.socialsharing.share('Neosportz', null, null, ID);
-    });
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation){
+        e.stopPropagation();
+        $('#basicModal').modal('show');
+        $("#socialshareresut").click(function () {
+            window.plugins.socialsharing.share('Neosportz', null, null, ID);
+        });
+    }
+
+
+
 
 }
 
