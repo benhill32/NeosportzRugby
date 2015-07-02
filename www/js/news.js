@@ -175,11 +175,7 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
-
-
                 } else {
-
-
                         $('#newsmain').append('<Div  id="' + menu.ID + '" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
                             '<Div id="divnew1"   > ' +
                             '' + imgicon +
