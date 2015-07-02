@@ -165,7 +165,7 @@ function getnewfeed_success(tx, results) {
 
                 if ((menu.Body).length <= 200) {
 
-                    $('#newsmain').append('<Div id="divnewmain" class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
+                    $('#newsmain').append('<Div id="' + menu.ID + '" class="divnewmain bs-callout bs-callout-info"  align="left" onclick="URLredirect(\'' + URLnow + '\')">' +
 
                         '<Div id="divnew1"   > ' +
                         '' + imgicon +
@@ -180,7 +180,7 @@ function getnewfeed_success(tx, results) {
                 } else {
 
 
-                        $('#newsmain').append('<Div  id="divnewmain" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
+                        $('#newsmain').append('<Div  id="' + menu.ID + '" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
                             '<Div id="divnew1"   > ' +
                             '' + imgicon +
                             '</Div>' +
@@ -272,7 +272,7 @@ function getnewfeed_success(tx, results) {
 }
 
 function tapholdHandler( event ){
-    alert("tap and hold");
+    alert($(this).attr('id'));
 }
 
 
