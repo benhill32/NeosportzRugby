@@ -196,7 +196,7 @@ function getnewfeed_success(tx, results) {
                         '</Div>');
                     $( ".divnewmain" ).on( "taphold",function(){
                        // alert($(this).attr('id'));
-                        alert(URLnow);
+                       // alert(URLnow);
                         window.plugins.socialsharing.share('Neosportz', null, null, URLnow);
                     });
                 }
