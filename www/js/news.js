@@ -290,11 +290,18 @@ function loadsocialnews(e,ID){
     if (e.stopPropagation){
         e.stopPropagation();
         $('#basicModalshare').modal('show');
-        $("#socialshareresut").click(function () {
-            window.plugins.socialsharing.share('Neosportz', null, null, socialurl);
-        });
+
     }
  //   alert(socialurl);
+}
+
+function sharenews(){
+
+
+        window.plugins.socialsharing.share('Neosportz', null, null, socialurl);
+
+
+
 }
 
 
