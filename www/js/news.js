@@ -175,22 +175,22 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
-                    $( ".divnewmain" ).bind( "taphold", tapholdHandler );
+                    $( ".divnewmain" ).on( "taphold", tapholdHandler );
 
                 } else {
 
 
-                    $('#newsmain').append('<Div  id="divnewmain" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
-                        '<Div id="divnew1"   > ' +
-                        '' + imgicon +
-                        '</Div>' +
-                        '<Div id="divnew2"> ' +
-                        '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
+                        $('#newsmain').append('<Div  id="divnewmain" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
+                            '<Div id="divnew1"   > ' +
+                            '' + imgicon +
+                            '</Div>' +
+                            '<Div id="divnew2"> ' +
+                            '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
                         '</Div>');
-                    $( ".divnewmain" ).bind( "taphold", tapholdHandler );
+                    $( ".divnewmain" ).on( "taphold", tapholdHandler );
                 }
 
             } else {
