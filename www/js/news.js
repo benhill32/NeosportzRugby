@@ -174,7 +174,7 @@ function getnewfeed_success(tx, results) {
                         '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
-                        '<div  id="RESULTSright" data-foo="' + URLnow + '" onclick="loadsocialnews(event)">' +
+                        '<div  id="RESULTSright" data-foo=\'' + URLnow + '\' onclick="loadsocialnews(event,\'' + URLnow + '\')">' +
                         '<img height="30px" class="imagesch"  align="right" >' +
                         '</div>' +
 
@@ -194,7 +194,7 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
-                        '<div  id="RESULTSright"  data-foo="' + URLnow + '"  onclick="loadsocialnews(event)">' +
+                        '<div  id="RESULTSright"  data-foo=\'' + URLnow + '\'  onclick="loadsocialnews(event,\'' + URLnow + '\')">' +
                         '<img height="30px" class="imagesch"  align="right" >' +
                         '</div>' +
                         '</Div>');
@@ -281,7 +281,7 @@ function getnewfeed_success(tx, results) {
     }
 }
 
-function loadsocialnews(e){
+function loadsocialnews(e,ID){
     var baz = $(this).data('foo');
 
     if (!e) var e = window.event;
