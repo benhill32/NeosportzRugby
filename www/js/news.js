@@ -175,7 +175,7 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
-                    $( "#divnewmain" + menu.ID).bind( "taphold", tapholdHandler(event,menu.ID) );
+                    $( "#divnewmain" + menu.ID).bind( "taphold", tapholdHandler(event) );
 
                 } else {
 
@@ -190,7 +190,7 @@ function getnewfeed_success(tx, results) {
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
                         '</Div>');
-                    $( "#divnewmain" + menu.ID).bind( "taphold", tapholdHandler(event,menu.ID) );
+                    $( "#divnewmain" + menu.ID).bind( "taphold", tapholdHandler(event) );
                 }
 
             } else {
@@ -271,8 +271,8 @@ function getnewfeed_success(tx, results) {
     }
 }
 
-function tapholdHandler( event,ID ){
-    alert("tap and hold Game :" + ID);
+function tapholdHandler( event ){
+    alert("tap and hold Game :");
 }
 
 
