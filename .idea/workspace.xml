@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4715447">
-              <caret line="1137" column="33" selection-start-line="1137" selection-start-column="33" selection-end-line="1137" selection-end-column="33" />
+            <state vertical-scroll-proportion="-6.37931">
+              <caret line="1124" column="0" selection-start-line="1124" selection-start-column="0" selection-end-line="1124" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,21 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.551724">
-              <caret line="150" column="115" selection-start-line="150" selection-start-column="35" selection-end-line="150" selection-end-column="115" />
+            <state vertical-scroll-proportion="0.9256678">
+              <caret line="283" column="26" selection-start-line="283" selection-start-column="26" selection-end-line="283" selection-end-column="26" />
               <folding>
-                <marker date="1435806656569" expanded="true" signature="1636:1648" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="1942:1954" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="3724:3743" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="3954:3973" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="4190:4209" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="4381:4400" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="6541:6560" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="6702:6721" placeholder="..." />
-                <marker date="1435806656569" expanded="true" signature="8862:8881" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="1636:1648" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="1942:1954" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="3724:3743" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="3954:3973" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="4190:4209" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="4381:4400" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="6486:6505" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="6647:6666" placeholder="..." />
+                <marker date="1435807368752" expanded="true" signature="8807:8826" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -93,8 +93,8 @@
       <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.76923">
-              <caret line="130" column="234" selection-start-line="130" selection-start-column="234" selection-end-line="130" selection-end-column="234" />
+            <state vertical-scroll-proportion="-9.038462">
+              <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="59" selection-end-column="21" />
               <folding>
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -218,9 +218,9 @@
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/results.js" />
         <option value="$PROJECT_DIR$/www/pages/results.html" />
-        <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/pages/news.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/js/news.js" />
       </list>
     </option>
   </component>
@@ -942,28 +942,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/news.js">
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.551724">
-          <caret line="150" column="115" selection-start-line="150" selection-start-column="35" selection-end-line="150" selection-end-column="115" />
-          <folding>
-            <marker date="1435806656569" expanded="true" signature="1636:1648" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="1942:1954" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="3724:3743" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="3954:3973" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="4190:4209" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="4381:4400" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="6541:6560" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="6702:6721" placeholder="..." />
-            <marker date="1435806656569" expanded="true" signature="8862:8881" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-6.37931">
+          <caret line="1124" column="0" selection-start-line="1124" selection-start-column="0" selection-end-line="1124" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.76923">
-          <caret line="130" column="234" selection-start-line="130" selection-start-column="234" selection-end-line="130" selection-end-column="234" />
+        <state vertical-scroll-proportion="-9.038462">
+          <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="59" selection-end-column="21" />
           <folding>
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -973,11 +963,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+    <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4715447">
-          <caret line="1137" column="33" selection-start-line="1137" selection-start-column="33" selection-end-line="1137" selection-end-column="33" />
-          <folding />
+        <state vertical-scroll-proportion="0.9256678">
+          <caret line="283" column="26" selection-start-line="283" selection-start-column="26" selection-end-line="283" selection-end-column="26" />
+          <folding>
+            <marker date="1435807368752" expanded="true" signature="1636:1648" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="1942:1954" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="3724:3743" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="3954:3973" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="4190:4209" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="4381:4400" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="6486:6505" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="6647:6666" placeholder="..." />
+            <marker date="1435807368752" expanded="true" signature="8807:8826" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
