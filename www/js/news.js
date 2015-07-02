@@ -282,6 +282,7 @@ function getnewfeed_success(tx, results) {
 }
 
 function loadsocialnews(e,ID){
+alert(ID);
 
     if (!e) var e = window.event;
     e.cancelBubble = true;
