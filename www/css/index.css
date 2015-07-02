@@ -568,6 +568,7 @@ position: fixed;
     float:right;
     height: 80px;
     //padding-right: 15px;
+    padding-top:15px;
 }
 #modelnews{
     padding:10px !important;
