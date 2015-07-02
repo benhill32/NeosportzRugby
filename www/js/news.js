@@ -12,11 +12,11 @@ var nospor = 0;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
-  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
 
     db.transaction(getdatanews1, errorCBfunc, successCBfunc);
-  //  checkfb();
+    //  checkfb();
 }
 //db.transaction(getadmin, errorCBfunc, successCBfunc);
 
@@ -66,7 +66,7 @@ function getadmin_success(tx, results) {
     var len = results.rows.length;
 
 
-      if(len != 0) {
+    if(len != 0) {
         var menu = results.rows.item(0);
         if(menu.allownewfeed ==1 && menu.Clubedit == clubidtop){
             $('#loadnews').empty();
@@ -108,7 +108,7 @@ function loadnewdata(){
 
 function numbersponsers(tx) {
     var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
-   // alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
@@ -116,7 +116,7 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
 
     nospor = len;
-   // alert(nospor);
+    // alert(nospor);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 }
 
@@ -147,19 +147,19 @@ function getnewfeed_success(tx, results) {
                 var imgicon = "";
                 var URLnow = "";
 
-                    if ((menu.URL).search("facebook.com") != -1) {
-                        imgicon = "<img src='../img/fb.png' style='padding-right: 10px'  height='30'  align='left'>";
-                        URLnow = menu.URL;
-                    } else if ((menu.URL).search(".pdf") != -1) {
-                        imgicon = "<img src='../img/adobe.png' style='padding-right: 10px'  height='30'  align='left'>";
-                        URLnow = menu.URL;
-                    } else if ((menu.URL).search("youtu.be") != -1) {
-                        imgicon = "<img src='../img/youtube.png' style='padding-right: 10px'  height='30'  align='left'>";
-                        URLnow = menu.URL;
-                    } else {
-                        imgicon = "<img src='../img/web.png' style='padding-right: 10px'  height='30'  align='left'>";
-                        URLnow = menu.URL;
-                    }
+                if ((menu.URL).search("facebook.com") != -1) {
+                    imgicon = "<img src='../img/fb.png' style='padding-right: 10px'  height='30'  align='left'>";
+                    URLnow = menu.URL;
+                } else if ((menu.URL).search(".pdf") != -1) {
+                    imgicon = "<img src='../img/adobe.png' style='padding-right: 10px'  height='30'  align='left'>";
+                    URLnow = menu.URL;
+                } else if ((menu.URL).search("youtu.be") != -1) {
+                    imgicon = "<img src='../img/youtube.png' style='padding-right: 10px'  height='30'  align='left'>";
+                    URLnow = menu.URL;
+                } else {
+                    imgicon = "<img src='../img/web.png' style='padding-right: 10px'  height='30'  align='left'>";
+                    URLnow = menu.URL;
+                }
 
 
 
@@ -174,7 +174,7 @@ function getnewfeed_success(tx, results) {
                         '<div class="bold size13 blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
-                        '<div  id="RESULTSright" onclick="loadsocialnews(event,\'' + URLnow + '\')">' +
+                        '<div  id="RESULTSright" data-foo="' + URLnow + '" onclick="loadsocialnews(event)">' +
                         '<img height="30px" class="imagesch"  align="right" >' +
                         '</div>' +
 
@@ -185,16 +185,16 @@ function getnewfeed_success(tx, results) {
                 } else {
 
 
-                        $('#newsmain').append('<Div  id="divnewmain" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
-                            '<Div id="divnew1"   > ' +
-                            '' + imgicon +
-                            '</Div>' +
-                            '<Div id="divnew3"> ' +
-                            '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
+                    $('#newsmain').append('<Div  id="divnewmain" class="divnewmain bs-callout bs-callout-info" align="left" onclick="URLredirect(\'' + URLnow + '\')"  >' +
+                        '<Div id="divnew1"   > ' +
+                        '' + imgicon +
+                        '</Div>' +
+                        '<Div id="divnew3"> ' +
+                        '<div class="bold size13  blue"   >' + menu.Title + '</div>' +
                         '<div class="size11">' + menu.Body.substring(0, 200) +
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
-                        '<div  id="RESULTSright"  onclick="loadsocialnews(event,\'' + URLnow + '\')">' +
+                        '<div  id="RESULTSright"  data-foo="' + URLnow + '"  onclick="loadsocialnews(event)">' +
                         '<img height="30px" class="imagesch"  align="right" >' +
                         '</div>' +
                         '</Div>');
@@ -281,8 +281,8 @@ function getnewfeed_success(tx, results) {
     }
 }
 
-function loadsocialnews(e,ID){
-
+function loadsocialnews(e){
+    var baz = $(this).data('foo');
 
     if (!e) var e = window.event;
     e.cancelBubble = true;
@@ -290,7 +290,7 @@ function loadsocialnews(e,ID){
         e.stopPropagation();
         $('#basicModalshare').modal('show');
         $("#socialshareresut").click(function () {
-            window.plugins.socialsharing.share('Neosportz', null, null, ID);
+            window.plugins.socialsharing.share('Neosportz', null, null, baz);
         });
     }
 
@@ -334,7 +334,7 @@ function getsponsors_success(tx, results) {
             if (menu.Base64 != "null") {
                 imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  height="80" >';
             }
-         //   alert(menu.Name);
+            //   alert(menu.Name);
 
             $('#spondiv' + count).append('<Div  align="center" onclick="URLredirect(\'' + menu.Website + '\')" >' + imgg + '</div>');
 
@@ -345,7 +345,7 @@ function getsponsors_success(tx, results) {
 
 function loadnewfeed(ID) {
     IDNews = ID;
-   // $('body').css('position','fixed');
+    // $('body').css('position','fixed');
     db.transaction(loadnewfeed2, errorCBfunc, successCBfunc);
 }
 
@@ -368,7 +368,7 @@ function loadnewfeedreadmore(e,ID) {
 function loadnewfeed2(tx) {
 
     var sql = "select Title,replace(Body, '###$$###', '<br>') as Body from MobilevwApp_News_v_2 where ID=" + IDNews;
-     // alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], loadnewfeed_success);
 }
 
