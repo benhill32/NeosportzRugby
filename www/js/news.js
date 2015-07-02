@@ -9,6 +9,7 @@ var facebookchk= 0;
 var sponsorexist = 0;
 var ii = 0;
 var nospor = 0;
+var socialurl = "";
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
@@ -282,21 +283,18 @@ function getnewfeed_success(tx, results) {
 }
 
 function loadsocialnews(e,ID){
-    
-alert(ID);
+    socialurl = ID;
+
     if (!e) var e = window.event;
     e.cancelBubble = true;
     if (e.stopPropagation){
         e.stopPropagation();
         $('#basicModalshare').modal('show');
         $("#socialshareresut").click(function () {
-            window.plugins.socialsharing.share('Neosportz', null, null, ID);
+            window.plugins.socialsharing.share('Neosportz', null, null, socialurl);
         });
     }
-
-
-
-
+    alert(socialurl);
 }
 
 
