@@ -175,7 +175,10 @@ function getnewfeed_success(tx, results) {
                         '<div class="size11">' + menu.Body + '</div>' +
                         '</Div>' +
                         '</Div>');
-                    $( ".divnewmain" ).on( "taphold", tapholdHandler );
+                    $( ".divnewmain" ).on( "taphold",function(){
+                       // alert($(this).attr('id'));
+                        alert(URLnow);
+                    });
 
                 } else {
 
@@ -190,7 +193,10 @@ function getnewfeed_success(tx, results) {
                         '  <span data-toggle="modal"  class="size11 blue" data-target="#basicModalnews" onclick="loadnewfeedreadmore(event,' + menu.ID + ')"  >Read More</span></div>' +
                         '</Div>' +
                         '</Div>');
-                    $( ".divnewmain" ).on( "taphold", tapholdHandler );
+                    $( ".divnewmain" ).on( "taphold",function(){
+                       // alert($(this).attr('id'));
+                        alert(URLnow);
+                    });
                 }
 
             } else {
@@ -271,9 +277,7 @@ function getnewfeed_success(tx, results) {
     }
 }
 
-function tapholdHandler( event ){
-    alert($(this).attr('id'));
-}
+
 
 
 function redirectplayer(ID){
