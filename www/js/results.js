@@ -258,7 +258,7 @@ function getMenu_success(tx, results) {
 }
 
 function resultssharemore(e,ID) {
-    alert(ID);
+
     resultID = ID;
     if (!e) var e = window.event;
     e.cancelBubble = true;
@@ -269,7 +269,7 @@ function resultssharemore(e,ID) {
 
 }
 function resultsmore(){
-
+    alert(resultID);
 var values = resultID.split('||');
 
     resultshowmore( values[0],values[1],values[2],values[3],values[4],values[5],values[6],values[7]);
