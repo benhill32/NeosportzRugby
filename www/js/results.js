@@ -254,6 +254,8 @@ function getMenu_success(tx, results) {
     $('#divcircle').show();
     $('#divcircle').click(function() {
         sendinfotoserver("results",id,"0")
+
+
     });
 }
 
@@ -400,14 +402,14 @@ function getgoals(tx){
    var sql= "select m.ID,m.CreatedateUTC,m.UpdatedateUTC,m.DeletedateUTC,m.TeamID,m.GameID,m.PlayerID,m.ScoringID,m.Time,p.FullName from Mobilescoringbreakdown as m INNER JOIN " +
        "MobilevwApp_Base_Players as p  ON p.ID = m.PlayerID " +
        "where GameID = " + gameid + " order by CAST(m.Time AS INTEGER) ";
- //alert(sql);
+// alert(sql);
     tx.executeSql(sql, [], getgoals_success);
 }
 
 
 function getgoals_success(tx, results) {
     var len = results.rows.length;
-alert(len);
+//alert(len);
     $('#resulthomegoals').empty();
     $('#resultawaygoals').empty();
 
@@ -453,13 +455,18 @@ alert(len);
 
     if(len==0){
         $('#divscorers').hide();
+        $('#divcircleplayers').show();
+
 
     }else{
         $('#divscorers').show();
-
+        $('#divcircleplayers').hide();
     }
 
-
+    $('#divcircle').click(function() {
+        sendinfotoserver("players","0",homeid)
+        sendinfotoserver("players","0",awayid)
+    });
 
 }
 
