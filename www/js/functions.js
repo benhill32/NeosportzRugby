@@ -477,7 +477,26 @@ function syncmaintableindividual(obj){
             });
         }
     });
+    $.each(obj.scoringbreakdown, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
 
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO Mobilescoringbreakdown(ID,CreatedateUTC,UpdatedateUTC,DeletedateUTC,TeamID,GameID,PlayerID,ScoringID,Time) VALUES ("' + obj.ID + '","' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '",' + obj.TeamID + ',' + obj.GameID + ',' + obj.PlayerID + ',' + obj.ScoringID + ',"' + obj.Time + '")');
+                //   console.log("INSERT INTO Mobilescoringbreakdown is created");
+            });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE Mobilescoringbreakdown SET CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", TeamID = ' + obj.TeamID + ', GameID = ' + obj.GameID + ', PlayerID = ' + obj.PlayerID + ', ScoringID = ' + obj.ScoringID + ', Time = "' + obj.Time + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+            });
+
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from Mobilescoringbreakdown where ID =' + obj.ID);
+                //   console.log('Delete Mobilesscoringbreakdown');
+            });
+
+        }
+    });
     $.each(obj.App_Schedule, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
             db.transaction(function (tx) {
