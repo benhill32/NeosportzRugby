@@ -8,7 +8,7 @@ var gameid = 0;
 var homeid = 0;
 var awayid = 0;
 var devicePlatformresult =0;
-
+var resultID = 0;
 document.addEventListener("deviceready", onDeviceReadyresult, false);
 
 function onDeviceReadyresult() {
@@ -200,7 +200,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event)">' +
+                '<div  id="schright" onclick="resultssharemore(event,menu.ID)">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
@@ -223,7 +223,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event)">' +
+                '<div  id="schright" onclick="resultssharemore(event,menu.ID)">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
@@ -239,7 +239,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event)">' +
+                '<div  id="schright" onclick="resultssharemore(event,menu.ID)">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
             '</Div>');
@@ -255,9 +255,9 @@ function getMenu_success(tx, results) {
     });
 }
 
-function resultssharemore(e) {
+function resultssharemore(e,ID) {
 
-
+    resultID = ID;
     if (!e) var e = window.event;
     e.cancelBubble = true;
     if (e.stopPropagation){
@@ -266,7 +266,10 @@ function resultssharemore(e) {
     }
 
 }
+function resultsmore(){
+    resultshowmore(resultID);
 
+}
 
 function shareresults(){
     if (devicePlatformresult == "Android") {
