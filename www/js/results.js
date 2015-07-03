@@ -189,12 +189,12 @@ function getMenu_success(tx, results) {
         }
         var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
 
-        var readmore = menu.ID + "||" + menu.HomeName +  "||" + menu.AwayName +  "||" + menu.HomeScore +  "||" + menu.AwayScore +  "||" + menu.HomeTeamID +  "||" + menu.AwayTeamID +  "||" + menu.AwayTeamID;
+        var readmore = menu.ID + "||" + menu.HomeName +  "||" + menu.AwayName +  "||" + menu.HomeScore +  "||" + menu.AwayScore +  "||" + menu.HomeTeamID +  "||" + menu.AwayTeamID;
 
         var date2 = new Date(menu.DatetimeStart);
        // alert(date2);
         if(menu.DefaultHome == 0 && menu.DefaultAway ==0 ) {
-            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
+            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"  >' +
                 '<div id="schleft" >' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
@@ -217,7 +217,7 @@ function getMenu_success(tx, results) {
         }
         else if(menu.DefaultHome == 1 && menu.DefaultAway ==0 )
         {
-            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
+            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"  >' +
                 '<div id="schleft" >' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >WBD - LBD  ' + action + '</div>' +
@@ -233,7 +233,7 @@ function getMenu_success(tx, results) {
         }
         else if(menu.DefaultHome == 0 && menu.DefaultAway ==1 )
         {
-            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ',' + menu.AwayTeamID + ')"  >' +
+            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"  >' +
                 '<div id="schleft" >' +
                 '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
             '<div class="bold size13" >LBD - WBD  ' + action + '</div>' +
@@ -272,7 +272,7 @@ function resultsmore(){
     alert(resultID);
 var values = resultID.split('||');
 
-    resultshowmore( values[0],values[1],values[2],values[3],values[4],values[5],values[6],values[7]);
+    resultshowmore( values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
 
 }
 
