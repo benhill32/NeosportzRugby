@@ -200,7 +200,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,menu.ID)">' +
+                '<div  id="schright" onclick="resultssharemore(event,' + menu.ID + ')">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
@@ -223,7 +223,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,menu.ID)">' +
+                '<div  id="schright" onclick="resultssharemore(event,' + menu.ID + ')">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
@@ -239,7 +239,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,menu.ID)">' +
+                '<div  id="schright" onclick="resultssharemore(event,' + menu.ID + ')">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
             '</Div>');
