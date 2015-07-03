@@ -323,6 +323,14 @@ position: fixed;
     padding-right: 15px;
 
 }
+#divcircleplayers{
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+
+}
+
 #divcircle{
     width: 110px;
     margin-left: auto;

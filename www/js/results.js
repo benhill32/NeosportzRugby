@@ -463,7 +463,7 @@ function getgoals_success(tx, results) {
         $('#divcircleplayers').hide();
     }
 
-    $('#divcircle').click(function() {
+    $('#divcircleplayers').click(function() {
         sendinfotoserver("players","0",homeid)
         sendinfotoserver("players","0",awayid)
     });
