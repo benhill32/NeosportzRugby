@@ -269,7 +269,7 @@ function resultssharemore(e,ID) {
 
 }
 function resultsmore(){
-    alert(resultID);
+    //alert(resultID);
 var values = resultID.split('||');
 
     resultshowmore( values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
@@ -384,7 +384,7 @@ function loadsocialIOSresult() {
 
 function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd){
 
-    alert(ID + " - " + hometeam + " - " +awayteam+ " - " +homescore+ " - " +awayscore+ " - " +homeidd+ " - " +awayidd);
+   // alert(ID + " - " + hometeam + " - " +awayteam+ " - " +homescore+ " - " +awayscore+ " - " +homeidd+ " - " +awayidd);
     gameid =ID;
     homeid = homeidd;
     awayid = awayidd;
