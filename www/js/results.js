@@ -189,6 +189,7 @@ function getMenu_success(tx, results) {
         }
         var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
 
+        var readmore = menu.ID +  "||" + menu.HomeName +  "||" + menu.AwayName +  "||" + menu.HomeScore +  "||" + menu.AwayScore +  "||" + menu.HomeTeamID +  "||" + menu.AwayTeamID +  "||" + menu.AwayTeamID;
         var date2 = new Date(menu.DatetimeStart);
        // alert(date2);
         if(menu.DefaultHome == 0 && menu.DefaultAway ==0 ) {
@@ -200,7 +201,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,' + menu.ID + ')">' +
+                '<div  id="schright" onclick="resultssharemore(event,' + readmore + ')">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
@@ -223,7 +224,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,' + menu.ID + ')">' +
+                '<div  id="schright" onclick="resultssharemore(event,' + readmore + ')">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
 
@@ -239,7 +240,7 @@ function getMenu_success(tx, results) {
             '<div class="size11">Referee : ' + menu.RefName + '</div>' +
             '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
                 '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,' + menu.ID + ')">' +
+                '<div  id="schright" onclick="resultssharemore(event,' + readmore + ')">' +
                 '<img height="30px" class="imagesch"  align="right" >' +
                 '</div>' +
             '</Div>');
@@ -267,7 +268,10 @@ function resultssharemore(e,ID) {
 
 }
 function resultsmore(){
-    resultshowmore(resultID);
+
+var values = resultID.split('||');
+alert(values);
+    resultshowmore( values[0],values[1],values[2],values[3],values[4],values[5],values[6],values[7]);
 
 }
 
