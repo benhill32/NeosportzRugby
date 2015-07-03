@@ -272,7 +272,7 @@ function resultsmore(){
     //alert(resultID);
 var values = resultID.split('||');
 
-    resultshowmore( values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
+    resultshowmore(values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
 
 }
 
@@ -384,7 +384,7 @@ function loadsocialIOSresult() {
 
 function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd){
 
-   // alert(ID + " - " + hometeam + " - " +awayteam+ " - " +homescore+ " - " +awayscore+ " - " +homeidd+ " - " +awayidd);
+    alert(ID + " - " + hometeam + " - " +awayteam+ " - " +homescore+ " - " +awayscore+ " - " +homeidd+ " - " +awayidd);
     gameid =ID;
     homeid = homeidd;
     awayid = awayidd;
@@ -400,7 +400,7 @@ function getgoals(tx){
    var sql= "select m.ID,m.CreatedateUTC,m.UpdatedateUTC,m.DeletedateUTC,m.TeamID,m.GameID,m.PlayerID,m.ScoringID,m.Time,p.FullName from Mobilescoringbreakdown as m INNER JOIN " +
        "MobilevwApp_Base_Players as p  ON p.ID = m.PlayerID " +
        "where GameID = " + gameid + " order by CAST(m.Time AS INTEGER) ";
- //alert(sql);
+ alert(sql);
     tx.executeSql(sql, [], getgoals_success);
 }
 
