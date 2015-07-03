@@ -455,18 +455,15 @@ function getgoals_success(tx, results) {
 
     if(len==0){
         $('#divscorers').hide();
-        $('#divcircleplayers').show();
+
 
 
     }else{
         $('#divscorers').show();
-        $('#divcircleplayers').hide();
+
     }
 
-    $('#divcircleplayers').click(function() {
-        sendinfotoserver("players","0",homeid)
-        sendinfotoserver("players","0",awayid)
-    });
+
 
 }
 
