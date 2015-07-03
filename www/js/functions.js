@@ -14,7 +14,7 @@ var typesend = "";
 var divisionsend = "";
 var clubsend = "";
 var teamsend = "";
-var appversionlocal = '1.4.0';
+var appversionlocal = '1.4.4';
 
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
