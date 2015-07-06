@@ -55,9 +55,11 @@ function getbackground_success2(tx, results) {
         $('#splashscreen').empty();
         $('#splashscreen').append('<img id="screensplashimg" style="max-height:100%;max-width:100%" onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
 
+        runadmob();
+
         window.setTimeout(function(){
             window.location.href='../index.html';
-        }, 7000);
+        }, 5000);
 
 
     }
@@ -70,7 +72,7 @@ function getbackground2_error(err) {
 
     window.setTimeout(function(){
         window.location.href='../index.html';
-    }, 7000);
+    }, 1000);
 
 }
 
@@ -79,7 +81,7 @@ function getbackground_error(err) {
 
     window.setTimeout(function(){
         window.location.href='../index.html';
-    }, 7000);
+    }, 1000);
 
 
 }
