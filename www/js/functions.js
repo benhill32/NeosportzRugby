@@ -15,7 +15,7 @@ var divisionsend = "";
 var clubsend = "";
 var teamsend = "";
 var appversionlocal = '1.4.4';
-
+var admobid = {};
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     checkonlinefunctions();
@@ -27,6 +27,21 @@ function onDeviceReadyFunc() {
     databaseversion = db.database_version;
     db.transaction(gettoken1, errorCBfunc, successCBfunc);
     document.addEventListener("backbutton", onBackKeyDown, false);
+
+
+    if (devicePlatformfunc == "Android") {
+        admobid = { // for Android
+            banner: 'ca-app-pub-8464767609803803/3758587179'
+
+        };
+    }else if (devicePlatformfunc == "iOS") {
+        admobid = { // for iOS
+            banner: 'ca-app-pub-8464767609803803/8188786777'
+
+        };
+    }
+
+
 }
 //db.transaction(gettoken1, errorCBfunc, successCBfunc);
 
@@ -179,6 +194,18 @@ function errorCBfunc(err) {
 
 function successCBfunc() {
     //  alert("success!");
+}
+
+
+function runadmob(){
+
+
+
+    if(AdMob) AdMob.createBanner( {
+        adId:admobid.banner,
+        position:AdMob.AD_POSITION.BOTTOM_CENTER,
+        autoShow:true} );
+
 }
 
 function passscoretoserverscorecard(testvar){

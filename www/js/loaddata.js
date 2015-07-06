@@ -22,7 +22,7 @@ var tokenldata ="";
 var start = 0;
 // Cordova is ready
 //
-var admobid = {};
+
 var appversionlocalf = '1.4.4';
 
 
@@ -42,17 +42,6 @@ function onDeviceReadyloaddata() {
 
 
 // select the right Ad Id according to platform
-    if (devicePlatformfunc == "Android") {
-        admobid = { // for Android
-            banner: 'ca-app-pub-8464767609803803/3758587179'
-
-        };
-    }else if (devicePlatformfunc == "iOS") {
-        admobid = { // for iOS
-            banner: 'ca-app-pub-8464767609803803/8188786777'
-
-        };
-    }
 
 }
 //db.transaction(getresultids, errorCBfunc, successCBfunc);
@@ -115,16 +104,7 @@ function refreshdata(){
 }
 
 
-function runadmob(){
 
-
-
-    if(AdMob) AdMob.createBanner( {
-        adId:admobid.banner,
-        position:AdMob.AD_POSITION.BOTTOM_CENTER,
-        autoShow:true} );
-
-}
 
 
 function checkdatabaseloaddata(){
@@ -325,9 +305,7 @@ function getchecksync(tx, results) {
             }
         }else{
 
-            window.setTimeout(function(){
-                runadmob();
-            }, 3000);
+
 
 
         }

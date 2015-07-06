@@ -57,7 +57,7 @@ function getbackground_success2(tx, results) {
 
         window.setTimeout(function(){
             window.location.href='../index.html';
-        }, 1000);
+        }, 7000);
 
 
     }
@@ -77,7 +77,9 @@ function getbackground2_error(err) {
 function getbackground_error(err) {
 
 
+    window.setTimeout(function(){
         window.location.href='../index.html';
+    }, 7000);
 
 
 }
