@@ -7,6 +7,29 @@ document.addEventListener("deviceready", onDeviceReadymainindex, false);
 function onDeviceReadymainindex() {
     deviceIDfunc = device.uuid;
 
+runadmob();
+}
+
+function runadmob(){
+
+    var admobid = {};
+// select the right Ad Id according to platform
+    if( /(android)/i.test(navigator.userAgent) ) {
+        admobid = { // for Android
+            banner: 'ca-app-pub-8464767609803803/3758587179',
+            interstitial: 'ca-app-pub-8464767609803803/6293251172'
+        };
+    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+        admobid = { // for iOS
+            banner: 'ca-app-pub-8464767609803803/8188786777',
+            interstitial: 'ca-app-pub-8464767609803803/7769984372'
+        };
+    }
+
+    if(AdMob) AdMob.createBanner( {
+        adId:admobid.banner,
+        position:AdMob.AD_POSITION.BOTTOM_CENTER,
+        autoShow:true} );
 
 }
 
