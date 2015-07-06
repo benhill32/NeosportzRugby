@@ -36,7 +36,8 @@ function getbackground_success(tx, results) {
         Base64 = menu.Base64;
         db.transaction(getbackground2, errorCBfunc, successCBfunc);
     }else{
-        window.location.href='../index.html';
+       // window.location.href='../index.html';
+        window.location.href='ads.html';
     }
 }
 
@@ -71,15 +72,16 @@ function getbackground2_error(err) {
     $('#splashscreen').append('<img id="screensplashimg" style="max-height:100%;max-width:100%" src="data:image/png;base64,' + Base64 + '">');
 
     window.setTimeout(function(){
-        window.location.href='../index.html';
+       // window.location.href='../index.html';
+        window.location.href='ads.html';
     }, 7000);
 
 }
 
 function getbackground_error(err) {
 
-
-        window.location.href='../index.html';
+    window.location.href='ads.html';
+        //window.location.href='../index.html';
 
 
 }
