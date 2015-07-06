@@ -320,7 +320,12 @@ function getchecksync(tx, results) {
             syncmaintables(obj,yearnow);
             }
         }else{
-           // runadmob();
+
+            window.setTimeout(function(){
+                runadmob();
+            }, 3000);
+
+
         }
 
 }

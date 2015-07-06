@@ -131,6 +131,8 @@ function choosefacteam(ID){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
 
+
+
 }
 
 function showregion(){
