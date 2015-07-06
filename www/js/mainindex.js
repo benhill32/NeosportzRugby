@@ -79,7 +79,7 @@ function gethasclub_success(tx, results) {
         $('#mainfore').addClass('mainforeground2');
         // alert($('#mainfore').attr('class'));
         $('#basicModalnofav').modal('show');
-        runadmob();
+       // runadmob();
     }
 
 }
