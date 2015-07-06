@@ -947,7 +947,7 @@ function checkversionofapp_success(tx, results) {
         if(document.getElementById("indexdiv")==null) {
             closemodel();
         }else {
-          //  runadmob();
+
 
             if (menu.Database == 1) {
                 $('#indexloadingdata').modal('hide');
