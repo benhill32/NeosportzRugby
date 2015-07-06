@@ -56,7 +56,9 @@ function getbackground_success2(tx, results) {
         $('#splashscreen').append('<img id="screensplashimg" style="max-height:100%;max-width:100%" onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
 
         window.setTimeout(function(){
-            window.location.href='../index.html';
+           // window.location.href='../index.html';
+            window.location.href='ads.html';
+
         }, 1000);
 
 
