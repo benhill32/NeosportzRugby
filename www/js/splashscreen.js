@@ -61,7 +61,7 @@ function getbackground_success2(tx, results) {
 
         runadmob();
 
-        
+
 
 
 
