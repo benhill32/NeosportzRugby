@@ -21,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5029586">
+            <state vertical-scroll-proportion="0.0">
               <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="n#!!block;n#countProperties#0" expanded="false" />
@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/www/pages/ads.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="141" column="62" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
+              <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -66,8 +66,8 @@
       <file leaf-file-name="splashscreen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1153846">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -77,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,35 +108,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/pages/clubs.html">
+      <file leaf-file-name="standings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/standings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="results.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/results.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding>
-                <marker date="1435888850950" expanded="true" signature="7674:7703" placeholder="..." />
-                <marker date="1435888850950" expanded="true" signature="7736:7747" placeholder="..." />
-                <marker date="1435888850950" expanded="true" signature="7791:7843" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="1342:1354" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="1440:1452" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="2430:2442" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="2541:2553" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="2652:2664" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="2763:2775" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="2878:2890" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="2989:3001" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="3100:3112" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="3212:3224" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="3325:3337" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="4005:4017" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="4120:4132" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="4235:4247" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="4350:4362" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="4467:4479" placeholder="..." />
+                <marker date="1436732885368" expanded="true" signature="4909:4941" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.1750572">
+              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -166,7 +170,6 @@
         <option value="$PROJECT_DIR$/www/Bootstrap/css/docs.min.css" />
         <option value="$PROJECT_DIR$/www/js/clubsteams.js" />
         <option value="$PROJECT_DIR$/www/js/dbconnection.js" />
-        <option value="$PROJECT_DIR$/www/js/standings.js" />
         <option value="$PROJECT_DIR$/www/js/standingsarchive.js" />
         <option value="$PROJECT_DIR$/www/js/resultsmenu.js" />
         <option value="$PROJECT_DIR$/www/pages/Help.html" />
@@ -204,9 +207,10 @@
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
         <option value="$PROJECT_DIR$/www/pages/splashscreen.html" />
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
-        <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/www/js/standings.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/config.xml" />
       </list>
     </option>
   </component>
@@ -247,6 +251,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,8 +341,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -452,7 +456,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1010" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1010" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26802886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -517,24 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/standings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41379312">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/standingsarchive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.172414">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41379312">
-          <caret line="315" column="16" selection-start-line="315" selection-start-column="16" selection-end-line="315" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -592,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.965517">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="33" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="329" column="25" selection-start-line="329" selection-start-column="25" selection-end-line="329" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.9310346">
           <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,11 +799,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <marker date="1435888850950" expanded="true" signature="7674:7703" placeholder="..." />
-            <marker date="1435888850950" expanded="true" signature="7736:7747" placeholder="..." />
-            <marker date="1435888850950" expanded="true" signature="7791:7843" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -840,10 +822,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/ads.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="62" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
+          <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -858,27 +864,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1153846">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+    <entry file="file://$PROJECT_DIR$/www/js/standings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-          <folding />
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <marker date="1436732885368" expanded="true" signature="1342:1354" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="1440:1452" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="2430:2442" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="2541:2553" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="2652:2664" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="2763:2775" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="2878:2890" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="2989:3001" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="3100:3112" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="3212:3224" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="3325:3337" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="4005:4017" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="4120:4132" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="4235:4247" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="4350:4362" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="4467:4479" placeholder="..." />
+            <marker date="1436732885368" expanded="true" signature="4909:4941" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -898,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5029586">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="n#!!block;n#countProperties#0" expanded="false" />
@@ -907,6 +915,14 @@
             <element signature="n#!!block;n#onNotification#0" expanded="false" />
             <element signature="n#!!block;n#onNotificationAPN#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1750572">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
