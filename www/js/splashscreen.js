@@ -21,8 +21,8 @@ function getorientsplash(strorein){
 function getbackground(tx) {
    // alert($('#mainbackground').css('opacity'));
 
-    var sql = "select Base64 from Mobilescreenimage order by UpdateDateUTC desc LIMIT 1";
-     alert(sql);
+    var sql = "select Base64 from Mobilescreenimage LIMIT 1";
+     //alert(sql);
     tx.executeSql(sql, [], getbackground_success,getbackground_error);
 }
 
@@ -85,7 +85,7 @@ function getbackground2_error(err) {
 }
 
 function getbackground_error(err) {
-
+alert("error");
     runadmob();
     window.setTimeout(function(){
         window.location.href='../index.html';
