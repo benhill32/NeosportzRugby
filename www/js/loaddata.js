@@ -23,7 +23,7 @@ var start = 0;
 // Cordova is ready
 //
 
-var appversionlocalf = '1.4.6';
+var appversionlocalf = '1.4.7';
 
 
 function onDeviceReadyloaddata() {
@@ -129,6 +129,7 @@ function checkdatabaseloaddata(){
             $('#indexloadingdata').modal('hide');
             $('#mainfore').removeClass('mainforeground');
             $('#mainfore').addClass('mainforeground2');
+            showdivindex();
             if (devicePlatformfunc == "Android") {
                 $('#modelnewdatabase').modal('show');
             }
@@ -316,6 +317,7 @@ function errorclosemodel(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
+    showdivindex();
     window.plugins.toast.showLongCenter('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
@@ -324,12 +326,14 @@ function closemodel(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
+    showdivindex();
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
 function closemodelarchive(){
 
     $('#indexloadingdata').modal('hide');
+    showdivindex();
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
 
@@ -341,6 +345,7 @@ function closemodelRegion(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
+    showdivindex();
   //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     showregion();
 
@@ -349,7 +354,7 @@ function reloadindividual(){
 
 
     $('#indexloadingdata').modal('hide');
-
+    showdivindex();
     location.reload();
 }
 
@@ -841,7 +846,22 @@ function onNotificationAPN(e) {
 
 
 
+function benclick(){
 
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+    $('#indexloadingdata').modal('show');
+
+
+}
+function hidedivindex(){
+
+    $('#mainbackground').hide();
+}
+function showdivindex(){
+
+    $('#mainbackground').show();
+}
 
 
 

@@ -14,7 +14,7 @@ var typesend = "";
 var divisionsend = "";
 var clubsend = "";
 var teamsend = "";
-var appversionlocal = '1.4.6';
+var appversionlocal = '1.4.7';
 var admobid = {};
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
@@ -976,6 +976,7 @@ function checkversionofapp_success(tx, results) {
 
             if (menu.Database == 1) {
                 $('#indexloadingdata').modal('hide');
+
                 if (devicePlatformfunc == "Android") {
                     $('#modelnewdatabase').modal('show');
                 }
