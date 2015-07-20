@@ -21,7 +21,7 @@ function getorientsplash(strorein){
 function getbackground(tx) {
    // alert($('#mainbackground').css('opacity'));
 
-    var sql = "select Base64 from Mobilescreenimage order by UpdateDateUTC desc";
+    var sql = "select _id,Base64 from Mobilescreenimage order by UpdateDateUTC desc";
      //alert(sql);
     tx.executeSql(sql, [], getbackground_success,getbackground_error);
 }
