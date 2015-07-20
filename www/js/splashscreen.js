@@ -85,7 +85,7 @@ function getbackground2_error(err) {
 }
 
 function getbackground_error(err) {
-alert("error");
+    Alert("Error processing SQL: "+err.code);
     runadmob();
     window.setTimeout(function(){
         window.location.href='../index.html';
