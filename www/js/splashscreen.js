@@ -22,7 +22,7 @@ function getbackground(tx) {
    // alert($('#mainbackground').css('opacity'));
 
     var sql = "select Base64 from Mobilescreenimage order by UpdateDateUTC desc LIMIT 1";
-     //alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getbackground_success,getbackground_error);
 }
 
