@@ -455,6 +455,7 @@ function countProperties(obj) {
 
 
 function onclickloadregion(){
+
     $('#basicModalregions2').modal('show');
     //db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)
 }

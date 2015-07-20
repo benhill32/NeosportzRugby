@@ -371,7 +371,7 @@ function chooseregion(ID){
     $('#indexloadingdata').modal('show')
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
-
+    hidedivindex();
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');
