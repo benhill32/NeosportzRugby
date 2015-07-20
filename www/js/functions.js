@@ -185,6 +185,10 @@ function goBack() {
     window.history.back()
 }
 
+function errorCBfuncben(err) {
+   Alert("Error processing SQL: "+err.code);
+    //alert("Error processing SQL loaddata: "+err.code);
+}
 
 
 function errorCBfunc(err) {
@@ -895,8 +899,8 @@ function syncmaintables(obj,year){
 
             db.transaction(function (tx) {
                 tx.executeSql('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '")');
-                alert('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '")');
-            });
+               // alert('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '")');
+            },errorCBfuncben);
 
         db.transaction(function (tx) {
             var sql = 'UPDATE Mobilescreenimage SET Base64 = "' + obj.Base64 + '", BackgroundColor = "' + obj.BackgroundColor + '", SoftwareFade = "' + obj.SoftwareFade + '", UpdateDateUTC = "' + obj.UpdateDateUTC + '", TopText = "' + obj.TopText + '", BottomText = "' + obj.BottomText + '",URLLINK = "' + obj.URLL + '" where _id = ' + obj._id;
