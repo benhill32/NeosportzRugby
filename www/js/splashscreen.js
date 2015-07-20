@@ -30,7 +30,7 @@ function getbackground_success(tx, results) {
 
 
     var len = results.rows.length;
-    alert(len);
+   // alert(len);
     if(len != 0) {
         var menu = results.rows.item(0);
         Base64 = menu.Base64;
@@ -53,7 +53,7 @@ function getbackground2(tx) {
 function getbackground_success2(tx, results) {
 
     var len = results.rows.length;
-     alert(len);
+    // alert(len);
     if(len != 0) {
         var menu = results.rows.item(0);
         $('#splashscreen').empty();
