@@ -31,10 +31,10 @@ function getteamplayer_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
         if(menu.Base64 != "null"){
-            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  align="left" height="80" >';
+            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  align="left"  class="img-rounded"  >';
         }else{
 
-            imgg = '<img src="../img/nobase64_2.png"  align="left" height="80" >';
+            imgg = '<img src="../img/nobase64_2.png"  align="left" class="img-rounded" >';
         }
 
         $('#teamsdiv').append('<Div class="mainmenuplayers" align="left"   data-toggle="modal" data-target="#basicModalplayer" onclick="loadplayerinfo(' + menu.ID + ')" >' +
