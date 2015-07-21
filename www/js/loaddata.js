@@ -368,6 +368,9 @@ function reloadindividual(){
     if (document.getElementById("indexdiv") != null) {
         showdivindex();
     }
+    if (document.getElementById("newsmain") != null) {
+        $.mobile.loading().hide();
+    }
     location.reload();
 
 }
