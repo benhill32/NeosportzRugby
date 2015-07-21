@@ -18,6 +18,7 @@ var appversionlocal = '1.4.7';
 var admobid = {};
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    $.mobile.loading().hide();
     checkonlinefunctions();
     deviceIDfunc = device.uuid;
     devicemodelfunc = device.model;
