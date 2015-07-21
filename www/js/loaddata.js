@@ -129,7 +129,9 @@ function checkdatabaseloaddata(){
             $('#indexloadingdata').modal('hide');
             $('#mainfore').removeClass('mainforeground');
             $('#mainfore').addClass('mainforeground2');
-            showdivindex();
+            if (document.getElementById("indexdiv") != null) {
+                showdivindex();
+            }
             if (devicePlatformfunc == "Android") {
                 $('#modelnewdatabase').modal('show');
             }
@@ -317,7 +319,9 @@ function errorclosemodel(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
-    showdivindex();
+    if (document.getElementById("indexdiv") != null) {
+        showdivindex();
+    }
     window.plugins.toast.showLongCenter('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
@@ -326,14 +330,18 @@ function closemodel(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
-    showdivindex();
+    if (document.getElementById("indexdiv") != null) {
+        showdivindex();
+    }
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     randomfunctions();
 }
 function closemodelarchive(){
 
     $('#indexloadingdata').modal('hide');
-    showdivindex();
+    if (document.getElementById("indexdiv") != null) {
+        showdivindex();
+    }
     window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
 
@@ -345,7 +353,9 @@ function closemodelRegion(){
     $('#mainfore').removeClass('mainforeground2');
     $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
-    showdivindex();
+    if (document.getElementById("indexdiv") != null) {
+        showdivindex();
+    }
   //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     showregion();
 
@@ -354,8 +364,12 @@ function reloadindividual(){
 
 
     $('#indexloadingdata').modal('hide');
-    showdivindex();
+
+    if (document.getElementById("indexdiv") != null) {
+        showdivindex();
+    }
     location.reload();
+
 }
 
 
