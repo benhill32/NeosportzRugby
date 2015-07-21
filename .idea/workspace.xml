@@ -96,14 +96,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubsteamplayer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clubsteamplayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19450802">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="98" />
               <folding>
                 <marker date="1437443411828" expanded="true" signature="1757:1795" placeholder="..." />
                 <marker date="1437443411828" expanded="true" signature="1873:1911" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clubsteams.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/clubsteams.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.28032038">
+              <caret line="92" column="147" selection-start-line="92" selection-start-column="147" selection-end-line="92" selection-end-column="147" />
+              <folding>
+                <marker date="1437443751457" expanded="true" signature="2880:2892" placeholder="..." />
+                <marker date="1437443751457" expanded="true" signature="2976:2994" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -134,16 +147,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="29" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -166,7 +169,6 @@
         <option value="$PROJECT_DIR$/www/js/schedulesmenu.js" />
         <option value="$PROJECT_DIR$/www/js/StandingMenu.js" />
         <option value="$PROJECT_DIR$/www/Bootstrap/css/docs.min.css" />
-        <option value="$PROJECT_DIR$/www/js/clubsteams.js" />
         <option value="$PROJECT_DIR$/www/js/dbconnection.js" />
         <option value="$PROJECT_DIR$/www/js/standingsarchive.js" />
         <option value="$PROJECT_DIR$/www/js/resultsmenu.js" />
@@ -209,6 +211,7 @@
         <option value="$PROJECT_DIR$/www/pages/splashscreen.html" />
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
         <option value="$PROJECT_DIR$/www/js/clubsteamplayer.js" />
+        <option value="$PROJECT_DIR$/www/js/clubsteams.js" />
       </list>
     </option>
   </component>
@@ -568,13 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/clubsteams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41379312">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/addnewfeed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.019101124">
@@ -915,11 +911,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19450802">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="79" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="98" />
           <folding>
             <marker date="1437443411828" expanded="true" signature="1757:1795" placeholder="..." />
             <marker date="1437443411828" expanded="true" signature="1873:1911" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/clubsteams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28032038">
+          <caret line="92" column="147" selection-start-line="92" selection-start-column="147" selection-end-line="92" selection-end-column="147" />
+          <folding>
+            <marker date="1437443751457" expanded="true" signature="2880:2892" placeholder="..." />
+            <marker date="1437443751457" expanded="true" signature="2976:2994" placeholder="..." />
           </folding>
         </state>
       </provider>

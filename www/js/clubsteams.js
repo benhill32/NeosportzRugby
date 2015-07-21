@@ -90,7 +90,7 @@ function getteam_success(tx, results) {
         var menu = results.rows.item(i);
         var imgg = "";
         if(menu.Base64 != "null"){
-            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '" style="margin-top: -10px;"  align="middle" height="80" >';
+            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '" style="margin-top: -10px;"  align="middle" height="80" class="img-rounded" >';
         }
        // alert(menu.DivisionName);
         $('#teamsdiv').append('<Div class="mainmenuteam" align="middle" onclick="redirectplayer(' + menu.ID + ')" >' +
