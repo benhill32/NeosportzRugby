@@ -99,11 +99,11 @@
       <file leaf-file-name="clubsteamplayer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3112128">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.19450802">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding>
-                <marker date="1437443118502" expanded="true" signature="1733:1771" placeholder="..." />
-                <marker date="1437443118502" expanded="true" signature="1849:1887" placeholder="..." />
+                <marker date="1437443411828" expanded="true" signature="1757:1795" placeholder="..." />
+                <marker date="1437443411828" expanded="true" signature="1873:1911" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -454,7 +454,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1663" height="1010" extended-state="1" />
+    <frame x="0" y="0" width="1663" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2701882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -915,11 +915,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3112128">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.19450802">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding>
-            <marker date="1437443118502" expanded="true" signature="1733:1771" placeholder="..." />
-            <marker date="1437443118502" expanded="true" signature="1849:1887" placeholder="..." />
+            <marker date="1437443411828" expanded="true" signature="1757:1795" placeholder="..." />
+            <marker date="1437443411828" expanded="true" signature="1873:1911" placeholder="..." />
           </folding>
         </state>
       </provider>
