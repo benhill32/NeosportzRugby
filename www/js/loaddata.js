@@ -874,11 +874,11 @@ function benclick(){
 }
 function hidedivindex(){
 
-    $('#mainbackground').hide();
+  //  $('#mainbackground').hide();
 }
 function showdivindex(){
 
-    $('#mainbackground').show();
+   // $('#mainbackground').show();
 }
 
 

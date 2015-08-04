@@ -34,399 +34,398 @@
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <script type="text/javascript" src="js/dbconnection.js"></script>
+         <script type="text/javascript" src="js/dbconnection.js"></script>
 
-       <script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-      <script type="text/javascript" src="cordova.js"  charset="utf-8"></script>
-        <script type="text/javascript" src="js/functions.js"></script>
-        <script type="text/javascript" src="js/CreateOpenDB.js"></script>
+        <script type="text/javascript" src="plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js"></script>
+         <script type="text/javascript" src="js/jquery.min.js"></script>
+         <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+         <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+         <script type="text/javascript" src="js/index.js"></script>
+       <script type="text/javascript" src="cordova.js"  charset="utf-8"></script>
+         <script type="text/javascript" src="js/functions.js"></script>
+         <script type="text/javascript" src="js/CreateOpenDB.js"></script>
         <script type="text/javascript" src="js/mainindex.js"></script>
-        <script type="text/javascript" src="js/loaddata.js"></script>
+            <script type="text/javascript" src="js/loaddata.js"></script>
 
 
 
 
-        <script type="text/javascript"  charset="utf-8">
+                     <script type="text/javascript"  charset="utf-8">
 
 
 
-    document.addEventListener("deviceready", onDeviceReadyindex, false);
+                 document.addEventListener("deviceready", onDeviceReadyindex, false);
 
-    function onDeviceReadyindex() {
-        //db.transaction(createDB, errorCBfunc, successCBfunc);
-        refreshdata();
-        db.transaction(getbackground, errorCBfunc, successCBfunc);
-    }
-
-
-
-        </script>
-<style>
-    .modal-footer{
-
-      //  padding:0px !important;
-    }
-    .container-fluid{
-        padding-top:0px;
-    }
-
-</style>
-    </head>
-    <body  onload="onLoad()">
-
-    <div class="divmainmenu" >
-        <div id="backicondiv">
-
-            &nbsp;
-        </div>
-        <div class="mainheaderimgicon"  >
-
-            <img src="img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle" >
-
-            Neosportz Rugby
-        </div>
-
-    </div>
-
-    <div id="mainbackground" android:alpha=".75">
-    </div>
-    <div id="mainfore" class="mainforeground">
-    <div class="container-fluid">
-        <div class="modal" id="basicModalnofav" tabindex="-1"  data-backdrop="static" data-keyboard="false"  role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-body">
-                      It appears to be that you haven't set your favourite club yet. Would you like to set it now?
-                       You can do this anythime by viewing the teams of a club an pressing the star button in the
-                        navigation bar.
+                 function onDeviceReadyindex() {
+                     //db.transaction(createDB, errorCBfunc, successCBfunc);
+                     refreshdata();
+                     db.transaction(getbackground, errorCBfunc, successCBfunc);
+                 }
 
 
-                    </div>
-                    <div class="modal-footer"  data-dismiss="modal" align="center">
+                     </script>
+             <style>
+                 .modal-footer{
 
-                        <div class="modelfloatleftfirst left" id="dontshow"  align="center" onclick="hadclubfunction()">
+                   //  padding:0px !important;
+                 }
+                 .container-fluid{
+                     padding-top:0px;
+                 }
 
-                            Don't show this again
-                        </div>
+             </style>
+                 </head>
+                 <body  onload="onLoad()">
 
-                        <div class="modelfloatleft left" id="notnow" align="center"  onclick="hadclubchecklater()">
-                            Not now
-                        </div>
-                        <div class="modelfloatright" id="indexyes"  align="center" onclick="showclubsfun()">
-                            <div style="width:100%;" align="center">
-                                Yes
+                 <div class="divmainmenu" >
+                     <div id="backicondiv">
 
-                            </div>
+                         &nbsp;
+                     </div>
+                     <div class="mainheaderimgicon"  >
 
-                        </div>
+                         <img src="img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle" >
 
+                         Neosportz Rugby
+                     </div>
 
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="basicModalteams" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
-
-                            Select a Favourite club
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div id="clubfav">
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="basicModalregions"  tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
-
-                            Select a Region
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div id="regiondivID">
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-body" align="center">
-                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...
-                    </div>
                  </div>
-<script type="text/javascript">
-        hidedivindex();
-</script>
+
+                 <div id="mainbackground" android:alpha=".75">
+                 </div>
+                 <div id="mainfore" class="mainforeground">
+                 <div class="container-fluid">
+                     <div class="modal" id="basicModalnofav" tabindex="-1"  data-backdrop="static" data-keyboard="false"  role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+
+                                 <div class="modal-body">
+                                   It appears to be that you haven't set your favourite club yet. Would you like to set it now?
+                                    You can do this anythime by viewing the teams of a club an pressing the star button in the
+                                     navigation bar.
 
 
-            </div>
-        </div>
-        <div class="modal" id="basicarchivemodel" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
+                                 </div>
+                                 <div class="modal-footer"  data-dismiss="modal" align="center">
 
-                            Select a Year
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div id="archiveyeardiv">
+                                     <div class="modelfloatleftfirst left" id="dontshow"  align="center" onclick="hadclubfunction()">
 
+                                         Don't show this again
+                                     </div>
 
-                        </div>
-                        <div class="modal-body closeregion"  data-dismiss="modal" align="center" onclick="backtonormal()">
-                            Close
+                                     <div class="modelfloatleft left" id="notnow" align="center"  onclick="hadclubchecklater()">
+                                         Not now
+                                     </div>
+                                     <div class="modelfloatright" id="indexyes"  align="center" onclick="showclubsfun()">
+                                         <div style="width:100%;" align="center">
+                                             Yes
 
+                                         </div>
 
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="basicarchiveyesno" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
-
-                            Are you sure you want to download this years Archive? It could take a while!
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div id="archiveyearyesNO" >
-
-
-                        </div>
-                        <div class="closeregion" id="closeregion" data-dismiss="modal" align="center" onclick="backtonormal()">
-                            Close
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="basicstandingresultmodel" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
-                            Select Standings or Results
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div id="standingresultsdiv">
-                            <Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchivestandings()"  >
-                                <div class="bold size13"   >Standings</div>
-                                </Div>
-                            <Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;"  onclick="loadarchiveresults()"  >
-                                <div class="bold size13"   >Results</div>
-                            </Div>
-                        </div>
-                        <div class="modal-body backregion"  style="border-bottom: 1px solid #e5e5e5;" data-dismiss="modal" align="center" onclick="gobaack2()">
-                            Back
-                        </div>
-                        <div class="modal-body closeregion" data-dismiss="modal" align="center" onclick="backtonormal()">
-                            Close
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="basicmodelarchivestand" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
-
-                            Standings Choose Division
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div class="modal-body backregion"  style="border-bottom: 1px solid #e5e5e5;" data-dismiss="modal" align="center" onclick="gobaack4()">
-                            Back
-                        </div>
-                        <div id="archivechoosedivisionstand" >
+                                     </div>
 
 
 
-                        </div>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicModalteams" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
+
+                                         Select a Favourite club
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div id="clubfav">
 
 
-                    </div>
+                                     </div>
+                                 </div>
 
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="basicmodelarchiveresults" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="divmainheader">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicModalregions"  tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
 
-                            Results Choose Division
-                        </div>
-                    </div>
-                    <div class="modal-body" >
-                        <div class="modal-body backregion"  style="border-bottom: 1px solid #e5e5e5;" data-dismiss="modal" align="center" onclick="gobaack3()">
-                            Back
-                        </div>
-                        <div id="archivechoosedivisionresults" >
+                                         Select a Region
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div id="regiondivID">
 
 
-                        </div>
+                                     </div>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+
+                                 <div class="modal-body" align="center">
+                                     <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...
+                                 </div>
+                              </div>
+             <script type="text/javascript">
+                     hidedivindex();
+             </script>
 
 
-                    </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicarchivemodel" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
 
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="modelnewversion" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        There is a New Version of this App!
-                    </div>
-                    <div class="modal-body">
-                        <div  id="opennewversion" data-dismiss="modal" align="center" onclick="loadnewapp()">
-                            Download Now
-
-
-                        </div>
-
-                    </div>
-                    <div class="modal-footer" id="closenewversion" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
-                        Exit App
+                                         Select a Year
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div id="archiveyeardiv">
 
 
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="modal" id="modelnewdatabase" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    The Database has changed for this App.
-                </div>
-                <div class="modal-body">
-                    <div  id="opennewdatabase" data-dismiss="modal" align="center" onclick="loadnewadatabase()">
-                        Please Update now
-                    </div>
-                </div>
-                <div class="modal-footer" id="closenewdatabase" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
-                    Exit App
+                                     </div>
+                                     <div class="modal-body closeregion"  data-dismiss="modal" align="center" onclick="backtonormal()">
+                                         Close
 
 
-                </div>
-            </div>
+                                     </div>
+                                 </div>
 
-        </div>
-    </div>
-        <div class="modal" id="modelnewdatabaseapple" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        The Database has changed for this App.
-                    </div>
-                    <div class="modal-body">
-                        <div  id="opennewdatabaseapple" data-dismiss="modal" align="center" onclick="loadnewadatabase()">
-                            Please Update now
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicarchiveyesno" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
 
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="modal" id="modelnewversionapple" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        There is a New Version of this App!
-                    </div>
-                    <div class="modal-body">
-                        <div  id="opennewversion1" data-dismiss="modal" align="center" onclick="loadnewapp()">
-                            Download Now
+                                         Are you sure you want to download this years Archive? It could take a while!
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div id="archiveyearyesNO" >
 
 
-                        </div>
+                                     </div>
+                                     <div class="closeregion" id="closeregion" data-dismiss="modal" align="center" onclick="backtonormal()">
+                                         Close
+                                     </div>
+                                 </div>
 
-                    </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicstandingresultmodel" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
+                                         Select Standings or Results
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div id="standingresultsdiv">
+                                         <Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="loadarchivestandings()"  >
+                                             <div class="bold size13"   >Standings</div>
+                                             </Div>
+                                         <Div class="modal-body"  data-dismiss="modal" align="center" style="border-bottom: 1px solid #e5e5e5;"  onclick="loadarchiveresults()"  >
+                                             <div class="bold size13"   >Results</div>
+                                         </Div>
+                                     </div>
+                                     <div class="modal-body backregion"  style="border-bottom: 1px solid #e5e5e5;" data-dismiss="modal" align="center" onclick="gobaack2()">
+                                         Back
+                                     </div>
+                                     <div class="modal-body closeregion" data-dismiss="modal" align="center" onclick="backtonormal()">
+                                         Close
 
-                </div>
 
-            </div>
-        </div>
-        <div id="indexdiv" style="">
-    <div class="divmain" onclick="weblink('pages/ScheduleMenu.html')">
-    Schedules
-    </div>
-    <div class="divmain"  onclick="weblink('pages/ResultsMenu.html')">
-        Results
-    </div>
-    <div class="divmain" onclick="weblink('pages/StandingMenu.html')">
-        Standings
-    </div>
-    <div class="divmain"  onclick="weblink('pages/clubs.html')">
-        Clubs
-    </div>
-    <div class="divmain"  onclick="weblink('pages/news.html')">
-       News
-    </div>
-    <div class="divmain"  onclick="weblink('pages/settings.html')">
-        Settings
-    </div>
-            <div class="divmain" onclick="loadarchiveyear2()">
-                Archive
-            </div>
-    </div>
+                                     </div>
+                                 </div>
 
-    </div>
-    </div>
-    <div class="footer" onclick="benclick()">
-        <img src="img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicmodelarchivestand" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
 
-    </div>
-
-    </body>
-<script type="application/javascript">
+                                         Standings Choose Division
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div class="modal-body backregion"  style="border-bottom: 1px solid #e5e5e5;" data-dismiss="modal" align="center" onclick="gobaack4()">
+                                         Back
+                                     </div>
+                                     <div id="archivechoosedivisionstand" >
 
 
 
-</script>
+                                     </div>
 
-</html>
+
+                                 </div>
+
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="basicmodelarchiveresults" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <div class="divmainheader">
+
+                                         Results Choose Division
+                                     </div>
+                                 </div>
+                                 <div class="modal-body" >
+                                     <div class="modal-body backregion"  style="border-bottom: 1px solid #e5e5e5;" data-dismiss="modal" align="center" onclick="gobaack3()">
+                                         Back
+                                     </div>
+                                     <div id="archivechoosedivisionresults" >
+
+
+                                     </div>
+
+
+                                 </div>
+
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal" id="modelnewversion" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     There is a New Version of this App!
+                                 </div>
+                                 <div class="modal-body">
+                                     <div  id="opennewversion" data-dismiss="modal" align="center" onclick="loadnewapp()">
+                                         Download Now
+
+
+                                     </div>
+
+                                 </div>
+                                 <div class="modal-footer" id="closenewversion" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
+                                     Exit App
+
+
+                                 </div>
+                             </div>
+
+                         </div>
+                     </div>
+                     <div class="modal" id="modelnewdatabase" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                     <div class="modal-dialog">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 The Database has changed for this App.
+                             </div>
+                             <div class="modal-body">
+                                 <div  id="opennewdatabase" data-dismiss="modal" align="center" onclick="loadnewadatabase()">
+                                     Please Update now
+                                 </div>
+                             </div>
+                             <div class="modal-footer" id="closenewdatabase" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
+                                 Exit App
+
+
+                             </div>
+                         </div>
+
+                     </div>
+                 </div>
+                     <div class="modal" id="modelnewdatabaseapple" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     The Database has changed for this App.
+                                 </div>
+                                 <div class="modal-body">
+                                     <div  id="opennewdatabaseapple" data-dismiss="modal" align="center" onclick="loadnewadatabase()">
+                                         Please Update now
+
+
+                                     </div>
+
+                                 </div>
+
+                             </div>
+
+                         </div>
+                     </div>
+                     <div class="modal" id="modelnewversionapple" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     There is a New Version of this App!
+                                 </div>
+                                 <div class="modal-body">
+                                     <div  id="opennewversion1" data-dismiss="modal" align="center" onclick="loadnewapp()">
+                                         Download Now
+
+
+                                     </div>
+
+                                 </div>
+
+                             </div>
+
+                         </div>
+                     </div>
+                     <div id="indexdiv" style="">
+                 <div class="divmain" onclick="weblink('pages/ScheduleMenu.html')">
+                 Schedules
+                 </div>
+                 <div class="divmain"  onclick="weblink('pages/ResultsMenu.html')">
+                     Results
+                 </div>
+                 <div class="divmain" onclick="weblink('pages/StandingMenu.html')">
+                     Standings
+                 </div>
+                 <div class="divmain"  onclick="weblink('pages/clubs.html')">
+                     Clubs
+                 </div>
+                 <div class="divmain"  onclick="weblink('pages/news.html')">
+                    News
+                 </div>
+                 <div class="divmain"  onclick="weblink('pages/settings.html')">
+                     Settings
+                 </div>
+                         <div class="divmain" onclick="loadarchiveyear2()">
+                             Archive
+                         </div>
+                 </div>
+
+                 </div>
+                 </div>
+                 <div class="footer" onclick="benclick()">
+                     <img src="img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+
+                 </div>
+
+                 </body>
+             <script type="application/javascript">
+
+
+
+             </script>
+
+             </html>
