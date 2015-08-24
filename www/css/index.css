@@ -388,9 +388,9 @@ position: fixed;
   padding-right: 15px;
 
 }
-#mainmenustandingmenu{
+#mainmenustandingmenu,#mainmenuresultsch,#mainmenuschmenu{
     //margin-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   //  padding-left:15px;
   //  padding-right: 15px;
 
