@@ -30,9 +30,10 @@ function getbackground_success(tx, results) {
 
 
     var len = results.rows.length;
-   // alert(len);
+    alert("LEngth" + len);
     if(len != 0) {
         var menu = results.rows.item(0);
+        alert(menu._id);
         Base64 = menu.Base64;
         db.transaction(getbackground2, errorCBfunc, successCBfunc);
     }else{
@@ -60,9 +61,6 @@ function getbackground_success2(tx, results) {
         $('#splashscreen').append('<img id="screensplashimg" style="max-height:100%;max-width:100%" onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
 
         runadmob();
-
-
-
 
 
         window.setTimeout(function(){
