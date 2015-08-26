@@ -30,7 +30,7 @@ function getbackground_success(tx, results) {
 
 
     var len = results.rows.length;
-    alert("LEngth : " + len);
+ //   alert("LEngth : " + len);
     if(len != 0) {
         var menu = results.rows.item(0);
         alert(menu._id);
