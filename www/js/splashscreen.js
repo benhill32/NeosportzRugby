@@ -33,7 +33,7 @@ function getbackground_success(tx, results) {
  //   alert("LEngth : " + len);
     if(len != 0) {
         var menu = results.rows.item(0);
-        alert(menu._id);
+       // alert(menu._id);
         Base64 = menu.Base64;
         db.transaction(getbackground2, errorCBfunc, successCBfunc);
     }else{
