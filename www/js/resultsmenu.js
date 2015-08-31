@@ -13,7 +13,7 @@ function onDeviceReadyresmenu() {
 
 
 function getMenu(tx) {
-    var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Results_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
+    var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Results_Menu where Hide = 0 Group by DivisionName,DivisionID  order by DivisionOrderID";
     // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
 
 

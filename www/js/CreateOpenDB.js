@@ -79,15 +79,15 @@ function droptables(tx){
 function createDB(tx) {
 
     
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Schedule_Menu(_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Schedule_Menu(_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL,ShowAll INTEGER NOT NULL,Hide INTEGER NOT NULL)');
         console.log("MobileApp_Schedule_Menu table is created");
 
 
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL)');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Menu (_id INTEGER NOT NULL primary key, DivisionName TEXT NOT NULL,DivisionID INTEGER NOT NULL,UpdateDateUTC TEXT NULL,DatetimeStart TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL,ShowAll INTEGER NOT NULL,Hide INTEGER NOT NULL)');
         console.log("MobileApp_Results_Menu table is created");
 
 
-        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_Menu (_id INTEGER NOT NULL primary key, TournamentName TEXT NOT NULL,UpdateDateUTC TEXT NULL,OrderID INTEGER NOT NULL)');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Results_Table_Menu (_id INTEGER NOT NULL primary key, TournamentName TEXT NOT NULL,UpdateDateUTC TEXT NULL,OrderID INTEGER NOT NULL,ShowAll INTEGER NOT NULL,Hide INTEGER NOT NULL)');
         console.log("MobileApp_ResuTable_lts_Menu table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_LastUpdatesec (Datesecs TEXT NULL, datemenus TEXT NULL,syncwifi INTEGER NOT NULL,isadmin INTERGER NOT NULL,token TEXT NOT NULL,hasclub INTERGER NOT NULL,hasclubdate TEXT NULL,fliterON INTERGER  NULL,Region INTERGER NULL,allownewfeed INTERGER NOT NULL,allowcancel INTERGER NOT NULL,allowscore INTERGER NOT NULL,Clubedit INTERGER NOT NULL,Ref INTERGER NOT NULL,Versionappnow TEXT NULL,Versionappthen TEXT NULL,Database INTEGER NULL)');

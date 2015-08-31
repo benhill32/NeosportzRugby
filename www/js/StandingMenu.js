@@ -9,7 +9,7 @@ function onDeviceReadysstandmenu() {
 }
 
 function getMenu(tx) {
-    var sql = "select _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_Menu  order by OrderID,TournamentName";
+    var sql = "select _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_Menu where Hide = 0  order by OrderID,TournamentName";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
