@@ -13,7 +13,7 @@ function onDeviceReadyschmenu() {
 function getMenu(tx) {
 
 
-    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
+    var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
   //  alert(sql);
 
     tx.executeSql(sql, [], getMenu_success);
@@ -28,7 +28,7 @@ function getMenu_success(tx, results) {
         var menu = results.rows.item(i);
 
 
-        $('#mainmenuschmenu').append('<Div class="divmainmenunew" onclick="redirectschedules(' + menu.DivisionID + ')" >' +
+        $('#mainmenuschmenu').append('<Div class="divmainmenunew" onclick="redirectschedules(' + menu._id + ')" >' +
 
             // $('#mainmenuschmenu').append('<Div class="divmainmenunew"><a href="schedules.html?id=' + menu.DivisionID + '">' +
 

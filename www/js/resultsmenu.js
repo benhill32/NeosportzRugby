@@ -13,7 +13,7 @@ function onDeviceReadyresmenu() {
 
 
 function getMenu(tx) {
-    var sql = "select Distinct DivisionName,DivisionID from MobileApp_Results_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
+    var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Results_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
     // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
 
 
@@ -25,13 +25,13 @@ function getMenu(tx) {
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-  //  alert(len);
+    alert(len);
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
 
 
-        $('#mainmenuresultsch').append('<Div class="divmainmenunew" onclick="redirectresults(' + menu.DivisionID + ')" >' +
+        $('#mainmenuresultsch').append('<Div class="divmainmenunew" onclick="redirectresults(' + menu._id + ')" >' +
 
         '<span >' + menu.DivisionName + '</span></Div>');
     }

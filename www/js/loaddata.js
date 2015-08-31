@@ -456,7 +456,7 @@ function countProperties(obj) {
         propCount++;
     });
 
-    $.each(obj.screenimage, function (idx, obj) {
+    $.each(obj.sportsDataContext, function (idx, obj) {
         propCount++;
     });
 
