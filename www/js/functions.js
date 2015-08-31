@@ -650,7 +650,7 @@ function syncmaintables(obj,year){
     });
 
     $.each(obj.vwApp_Results_Table_Men, function (idx, obj) {
-        if(obj.Hide ==0) {
+        if(obj.Hide == 0) {
         db.transaction(function(tx) {
             tx.executeSql('INSERT OR IGNORE INTO MobileApp_Results_Table_Menu (_id,TournamentName ,OrderID ,UpdateDateUTC,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.TournamentName + '",' + obj.OrderID + ', "' + obj.UpdateDateUTC + '", ' + obj.ShowAll + ', ' + obj.Hide + ' )');
             console.log("INSERT INTO MobileApp_Results_Table_Menu is created");
@@ -658,7 +658,7 @@ function syncmaintables(obj,year){
         }else{
             db.transaction(function (tx) {
                 tx.executeSql('Delete from MobileApp_Results_Table_Menu where _id =' + obj._id);
-                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+                alert('Delete MobileApp_Results where ID =' + obj._id);
             });
 
         }
