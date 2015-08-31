@@ -426,17 +426,33 @@ function updatemenutables(obj){
 
 
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
-        db.transaction(function(tx) {
-            tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
-            console.log("INSERT INTO MobileApp_Schedule_Menu is created");
-        });
+        if(obj.Hide ==0) {
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
+                console.log("INSERT INTO MobileApp_Schedule_Menu is created");
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Schedule_Menu where _id =' + obj._id);
+                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+            });
+
+        }
     });
 
     $.each(obj.App_Results_Menu, function (idx, obj) {
-        db.transaction(function(tx) {
-            tx.executeSql('INSERT INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
-            console.log("INSERT INTO MobileApp_Results_Menu is created");
-        });
+        if(obj.Hide ==0) {
+            db.transaction(function(tx) {
+                tx.executeSql('INSERT INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
+                console.log("INSERT INTO MobileApp_Results_Menu is created");
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Results_Menu where _id =' + obj._id);
+                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+            });
+
+        }
     });
 }
 
@@ -597,18 +613,33 @@ function syncmaintables(obj,year){
     var datenow = new Date();
     functionyear = year;
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
+        if(obj.Hide ==0) {
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
+                console.log("INSERT INTO MobileApp_Schedule_Menu is created");
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Schedule_Menu where _id =' + obj._id);
+                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+            });
 
-        db.transaction(function(tx) {
-            tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
-            console.log("INSERT INTO MobileApp_Schedule_Menu is created");
-        });
+        }
     });
 
     $.each(obj.App_Results_Menu, function (idx, obj) {
+        if(obj.Hide ==0) {
         db.transaction(function(tx) {
             tx.executeSql('INSERT INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
             console.log("INSERT INTO MobileApp_Results_Menu is created");
         });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Results_Menu where _id =' + obj._id);
+                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+            });
+
+        }
     });
 
     $.each(obj.App_Results_MenuArchive, function (idx, obj) {
@@ -619,10 +650,18 @@ function syncmaintables(obj,year){
     });
 
     $.each(obj.vwApp_Results_Table_Men, function (idx, obj) {
+        if(obj.Hide ==0) {
         db.transaction(function(tx) {
             tx.executeSql('INSERT OR IGNORE INTO MobileApp_Results_Table_Menu (_id,TournamentName ,OrderID ,UpdateDateUTC,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.TournamentName + '",' + obj.OrderID + ', "' + obj.UpdateDateUTC + '", ' + obj.ShowAll + ', ' + obj.Hide + ' )');
             console.log("INSERT INTO MobileApp_Results_Table_Menu is created");
         });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from MobileApp_Results_Table_Menu where _id =' + obj._id);
+                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+            });
+
+        }
     });
 
     $.each(obj.vwApp_Results_Table_MenArchive, function (idx, obj) {
