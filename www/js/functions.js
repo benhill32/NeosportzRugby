@@ -658,7 +658,7 @@ function syncmaintables(obj,year){
         }else{
             db.transaction(function (tx) {
                 tx.executeSql('Delete from MobileApp_Results_Table_Menu where _id =' + obj._id);
-                alert('Delete MobileApp_Results where ID =' + obj._id);
+              //  alert('Delete MobileApp_Results where ID =' + obj._id);
             });
 
         }

@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/StandingMenu.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="98" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="98" />
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -98,8 +98,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49069768">
-              <caret line="662" column="0" selection-start-line="662" selection-start-column="0" selection-end-line="662" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4511628">
+              <caret line="660" column="16" selection-start-line="660" selection-start-column="16" selection-end-line="660" selection-end-column="16" />
               <folding>
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
                 <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
@@ -212,8 +212,8 @@
         <option value="$PROJECT_DIR$/www/js/schedulesmenu.js" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/resultsmenu.js" />
-        <option value="$PROJECT_DIR$/www/js/StandingMenu.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
+        <option value="$PROJECT_DIR$/www/js/StandingMenu.js" />
       </list>
     </option>
   </component>
@@ -947,15 +947,15 @@
     <entry file="file://$PROJECT_DIR$/www/js/StandingMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="98" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="98" />
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49069768">
-          <caret line="662" column="0" selection-start-line="662" selection-start-column="0" selection-end-line="662" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4511628">
+          <caret line="660" column="16" selection-start-line="660" selection-start-column="16" selection-end-line="660" selection-end-column="16" />
           <folding>
             <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
             <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
