@@ -618,6 +618,11 @@ function syncmaintables(obj,year){
                 tx.executeSql('INSERT INTO MobileApp_Schedule_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
                 console.log("INSERT INTO MobileApp_Schedule_Menu is created");
             });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_Schedule_Menu SET DivisionName = "' + obj.DivisionName + '", UpdateDateUTC = "' + obj.UpdateDateUTC + '", DatetimeStart = "' + obj.DatetimeStart + '", DivisionOrderID =' + obj.DivisionOrderID + ', ShowAll = ' + obj.ShowAll + ',Hide = ' + obj.Hide + ' where _id = ' + obj._id;
+                tx.executeSql(sql);
+                // console.log(sql);
+            });
         }else{
             db.transaction(function (tx) {
                 tx.executeSql('Delete from MobileApp_Schedule_Menu where _id =' + obj._id);
@@ -633,6 +638,13 @@ function syncmaintables(obj,year){
             tx.executeSql('INSERT INTO MobileApp_Results_Menu (_id, DivisionName,DivisionID ,UpdateDateUTC ,DatetimeStart,DivisionOrderID,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.DivisionName + '", ' + obj.DivisionID + ',"' + obj.UpdateDateUTC + '", "' + obj.DatetimeStart + '", ' + obj.DivisionOrderID + ', ' + obj.ShowAll + ', ' + obj.Hide + ' )');
             console.log("INSERT INTO MobileApp_Results_Menu is created");
         });
+
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_Results_Menu SET DivisionName = "' + obj.DivisionName + '",DivisionID = ' + obj.DivisionID + ', UpdateDateUTC = "' + obj.UpdateDateUTC + '", DatetimeStart = "' + obj.DatetimeStart + '", DivisionOrderID =' + obj.DivisionOrderID + ', ShowAll = ' + obj.ShowAll + ',Hide = ' + obj.Hide + ' where _id = ' + obj._id;
+                tx.executeSql(sql);
+                // console.log(sql);
+            });
+
         }else{
             db.transaction(function (tx) {
                 tx.executeSql('Delete from MobileApp_Results_Menu where _id =' + obj._id);
@@ -655,6 +667,11 @@ function syncmaintables(obj,year){
             tx.executeSql('INSERT OR IGNORE INTO MobileApp_Results_Table_Menu (_id,TournamentName ,OrderID ,UpdateDateUTC,ShowAll,Hide ) VALUES (' + obj._id + ',"' + obj.TournamentName + '",' + obj.OrderID + ', "' + obj.UpdateDateUTC + '", ' + obj.ShowAll + ', ' + obj.Hide + ' )');
             console.log("INSERT INTO MobileApp_Results_Table_Menu is created");
         });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE MobileApp_Results_Table_Menu SET TournamentName = "' + obj.TournamentName + '",OrderID = ' + obj.OrderID + ', UpdateDateUTC = "' + obj.UpdateDateUTC + '", ShowAll = ' + obj.ShowAll + ',Hide = ' + obj.Hide + ' where _id = ' + obj._id;
+                tx.executeSql(sql);
+                // console.log(sql);
+            });
         }else{
             db.transaction(function (tx) {
                 tx.executeSql('Delete from MobileApp_Results_Table_Menu where _id =' + obj._id);
