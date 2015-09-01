@@ -198,12 +198,12 @@ function cleardata4Changeregaion(){
 
         window.setTimeout(function(){
         db.transaction(droptables, errorCBfunc,successCBfunc);
-        }, 3000);
+        }, 1500);
 
 
         window.setTimeout(function(){
             createtables4Changeregaion();
-        }, 3000);
+        }, 1500);
     }
 
 
