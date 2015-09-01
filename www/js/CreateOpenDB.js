@@ -1,6 +1,11 @@
 
 function droptables(tx){
 
+
+
+    tx.executeSql('Drop TABLE Mobilescreenimage ');
+    console.log("Mobilescreenimage table is Dropped");
+
         tx.executeSql('Drop TABLE MobileApp_Results_Menu ');
         console.log("MobileApp_Results_Menu table is Dropped");
 
@@ -68,8 +73,6 @@ function droptables(tx){
         tx.executeSql('Drop TABLE MobileApp_ResultsArchive ');
         console.log("MobileApp_ResultsArchive table is Dropped");
 
-    tx.executeSql('Drop TABLE Mobilescreenimage ');
-    console.log("Mobilescreenimage table is Dropped");
 
 
 }

@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27325583">
+            <state vertical-scroll-proportion="-8.103448">
               <caret line="959" column="28" selection-start-line="959" selection-start-column="28" selection-end-line="959" selection-end-column="28" />
               <folding>
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.862069">
-              <caret line="126" column="109" selection-start-line="126" selection-start-column="105" selection-end-line="126" selection-end-column="109" />
+            <state vertical-scroll-proportion="-2.0953488">
+              <caret line="5" column="47" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -109,8 +109,8 @@
       <file leaf-file-name="splashscreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.48276">
-              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.862069">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -172,15 +172,15 @@
         <option value="$PROJECT_DIR$/www/pages/standings.html" />
         <option value="$PROJECT_DIR$/www/pages/news.html" />
         <option value="$PROJECT_DIR$/www/js/schedulesmenu.js" />
-        <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/resultsmenu.js" />
         <option value="$PROJECT_DIR$/www/js/StandingMenu.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/pages/splashscreen.html" />
-        <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
+        <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
+        <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
       </list>
     </option>
   </component>
@@ -447,7 +447,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -903,25 +903,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="126" column="109" selection-start-line="126" selection-start-column="105" selection-end-line="126" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.48276">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27325583">
+        <state vertical-scroll-proportion="-8.103448">
           <caret line="959" column="28" selection-start-line="959" selection-start-column="28" selection-end-line="959" selection-end-column="28" />
           <folding>
             <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
@@ -929,6 +913,22 @@
             <element signature="n#!!block;n#cancelgamenow#0" expanded="false" />
             <element signature="n#!!block;n#CleanDB#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.862069">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0953488">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
