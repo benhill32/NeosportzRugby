@@ -44,8 +44,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5862069">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="19" />
+            <state vertical-scroll-proportion="19.344828">
+              <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -75,21 +75,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="splashscreen.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="splashscreen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72885287">
-              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.48276">
-              <caret line="200" column="17" selection-start-line="200" selection-start-column="17" selection-end-line="200" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.19418605">
+              <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0545454">
+              <caret line="119" column="84" selection-start-line="119" selection-start-column="84" selection-end-line="119" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -147,7 +157,6 @@
         <option value="$PROJECT_DIR$/www/css/main.css" />
         <option value="$PROJECT_DIR$/www/pages/ScheduleMenu.html" />
         <option value="$PROJECT_DIR$/www/pages/StandingMenu.html" />
-        <option value="$PROJECT_DIR$/www/js/settings.js" />
         <option value="$PROJECT_DIR$/www/js/jquery.js" />
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/pages/clubteamplayers.html" />
@@ -178,8 +187,9 @@
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/pages/splashscreen.html" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/js/settings.js" />
       </list>
     </option>
   </component>
@@ -888,18 +898,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/resultsmenu.js">
+    <entry file="file://$PROJECT_DIR$/www/js/dbconnection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.448276">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="86" selection-start-line="18" selection-start-column="86" selection-end-line="18" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+    <entry file="file://$PROJECT_DIR$/www/Bootstrap/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5862069">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.42069742">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="59" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/resultsmenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.448276">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -916,44 +944,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/dbconnection.js">
+    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="86" selection-start-line="18" selection-start-column="86" selection-end-line="18" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13325608">
-          <caret line="109" column="86" selection-start-line="109" selection-start-column="73" selection-end-line="109" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42069742">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.48276">
-          <caret line="200" column="17" selection-start-line="200" selection-start-column="17" selection-end-line="200" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="59" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="59" />
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -966,10 +960,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
+    <entry file="file://$PROJECT_DIR$/www/pages/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72885287">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state vertical-scroll-proportion="-5.0545454">
+          <caret line="119" column="84" selection-start-line="119" selection-start-column="84" selection-end-line="119" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="19.344828">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19418605">
+          <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
           <folding />
         </state>
       </provider>
