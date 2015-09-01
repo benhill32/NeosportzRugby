@@ -199,7 +199,7 @@ function cleardata4Changeregaion(){
 
         window.setTimeout(function(){
             createtables4Changeregaion();
-        }, 4000);
+        }, 2500);
     }
 
 
