@@ -11,18 +11,13 @@ function onDeviceReadysplashscreen() {
 }
 
 
-function getorientsplash(strorein){
-    orientationstand = strorein;
-    //  alert(orientationstand);
-    db.transaction(getbackground, errorCBfunc, successCBfunc);
-}
 
 
 function getbackground(tx) {
    // alert($('#mainbackground').css('opacity'));
 
     var sql = "select _id,Base64 from Mobilescreenimage order by UpdateDateUTC desc LIMIT 1";
-     //alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getbackground_success,getbackground_error);
 }
 
