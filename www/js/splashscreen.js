@@ -17,7 +17,7 @@ function getbackground(tx) {
    // alert($('#mainbackground').css('opacity'));
 
     var sql = "select _id,Base64 from Mobilescreenimage order by UpdateDateUTC desc LIMIT 1";
-     alert(sql);
+    /// alert(sql);
     tx.executeSql(sql, [], getbackground_success,getbackground_error);
 }
 
@@ -25,7 +25,7 @@ function getbackground_success(tx, results) {
 
 
     var len = results.rows.length;
-   alert("LEngth : " + len);
+   //alert("LEngth : " + len);
     if(len != 0) {
         var menu = results.rows.item(0);
        // alert(menu._id);
@@ -79,7 +79,7 @@ function getbackground2_error(err) {
 
 function getbackground_error(err) {
     //Alert("Error processing SQL: " + err.code);
-    alert("error");
+  //  alert("error");
     runadmob();
     window.setTimeout(function(){
         window.location.href='../index.html';
