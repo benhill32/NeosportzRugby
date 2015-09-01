@@ -424,6 +424,16 @@ function getclubsfav_success(tx, results) {
 }
 
 
+function benclick(){
+
+    $('#indexloadingdata').modal('show')
+
+
+    $('#mainfore').removeClass('mainforeground');
+    $('#mainfore').addClass('mainforeground2');
+}
+
+
 
 
 
