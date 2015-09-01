@@ -23,7 +23,7 @@ var start = 0;
 // Cordova is ready
 //
 
-var appversionlocalf = '1.4.7';
+var appversionlocalf = '1.5.0';
 
 
 function onDeviceReadyloaddata() {
