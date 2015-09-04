@@ -31,7 +31,7 @@ function onDeviceReadyFunc() {
 
 
 
-    
+
     if (devicePlatformfunc == "Android") {
         admobid = { // for Android
             banner: 'ca-app-pub-8464767609803803/3758587179'
