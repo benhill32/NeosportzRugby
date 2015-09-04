@@ -414,37 +414,37 @@ position: fixed;
     padding:15px;
     clear: both;
 }
-#archiveyeardiv:hover{
+#archiveyeardiv:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#archiveyearyes:hover{
+#archiveyearyes:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#archiveyearmo:hover{
+#archiveyearmo:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-.divmainmenunew:hover{
+.divmainmenunew:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#closeregion2:hover{
+#closeregion2:active{
 
      background-color: #339900;
      color: white;
      opacity:0.7;
  }
-.closeregion:hover{
+.closeregion:active{
 
     background-color: #339900;
     color: white;
@@ -474,7 +474,7 @@ position: fixed;
     to { transform: scale(1) rotate(360deg);}
 }
 
-.backregion:hover{
+.backregion:active{
 
     background-color: #339900;
     color: white;
@@ -632,14 +632,14 @@ position: fixed;
 @media (max-width: 480px) and (max-height: 200px){.modal{ height: 150px}}
 
 
-#newsmain,a:hover, a:focus{
+#newsmain,a:active, a:focus{
     padding-top: 10px;
     color: #333 !important;
     text-decoration: none !important;
     padding-bottom: 10px;
 }
 
-#addnewfeed,a:hover, a:focus{
+#addnewfeed,a:active, a:focus{
     padding-top: 80px;
     color: #333 !important;
     text-decoration: none !important;
@@ -794,20 +794,20 @@ overflow-y: scroll !important;
     padding:0;
 
 }
-#modelfooter:hover{
+#modelfooter:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-.modelfooter:hover{
+.modelfooter:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
 
-#modelfooterupdate:hover{
+#modelfooterupdate:active{
 
     background-color: #339900;
     color: white;
@@ -817,49 +817,41 @@ overflow-y: scroll !important;
     padding:10px;
 
 }
-#opennewversion:hover,#opennewversion1:hover,#opennewdatabase:hover,#closenewdatabase:hover,#opennewdatabaseapple:hover{
+#opennewversion:active,#opennewversion1:active,#opennewdatabase:active,#closenewdatabase:active,#opennewdatabaseapple:active{
 
     background-color: #339900;
 }
-#modelfooterclose:hover{
-
-    background-color: #339900;
-    color: white;
-    opacity:0.7;
-}
-#modelfooterclose1:hover{
+#modelfooterclose:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#divawayteam:hover{
+#modelfooterclose1:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#divhometeam:hover,#defaultyes:hover,#defaultno:hover{
+#divawayteam:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#basicModal .modal-footer:hover{
+#divhometeam:active,#defaultyes:active,#defaultno:active{
+
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+}
+#basicModal .modal-footer:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
 
 }
-#basicModalnews .modal-footer:hover{
-    background-color: #339900;
-    color: white;
-    opacity:0.7;
-
-}
-
-
-#basicModalContact .modal-footer:hover{
+#basicModalnews .modal-footer:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -867,7 +859,15 @@ overflow-y: scroll !important;
 }
 
 
-.modelfloat50:hover{
+#basicModalContact .modal-footer:active{
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+
+}
+
+
+.modelfloat50:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -893,13 +893,13 @@ overflow-y: scroll !important;
     padding-left:15px
 
 }
-#Directions:hover,#score:hover,#remind:hover {
+#Directions:active,#score:active,#remind:active {
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
 
-#clubfav .modal-body:hover{
+#clubfav .modal-body:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -1060,7 +1060,7 @@ overflow-y: scroll !important;
 text-align: center !important;
 }
 
-.divmain:hover{
+.divmain:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
@@ -1075,20 +1075,20 @@ text-align: center !important;
 
     margin :8px;
 }
-#cancelyes:hover{
+#cancelyes:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
 
 }
-#cancelno:hover{
+#cancelno:active{
     background-color: #339900;
     color: white;
     opacity:0.7;
 
 }
 
-#settingsync:hover
+#settingsync:active
 {
     background-color: #339900;
     color: white;
@@ -1205,19 +1205,19 @@ width:75%;
     text-align:left !important
 }
 
-#basicModalnews .modal-footer:hover{
+#basicModalnews .modal-footer:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#basicModaltime .modal-footer:hover{
+#basicModaltime .modal-footer:active{
 
     background-color: #339900;
     color: white;
     opacity:0.7;
 }
-#dontshow:hover,#notnow:hover,#indexyes:hover{
+#dontshow:active,#notnow:active,#indexyes:active{
 
     background-color: #339900;
     color: white;
@@ -1225,7 +1225,7 @@ width:75%;
 }
 
 
-#settingdeleteall:hover
+#settingdeleteall:active
 {
     background-color: #339900;
     color: white;
@@ -1234,7 +1234,7 @@ width:75%;
 }
 
 
-#idhelp:hover
+#idhelp:active
 {
     background-color: #339900;
     color: white;
