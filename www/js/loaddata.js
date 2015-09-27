@@ -20,10 +20,11 @@ var archiveyear=0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
 var tokenldata ="";
 var start = 0;
+var menufrommansync = 0;
 // Cordova is ready
 //
 
-var appversionlocalf = '1.5.1';
+var appversionlocalf = '1.1';
 
 
 function onDeviceReadyloaddata() {
@@ -34,7 +35,7 @@ function onDeviceReadyloaddata() {
     deviceIDfunc = device.uuid;
     devicePlatformfunc = device.platform;
      getnetworkdetails();
-    $('#busy').hide();
+
 
     document.addEventListener("offline", onOffline, false);
     db.transaction(getresultids, errorCBfunc, successCBfunc);
@@ -117,6 +118,9 @@ function checkdatabaseloaddata(){
         xmlHttp.send();
     //     alert('http://admin.adme.kiwi/checkdatabase.aspx?deviceID=' + deviceIDfunc);
         json = xmlHttp.responseText;
+    }else{
+
+       // db.transaction(getMenusch, errorCBfunc, successCBfunc);
     }
 
     //alert(json);
@@ -127,11 +131,8 @@ function checkdatabaseloaddata(){
         // alert(json);
         if(document.getElementById("indexdiv")!=null) {
             $('#indexloadingdata').modal('hide');
-            $('#mainfore').removeClass('mainforeground');
-            $('#mainfore').addClass('mainforeground2');
-            if (document.getElementById("indexdiv") != null) {
-                showdivindex();
-            }
+
+
             if (devicePlatformfunc == "Android") {
                 $('#modelnewdatabase').modal('show');
             }
@@ -189,12 +190,10 @@ function populateDB1(tx,results) {
  //   alert(row);
   //  alert(row.Count);
     if(row.Count ==0){
-      if(document.getElementById("indexdiv")!=null) {
-            $('#mainfore').removeClass('mainforeground');
-            $('#mainfore').addClass('mainforeground2');
-            // alert($('#mainfore').attr('class'));
+
+
             $('#indexloadingdata').modal('show');
-        }
+
 
         $.when(blankLastUpdatesec()).done(function() {
           // $.when( pushnotifiy()).done(function() {
@@ -214,10 +213,7 @@ function populateDB1(tx,results) {
              tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
             $('#indexloadingdata').modal('hide')
-            $('#mainfore').removeClass('mainforeground2');
-            $('#mainfore').addClass('mainforeground');
-          //  window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-
+            db.transaction(getMenusch, errorCBfunc, successCBfunc);
         }
     }
 }
@@ -274,19 +270,12 @@ function getchecksync(tx, results) {
         }
 
         if (dif >= "600") {
-            if (document.getElementById("indexdiv") != null) {
 
-                if ($("#mainfore").hasClass("mainforeground2")) {
 
-                } else {
-                    $('#mainfore').removeClass('mainforeground');
-                    $('#mainfore').addClass('mainforeground2');
                     $('#indexloadingdata').modal('show');
-                }
 
-            } else {
-                $('#indexloadingdata').modal('show');
-            }
+
+
             var xmlHttp = null;
             xmlHttp = new XMLHttpRequest();
             xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync + '&resultids=' + stringresultID + '&start=0&region=' + region + '&year=' + yearnow, false);
@@ -309,40 +298,119 @@ function getchecksync(tx, results) {
         }else{
 
 
-
+            db.transaction(getMenusch, errorCBfunc, successCBfunc);
 
         }
 
 }
 
 function errorclosemodel(){
-    $('#mainfore').removeClass('mainforeground2');
-    $('#mainfore').addClass('mainforeground');
+   // $('#mainfore').removeClass('mainforeground2');
+   // $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
     if (document.getElementById("indexdiv") != null) {
         showdivindex();
     }
-    window.plugins.toast.showLongCenter('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    window.plugins.toast.showLongBottom('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+    db.transaction(getMenusch, errorCBfunc, successCBfunc);
     randomfunctions();
 }
 
 function closemodel(){
-    $('#mainfore').removeClass('mainforeground2');
-    $('#mainfore').addClass('mainforeground');
+   // alert("close");
+
     $('#indexloadingdata').modal('hide');
-    if (document.getElementById("indexdiv") != null) {
-        showdivindex();
+
+
+
+    window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+    db.transaction(getsyncdateload, errorCBfunc, successCBfunc);
+
+
+
+
+}
+
+
+function getsyncdateload(tx) {
+    var sql = "select Datesecs, syncwifi,Region from MobileApp_LastUpdatesec";
+    //  alert(sql);
+    tx.executeSql(sql, [], getsyncdateload_success2);
+}
+
+function getsyncdateload_success2(tx, results) {
+
+
+    var len = results.rows.length;
+
+    var menu = results.rows.item(0);
+    //   alert(menu.Datesecs);
+    var dateme = new Date((menu.Datesecs)*1000);
+    var wifi = menu.syncwifi;
+
+    var month = new Array();
+    month[0] = "Jan";
+    month[1] = "Feb";
+    month[2] = "Mar";
+    month[3] = "Apr";
+    month[4] = "May";
+    month[5] = "Jun";
+    month[6] = "Jul";
+    month[7] = "Aug";
+    month[8] = "Sep";
+    month[9] = "Oct";
+    month[10] = "Nov";
+    month[11] = "Dec";
+
+
+   // alert("lastsyncdate");
+
+    $('#lastsyncdate').empty();
+    if(dateme.getFullYear() != 1970) {
+        $('#lastsyncdate').append("<strong>Last sync time</strong> <br>" + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2))
     }
-    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+
+
+
+    if (menufrommansync == 0) {
+
+        db.transaction(getMenusch, errorCBfunc, successCBfunc);
+    }else{
+        if (document.getElementById("scorecard") != null) {
+            db.transaction(getMenusch, errorCBfunc, successCBfunc);
+        }
+        else if (document.getElementById("addnewfeed") != null)
+        {
+
+
+        }
+        else
+        {
+            location.reload(true);
+        }
+
+
+
+
+
+    }
+
+
     randomfunctions();
 }
+
+
+
+
+
+
 function closemodelarchive(){
 
     $('#indexloadingdata').modal('hide');
-    if (document.getElementById("indexdiv") != null) {
-        showdivindex();
-    }
-    window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+    window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
 
   //  randomfunctions();
@@ -350,13 +418,11 @@ function closemodelarchive(){
 }
 
 function closemodelRegion(){
-    $('#mainfore').removeClass('mainforeground2');
-    $('#mainfore').addClass('mainforeground');
+  //  $('#mainfore').removeClass('mainforeground2');
+ //   $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
-    if (document.getElementById("indexdiv") != null) {
-        showdivindex();
-    }
-  //  window.plugins.toast.showLongCenter('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+  //  window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     showregion();
 
 }
@@ -365,9 +431,7 @@ function reloadindividual(){
 
     $('#indexloadingdata').modal('hide');
 
-    if (document.getElementById("indexdiv") != null) {
-        showdivindex();
-    }
+
     if (document.getElementById("newsmain") != null) {
         $.mobile.loading().hide();
     }
@@ -378,24 +442,24 @@ function reloadindividual(){
 
 
 function randomfunctions(){
-    if (document.getElementById("settingsync") != null) {
-        db.transaction(getsyncdate, errorCBfunc, successCBfunc);
-    }
 
+//alert("randomfunctions");
     if (document.getElementById("divschedules") != null) {
-       // var idsch = getUrlVars()["id"];
-      //
-      //  onDeviceReadysch();
+
         db.transaction(getflitersch, errorCBfunc, successCBfunc);
-      //  db.transaction(gettokensc, errorCBfunc, successCBfunc);
-      //  db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
+
     }
     if (document.getElementById("divresults") != null) {
         db.transaction(getfliterresult, errorCBfunc, successCBfunc);
     }
-    if (document.getElementById("indexdiv") != null) {
-        loadindexmessage();
+
+
+    if(document.getElementById("divscoringreqadmin") != null){
+
+        onDeviceReadyscoringadmin();
     }
+
+
 
 }
 
@@ -473,7 +537,8 @@ function countProperties(obj) {
 
 function onclickloadregion(){
 
-    $('#basicModalregions2').modal('show');
+        $('#basicModalregions2').modal('show');
+
     //db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)
 }
 
@@ -505,6 +570,7 @@ function onclicksyncloaddata(){
 function onclicksyncloaddata2(tx){
     checkonline();
     var sql = "select Datesecs,datemenus,syncwifi,token,isadmin,Region from MobileApp_LastUpdatesec";
+
     tx.executeSql(sql, [], onclickresync,errorCBfunc);
 
 }
@@ -512,12 +578,12 @@ function onclicksyncloaddata2(tx){
 
 
 function onclickresync(tx, results) {
-
+    menufrommansync =1;
     var row = results.rows.item(0);
-
+   // alert(row.syncwifi + " " + networkconnection);
     if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))) {
         $('#indexloadingdata').modal('show');
-
+       // alert("here1")
         var datemenus = row.datemenus;
         var datenowsecsync = row.Datesecs;
         var region = row.Region;
@@ -527,7 +593,7 @@ function onclickresync(tx, results) {
         var yearnow = datenow.getFullYear()
         var dif = timenow - (datenowsecsync);
 
-        //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
+        //   window.plugins.toast.showLongBottom('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
@@ -583,7 +649,7 @@ function loadarchiveyeardata2_sync(tx, results) {
         var yearnow = archiveyear;
         var dif = timenow - (datenowsecsync);
 
-        //   window.plugins.toast.showLongCenter('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
+        //   window.plugins.toast.showLongBottom('Please Wait While Data is Downloaded', function (a) {console.log('toast success: ' + a) }, function (b) { alert('toast error: ' + b)});
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
 
@@ -647,7 +713,7 @@ function pushnotifiy() {
             successHandler,
             errorHandler,
             {
-                "senderID":"859509533098",
+                "senderID":"555878037927",
                 "ecb":"onNotification"
             });
     } else if ( device.platform == 'blackberry10'){
@@ -824,6 +890,8 @@ function onNotification(e) {
               //      $("#app-status-ul").append('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             }
+
+
 
 
             //    $("#app-status-ul").append('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
