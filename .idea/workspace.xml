@@ -59,14 +59,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainindex.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.08099">
+            <state vertical-scroll-proportion="0.0">
               <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
               <folding>
                 <marker date="1441147359603" expanded="true" signature="6073:6106" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splashscreen.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2767442">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,7 +180,6 @@
         <option value="$PROJECT_DIR$/www/js/schedulesmenu.js" />
         <option value="$PROJECT_DIR$/www/js/resultsmenu.js" />
         <option value="$PROJECT_DIR$/www/js/StandingMenu.js" />
-        <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
         <option value="$PROJECT_DIR$/www/pages/splashscreen.html" />
         <option value="$PROJECT_DIR$/www/js/settings.js" />
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
@@ -180,6 +189,7 @@
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
       </list>
     </option>
   </component>
@@ -486,7 +496,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -815,16 +825,8 @@
         <state vertical-scroll-proportion="0.42069742">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="59" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,11 +958,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.08099">
+        <state vertical-scroll-proportion="0.0">
           <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
           <folding>
             <marker date="1441147359603" expanded="true" signature="6073:6106" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2767442">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
