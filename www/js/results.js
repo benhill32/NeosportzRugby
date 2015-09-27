@@ -194,20 +194,27 @@ function getMenu_success(tx, results) {
         var date2 = new Date(menu.DatetimeStart);
        // alert(date2);
         if(menu.DefaultHome == 0 && menu.DefaultAway ==0 ) {
-            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"  >' +
-                '<div id="schleft" >' +
-                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-            '<div class="bold size13" >' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
-            '<div class="size11">' + menu.TournamentName + '</div>' +
-            '<div class="size11">Referee : ' + menu.RefName + '</div>' +
-            '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-                '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,\'' + readmore + '\')">' +
-                '<img height="30px" class="imagesch"  align="right" >' +
+            $('#divresults').append('<div class="panel panel-default" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"   >' +
+
+                '<div class="panel-heading">' +
+                '<div class="row">' +
+                '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
+                '<div class="col-xs-4 col-md-4" onclick="resultssharemore(event,\'' + readmore + '\')"><img height="30px" class="imagesch"  align="right" ></div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action + '</div>' +
                 '</div>' +
 
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
+                '</div>' +
 
-            '</Div>');
+                '</div>' +
+                '</div>' +
+                '</div>');
 
 
            // '<div class="size11 blue" style="text-align: center!important;">' +
@@ -217,34 +224,52 @@ function getMenu_success(tx, results) {
         }
         else if(menu.DefaultHome == 1 && menu.DefaultAway ==0 )
         {
-            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"  >' +
-                '<div id="schleft" >' +
-                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-            '<div class="bold size13" >WBD - LBD  ' + action + '</div>' +
-            '<div class="size11">' + menu.TournamentName + '</div>' +
-            '<div class="size11">Referee : ' + menu.RefName + '</div>' +
-            '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-                '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,\'' + readmore + '\')">' +
-                '<img height="30px" class="imagesch"  align="right" >' +
+            $('#divresults').append('<div class="panel panel-warning" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"   >' +
+
+                '<div class="panel-heading">' +
+                '<div class="row">' +
+                '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
+                '<div class="col-xs-4 col-md-4" onclick="resultssharemore(event,\'' + readmore + '\')"><img height="30px" class="imagesch"  align="right" ></div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">WBD - LBD  ' + action + '</div>' +
                 '</div>' +
 
-            '</Div>');
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
+                '</div>' +
+
+                '</div>' +
+                '</div>' +
+                '</div>');
         }
         else if(menu.DefaultHome == 0 && menu.DefaultAway ==1 )
         {
-            $('#divresults').append('<Div class="mainmenuresult" align="left" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"  >' +
-                '<div id="schleft" >' +
-                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-            '<div class="bold size13" >LBD - WBD  ' + action + '</div>' +
-            '<div class="size11">' + menu.TournamentName + '</div>' +
-            '<div class="size11">Referee : ' + menu.RefName + '</div>' +
-            '<div class="size11">' + ampm + ' ' + day + '/' + month + '/' + year + '</div>' +
-                '</Div>' +
-                '<div  id="schright" onclick="resultssharemore(event,\'' + readmore + '\')">' +
-                '<img height="30px" class="imagesch"  align="right" >' +
+            $('#divresults').append('<div class="panel panel-warning" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')"   >' +
+
+                '<div class="panel-heading">' +
+                '<div class="row">' +
+                '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
+                '<div class="col-xs-4 col-md-4" onclick="resultssharemore(event,\'' + readmore + '\')"><img height="30px" class="imagesch"  align="right" ></div>' +
                 '</div>' +
-            '</Div>');
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">LBD - WBD  ' + action + '</div>' +
+                '</div>' +
+
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
+                '</div>' +
+
+                '</div>' +
+                '</div>' +
+                '</div>');
+
         }
 
 

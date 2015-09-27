@@ -5,90 +5,358 @@
     <title></title>
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
-    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../css/onoff.css" />-->
+    <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
     <script type="text/javascript" src="../js/dbconnection.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
     <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
     <script type="text/javascript" src="../js/cropper.js"></script>
-
+    <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
     <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/schedule.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
+    <script type="text/javascript" src="../js/loadnewmenu.js"></script>
 
+
+
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="../css/main.css" />-->
     <style>
-    #btn1, #btn2{
-        padding-bottom:5px;
-        padding-top:5px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+        #btn1, #btn2{
+            padding-bottom:5px;
+            padding-top:5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
-</style>
+    </style>
 
-<script type="text/javascript">
-    $(function(){
-        $("ul li").click(function(){
-            $("ul li").removeClass("on");
-            $(this).addClass("on");
+    <script type="text/javascript">
+        $(function(){
+            $("ul li").click(function(){
+                $("ul li").removeClass("on");
+                $(this).addClass("on");
+            });
         });
-    });
 
 
 
-</script>
+    </script>
 
     <script type="text/javascript"  charset="utf-8">
-    document.addEventListener("deviceready", onDeviceReadysch, false);
-    function onDeviceReadysch() {
-        refreshdata();
+        document.addEventListener("deviceready", onDeviceReadysch, false);
+        function onDeviceReadysch() {
+            refreshdata();
 
 
-    }
+        }
 
+        $("#mm-blocker").click(closemenu());
 
-
-
-</script>
+    </script>
 
 </head>
 <body>
-<div class="divmainmenu">
-    <div id="backicondiv"   onclick="weblinkbackmenu()">
-        <img src="../img/back_off.png"  style="vertical-align:bottom;height:20px;">
-    </div>
-    <div class="mainheaderimgicon"  onclick="weblinkbackmenu()">
-        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
-        Neosportz Rugby
-    </div>
+<nav id="menu"  style="display: none;" >
+    <ul>
+
+        <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
+        <li><a href="#schedulemenudiv" data-target="#schedulemenudiv"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Schedules</a>
+            <ul id="schedulemenudiv">
+
+
+            </ul>
+
+
+        </li>
+
+        <li><a href="#resultmenudiv" data-target="#resultmenudiv" ><span class="glyphicon glyphicon-star padding" aria-hidden="true" ></span> Results</a>
+            <ul id="resultmenudiv">
+            </ul>
+        </li>
+
+        <li><a href="#standingsmenudiv" data-target="#standingsmenudiv"><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a>
+            <ul id="standingsmenudiv">
+            </ul>
+        </li>
+        <li><a href="#clubsmenudiv" data-target="#clubsmenudiv"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a>
+            <ul id="clubsmenudiv">
+            </ul>
+        </li>
+
+
+
+
+        <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
+        <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
+            <ul id="settingmenudiv">
+                <li><a href="javascript: void(0)">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong> Mobile Data</strong>
+
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                            <div class="btn-group btn-toggle">
+                                <button id="btnmenu1" class="btn btn-xs btn-default"  onclick="chkmobiledataall('btn1')">ON</button>
+                                <button id="btnmenu2" class="btn btn-xs btn-success"   onclick="chkmobiledataall('btn2')">OFF</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 mainmenuwifi">
+                            <p>Only Sync on a Wi-Fi network</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+
+                <li><a href="#" id="regioniddiv"  >
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Region</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <p id="regionlbl"></p>
+                        </div>
+                    </div>
+                </a></li>
+
+                <li><a href="#" id="settingsync" " >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Sync</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 mainmenuwifi">
+                            <p>Check for Updates</p>
+
+                        </div>
+                    </div>
+
+                    </a></li>
+                <li><a href="javascript: void(0)"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 mainmenuwifi">
+                            <p id="lastsyncdate"></p>
+
+                        </div>
+                    </div>
+                </a></li>
+                <li><a href="#"  id="settingdeleteall"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Delete all data & Sync</strong>
+
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-xs-8  col-sm-3">
+                            <p>Sometimes things just don't go right!.</p>
+
+                        </div>
+                        <div class="col-xs-4  col-sm-3">
+
+                        </div>
+                    </div>
+
+
+
+                </a>
+                </li>
+
+                <li><a href="#" id="idhelp" onclick="weblink('pages/Help.html')" >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8">
+                            <strong>Application tutorial</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <p>Some handy hints</p>
+                        </div>
+                    </div>
+                </a></li>
+
+
+                <li><a href="#admindata" data-target="#admindata"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Device & App Info</strong>
+                        </div>
+                    </div>
+
+                </a>
+                    <ul id="admindata">
+                        <li><a href="javascript: void(0)"  >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <strong>Device ID</strong>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <p id="deviceid"></p>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                        <li><a href="javascript: void(0)"  >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <strong>App Version</strong>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <p id="appversion"></p>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                        <li><a href="mailto:helpdesk@neocom.co.nz?Subject=Neosportz Basketball App" >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Send Feedback
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+                        <li id="scoringreqdiv"><a href="../pages/Scoringrequest.html" >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Scoring Request
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+                        <li id="scoringreqdiv2"><a href="javascript: void(0)" >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 " id="scoringreqdiv22">
+                                    Scoring Request <span class='glyphicon glyphicon-ok' aria-hidden='true'></span>
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
+                        <li id="divadminarea"><a href="../pages/scoringadminarea.html" >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Scoring Admin Area
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+
+            </ul>
+        </li>
+
+
+
+
+    </ul>
+
+</nav>
+
+
+
+<div class="divmainmenu" >
     <div class="mainheaderimgicon" id="filterswitch">
 
 
         <div class="btn-group btn-toggle">
-        <button id="btn1" class="btn btn-xs btn-default"  onclick="allowfilter(1)">ON</button>
-        <button id="btn2" class="btn btn-xs btn-primary active"   onclick="allowfilter(0)">OFF</button>
+            <button id="btn1" class="btn btn-xs btn-default"  onclick="allowfilter(1)">ON</button>
+            <button id="btn2" class="btn btn-xs btn-primary active"   onclick="allowfilter(0)">OFF</button>
+
+        </div>
+
 
     </div>
-
-
-    </div>
-
+    <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()">
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> Schedules </div>
 </div>
+
+
+
 <div class="container-fluid">
-    <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+
+
+
+    <div class="modal" id="basicModalclubhistory" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader" id="clubhistorydiv" data-dismiss="modal">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div  id="modelhistoryall">
 
+
+                    </div>
+
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="basicModalclubContact" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader" id="clubcontactdiv" data-dismiss="modal">
+                    </div>
+                </div>
+                <div class="modal-body" id="">
+                    <div  id="modelcontactall">
+
+
+                    </div>
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog" align="center">
+            <div class="modal-content" align="center">
                 <div class="modal-body" align="center">
-                    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...
+                    <img src="../img/ajax-loader.gif" class="img-responsive">
                 </div>
 
             </div>
@@ -97,10 +365,64 @@
 
         </div>
     </div>
+    <div class="modal" id="basicModalregions2" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Change Region.
+                    </div>
+                </div>
+                <div class="modal-body" >
+
+                    <div align="center">
+                        <p> Note: If you change Region it will clear current data and download the new regions data.</p>
+
+                    </div>
+                    <div id="regiondivID2">
+                        <Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="cleardata4Changeregaionall()" >
+                            <div class="bold size13"   >Yes</div>
+                        </Div>
+                        <Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" >
+                            <div class="bold size13"   >No</div>
+                        </Div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="closeregion2" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="basicModalregions"  tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Select a Region
+                    </div>
+                </div>
+                <div class="modal-body" >
+                    <div id="regiondivID">
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="modal" id="basicModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-footer" id="remind" data-dismiss="modal" align="center">
+                <div class="modal-body" id="remind" style="padding:15px;" data-dismiss="modal" align="center">
 
                 </div>
                 <div class="modal-footer" id="socialshare" data-dismiss="modal" align="center">
@@ -108,21 +430,25 @@
 
                 </div>
                 <div class="modal-footer" id="Directions" data-dismiss="modal" align="center">
-                    Directions to park
+                    Directions to Gym
 
                 </div>
-                <div class="modal-footer" id="referee" align="center" data-dismiss="modal" data-toggle="modal" data-target="#basicModalref">
-                    Add Referee
-                </div>
+                <!-- <div class="modal-footer" id="referee" align="center" data-dismiss="modal" data-toggle="modal" data-target="#basicModalref">
+                     Add Referee
+                 </div>-->
                 <div class="modal-footer" id="score" data-dismiss="modal" align="center">
                     Score Card
+                </div>
+                <div class="modal-footer" id="idstatlink" data-dismiss="modal" align="center" data-toggle="modal" data-target="#basicModalstats">
+                    Stat Link
+
                 </div>
                 <div class="modal-footer" id="divdefault" align="center" data-dismiss="modal" data-toggle="modal" data-target="#basicModaldefault">
                     Team Defaulted
                 </div>
-                <div class="modal-footer" id="cancell" align="center" data-dismiss="modal" data-toggle="modal" data-target="#basicModalcancel">
+                <!--<div class="modal-footer" id="cancell" align="center" data-dismiss="modal" data-toggle="modal" data-target="#basicModalcancel">
                    Cancel Game!
-                </div>
+                </div>-->
 
                 <div class="modal-footer" id="modelfooter" data-dismiss="modal" align="center">
                     Close
@@ -133,36 +459,36 @@
         </div>
     </div>
     <div class="modal" id="basicModalyesno" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                Would you like to add a reminder for this game?
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Would you like to add a reminder for this game?
 
-            </div>
-            <div class="modal-footer" data-dismiss="modal" align="center">
-                <div class="modelfloat50 left"  align="center">
-
-                    No
                 </div>
-                <div class="modelfloat50"  align="center" data-toggle="modal" data-target="#basicModaltime">
+                <div class="modal-footer" data-dismiss="modal" align="center">
+                    <div class="modelfloat50 left"  align="center">
 
-                    Yes
+                        No
+                    </div>
+                    <div class="modelfloat50"  align="center" data-toggle="modal" data-target="#basicModaltime">
+
+                        Yes
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <div class="modal" id="basicModaltime" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="divmainheader">
 
-                       Remind Me
+                        Remind Me
                     </div>
                 </div>
                 <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(1440)">
-                        1 Day before
+                    1 Day before
                 </div>
                 <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(120)">
                     2 Hours before
@@ -171,7 +497,7 @@
                     1 Hour before
                 </div>
                 <div class="modal-footer" data-dismiss="modal" align="center" onclick="addreminder(30)">
-                   30 Minutes before
+                    30 Minutes before
                 </div>
             </div>
         </div>
@@ -180,13 +506,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
 
-            <div id="divmainheadercancel">
-            </div>
+                <div id="divmainheadercancel">
+                </div>
                 <div class="modal-footer" id="cancelyes" onclick="cancelgame()" data-dismiss="modal" align="center">
-                  Yes
+                    Yes
                 </div>
                 <div class="modal-footer" id="cancelno" data-dismiss="modal" align="center">
-                   No
+                    No
                 </div>
             </div>
         </div>
@@ -196,7 +522,7 @@
             <div class="modal-content">
 
                 <div id="divaddref">
-                  Referee's Name  <textarea id="txtrefname"></textarea>
+                    Referee's Name  <textarea id="txtrefname"></textarea>
 
                 </div>
                 <div class="modal-footer" id="modelfooterupdate" data-dismiss="modal" align="center" >
@@ -212,6 +538,29 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="basicModalstats" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="divaddref1">
+                        Stats Link  <input id="txtstatlink" type="text">
+
+                    </div>
+                </div>
+                <div class="modal-footer" id="modelstatsupdate" data-dismiss="modal" align="center" >
+                    Update
+
+
+                </div>
+                <div class="modal-footer" id="modelfooterclose2" data-dismiss="modal" align="center" >
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal" id="basicModaldefault" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -241,9 +590,9 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <div id="divmainheaderyesorno">
-                </div>
+                    <div id="divmainheaderyesorno">
                     </div>
+                </div>
                 <div class="modal-footer" id="defaultyes" data-dismiss="modal" onclick="sendtoserverdefault()" align="center">
                     Yes
                 </div>
@@ -261,7 +610,7 @@
 
                 </div>
                 <div style="width: 70%;max-height: 300%; border:1px solid black;margin: 10px;   ">
-                     <img id="target" style="max-width: 100%;max-height: 100%;"  alt="Picture" src="..//img/game758.jpg">
+                    <img id="target" style="max-width: 100%;max-height: 100%;"  alt="Picture" src="..//img/game758.jpg">
                     <!-- <img id="target" style="max-width: 100%;max-height: 100%;" src="..//img/game758.jpg" alt="Picture">-->
 
 
@@ -280,7 +629,7 @@
                         $image.cropper({
                             autoCropArea:0.5,
                             cropBoxResizable: true,
-                           // preview: '.img-preview',
+                            // preview: '.img-preview',
                             built: function () {
                                 // Strict mode: set crop box data first
                                 $image.cropper('setCropBoxData', cropBoxData);
@@ -321,9 +670,9 @@
                             result = $image.cropper(data.method, data.option);
 
                             if (data.method === 'getCroppedCanvas') {
-                                    var dataURL = result.toDataURL("image/jpeg", 1.0);
-                                    //   alert(dataURL);
-                                    console.log(dataURL);
+                                var dataURL = result.toDataURL("image/jpeg", 1.0);
+                                //   alert(dataURL);
+                                console.log(dataURL);
 
 
 
@@ -365,23 +714,33 @@
             </div>
         </div>
     </div>
+
+
+
     <div id="divschedules" align="center">
 
+
+    </div>
+
+
+
+
+
 </div>
-    <div id="divcircle" style="display: none;">
-        <div class="circle circle-border">
-            <div class="circle-inner">
-                <div class="score-text">
-                    Load More
-                </div>
+<div id="divcircle" style="display: none;">
+    <div class="circle circle-border">
+        <div class="circle-inner">
+            <div class="score-text">
+                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
             </div>
         </div>
     </div>
 </div>
+</div>
 
-<div class="footer">
-    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-    <img src="../img/Loading.gif" id="busy" align="right"  height="40px" >
+<div class="footer" data-toggle="modal" data-target="#indexloadingdata">
+    <img src="../img/neocom.png" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+
 </div>
 
 </body>

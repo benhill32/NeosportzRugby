@@ -14,6 +14,7 @@ var allowscore = 0;
 var allowcancel= 0;
 var Clubedit= 0;
 var Ref= 0;
+var statid = 0;
 var teamfollow = 0;
 var refgameid= 0;
 var remindtext = 0;
@@ -27,20 +28,20 @@ var tokensch = 0
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
-  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-  //  console.log("LOCALDB - Database ready");
-   //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
+    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+    //  console.log("LOCALDB - Database ready");
+    //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
     db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     db.transaction(getflitersch, errorCBfunc, successCBfunc);
 
-    $(".tooltip").draggable("enable");
+    //   $(".tooltip").draggable("enable");
 
 }
 
 function gettokensc(tx) {
     var sql = "select token from MobileApp_LastUpdatesec";
-    //  alert(sql);
+    //   alert(sql);
     tx.executeSql(sql, [], gettokensc_success);
 }
 
@@ -50,29 +51,26 @@ function gettokensc_success(tx, results) {
     var menu = results.rows.item(0);
 
     tokensch = menu.token;
-
+//alert("token : " +  tokensch)
 }
-
-
 
 function getdatanewssch(tx) {
     var sql = "select ID from MobileApp_clubs where Fav = 1";
-    //alert(sql);
+    //  alert(sql);
     tx.executeSql(sql, [], getdatanewssch_success);
 }
 
 function getdatanewssch_success(tx, results) {
-    $('#busy').hide();
+
     var len = results.rows.length;
+//alert(len);
 
-
-    if(len != 0) {
+    if(len == 1) {
         var menu = results.rows.item(0);
         teamfollow = menu.ID;
+        //   alert("teamfollow : " +  menu.ID)
     }
 }
-
-
 
 function checkonlinesch(){
 
@@ -103,9 +101,9 @@ function allowfilter(id){
     {
 
         db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set fliterON =' + id);
-        console.log("Update MobileApp_LastUpdatesec");
-    });
+            tx.executeSql('Update MobileApp_LastUpdatesec set fliterON =' + id);
+            console.log("Update MobileApp_LastUpdatesec");
+        });
 
         $('#btn2').removeClass("btn btn-xs btn-primary active");
         $('#btn2').addClass("btn btn-xs btn-default");
@@ -134,7 +132,7 @@ function allowfilter(id){
 
 function getflitersch(tx) {
 
-  //  updateadmin();
+    //  updateadmin();
 
     var sql = "select fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
     //alert(sql);
@@ -144,7 +142,7 @@ function getflitersch(tx) {
 
 
 function getflitersch_success(tx, results) {
-    $('#busy').hide();
+
     var len = results.rows.length;
 
 
@@ -167,7 +165,7 @@ function getflitersch_success(tx, results) {
 
 function getdatanews(tx) {
     var sql = "select ID from MobileApp_clubs where Fav = 1";
-   // alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getClubID_success);
 }
 
@@ -195,7 +193,7 @@ function getdata2(tx) {
 }
 
 function getdata2_success(tx, results) {
-    $('#busy').hide();
+
     var len = results.rows.length;
     listfollow = 0;
 
@@ -209,7 +207,7 @@ function getdata2_success(tx, results) {
 
     listfollow = listfollow.substr(0, listfollow.length - 1);
 
- //   alert(listfollow);
+    //   alert(listfollow);
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
 
@@ -249,7 +247,7 @@ function getdata(tx) {
 
     }
 
-   // alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -270,36 +268,79 @@ function getMenu_success(tx, results) {
 
         var timesplit = res[1].split(":")
         var h = timesplit[0];
-    var m = timesplit[1];
-     //   alert(menu.DatetimeStartSeconds);
+        var m = timesplit[1];
+        //   alert(menu.DatetimeStartSeconds);
 
         var ampm = h > 12 ? h-12 + ':' + m +'PM' : h + ':' + m +'AM';
 
         if(menu.Cancel== 0) {
-            $('#divschedules').append('<div  class="mainmenuresult" id="' + divid + '" align="left" >' +
-                '<div id="schleft">' +
-                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName  +
+            //    $('#divschedules').append('<div  class="mainmenuresult" id="' + divid + '" align="left" >' +
+            //        '<div id="schleft">' +
+            //        '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName  +
+            //        '</div>' +
+            //        '<div class="size11">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
+            //        '<div class="size11">' + menu.TournamentName + '</div>' +
+            //        '<div class="size11">' + menu.Field + '</div>' +
+            //        '</div>' +
+            //        '<div  id="schright" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal">' +
+            //        '</div>' +
+            //        '</div>');
 
 
+
+            $('#divschedules').append('<div class="panel panel-default" id="' + divid + '">' +
+
+                '<div class="panel-heading">' +
+                '<div class="row">' +
+                '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
+                '<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
                 '</div>' +
-
-                '<div class="size11">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
-                '<div class="size11">' + menu.TournamentName + '</div>' +
-                '<div class="size11">' + menu.Field + '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
                 '</div>' +
-
-                '<div  id="schright" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal">' +
-                '<img height="30px" class="imagesch"  align="right" >' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
                 '</div>' +
-
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
                 '</div>');
+
+
+
+
+
         }else{
-            $('#divschedules').append('<Div class="mainmenuresultcancel" align="left" >' +
-                '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-                '<div class="size11">' + ampm + ' ' +  day + '/' + month + '/' + year + '</div>' +
-                '<div class="size11">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
-                '<div class="size11">' + menu.Field + '</div>' +
-                '</Div>');
+
+            $('#divschedules').append('<div class="panel panel-danger" id="' + divid + '">' +
+
+                '<div class="panel-heading">' +
+                '<div class="row">' +
+                '<div class="col-xs-8 col-md-8"   align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
+                '<div class="col-xs-4 col-md-4"></div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>');
+
+
+            // $('#divschedules').append('<Div class="mainmenuresultcancel" align="left" >' +
+            //     '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+            //     '<div class="size11">' + ampm + ' ' +  day + '/' + month + '/' + year + '</div>' +
+            //    '<div class="size11">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
+            //    '<div class="size11">' + menu.Field + '</div>' +
+            //    '</Div>');
 
         }
 
@@ -315,16 +356,14 @@ function getMenu_success(tx, results) {
 
 
 
+
 }
-function loadreftosystem(Gameid1){
+
+
+function loadstatssystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
 
-    db.transaction(function (tx) {
-        tx.executeSql('Update MobileApp_Schedule set RefName = "' + $('#txtrefname').val() + '" where ID = ' + Gameid1);
-        console.log("Update INTO MobileApp_Results");
-    });
-
-    passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
+    passscoretoserver("gameid=" + Gameid1 + "&statslink=" + $('#txtstatlink').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
     window.setTimeout(function(){
         window.location = "../pages/schedules.html?id=" + id;
     }, 1000);
@@ -333,27 +372,30 @@ function loadreftosystem(Gameid1){
 
 }
 
-function loadref(ID){
-
-    refgameid = ID;
-    db.transaction(loadinfo_ref, errorCBfunc, successCBfunc);
+function loadstats(ID){
+    statid =ID;
+    db.transaction(loadinfo_stats, errorCBfunc, successCBfunc);
 }
 
-function loadinfo_ref(tx) {
+function loadinfo_stats(tx) {
 
-    var sql = "select RefName from MobileApp_Schedule where ID =" + refgameid;
+    var sql = "select StatsLink from MobileApp_Schedule where ID =" + statid;
 
-     //alert(sql);
-    tx.executeSql(sql, [], loadinfo_ref_success2);
+    // alert(sql);
+    tx.executeSql(sql, [], loadinfo_stats_success2);
 }
 
-function loadinfo_ref_success2(tx, results) {
+function loadinfo_stats_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    if(menu.RefName != 'null') {
-        $('#txtrefname').val(menu.RefName);
+
+    if(menu.StatsLink != 'null') {
+        $('#txtstatlink').val(menu.StatsLink);
     }
 }
+
+
+
 
 
 function loadinfo(ID) {
@@ -367,7 +409,7 @@ function loadinfo_success1(tx) {
 
     var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,Cancel,IsFinalScore from MobileApp_Schedule where ID =" + IDhist;
 
-     // alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], loadinfo_success2);
 }
 
@@ -387,7 +429,7 @@ function loadinfo_success2(tx, results) {
 
     var text =  menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
     var text2 =menu.HomeName + ' vs ' + menu.AwayName;
-var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
+    var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
 
 
     $('#score').hide();
@@ -397,7 +439,7 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
     // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
     $('#divdefault').hide();
-
+    $('#idstatlink').hide();
     if (devicePlatformsch == "Android") {
         $("#socialshare").click(function () {
             loadsocial(menu.ID);
@@ -413,6 +455,11 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
 
         if(isadmin==1) {
 
+            $('#idstatlink').show();
+            $("#idstatlink").click(function () {
+                loadstats(menu.ID);
+            });
+
             $('#score').show();
             $('#divdefault').show();
             $("#divdefault").click(function () {
@@ -424,12 +471,10 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
             });
             $('#cancell').show();
             $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
-            $('#referee').show();
-            $("#referee").click(function () {
-                loadref(menu.ID);
-            });
-            $("#modelfooterupdate").click(function () {
-                loadreftosystem(menu.ID);
+
+
+            $("#modelstatsupdate").click(function () {
+                loadstatssystem(menu.ID);
             });
 
         }else {
@@ -446,16 +491,18 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
                     $("#score").click(function () {
                         window.open("scorecard.html?ID=" + IDhist + "&divID=" + id);
                     });
-                    $('#referee').show();
-                    $("#referee").click(function () {
-                        loadref(menu.ID);
+
+                    $("#modelstatsupdate").click(function () {
+                        loadstatssystem(menu.ID);
                     });
-                    $("#modelfooterupdate").click(function () {
-                        loadreftosystem(menu.ID);
-                    });
+
                     $('#divdefault').show();
                     $("#divdefault").click(function () {
                         loaddefaultgames(menu.ID);
+                    });
+                    $('#idstatlink').show();
+                    $("#idstatlink").click(function () {
+                        loadstats(menu.ID);
                     });
                 }
             }
@@ -468,13 +515,7 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
                     });
                     $('#cancell').show();
                     $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text2)
-                    $('#referee').show();
-                    $("#referee").click(function () {
-                        loadref(menu.ID);
-                    });
-                    $("#modelfooterupdate").click(function () {
-                        loadreftosystem(menu.ID);
-                    });
+
                     $('#divdefault').show();
                     $("#divdefault").click(function () {
                         loaddefaultgames(menu.ID);
@@ -493,6 +534,7 @@ var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayN
         $('#score').hide();
         $('#cancell').hide();
         $('#remind').show();
+        $('#idstatlink').hide();
         //$("#remind").click(addreminder(menu.ID,menu.DatetimeStart));
         $("#remind").empty().append('<Div data-toggle="modal" data-target="#basicModalyesno" onclick="createvarforremind(\'' + menu.DatetimeStart + '\',\'' + text + '\')" >  Remind Me</div>');
 
@@ -524,13 +566,13 @@ function saveImageToPhone(url, success, error) {
             $('#target').attr("src", imageDataUrl);
 
             $('#basicModalimagecrop').modal('show');
-          //  cordova.exec(
-          //      success,
-          //      error,
-          //      'Canvas2ImagePlugin',
-          //      'saveImageDataToLibrary',
-          //      [imageData]
-          //  );
+            //  cordova.exec(
+            //      success,
+            //      error,
+            //      'Canvas2ImagePlugin',
+            //      'saveImageDataToLibrary',
+            //      [imageData]
+            //  );
         }
         catch(e) {
             alert(e.message);
@@ -597,17 +639,17 @@ function loadsocialIOS(ID){
 
     var message = mess[1] + "" + ampm + '  ' + day + '/' +  month + '/' + year + "" + mess[2] + "" + mess[3];
     //alert(message);
-     //   window.plugins.socialsharing.share('dsadsadsadasdad dsa dasa', null, null, 'http://www.x-services.nl');
+    //   window.plugins.socialsharing.share('dsadsadsadasdad dsa dasa', null, null, 'http://www.x-services.nl');
     window.plugins.socialsharing.share('Message, image and link', 'Message, image and link', 'https://www.google.nl/images/srpr/logo4w.png', null);
-  //  window.plugins.socialsharing.shareViaFacebook("dsadsadsadasdad dsa dasa", null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
+    //  window.plugins.socialsharing.shareViaFacebook("dsadsadsadasdad dsa dasa", null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
 }
 
 
 
 function loadsocial(ID) {
 
-   // window.plugins.socialsharing.share('Message and subject', 'The subject')
-var name = "game" + ID;
+    // window.plugins.socialsharing.share('Message and subject', 'The subject')
+    var name = "game" + ID;
     window.setTimeout(function(){
         navigator.screenshot.URI(function(error,res){
             if(error){
@@ -621,7 +663,7 @@ var name = "game" + ID;
         },50);
 
     }, 500);
-   // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
+    // window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')
 
 
 
@@ -648,10 +690,10 @@ function loaddefaultgames_data_success2(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
-        $('#divhometeam').empty().html('Home Team : ' + menu.HomeName);
-        $("#divhometeam").click(function () {
-            checkdefaultgames(1,menu.HomeName);
-        });
+    $('#divhometeam').empty().html('Home Team : ' + menu.HomeName);
+    $("#divhometeam").click(function () {
+        checkdefaultgames(1,menu.HomeName);
+    });
 
     $('#divawayteam').empty().html('Away Team : ' + menu.AwayName);
     $("#divawayteam").click(function () {
@@ -661,12 +703,12 @@ function loaddefaultgames_data_success2(tx, results) {
 }
 
 function checkdefaultgames(ID,TeamName){
-if(ID == 1){
-    $('#divmainheaderyesorno').empty().append('Are you sure Home Team : ' + TeamName + ' is defaulting?')
-}else if(ID == 2){
+    if(ID == 1){
+        $('#divmainheaderyesorno').empty().append('Are you sure Home Team : ' + TeamName + ' is defaulting?')
+    }else if(ID == 2){
 
-    $('#divmainheaderyesorno').empty().append('Are you sure Away Team : ' + TeamName + ' is defaulting?')
-}
+        $('#divmainheaderyesorno').empty().append('Are you sure Away Team : ' + TeamName + ' is defaulting?')
+    }
 
 
     homeoraway = ID;
