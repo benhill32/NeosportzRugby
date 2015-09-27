@@ -28,6 +28,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -73,6 +74,7 @@
                  }
                  .container-fluid{
                      padding-top:0px;
+
                  }
 
                  .divmain:active{
@@ -88,10 +90,10 @@
             //   $("#mm-blocker").click(closemenu());
 
 
-            //  jQuery(document).ready(function( $ ) {
-          //      $("#menu").mmenu({
-          //      });
-          //    });
+              jQuery(document).ready(function( $ ) {
+              $("#menu").mmenu({
+                });
+             });
 
         </script>
 
@@ -317,12 +319,6 @@
                      </ul>
 
                  </nav>
-
-
-
-
-
-
 
                  <div class="container-fluid">
 
@@ -644,9 +640,9 @@
                  </div>
 
 
-                 </div>
+
 <!--/onclick="benclick()"  -->
-                           <div class="footer"  >
+                           <div class="footer"  data-toggle="modal" data-target="" >
                      <img src="img/neocomhome.png" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
 
                  </div>

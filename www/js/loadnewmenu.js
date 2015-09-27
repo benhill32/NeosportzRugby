@@ -359,7 +359,7 @@ function getregionName2all_success(tx, results) {
             $('nav#menu').mmenu({
                 extensions: ["border-full", "pageshadow"],
                 "navbar": {
-                    "title": "Neosportz Basketball"
+                    "title": "Neosportz Rugby"
                 }
             });
 
