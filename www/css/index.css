@@ -1324,13 +1324,7 @@ width:75%;
     line-height: normal;
   //  background-color:#FFFFFF;
     width: 100%;
-//  border: 1px solid #496077;
-   // border-top:1px solid #496077;
-  //  background-image: inherit;
-   // background-position: center;
-  //  transform: translateX(0%);
-   // background-image: url("../img/floor.png");
-  //  background-position: center;
+    background-color: #D9D9D9;
 }
 
 /* Portrait layout (default) */
