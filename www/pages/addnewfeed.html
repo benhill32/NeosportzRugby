@@ -18,7 +18,14 @@
     <script type="text/javascript" src="../js/loaddata.js"></script>
     <script type="text/javascript" src="../js/loadnewmenu.js"></script>
 
-    <title></title>
+    <script type="text/javascript"  charset="utf-8">
+
+        document.addEventListener("deviceready", onDeviceReadyaddnew, false);
+        function onDeviceReadyaddnew() {
+            db.transaction(getMenusch, errorCBfunc, successCBfunc);
+        }
+
+    </script>
 </head>
 <body>
 
