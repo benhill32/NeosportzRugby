@@ -963,16 +963,23 @@ function syncmaintables(obj,year){
     });
 
     $.each(obj.screenimage, function (idx, obj) {
+        if (obj.DeletedateUTC == null) {
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK,DeletedateUTC ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '","' + obj.DeletedateUTC + '")');
+                //  alert('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '")');
+            }, errorCBfuncben);
 
-        db.transaction(function (tx) {
-            tx.executeSql('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '")');
-            //  alert('INSERT OR IGNORE INTO Mobilescreenimage(_id,Base64 ,BackgroundColor ,SoftwareFade ,UpdateDateUTC ,TopText ,BottomText,URLLINK ) VALUES (' + obj._id + ',"' + obj.Base64 + '","' + obj.BackgroundColor + '","' + obj.SoftwareFade + '","' + obj.UpdateDateUTC + '","' + obj.TopText + '","' + obj.BottomText + '","' + obj.URLL + '")');
-        },errorCBfuncben);
+            db.transaction(function (tx) {
+                var sql = 'UPDATE Mobilescreenimage SET Base64 = "' + obj.Base64 + '", BackgroundColor = "' + obj.BackgroundColor + '", SoftwareFade = "' + obj.SoftwareFade + '", UpdateDateUTC = "' + obj.UpdateDateUTC + '", TopText = "' + obj.TopText + '", BottomText = "' + obj.BottomText + '",URLLINK = "' + obj.URLL + '" where _id = ' + obj._id;
+                tx.executeSql(sql);
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from Mobilescreenimage where _id =' + obj._id);
+                //   console.log('Delete Mobilesscoringbreakdown');
+            });
 
-        db.transaction(function (tx) {
-            var sql = 'UPDATE Mobilescreenimage SET Base64 = "' + obj.Base64 + '", BackgroundColor = "' + obj.BackgroundColor + '", SoftwareFade = "' + obj.SoftwareFade + '", UpdateDateUTC = "' + obj.UpdateDateUTC + '", TopText = "' + obj.TopText + '", BottomText = "' + obj.BottomText + '",URLLINK = "' + obj.URLL + '" where _id = ' + obj._id;
-            tx.executeSql(sql);
-        });
+        }
     });
 
     $.each(obj.scoringbreakdown, function (idx, obj) {
