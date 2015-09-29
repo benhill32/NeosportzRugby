@@ -357,20 +357,20 @@ function getregionName2all_success(tx, results) {
 
     $("#clubtick" + clubfavall).show();
 
-    alert(menucol);
+    //alert(menucol);
 
     if(menucol == "") {
-
-        $(".mm-menu").css("background", "#4776D1 !important");
+        document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
+        //$(".mm-menu").css("background", "#4776D1 !important");
         $(".mm-menu").css("color", "white !important" );
     }else{
-
-        $(".mm-menu").css("background",  menucol + " !important");
+        document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
+       // $(".mm-menu").css("background",  menucol + " !important");
         $(".mm-menu").css("color", "white !important")
 
     }
 
-
+    alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
 
         $(function () {
             $('nav#menu').mmenu({
