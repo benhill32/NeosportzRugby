@@ -398,7 +398,7 @@ var menucol1  = menucol + ' !important';
         alert(menucol1);
 
         $("#backgroundimg").css('background-color',menucol);
-        $("#menu").css('background-color',menucol1);
+        $("#menu").css('background-color','red !important');
         //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
         // $(".mm-menu").css("background",  menucol + " !important");
         //    $(".mm-menu").css("color", "red !important")
