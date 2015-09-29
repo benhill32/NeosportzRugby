@@ -357,7 +357,7 @@ function getregionName2all_success(tx, results) {
 
     $("#clubtick" + clubfavall).show();
 
-    alert(menucol);
+
 
     if(menucol == "#") {
 
@@ -496,7 +496,7 @@ function updatefollowall(ID,Color){
 
         $("#clubtick" + ID).show();
 
-
+alert(Color)
     if(Color == "") {
 
         $("#backgroundimg").css('background-color','red');
