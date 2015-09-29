@@ -394,11 +394,10 @@ function getregionName2all_success(tx, results) {
 
 
     }else{
-        var menucol1  = menucol + ' !important';
-       // alert(menucol1);
+    
 
         $("#backgroundimg").css('background-color',menucol);
-        $("#menu").css('background-color','red');
+        $("#menu").css('background-color',menucol);
         //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
         // $(".mm-menu").css("background",  menucol + " !important");
         //    $(".mm-menu").css("color", "red !important")
