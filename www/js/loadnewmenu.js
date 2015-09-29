@@ -359,22 +359,7 @@ function getregionName2all_success(tx, results) {
 
 
 
-    if(menucol == "#") {
 
-        $("#backgroundimg").css('background-color','red');
-    //    document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
-        $(".mm-menu").css("background", "#4776D1 !important");
-   //     $(".mm-menu").css("color", "red !important" );
-
-
-    }else{
-
-        $("#backgroundimg").css('background-color',menucol);
-    //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
-       // $(".mm-menu").css("background",  menucol + " !important");
-    //    $(".mm-menu").css("color", "red !important")
-        $(".mm-menu").css("background", menucol + " !important");
-    }
 
     //alert($("#backgroundimg").css('background-color'));
 
@@ -384,7 +369,7 @@ function getregionName2all_success(tx, results) {
 
     //alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
    // $("#mainimgscreen").css('background-color', 'blue');
-    $("#mainimgscreen").css('backgroundColor');
+
 
         $(function () {
             $('nav#menu').mmenu({
@@ -395,6 +380,25 @@ function getregionName2all_success(tx, results) {
             });
 
         });
+
+
+    if(menucol == "#") {
+
+        $("#backgroundimg").css('background-color','red');
+        //    document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
+        $(".mm-menu").css('background-color', '#4776D1 !important');
+        //     $(".mm-menu").css("color", "red !important" );
+
+
+    }else{
+
+        $("#backgroundimg").css('background-color',menucol);
+        //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
+        // $(".mm-menu").css("background",  menucol + " !important");
+        //    $(".mm-menu").css("color", "red !important")
+        $(".mm-menu").css('background-color', menucol + ' !important');
+    }
+
 
 
 }
