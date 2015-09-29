@@ -161,7 +161,16 @@ function getdataclubs_success(tx, results) {
 
             favidall = menu.ID;
             clubfavall = menu.ID;
-           alert("menu Colour " + menu.Color);
+
+
+            $(".mm-menu").css( "background", "#" + menu.Colour + " !important" );
+            $(".mm-menu").css( "color", "white !important" );
+
+        }else{
+
+
+            $(".mm-menu").css( "background", "#4776D1 !important" );
+            $(".mm-menu").css( "color", "white !important" );
         }
 
 
@@ -171,7 +180,7 @@ function getdataclubs_success(tx, results) {
             '<ul id="clubmenuu' + menu.ID + '">' +
             '<li data-toggle="modal" data-target="#basicModalclubhistory"><a href="#"  onclick="loadhistoryall(' + menu.ID + ')">Club History</a></li>' +
             '<li data-toggle="modal" data-target="#basicModalclubContact"><a href="#"   onclick="loadcontactsall(' + menu.ID + ')">Club Contacts</a></li>' +
-            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ')">Set as Favourite</a></li>' +
+            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ')">Set as Favourite Club</a></li>' +
             '</ul>' +
             '</li>';
 
