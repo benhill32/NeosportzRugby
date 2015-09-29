@@ -164,18 +164,24 @@ function getdataclubs_success(tx, results) {
             clubfavall = menu.ID;
             menucol = "#" + menu.Color;
 
-
-
-        }
-        if(menu.Color == "") {
-
-            $(".mm-menu").css( "background", "#4776D1 !important" );
-            $(".mm-menu").css( "color", "white !important" );
         }else{
 
-            $(".mm-menu").css( "background",  menucol + " !important" );
-            $(".mm-menu").css( "color", "white !important" )
+            menucol = "";
+        }
 
+
+
+        alert(menucol);
+
+
+        if(menucol == "") {
+
+            $(".mm-menu").css("background", "#4776D1 !important");
+            $(".mm-menu").css("color", "white !important" );
+        }else{
+
+            $(".mm-menu").css("background",  menucol + " !important");
+            $(".mm-menu").css("color", "white !important")
 
         }
 
