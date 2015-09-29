@@ -496,7 +496,7 @@ function updatefollowall(ID,Color){
 
         $("#clubtick" + ID).show();
 
-alert(Color)
+alert(Color);
     if(Color == "") {
 
         $("#backgroundimg").css('background-color','red');
