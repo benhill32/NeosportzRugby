@@ -161,7 +161,7 @@ function getdataclubs_success(tx, results) {
 
             favidall = menu.ID;
             clubfavall = menu.ID;
-            alert(menu.Color);
+           alert("menu Colour " + menu.Color);
         }
 
 
