@@ -12,6 +12,7 @@ var wifiallset = 0;
 var regionID = 0;
 var clubfavall = 0;
 var menucol = "";
+var textcol = "";
 document.addEventListener("deviceready", onDeviceReadymainmenu, false);
 
 
@@ -163,28 +164,12 @@ function getdataclubs_success(tx, results) {
             favidall = menu.ID;
             clubfavall = menu.ID;
             menucol = "#" + menu.Color;
-
+            textcol = "#" + menu.TextColor;
         }else{
 
             menucol = "";
+            textcol = "";
         }
-
-
-
-        alert(menucol);
-
-
-        if(menucol == "") {
-
-            $(".mm-menu").css("background", "#4776D1 !important");
-            $(".mm-menu").css("color", "white !important" );
-        }else{
-
-            $(".mm-menu").css("background",  menucol + " !important");
-            $(".mm-menu").css("color", "white !important")
-
-        }
-
 
 
 
@@ -375,6 +360,18 @@ function getregionName2all_success(tx, results) {
     $("#clubsmenudiv").append(Clubstring);
 
     $("#clubtick" + clubfavall).show();
+
+    if(menucol == "") {
+
+        $(".mm-menu").css("background", "#4776D1 !important");
+        $(".mm-menu").css("color", "white !important" );
+    }else{
+
+        $(".mm-menu").css("background",  menucol + " !important");
+        $(".mm-menu").css("color", "white !important")
+
+    }
+
 
 
         $(function () {
