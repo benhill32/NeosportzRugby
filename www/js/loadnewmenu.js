@@ -394,7 +394,7 @@ function getregionName2all_success(tx, results) {
 
 
     }else{
-    
+
 
         $("#backgroundimg").css('background-color',menucol);
         $("#menu").css('background-color',menucol);
@@ -509,11 +509,11 @@ function updatefollowall(ID,Color){
     if(Color == "") {
 
         $("#backgroundimg").css('background-color','red');
-
+        $("#menu").css('background-color','#4776D1');
     }else{
 
         $("#backgroundimg").css('background-color','#' + Color);
-
+        $("#menu").css('background-color','#' + Color);
 
     }
 
