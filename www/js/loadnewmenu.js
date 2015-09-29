@@ -370,7 +370,7 @@ function getregionName2all_success(tx, results) {
 
     }
 
-    alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
+    //alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
 
         $(function () {
             $('nav#menu').mmenu({
