@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadnewmenu.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loadnewmenu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43139535">
-              <caret line="508" column="21" selection-start-line="508" selection-start-column="21" selection-end-line="508" selection-end-column="21" />
+            <state vertical-scroll-proportion="-11.4827585">
+              <caret line="376" column="60" selection-start-line="376" selection-start-column="60" selection-end-line="376" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -127,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.448276">
-              <caret line="1416" column="0" selection-start-line="1416" selection-start-column="0" selection-end-line="1416" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37209302">
+              <caret line="1417" column="0" selection-start-line="1417" selection-start-column="0" selection-end-line="1417" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -201,8 +201,8 @@
         <option value="$PROJECT_DIR$/www/pages/news.html" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
       </list>
     </option>
   </component>
@@ -531,7 +531,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1059,18 +1059,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.448276">
-          <caret line="1416" column="0" selection-start-line="1416" selection-start-column="0" selection-end-line="1416" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.4827585">
+          <caret line="376" column="60" selection-start-line="376" selection-start-column="60" selection-end-line="376" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43139535">
-          <caret line="508" column="21" selection-start-line="508" selection-start-column="21" selection-end-line="508" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.37209302">
+          <caret line="1417" column="0" selection-start-line="1417" selection-start-column="0" selection-end-line="1417" selection-end-column="0" />
           <folding />
         </state>
       </provider>
