@@ -165,10 +165,6 @@ function getdataclubs_success(tx, results) {
             clubfavall = menu.ID;
             menucol = "#" + menu.Color;
             textcol = "#" + menu.TextColor;
-        }else{
-
-            menucol = "";
-            textcol = "";
         }
 
 
@@ -360,6 +356,8 @@ function getregionName2all_success(tx, results) {
     $("#clubsmenudiv").append(Clubstring);
 
     $("#clubtick" + clubfavall).show();
+
+    alert(menucol);
 
     if(menucol == "") {
 
