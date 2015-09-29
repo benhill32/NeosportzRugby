@@ -373,8 +373,8 @@ function getregionName2all_success(tx, results) {
     }
 
     //alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
-    $("#mainimgscreen").css('background-color', 'blue');
-
+   // $("#mainimgscreen").css('background-color', 'blue');
+    $("#mainimgscreen").css('backgroundColor');
 
         $(function () {
             $('nav#menu').mmenu({
