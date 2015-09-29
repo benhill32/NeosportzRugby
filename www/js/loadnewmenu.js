@@ -135,7 +135,7 @@ function getMenustandings_success(tx, results) {
 
 function getdataclubs(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color,Fav from MobileApp_clubs order by name";
+    var sql = "select ID,_id ,name,UpdateDateUTC,Color,TextColor ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color,Fav from MobileApp_clubs order by name";
     //alert(sql);
     tx.executeSql(sql, [], getdataclubs_success);
 }
@@ -161,6 +161,7 @@ function getdataclubs_success(tx, results) {
 
             favidall = menu.ID;
             clubfavall = menu.ID;
+            alert(menu.Color);
         }
 
 

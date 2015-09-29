@@ -60,11 +60,15 @@
 
         $("#mm-blocker").click(closemenu());
 
+         jQuery(document).ready(function( $ ) {
+           $("#menu").mmenu({
+              });
+            });
     </script>
 
 </head>
 <body>
-<nav id="menu"  style="display: none;" >
+<nav id="menu"   >
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
@@ -430,7 +434,7 @@
 
                 </div>
                 <div class="modal-footer" id="Directions" data-dismiss="modal" align="center">
-                    Directions to Gym
+                    Directions to Park
 
                 </div>
                 <!-- <div class="modal-footer" id="referee" align="center" data-dismiss="modal" data-toggle="modal" data-target="#basicModalref">
@@ -720,6 +724,7 @@
     <div id="divschedules" align="center">
 
 
+        
     </div>
 
 
@@ -738,9 +743,9 @@
 </div>
 </div>
 
-<div class="footer" data-toggle="modal" data-target="#indexloadingdata">
+<div class="footer" align="center" >
     <img src="../img/neocom.png" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-
+<span style="position: absolute; margin-left: 30px;Height:50px;width:50px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
 </div>
 
 </body>

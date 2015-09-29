@@ -455,10 +455,7 @@ function loadinfo_success2(tx, results) {
 
         if(isadmin==1) {
 
-            $('#idstatlink').show();
-            $("#idstatlink").click(function () {
-                loadstats(menu.ID);
-            });
+
 
             $('#score').show();
             $('#divdefault').show();
@@ -500,10 +497,7 @@ function loadinfo_success2(tx, results) {
                     $("#divdefault").click(function () {
                         loaddefaultgames(menu.ID);
                     });
-                    $('#idstatlink').show();
-                    $("#idstatlink").click(function () {
-                        loadstats(menu.ID);
-                    });
+
                 }
             }
             if (Ref == 1) {
