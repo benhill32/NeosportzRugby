@@ -361,22 +361,24 @@ function getregionName2all_success(tx, results) {
 
     if(menucol == "") {
 
-        menucol = "red";
+        $("#backgroundimg").css('background-color','red');
     //    document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
         //$(".mm-menu").css("background", "#4776D1 !important");
    //     $(".mm-menu").css("color", "red !important" );
 
 
     }else{
+
+        $("#backgroundimg").css('background-color',menucol);
     //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
        // $(".mm-menu").css("background",  menucol + " !important");
     //    $(".mm-menu").css("color", "red !important")
 
     }
 
-    alert($("#backgroundimg").css('background-color'));
-    $("#backgroundimg").css('background-color',menucol);
-    alert($("#backgroundimg").css('background-color'));
+    //alert($("#backgroundimg").css('background-color'));
+
+    //alert($("#backgroundimg").css('background-color'));
 
 
 
