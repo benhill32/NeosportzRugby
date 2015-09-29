@@ -53,6 +53,8 @@ function closemenu(){
 
 function getMenusch(tx) {
     alert($("#backgroundimg").css('background-color'));
+    $("#backgroundimg").css('background-color','red');
+    alert($("#backgroundimg").css('background-color'));
 //alert("load menu");
     var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Schedule_Menu where Hide = 0 Group by DivisionName,DivisionID  order by DivisionOrderID";
     // alert(sql);
