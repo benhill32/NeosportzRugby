@@ -1413,10 +1413,10 @@ h1 {
 
 
 
-.mm-menu {
-    background: #4776D1 ;
-    //background: #3367cc ;
-    color: white;
+#menu {
+    background-color: #4776D1 !important;
+    //background: #3367cc !important;
+    color: white !important;
 }
 
 .mm-listview {
