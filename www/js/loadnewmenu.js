@@ -369,7 +369,7 @@ function getregionName2all_success(tx, results) {
 
     //alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
    // $("#mainimgscreen").css('background-color', 'blue');
-
+    $("#menu").css('background-color','red !important');
 
         $(function () {
             $('nav#menu').mmenu({
@@ -394,8 +394,8 @@ function getregionName2all_success(tx, results) {
 
 
     }else{
-var menucol1  = menucol + ' !important';
-        alert(menucol1);
+        var menucol1  = menucol + ' !important';
+       // alert(menucol1);
 
         $("#backgroundimg").css('background-color',menucol);
         $("#menu").css('background-color','red !important');
