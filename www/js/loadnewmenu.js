@@ -52,9 +52,7 @@ function closemenu(){
 
 
 function getMenusch(tx) {
-    alert($("#backgroundimg").css('background-color'));
-    $("#backgroundimg").css('background-color','red');
-    alert($("#backgroundimg").css('background-color'));
+
 //alert("load menu");
     var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Schedule_Menu where Hide = 0 Group by DivisionName,DivisionID  order by DivisionOrderID";
     // alert(sql);
@@ -362,6 +360,8 @@ function getregionName2all_success(tx, results) {
     //alert(menucol);
 
     if(menucol == "") {
+
+        menucol = "red";
     //    document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
         //$(".mm-menu").css("background", "#4776D1 !important");
    //     $(".mm-menu").css("color", "red !important" );
@@ -373,6 +373,12 @@ function getregionName2all_success(tx, results) {
     //    $(".mm-menu").css("color", "red !important")
 
     }
+
+    alert($("#backgroundimg").css('background-color'));
+    $("#backgroundimg").css('background-color',menucol);
+    alert($("#backgroundimg").css('background-color'));
+
+
 
     //alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
    // $("#mainimgscreen").css('background-color', 'blue');
