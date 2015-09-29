@@ -360,15 +360,15 @@ function getregionName2all_success(tx, results) {
     //alert(menucol);
 
     if(menucol == "") {
-        document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
+    //    document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
         //$(".mm-menu").css("background", "#4776D1 !important");
-        $(".mm-menu").css("color", "red !important" );
+   //     $(".mm-menu").css("color", "red !important" );
 
 
     }else{
-        document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
+    //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
        // $(".mm-menu").css("background",  menucol + " !important");
-        $(".mm-menu").css("color", "red !important")
+    //    $(".mm-menu").css("color", "red !important")
 
     }
 
