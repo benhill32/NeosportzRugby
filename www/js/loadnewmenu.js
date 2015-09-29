@@ -369,7 +369,7 @@ function getregionName2all_success(tx, results) {
 
     //alert(document.getElementsByClassName("mm-menu").style.backgroundColor);
    // $("#mainimgscreen").css('background-color', 'blue');
-    $("#menu").css('background-color','red !important');
+  
 
         $(function () {
             $('nav#menu').mmenu({
