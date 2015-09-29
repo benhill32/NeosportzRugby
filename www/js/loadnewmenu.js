@@ -363,7 +363,7 @@ function getregionName2all_success(tx, results) {
 
         $("#backgroundimg").css('background-color','red');
     //    document.getElementsByClassName("mm-menu").style.backgroundColor = "#4776D1 !important";
-        //$(".mm-menu").css("background", "#4776D1 !important");
+        $(".mm-menu").css("background", "#4776D1 !important");
    //     $(".mm-menu").css("color", "red !important" );
 
 
@@ -373,7 +373,7 @@ function getregionName2all_success(tx, results) {
     //    document.getElementsByClassName("mm-menu").style.backgroundColor = menucol + " !important";
        // $(".mm-menu").css("background",  menucol + " !important");
     //    $(".mm-menu").css("color", "red !important")
-
+        $(".mm-menu").css("background", menucol + " !important");
     }
 
     //alert($("#backgroundimg").css('background-color'));
@@ -500,7 +500,7 @@ function updatefollowall(ID,Color){
     if(Color == "") {
 
         $("#backgroundimg").css('background-color','red');
-        
+
     }else{
 
         $("#backgroundimg").css('background-color','#' + Color);
