@@ -1414,9 +1414,9 @@ h1 {
 
 
 #menu {
-    background-color: #4776D1 !important;
-    //background: #3367cc !important;
-    color: white !important;
+    background-color: #4776D1 ;
+    //background: #3367cc ;
+    color: white;
 }
 
 .mm-listview {
