@@ -13,6 +13,7 @@ var regionID = 0;
 var clubfavall = 0;
 var menucol = "";
 var textcol = "";
+var favbase64= "";
 document.addEventListener("deviceready", onDeviceReadymainmenu, false);
 
 
@@ -165,6 +166,7 @@ function getdataclubs_success(tx, results) {
             clubfavall = menu.ID;
             menucol = "#" + menu.Color;
             textcol = "#" + menu.TextColor;
+            favbase64 = menu.Base64;
         }
 
 
@@ -377,6 +379,12 @@ function getregionName2all_success(tx, results) {
         $("#backgroundimg").css('background-color',menucol);
         $("#menu").css('background-color',menucol);
         $("#menu").css('color',textcol);
+
+    }
+
+    if(favbase64 == ""){
+
+        $("#backgroundimg1").attr('src','data:image/png;base64,' + favbase64 + "'");
 
     }
 
