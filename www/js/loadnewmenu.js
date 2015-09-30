@@ -173,7 +173,7 @@ function getdataclubs_success(tx, results) {
             '<ul id="clubmenuu' + menu.ID + '">' +
             '<li data-toggle="modal" data-target="#basicModalclubhistory"><a href="#"  onclick="loadhistoryall(' + menu.ID + ')">Club History</a></li>' +
             '<li data-toggle="modal" data-target="#basicModalclubContact"><a href="#"   onclick="loadcontactsall(' + menu.ID + ')">Club Contacts</a></li>' +
-            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ',\'' + menu.Color + '\')">Set as Favourite Club</a></li>' +
+            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ',\'' + menu.Color + '\',\'' + menu.name + '\')">Set as Favourite Club</a></li>' +
             '</ul>' +
             '</li>';
 
@@ -453,49 +453,67 @@ function chkmobiledataall(id){
 }
 
 
-function updatefollowall(ID,Color){
+function updatefollowall(ID,Color,Name) {
 
 
     $("#clubtick" + clubfavall).hide();
 
     clearfavteam()
 
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 0');
-            console.log("Update MobileApp_LastUpdatesec");
-        });
+    db.transaction(function (tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 0');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
 
 
-        addfavteam(ID);
+    addfavteam(ID);
 
 
-
-        addfavclub();
-
-
-   // window.setTimeout(function(){
-      //  window.location.reload();
-  //  }, 1500);
+    addfavclub();
 
 
-        $("#clubtick" + ID).show();
+    // window.setTimeout(function(){
+    //  window.location.reload();
+    //  }, 1500);
 
 
-    if(Color == "") {
+    $("#clubtick" + ID).show();
 
-        $("#backgroundimg").css('background-color','red');
-        $("#menu").css('background-color','#4776D1');
-    }else{
 
-        $("#backgroundimg").css('background-color','#' + Color);
-        $("#menu").css('background-color','#' + Color);
+    if (Color == "") {
+
+        $("#backgroundimg").css('background-color', 'red');
+        $("#menu").css('background-color', '#4776D1');
+    } else {
+
+        $("#backgroundimg").css('background-color', '#' + Color);
+        $("#menu").css('background-color', '#' + Color);
 
     }
 
     clubfavall = ID;
 
-}
 
+    window.plugins.toast.showShortCenter('Your Favourite Club is : ' + Name, function (a) {
+        console.log('toast success: ' + a)
+    }, function (b) {
+        alert('toast error: ' + b)
+    });
+
+
+    if (document.getElementById("newsmain") != null) {
+        db.transaction(getdatanews1, errorCBfunc, successCBfunc);
+    }
+
+
+    if (document.getElementById("divschedules") != null) {
+        onDeviceReadysch();
+    }
+
+    if (document.getElementById("divresults") != null) {
+        db.transaction(getfliterresult, errorCBfunc, successCBfunc);
+    }
+}
 
 
 
