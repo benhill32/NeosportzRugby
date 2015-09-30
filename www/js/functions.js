@@ -769,7 +769,7 @@ function syncmaintables(obj,year){
             });
 
             db.transaction(function (tx) {
-                var sql = 'UPDATE MobileApp_clubs SET UpdateDateUTC = "' + obj.UpdateDateUTC + '", UpdateDateUTCBase64 = "' + obj.UpdateDateUTCBase64 + '", Base64 = "' + obj.Base64 + '", History ="' + obj.History + '", Contacts = "' + obj.Contacts + '", UpdateSecondsUTC = "' + obj.UpdateSecondsUTC + '", UpdateSecondsUTCBase64 = "' + obj.UpdateSecondsUTCBase64 + '", Color = "' + obj.Color + '",TextColor = ,"' + obj.TextColor + '", DeletedateUTC = "' + obj.DeletedateUTC + '" where ID = ' + obj.ID;
+                var sql = 'UPDATE MobileApp_clubs SET UpdateDateUTC = "' + obj.UpdateDateUTC + '", UpdateDateUTCBase64 = "' + obj.UpdateDateUTCBase64 + '", Base64 = "' + obj.Base64 + '", History ="' + obj.History + '", Contacts = "' + obj.Contacts + '", UpdateSecondsUTC = "' + obj.UpdateSecondsUTC + '", UpdateSecondsUTCBase64 = "' + obj.UpdateSecondsUTCBase64 + '", Color = "' + obj.Color + '",TextColor = "' + obj.TextColor + '", DeletedateUTC = "' + obj.DeletedateUTC + '" where ID = ' + obj.ID;
                 tx.executeSql(sql);
                 // console.log(sql);
             });
