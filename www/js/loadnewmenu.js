@@ -486,6 +486,7 @@ function updatefollowall(ID,Color,Name,Base64,textcol) {
 
 
     $("#clubtick" + ID).show();
+    alert( $("#menu").css('color'));
 
 
     if (Color == "") {
@@ -500,7 +501,7 @@ function updatefollowall(ID,Color,Name,Base64,textcol) {
         $("#menu").css('color','#' + textcol);
 
     }
-
+alert( $("#menu").css('color'));
 
     if(Base64 != ""){
 
