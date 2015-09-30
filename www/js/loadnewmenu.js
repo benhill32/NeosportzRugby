@@ -167,6 +167,7 @@ function getdataclubs_success(tx, results) {
             menucol = "#" + menu.Color;
             textcol = "#" + menu.TextColor;
             favbase64 = menu.Base64;
+            alert(textcol);
         }
 
 
