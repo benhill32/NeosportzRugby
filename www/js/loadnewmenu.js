@@ -154,7 +154,7 @@ function getdataclubs_success(tx, results) {
         var imgstring = "#clubtick" + menu.ID;
         var imgstring2 = "clubtick" + menu.ID;
         if(menu.Base64 != "null"){
-            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  align="left" height="40">';
+            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '" width="40">';
         }
 
         styleall = '<span class="glyphicon glyphicon-ok" style="display:none;" id="' + imgstring2 + '" aria-hidden="true"></span>';
