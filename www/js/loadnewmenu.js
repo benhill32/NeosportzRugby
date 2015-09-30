@@ -167,12 +167,17 @@ function getdataclubs_success(tx, results) {
             menucol = "#" + menu.Color;
             textcol = "#" + menu.TextColor;
             favbase64 = menu.Base64;
-            alert(textcol);
+            //alert(textcol);
         }
 
 
 
-        Clubstring+='<li id="clubmenu' + menu.ID + '"><a href="#clubmenuu' + menu.ID + '" data-target="clubmenuu' + menu.ID + '">'+ imgg + "  " + menu.name + '  ' + styleall + '</a>' +
+        Clubstring+='<li id="clubmenu' + menu.ID + '">' +
+            '<a href="#clubmenuu' + menu.ID + '" data-target="clubmenuu' + menu.ID + '">' +
+                '<div class="row">' +
+            '<div class="col-xs-4">'+ imgg + "</div>" +
+            '<div class="col-xs-4">' + menu.name + ' ' + styleall + '</div>' +
+        '</div></a>' +
             '<ul id="clubmenuu' + menu.ID + '">' +
             '<li data-toggle="modal" data-target="#basicModalclubhistory"><a href="#"  onclick="loadhistoryall(' + menu.ID + ')">Club History</a></li>' +
             '<li data-toggle="modal" data-target="#basicModalclubContact"><a href="#"   onclick="loadcontactsall(' + menu.ID + ')">Club Contacts</a></li>' +
@@ -502,7 +507,7 @@ function updatefollowall(ID,Color,Name,Base64,textcol) {
         $("#menu").css('color','#' + textcol);
 
     }
-alert( $("#menu").css('color'));
+//alert( $("#menu").css('color'));
 
     if(Base64 != ""){
 
