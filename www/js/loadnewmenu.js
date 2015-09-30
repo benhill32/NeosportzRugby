@@ -175,7 +175,7 @@ function getdataclubs_success(tx, results) {
             '<ul id="clubmenuu' + menu.ID + '">' +
             '<li data-toggle="modal" data-target="#basicModalclubhistory"><a href="#"  onclick="loadhistoryall(' + menu.ID + ')">Club History</a></li>' +
             '<li data-toggle="modal" data-target="#basicModalclubContact"><a href="#"   onclick="loadcontactsall(' + menu.ID + ')">Club Contacts</a></li>' +
-            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ',\'' + menu.Color + '\',\'' + menu.name + '\')">Set as Favourite Club</a></li>' +
+            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ',\'' + menu.Color + '\',\'' + menu.name + '\',\'' + menu.Base64 + '\')">Set as Favourite Club</a></li>' +
             '</ul>' +
             '</li>';
 
@@ -461,7 +461,7 @@ function chkmobiledataall(id){
 }
 
 
-function updatefollowall(ID,Color,Name) {
+function updatefollowall(ID,Color,Name,Base64) {
 
 
     $("#clubtick" + clubfavall).hide();
@@ -498,6 +498,14 @@ function updatefollowall(ID,Color,Name) {
         $("#menu").css('background-color', '#' + Color);
 
     }
+
+
+    if(Base64 != ""){
+
+        $("#backgroundimg1").attr("src","data:image/png;base64," + Base64);
+
+    }
+
 
     clubfavall = ID;
 
