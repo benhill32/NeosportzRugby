@@ -382,7 +382,7 @@ function getregionName2all_success(tx, results) {
 
     }
 
-    if(favbase64 == ""){
+    if(favbase64 != ""){
 
         $("#backgroundimg1").attr("src","data:image/png;base64," + favbase64);
 
