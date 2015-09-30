@@ -502,20 +502,28 @@ function updatefollowall(ID,Color,Name) {
 
 
     if (document.getElementById("newsmain") != null) {
-        alert("newspage");
-        db.transaction(getdatanews1, errorCBfunc, successCBfunc);
+
+        window.setTimeout(function(){
+            location.reload();
+        }, 1500);
+
     }
 
 
     if (document.getElementById("divschedules") != null) {
-        alert("divschedules");
-        onDeviceReadysch();
-    }
+        window.setTimeout(function(){
+        location.reload();
+    }, 1500);
+
+}
 
     if (document.getElementById("divresults") != null) {
-        alert("divresults");
-        db.transaction(getfliterresult, errorCBfunc, successCBfunc);
-    }
+
+        window.setTimeout(function(){
+            location.reload();
+    }, 1500);
+
+}
 }
 
 
