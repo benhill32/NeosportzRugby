@@ -390,7 +390,7 @@ function getscorefromtable_success(tx, results) {
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         // alert(response);
-        onclicksyncloaddata();
+        location.reload(true);
     }
 
 
