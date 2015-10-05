@@ -163,14 +163,7 @@ function getMenu_success(tx, results) {
     var res = (menu.DatetimeStart).split("T");
     alert(isadmin);
 
-    $('#divbonus').append('<Div class="mainmenuscore" >' +
-        '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
-        ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
-        '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
-        '<div class="bold size13 floatleft3" align="center"  >' +
-        ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
-        ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
-        '</Div>');
+
 
 
     $("#divbonus").hide();
@@ -208,7 +201,7 @@ function getMenu_success(tx, results) {
                 $("#btnhalf").hide();
                 $("#btnapprove").hide();
             } else {
-
+                $("#btnhalf").hide();
                 $("#btnfull").hide();
             }
         }else{
@@ -217,7 +210,12 @@ function getMenu_success(tx, results) {
 
         }
 
-      
+      //  if (menu.halftime == 'null') {
+        //    $("#btnfull").hide();
+        //    $("#btnapprove").hide();
+       // } else {
+         //   $("#btnhalf").hide();
+       // }
 
 
         if (menu.IsFinalScore == 0 && (menu.halftime != 'null') && (menu.fulltime != 'null')) {
@@ -239,6 +237,16 @@ function getMenu_success(tx, results) {
             $("#btnapprove").hide();
             $("#divbonus").hide();
         }
+
+
+        $('#divbonus').append('<Div class="mainmenuscore" >' +
+            '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
+            ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
+            '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
+            '<div class="bold size13 floatleft3" align="center"  >' +
+            ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
+            ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
+            '</Div>');
 
 
 
