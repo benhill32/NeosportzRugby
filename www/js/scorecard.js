@@ -325,9 +325,23 @@ function getscoredata_success(tx, results) {
 
     }
 
+    var H1checked="";
+    var H2checked="";
+    var A1checked="";
+    var A2checked="";
 
-    
-
+    if(HBonus1 ==1){
+        $('#homebonus1').prop('checked') == true;
+    }
+    if(HBonus2 ==1){
+        $('#homebonus2').prop('checked') == true
+    }
+    if(ABonus1 ==1){
+        $('#awaybonus1').prop('checked') == true;
+    }
+    if(ABonus2 ==1){
+        $('#awaybonus2').prop('checked') == true;
+    }
 
     $('#divbonus').append('<Div class="mainmenuscore" >' +
         '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
