@@ -161,7 +161,8 @@ function getMenu_success(tx, results) {
     var menu = results.rows.item(0);
     var Gameid =menu.ID;
     var res = (menu.DatetimeStart).split("T");
-    alert(menu.HBonus1);
+    alert(isadmin);
+
     $('#divbonus').append('<Div class="mainmenuscore" >' +
         '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
         ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
@@ -210,7 +211,14 @@ function getMenu_success(tx, results) {
 
                 $("#btnfull").hide();
             }
+        }else{
+            $("#btnfull").hide();
+            $("#btnapprove").hide();
+
         }
+
+      
+
 
         if (menu.IsFinalScore == 0 && (menu.halftime != 'null') && (menu.fulltime != 'null')) {
 
@@ -221,22 +229,19 @@ function getMenu_success(tx, results) {
                 $("#divbonus").show();
                 $("#btnapprove").show();
             }
+
             if(isadmin == 1){
                 $("#divbonus").show();
                 $("#btnapprove").show();
             }
+
         } else {
             $("#btnapprove").hide();
             $("#divbonus").hide();
         }
 
 
-        if (menu.halftime == 'null') {
-            $("#btnfull").hide();
-            $("#btnapprove").hide();
-        } else {
-            $("#btnhalf").hide();
-        }
+
 
         getbothteams(menu.HomeClubID, menu.AwayClubID);
     }else{
