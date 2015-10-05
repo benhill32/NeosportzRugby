@@ -98,7 +98,7 @@ function getscoredata(tx) {
 
 
 function getdata(tx) {
-    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,IsFinalScore from MobileApp_Results where ID = '" + id + "'";
+    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,IsFinalScore,HBonus1,HBonus2,ABonus1,ABonus2  from MobileApp_Results where ID = '" + id + "'";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
@@ -159,6 +159,10 @@ function getMenu_success(tx, results) {
     var Gameid =menu.ID;
     var res = (menu.DatetimeStart).split("T");
     $("#divbonus").hide();
+
+
+
+
     if(menu.IsFinalScore == 0) {
 
 
@@ -177,6 +181,17 @@ function getMenu_success(tx, results) {
             '<button id="btnSync" class="btn btn-info" onclick="syncscore()" >Sync Data</button>' +
             '</div>' +
             '</Div>');
+
+
+        $('#divbonus').append('<Div class="mainmenuscore" >' +
+            '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
+            ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
+            '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
+            '<div class="bold size13 floatleft3" align="center"  >' +
+            ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
+            ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
+            '</Div>');
+
 
         $('#divtime').hide();
 
@@ -290,14 +305,7 @@ function getscoredata_success(tx, results) {
 
     }
 
-    $('#divbonus').append('<Div class="mainmenuscore" >' +
-        '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
-        ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
-        '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
-        '<div class="bold size13 floatleft3" align="center"  >' +
-        ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
-        ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
-        '</Div>');
+
 
 }
 
