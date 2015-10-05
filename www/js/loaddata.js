@@ -379,7 +379,7 @@ function getsyncdateload_success2(tx, results) {
         db.transaction(getMenusch, errorCBfunc, successCBfunc);
     }else{
         if (document.getElementById("scorecard") != null) {
-            db.transaction(getMenusch, errorCBfunc, successCBfunc);
+           // db.transaction(getMenusch, errorCBfunc, successCBfunc);
         }
         else if (document.getElementById("addnewfeed") != null)
         {
