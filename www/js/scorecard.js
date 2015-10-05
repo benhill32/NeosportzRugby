@@ -258,6 +258,11 @@ function gamestate(IDD,id){
  //   db.transaction(getscoredata, errorCBfunc, successCBfunc);
 
     halftimefulltimenow(id,IDD);
+    window.setTimeout(function(){
+        location.reload(true);
+    }, 1000);
+
+
 
 }
 

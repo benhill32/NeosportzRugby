@@ -1179,8 +1179,6 @@ function halftimefulltimenow(GameID,outcome){
 
 
 
-        location.reload(true);
-        window.plugins.toast.showLongBottom('Game has been Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
     }else{
         alert("You don't have access to internet!");
