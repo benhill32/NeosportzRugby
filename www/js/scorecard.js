@@ -27,7 +27,7 @@ function onDeviceReadyscore() {
     if(networkconnectionscore !=0) {
         onclicksyncloaddata();
     }
-
+    db.transaction(gettoken, errorCBfunc, successCBfunc);
     window.setTimeout(function(){
         db.transaction(getfliter1, errorCBfunc, successCBfunc);
     }, 1500);
@@ -307,7 +307,7 @@ function getbonus(){
     var home2 =0;
     var away1=0;
     var away2 = 0;
-alert(gtoken);
+
     if ($('#homebonus1').prop('checked') == true){
         home1 = 1;
     }

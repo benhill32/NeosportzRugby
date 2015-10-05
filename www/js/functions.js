@@ -227,7 +227,7 @@ function passscoretoserverscorecard(testvar){
     var params = "?" + testvar;
 
     Http.open("GET", url + params, false);
-    //alert(url + params);
+    alert(url + params);
 
 
     Http.send();
