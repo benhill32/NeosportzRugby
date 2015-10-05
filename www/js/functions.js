@@ -619,6 +619,13 @@ function syncmaintables(obj,year){
 
     var datenow = new Date();
     functionyear = year;
+
+    db.transaction(function (tx) {
+        tx.executeSql('Delete from MobileApp_Schedule_Menu');
+        // console.log('Delete MobileApp_Results where ID =' + obj.ID);
+    });
+
+
     $.each(obj.App_Schedule_Menu, function (idx, obj) {
         if(obj.Hide ==0) {
             db.transaction(function (tx) {
@@ -629,18 +636,12 @@ function syncmaintables(obj,year){
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobileApp_Schedule_Menu SET DivisionName = "' + obj.DivisionName + '", UpdateDateUTC = "' + obj.UpdateDateUTC + '", DatetimeStart = "' + obj.DatetimeStart + '", DivisionOrderID =' + obj.DivisionOrderID + ', ShowAll = ' + obj.ShowAll + ',Hide = ' + obj.Hide + ' where _id = ' + obj._id;
                 tx.executeSql(sql);
-             //  alert(sql);
+                //  alert(sql);
             });
-
-
-
-        }else{
-            db.transaction(function (tx) {
-                tx.executeSql('Delete from MobileApp_Schedule_Menu where _id =' + obj._id);
-                // console.log('Delete MobileApp_Results where ID =' + obj.ID);
-            });
-
         }
+
+
+
     });
 
     $.each(obj.App_Results_Menu, function (idx, obj) {
