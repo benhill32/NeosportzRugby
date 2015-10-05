@@ -149,7 +149,7 @@ function getplayerinfo_success(tx, results) {
     }
 
 
-
+    db.transaction(getMenusch, errorCBfunc, successCBfunc);
 }
 
 function getdata(tx) {
