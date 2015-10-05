@@ -356,9 +356,9 @@ function getscore(team,value,name){
         }
 
         //update score;
-        db.transaction(getdata, errorCBfunc, successCBfunc);
+     //   db.transaction(getdata, errorCBfunc, successCBfunc);
         //update buttons
-        db.transaction(getscoredata, errorCBfunc, successCBfunc);
+      //  db.transaction(getscoredata, errorCBfunc, successCBfunc);
         //getting token for sync
         db.transaction(gettoken, errorCBfunc, successCBfunc);
         db.transaction(getscorefromtable, errorCBfunc, successCBfunc);

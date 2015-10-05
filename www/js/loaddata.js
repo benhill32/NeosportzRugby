@@ -380,6 +380,8 @@ function getsyncdateload_success2(tx, results) {
     }else{
         if (document.getElementById("scorecard") != null) {
            // db.transaction(getMenusch, errorCBfunc, successCBfunc);
+            location.reload(true);
+
         }
         else if (document.getElementById("addnewfeed") != null)
         {
