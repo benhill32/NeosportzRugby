@@ -166,7 +166,7 @@ function getMenu_success(tx, results) {
     var menu = results.rows.item(0);
     var Gameid =menu.ID;
     var res = (menu.DatetimeStart).split("T");
-    alert(isadmin);
+
 
     HBonus1  = menu.HBonus1;
     HBonus2  = menu.HBonus2;
