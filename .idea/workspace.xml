@@ -73,8 +73,8 @@
       <file leaf-file-name="scorecard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6244186">
-              <caret line="420" column="0" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.32790697">
+              <caret line="306" column="17" selection-start-line="306" selection-start-column="17" selection-end-line="306" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -147,8 +147,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.862069">
-              <caret line="220" column="9" selection-start-line="220" selection-start-column="9" selection-end-line="220" selection-end-column="9" />
+            <state vertical-scroll-proportion="-15.0">
+              <caret line="1252" column="11" selection-start-line="1252" selection-start-column="7" selection-end-line="1252" selection-end-column="11" />
               <folding>
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
               </folding>
@@ -995,6 +995,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.034483">
+          <caret line="378" column="24" selection-start-line="378" selection-start-column="24" selection-end-line="378" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.862069">
+          <caret line="582" column="22" selection-start-line="582" selection-start-column="21" selection-end-line="582" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.884615">
@@ -1023,11 +1041,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.034483">
-          <caret line="378" column="24" selection-start-line="378" selection-start-column="24" selection-end-line="378" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="1252" column="11" selection-start-line="1252" selection-start-column="7" selection-end-line="1252" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,30 +1061,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="582" column="22" selection-start-line="582" selection-start-column="21" selection-end-line="582" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="220" column="9" selection-start-line="220" selection-start-column="9" selection-end-line="220" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6244186">
-          <caret line="420" column="0" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.32790697">
+          <caret line="306" column="17" selection-start-line="306" selection-start-column="17" selection-end-line="306" selection-end-column="17" />
           <folding />
         </state>
       </provider>
