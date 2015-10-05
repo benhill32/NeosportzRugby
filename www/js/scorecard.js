@@ -328,7 +328,7 @@ function getbonus(){
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         //  alert(response);
-        onclicksyncloaddata();
+        location.reload(true);
     }
 
 
