@@ -1177,7 +1177,11 @@ function halftimefulltimenow(GameID,outcome){
 
         passscoretoserver("gameid=" + GameID + "&outcome=" + outcome  + "&deviceid=" + deviceIDscorecard + "&token=" + apptoken)
 
-        alert("Game has been Updated!");
+
+
+        location.reload(true);
+        window.plugins.toast.showLongBottom('Game has been Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
     }else{
         alert("You don't have access to internet!");
     }

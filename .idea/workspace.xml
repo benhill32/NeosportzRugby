@@ -73,8 +73,8 @@
       <file leaf-file-name="scorecard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.793103">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state vertical-scroll-proportion="-21.0">
+              <caret line="259" column="19" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -102,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25348836">
-              <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.448276">
+              <caret line="415" column="0" selection-start-line="414" selection-start-column="2" selection-end-line="415" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
               </folding>
@@ -144,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.862069">
-              <caret line="1106" column="39" selection-start-line="1106" selection-start-column="31" selection-end-line="1106" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.43139535">
+              <caret line="1180" column="0" selection-start-line="1180" selection-start-column="0" selection-end-line="1180" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
@@ -218,11 +218,11 @@
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/pages/scorecard.html" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/pages/results.html" />
         <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
-        <option value="$PROJECT_DIR$/www/js/scorecard.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/js/scorecard.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
       </list>
     </option>
   </component>
@@ -1024,17 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="1106" column="39" selection-start-line="1106" selection-start-column="31" selection-end-line="1106" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.034483">
@@ -1053,20 +1042,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.448276">
+          <caret line="415" column="0" selection-start-line="414" selection-start-column="2" selection-end-line="415" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.793103">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state vertical-scroll-proportion="-21.0">
+          <caret line="259" column="19" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25348836">
-          <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43139535">
+          <caret line="1180" column="0" selection-start-line="1180" selection-start-column="0" selection-end-line="1180" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
           </folding>
         </state>
       </provider>

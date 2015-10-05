@@ -226,7 +226,7 @@ function getMenu_success(tx, results) {
 
 function syncscore(){
 
-    onDeviceReadyscore();
+    location.reload(true);
 }
 
 
@@ -254,8 +254,8 @@ function gamestate(IDD,id){
             console.log("Update INTO MobileApp_Results");
         });
     }
-    db.transaction(getdata, errorCBfunc, successCBfunc);
-    db.transaction(getscoredata, errorCBfunc, successCBfunc);
+  //  db.transaction(getdata, errorCBfunc, successCBfunc);
+ //   db.transaction(getscoredata, errorCBfunc, successCBfunc);
 
     halftimefulltimenow(id,IDD);
 
