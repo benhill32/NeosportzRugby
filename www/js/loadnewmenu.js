@@ -376,7 +376,7 @@ function getregionName2all_success(tx, results) {
         });
 
 
-    if(menucol == "#") {
+    if(menucol == "#" || menucol == "") {
 
         $("#backgroundimg").css('background-color','red');
         $("#menu").css('background-color','#4776D1');
