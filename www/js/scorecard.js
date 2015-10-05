@@ -97,11 +97,7 @@ function getscoredata(tx) {
 }
 
 
-function getdata(tx) {
-    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,IsFinalScore,HBonus1,HBonus2,ABonus1,ABonus2  from MobileApp_Results where ID = '" + id + "'";
-    //alert(sql);
-    tx.executeSql(sql, [], getMenu_success);
-}
+
 
 function getplayerinfo_success(tx, results) {
     $('#busy').hide();
@@ -151,6 +147,13 @@ function getplayerinfo_success(tx, results) {
 
 }
 
+function getdata(tx) {
+    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,IsFinalScore,HBonus1,HBonus2,ABonus1,ABonus2  from MobileApp_Results where ID = '" + id + "'";
+    //alert(sql);
+    tx.executeSql(sql, [], getMenu_success);
+}
+
+
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
@@ -158,6 +161,17 @@ function getMenu_success(tx, results) {
     var menu = results.rows.item(0);
     var Gameid =menu.ID;
     var res = (menu.DatetimeStart).split("T");
+    alert(menu.HBonus1);
+    $('#divbonus').append('<Div class="mainmenuscore" >' +
+        '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
+        ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
+        '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
+        '<div class="bold size13 floatleft3" align="center"  >' +
+        ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
+        ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
+        '</Div>');
+
+
     $("#divbonus").hide();
 
 
@@ -183,14 +197,7 @@ function getMenu_success(tx, results) {
             '</Div>');
 
 
-        $('#divbonus').append('<Div class="mainmenuscore" >' +
-            '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
-            ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
-            '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
-            '<div class="bold size13 floatleft3" align="center"  >' +
-            ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
-            ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
-            '</Div>');
+
 
 
         $('#divtime').hide();
