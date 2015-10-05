@@ -331,25 +331,25 @@ function getscoredata_success(tx, results) {
     var A2checked="";
 
     if(HBonus1 ==1){
-        $('#homebonus1').prop("checked", true);
+        H1checked="checked";
     }
     if(HBonus2 ==1){
-        $('#homebonus2').prop("checked", true);
+        H2checked="checked";
     }
     if(ABonus1 ==1){
-        $('#awaybonus1').prop("checked", true);
+        A1checked="checked";
     }
     if(ABonus2 ==1){
-        $('#awaybonus2').prop("checked", true);
+        A2checked="checked";
     }
 
     $('#divbonus').append('<Div class="mainmenuscore" >' +
-        '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
-        ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
+        '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" ' + H1checked + ' id="homebonus1" onclick="getbonus()">' +
+        ' <input type="checkbox" ' + H2checked + ' id="homebonus2" onclick="getbonus()"> </div>' +
         '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
         '<div class="bold size13 floatleft3" align="center"  >' +
-        ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
-        ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
+        ' <input type="checkbox" ' + A1checked + ' id="awaybonus1"  onclick="getbonus()">' +
+        ' <input type="checkbox" ' + A2checked + ' id="awaybonus2"  onclick="getbonus()">' +
         '</Div>');
 
 }
