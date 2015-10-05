@@ -331,16 +331,16 @@ function getscoredata_success(tx, results) {
     var A2checked="";
 
     if(HBonus1 ==1){
-        $('#homebonus1').prop('checked') == true;
+        $('#homebonus1').prop("checked", true);
     }
     if(HBonus2 ==1){
-        $('#homebonus2').prop('checked') == true
+        $('#homebonus2').prop("checked", true);
     }
     if(ABonus1 ==1){
-        $('#awaybonus1').prop('checked') == true;
+        $('#awaybonus1').prop("checked", true);
     }
     if(ABonus2 ==1){
-        $('#awaybonus2').prop('checked') == true;
+        $('#awaybonus2').prop("checked", true);
     }
 
     $('#divbonus').append('<Div class="mainmenuscore" >' +
