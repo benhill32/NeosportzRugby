@@ -17,6 +17,11 @@ var Ref= 0;
 var isadmin =0;
 var clubedit = 0;
 var DIVid = getUrlVars()["divID"];
+var HBonus1= 0;
+var HBonus2= 0;
+var ABonus1= 0;
+var ABonus2= 0;
+
 function onDeviceReadyscore() {
     checkonlinescore()
     deviceIDscorecard = device.uuid;
@@ -163,8 +168,10 @@ function getMenu_success(tx, results) {
     var res = (menu.DatetimeStart).split("T");
     alert(isadmin);
 
-
-
+    HBonus1  = menu.HBonus1;
+    HBonus2  = menu.HBonus2;
+    ABonus1  = menu.ABonus1;
+    ABonus2  = menu.ABonus2;
 
     $("#divbonus").hide();
 
@@ -239,14 +246,7 @@ function getMenu_success(tx, results) {
         }
 
 
-        $('#divbonus').append('<Div class="mainmenuscore" >' +
-            '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
-            ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
-            '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
-            '<div class="bold size13 floatleft3" align="center"  >' +
-            ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
-            ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
-            '</Div>');
+
 
 
 
@@ -326,6 +326,17 @@ function getscoredata_success(tx, results) {
     }
 
 
+    
+
+
+    $('#divbonus').append('<Div class="mainmenuscore" >' +
+        '<div class="bold size13 floatleft3" align="center"  > <input type="checkbox" id="homebonus1" onclick="getbonus()">' +
+        ' <input type="checkbox" id="homebonus2" onclick="getbonus()"> </div>' +
+        '<div class="bold size13 floatleft3" align="center"  >Bonus Points</div>' +
+        '<div class="bold size13 floatleft3" align="center"  >' +
+        ' <input type="checkbox" id="awaybonus1"  onclick="getbonus()">' +
+        ' <input type="checkbox" id="awaybonus2"  onclick="getbonus()">' +
+        '</Div>');
 
 }
 
