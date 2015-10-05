@@ -321,12 +321,10 @@ function getbonus(){
         away2=1;
     }
 
-    window.setTimeout(function(){
+
         var response =   passscoretoserverscorecard("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
 
-    }, 1000);
 
-     alert(response);
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         //  alert(response);
