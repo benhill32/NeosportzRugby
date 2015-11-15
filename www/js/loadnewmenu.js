@@ -58,7 +58,9 @@ function getMenusch(tx) {
     var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Schedule_Menu where Hide = 0 Group by DivisionName,DivisionID  order by DivisionOrderID";
     // alert(sql);
 
-    tx.executeSql(sql, [], getMenusch_success);
+   // tx.executeSql(sql, [], getMenusch_success);
+
+    db.transaction(getdataclubs, errorCBfunc, successCBfunc);
 }
 
 
@@ -67,12 +69,12 @@ function getMenusch_success(tx, results) {
     var len = results.rows.length;
     // alert(len);
     schstring = "";
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
-        schstring += '<li><a href="#" onclick="redirectschedules2(' + menu._id + ')">'+ menu.DivisionName + '</a></li>';
+  //  for (var i=0; i<len; i++) {
+     //   var menu = results.rows.item(i);
+       // schstring += '<li><a href="#" onclick="redirectschedules2(' + menu._id + ')">'+ menu.DivisionName + '</a></li>';
 
 
-    }
+  //  }
    // alert(schstring);
 
     db.transaction(getMenuresult, errorCBfunc, successCBfunc);
@@ -94,14 +96,14 @@ function getMenuresult_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     //  alert(len);
-    resultsstring = "";
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
+   // resultsstring = "";
+   // for (var i=0; i<len; i++) {
+      //  var menu = results.rows.item(i);
 
-        resultsstring+='<li><a href="#" onclick="redirectresults(' + menu._id + ')">'+ menu.DivisionName + '</a></li>';
+      //  resultsstring+='<li><a href="#" onclick="redirectresults(' + menu._id + ')">'+ menu.DivisionName + '</a></li>';
 
 
-    }
+   // }
 
     db.transaction(getMenustandings, errorCBfunc, successCBfunc);
 }
@@ -119,12 +121,12 @@ function getMenustandings_success(tx, results) {
     var len = results.rows.length;
     // alert(len);
     standstring="";
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
+   // for (var i=0; i<len; i++) {
+    //    var menu = results.rows.item(i);
 
-        standstring +='<li><a href="#" onclick="redirectstandings(' + menu._id + ')">'+ menu.TournamentName + '</a></li>';
+      // standstring +='<li><a href="#" onclick="redirectstandings(' + menu._id + ')">'+ menu.TournamentName + '</a></li>';
 
-    }
+  //  }
 
 
 

@@ -55,7 +55,7 @@ function getbackground_success2(tx, results) {
         $('#splashscreen').empty();
         $('#splashscreen').append('<img id="screensplashimg"  onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
 
-     //   runadmob();
+        runadmob();
 
 
         window.setTimeout(function(){
