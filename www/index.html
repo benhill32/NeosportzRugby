@@ -110,10 +110,11 @@
                $("#mm-blocker").click(closemenu());
 
 
-           //   jQuery(document).ready(function( $ ) {
-          //   $("#menu").mmenu({
-           //     });
-        //   })
+              jQuery(document).ready(function( $ ) {
+             $("#menu").mmenu({
+                 extensions: ["border-full", "pageshadow"]
+                });
+           })
         </script>
 
     </head>
@@ -334,7 +335,13 @@
 
 
                            <!--<li><a href="#" onclick="loadarchiveyear2()"><span class="glyphicon glyphicon-download padding" aria-hidden="true" ></span>Archive</a></li>-->
-
+                         <li style="position: fixed; bottom: 0px;width: 100%;padding:0px;">
+                             <a href="#" style="padding: 0px !important;text-align:center;">
+                             <img src="img/neocom.png" align="center" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+                         </a>
+                             <!-- <ul id="schedulemenudiv">
+                              </ul>-->
+                         </li>
                      </ul>
 
                  </nav>
@@ -708,11 +715,8 @@
 
 
 
-<!--/onclick="benclick()"  -->
-                           <div class="footer"  data-toggle="modal" data-target="" >
-                     <img src="img/neocomhome.png" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
 
-                 </div>
+
 
                  </body>
              <script type="application/javascript">
