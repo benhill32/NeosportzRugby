@@ -32,7 +32,7 @@ function getbackground_success(tx, results) {
         Base64 = menu.Base64;
         db.transaction(getbackground2, errorCBfunc, successCBfunc);
     }else{
-      //  runadmob();
+        runadmob();
 
         window.setTimeout(function(){
             window.location.href='../index.html';
@@ -70,7 +70,7 @@ function getbackground_success2(tx, results) {
 function getbackground2_error(err) {
     $('#splashscreen').empty();
     $('#splashscreen').append('<img id="screensplashimg"  src="data:image/png;base64,' + Base64 + '">');
-   // runadmob();
+    runadmob();
     window.setTimeout(function(){
         window.location.href='../index.html';
     }, 5000);
@@ -80,7 +80,7 @@ function getbackground2_error(err) {
 function getbackground_error(err) {
     //Alert("Error processing SQL: " + err.code);
   //  alert("error");
-   // runadmob();
+    runadmob();
     window.setTimeout(function(){
         window.location.href='../index.html';
     }, 5000);
