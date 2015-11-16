@@ -38,8 +38,8 @@ function onDeviceReadysch() {
 
 
     date = new Date();
-date2 = getfullday(date.getDay()) + ",";
-//alert(date);
+    date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+    //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 
 
@@ -836,18 +836,24 @@ function cancelgame(){
 
 function getpervoiusday(){
 
+    date =new Date().setDate(date.getDate()-1); //+1 or +x
 
-date =date.setDate(today.getDate()-1); //+1 or +x
-    alert(date);
-    //$("#btndate").prop('value', date);
+    date = new Date(date);
+
+
+    date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+    //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 }
 function getnextday(){
 
 
 
-    date = date.setDate(today.getDate()+1); //+1 or +x
-    alert(date);
+    date = new Date(date).setDate(date.getDate()+1); //+1 or +x
+    date = new Date(date);
+
+    date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+    //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 }
 
