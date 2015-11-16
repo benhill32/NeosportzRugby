@@ -378,7 +378,7 @@ function getregionName2all_success(tx, results) {
                     {
                         "position": "bottom",
                         "content": [
-                            "<a style='padding-bottom: 0px;'><img src='../img/neocomhome.png' align='center' Height='50px' onclick='URLredirect('http://www.neocom.co.nz')'></a>"
+                            "<a style='padding-bottom: 0px;'><img src='/img/neocomhome.png' align='center' Height='50px' onclick='URLredirect('http://www.neocom.co.nz')'></a>"
                         ]
                     }
                 ]
