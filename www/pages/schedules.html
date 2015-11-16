@@ -22,6 +22,10 @@
     <script type="text/javascript" src="../js/loaddata.js"></script>
     <script type="text/javascript" src="../js/loadnewmenu.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../css/mobipick.css" />
+    <script type="text/javascript" src="../js/xdate.js"></script>
+    <script type="text/javascript" src="../js/xdate.i18n.js"></script>
+    <script type="text/javascript" src="../js/mobipick.js"></script>
 
 
 
@@ -64,6 +68,13 @@
        //    $("#menu").mmenu({
        //       });
        //     });
+
+
+        $( document ).on( "pagecreate", pageselector, function() {
+            var picker = $( "#btndate", this );
+            picker.mobipick();
+        });
+
     </script>
 
 </head>
@@ -743,7 +754,7 @@
                     <span class="glyphicon glyphicon-chevron-left" onclick="getpervoiusday()"></span>
                 </div>
                 <div class="col-xs-8 col-sm-6">
-                    <button type="button" class="btn btn-primary" id="btndate" data-toggle="modal" data-target="#basicModalmonth" style="width: 100%;"></button>
+                    <button type="button" class="btn btn-primary" id="btndate"  style="width: 100%;"></button>
                 </div>
                 <div class="col-xs-2">
                     <span class="glyphicon glyphicon-chevron-right" onclick="getnextday()"></span>
