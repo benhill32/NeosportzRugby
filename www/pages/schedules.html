@@ -21,6 +21,9 @@
     <script type="text/javascript" src="../js/schedule.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
     <script type="text/javascript" src="../js/loadnewmenu.js"></script>
+    <link href="../css/fullcalendar.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
 
 
 
@@ -714,11 +717,7 @@
                 </div>
                 <div class="modal-body" >
                     <div  id="modelcal">
-                        <div id="datepicker"></div>
-
-                        <script>
-                            $( "#datepicker" ).datepicker();
-                        </script>
+                        <div id="calendar"></div>
 
                     </div>
                 </div>
@@ -729,6 +728,16 @@
                 </div>
             </div>
         </div>
+        <script>
+
+            $("#calendar").fullCalendar({
+            });
+
+            $('#modal_form_addappt').on('shown.bs.modal', function () {
+                $("#calendar").fullCalendar('render');
+            });
+
+        </script>
     </div>
 
 
