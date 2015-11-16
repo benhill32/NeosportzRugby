@@ -35,14 +35,21 @@ function onDeviceReadysch() {
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
     db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     db.transaction(getflitersch, errorCBfunc, successCBfunc);
+    datecheck(new Date(),0);
+}
 
+function datecheck(d,a){
 
-    date = new Date();
-    date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
-    //alert(date);
-    document.getElementById("btndate").innerHTML=date2;
-
-
+   if(a == 0){
+       date = d;
+       date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+       document.getElementById("btndate").innerHTML=date2;
+   }else{
+       date = new Date(d);
+       var z = date.getMonth() + 1;
+       date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
+       document.getElementById("btndate").innerHTML=date2;
+   }
 }
 
 function gettokensc(tx) {
