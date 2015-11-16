@@ -369,10 +369,22 @@ function getregionName2all_success(tx, results) {
 
         $(function () {
             $('nav#menu').mmenu({
-                extensions: ["border-full", "pageshadow"],
+                "extensions": ["border-full", "pageshadow"],
                 "navbar": {
                     "title": "Neosportz Rugby"
-                }
+                },
+                "autoHeight": true,
+                "navbars": [
+                    {
+                        "position": "top"
+                    },
+                    {
+                        "position": "bottom",
+                        "content": [
+                            "<a style='padding-bottom: 0px;'><img src='img/neocomhome.png' align='center' Height='50px' onclick='URLredirect('http://www.neocom.co.nz')'></a>"
+                        ]
+                    }
+                ]
             });
 
         });
