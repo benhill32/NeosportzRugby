@@ -39,7 +39,7 @@ function onDeviceReadysch() {
     date = new Date();
 
 alert(date);
-    document.getElementById("#btndate").innerHTML=date;
+    document.getElementById("btndate").innerHTML=date;
 
 
 }
@@ -824,18 +824,18 @@ function cancelgame(){
 function getpervoiusday(){
 
 
-date =new Date(date).setDate(today.getDate()-1); //+1 or +x
+//date =new Date(date).setDate(today.getDate()-1); //+1 or +x
     alert(date);
     //$("#btndate").prop('value', date);
-    document.getElementById("#btndate").innerHTML=date;
+    document.getElementById("btndate").innerHTML=date;
 }
 function getnextday(){
 
 
 
-    date =new Date(date).setDate(today.getDate()+1); //+1 or +x
+    //date =new Date(date).setDate(today.getDate()+1); //+1 or +x
     alert(date);
-    document.getElementById("#btndate").innerHTML=date;
+    document.getElementById("btndate").innerHTML=date;
 }
 
 
