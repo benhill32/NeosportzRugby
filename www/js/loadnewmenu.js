@@ -373,7 +373,6 @@ function getregionName2all_success(tx, results) {
                 "navbar": {
                     "title": "Neosportz Rugby"
                 },
-                "autoHeight": true,
                 "navbars": [
                     {
                         "position": "top"
