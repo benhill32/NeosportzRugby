@@ -25,6 +25,7 @@ var homeoraway =0;
 document.addEventListener("deviceready", onDeviceReadysch, false);
 var tokensch = 0
 var date = "";
+var date2 = "";
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
@@ -37,9 +38,9 @@ function onDeviceReadysch() {
 
 
     date = new Date();
-
-alert(date);
-    document.getElementById("btndate").innerHTML=date;
+date2 = getfullday(date.getDay()) + ",";
+//alert(date);
+    document.getElementById("btndate").innerHTML=date2;
 
 
 }
@@ -750,7 +751,19 @@ function onConfirm(button) {
 
 }
 
+function getfullday(day){
 
+    var weekday = new Array(7);
+    weekday[0]=  "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+return weekday[day];
+
+}
 
 
 
@@ -824,18 +837,18 @@ function cancelgame(){
 function getpervoiusday(){
 
 
-//date =new Date(date).setDate(today.getDate()-1); //+1 or +x
+date =date.setDate(today.getDate()-1); //+1 or +x
     alert(date);
     //$("#btndate").prop('value', date);
-    document.getElementById("btndate").innerHTML=date;
+    document.getElementById("btndate").innerHTML=date2;
 }
 function getnextday(){
 
 
 
-    //date =new Date(date).setDate(today.getDate()+1); //+1 or +x
+    date = date.setDate(today.getDate()+1); //+1 or +x
     alert(date);
-    document.getElementById("btndate").innerHTML=date;
+    document.getElementById("btndate").innerHTML=date2;
 }
 
 
