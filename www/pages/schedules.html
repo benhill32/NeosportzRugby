@@ -747,12 +747,12 @@
                     dayClick: function(date2, allDay, jsEvent, view) {
                         $(".fc-state-highlight").removeClass("fc-state-highlight");
                         $(jsEvent.currentTarget).addClass("fc-state-highlight");
-
-
                         var z = date2.getMonth() + 1;
                         datecheck(z + "/" + date2.getDate() + "/" + date2.getFullYear() + " 00:00:00");
+                        $('#basicModalmonth').modal('hide')
                     }
                 });
+                $('#calendar').fullCalendar('gotoDate', date);
             });
             $('#basicModalmonth').on('hidden.bs.modal', function (e) {
                 $("#calendar").empty();
