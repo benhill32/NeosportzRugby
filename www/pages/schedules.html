@@ -297,15 +297,12 @@
 
     </div>
     <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()">
-        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> Schedules </div>
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> Games </div>
 </div>
 
 
 
 <div class="container-fluid">
-
-
-
     <div class="modal" id="basicModalclubhistory" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -716,7 +713,11 @@
                 </div>
                 <div class="modal-body" >
                     <div  id="modelcal">
+                        <div id="datepicker"></div>
 
+                        <script>
+                            $( "#datepicker" ).datepicker();
+                        </script>
 
                     </div>
                 </div>
