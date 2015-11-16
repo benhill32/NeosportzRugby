@@ -38,8 +38,8 @@ function onDeviceReadysch() {
     //   $(".tooltip").draggable("enable");
     date = new Date();
 
-$("#btndate").prop('value', date);
-
+//$("#btndate").prop('value', date);
+    document.getElementById("#btndate").value=date;
 
 
 }
@@ -825,15 +825,17 @@ function getpervoiusday(){
 
     alert("before");
 date =new Date(date).setDate(today.getDate()-1); //+1 or +x
-
-    $("#btndate").prop('value', date);
+    alert(date);
+    //$("#btndate").prop('value', date);
+    document.getElementById("#btndate").value=date;
 }
 function getnextday(){
 
-    alert("next");
+
 
     date =new Date(date).setDate(today.getDate()+1); //+1 or +x
-    $("#btndate").prop('value', date);
+    alert(date);
+    document.getElementById("#btndate").value=date;
 }
 
 

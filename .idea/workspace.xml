@@ -132,8 +132,8 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90023476">
-              <caret line="834" column="49" selection-start-line="834" selection-start-column="49" selection-end-line="834" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.4342723">
+              <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -1019,8 +1019,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90023476">
-          <caret line="834" column="49" selection-start-line="834" selection-start-column="49" selection-end-line="834" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.4342723">
+          <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
           <folding />
         </state>
       </provider>
