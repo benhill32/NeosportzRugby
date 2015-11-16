@@ -35,11 +35,11 @@ function onDeviceReadysch() {
     db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
     db.transaction(getflitersch, errorCBfunc, successCBfunc);
 
-    //   $(".tooltip").draggable("enable");
+
     date = new Date();
 
-//$("#btndate").prop('value', date);
-    document.getElementById("#btndate").value=date;
+alert(date);
+    document.getElementById("#btndate").innerHTML=date;
 
 
 }
@@ -823,11 +823,11 @@ function cancelgame(){
 
 function getpervoiusday(){
 
-    alert("before");
+
 date =new Date(date).setDate(today.getDate()-1); //+1 or +x
     alert(date);
     //$("#btndate").prop('value', date);
-    document.getElementById("#btndate").value=date;
+    document.getElementById("#btndate").innerHTML=date;
 }
 function getnextday(){
 
@@ -835,7 +835,7 @@ function getnextday(){
 
     date =new Date(date).setDate(today.getDate()+1); //+1 or +x
     alert(date);
-    document.getElementById("#btndate").value=date;
+    document.getElementById("#btndate").innerHTML=date;
 }
 
 
