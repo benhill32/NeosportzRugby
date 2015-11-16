@@ -824,10 +824,16 @@ function cancelgame(){
 function getpervoiusday(){
 
     alert("before");
+date =new Date(date).setDate(today.getDate()-1); //+1 or +x
+
+    $("#btndate").prop('value', date);
 }
 function getnextday(){
 
     alert("next");
+
+    date =new Date(date).setDate(today.getDate()+1); //+1 or +x
+    $("#btndate").prop('value', date);
 }
 
 
