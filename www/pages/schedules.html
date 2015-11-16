@@ -293,11 +293,6 @@
     <div class="mainheaderimgicon" id="filterswitch">
 
 
-        <div class="btn-group btn-toggle">
-            <button id="btn1" class="btn btn-xs btn-default"  onclick="allowfilter(1)">ON</button>
-            <button id="btn2" class="btn btn-xs btn-primary active"   onclick="allowfilter(0)">OFF</button>
-
-        </div>
 
 
     </div>
@@ -355,7 +350,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog" align="center">
             <div class="modal-content" align="center">
@@ -420,9 +414,6 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="modal" id="basicModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -564,7 +555,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal" id="basicModaldefault" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -718,10 +708,55 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="basicModalmonth" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Choose Date
+                </div>
+                <div class="modal-body" >
+                    <div  id="modelcal">
 
+
+                    </div>
+                </div>
+                <div class="modal-footer" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div id="divschedules" align="center">
+
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+
+                    <script type="text/javascript">
+
+                         $("#btndate").text('Hello');
+
+                    </script>
+                <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-chevron-left" onclick="getpervoiusday()"></span>
+                </div>
+                <div class="col-xs-8 col-sm-6">
+                    <button type="button" class="btn btn-primary" id="btndate" data-toggle="modal" data-target="#basicModalmonth"></button>
+                </div>
+                <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-chevron-right" onclick="getnextday()"></span>
+                </div>
+</div>
+
+            </div>
+        </div>
+
+
 
 
 
@@ -743,9 +778,8 @@
 </div>
 </div>
 
-<div class="footer" align="center" >
-    <img src="../img/neocom.png" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-    <span style="position: absolute; margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
+<div style="position: absolute; bottom: 0px;right: 0px;">
+     <span style=" margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
 </div>
 
 </body>
