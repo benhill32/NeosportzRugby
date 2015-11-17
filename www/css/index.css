@@ -420,7 +420,10 @@ body {
 
 }
 
+.ui-loader-default{
+    display:none;
 
+}
 
 #divscoringreqadmin{
     margin-top: 100px;
