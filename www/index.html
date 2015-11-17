@@ -142,206 +142,206 @@
                             <!--    <ul id="standingsmenudiv">
                                </ul>-->
                            </li>
-                           <li><a href="#clubsmenudiv" data-target="#clubsmenudiv"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a>
-                               <ul id="clubsmenudiv">
+                           <li><a href="#clubsmenudiv" onclick="weblink('pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a>
+                               <!--  <ul id="clubsmenudiv">
 
 
 
 
-                               </ul>
-                           </li>
+                                </ul>-->
+                            </li>
 
 
 
 
-                           <li><a href="#" onclick="weblink('pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
-                           <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
-                               <ul id="settingmenudiv">
-                                   <li><a href="javascript: void(0)">
-                                       <div class="row ">
-                                           <div class="col-xs-6 col-md-4 ">
-                                               <strong> Mobile Data</strong>
+                            <li><a href="#" onclick="weblink('pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
+                            <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
+                                <ul id="settingmenudiv">
+                                    <li><a href="javascript: void(0)">
+                                        <div class="row ">
+                                            <div class="col-xs-6 col-md-4 ">
+                                                <strong> Mobile Data</strong>
 
-                                           </div>
-                                           <div class="col-xs-6 col-md-4">
-                                               <div class="btn-group btn-toggle">
-                                                   <button id="btnmenu1" class="btn btn-xs btn-default"  onclick="chkmobiledataall('btn1')">ON</button>
-                                                   <button id="btnmenu2" class="btn btn-xs btn-success"   onclick="chkmobiledataall('btn2')">OFF</button>
+                                            </div>
+                                            <div class="col-xs-6 col-md-4">
+                                                <div class="btn-group btn-toggle">
+                                                    <button id="btnmenu1" class="btn btn-xs btn-default"  onclick="chkmobiledataall('btn1')">ON</button>
+                                                    <button id="btnmenu2" class="btn btn-xs btn-success"   onclick="chkmobiledataall('btn2')">OFF</button>
 
-                                               </div>
+                                                </div>
 
-                                           </div>
+                                            </div>
 
-                                       </div>
-                                       <div class="row ">
-                                           <div class="col-xs-12 col-md-12 mainmenuwifi">
-                                               <p>Only Sync on a Wi-Fi network</p>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-xs-12 col-md-12 mainmenuwifi">
+                                                <p>Only Sync on a Wi-Fi network</p>
 
-                                           </div>
-                                       </div>
-                                   </a>
-                                   </li>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </li>
 
-                                   <li><a href="#" id="regioniddiv" >
-                                       <div class="row ">
-                                           <div class="col-xs-6 col-md-4 ">
-                                               <strong>Region</strong>
-                                           </div>
-                                       </div>
-                                       <div class="row ">
-                                           <div class="col-xs-6 col-md-4 ">
-                                               <p id="regionlbl"></p>
-                                           </div>
-                                       </div>
-                                   </a></li>
+                                    <li><a href="#" id="regioniddiv" >
+                                        <div class="row ">
+                                            <div class="col-xs-6 col-md-4 ">
+                                                <strong>Region</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-xs-6 col-md-4 ">
+                                                <p id="regionlbl"></p>
+                                            </div>
+                                        </div>
+                                    </a></li>
 
-                                   <li><a href="#" id="settingsync"  >
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8 ">
-                                               <strong>Sync</strong>
-                                           </div>
-                                       </div>
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8 mainmenuwifi">
-                                               <p>Check for Updates</p>
+                                    <li><a href="#" id="settingsync"  >
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8 ">
+                                                <strong>Sync</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8 mainmenuwifi">
+                                                <p>Check for Updates</p>
 
-                                           </div>
-                                       </div>
+                                            </div>
+                                        </div>
 
-                                   </a></li>
-                                   <li><a href="javascript: void(0)"  >
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8 mainmenuwifi">
-                                               <p id="lastsyncdate"></p>
+                                    </a></li>
+                                    <li><a href="javascript: void(0)"  >
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8 mainmenuwifi">
+                                                <p id="lastsyncdate"></p>
 
-                                           </div>
-                                       </div>
-                                   </a></li>
-                                   <li><a href="#"  id="settingdeleteall"  >
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8 ">
-                                               <strong>Delete all data & Sync</strong>
+                                            </div>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#"  id="settingdeleteall"  >
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8 ">
+                                                <strong>Delete all data & Sync</strong>
 
-                                           </div>
-                                       </div>
+                                            </div>
+                                        </div>
 
-                                       <div class="row ">
-                                           <div class="col-xs-8  col-sm-3">
-                                               <p>Sometimes things just don't go right!.</p>
+                                        <div class="row ">
+                                            <div class="col-xs-8  col-sm-3">
+                                                <p>Sometimes things just don't go right!.</p>
 
-                                           </div>
-                                           <div class="col-xs-4  col-sm-3">
+                                            </div>
+                                            <div class="col-xs-4  col-sm-3">
 
-                                           </div>
-                                       </div>
-
-
-
-                                   </a>
-                                   </li>
-
-                                   <li><a href="#" id="idhelp" onclick="weblink('pages/Help.html')" >
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8">
-                                               <strong>Application tutorial</strong>
-                                           </div>
-                                       </div>
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8 ">
-                                               <p>Some handy hints</p>
-                                           </div>
-                                       </div>
-                                   </a></li>
-
-
-                                   <li><a href="#admindata" data-target="#admindata"  >
-                                       <div class="row ">
-                                           <div class="col-xs-8 col-md-8 ">
-                                               <strong>Device & App Info</strong>
-                                           </div>
-                                       </div>
-
-                                   </a>
-                                       <ul id="admindata">
-                                           <li><a href="javascript: void(0)"  >
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       <strong>Device ID</strong>
-                                                   </div>
-                                               </div>
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       <p id="deviceid"></p>
-                                                   </div>
-                                               </div>
-                                           </a>
-                                           </li>
-                                           <li><a href="javascript: void(0)"  >
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       <strong>App Version</strong>
-                                                   </div>
-                                               </div>
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       <p id="appversion"></p>
-                                                   </div>
-                                               </div>
-                                           </a>
-                                           </li>
-                                           <li><a href="mailto:helpdesk@neocom.co.nz?Subject=Neosportz Basketball App" >
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       Send Feedback
-                                                   </div>
-                                               </div>
-
-                                           </a>
-                                           </li>
-                                           <li id="scoringreqdiv"><a href="pages/Scoringrequest.html" >
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       Scoring Request
-                                                   </div>
-                                               </div>
-
-                                           </a>
-                                           </li>
-                                           <li id="scoringreqdiv2"><a href="javascript: void(0)" >
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 " id="scoringreqdiv22">
-                                                       Scoring Request <span class='glyphicon glyphicon-ok' aria-hidden='true'></span>
-                                                   </div>
-                                               </div>
-
-                                           </a>
-                                           </li>
-
-                                           <li id="divadminarea"><a href="pages/scoringadminarea.html" >
-                                               <div class="row ">
-                                                   <div class="col-xs-8 col-md-8 ">
-                                                       Scoring Admin Area
-                                                   </div>
-                                               </div>
-
-                                           </a>
-                                           </li>
-
-                                       </ul>
-
-                                   </li>
+                                            </div>
+                                        </div>
 
 
 
+                                    </a>
+                                    </li>
 
-                               </ul>
-                           </li>
-                       <!--  <li style="position: fixed; bottom: 0px;width: 100%;padding:0px;">
-                             <a href="#" style="padding: 0px !important;text-align:center;">
-                             <img src="img/neocomhome.png" align="center" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-                         </a>
+                                    <li><a href="#" id="idhelp" onclick="weblink('pages/Help.html')" >
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8">
+                                                <strong>Application tutorial</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8 ">
+                                                <p>Some handy hints</p>
+                                            </div>
+                                        </div>
+                                    </a></li>
 
-                         </li>-->
+
+                                    <li><a href="#admindata" data-target="#admindata"  >
+                                        <div class="row ">
+                                            <div class="col-xs-8 col-md-8 ">
+                                                <strong>Device & App Info</strong>
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                        <ul id="admindata">
+                                            <li><a href="javascript: void(0)"  >
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        <strong>Device ID</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        <p id="deviceid"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            </li>
+                                            <li><a href="javascript: void(0)"  >
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        <strong>App Version</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        <p id="appversion"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            </li>
+                                            <li><a href="mailto:helpdesk@neocom.co.nz?Subject=Neosportz Basketball App" >
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        Send Feedback
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                            </li>
+                                            <li id="scoringreqdiv"><a href="pages/Scoringrequest.html" >
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        Scoring Request
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                            </li>
+                                            <li id="scoringreqdiv2"><a href="javascript: void(0)" >
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 " id="scoringreqdiv22">
+                                                        Scoring Request <span class='glyphicon glyphicon-ok' aria-hidden='true'></span>
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                            </li>
+
+                                            <li id="divadminarea"><a href="pages/scoringadminarea.html" >
+                                                <div class="row ">
+                                                    <div class="col-xs-8 col-md-8 ">
+                                                        Scoring Admin Area
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+
+
+
+
+                                </ul>
+                            </li>
+                        <!--  <li style="position: fixed; bottom: 0px;width: 100%;padding:0px;">
+                              <a href="#" style="padding: 0px !important;text-align:center;">
+                              <img src="img/neocomhome.png" align="center" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
+                          </a>
+
+                          </li>-->
                      </ul>
 
                  </nav>
