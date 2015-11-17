@@ -365,7 +365,7 @@ function getregionName2all_success(tx, results) {
     $("#standingsmenudiv").append(standstring);
     $("#clubsmenudiv").append(Clubstring);
 
-    $("#clubtick" + clubfavall).show();
+    //$("#clubtick" + clubfavall).show();
 
         $(function () {
             $('nav#menu').mmenu({
@@ -386,24 +386,17 @@ function getregionName2all_success(tx, results) {
         });
 
 
-    if(menucol == "#" || menucol == "") {
+    //if(menucol == "#" || menucol == "") {
 
         $("#backgroundimg").css('background-color','red');
         $("#menu").css('background-color','#4776D1');
         $("#menu").css('color','white');
-    }else{
-        $("#backgroundimg").css('background-color',menucol);
-        $("#menu").css('background-color',menucol);
-        $("#menu").css('color',textcol);
+    //}else{
+     //   $("#backgroundimg").css('background-color',menucol);
+     //   $("#menu").css('background-color',menucol);
+     //   $("#menu").css('color',textcol);
 
-    }
-
-    if(favbase64 != ""){
-
-        $("#backgroundimg1").attr("src","data:image/png;base64," + favbase64);
-
-    }
-
+  //  }
 
 }
 
