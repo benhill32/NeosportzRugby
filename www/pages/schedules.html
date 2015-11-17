@@ -81,10 +81,11 @@
             $( "body" ).on( "swiperight", swiperightHandler );
             // Callback function references the event target and adds the 'swipeleft' class to it
             function swipeleftHandler( event ){
-                getpervoiusday();
+                getnextday();
             }
             function swiperightHandler( event ){
-                getnextday();
+
+                getpervoiusday();
             }
         });
 
