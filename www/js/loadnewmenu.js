@@ -60,7 +60,7 @@ function getMenusch(tx) {
 
    // tx.executeSql(sql, [], getMenusch_success);
 
-   // db.transaction(getsyncdateall, errorCBfunc, successCBfunc);
+    db.transaction(getsyncdateall, errorCBfunc, successCBfunc);
 }
 
 
@@ -244,7 +244,7 @@ function getsyncdateall_success2(tx, results) {
     if(dateme.getFullYear() != 1970) {
         $('#lastsyncdate').append("<strong>Last sync time</strong> <br>" + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2))
     }
-    console.log("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2) );
+   // console.log("Last sync time : " + dateme.getDate() + " " + month[dateme.getMonth()] + " " + dateme.getFullYear() + " " + (dateme.getHours()) + ":" + ("0" + dateme.getMinutes()).slice(-2) + ":" + ("0" + dateme.getSeconds()).slice(-2) );
 
 
 
@@ -313,7 +313,7 @@ if(menu.allowscore == 0){
 
     db.transaction(getregionName2all, errorCBfunc, successCBfunc);
 
-    $('#busy').hide();
+
 
 
 }
@@ -341,7 +341,7 @@ function getregionName2all_success(tx, results) {
     $('#regionlbl').append(menu.Name);
 
 
-        $("#menu").show();
+
 
 
 //alert("last Stage of menu");
@@ -365,38 +365,15 @@ function getregionName2all_success(tx, results) {
     $("#standingsmenudiv").append(standstring);
     $("#clubsmenudiv").append(Clubstring);
 
-    //$("#clubtick" + clubfavall).show();
-
-     //   $(function () {
-     //       $('nav#menu').mmenu({
-     //           "extensions": ["border-full", "pageshadow"],
-     //           "navbar": {
-     //               "title": "Neosportz Rugby"
-     //           },
-    //            "navbars": [
-    //                {
-    //                    "position": "bottom",
-    //                    "content": [
-    //                        "<a style='padding-bottom: 0px;'><img src='img/neocomhome.png' align='center' Height='50px' onclick='URLredirect('http://www.neocom.co.nz')'></a>"
-    //                    ]
-    //                }
-    //            ]
-    //        });
-
-    //    });
 
 
-    //if(menucol == "#" || menucol == "") {
+
+
 
         $("#backgroundimg").css('background-color','red');
         $("#menu").css('background-color','#4776D1');
         $("#menu").css('color','white');
-    //}else{
-     //   $("#backgroundimg").css('background-color',menucol);
-     //   $("#menu").css('background-color',menucol);
-     //   $("#menu").css('color',textcol);
 
-  //  }
 
 }
 
