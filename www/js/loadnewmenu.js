@@ -203,7 +203,7 @@ function getregionName2all_success(tx, results) {
     $("#mm-blocker").click(closemenu());
 
     $("#menu").show();
-    $("#showsch2").show();
+    $("#showmenu").show();
 
     $(function () {
         $('nav#menu').mmenu({
