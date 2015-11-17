@@ -6,33 +6,33 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../css/onoff.css" />-->
+     <link rel="stylesheet" type="text/css" href="../css/onoff.css" />
     <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
-    <script type="text/javascript" src="../js/dbconnection.js"></script>
+   <script type="text/javascript" src="../js/dbconnection.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
-    <script type="text/javascript" src="../js/cropper.js"></script>
-    <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
-    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
-    <script type="text/javascript" src="../js/functions.js"></script>
-    <script type="text/javascript" src="../js/schedule.js"></script>
-    <script type="text/javascript" src="../js/loaddata.js"></script>
-    <script type="text/javascript" src="../js/loadnewmenu.js"></script>
-    <script type="text/javascript" src="../js/jquery.mobile-1.4.5.js"></script>
-    <link href="../css/fullcalendar.css" rel="stylesheet"/>
+      <script type="text/javascript" src="../js/cropper.js"></script>
+       <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
+       <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+      <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+      <script type="text/javascript" src="../js/functions.js"></script>
+      <script type="text/javascript" src="../js/schedule.js"></script>
+      <script type="text/javascript" src="../js/loaddata.js"></script>
+      <script type="text/javascript" src="../js/loadnewmenu.js"></script>
+      <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+      <link href="../css/fullcalendar.css" rel="stylesheet"/>
 
-    <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
-
-
+      <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
 
 
 
 
 
-    <!-- <link rel="stylesheet" type="text/css" href="../css/main.css" />-->
+
+
+      <!-- <link rel="stylesheet" type="text/css" href="../css/main.css" />-->
     <style>
         #btn1, #btn2{
             padding-bottom:5px;
@@ -65,22 +65,28 @@
             refreshdata();
 
 
-        }
+       }
 
-        $("#mm-blocker").click(closemenu());
+    //    $("#mm-blocker").click(closemenu());
 
         // jQuery(document).ready(function( $ ) {
        //    $("#menu").mmenu({
        //       });
        //     });
+      $(function(){
+          // Bind the swipeleftHandler callback function to the swipe event on div.box
+          $( "body" ).on( "swipeleft", swipeleftHandler );
+          $( "body" ).on( "swiperight", swiperightHandler );
+          // Callback function references the event target and adds the 'swipeleft' class to it
+          function swipeleftHandler( event ){
+              alert("You swiped left!");
+          }
+          function swiperightHandler( event ){
+              alert("You swiped right!");
+          }
+      });
 
 
-        $("#divschedules").on("swipeleft",function(){
-            alert("You swiped left!");
-        });
-        $("#divschedules").on("swiperight",function(){
-            alert("You swiped right!");
-        });
     </script>
 
 
