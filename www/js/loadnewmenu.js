@@ -54,158 +54,9 @@ function closemenu(){
 
 function getMenusch(tx) {
 
-//alert("load menu");
-    var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Schedule_Menu where Hide = 0 Group by DivisionName,DivisionID  order by DivisionOrderID";
-    // alert(sql);
-
-   // tx.executeSql(sql, [], getMenusch_success);
 
     db.transaction(getsyncdateall, errorCBfunc, successCBfunc);
 }
-
-
-function getMenusch_success(tx, results) {
-
-    var len = results.rows.length;
-    // alert(len);
-    schstring = "";
-  //  for (var i=0; i<len; i++) {
-     //   var menu = results.rows.item(i);
-       // schstring += '<li><a href="#" onclick="redirectschedules2(' + menu._id + ')">'+ menu.DivisionName + '</a></li>';
-
-
-  //  }
-   // alert(schstring);
-
-    db.transaction(getMenuresult, errorCBfunc, successCBfunc);
-}
-
-
-
-function getMenuresult(tx) {
-    var sql = "select Distinct DivisionName,DivisionID,_id from MobileApp_Results_Menu  where Hide = 0  Group by DivisionName,DivisionID  order by DivisionOrderID";
-    // var sql = "select Distinct DivisionName,DivisionID from MobileApp_Schedule_Menu Group by DivisionName,DivisionID  order by DivisionOrderID";
-
-
-    // alert(sql);
-    tx.executeSql(sql, [], getMenuresult_success);
-}
-
-
-function getMenuresult_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    //  alert(len);
-   // resultsstring = "";
-   // for (var i=0; i<len; i++) {
-      //  var menu = results.rows.item(i);
-
-      //  resultsstring+='<li><a href="#" onclick="redirectresults(' + menu._id + ')">'+ menu.DivisionName + '</a></li>';
-
-
-   // }
-
-    db.transaction(getMenustandings, errorCBfunc, successCBfunc);
-}
-
-
-function getMenustandings(tx) {
-    var sql = "select _id, TournamentName,UpdateDateUTC ,OrderID from MobileApp_Results_Table_Menu  where Hide = 0 order by OrderID,TournamentName";
-    //alert(sql);
-    tx.executeSql(sql, [], getMenustandings_success);
-}
-
-
-function getMenustandings_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    // alert(len);
-    standstring="";
-   // for (var i=0; i<len; i++) {
-    //    var menu = results.rows.item(i);
-
-      // standstring +='<li><a href="#" onclick="redirectstandings(' + menu._id + ')">'+ menu.TournamentName + '</a></li>';
-
-  //  }
-
-
-
-    db.transaction(getdataclubs, errorCBfunc, successCBfunc);
-
-
-
-
-}
-
-
-function getdataclubs(tx) {
-
-    var sql = "select ID,_id ,name,UpdateDateUTC,Color,TextColor ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color,Fav from MobileApp_clubs order by name";
-    //alert(sql);
-    tx.executeSql(sql, [], getdataclubs_success);
-}
-
-function getdataclubs_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-//alert(len);
-    Clubstring= "";
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
-        var imgg = "";
-        var imgstring = "#clubtick" + menu.ID;
-        var imgstring2 = "clubtick" + menu.ID;
-        if(menu.Base64 != "null"){
-            imgg = '<img src="data:image/png;base64,' + menu.Base64 + '" width="40">';
-        }
-
-        styleall = '<span class="glyphicon glyphicon-ok" style="display:none;" id="' + imgstring2 + '" aria-hidden="true"></span>';
-
-
-        if(menu.Fav == 1){
-
-            favidall = menu.ID;
-            clubfavall = menu.ID;
-            menucol = "#" + menu.Color;
-            textcol = "#" + menu.TextColor;
-            favbase64 = menu.Base64;
-            //alert(textcol);
-        }
-
-
-
-        Clubstring+='<li id="clubmenu' + menu.ID + '">' +
-            '<a href="#clubmenuu' + menu.ID + '" data-target="clubmenuu' + menu.ID + '">' +
-                '<div class="row">' +
-            '<div class="col-xs-4">'+ imgg + "</div>" +
-            '<div class="col-xs-4">' + menu.name + ' ' + styleall + '</div>' +
-        '</div></a>' +
-            '<ul id="clubmenuu' + menu.ID + '">' +
-            '<li data-toggle="modal" data-target="#basicModalclubhistory"><a href="#"  onclick="loadhistoryall(' + menu.ID + ')">Club History</a></li>' +
-            '<li data-toggle="modal" data-target="#basicModalclubContact"><a href="#"   onclick="loadcontactsall(' + menu.ID + ')">Club Contacts</a></li>' +
-            '<li><a href="#" onclick="updatefollowall(' + menu.ID + ',\'' + menu.Color + '\',\'' + menu.name + '\',\'' + menu.Base64 + '\',\'' + menu.TextColor + '\')">Set as Favourite Club</a></li>' +
-            '</ul>' +
-            '</li>';
-
-
-
-    }
-
-
-    if(document.getElementById("indexdiv")!=null) {
-
-        //$("#menu").show();
-    }
-
-    db.transaction(getsyncdateall, errorCBfunc, successCBfunc);
-
-
-
-
-
-}
-
-
 
 function getsyncdateall(tx) {
     var sql = "select Datesecs, syncwifi,Region,isadmin,allowscore from MobileApp_LastUpdatesec";
@@ -341,11 +192,6 @@ function getregionName2all_success(tx, results) {
     $('#regionlbl').append(menu.Name);
 
 
-
-
-
-//alert("last Stage of menu");
-
     var stringapp = device.uuid;
 
     $("#deviceid").empty();
@@ -353,26 +199,6 @@ function getregionName2all_success(tx, results) {
 
     $("#appversion").empty();
     $("#appversion").append(appversionlocalf);
-
-
-    $("#schedulemenudiv").empty();
-    $("#resultmenudiv").empty();
-    $("#standingsmenudiv").empty();
-    $("#clubsmenudiv").empty();
-
-    $("#schedulemenudiv").append(schstring);
-    $("#resultmenudiv").append(resultsstring);
-    $("#standingsmenudiv").append(standstring);
-    $("#clubsmenudiv").append(Clubstring);
-
-
-
-
-
-
-        $("#backgroundimg").css('background-color','red');
-        $("#menu").css('background-color','#4776D1');
-        $("#menu").css('color','white');
 
 
 }
