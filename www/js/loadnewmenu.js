@@ -204,6 +204,7 @@ function getregionName2all_success(tx, results) {
 
     $("#menu").show();
     $("#showmenu").show();
+    $("#spanmenu").show();
 
     $(function () {
         $('nav#menu').mmenu({
