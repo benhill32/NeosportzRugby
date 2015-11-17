@@ -111,31 +111,15 @@
              </style>
         <script type="text/javascript">
 
-               $("#mm-blocker").click(closemenu());
-               $(function () {
-                   $('nav#menu').mmenu({
-                       "extensions": ["border-full", "pageshadow"],
-                       "navbar": {
-                           "title": "Neosportz Rugby"
-                       },
-                       "navbars": [
-                           {
-                               "position": "bottom",
-                               "content": [
-                                   "<a style='padding-bottom: 0px;'><img src='img/neocomhome.png' align='center' Height='50px' onclick='URLredirect('http://www.neocom.co.nz')'></a>"
-                               ]
-                           }
-                       ]
-                   });
 
-               });
+
 
         </script>
 
     </head>
                  <body>
 
-                 <nav id="menu"    >
+                 <nav id="menu"  style="display: none;"  >
                      <ul>
 
 
@@ -354,7 +338,7 @@
 
                  <div class="container-fluid">
 
-                     <div id="showmenumain" onclick="$('nav#menu').data( 'mmenu' ).open()">
+                     <div id="showmenumain" onclick="$('nav#menu').data( 'mmenu' ).open()" style="display: none;">
                          <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 
                      </div>

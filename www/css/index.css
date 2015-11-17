@@ -1311,6 +1311,24 @@ width:75%;
   z-index: 20;
     color:black;
 }
+
+
+#showsch{
+    padding-left:15px;
+    float: left;
+    padding-top:25px;
+   // width:200px;
+    z-index: 20;
+    color:black;
+}
+#showsch2{
+    padding-left:15px;
+    float: left;
+    padding-top:25px;
+    width:200px;
+    z-index: 20;
+    color:black;
+}
 #showmenu a,a:active, a:focus{
 
     color: black;
