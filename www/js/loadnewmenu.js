@@ -60,7 +60,7 @@ function getMenusch(tx) {
 
    // tx.executeSql(sql, [], getMenusch_success);
 
-    db.transaction(getsyncdateall, errorCBfunc, successCBfunc);
+   // db.transaction(getsyncdateall, errorCBfunc, successCBfunc);
 }
 
 
