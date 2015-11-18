@@ -92,17 +92,17 @@ function getdata(tx) {
     var year = d.getFullYear();
     var day = d.getDate();
 
-
+    alert("sql2");
 
     if(window.localStorage.getItem("fliter") == 0){
 
-alert("sql2");
+alert("sql3");
         sql = "select * from App_Games where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
 
 
-        sql = "select * where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DeletedateUTC= 'null'   and strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + " order by DatetimeStart";
+        sql = "select * from App_Games where (HomeClubID IN (" + window.localStorage.getItem("listfollow") + ") or AwayClubID IN (" + window.localStorage.getItem("listfollow") + ")) and DeletedateUTC= 'null'   and strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + " order by DatetimeStart";
 
     }
 
@@ -711,7 +711,7 @@ function getnextday(){
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
-    
+
     db.transaction(getdata, errorCBfunc, successCBfunc);
 }
 
