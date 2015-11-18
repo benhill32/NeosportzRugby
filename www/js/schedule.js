@@ -85,7 +85,7 @@ function onError(error) {
 function getdata(tx) {
     alert("sql");
     var sql = "";
-    var d = date();
+    var d = new Date(date);
     var secondsnow  = (d.getTime())/1000;
 
     var month = d.getMonth();
