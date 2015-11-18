@@ -95,7 +95,8 @@ function getdata(tx) {
     if(window.localStorage.getItem("fliter") == 0){
 
 
-        sql = "select * from App_Games where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
+        sql = "select * from App_Games";
+        //where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
 
