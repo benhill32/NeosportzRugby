@@ -92,8 +92,6 @@ function getdata(tx) {
     var year = d.getFullYear();
     var day = d.getDate();
 
-
-
     if(window.localStorage.getItem("fliter") == 0){
 
 
