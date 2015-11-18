@@ -104,7 +104,7 @@ function getdata(tx) {
 
     }
 
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -131,18 +131,6 @@ alert(len);
         var ampm = h > 12 ? h-12 + ':' + m +'PM' : h + ':' + m +'AM';
 
         if(menu.Cancel== 0) {
-            //    $('#divschedules').append('<div  class="mainmenuresult" id="' + divid + '" align="left" >' +
-            //        '<div id="schleft">' +
-            //        '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName  +
-            //        '</div>' +
-            //        '<div class="size11">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
-            //        '<div class="size11">' + menu.TournamentName + '</div>' +
-            //        '<div class="size11">' + menu.Field + '</div>' +
-            //        '</div>' +
-            //        '<div  id="schright" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal">' +
-            //        '</div>' +
-            //        '</div>');
-
 
 
             $('#divschedules').append('<div class="panel panel-default" id="' + divid + '">' +
@@ -192,12 +180,7 @@ alert(len);
                 '</div>');
 
 
-            // $('#divschedules').append('<Div class="mainmenuresultcancel" align="left" >' +
-            //     '<div class="bold size13"  >' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-            //     '<div class="size11">' + ampm + ' ' +  day + '/' + month + '/' + year + '</div>' +
-            //    '<div class="size11">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
-            //    '<div class="size11">' + menu.Field + '</div>' +
-            //    '</Div>');
+
 
         }
 
