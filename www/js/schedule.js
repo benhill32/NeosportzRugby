@@ -83,20 +83,20 @@ function onError(error) {
 
 
 function getdata(tx) {
-    alert("sql");
+
     var sql = "";
     var d = new Date(date);
     var secondsnow  = (d.getTime())/1000;
 
-    var month = d.getMonth();
+    var month = d.getMonth() + 1;
     var year = d.getFullYear();
     var day = d.getDate();
 
-    alert("sql2");
+
 
     if(window.localStorage.getItem("fliter") == 0){
 
-alert("sql3");
+
         sql = "select * from App_Games where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
