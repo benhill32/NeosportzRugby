@@ -322,7 +322,7 @@ function closemodel(){
    // alert("close");
 
     $('#indexloadingdata').modal('hide');
-    alert("oneoff");
+
     db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 
