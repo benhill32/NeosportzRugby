@@ -150,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.862069">
-              <caret line="338" column="51" selection-start-line="338" selection-start-column="51" selection-end-line="338" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.6883721">
+              <caret line="348" column="0" selection-start-line="335" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
                 <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
@@ -163,11 +163,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51046515">
-              <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
+            <state vertical-scroll-proportion="-16.310345">
+              <caret line="201" column="38" selection-start-line="201" selection-start-column="38" selection-end-line="201" selection-end-column="38" />
               <folding>
                 <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
               </folding>
@@ -240,11 +240,11 @@
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
         <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
       </list>
     </option>
   </component>
@@ -912,17 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.862069">
-          <caret line="338" column="51" selection-start-line="338" selection-start-column="51" selection-end-line="338" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-            <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-33.75862">
@@ -991,10 +980,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51046515">
-          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
+        <state vertical-scroll-proportion="-16.310345">
+          <caret line="201" column="38" selection-start-line="201" selection-start-column="38" selection-end-line="201" selection-end-column="38" />
           <folding>
             <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6883721">
+          <caret line="348" column="0" selection-start-line="335" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
           </folding>
         </state>
       </provider>

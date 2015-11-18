@@ -123,7 +123,7 @@ function checkdatabaseloaddata(){
        // db.transaction(getMenusch, errorCBfunc, successCBfunc);
     }
 
-    alert(json);
+    //alert(json);
     if(json == "0"){
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
@@ -175,6 +175,7 @@ function errorCreatetable(err) {
 }
 
 function createtables(){
+    alert("create tables");
     $.when(db.transaction(createDB, errorCBfunc, successCBfunc)).done(function() {
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);
