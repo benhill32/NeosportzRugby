@@ -627,10 +627,7 @@ function syncmaintables(obj,year){
     var datenow = new Date();
     functionyear = year;
 
-    db.transaction(function (tx) {
-        tx.executeSql('Delete from MobileApp_Schedule_Menu');
-        // console.log('Delete MobileApp_Results where ID =' + obj.ID);
-    });
+   
 
     $.each(obj.App_Games, function (idx, obj) {
 

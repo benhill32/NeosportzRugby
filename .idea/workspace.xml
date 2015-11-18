@@ -150,8 +150,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44418603">
-              <caret line="637" column="1362" selection-start-line="637" selection-start-column="1362" selection-end-line="637" selection-end-column="1362" />
+            <state vertical-scroll-proportion="0.2860465">
+              <caret line="629" column="3" selection-start-line="629" selection-start-column="3" selection-end-line="629" selection-end-column="3" />
               <folding>
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
@@ -1023,8 +1023,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44418603">
-          <caret line="637" column="1362" selection-start-line="637" selection-start-column="1362" selection-end-line="637" selection-end-column="1362" />
+        <state vertical-scroll-proportion="0.2860465">
+          <caret line="629" column="3" selection-start-line="629" selection-start-column="3" selection-end-line="629" selection-end-column="3" />
           <folding>
             <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
             <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
