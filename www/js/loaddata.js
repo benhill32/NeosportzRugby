@@ -123,7 +123,7 @@ function checkdatabaseloaddata(){
        // db.transaction(getMenusch, errorCBfunc, successCBfunc);
     }
 
-    //alert(json);
+    alert(json);
     if(json == "0"){
 
         db.transaction(populateDB, errorCBfunc, successCBfunc);

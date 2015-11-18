@@ -31,27 +31,7 @@ function checkclubsinsert_success(tx, results) {
         db.transaction(gethasclub, errorCBfunc, successCBfunc);
     }
 }
-function getbackground(tx) {
 
-
-    var sql = "select Base64 from MobileApp_clubs where Fav =1 LIMIT 1";
-     //alert(sql);
-    tx.executeSql(sql, [], getbackground_success);
-}
-
-function getbackground_success(tx, results) {
-
-    var len = results.rows.length;
-    //alert(len);
-    if(len != 0) {
-        var menu = results.rows.item(0);
-
-        var base64 = menu.Base64;
-
-        $('#mainbackground').css('background-image', 'url(data:image/png;base64,' + base64 + ')');
-
-         }
-}
 
 function gethasclub(tx) {
     var sql = "select hasclub,hasclubdate from MobileApp_LastUpdatesec";
