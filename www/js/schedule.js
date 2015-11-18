@@ -104,7 +104,7 @@ function getdata(tx) {
 
     }
 
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -687,9 +687,11 @@ function cancelgame(){
 
 function getpervoiusday(){
 
+    alert(date);
     date =new Date().setDate(date.getDate()-1); //+1 or +x
 
     date = new Date(date);
+    alert(date);
     var z = date.getMonth() + 1;
 
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
