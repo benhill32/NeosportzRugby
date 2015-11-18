@@ -108,14 +108,14 @@ function getdata(tx) {
 
     }
 
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-alert(len);
+//alert(len);
     $('#divschedules').empty();
 
     for (var i=0; i<len; i++) {
