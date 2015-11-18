@@ -688,7 +688,7 @@ function cancelgame(){
 function getpervoiusday(){
 
     alert(date);
-    date =new Date().setDate(date.getDate()-1); //+1 or +x
+    date =new Date(date).setDate(date.getDate()-1); //+1 or +x
 
     date = new Date(date);
     alert(date);
