@@ -3,19 +3,18 @@ var dbCreated = false;
 var IDhist = 0;
 var id = getUrlVars()["id"];
 var clubidtop =0;
-var listfollow = 0;
-var fliter = 0;
+
+
 var lat = 0;
 var long = 0;
 var GameID = 0;
-var isadmin = 0;
+
 var devicePlatformsch =0;
-var allowscore = 0;
-var allowcancel= 0;
-var Clubedit= 0;
-var Ref= 0;
+
+
+
 var statid = 0;
-var teamfollow = 0;
+
 var refgameid= 0;
 var remindtext = 0;
 var reminddate =0;
@@ -29,12 +28,12 @@ var date2 = "";
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
-    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    //  console.log("LOCALDB - Database ready");
-    //  navigator.geolocation.getCurrentPosition(getgeolocation, onError);
-    db.transaction(gettokensc, errorCBfunc, successCBfunc);
-    db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
-    db.transaction(getflitersch, errorCBfunc, successCBfunc);
+
+
+    alert(apptoken);
+
+    db.transaction(getdata, errorCBfunc, successCBfunc);
+
     datecheck(new Date(),0);
 }
 
@@ -52,38 +51,6 @@ function datecheck(d,a){
    }
 }
 
-function gettokensc(tx) {
-    var sql = "select token from MobileApp_LastUpdatesec";
-    //   alert(sql);
-    tx.executeSql(sql, [], gettokensc_success);
-}
-
-function gettokensc_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-    tokensch = menu.token;
-//alert("token : " +  tokensch)
-}
-
-function getdatanewssch(tx) {
-    var sql = "select ID from MobileApp_clubs where Fav = 1";
-    //  alert(sql);
-    tx.executeSql(sql, [], getdatanewssch_success);
-}
-
-function getdatanewssch_success(tx, results) {
-
-    var len = results.rows.length;
-//alert(len);
-
-    if(len == 1) {
-        var menu = results.rows.item(0);
-        teamfollow = menu.ID;
-        //   alert("teamfollow : " +  menu.ID)
-    }
-}
 
 function checkonlinesch(){
 
@@ -108,123 +75,8 @@ function onError(error) {
         'message: ' + error.message + '\n');
 }
 
-function allowfilter(id){
-
-    if(id==1)
-    {
-
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set fliterON =' + id);
-            console.log("Update MobileApp_LastUpdatesec");
-        });
-
-        $('#btn2').removeClass("btn btn-xs btn-primary active");
-        $('#btn2').addClass("btn btn-xs btn-default");
-        $('#btn1').removeClass("btn btn-xs btn-default");
-        $('#btn1').addClass("btn btn-xs btn-primary active");
-
-    }
-    else if(id== 0)
-    {
-        db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set fliterON =' + 0);
-            console.log("Update MobileApp_LastUpdatesec");
-        });
-
-        $('#btn1').removeClass("btn btn-xs btn-primary active");
-        $('#btn1').addClass("btn btn-xs btn-default");
-        $('#btn2').removeClass("btn btn-xs btn-default");
-        $('#btn2').addClass("btn btn-xs btn-primary active");
-    }
-    db.transaction(getflitersch, errorCBfunc, successCBfunc);
-
-}
 
 
-
-
-function getflitersch(tx) {
-
-    //  updateadmin();
-
-    var sql = "select fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
-    //alert(sql);
-    tx.executeSql(sql, [], getflitersch_success);
-
-}
-
-
-function getflitersch_success(tx, results) {
-
-    var len = results.rows.length;
-
-
-    if(len != 0) {
-        var menu = results.rows.item(0);
-        fliter = menu.fliterON;
-        isadmin = menu.isadmin;
-        allowscore = menu.allowscore;
-        allowcancel= menu.allowcancel;
-        Clubedit= menu.Clubedit;
-        Ref= menu.Ref;
-    }
-
-
-    db.transaction(getdatanews, errorCBfunc, successCBfunc);
-}
-
-
-
-
-function getdatanews(tx) {
-    var sql = "select ID from MobileApp_clubs where Fav = 1";
-    // alert(sql);
-    tx.executeSql(sql, [], getClubID_success);
-}
-
-
-function getClubID_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    clubidtop = 0;
-
-    if(len != 0) {
-        var menu = results.rows.item(0);
-        clubidtop = menu.ID;
-
-    }
-
-    db.transaction(getdata2, errorCBfunc, successCBfunc);
-}
-
-
-
-function getdata2(tx) {
-    var sql = "select ID from MobileApp_clubs where Follow = 1";
-    //alert(sql);
-    tx.executeSql(sql, [], getdata2_success);
-}
-
-function getdata2_success(tx, results) {
-
-    var len = results.rows.length;
-    listfollow = 0;
-
-    if(len != 0) {
-        for (var i=0; i<len; i++) {
-            var menu = results.rows.item(i);
-            listfollow = listfollow + menu.ID + ",";
-        }
-    }
-    listfollow =  listfollow + clubidtop + ","
-
-    listfollow = listfollow.substr(0, listfollow.length - 1);
-
-    //   alert(listfollow);
-
-    db.transaction(getdata, errorCBfunc, successCBfunc);
-
-}
 
 
 function getdata(tx) {
@@ -370,7 +222,7 @@ function getMenu_success(tx, results) {
 function loadstatssystem(Gameid1){
     db.transaction(gettokensc, errorCBfunc, successCBfunc);
 
-    passscoretoserver("gameid=" + Gameid1 + "&statslink=" + $('#txtstatlink').val() + "&deviceid=" + device.uuid + "&token=" + tokensch)
+    passscoretoserver("gameid=" + Gameid1 + "&statslink=" + $('#txtstatlink').val() + "&deviceid=" + device.uuid + "&token=" + apptoken)
     window.setTimeout(function(){
         window.location = "../pages/schedules.html?id=" + id;
     }, 1000);
@@ -721,7 +573,7 @@ function checkdefaultgames(ID,TeamName){
 function sendtoserverdefault(){
     checkonlinesch();
     if(networkconnectionsch !=0) {
-        passscoretoserver("gameiddefault=" + defaultgames + "&teamdefault=" + homeoraway + "&deviceid=" + device.uuid + "&token=" + tokensch)
+        passscoretoserver("gameiddefault=" + defaultgames + "&teamdefault=" + homeoraway + "&deviceid=" + device.uuid + "&token=" + apptoken)
 
         onclicksyncloaddata();
     }else{

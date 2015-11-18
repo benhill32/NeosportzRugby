@@ -2,8 +2,8 @@ var db;
 var dbCreated = false;
 var id = getUrlVars()["id"];
 var clubidtop =0;
-var listfollow = 0;
-var fliter = 0;
+
+
 var gameid = 0;
 var homeid = 0;
 var awayid = 0;

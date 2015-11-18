@@ -13,8 +13,8 @@ var playeraway = 0;
 var timehome = 0;
 var timeaway = 0;
 var scoringname =0;
-var Ref= 0;
-var isadmin =0;
+
+
 var clubedit = 0;
 var DIVid = getUrlVars()["divID"];
 var HBonus1= 0;

@@ -7,9 +7,7 @@ document.addEventListener("deviceready", onDeviceReadymainindex, false);
 function onDeviceReadymainindex() {
     deviceIDfunc = device.uuid;
 
-
-
-
+    db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 }
 

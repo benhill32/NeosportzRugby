@@ -15,8 +15,16 @@ var divisionsend = "";
 var clubsend = "";
 var teamsend = "";
 var appversionlocal = '1.5.1';
-
+var teamfollow = 0;
 var admobid = {};
+var allowscore = 0;
+var allowcancel= 0;
+var isadmin =0;
+var Clubedit= 0;
+var Ref= 0;
+var listfollow = 0;
+var fliter = 0;
+
 function onDeviceReadyFunc() {
     db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
 
@@ -27,7 +35,7 @@ function onDeviceReadyFunc() {
     devicePlatformfunc = device.platform;
     deviceVersionfunc = device.version;
     databaseversion = db.database_version;
-    db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
 
 
 
@@ -904,17 +912,18 @@ function syncmaintables(obj,year){
 
     $.each(obj.Isadmin, function (idx, obj) {
         db.transaction(function(tx) {
-            tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ',allownewfeed= ' + obj.allownewfeed + ',allowcancel= ' + obj.allowcancel + ',allowscore= ' + obj.allowscore + ',Clubedit= ' + obj.Clubedit + ',Ref= ' + obj.Ref + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + '');
+            tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ',allownewfeed= ' + obj.allownewfeed + ',allowcancel= ' + obj.allowcancel + ',allowscore= ' + obj.allowscore + ',Clubedit= ' + obj.Clubedit + ',Ref= ' + obj.Ref + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + ',oneoffs = 0');
             //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
             //  alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
             db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
+
 
         });
     });
 
 
 
-    $('#busy').hide();
+
 }
 
 
@@ -990,20 +999,7 @@ function URLredirectFacebook(ID){
     window.open(ID, '_system','location=yes');
 }
 
-function gettoken1(tx) {
-    var sql = "select token from MobileApp_LastUpdatesec";
-    //  alert(sql);
-    tx.executeSql(sql, [], gettoken1_success);
-}
 
-function gettoken1_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-    apptoken = menu.token;
-    //alert(apptoken);
-}
 
 function sendtoast(ID){
 
@@ -1152,4 +1148,95 @@ function loadnewapp(){
     {
         window.open(encodeURI("https://itunes.apple.com/us/app/neosportz-rugby/id968943127?ls=1&mt=8"), '_system');
     }
+}
+
+
+
+function getoneoff(tx) {
+    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
+    //  alert(sql);
+    tx.executeSql(sql, [], getoneoff_success);
+}
+
+function getoneoff_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+
+
+    if(len != 0) {
+        var menu = results.rows.item(0);
+        var oneoffvar = menu.oneoffs;
+        if(oneoffvar == 0) {
+
+            fliter = menu.fliterON;
+            isadmin = menu.isadmin;
+            allowscore = menu.allowscore;
+            allowcancel= menu.allowcancel;
+            Clubedit= menu.Clubedit;
+            Ref= menu.Ref;
+            apptoken = menu.token;
+            db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
+        }
+    }
+}
+
+
+
+
+
+
+function getdatanewssch(tx) {
+    var sql = "select ID from MobileApp_clubs where Fav = 1";
+    //  alert(sql);
+    tx.executeSql(sql, [], getdatanewssch_success);
+}
+
+function getdatanewssch_success(tx, results) {
+
+    var len = results.rows.length;
+//alert(len);
+
+    if(len == 1) {
+        var menu = results.rows.item(0);
+        teamfollow = menu.ID;
+        //   alert("teamfollow : " +  menu.ID)
+    }
+
+    db.transaction(getdata2, errorCBfunc, successCBfunc);
+}
+
+
+
+
+
+
+function getdata2(tx) {
+    var sql = "select ID from MobileApp_clubs where Follow = 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getdata2_success);
+}
+
+function getdata2_success(tx, results) {
+
+    var len = results.rows.length;
+    listfollow = 0;
+
+    if(len != 0) {
+        for (var i=0; i<len; i++) {
+            var menu = results.rows.item(i);
+            listfollow = listfollow + menu.ID + ",";
+        }
+    }
+    listfollow =  listfollow + clubidtop + ","
+
+    listfollow = listfollow.substr(0, listfollow.length - 1);
+
+    //   alert(listfollow);
+
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set oneoffs = 1');
+        console.log("Update INTO MobileApp_LastUpdatesec");
+    });
+
 }
