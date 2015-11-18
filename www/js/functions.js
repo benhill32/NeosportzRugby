@@ -627,7 +627,7 @@ function syncmaintables(obj,year){
     var datenow = new Date();
     functionyear = year;
 
-   
+
 
     $.each(obj.App_Games, function (idx, obj) {
 
