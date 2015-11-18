@@ -289,12 +289,7 @@
 
 
 <div class="divmainmenu" >
-    <div class="mainheaderimgicon" id="filterswitch">
 
-
-
-
-    </div>
     <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()" >
         <span id="spanmenu" class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;"></span> Games </div>
 </div>
@@ -751,28 +746,33 @@
         </script>
     </div>
 
-
-    <div id="divschedules" align="center">
-
-
+    <div>
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
 
 
-                <div class="col-xs-2">
-                    <span class="glyphicon glyphicon-chevron-left" onclick="getpervoiusday()"></span>
+                    <div class="col-xs-2">
+                        <span class="glyphicon glyphicon-chevron-left" onclick="getpervoiusday()"></span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6">
+                        <button type="button" class="btn btn-primary" id="btndate" data-toggle="modal" data-target="#basicModalmonth" style="width: 100%;"></button>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="glyphicon glyphicon-chevron-right" onclick="getnextday()"></span>
+                    </div>
                 </div>
-                <div class="col-xs-8 col-sm-6">
-                    <button type="button" class="btn btn-primary" id="btndate" data-toggle="modal" data-target="#basicModalmonth" style="width: 100%;"></button>
-                </div>
-                <div class="col-xs-2">
-                    <span class="glyphicon glyphicon-chevron-right" onclick="getnextday()"></span>
-                </div>
-</div>
 
             </div>
         </div>
+        </div>
+
+
+
+    <div id="divschedules" align="center">
+
+
+
 
 
 
