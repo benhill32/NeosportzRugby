@@ -674,18 +674,7 @@ function syncmaintables(obj,year){
     });
 
 
-    $.each(obj.clubsimages, function (idx, obj) {
 
-        db.transaction(function (tx) {
-            tx.executeSql('INSERT OR IGNORE INTO MobileApp_clubsimages(ID,_id,UpdateDateUTCBase64,Base64,UpdateSecondsUTCBase64) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.UpdateDateUTCBase64 + '","' + obj.Base64 + '","' + obj.UpdateSecondsUTCBase64 + '")');
-            //    console.log("INSERT INTO MobileApp_clubsimages is created");
-        });
-        db.transaction(function (tx) {
-            var sql = 'UPDATE MobileApp_clubsimages SET UpdateDateUTCBase64 = "' + obj.UpdateDateUTCBase64 + '", Base64 = "' + obj.Base64 + '", UpdateSecondsUTCBase64 = "' + obj.UpdateSecondsUTCBase64 + '" where ID = ' + obj.ID;
-            tx.executeSql(sql);
-            // console.log(sql);
-        });
-    });
 
     $.each(obj.App_Players, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
@@ -707,22 +696,7 @@ function syncmaintables(obj,year){
 
 
 
-    $.each(obj.App_Players_Images, function (idx, obj) {
-        if (obj.DeletedateUTC == null) {
 
-            db.transaction(function (tx) {
-                tx.executeSql('INSERT OR IGNORE  INTO MobileApp_Players_Images(ID,_id,Base64,UpdateDateUTCBase64,UpdateSecondsUTCBase64,DeletedateUTC) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.Base64 + '","' + obj.UpdateDateUTCBase64 + '","' + obj.UpdateSecondsUTCBase64 + '","' + obj.DeletedateUTC + '")');
-            });
-            db.transaction(function (tx) {
-                var sql = 'UPDATE MobileApp_Players_Images SET Base64 = "' + obj.Base64 + '", UpdateDateUTCBase64 = "' + obj.UpdateDateUTCBase64 + '", UpdateSecondsUTCBase64 = "' + obj.UpdateSecondsUTCBase64 + '", DeletedateUTC = "' + obj.DeletedateUTC + '" where ID = ' + obj.ID;
-                tx.executeSql(sql);
-            });
-        }else{
-            db.transaction(function (tx) {
-                tx.executeSql('Delete from MobileApp_Players_Images where ID =' + obj.ID);
-            });
-        }
-    });
 
     $.each(obj.vwApp_Teams, function (idx, obj) {
         if (obj.DeletedateUTC == null) {
