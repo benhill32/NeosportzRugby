@@ -83,6 +83,7 @@ function onError(error) {
 
 
 function getdata(tx) {
+    alert("sql");
     var sql = "";
     var d = date();
     var secondsnow  = (d.getTime())/1000;
@@ -95,7 +96,7 @@ function getdata(tx) {
 
     if(window.localStorage.getItem("fliter") == 0){
 
-
+alert("sql2");
         sql = "select * from App_Games where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
@@ -696,6 +697,8 @@ function getpervoiusday(){
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
+
+    db.transaction(getdata, errorCBfunc, successCBfunc);
 }
 function getnextday(){
 
@@ -708,6 +711,8 @@ function getnextday(){
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
+    
+    db.transaction(getdata, errorCBfunc, successCBfunc);
 }
 
 
