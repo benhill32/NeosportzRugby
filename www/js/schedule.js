@@ -244,17 +244,11 @@ function getdata(tx) {
 
     if(fliter == 0){
 
-      //  $('#btn1').removeClass("btn btn-xs btn-primary active");
-      //  $('#btn1').addClass("btn btn-xs btn-default");
-      //  $('#btn2').removeClass("btn btn-xs btn-default");
-      //  $('#btn2').addClass("btn btn-xs btn-primary active");
+
         sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,Cancel from MobileApp_Schedule where  TournamentID = " + id + " and DatetimeStartSeconds >= " + midnightsec + " and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
-      //  $('#btn2').removeClass("btn btn-xs btn-primary active");
-      //  $('#btn2').addClass("btn btn-xs btn-default");
-      //  $('#btn1').removeClass("btn btn-xs btn-default");
-      //  $('#btn1').addClass("btn btn-xs btn-primary active");
+
 
         sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,Cancel from MobileApp_Schedule where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DeletedateUTC= 'null' and  TournamentID = " + id + "  and DatetimeStartSeconds >= " + midnightsec + " order by DatetimeStart";
 
