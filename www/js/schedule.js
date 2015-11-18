@@ -31,7 +31,7 @@ function onDeviceReadysch() {
 
 
 
-      alert(window.localStorage.getItem("fliter"));
+     // alert(window.localStorage.getItem("fliter"));
 
 
 
