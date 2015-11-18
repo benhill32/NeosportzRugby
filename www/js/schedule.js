@@ -42,7 +42,8 @@ function datecheck(d,a){
 
    if(a == 0){
        date = d;
-       date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
+       var z = date.getMonth() + 1;
+       date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
        document.getElementById("btndate").innerHTML=date2;
    }else{
        date = new Date(d);
@@ -92,10 +93,12 @@ function getdata(tx) {
     var year = d.getFullYear();
     var day = d.getDate();
 
+
+   
     if(window.localStorage.getItem("fliter") == 0){
 
 
-        sql = "select * from App_Games where strftime('%m', DatetimeStartSeconds) = '" + month + "'";
+        sql = "select * from App_Games where strftime('%m', DatetimeStart) = '" + month + "'";
         //where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
