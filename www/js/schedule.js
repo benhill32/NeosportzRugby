@@ -33,7 +33,7 @@ function onDeviceReadysch() {
 
       alert(window.localStorage.getItem("isadmin"));
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+
 
     datecheck(new Date(),0);
 }
@@ -50,6 +50,8 @@ function datecheck(d,a){
        date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
        document.getElementById("btndate").innerHTML=date2;
    }
+
+    db.transaction(getdata, errorCBfunc, successCBfunc);
 }
 
 
@@ -82,16 +84,12 @@ function onError(error) {
 
 function getdata(tx) {
     var sql = "";
-    var d = new Date();
+    var d = date();
     var secondsnow  = (d.getTime())/1000;
 
     var month = d.getMonth();
     var year = d.getFullYear();
     var day = d.getDate();
-
-    var midnight = new Date(Date.UTC(year,month,day,"00","00","00","01"));
-    var midnightsec = ((midnight.getTime())/1000);
-
 
 
 
@@ -103,11 +101,11 @@ function getdata(tx) {
     }else{
 
 
-        sql = "select * where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DeletedateUTC= 'null' and  TournamentID = " + id + "  and DatetimeStartSeconds >= " + midnightsec + " order by DatetimeStart";
+        sql = "select * where (HomeClubID IN (" + listfollow + ") or AwayClubID IN (" + listfollow + ")) and DeletedateUTC= 'null'   and strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + " order by DatetimeStart";
 
     }
 
-   //  alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
