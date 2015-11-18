@@ -98,13 +98,13 @@ function getdata(tx) {
     if(window.localStorage.getItem("fliter") == 0){
 
 
-        sql = "select * from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day;
+        sql = "select * from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
         //where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
 
     }else{
 
 
-        sql = "select * from App_Games where (HomeClubID IN (" + window.localStorage.getItem("listfollow") + ") or AwayClubID IN (" + window.localStorage.getItem("listfollow") + ")) and DeletedateUTC= 'null'   and strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + " order by DatetimeStart";
+        sql = "select * from App_Games where (HomeClubID IN (" + window.localStorage.getItem("listfollow") + ") or AwayClubID IN (" + window.localStorage.getItem("listfollow") + ")) and DeletedateUTC= 'null'   and Month = " + month + " and Year = " + year + " and Day = " + day + " order by DatetimeStart";
 
     }
 
