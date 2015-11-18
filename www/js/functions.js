@@ -1168,15 +1168,14 @@ function getoneoff_success(tx, results) {
         if(menu.oneoffs == 0) {
 
 
-            fliter = menu.fliterON;
-            isadmin = menu.isadmin;
-            allowscore = menu.allowscore;
-            allowcancel = menu.allowcancel;
-            Clubedit = menu.Clubedit;
-            Ref = menu.Ref;
-            apptoken = menu.token;
-            window.localStorage.setItem("appttoken", menu.token);
 
+            window.localStorage.setItem("apptoken", menu.token);
+            window.localStorage.setItem("fliter", menu.fliterON);
+            window.localStorage.setItem("isadmin", menu.isadmin);
+            window.localStorage.setItem("allowscore", menu.allowscore);
+            window.localStorage.setItem("allowcancel", menu.allowcancel);
+            window.localStorage.setItem("Clubedit", menu.Clubedit);
+            window.localStorage.setItem("Ref", menu.Ref);
 
             db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
         }
@@ -1202,7 +1201,8 @@ function getdatanewssch_success(tx, results) {
 
     if(len == 1) {
         var menu = results.rows.item(0);
-        teamfollow = menu.ID;
+        //teamfollow = menu.ID;
+        window.localStorage.setItem("teamfollow", menu.ID);
         //   alert("teamfollow : " +  menu.ID)
     }
 
@@ -1234,7 +1234,7 @@ function getdata2_success(tx, results) {
     listfollow =  listfollow + clubidtop + ","
 
     listfollow = listfollow.substr(0, listfollow.length - 1);
-
+    window.localStorage.setItem("listfollow", listfollow);
     //   alert(listfollow);
 
 

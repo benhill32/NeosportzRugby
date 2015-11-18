@@ -29,9 +29,9 @@ function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
 
-   
 
-    alert(window.localStorage.getItem("appttoken"));
+
+      alert(window.localStorage.getItem("isadmin"));
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
 
