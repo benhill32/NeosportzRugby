@@ -1154,7 +1154,7 @@ function loadnewapp(){
 
 function getoneoff(tx) {
     var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
-    //  alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getoneoff_success);
 }
 
@@ -1166,6 +1166,8 @@ function getoneoff_success(tx, results) {
     if(len != 0) {
         var menu = results.rows.item(0);
         var oneoffvar = menu.oneoffs;
+
+        alert(oneoffvar);
         if(oneoffvar == 0) {
 
             fliter = menu.fliterON;
@@ -1175,6 +1177,8 @@ function getoneoff_success(tx, results) {
             Clubedit= menu.Clubedit;
             Ref= menu.Ref;
             apptoken = menu.token;
+
+
             db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
         }
     }
