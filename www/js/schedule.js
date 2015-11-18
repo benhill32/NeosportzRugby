@@ -111,7 +111,7 @@ function getdata(tx) {
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     $('#divschedules').empty();
 
     for (var i=0; i<len; i++) {
@@ -687,11 +687,11 @@ function cancelgame(){
 
 function getpervoiusday(){
 
-    alert(date);
+  //  alert(date);
     date =new Date(date).setDate(date.getDate()-1); //+1 or +x
 
     date = new Date(date);
-    alert(date);
+  //  alert(date);
     var z = date.getMonth() + 1;
 
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
