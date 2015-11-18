@@ -313,7 +313,7 @@ function errorclosemodel(){
         showdivindex();
     }
     window.plugins.toast.showLongBottom('Something went wrong! Please sync data again \n If problem persists contact helpdesk@neocom.co.nz', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-
+    db.transaction(getoneoff, errorCBfunc, successCBfunc);
     db.transaction(getMenusch, errorCBfunc, successCBfunc);
     randomfunctions();
 }
@@ -322,7 +322,7 @@ function closemodel(){
    // alert("close");
 
     $('#indexloadingdata').modal('hide');
-
+    db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 
     window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
