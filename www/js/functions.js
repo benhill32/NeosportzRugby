@@ -36,7 +36,6 @@ function onDeviceReadyFunc() {
     deviceVersionfunc = device.version;
     databaseversion = db.database_version;
 
-    db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 
     if (devicePlatformfunc == "Android") {
@@ -1166,20 +1165,21 @@ function getoneoff_success(tx, results) {
     if(len != 0) {
         var menu = results.rows.item(0);
 
-        alert(menu.token);
+        if(menu.oneoffs == 0) {
 
 
             fliter = menu.fliterON;
             isadmin = menu.isadmin;
             allowscore = menu.allowscore;
-            allowcancel= menu.allowcancel;
-            Clubedit= menu.Clubedit;
-            Ref= menu.Ref;
+            allowcancel = menu.allowcancel;
+            Clubedit = menu.Clubedit;
+            Ref = menu.Ref;
             apptoken = menu.token;
-        window.localStorage.setItem("appttoken", menu.token);
+            window.localStorage.setItem("appttoken", menu.token);
 
 
             db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
+        }
 
     }
 }

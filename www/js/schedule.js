@@ -29,9 +29,9 @@ function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
 
-    var value = window.localStorage.getItem("appttoken");
+   
 
-    alert(value);
+    alert(window.localStorage.getItem("appttoken"));
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
 
