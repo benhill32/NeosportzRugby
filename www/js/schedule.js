@@ -134,58 +134,63 @@ function getMenu_success(tx, results) {
 
         var ampm = h > 12 ? h-12 + ':' + m +'PM' : h + ':' + m +'AM';
 
-        if(menu.Cancel== 0) {
+        if(len != 0) {
+
+            if (menu.Cancelled == 0) {
 
 
-            $('#divschedules').append('<div class="panel panel-default" id="' + divid + '">' +
+                $('#divschedules').append('<div class="panel panel-default" id="' + divid + '">' +
 
-                '<div class="panel-heading">' +
-                '<div class="row">' +
-                '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
-                '<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>');
-
-
+                    '<div class="panel-heading">' +
+                    '<div class="row">' +
+                    '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+                    '<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' + month + '/' + year + '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>');
 
 
+            } else {
 
+                $('#divschedules').append('<div class="panel panel-danger" id="' + divid + '">' +
+
+                    '<div class="panel-heading">' +
+                    '<div class="row">' +
+                    '<div class="col-xs-8 col-md-8"   align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+                    '<div class="col-xs-4 col-md-4"></div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' + month + '/' + year + '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>');
+
+
+            }
         }else{
 
-            $('#divschedules').append('<div class="panel panel-danger" id="' + divid + '">' +
-
-                '<div class="panel-heading">' +
-                '<div class="row">' +
-                '<div class="col-xs-8 col-md-8"   align="left">' + menu.HomeName + ' vs ' + menu.AwayName  + '</div>' +
-                '<div class="col-xs-4 col-md-4"></div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' +  month + '/' + year + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
-                '</div>' +
-                '</div>' +
+            $('#divschedules').append('<div class="panel panel-default">' +
+                '<div class="panel-body">' +
+                'No Games Today!' +
                 '</div>' +
                 '</div>');
-
-
-
-
         }
 
 
