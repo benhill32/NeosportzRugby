@@ -31,7 +31,7 @@ function onDeviceReadysch() {
 
 
 
-      alert(window.localStorage.getItem("isadmin"));
+      alert(window.localStorage.getItem("fliter"));
 
 
 
@@ -93,7 +93,7 @@ function getdata(tx) {
 
 
 
-    if(fliter == 0){
+    if(window.localStorage.getItem("fliter") == 0){
 
 
         sql = "select * from App_Games where strftime('%m', DatetimeStartSeconds) = " + month + " and strftime('%Y', DatetimeStartSeconds) = " + year + " and strftime('%d', DatetimeStartSeconds) = " + day + "  and DeletedateUTC = 'null' order by DatetimeStart";
