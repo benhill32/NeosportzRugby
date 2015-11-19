@@ -149,17 +149,14 @@ if(menu.allowscore == 0){
 }
 
     if(wifi==1) {
-        $('#btnmenu2').removeClass("btn btn-xs btn-success");
-        $('#btnmenu1').removeClass("btn btn-xs btn-default")
-        $('#btnmenu2').addClass("btn btn-xs btn-default");
-        $('#btnmenu1').addClass("btn btn-xs btn-success");
+
+        $("#flip-1").val(1);
+
+
 
     }else if(wifi==0) {
-        $('#btnmenu1').removeClass("btn btn-xs btn-success");
-        $('#btnmenu2').removeClass("btn btn-xs btn-default")
-        $('#btnmenu1').addClass("btn btn-xs btn-default");
-        $('#btnmenu2').addClass("btn btn-xs btn-success");
 
+        $("#flip-1").val(0);
     }
 
     db.transaction(getregionName2all, errorCBfunc, successCBfunc);
