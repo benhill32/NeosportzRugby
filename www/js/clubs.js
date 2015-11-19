@@ -4,6 +4,7 @@ var IDcon = 0;
 var ID = 0;
 var FirstID = 0;
 var LastID = 0;
+var clubname = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
@@ -70,12 +71,14 @@ function getclub_success(tx, results) {
     $('#btnclub').empty();
     $('#btnclub').empty();
     $('#btnclub').append(menu.name);
-
+    clubname = menu.ID;
     $('#divhistory').append(menu.History);
     $('#divContacts').append(menu.Contacts);
-    $('#divTeams').append();
+
     $('#divPlayers').append();
     ID = menu.ID;
+
+    db.transaction(getteams, errorCBfunc, successCBfunc);
 }
 
 
@@ -133,7 +136,7 @@ function getMenu_success(tx, results) {
         $('#divTeams').append();
         $('#divPlayers').append();
 
-
+    db.transaction(getteams, errorCBfunc, successCBfunc);
 }
 
 
@@ -160,8 +163,20 @@ function getnextclub(){
 }
 
 
+function getteams(tx) {
+    var sql = "select name ,DivisionName,ClubID from MobileApp_vwApp_Teams where ClubID=" + ID;
+    tx.executeSql(sql, [], getteam_success);
+}
 
 
+function getteam_success(tx, results) {
 
+    var len = results.rows.length;
 
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        $('#divTeams').append(menu.name + " - " + menu.DivisionName + "<br>");
+    }
+
+}
 
