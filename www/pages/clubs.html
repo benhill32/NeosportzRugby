@@ -28,11 +28,11 @@
             // Bind the swipeleftHandler callback function to the swipe event on div.box
             $( "body" ).on( "swipeleft", swipeleftHandler );
             $( "body" ).on( "swiperight", swiperightHandler );
-           // $('body').on({
-           //     'touchmove': function(e) {
-           //         $("#scolltop").show();
-           //     }
-           // });
+             $('body').on({
+                 'touchmove': function(e) {
+                     $("#scolltop").show();
+                 }
+             });
             // Callback function references the event target and adds the 'swipeleft' class to it
             function swipeleftHandler( event ){
                 getnextclub();
@@ -379,7 +379,7 @@
 </div>
 
 
-<div style="position: fixed; bottom: 0px;right: 0px;">
+<div style="position: fixed; bottom: 0px;right: 0px;display: none;" id="scolltop">
     <span style=" margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
 </div>
 
