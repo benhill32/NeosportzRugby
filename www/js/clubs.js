@@ -46,7 +46,7 @@ function getfirstclub_success(tx, results) {
 
 function getdataminus(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID < " + ID + "  ORDER BY ID ASC LIMIT 1";
+    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID < " + ID + "  ORDER BY ID Desc LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
