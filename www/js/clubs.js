@@ -75,10 +75,11 @@ function getclub_success(tx, results) {
     $('#divhistory').append(menu.History);
     $('#divContacts').append(menu.Contacts);
 
-    $('#divPlayers').append();
+
     ID = menu.ID;
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
+    db.transaction(getplayers, errorCBfunc, successCBfunc);
 }
 
 
@@ -122,9 +123,7 @@ function getMenu_success(tx, results) {
 
         var menu = results.rows.item(0);
         var imgg = "";
-            if(menu.Base64 != "null"){
-                imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  align="left" height="40">';
-            }
+
 
 
     $('#btnclub').append(menu.name);
@@ -133,10 +132,12 @@ function getMenu_success(tx, results) {
 
         $('#divhistory').append(menu.History);
         $('#divContacts').append(menu.Contacts);
-        $('#divTeams').append();
-        $('#divPlayers').append();
+
+
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
+    db.transaction(getplayers, errorCBfunc, successCBfunc);
+
 }
 
 
@@ -164,7 +165,7 @@ function getnextclub(){
 
 
 function getteams(tx) {
-    var sql = "select name ,DivisionName,ClubID from MobileApp_vwApp_Teams where ClubID=" + ID;
+    var sql = "select Name ,DivisionName,ClubID from MobileApp_vwApp_Teams where ClubID=" + ID;
     tx.executeSql(sql, [], getteam_success);
 }
 
@@ -175,8 +176,29 @@ function getteam_success(tx, results) {
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        $('#divTeams').append(menu.name + " - " + menu.DivisionName + "<br>");
+        $('#divTeams').append(menu.Name + " - " + menu.DivisionName + "<br>");
     }
 
 }
 
+function getplayers(tx) {
+    var sql = "select ID,_id,ClubID,FullName,Base64,TeamID,Position from MobilevwApp_Base_Players where DeletedateUTC = 'null' and ClubID=" + ID;
+    // alert(sql);
+    tx.executeSql(sql, [], getteamplayer_success);
+}
+
+function getteamplayer_success(tx, results) {
+
+    var len = results.rows.length;
+
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+
+
+
+        $('#divPlayers').append(menu.FullName + " - " + menu.Position);
+    }
+
+
+
+}
