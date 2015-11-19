@@ -23,7 +23,7 @@ function getfirstclub(tx) {
 }
 
 
-function getMenu_success(tx, results) {
+function getfirstclub_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
