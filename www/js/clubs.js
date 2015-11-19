@@ -120,13 +120,7 @@ function getMenu_success(tx, results) {
         $('#divTeams').append();
         $('#divPlayers').append();
 
-    if(FirstID == menu.ID){
-
-        $("#spanleft").hide();
-    }else{
-
-        $("#spanleft").show();
-    }
+   
 }
 
 
