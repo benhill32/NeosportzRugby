@@ -1,103 +1,113 @@
 var db;
 var IDhist = 0;
 var IDcon = 0;
+var ID = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
  //   db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+
+
+    db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+
+   //
 }
-//db.transaction(getdata, errorCBfunc, successCBfunc);
 
 
+function getfirstclub(tx) {
+
+    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getfirstclub_success);
+}
 
 
+function getMenu_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+    $('#divhistory').empty();
+    $('#divContacts').empty();
+    $('#divTeams').empty();
+    $('#divPlayers').empty();
+    $('#btnclub').empty();
+    $('#btnclub').empty();
+    $('#btnclub').append(menu.name);
+
+    $('#divhistory').append(menu.History);
+    $('#divContacts').append(menu.Contacts);
+    $('#divTeams').append();
+    $('#divPlayers').append();
+    ID = menu.ID;
+
+}
 
 
-function getdata(tx) {
+function getdataminus(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs order by name";
+    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID < " + ID + "  ORDER BY ID ASC LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
+function getdataplus(tx) {
+
+    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID > " + ID + " ORDER BY ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getMenu_success);
+}
+
+
 function getMenu_success(tx, results) {
-    $('#busy').hide();
+
     var len = results.rows.length;
 //alert(len);
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
+    $('#divhistory').empty();
+    $('#divContacts').empty();
+    $('#divTeams').empty();
+    $('#divPlayers').empty();
+    $('#btnclub').empty();
+
+        var menu = results.rows.item(0);
         var imgg = "";
             if(menu.Base64 != "null"){
                 imgg = '<img src="data:image/png;base64,' + menu.Base64 + '"  align="left" height="40">';
             }
 
-            $('#mainmenu').append('<Div class="mainmenuresult" align="left"  >' +
-                '<div class="bold size13" style="padding-bottom:7px;"   >' + imgg + menu.name  +
-                '<img src="../img/info.png" height="25" align="right" data-toggle="modal" data-target="#basicModalContact" onclick="loadcontacts(' + menu.ID + ')">' +
-                '<img src="../img/team.png" onclick="redirectplayer(' + menu.ID + ')"    align="right" height="25">' +
-                '</div>' +
-                '<div class="size11" data-toggle="modal" data-target="#basicModalclub" onclick="loadhistory(' + menu.ID + ')">' + menu.History.substring(0,200) + '....<span' +
-                'data-toggle="modal" class="size11 blue" data-target="#basicModalclub" onclick="loadhistory(' + menu.ID + ')"  >Read More</span></div>' +
-                '</Div>');
-    }
+
+    $('#btnclub').append(menu.name);
+    ID = menu.ID;
+
+
+        $('#divhistory').append(menu.History);
+        $('#divContacts').append(menu.Contacts);
+        $('#divTeams').append();
+        $('#divPlayers').append();
+
 
 }
 
-function redirectplayer(ID){
 
-window.location = "../pages/clubteams.html?ID=" + ID
-}
+function getpervoiusclub(){
 
-function loadhistory(ID){
-    IDhist = ID;
-    //$('body').css('position','fixed');
-  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    db.transaction(gethistory, errorCBfunc, successCBfunc);
+
+    db.transaction(getdataminus, errorCBfunc, successCBfunc);
+
 
 }
+function getnextclub(){
 
-function gethistory(tx) {
 
-    var sql = "select replace(History, '###$$###', '<br>') as History from MobileApp_clubs where ID=" + IDhist;
-  //  alert(sql);
-    tx.executeSql(sql, [], gethistory_success);
-}
 
-function gethistory_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
+    db.transaction(getdataplus, errorCBfunc, successCBfunc);
 
-        var menu = results.rows.item(0);
-        $('#modelhistory').empty();
-    $('#modelhistory').append( '<div>1</div>');
-    $('#modelhistory').empty();
-        $('#modelhistory').append( '<div>' + menu.History + '</div>');
+
 }
 
 
-function loadcontacts(ID){
-    IDcon = ID;
-   // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    db.transaction(getcontacts, errorCBfunc, successCBfunc);
 
-}
 
-function getcontacts(tx) {
 
-    var sql = "select replace(Contacts, '###$$###', '<br>') as Contacts from MobileApp_clubs where ID=" + IDcon;
-    //  alert(sql);
-    tx.executeSql(sql, [], getcontacts_success);
-}
 
-function getcontacts_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-//alert(len);
 
-    var menu = results.rows.item(0);
-    $('#modelcontact').empty();
-    $('#modelcontact').append( '<div>' + menu.Contacts + '</div>');
-
-}

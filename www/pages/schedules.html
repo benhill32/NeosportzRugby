@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
     <script type="text/javascript" src="../js/dbconnection.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Bootstrap/css/docs.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
@@ -67,7 +68,7 @@
 
         }
 
-        $("#mm-blocker").click(closemenu());
+
 
 
 
@@ -86,6 +87,9 @@
             }
         });
 
+
+
+
     </script>
 
 
@@ -96,7 +100,11 @@
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
-        <li><a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a></li>
+        <li class="bs-callout bs-callout-warning">
+
+            <a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a>
+
+        </li>
         <li><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
         <li><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
         <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
