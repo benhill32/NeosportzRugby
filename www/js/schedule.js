@@ -166,7 +166,7 @@ function getMenu_success(tx, results) {
                 '<div class="row">' +
                 '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
                 //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
-                '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\')" ><img height="30px" class="imagesch"  align="right" ></div>' +
+                '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
 
 
                 '</div>' +
@@ -245,7 +245,7 @@ function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd
 }
 
 
-function resultssharemore(e,ID) {
+function resultssharemore(e,ID,ID2) {
 
     resultID = ID;
     if (!e) var e = window.event;
@@ -253,6 +253,7 @@ function resultssharemore(e,ID) {
     if (e.stopPropagation){
         e.stopPropagation();
         $('#basicModal').modal('show');
+        loadinfo(ID2)
     }
 
 }
@@ -270,27 +271,9 @@ function loadstatssystem(Gameid1){
 
 }
 
-function loadstats(ID){
-    statid =ID;
-    db.transaction(loadinfo_stats, errorCBfunc, successCBfunc);
-}
 
-function loadinfo_stats(tx) {
 
-    var sql = "select StatsLink from MobileApp_Schedule where ID =" + statid;
 
-    // alert(sql);
-    tx.executeSql(sql, [], loadinfo_stats_success2);
-}
-
-function loadinfo_stats_success2(tx, results) {
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-    if(menu.StatsLink != 'null') {
-        $('#txtstatlink').val(menu.StatsLink);
-    }
-}
 
 
 
@@ -305,7 +288,7 @@ function loadinfo(ID) {
 
 function loadinfo_success1(tx) {
 
-    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,Cancel,IsFinalScore from MobileApp_Schedule where ID =" + IDhist;
+    var sql = "select * from App_Games where ID =" + IDhist;
 
     // alert(sql);
     tx.executeSql(sql, [], loadinfo_success2);
@@ -337,7 +320,7 @@ function loadinfo_success2(tx, results) {
     // alert(("0" + (d.getMonth()+1)).slice(-2));
     $('#Directions').hide();
     $('#divdefault').hide();
-    $('#idstatlink').hide();
+
     if (devicePlatformsch == "Android") {
         $("#socialshare").click(function () {
             loadsocial(menu.ID);
@@ -426,7 +409,7 @@ function loadinfo_success2(tx, results) {
         $('#score').hide();
         $('#cancell').hide();
         $('#remind').show();
-        $('#idstatlink').hide();
+
         //$("#remind").click(addreminder(menu.ID,menu.DatetimeStart));
         $("#remind").empty().append('<Div data-toggle="modal" data-target="#basicModalyesno" onclick="createvarforremind(\'' + menu.DatetimeStart + '\',\'' + text + '\')" >  Remind Me</div>');
 
