@@ -196,7 +196,7 @@ function getteamplayer_success(tx, results) {
 
 
 
-        $('#divPlayers').append(menu.FullName + " - " + menu.Position);
+        $('#divPlayers').append(menu.FullName + " - " + menu.Position + "<br>");
     }
 
 
