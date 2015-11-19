@@ -2,6 +2,7 @@ var db;
 var IDhist = 0;
 var IDcon = 0;
 var ID = 0;
+var FirstID = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
@@ -40,7 +41,12 @@ function getfirstclub_success(tx, results) {
     $('#divTeams').append();
     $('#divPlayers').append();
     ID = menu.ID;
+    FirstID = menu.ID;
 
+    if(FirstID == menu.ID){
+
+        $("spanleft").hide();
+    }
 }
 
 
@@ -85,7 +91,13 @@ function getMenu_success(tx, results) {
         $('#divTeams').append();
         $('#divPlayers').append();
 
+    if(FirstID == menu.ID){
 
+        $("spanleft").hide();
+    }else{
+
+        $("spanleft").show();
+    }
 }
 
 
