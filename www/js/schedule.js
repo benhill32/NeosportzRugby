@@ -130,23 +130,51 @@ function getMenu_success(tx, results) {
         var timesplit = res[1].split(":")
         var h = timesplit[0];
         var m = timesplit[1];
-        //   alert(menu.DatetimeStartSeconds);
+        var currentdate = new Date().setDate(date.getDate()+1)
+
+        currentdate = new Date(currentdate);
+        var currentmonth = currentdate.getMonth();
+        var currentday = currentdate.getDate();
+        var currentyear = currentdate.getFullYear();
+
 
         var ampm = h > 12 ? h - 12 + ':' + m + 'PM' : h + ':' + m + 'AM';
+
+        if(menu.halftime != 'null' && menu.fulltime != 'null') {
+            action = "Fulltime";
+        }else  if(menu.halftime != 'null' && menu.fulltime == 'null') {
+            action = "Halftime";
+        }else  if(menu.halftime == 'null' && menu.fulltime == 'null') {
+            action = "";
+        }
+        var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
+
+        var readmore = menu.ID + "||" + menu.HomeName +  "||" + menu.AwayName +  "||" + menu.HomeScore +  "||" + menu.AwayScore +  "||" + menu.HomeTeamID +  "||" + menu.AwayTeamID;
+
+        var score ="";
+       if(currentmonth != m && currentday != day && currentyear != year){
+           score =  menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
+       }
 
 
         if (menu.Cancelled == 0) {
 
 
-            $('#divschedules').append('<div class="panel panel-default" id="' + divid + '">' +
+            $('#divschedules').append('<div class="panel panel-default" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
 
                 '<div class="panel-heading">' +
                 '<div class="row">' +
                 '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-                '<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
+                //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
+                '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\')" ><img height="30px" class="imagesch"  align="right" ></div>' +
+
+
                 '</div>' +
                 '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' + month + '/' + year + '</div>' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + score + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '</div>' +
                 '</div>' +
                 '<div class="row">' +
                 '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
@@ -199,6 +227,33 @@ function getMenu_success(tx, results) {
 
 
 
+
+}
+
+function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd){
+
+    // alert(ID + " - " + hometeam + " - " +awayteam+ " - " +homescore+ " - " +awayscore+ " - " +homeidd+ " - " +awayidd);
+    gameid =ID;
+    homeid = homeidd;
+    awayid = awayidd;
+    $('#resulthometeam').empty().append(hometeam);
+    $('#resultawayteam').empty().append(awayteam);
+    $('#resultscore').empty().append(homescore + '-' + awayscore);
+
+    db.transaction(getgoals, errorCBfunc, successCBfunc);
+
+}
+
+
+function resultssharemore(e,ID) {
+
+    resultID = ID;
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation){
+        e.stopPropagation();
+        $('#basicModal').modal('show');
+    }
 
 }
 
