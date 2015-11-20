@@ -143,7 +143,7 @@ if(menu.allowscore == 0){
     $('#scoringreqdiv2').show();
 
 }
-
+alert(wifi);
     if(wifi==1) {
 
         $("#switch-onColor").prop("checked", true );
