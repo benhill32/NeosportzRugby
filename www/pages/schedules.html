@@ -124,13 +124,16 @@
                         </div>
                         <div class="col-xs-6 col-md-4">
 
-                            <input id="switch-onColor" type="checkbox" checked data-on-color="info">
+                            <input id="switch-onColor" type="checkbox" data-on-color="info" data-size="small" >
 
 
                             <script>
 
                                 $("#switch-onColor").bootstrapSwitch();
+                                $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
 
+                                    alert(state); // true | false
+                                });
                             </script>
                         </div>
 
@@ -792,7 +795,17 @@
 
     </div>
 
+    <input id="switch-onColor1" type="checkbox" data-on-color="info" data-size="small">
 
+
+    <script>
+
+        $("#switch-onColor1").bootstrapSwitch();
+        $("#switch-onColor1").on('switchChange.bootstrapSwitch', function(event, state) {
+
+            chkmobiledataall(state); // true | false
+        });
+    </script>
 
 
 </div>

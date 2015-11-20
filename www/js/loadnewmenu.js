@@ -228,37 +228,29 @@ function getregionName2all_success(tx, results) {
 function chkmobiledataall(id){
     onOfflineall();
 
-    if(id=="btn1")
+    if(id=="true")
     {
 
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 1');
             console.log("syncwifi on");
         });
-
-        $('#btnmenu2').removeClass("btn btn-xs btn-success");
-        $('#btnmenu2').addClass("btn btn-xs btn-default");
-        $('#btnmenu1').removeClass("btn btn-xs btn-default");
-        $('#btnmenu1').addClass("btn btn-xs btn-success");
         wifiallset = 1;
     }
-    else if(id== "btn2")
+    else if(id== "false")
     {
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 0');
             console.log("syncwifi off");
         });
         wifiallset =0;
-        $('#btnmenu1').removeClass("btn btn-xs btn-success");
-        $('#btnmenu1').addClass("btn btn-xs btn-default");
-        $('#btnmenu2').removeClass("btn btn-xs btn-default");
-        $('#btnmenu2').addClass("btn btn-xs btn-success");
+
     }
 
 
 
 
-    if((id=="btn1" &&  networkconall==2) || ((id== "btn2" &&  networkconall!=0))){
+    if((id=="true" &&  networkconall==2) || ((id== "false" &&  networkconall!=0))){
 
         $("#settingdeleteall").css('color', 'white');
         $("#settingsync").css('color', 'white');
@@ -525,3 +517,5 @@ function benclick() {
         stoppable: true
     });
 }
+
+
