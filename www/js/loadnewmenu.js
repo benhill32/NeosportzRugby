@@ -218,6 +218,16 @@ function getregionName2all_success(tx, results) {
     });
 
 
+    $("#switch-onColor").bootstrapSwitch();
+    $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
+
+        if(state == true){
+            chkmobiledataall(1);
+        }else{
+            chkmobiledataall(0);
+        }
+    });
+
 }
 
 
