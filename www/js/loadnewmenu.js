@@ -59,7 +59,7 @@ function getMenusch(tx) {
 }
 
 function getsyncdateall(tx) {
-    var sql = "select Datesecs, syncwifi,Region,isadmin,allowscore from MobileApp_LastUpdatesec";
+    var sql = "select Datesecs, syncwifi,Region,isadmin,allowscore,fliterON from MobileApp_LastUpdatesec";
     //  alert(sql);
     tx.executeSql(sql, [], getsyncdateall_success2);
 }
@@ -143,7 +143,20 @@ if(menu.allowscore == 0){
     $('#scoringreqdiv2').show();
 
 }
-alert(wifi);
+
+    if(menu.fliterON == 1){
+
+        $("#switch-filter").prop("checked", true );
+
+    }else if(menu.fliterON == 0){
+
+        $("#switch-filter").prop("checked", true );
+
+    }
+
+
+
+
     if(wifi==1) {
 
         $("#switch-onColor").prop("checked", true );
@@ -228,8 +241,35 @@ function getregionName2all_success(tx, results) {
         }
     });
 
+    $("#switch-filter").bootstrapSwitch();
+    $("#switch-filter").on('switchChange.bootstrapSwitch', function(event, state) {
+
+        if(state == true){
+            chkfilter(1);
+        }else{
+            chkfilter(0);
+        }
+    });
+
 }
 
+
+function chkfilter(id){
+    if(id==1)
+    {
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 1');
+        });
+    }
+    else if(id== 0)
+    {
+        db.transaction(function(tx) {
+            tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 0');
+        });
+    }
+
+
+}
 
 function chkmobiledataall(id){
 
