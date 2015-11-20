@@ -150,7 +150,7 @@ if(menu.allowscore == 0){
 
     }else if(menu.fliterON == 0){
 
-        $("#switch-filter").prop("checked", true );
+        $("#switch-filter").prop("checked", false );
 
     }
 
