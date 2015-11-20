@@ -222,11 +222,11 @@ function getregionName2all_success(tx, results) {
 
 
 function chkmobiledataall(id){
-    onOfflineall();
+
 
     alert(id);
-
-    if(id=="true")
+    onOfflineall();
+    if(id==1)
     {
 
         db.transaction(function(tx) {
@@ -235,7 +235,7 @@ function chkmobiledataall(id){
         });
         wifiallset = 1;
     }
-    else if(id== "false")
+    else if(id== 2)
     {
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 0');

@@ -132,7 +132,11 @@
                                 $("#switch-onColor").bootstrapSwitch();
                                 $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
 
-                                    alert(state); // true | false
+                                    if(state == true){
+                                        chkmobiledataall(1);
+                                    }else{
+                                        chkmobiledataall(2);
+                                    }
                                 });
                             </script>
                         </div>
@@ -796,7 +800,7 @@
     </div>
 
 
-
+  
 
 
 </div>
