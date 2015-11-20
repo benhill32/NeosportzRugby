@@ -248,7 +248,7 @@ function chkmobiledataall(id){
 
 
 
-    if((id=="true" &&  networkconall==2) || ((id== "false" &&  networkconall!=0))){
+    if((id==1 &&  networkconall==2) || ((id== 2 &&  networkconall!=0))){
 
         $("#settingdeleteall").css('color', 'white');
         $("#settingsync").css('color', 'white');
