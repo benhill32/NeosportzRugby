@@ -146,13 +146,31 @@ if(menu.allowscore == 0){
 
     if(wifi==1) {
 
-        $("#switch-onColor").prop("checked", true );
 
+        $('#switch-onColor').attr('checked', true);
+        $("#switch-onColor").bootstrapSwitch();
+        $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
+
+            if(state == true){
+                chkmobiledataall(1);
+            }else{
+                chkmobiledataall(0);
+            }
+        });
 
 
     }else if(wifi==0) {
 
-        $("#switch-onColor").prop("checked", false );
+        $('#switch-onColor').attr('checked', false);
+        $("#switch-onColor").bootstrapSwitch();
+        $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
+
+            if(state == true){
+                chkmobiledataall(1);
+            }else{
+                chkmobiledataall(0);
+            }
+        });
     }
 
     db.transaction(getregionName2all, errorCBfunc, successCBfunc);
@@ -224,7 +242,7 @@ function getregionName2all_success(tx, results) {
 function chkmobiledataall(id){
 
 
-    alert(id);
+
     onOfflineall();
     if(id==1)
     {
@@ -235,7 +253,7 @@ function chkmobiledataall(id){
         });
         wifiallset = 1;
     }
-    else if(id== 2)
+    else if(id== 0)
     {
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 0');
@@ -248,7 +266,7 @@ function chkmobiledataall(id){
 
 
 
-    if((id==1 &&  networkconall==2) || ((id== 2 &&  networkconall!=0))){
+    if((id==1 &&  networkconall==2) || ((id== 0 &&  networkconall!=0))){
 
         $("#settingdeleteall").css('color', 'white');
         $("#settingsync").css('color', 'white');
