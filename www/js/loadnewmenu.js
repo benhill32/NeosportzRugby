@@ -150,13 +150,13 @@ if(menu.allowscore == 0){
 
     if(wifi==1) {
 
-        $("#flip-1").val(1);
+        $("#switch-onColor").prop("checked", true );
 
 
 
     }else if(wifi==0) {
 
-        $("#flip-1").val(0);
+        $("#switch-onColor").prop("checked", false );
     }
 
     db.transaction(getregionName2all, errorCBfunc, successCBfunc);
