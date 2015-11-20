@@ -122,10 +122,6 @@ function getsyncdateall_success2(tx, results) {
         $("#settingsync").css('color', 'grey');
         $("#regioniddiv").css('color', 'grey');
         $('#settingdeleteall').unbind('click');
-
-
-
-
         $('#settingsync').unbind('click');
         $('#regioniddiv').unbind('click');
 
@@ -227,6 +223,8 @@ function getregionName2all_success(tx, results) {
 
 function chkmobiledataall(id){
     onOfflineall();
+
+    alert(id);
 
     if(id=="true")
     {
