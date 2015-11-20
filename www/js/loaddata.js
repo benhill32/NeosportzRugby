@@ -326,7 +326,7 @@ function closemodel(){
     db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 
-    window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+   // window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     db.transaction(getsyncdateload, errorCBfunc, successCBfunc);
 
 
@@ -414,7 +414,7 @@ function closemodelarchive(){
 
     $('#indexloadingdata').modal('hide');
 
-    window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+  //  window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
 
   //  randomfunctions();
