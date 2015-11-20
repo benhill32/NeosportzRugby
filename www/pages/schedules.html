@@ -132,7 +132,7 @@
                                 $("#switch-onColor").bootstrapSwitch();
                                 $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
 
-                                    alert(state); // true | false
+                                    chkmobiledataall(state); // true | false
                                 });
                             </script>
                         </div>
@@ -795,17 +795,7 @@
 
     </div>
 
-    <input id="switch-onColor1" type="checkbox" data-on-color="info" data-size="small">
-
-
-    <script>
-
-        $("#switch-onColor1").bootstrapSwitch();
-        $("#switch-onColor1").on('switchChange.bootstrapSwitch', function(event, state) {
-
-            chkmobiledataall(state); // true | false
-        });
-    </script>
+    
 
 
 </div>
