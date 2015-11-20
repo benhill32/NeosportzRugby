@@ -146,31 +146,13 @@ if(menu.allowscore == 0){
 
     if(wifi==1) {
 
+        $("#switch-onColor").prop("checked", true );
 
-        $('#switch-onColor').attr('checked', true);
-        $("#switch-onColor").bootstrapSwitch();
-        $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
-
-            if(state == true){
-                chkmobiledataall(1);
-            }else{
-                chkmobiledataall(0);
-            }
-        });
 
 
     }else if(wifi==0) {
 
-        $('#switch-onColor').attr('checked', false);
-        $("#switch-onColor").bootstrapSwitch();
-        $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
-
-            if(state == true){
-                chkmobiledataall(1);
-            }else{
-                chkmobiledataall(0);
-            }
-        });
+        $("#switch-onColor").prop("checked", false );
     }
 
     db.transaction(getregionName2all, errorCBfunc, successCBfunc);

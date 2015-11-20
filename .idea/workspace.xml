@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="schedules.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schedules.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77458036">
-              <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+            <state vertical-scroll-proportion="-6.181818">
+              <caret line="122" column="57" selection-start-line="122" selection-start-column="57" selection-end-line="122" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -123,15 +123,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadnewmenu.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loadnewmenu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.586206">
-              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.5616279">
+              <caret line="250" column="47" selection-start-line="250" selection-start-column="47" selection-end-line="250" selection-end-column="47" />
               <folding>
                 <element signature="n#!!block;n#getregionName2all_success#0" expanded="false" />
                 <element signature="n#!!block;n#updatefollowall#0" expanded="false" />
-                <marker date="1447984334411" expanded="true" signature="5004:5024" placeholder="..." />
+                <marker date="1447984652696" expanded="true" signature="5004:5024" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -217,8 +217,8 @@
         <option value="$PROJECT_DIR$/www/css/test.css" />
         <option value="$PROJECT_DIR$/www/js/bootstrap-switch.js" />
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
-        <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
+        <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
       </list>
     </option>
   </component>
@@ -918,17 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <marker date="1437443411828" expanded="true" signature="1757:1795" placeholder="..." />
-            <marker date="1437443411828" expanded="true" signature="1873:1911" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/clubs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -951,22 +940,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.586206">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getregionName2all_success#0" expanded="false" />
-            <element signature="n#!!block;n#updatefollowall#0" expanded="false" />
-            <marker date="1447984334411" expanded="true" signature="5004:5024" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77458036">
-          <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+        <state vertical-scroll-proportion="-6.181818">
+          <caret line="122" column="57" selection-start-line="122" selection-start-column="57" selection-end-line="122" selection-end-column="57" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -992,6 +969,29 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#15;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <marker date="1437443411828" expanded="true" signature="1757:1795" placeholder="..." />
+            <marker date="1437443411828" expanded="true" signature="1873:1911" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5616279">
+          <caret line="250" column="47" selection-start-line="250" selection-start-column="47" selection-end-line="250" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!block;n#getregionName2all_success#0" expanded="false" />
+            <element signature="n#!!block;n#updatefollowall#0" expanded="false" />
+            <marker date="1447984652696" expanded="true" signature="5004:5024" placeholder="..." />
           </folding>
         </state>
       </provider>
