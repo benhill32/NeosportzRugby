@@ -17,6 +17,7 @@
     <script type="text/javascript" src="../js/cropper.js"></script>
     <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
     <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-switch.js"></script>
     <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/schedule.js"></script>
@@ -28,7 +29,7 @@
     <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
 
-    <script type="text/javascript" src="../js/bootstrap-switch.js"></script>
+
 
 
 
@@ -129,7 +130,15 @@
 
                             <script>
 
+                                $("#switch-onColor").bootstrapSwitch();
+                                $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
 
+                                    if(state == true){
+                                        chkmobiledataall(1);
+                                    }else{
+                                        chkmobiledataall(0);
+                                    }
+                                });
 
                             </script>
                         </div>
