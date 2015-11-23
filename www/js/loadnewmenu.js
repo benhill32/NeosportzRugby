@@ -230,7 +230,7 @@ function getregionName2all_success(tx, results) {
 
     });
 
-
+    $('#indexloadingdata').modal('hide');
 
 
     $("#switch-onColor").bootstrapSwitch();
