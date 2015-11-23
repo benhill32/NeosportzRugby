@@ -431,6 +431,15 @@ body {
     display:none;
 
 }
+#loadingspinner{
+    float: right;
+    /* background-color: black; */
+    color: white;
+    padding: 10px;
+
+}
+
+
 
 #divscoringreqadmin{
     margin-top: 100px;

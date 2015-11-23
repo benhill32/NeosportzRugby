@@ -405,11 +405,6 @@ function getsyncdateload_success2(tx, results) {
     randomfunctions();
 }
 
-
-
-
-
-
 function closemodelarchive(){
 
     $('#indexloadingdata').modal('hide');

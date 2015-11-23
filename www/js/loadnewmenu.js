@@ -230,6 +230,8 @@ function getregionName2all_success(tx, results) {
 
     });
 
+$("#loadingspinner").hide();
+
 
     $("#switch-onColor").bootstrapSwitch();
     $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
