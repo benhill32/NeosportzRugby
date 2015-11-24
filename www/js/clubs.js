@@ -193,6 +193,20 @@ function getMenu_success(tx, results) {
         $('#divhistory').append(menu.History);
         $('#divContacts').append(menu.Contacts);
 
+    clubname = menu.ID;
+
+    if(menu.ID == window.localStorage.getItem("teamfollow")){
+
+        $('#spanfullstar').show();
+        $('#spanemptystar').hide();
+
+
+    }else{
+        $('#spanfullstar').hide();
+        $('#spanemptystar').show();
+
+
+    }
 
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
