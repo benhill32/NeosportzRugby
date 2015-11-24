@@ -65,35 +65,70 @@
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
-        <li>
+        <li class="bs-callout bs-callout-warning">
 
             <a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a>
 
         </li>
         <li><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
-        <li  class="bs-callout bs-callout-warning"><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
+        <li><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
         <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
         <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
             <ul id="settingmenudiv">
                 <li><a href="javascript: void(0)">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
-                            <strong> Mobile Data</strong>
+                            <strong>Use Wifi Only</strong>
 
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <div class="btn-group btn-toggle">
-                                <button id="btnmenu1" class="btn btn-xs btn-default"  onclick="chkmobiledataall('btn1')">ON</button>
-                                <button id="btnmenu2" class="btn btn-xs btn-success"   onclick="chkmobiledataall('btn2')">OFF</button>
 
-                            </div>
+                            <input id="switch-onColor" type="checkbox" data-on-color="info" data-size="small" >
 
+
+
+                            <script>
+
+
+
+                            </script>
                         </div>
 
                     </div>
+
+
                     <div class="row ">
                         <div class="col-xs-12 col-md-12 mainmenuwifi">
-                            <p>Only Sync on a Wi-Fi network</p>
+                            <p>Only Sync's on a Wi-Fi networks</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+                <li><a href="javascript: void(0)">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Apply Filter</strong>
+
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+
+                            <input id="switch-filter" type="checkbox" data-on-color="info" data-size="small" >
+
+
+                            <script>
+
+
+
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 mainmenuwifi">
+                            <p>Only shows your favourite clubs info</p>
 
                         </div>
                     </div>
