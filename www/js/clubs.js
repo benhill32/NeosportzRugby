@@ -12,7 +12,7 @@ function onDeviceReady() {
     console.log("LOCALDB - Database ready");
     db.transaction(getfirstclub, errorCBfunc, successCBfunc);
 
-    alert(window.localStorage.getItem("teamfollow"));
+    alert("Fav " + window.localStorage.getItem("teamfollow"));
 }
 
 function getfirstclub(tx) {
@@ -125,11 +125,11 @@ function addfollow() {
     clearotherfavteam(clubname);
 
     addfavclub();
-    db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+    //db.transaction(getfirstclub, errorCBfunc, successCBfunc);
 }
 
 function removefollow() {
-   // alert("remove");
+    alert("remove");
     clearcurrentfavteam(clubname);
 
     db.transaction(function(tx) {
@@ -137,7 +137,7 @@ function removefollow() {
         console.log("Update MobileApp_LastUpdatesec");
     });
 
-    db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+   // db.transaction(getfirstclub, errorCBfunc, successCBfunc);
 }
 
 
