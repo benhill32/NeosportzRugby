@@ -12,7 +12,7 @@ function onDeviceReady() {
     console.log("LOCALDB - Database ready");
     db.transaction(getfirstclub, errorCBfunc, successCBfunc);
 
-    alert("Fav " + window.localStorage.getItem("fliter"));
+   // alert("Fav " + window.localStorage.getItem("fliter"));
 }
 
 function getfirstclub(tx) {
@@ -71,7 +71,7 @@ function getclub(tx) {
         $('#spanright').hide();
     }
 
-     alert(sql);
+    // alert(sql);
 
     tx.executeSql(sql, [], getclub_success);
 }
