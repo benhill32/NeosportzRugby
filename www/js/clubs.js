@@ -18,7 +18,7 @@ function onDeviceReady() {
 function getfirstclub(tx) {
 
     var sql = "select ID from MobileApp_clubs WHERE DeletedateUTC = 'null' ORDER BY ID ASC LIMIT 1";
-    alert(sql);
+ //   alert(sql);
     tx.executeSql(sql, [], getfirstclub_success);
 }
 
@@ -128,7 +128,9 @@ function addfollow() {
     clearotherfavteam(clubname);
 
     addfavclub();
-    //db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+    db.transaction(getoneoff, errorCBfunc, successCBfunc);
+
+
 }
 
 function removefollow() {
@@ -138,7 +140,7 @@ function removefollow() {
 
     clearcurrentfavteam(clubname);
 
-
+    db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 
 }

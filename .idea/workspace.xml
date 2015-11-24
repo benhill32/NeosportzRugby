@@ -108,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clubs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/clubs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="129" column="10" selection-start-line="129" selection-start-column="10" selection-end-line="129" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.46456692">
+              <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -143,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33295837">
-              <caret line="180" column="9" selection-start-line="180" selection-start-column="9" selection-end-line="180" selection-end-column="9" />
+            <state vertical-scroll-proportion="-12.793103">
+              <caret line="1132" column="18" selection-start-line="1132" selection-start-column="9" selection-end-line="1132" selection-end-column="18" />
               <folding>
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
@@ -265,8 +265,8 @@
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
-        <option value="$PROJECT_DIR$/www/js/clubs.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
+        <option value="$PROJECT_DIR$/www/js/clubs.js" />
       </list>
     </option>
   </component>
@@ -518,7 +518,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -967,14 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/clubsteamplayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1012,24 +1004,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/clubs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="10" selection-start-line="129" selection-start-column="10" selection-end-line="129" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33295837">
-          <caret line="180" column="9" selection-start-line="180" selection-start-column="9" selection-end-line="180" selection-end-column="9" />
+        <state vertical-scroll-proportion="-12.793103">
+          <caret line="1132" column="18" selection-start-line="1132" selection-start-column="9" selection-end-line="1132" selection-end-column="18" />
           <folding>
             <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
             <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
             <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
             <element signature="n#!!block;n#URLredirect#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/clubs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46456692">
+          <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
