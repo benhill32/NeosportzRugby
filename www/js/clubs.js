@@ -128,7 +128,7 @@ function addfollow() {
     clearotherfavteam(clubname);
 
     addfavclub();
-    db.transaction(getoneoff, errorCBfunc, successCBfunc);
+    window.localStorage.setItem("teamfollow", clubname);
 
 
 }
@@ -140,9 +140,9 @@ function removefollow() {
 
     clearcurrentfavteam(clubname);
 
-    db.transaction(getoneoff, errorCBfunc, successCBfunc);
+  
 
-
+    window.localStorage.setItem("teamfollow", clubname);
 }
 
 
