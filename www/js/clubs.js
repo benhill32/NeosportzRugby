@@ -95,19 +95,49 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
 
     $('#spanfullstar').show();
     $('#spanemptystar').hide();
+    $("#spanfullstar").click(addfollow);
 
 }else{
     $('#spanfullstar').hide();
     $('#spanemptystar').show();
+    $("#spanemptystar").click(removefollow);
 
 }
 
 
     ID = menu.ID;
     $('.panel-info').show();
+
+
+
+
+
     db.transaction(getteams, errorCBfunc, successCBfunc);
     db.transaction(getplayers, errorCBfunc, successCBfunc);
 }
+
+
+function addfollow() {
+    addfavteam(clubname);
+    //force only one fav
+    clearotherfavteam(clubname);
+    
+    addfavclub();
+    db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+}
+
+function removefollow() {
+    clearcurrentfavteam(clubname);
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 0');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+
+    db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+}
+
+
 
 
 function getdataminus(tx) {

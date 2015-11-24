@@ -176,7 +176,7 @@ function addfavclub(){
     var daaa = new Date();
     var naaa = daaa.getTime();
 
-    db.transaction(function(tx) {
+        db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 1, hasclubdate = "' + naaa + '"');
         console.log("Update MobileApp_LastUpdatesec");
     });
