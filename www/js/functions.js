@@ -118,13 +118,19 @@ function clearfavteam(){
 }
 
 function clearcurrentfavteam(id){
-    db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_clubs set Fav = 0,Follow= 0 where ID=' + id);
         console.log("Update INTO MobileApp_clubs");
     });
 
-    passscoretoserver("Favclub=0&deviceid=" + deviceIDfunc + "&token=" + apptoken)
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 0');
+        console.log("Update MobileApp_LastUpdatesec");
+    });
+
+
+    passscoretoserver("Favclub=0&deviceid=" + deviceIDfunc + "&token=" + window.localStorage.getItem("apptoken"))
 
    // alert("Favclub=0&deviceid=" + deviceIDfunc + "&token=" + apptoken)
 
@@ -153,7 +159,7 @@ function clearotherfavteam(id){
 function addfavteam(ID){
 
 
-    alert(ID);
+
 
 
     db.transaction(function(tx) {
@@ -161,12 +167,8 @@ function addfavteam(ID){
         console.log("Update INTO MobileApp_clubs");
     });
 
-  //  alert("favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
-
-
-    window.setTimeout(function(){
         passscoretoserver("Favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + window.localStorage.getItem("apptoken"))
-    }, 1000);
+
 
 
 

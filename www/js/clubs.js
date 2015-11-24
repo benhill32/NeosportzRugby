@@ -132,12 +132,9 @@ function removefollow() {
     alert("remove");
     clearcurrentfavteam(clubname);
 
-    db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_LastUpdatesec set hasclub = 0');
-        console.log("Update MobileApp_LastUpdatesec");
-    });
 
-   // db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+
+   
 }
 
 
