@@ -118,7 +118,7 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
 
 
 function addfollow() {
-    alert("add");
+   // alert("add");
     addfavteam(clubname);
     //force only one fav
     clearotherfavteam(clubname);
@@ -128,7 +128,7 @@ function addfollow() {
 }
 
 function removefollow() {
-    alert("remove");
+   // alert("remove");
     clearcurrentfavteam(clubname);
 
     db.transaction(function(tx) {
