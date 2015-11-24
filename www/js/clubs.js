@@ -77,7 +77,7 @@ function getclub_success(tx, results) {
 
 
     ID = menu.ID;
-
+    $('.panel-info').show();
     db.transaction(getteams, errorCBfunc, successCBfunc);
     db.transaction(getplayers, errorCBfunc, successCBfunc);
 }
