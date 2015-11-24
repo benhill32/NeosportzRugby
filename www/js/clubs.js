@@ -65,7 +65,7 @@ function getclub(tx) {
         $('#spanright').show();
 
     }else{
-        sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow") + "  ASC LIMIT 1";
+        sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
 
         $('#spanleft').hide();
         $('#spanright').hide();
@@ -221,23 +221,24 @@ function getMenu_success(tx, results) {
 
 
 function getpervoiusclub(){
-
-    if(FirstID == ID) {
-        db.transaction(getdataminus2, errorCBfunc, successCBfunc);
-    }else{
-        db.transaction(getdataminus, errorCBfunc, successCBfunc);
+    if(window.localStorage.getItem("fliter") == 0) {
+        if (FirstID == ID) {
+            db.transaction(getdataminus2, errorCBfunc, successCBfunc);
+        } else {
+            db.transaction(getdataminus, errorCBfunc, successCBfunc);
+        }
     }
 
 }
 function getnextclub(){
 
-
-    if(LastID == ID) {
+if(window.localStorage.getItem("fliter") == 0) {
+    if (LastID == ID) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
-    }else{
+    } else {
         db.transaction(getdataplus, errorCBfunc, successCBfunc);
     }
-
+}
 
 
 }
