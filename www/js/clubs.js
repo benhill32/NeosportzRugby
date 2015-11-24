@@ -137,7 +137,7 @@ function getMenu_success(tx, results) {
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
     db.transaction(getplayers, errorCBfunc, successCBfunc);
-
+    $('.panel-info').show();
 }
 
 
