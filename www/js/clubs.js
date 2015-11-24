@@ -12,7 +12,7 @@ function onDeviceReady() {
     console.log("LOCALDB - Database ready");
     db.transaction(getfirstclub, errorCBfunc, successCBfunc);
 
-    alert("Fav " + window.localStorage.getItem("teamfollow"));
+    //alert("Fav " + window.localStorage.getItem("teamfollow"));
 }
 
 function getfirstclub(tx) {
@@ -119,7 +119,7 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
 
 
 function addfollow() {
-    alert("add");
+   // alert("add");
     $('#spanfullstar').show();
     $('#spanemptystar').hide();
 
@@ -134,15 +134,15 @@ function addfollow() {
 }
 
 function removefollow() {
-    alert("remove");
+    //alert("remove");
     $('#spanfullstar').hide();
     $('#spanemptystar').show();
 
     clearcurrentfavteam(clubname);
 
-  
 
-    window.localStorage.setItem("teamfollow", clubname);
+
+    window.localStorage.setItem("teamfollow", "0");
 }
 
 
