@@ -268,7 +268,7 @@ function chkfilter(id){
             db.transaction(getfirstclub, errorCBfunc, successCBfunc);
         }
 
-        
+
 
     }
     else if(id== 0)
