@@ -262,12 +262,14 @@ function chkfilter(id){
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 1');
         });
+        window.localStorage.setItem("fliter", "1");
     }
     else if(id== 0)
     {
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 0');
         });
+        window.localStorage.setItem("fliter", "0");
     }
 
 
