@@ -342,11 +342,11 @@
     </div>
 
 <div id="mainmenu">
-    <div class="panel panel-info" >
+    <div class="panel panel-info" style="display: none;"  >
         <div class="panel-heading">History
             <div style="padding:0;float:right;font-size: 1.5em;margin-top: -5px;" >
-            <span id="spanfullstar"  class="glyphicon glyphicon-star"></span>
-            <span id="spanemptystar"  class="glyphicon glyphicon-star-empty"></span>
+            <span id="spanfullstar"  class="glyphicon glyphicon-star" onclick="addfollow()"></span>
+            <span id="spanemptystar"  class="glyphicon glyphicon-star-empty" onclick="removefollow()"></span>
             </div>
         </div>
         <div class="panel-body" id="divhistory">

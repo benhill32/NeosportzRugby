@@ -95,12 +95,12 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
 
     $('#spanfullstar').show();
     $('#spanemptystar').hide();
-    $("#spanfullstar").click(addfollow);
+
 
 }else{
     $('#spanfullstar').hide();
     $('#spanemptystar').show();
-    $("#spanemptystar").click(removefollow);
+
 
 }
 
@@ -118,15 +118,17 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
 
 
 function addfollow() {
+    alert("add");
     addfavteam(clubname);
     //force only one fav
     clearotherfavteam(clubname);
-    
+
     addfavclub();
     db.transaction(getfirstclub, errorCBfunc, successCBfunc);
 }
 
 function removefollow() {
+    alert("remove");
     clearcurrentfavteam(clubname);
 
     db.transaction(function(tx) {
