@@ -120,6 +120,9 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
 
 function addfollow() {
     alert("add");
+    $('#spanfullstar').show();
+    $('#spanemptystar').hide();
+
     addfavteam(clubname);
     //force only one fav
     clearotherfavteam(clubname);
@@ -130,11 +133,14 @@ function addfollow() {
 
 function removefollow() {
     alert("remove");
+    $('#spanfullstar').hide();
+    $('#spanemptystar').show();
+
     clearcurrentfavteam(clubname);
 
 
 
-   
+
 }
 
 
