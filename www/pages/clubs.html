@@ -333,7 +333,7 @@
                         <button type="button" class="btn btn-primary" id="btnclub" style="width: 100%;"></button>
                     </div>
                     <div class="col-xs-2" style="padding-top: 5px;">
-                        <span class="glyphicon glyphicon-chevron-right" onclick="getnextclub()"></span>
+                        <span id="spanright" class="glyphicon glyphicon-chevron-right" onclick="getnextclub()"></span>
                     </div>
                 </div>
 
@@ -342,8 +342,13 @@
     </div>
 
 <div id="mainmenu">
-    <div class="panel panel-info" style="display: none;">
-        <div class="panel-heading">History</div>
+    <div class="panel panel-info" >
+        <div class="panel-heading">History
+            <div style="padding:0;float:right;font-size: 1.5em;margin-top: -5px;" >
+            <span id="spanfullstar"  class="glyphicon glyphicon-star"></span>
+            <span id="spanemptystar"  class="glyphicon glyphicon-star-empty"></span>
+            </div>
+        </div>
         <div class="panel-body" id="divhistory">
 
         </div>

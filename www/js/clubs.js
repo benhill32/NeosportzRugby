@@ -11,6 +11,8 @@ function onDeviceReady() {
  //   db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+
+    alert(window.localStorage.getItem("teamfollow"));
 }
 
 function getfirstclub(tx) {
@@ -53,9 +55,23 @@ function getlastclub_success(tx, results) {
 }
 
 function getclub(tx) {
+    var sql = "";
+    if(window.localStorage.getItem("fliter") == 0){
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
-    //alert(sql);
+        sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
+
+        $('#spanleft').show();
+        $('#spanright').show();
+
+    }else{
+        sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow") + "  ASC LIMIT 1";
+
+        $('#spanleft').hide();
+        $('#spanright').hide();
+    }
+
+     //alert(sql);
+
     tx.executeSql(sql, [], getclub_success);
 }
 
@@ -74,6 +90,17 @@ function getclub_success(tx, results) {
     clubname = menu.ID;
     $('#divhistory').append(menu.History);
     $('#divContacts').append(menu.Contacts);
+
+if(menu.ID == window.localStorage.getItem("teamfollow")){
+
+    $('#spanfullstar').show();
+    $('#spanemptystar').hide();
+
+}else{
+    $('#spanfullstar').hide();
+    $('#spanemptystar').show();
+
+}
 
 
     ID = menu.ID;
