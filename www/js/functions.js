@@ -151,11 +151,13 @@ function clearotherfavteam(id){
 
 
 function addfavteam(ID){
-  //  alert(apptoken);
-    db.transaction(gettoken1, errorCBfunc, successCBfunc);
+
+
+    alert(ID);
+
 
     db.transaction(function(tx) {
-        tx.executeSql('Update MobileApp_clubs set Fav = 1,Follow= 0 where ID=' + ID);
+        tx.executeSql('Update MobileApp_clubs set Fav = 1 where ID=' + ID);
         console.log("Update INTO MobileApp_clubs");
     });
 
@@ -163,7 +165,7 @@ function addfavteam(ID){
 
 
     window.setTimeout(function(){
-        passscoretoserver("Favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + apptoken)
+        passscoretoserver("Favclub=" + ID + "&deviceid=" + deviceIDfunc + "&token=" + window.localStorage.getItem("apptoken"))
     }, 1000);
 
 
