@@ -142,10 +142,16 @@ function removefollow() {
     $('#spanemptystar').show();
 
     clearcurrentfavteam(clubname);
-
-
-
     window.localStorage.setItem("teamfollow", "0");
+    if(window.localStorage.getItem("fliter") == 1) {
+        window.localStorage.setItem("fliter", "0");
+        db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+    }
+
+
+
+
+
 }
 
 
