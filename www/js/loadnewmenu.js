@@ -263,6 +263,13 @@ function chkfilter(id){
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 1');
         });
         window.localStorage.setItem("fliter", "1");
+
+        if (document.getElementById("clubpage") != null) {
+            db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+        }
+
+        
+
     }
     else if(id== 0)
     {
@@ -270,6 +277,10 @@ function chkfilter(id){
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 0');
         });
         window.localStorage.setItem("fliter", "0");
+
+        if (document.getElementById("clubpage") != null) {
+            db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+        }
     }
 
 
