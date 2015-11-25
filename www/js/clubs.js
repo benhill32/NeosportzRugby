@@ -68,10 +68,14 @@ function getclub(tx) {
         $('#spanright').show();
 
     }else{
-        sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
 
-        $('#spanleft').hide();
-        $('#spanright').hide();
+        if(window.localStorage.getItem("teamfollow") == 0){
+            sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
+        }else{
+            sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
+        }
+        $('#spanleft').show();
+        $('#spanright').show();
     }
 
     // alert(sql);
@@ -145,15 +149,15 @@ function removefollow() {
     window.localStorage.setItem("teamfollow", "0");
 
     if(window.localStorage.getItem("fliter") == 1) {
-        window.localStorage.setItem("fliter", "0");
+       // window.localStorage.setItem("fliter", "0");
 
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 0');
         });
        // $("#switch-filter").prop("checked", false );
-        location.reload(true);
+        //location.reload(true);
 
-      //  db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+        db.transaction(getfirstclub, errorCBfunc, successCBfunc);
     }
 
 
