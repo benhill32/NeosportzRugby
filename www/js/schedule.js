@@ -83,10 +83,44 @@ function onError(error) {
 }
 
 
+function getgameids(tx){
+    var sql = "";
+    var d = new Date(date);
+    var secondsnow  = (d.getTime())/1000;
+    var month = d.getMonth() + 1;
+    var year = d.getFullYear();
+    var day = d.getDate();
+
+    sql = "select * from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
+
+    tx.executeSql(sql, [], getgameids_success);
+
+}
+
+function getgameids_success(tx, results) {
+
+    var len = results.rows.length;
+    var listID = 0;
+    if(len != 0) {
+        for (var i=0; i<len; i++) {
+            var menu = results.rows.item(i);
+            listID = listID + menu.ID + ",";
+        }
+    }
+
+    window.localStorage.setItem("listID", listID);
+
+    db.transaction(getdata, errorCBfunc, successCBfunc);
+
+}
+
+
 
 
 
 function getdata(tx) {
+
+    alert(window.localStorage.getItem("listID"))
 
     var sql = "";
     var d = new Date(date);
@@ -113,6 +147,9 @@ function getdata(tx) {
 
    //  alert(sql);
     tx.executeSql(sql, [], getMenu_success);
+
+
+
 }
 
 function getMenu_success(tx, results) {
