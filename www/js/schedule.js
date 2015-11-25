@@ -11,7 +11,7 @@ var GameID = 0;
 
 var devicePlatformsch =0;
 
-
+var listID = 0;
 
 var statid = 0;
 
@@ -91,8 +91,8 @@ function getgameids(tx){
     var year = d.getFullYear();
     var day = d.getDate();
 
-    sql = "select * from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
-
+    sql = "select ID from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
+alert(ID);
     tx.executeSql(sql, [], getgameids_success);
 
 }
@@ -100,14 +100,14 @@ function getgameids(tx){
 function getgameids_success(tx, results) {
 
     var len = results.rows.length;
-    var listID = 0;
+
     if(len != 0) {
         for (var i=0; i<len; i++) {
             var menu = results.rows.item(i);
             listID = listID + menu.ID + ",";
         }
     }
-
+alert(listID)
     window.localStorage.setItem("listID", listID);
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
