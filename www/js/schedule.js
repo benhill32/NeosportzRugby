@@ -768,7 +768,7 @@ function getpervoiusday(){
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+    db.transaction(getgameids, errorCBfunc, successCBfunc);
 }
 function getnextday(){
 
@@ -782,7 +782,7 @@ function getnextday(){
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+    db.transaction(getgameids, errorCBfunc, successCBfunc);
 }
 
 
