@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schedule.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86627907">
-              <caret line="784" column="59" selection-start-line="784" selection-start-column="59" selection-end-line="784" selection-end-column="59" />
+            <state vertical-scroll-proportion="-13.4827585">
+              <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -133,8 +133,8 @@
       <file leaf-file-name="loadnewmenu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5172415">
-              <caret line="262" column="77" selection-start-line="262" selection-start-column="77" selection-end-line="262" selection-end-column="77" />
+            <state vertical-scroll-proportion="-11.620689">
+              <caret line="269" column="62" selection-start-line="269" selection-start-column="6" selection-end-line="269" selection-end-column="62" />
               <folding>
                 <marker date="1448485669899" expanded="true" signature="5194:5214" placeholder="..." />
               </folding>
@@ -142,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.586206">
-              <caret line="384" column="365" selection-start-line="384" selection-start-column="365" selection-end-line="384" selection-end-column="376" />
+            <state vertical-scroll-proportion="0.41162792">
+              <caret line="368" column="28" selection-start-line="368" selection-start-column="28" selection-end-line="368" selection-end-column="28" />
               <folding>
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
                 <element signature="n#!!block;n#URLredirect#0" expanded="false" />
@@ -247,8 +247,8 @@
         <option value="$PROJECT_DIR$/www/js/clubs.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
       </list>
     </option>
   </component>
@@ -957,27 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5172415">
-          <caret line="262" column="77" selection-start-line="262" selection-start-column="77" selection-end-line="262" selection-end-column="77" />
-          <folding>
-            <marker date="1448485669899" expanded="true" signature="5194:5214" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.586206">
-          <caret line="384" column="365" selection-start-line="384" selection-start-column="365" selection-end-line="384" selection-end-column="376" />
-          <folding>
-            <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
-            <element signature="n#!!block;n#URLredirect#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.615385">
@@ -1017,9 +996,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86627907">
-          <caret line="784" column="59" selection-start-line="784" selection-start-column="59" selection-end-line="784" selection-end-column="59" />
+        <state vertical-scroll-proportion="-13.4827585">
+          <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.620689">
+          <caret line="269" column="62" selection-start-line="269" selection-start-column="6" selection-end-line="269" selection-end-column="62" />
+          <folding>
+            <marker date="1448485669899" expanded="true" signature="5194:5214" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41162792">
+          <caret line="368" column="28" selection-start-line="368" selection-start-column="28" selection-end-line="368" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
+            <element signature="n#!!block;n#URLredirect#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

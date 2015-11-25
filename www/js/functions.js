@@ -369,7 +369,11 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
     divisionsend = division;
     clubsend = club;
     teamsend = club;
-    $('#indexloadingdata').modal('show');
+
+    if (document.getElementById("divschedules") == null) {
+        $('#indexloadingdata').modal('show');
+    }
+
 
     if(networkconnectionfun !=0) {
 
