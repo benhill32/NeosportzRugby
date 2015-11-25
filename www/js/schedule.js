@@ -111,7 +111,7 @@ function getdata(tx) {
 
     }
 
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 

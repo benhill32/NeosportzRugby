@@ -267,7 +267,9 @@ function chkfilter(id){
         if (document.getElementById("clubpage") != null) {
             db.transaction(getfirstclub, errorCBfunc, successCBfunc);
         }
-
+        if (document.getElementById("divschedules") != null) {
+            datecheck(new Date(),0);
+        }
 
 
     }
@@ -280,6 +282,9 @@ function chkfilter(id){
 
         if (document.getElementById("clubpage") != null) {
             db.transaction(getfirstclub, errorCBfunc, successCBfunc);
+        }
+        if (document.getElementById("divschedules") != null) {
+            datecheck(new Date(),0);
         }
     }
 
