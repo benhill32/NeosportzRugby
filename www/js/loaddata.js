@@ -435,7 +435,7 @@ function reloadindividual(){
     if (document.getElementById("newsmain") != null) {
         $.mobile.loading().hide();
     }
-    location.reload();
+  //  location.reload();
 
 }
 
