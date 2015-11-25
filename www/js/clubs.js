@@ -145,7 +145,7 @@ function removefollow() {
     window.localStorage.setItem("teamfollow", "0");
 
     if(window.localStorage.getItem("fliter") == 1) {
-       // window.localStorage.setItem("fliter", "0");
+        window.localStorage.setItem("fliter", "0");
 
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 0');
