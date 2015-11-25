@@ -55,7 +55,7 @@ function datecheck(d,a){
        datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
    }
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+    db.transaction(getgameids, errorCBfunc, successCBfunc);
 }
 
 
@@ -92,7 +92,7 @@ function getgameids(tx){
     var day = d.getDate();
 
     sql = "select ID from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
-alert(ID);
+//alert(ID);
     tx.executeSql(sql, [], getgameids_success);
 
 }
@@ -107,7 +107,7 @@ function getgameids_success(tx, results) {
             listID = listID + menu.ID + ",";
         }
     }
-alert(listID)
+//alert(listID)
     window.localStorage.setItem("listID", listID);
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
