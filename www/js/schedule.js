@@ -107,7 +107,7 @@ function getdata(tx) {
     }else{
 
 
-        sql = "select * from App_Games where (HomeClubID IN (" + window.localStorage.getItem("listfollow") + ") or AwayClubID IN (" + window.localStorage.getItem("listfollow") + ")) and DeletedateUTC= 'null'   and Month = " + month + " and Year = " + year + " and Day = " + day + " order by DatetimeStart";
+        sql = "select * from App_Games where (HomeClubID = " +  window.localStorage.getItem("teamfollow") + " or AwayClubID = " + window.localStorage.getItem("teamfollow") + ") and DeletedateUTC= 'null'   and Month = " + month + " and Year = " + year + " and Day = " + day + " order by DatetimeStart";
 
     }
 
