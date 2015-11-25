@@ -149,7 +149,7 @@ function removefollow() {
     window.localStorage.setItem("teamfollow", "0");
 
     if(window.localStorage.getItem("fliter") == 1) {
-       // window.localStorage.setItem("fliter", "0");
+        window.localStorage.setItem("fliter", "0");
 
         db.transaction(function(tx) {
             tx.executeSql('Update MobileApp_LastUpdatesec set fliterON = 0');
@@ -242,24 +242,24 @@ function getMenu_success(tx, results) {
 
 
 function getpervoiusclub(){
-    if(window.localStorage.getItem("fliter") == 0) {
+
         if (FirstID == ID) {
             db.transaction(getdataminus2, errorCBfunc, successCBfunc);
         } else {
             db.transaction(getdataminus, errorCBfunc, successCBfunc);
         }
-    }
+
 
 }
 function getnextclub(){
 
-if(window.localStorage.getItem("fliter") == 0) {
+
     if (LastID == ID) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
     } else {
         db.transaction(getdataplus, errorCBfunc, successCBfunc);
     }
-}
+
 
 
 }
