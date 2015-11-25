@@ -25,6 +25,7 @@ document.addEventListener("deviceready", onDeviceReadysch, false);
 var tokensch = 0
 var date = "";
 var date2 = "";
+var datesend = "";
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
@@ -44,12 +45,14 @@ function datecheck(d,a){
        date = d;
        var z = date.getMonth() + 1;
        date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
+       datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
        document.getElementById("btndate").innerHTML=date2;
    }else{
        date = new Date(d);
        var z = date.getMonth() + 1;
        date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
        document.getElementById("btndate").innerHTML=date2;
+       datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
    }
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
@@ -222,7 +225,7 @@ function getMenu_success(tx, results) {
     }
     $('#divcircle').show();
     $('#divcircle').click(function() {
-        sendinfotoserver("schedules",id,"0")
+        sendinfotoserver("schedules",id,"0",datesend)
     });
 
 

@@ -362,7 +362,7 @@ function getregionsdata(tx, results) {
 }
 
 
-function sendinfotoserver(type,division,club){
+function sendinfotoserver(type,division,club,datesendback){
     checkupdatesnews = 1;
 
     typesend = type;
@@ -382,9 +382,9 @@ function sendinfotoserver(type,division,club){
 
         var xmlHttp = null;
         xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend, false);
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback, false);
 
-        alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend);
+        alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback);
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
