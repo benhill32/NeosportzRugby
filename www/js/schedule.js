@@ -92,7 +92,7 @@ function getgameids(tx){
     var day = d.getDate();
 
     sql = "select ID from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
-//alert(ID);
+
     tx.executeSql(sql, [], getgameids_success);
 
 }
@@ -107,8 +107,14 @@ function getgameids_success(tx, results) {
             listID = listID + menu.ID + ",";
         }
     }
-//alert(listID)
-    window.localStorage.setItem("listID", listID);
+
+    //window.localStorage.setItem("listID", listID);
+
+
+    sendinfotoserver("schedules2",0,"0",datesend,listID)
+
+
+
 
     db.transaction(getdata, errorCBfunc, successCBfunc);
 
@@ -120,7 +126,7 @@ function getgameids_success(tx, results) {
 
 function getdata(tx) {
 
-    alert(window.localStorage.getItem("listID"))
+
 
     var sql = "";
     var d = new Date(date);
