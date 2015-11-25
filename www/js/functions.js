@@ -373,7 +373,27 @@ function sendinfotoserver(type,division,club){
 
     if(networkconnectionfun !=0) {
 
-        db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
+        //db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
+
+        var datenow = new Date();
+
+        var yearnow = datenow.getFullYear();
+
+
+        var xmlHttp = null;
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend, false);
+
+        alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend);
+        xmlHttp.send();
+
+        var json = xmlHttp.responseText;
+
+        var obj = JSON.parse(json);
+        syncmaintableindividual(obj);
+
+
+
     }else{
         $('#indexloadingdata').modal('hide');
         alert("You don't have access to internet!");
@@ -1131,7 +1151,7 @@ function loadnewapp(){
 
 
 function getoneoff(tx) {
-    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref from MobileApp_LastUpdatesec";
+    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref,Region from MobileApp_LastUpdatesec";
     // alert(sql);
     tx.executeSql(sql, [], getoneoff_success);
 }
@@ -1148,6 +1168,9 @@ function getoneoff_success(tx, results) {
 
 
 
+
+
+            window.localStorage.setItem("Region", menu.Region);
             window.localStorage.setItem("apptoken", menu.token);
             window.localStorage.setItem("fliter", menu.fliterON);
             window.localStorage.setItem("isadmin", menu.isadmin);
