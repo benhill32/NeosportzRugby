@@ -388,7 +388,7 @@ function sendinfotoserver(type,division,club,datesendback){
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
-        alert(json);
+       // alert(json);
         var obj = JSON.parse(json);
         syncmaintableindividual(obj);
 
