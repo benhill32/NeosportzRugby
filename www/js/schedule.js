@@ -225,7 +225,7 @@ function getMenu_success(tx, results) {
     }
     $('#divcircle').show();
     $('#divcircle').click(function() {
-        sendinfotoserver("schedules",0,"0",datesend)
+        sendinfotoserver("schedules2",0,"0",datesend)
     });
 
 
