@@ -266,10 +266,10 @@ function getMenu_success(tx, results) {
             '</div>' +
             '</div>');
     }
-    $('#divcircle').show();
-    $('#divcircle').click(function() {
-        sendinfotoserver("schedules2",0,"0",datesend)
-    });
+    //$('#divcircle').show();
+  //  $('#divcircle').click(function() {
+   //     sendinfotoserver("schedules2",0,"0",datesend)
+  //  });
 
 
 
