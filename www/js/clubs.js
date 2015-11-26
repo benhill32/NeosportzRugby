@@ -70,7 +70,7 @@ function getclub(tx) {
 
 
 
-    // alert(sql);
+     alert(sql);
 
     tx.executeSql(sql, [], getclub_success);
 }
@@ -79,6 +79,7 @@ function getclub(tx) {
 function getclub_success(tx, results) {
 
     var len = results.rows.length;
+    alert(len);
     var menu = results.rows.item(0);
     $('#divhistory').empty();
     $('#divContacts').empty();
