@@ -41,7 +41,7 @@ function getfirstnew_success(tx, results) {
 
 
     firstnews = menu.ID;
-
+alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
 }
@@ -62,7 +62,7 @@ function getlastnews_success(tx, results) {
 
 
     lastnews = menu.ID;
-
+    alert(lastnews);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 
 }
