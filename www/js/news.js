@@ -329,7 +329,7 @@ function getpervoiusnewfeed(){
 
 function getdataminus(tx) {
 
-    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID < " + ID + " and DeletedateUTC = 'null' order by ID Desc LIMIT 1";
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID < " + newsid + " and DeletedateUTC = 'null' order by ID Desc LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
@@ -343,7 +343,7 @@ function getdataminus2(tx) {
 
 function getdataplus(tx) {
 
-    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID > " + ID + " and DeletedateUTC = 'null' order by ID ASC LIMIT 1";
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID > " + newsid + " and DeletedateUTC = 'null' order by ID ASC LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
