@@ -37,8 +37,8 @@ function getfirstnew(tx) {
 function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
-    var menu = results.rows.item(0);
 
+    alert(len + " - " + checkfornew);
 
 if(len == 0 && checkfornew == 0){
     checkfornew = 1;
@@ -48,6 +48,7 @@ if(len == 0 && checkfornew == 0){
 
 
 }else{
+    var menu = results.rows.item(0);
     firstnews = menu.ID;
 //alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
