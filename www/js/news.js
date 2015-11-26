@@ -38,8 +38,11 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
+
+
 if(len == 0 && checkfornew == 0){
     checkfornew = 1;
+    alert("fdsdf");
     sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
 
 
