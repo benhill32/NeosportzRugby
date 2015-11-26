@@ -79,7 +79,15 @@ function getnewfeed_success(tx, results) {
             $('#divtitle').append(menu.Title);
             $('#divbody').append(menu.Body);
 
+        if (menu.URL == "") {
+            $('#divlinks').hide();
+        }else{
+            $('#divlinks').show();
+            $('#divlinks').empty();
+            $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >  Link</li>');
 
+
+        }
 
 
             //  alert("i=" + i + " -" + menu.Title);
