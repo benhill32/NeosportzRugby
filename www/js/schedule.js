@@ -100,7 +100,7 @@ function getgameids(tx){
 function getgameids_success(tx, results) {
 
     var len = results.rows.length;
-
+     listID = 0;
     if(len != 0) {
         for (var i=0; i<len; i++) {
             var menu = results.rows.item(i);
