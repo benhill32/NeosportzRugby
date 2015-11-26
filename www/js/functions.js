@@ -1161,7 +1161,7 @@ function getoneoff_success(tx, results) {
         if(menu.oneoffs == 0) {
 
 
-alert("one off");
+//alert("one off");
 
 
             window.localStorage.setItem("allownewfeed", menu.allownewfeed);
