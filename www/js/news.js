@@ -52,7 +52,7 @@ if(len == 0 && window.localStorage.getItem("checkfornew") == null){
     var menu = results.rows.item(0);
     firstnews = menu.ID;
 
-//alert(firstnews);
+alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
 }
@@ -77,7 +77,7 @@ function getlastnews_success(tx, results) {
 
 
     lastnews = menu.ID;
-  //  alert(lastnews);
+    alert(lastnews);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 
 }
@@ -124,7 +124,7 @@ function getdata2(tx) {
 function getnewfeed_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-//alert(len);
+alert(len);
     $('#newsmain').empty();
 
     if(len!= 0) {
