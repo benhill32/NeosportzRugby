@@ -38,21 +38,26 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-    alert(len + " - " + window.localStorage.getItem("checkfornew"));
+    //alert(len + " - " + window.localStorage.getItem("checkfornew"));
 
 if(len == 0){
 
-    window.localStorage.setItem("checkfornew", 1);
 
-    sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
+
+    if(window.localStorage.getItem("checkfornew") == null || window.localStorage.getItem("checkfornew") == "0"){
+        window.localStorage.setItem("checkfornew", 1);
+        sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
+    }
+
 
 
 
 }else{
+    window.localStorage.setItem("checkfornew", 0);
     var menu = results.rows.item(0);
     firstnews = menu.ID;
 
-alert(firstnews);
+//alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
 }
@@ -77,7 +82,7 @@ function getlastnews_success(tx, results) {
 
 
     lastnews = menu.ID;
-    alert(lastnews);
+  //  alert(lastnews);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 
 }
@@ -124,7 +129,7 @@ function getdata2(tx) {
 function getnewfeed_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-alert(len);
+//alert(len);
     $('#newsmain').empty();
 
     if(len!= 0) {
