@@ -43,7 +43,7 @@ function getfirstnew_success(tx, results) {
 
 
     firstnews = menu.ID;
-alert(firstnews);
+//alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
 }
@@ -64,7 +64,7 @@ function getlastnews_success(tx, results) {
 
 
     lastnews = menu.ID;
-    alert(lastnews);
+  //  alert(lastnews);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 
 }
@@ -334,26 +334,26 @@ function getpervoiusnewfeed(){
 function getdataminus(tx) {
 
     var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID > " + newsid + " and DeletedateUTC = 'null' order by ID ASC LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
 
 function getdataminus2(tx) {
 
     var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by ID ASC LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
 
 function getdataplus(tx) {
 
     var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID < " + newsid + " and DeletedateUTC = 'null' order by ID Desc LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
 function getdataplus2(tx) {
 
     var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by ID Desc LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
