@@ -21,6 +21,22 @@ function onDeviceReadynews() {
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
     db.transaction(getfirstnew, errorCBfunc, successCBfunc);
+    db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+}
+
+
+function numbersponsers(tx) {
+    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
+    // alert(sql);
+    tx.executeSql(sql, [], numbersponsers_success);
+}
+
+function numbersponsers_success(tx, results) {
+    var len = results.rows.length;
+
+    nospor = len;
+    // alert(nospor);
+
 }
 
 
@@ -106,19 +122,7 @@ function loadnewdata(){
 
 
 
-function numbersponsers(tx) {
-    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
-    // alert(sql);
-    tx.executeSql(sql, [], numbersponsers_success);
-}
 
-function numbersponsers_success(tx, results) {
-    var len = results.rows.length;
-
-    nospor = len;
-    // alert(nospor);
-
-}
 
 function getdata2(tx) {
     var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by ID Desc Limit 1";
@@ -143,7 +147,7 @@ function getnewfeed_success(tx, results) {
             $('#divtitle').empty();
             $('#divbody').empty();
 
-            $('#divtitle').append(menu.ID + " - " + menu.Title);
+            $('#divtitle').append(menu.Title);
             $('#divbody').append(menu.Body);
 
         if (menu.URL == "") {

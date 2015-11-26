@@ -130,7 +130,7 @@ function addfollow() {
     addfavclub();
     window.localStorage.setItem("teamfollow", clubname);
 
-
+    checksendnews();
 }
 
 function removefollow() {
@@ -153,7 +153,7 @@ function removefollow() {
       //  db.transaction(getfirstclub, errorCBfunc, successCBfunc);
     }
 
-
+    checksendnews();
 
 
 

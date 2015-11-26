@@ -388,7 +388,7 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
         xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback + '&IDs=' + IDs, false);
 
-        alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback);
+     //   alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback);
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
@@ -1145,7 +1145,7 @@ function loadnewapp(){
 
 
 function getoneoff(tx) {
-    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref,Region from MobileApp_LastUpdatesec";
+    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref,Region,allownewfeed from MobileApp_LastUpdatesec";
     // alert(sql);
     tx.executeSql(sql, [], getoneoff_success);
 }
@@ -1164,6 +1164,7 @@ function getoneoff_success(tx, results) {
 
 
 
+            window.localStorage.setItem("allownewfeed", menu.allownewfeed);
             window.localStorage.setItem("Region", menu.Region);
             window.localStorage.setItem("apptoken", menu.token);
             window.localStorage.setItem("fliter", menu.fliterON);

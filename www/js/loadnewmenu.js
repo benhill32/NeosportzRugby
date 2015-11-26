@@ -66,7 +66,7 @@ function getsyncdateall(tx) {
 
 function getsyncdateall_success2(tx, results) {
     onOfflineall();
-
+    checksendnews();
     var len = results.rows.length;
 
     var menu = results.rows.item(0);
@@ -206,6 +206,12 @@ function getregionName2all_success(tx, results) {
     $("#appversion").empty();
     $("#appversion").append(appversionlocalf);
 
+
+
+
+
+
+
     $("#mm-blocker").click(closemenu());
 
     $("#menu").show();
@@ -253,6 +259,19 @@ function getregionName2all_success(tx, results) {
         }
     });
 
+}
+
+function checksendnews(){
+
+    if(window.localStorage.getItem("allownewfeed") ==1 && window.localStorage.getItem("teamfollow") == window.localStorage.getItem("Clubedit")){
+        $('#loadnews').show();
+
+    }else if (window.localStorage.getItem("isadmin") ==1){
+        $('#loadnews').show();
+
+    }else{
+        $('#loadnews').hide();
+    }
 }
 
 
