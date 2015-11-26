@@ -388,7 +388,7 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
         xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback + '&IDs=' + IDs, false);
 
-        //alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback);
+        alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback);
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
