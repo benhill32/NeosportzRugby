@@ -678,7 +678,7 @@ function syncmaintables(obj,year){
             // console.log('Delete MobileApp_clubs where ID');
             db.transaction(function (tx) {
                 tx.executeSql('INSERT OR IGNORE INTO MobileApp_clubs(ID,_id ,name,UpdateDateUTC,UpdateDateUTCBase64 ,Base64,History,Contacts,UpdateSecondsUTC,UpdateSecondsUTCBase64,Color,TextColor,Fav,Follow,DeletedateUTC) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.name + '","' + obj.UpdateDateUTC + '","' + obj.UpdateDateUTCBase64 + '","' + obj.Base64 + '","' + obj.History + '","' + obj.Contacts + '","' + obj.UpdateSecondsUTC + '","' + obj.UpdateSecondsUTCBase64 + '", "' + obj.Color + '","' + obj.TextColor + '",0,0,"' + obj.DeletedateUTC + '")');
-                //    console.log("INSERT INTO MobileApp_clubs is created");
+                alert('INSERT OR IGNORE INTO MobileApp_clubs(ID,_id ,name,UpdateDateUTC,UpdateDateUTCBase64 ,Base64,History,Contacts,UpdateSecondsUTC,UpdateSecondsUTCBase64,Color,TextColor,Fav,Follow,DeletedateUTC) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.name + '","' + obj.UpdateDateUTC + '","' + obj.UpdateDateUTCBase64 + '","' + obj.Base64 + '","' + obj.History + '","' + obj.Contacts + '","' + obj.UpdateSecondsUTC + '","' + obj.UpdateSecondsUTCBase64 + '", "' + obj.Color + '","' + obj.TextColor + '",0,0,"' + obj.DeletedateUTC + '")');
             });
 
             db.transaction(function (tx) {
@@ -1200,6 +1200,9 @@ function getdatanewssch_success(tx, results) {
         //teamfollow = menu.ID;
         window.localStorage.setItem("teamfollow", menu.ID);
         //   alert("teamfollow : " +  menu.ID)
+    }else{
+        window.localStorage.setItem("teamfollow", 0);
+
     }
 
     db.transaction(getdata2, errorCBfunc, successCBfunc);
