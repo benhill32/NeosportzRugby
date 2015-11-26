@@ -264,13 +264,13 @@ function getregionName2all_success(tx, results) {
 function checksendnews(){
 
     if(window.localStorage.getItem("allownewfeed") ==1 && window.localStorage.getItem("teamfollow") == window.localStorage.getItem("Clubedit")){
-        $('#loadnews').show();
+        $('#divloadnews').show();
 
     }else if (window.localStorage.getItem("isadmin") ==1){
-        $('#loadnews').show();
+        $('#divloadnews').show();
 
     }else{
-        $('#loadnews').hide();
+        $('#divloadnews').hide();
     }
 }
 
