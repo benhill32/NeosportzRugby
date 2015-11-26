@@ -40,7 +40,7 @@ function getfirstnew_success(tx, results) {
 
     alert(len + " - " + window.localStorage.getItem("checkfornew"));
 
-if(len == 0 && window.localStorage.getItem("checkfornew") == null){
+if(len == 0){
 
     window.localStorage.setItem("checkfornew", 1);
 
