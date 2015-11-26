@@ -763,7 +763,7 @@ function getpervoiusday(){
     date = new Date(date);
   //  alert(date);
     var z = date.getMonth() + 1;
-
+    datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
@@ -777,7 +777,7 @@ function getnextday(){
     date = new Date(date).setDate(date.getDate()+1); //+1 or +x
     date = new Date(date);
     var z = date.getMonth() + 1;
-
+    datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
     date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
