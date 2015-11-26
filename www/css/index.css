@@ -710,10 +710,10 @@ body {
 
 
 #newsmain,a:active, a:focus{
-    padding-top: 10px;
+   // padding-top: 10px;
    // color: #333 !important;
-    text-decoration: none !important;
-    padding-bottom: 10px;
+  //  text-decoration: none !important;
+  //  padding-bottom: 10px;
 }
 
 #addnewfeed,a:active, a:focus{

@@ -10,16 +10,64 @@ var sponsorexist = 0;
 var ii = 0;
 var nospor = 0;
 var socialurl = "";
+var firstnews = 0;
+var lastnews = 0;
+var newsid = 0;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
-    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
-    db.transaction(getdata2, errorCBfunc, successCBfunc);
-    //  checkfb();
+    db.transaction(getfirstnew, errorCBfunc, successCBfunc);
+
 }
-//db.transaction(getadmin, errorCBfunc, successCBfunc);
+
+
+
+
+function getfirstnew(tx) {
+
+    var sql = "select ID from MobilevwApp_News_v_2 WHERE DeletedateUTC = 'null' ORDER BY ID Desc LIMIT 1";
+    //   alert(sql);
+    tx.executeSql(sql, [], getfirstnew_success);
+}
+
+
+function getfirstnew_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+
+    firstnews = menu.ID;
+
+    db.transaction(getlastnews, errorCBfunc, successCBfunc);
+
+}
+
+
+function getlastnews(tx) {
+
+    var sql = "select ID from MobilevwApp_News_v_2 WHERE DeletedateUTC = 'null' ORDER BY ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getlastnews_success);
+}
+
+
+function getlastnews_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+
+    lastnews = menu.ID;
+
+    db.transaction(getdata2, errorCBfunc, successCBfunc);
+
+}
+
+
 
 
 
@@ -53,7 +101,7 @@ function numbersponsers_success(tx, results) {
 }
 
 function getdata2(tx) {
-    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by DisplayDateUTC Desc Limit 1";
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by ID Desc Limit 1";
 //alert(sql);
     tx.executeSql(sql, [], getnewfeed_success);
 }
@@ -66,17 +114,15 @@ function getnewfeed_success(tx, results) {
 
     if(len!= 0) {
 
-
-
             var menu = results.rows.item(0);
             var imgg = "";
             // alert(menu.Body.substring(0, 200));
-
+        newsid = menu.ID;
             $('#divyesnews').show();
             $('#divtitle').empty();
             $('#divbody').empty();
 
-            $('#divtitle').append(menu.Title);
+            $('#divtitle').append(menu.ID + " - " + menu.Title);
             $('#divbody').append(menu.Body);
 
         if (menu.URL == "") {
@@ -84,15 +130,10 @@ function getnewfeed_success(tx, results) {
         }else{
             $('#divlinks').show();
             $('#divlinks').empty();
-            $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >  Link</li>');
-
+            $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >Website Link</li>');
 
         }
 
-
-            //  alert("i=" + i + " -" + menu.Title);
-
-       // db.transaction(getsponsors, errorCBfunc, successCBfunc);
 
     }else{
 
@@ -267,3 +308,48 @@ function showclubsfun(){
 
 }
 
+function getnextnewfeed(){
+
+    if (lastnews == newsid) {
+        db.transaction(getdataplus2, errorCBfunc, successCBfunc);
+    } else {
+        db.transaction(getdataplus, errorCBfunc, successCBfunc);
+    }
+
+}
+
+function getpervoiusnewfeed(){
+
+    if (firstnews == newsid) {
+        db.transaction(getdataminus2, errorCBfunc, successCBfunc);
+    } else {
+        db.transaction(getdataminus, errorCBfunc, successCBfunc);
+    }
+}
+
+function getdataminus(tx) {
+
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID < " + ID + " and DeletedateUTC = 'null' order by ID Desc LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getnewfeed_success);
+}
+
+function getdataminus2(tx) {
+
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by ID Desc LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getnewfeed_success);
+}
+
+function getdataplus(tx) {
+
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and ID > " + ID + " and DeletedateUTC = 'null' order by ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getnewfeed_success);
+}
+function getdataplus2(tx) {
+
+    var sql = "select ID,_id,UpdateDateUTC,Title,replace(Body, '###$$###', '') as Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' order by ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getnewfeed_success);
+}

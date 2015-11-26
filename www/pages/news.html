@@ -31,7 +31,26 @@
                 refreshdata();
           // }
         }
-        $("#mm-blocker").click(closemenu());
+
+
+        $(function(){
+            // Bind the swipeleftHandler callback function to the swipe event on div.box
+            $( "body" ).on( "swipeleft", swipeleftHandler );
+            $( "body" ).on( "swiperight", swiperightHandler );
+            $('body').on({
+                'touchmove': function(e) {
+                    $("#scolltop").show();
+                }
+            });
+            // Callback function references the event target and adds the 'swipeleft' class to it
+            function swipeleftHandler( event ){
+                getnextnewfeed();
+            }
+            function swiperightHandler( event ){
+
+                getpervoiusnewfeed();
+            }
+        });
 
     </script>
 
@@ -291,7 +310,7 @@
 
     </div>
     <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()">
-        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>   News </div>
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;"></span>   News </div>
 
 </div>
 
