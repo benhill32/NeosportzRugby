@@ -38,11 +38,12 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-    alert(len + " - " + checkfornew);
+    alert(len + " - " + window.localStorage.getItem("checkfornew"));
 
-if(len == 0 && checkfornew == 0){
-    checkfornew = 1;
-    alert("fdsdf");
+if(len == 0 && window.localStorage.getItem("checkfornew") == null){
+
+    window.localStorage.setItem("checkfornew", 1);
+
     sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
 
 
@@ -50,6 +51,7 @@ if(len == 0 && checkfornew == 0){
 }else{
     var menu = results.rows.item(0);
     firstnews = menu.ID;
+
 //alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
