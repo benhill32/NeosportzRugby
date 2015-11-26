@@ -400,7 +400,10 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
 
     }else{
         $('#indexloadingdata').modal('hide');
-        alert("You don't have access to internet!");
+      //  alert("You don't have access to internet!");
+
+        window.plugins.toast.showShortBottom("You don't have access to internet!", function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
     }
 
 }
