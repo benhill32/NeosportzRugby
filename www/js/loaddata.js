@@ -434,7 +434,11 @@ function reloadindividual(){
 
     if (document.getElementById("newsmain") != null) {
         $.mobile.loading().hide();
+        db.transaction(getfirstnew, errorCBfunc, successCBfunc);
     }
+
+
+
   //  location.reload();
 
 }

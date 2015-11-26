@@ -13,6 +13,7 @@ var socialurl = "";
 var firstnews = 0;
 var lastnews = 0;
 var newsid = 0;
+var checkfornew= 0;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
@@ -20,9 +21,6 @@ function onDeviceReadynews() {
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
     db.transaction(getfirstnew, errorCBfunc, successCBfunc);
-
-
-   // sendinfotoserver("newsfeed","0",clubidtop)
 }
 
 
@@ -40,11 +38,20 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
     var menu = results.rows.item(0);
+if(len == 0 && checkfornew == 0){
+    checkfornew = 1;
+    sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
 
 
+
+}else{
     firstnews = menu.ID;
 //alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
+
+}
+
+
 
 }
 
