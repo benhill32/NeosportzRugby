@@ -30,7 +30,7 @@ function onDeviceReadynews() {
 
 
 function numbersponsers(tx) {
-    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
+    var sql = "select ID  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
     // alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
@@ -44,7 +44,7 @@ function numbersponsers_success(tx, results) {
 }
 
 function allnewschk(tx) {
-    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
+    var sql = "select ID  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
     // alert(sql);
     tx.executeSql(sql, [], allnewschk_success);
 }
