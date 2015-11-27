@@ -44,7 +44,7 @@ function numbersponsers_success(tx, results) {
 }
 
 function allnewschk(tx) {
-    var sql = "select ID  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
+    var sql = "select ID  from MobilevwApp_News_v_2 where ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
     // alert(sql);
     tx.executeSql(sql, [], allnewschk_success);
 }
@@ -357,7 +357,7 @@ function getnextnewfeed(){
 
     if (lastnews == newsid) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
-        intcount = 1;
+        intcount = allnews;
     } else {
         db.transaction(getdataplus, errorCBfunc, successCBfunc);
         intcount = intcount +1;
@@ -371,7 +371,7 @@ function getpervoiusnewfeed(){
 
     if (firstnews == newsid) {
         db.transaction(getdataminus2, errorCBfunc, successCBfunc);
-        intcount = allnews;
+        intcount = 1;
     } else {
 
         db.transaction(getdataminus, errorCBfunc, successCBfunc);
