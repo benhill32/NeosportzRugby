@@ -14,14 +14,18 @@ var firstnews = 0;
 var lastnews = 0;
 var newsid = 0;
 var checkfornew= 0;
+var allnews  = 0;
+var intcount = 1;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
 
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
-    db.transaction(getfirstnew, errorCBfunc, successCBfunc);
+    db.transaction(allnewschk, errorCBfunc, successCBfunc);
     db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+    db.transaction(getfirstnew, errorCBfunc, successCBfunc);
+
 }
 
 
@@ -39,7 +43,19 @@ function numbersponsers_success(tx, results) {
 
 }
 
+function allnewschk(tx) {
+    var sql = "select ID  from Mobilesponsorsclub where Club=" + clubidtop + " and DeletedateUTC = 'null'";
+    // alert(sql);
+    tx.executeSql(sql, [], allnewschk_success);
+}
 
+function allnewschk_success(tx, results) {
+    var len = results.rows.length;
+
+    allnews = len;
+    // alert(nospor);
+
+}
 
 
 function getfirstnew(tx) {
@@ -167,6 +183,9 @@ function getnewfeed_success(tx, results) {
         $('#divNonews').show();
 
     }
+    alert(intcount);
+
+
 }
 
 function loadsocialnews(e,ID){
@@ -338,19 +357,27 @@ function getnextnewfeed(){
 
     if (lastnews == newsid) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
+        intcount = allnews;
     } else {
         db.transaction(getdataplus, errorCBfunc, successCBfunc);
+        intcount = intcount +1;
     }
 
 }
 
 function getpervoiusnewfeed(){
 
+
+
     if (firstnews == newsid) {
         db.transaction(getdataminus2, errorCBfunc, successCBfunc);
+        intcount = 1;
     } else {
+
         db.transaction(getdataminus, errorCBfunc, successCBfunc);
+        intcount = intcount -1;
     }
+
 }
 
 function getdataminus(tx) {

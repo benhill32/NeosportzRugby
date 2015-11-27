@@ -15,6 +15,9 @@ function onDeviceReady() {
    // alert("Fav " + window.localStorage.getItem("fliter"));
 }
 
+
+
+
 function getfirstclub(tx) {
 
     var sql = "select ID from MobileApp_clubs WHERE DeletedateUTC = 'null' ORDER BY ID ASC LIMIT 1";
