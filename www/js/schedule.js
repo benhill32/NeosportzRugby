@@ -212,6 +212,7 @@ function getMenu_success(tx, results) {
 
             var today = new Date(currentyear,currentmonth,currentday);
 
+            alert(myDate + "-" + today);
 
             if (myDate == today) {
                 paneltype = "panel panel-primary";
