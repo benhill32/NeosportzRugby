@@ -214,13 +214,14 @@ function getMenu_success(tx, results) {
 
             alert(myDate + "-" + today);
 
-            if (myDate == today) {
-                paneltype = "panel panel-primary";
-            } else if (myDate > today) {
+
+            if (myDate < today) {
                 paneltype = "panel panel-info";
 
-            } else if (myDate < today) {
+            } else if (myDate > today) {
                 paneltype = "panel panel-success";
+            }else{
+                paneltype = "panel panel-primary";
             }
 
 
