@@ -210,7 +210,7 @@ function getMenu_success(tx, results) {
 
             var myDate = new Date(year, month - 1, day);
 
-            var today = new Date();
+            var today = new Date(currentyear,currentmonth,currentday);
 
             alert(myDate + " " + today);
             if (mydate == today) {
