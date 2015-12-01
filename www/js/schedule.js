@@ -176,7 +176,7 @@ function getMenu_success(tx, results) {
         var timesplit = res[1].split(":")
         var h = timesplit[0];
         var m = timesplit[1];
-        var currentdate = new Date().setDate(date.getDate()+1)
+        var currentdate = new Date().setDate(date.getDate() + 1)
 
         currentdate = new Date(currentdate);
         var currentmonth = currentdate.getMonth();
@@ -186,25 +186,25 @@ function getMenu_success(tx, results) {
 
         var ampm = h > 12 ? h - 12 + ':' + m + 'PM' : h + ':' + m + 'AM';
 
-        if(menu.halftime != 'null' && menu.fulltime != 'null') {
+        if (menu.halftime != 'null' && menu.fulltime != 'null') {
             action = "Fulltime";
-        }else  if(menu.halftime != 'null' && menu.fulltime == 'null') {
+        } else if (menu.halftime != 'null' && menu.fulltime == 'null') {
             action = "Halftime";
-        }else  if(menu.halftime == 'null' && menu.fulltime == 'null') {
+        } else if (menu.halftime == 'null' && menu.fulltime == 'null') {
             action = "";
         }
-        var socialIOS = menu.DatetimeStart +  "||" + menu.HomeName + ' vs ' + menu.AwayName +  "||" + menu.TournamentName + "||" + menu.Field;
+        var socialIOS = menu.DatetimeStart + "||" + menu.HomeName + ' vs ' + menu.AwayName + "||" + menu.TournamentName + "||" + menu.Field;
 
-        var readmore = menu.ID + "||" + menu.HomeName +  "||" + menu.AwayName +  "||" + menu.HomeScore +  "||" + menu.AwayScore +  "||" + menu.HomeTeamID +  "||" + menu.AwayTeamID;
+        var readmore = menu.ID + "||" + menu.HomeName + "||" + menu.AwayName + "||" + menu.HomeScore + "||" + menu.AwayScore + "||" + menu.HomeTeamID + "||" + menu.AwayTeamID;
 
-        var score ="";
-       if(currentmonth != m && currentday != day && currentyear != year){
-           score =  menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
+        var score = "";
+        if (currentmonth != m && currentday != day && currentyear != year) {
+            score = menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
 
-       }
-    }
+        }
 
-var paneltype = "";
+
+        var paneltype = "";
         var cancel = "";
         if (menu.Cancelled == 0) {
 
@@ -213,56 +213,47 @@ var paneltype = "";
             var today = new Date();
 
             alert(mydate + " " + today);
-            if(mydate == today) {
-                paneltype="panel panel-primary";
-            }else if(myDate > today) {
-                paneltype="panel panel-info";
+            if (mydate == today) {
+                paneltype = "panel panel-primary";
+            } else if (myDate > today) {
+                paneltype = "panel panel-info";
 
-            }else if(myDate < today) {
-                paneltype="panel panel-success";
+            } else if (myDate < today) {
+                paneltype = "panel panel-success";
             }
 
 
-
-
-            } else {
+        } else {
             paneltype = "panel panel-danger";
-            cancel ="Cancelled";
+            cancel = "Cancelled";
         }
 
 
-
-            $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
-                '<div class="panel-heading">' +
-                '<div class="row">' +
-                '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-                    //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
-                '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + score + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '  ' + cancel + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>');
-
+        $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
+            '<div class="panel-heading">' +
+            '<div class="row">' +
+            '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
+                //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
+            '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
+            '</div>' +
+            '<div class="row">' +
+            '<div class="col-xs-12 col-md-12 size11"   align="left">' + score + '</div>' +
+            '</div>' +
+            '<div class="row">' +
+            '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '</div>' +
+            '</div>' +
+            '<div class="row">' +
+            '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '  ' + cancel + '</div>' +
+            '</div>' +
+            '<div class="row">' +
+            '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>');
 
 
-
-
-
-
-
-
+    }
 
 
 
