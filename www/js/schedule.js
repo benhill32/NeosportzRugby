@@ -212,7 +212,7 @@ function getMenu_success(tx, results) {
 
             var today = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate());
 
-            alert(myDate + "-" + today);
+
 
 
             if (myDate < today) {
@@ -230,7 +230,7 @@ function getMenu_success(tx, results) {
             cancel = "Cancelled";
         }
 
-        alert(paneltype);
+
 
 
         $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
