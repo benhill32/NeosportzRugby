@@ -212,7 +212,7 @@ function getMenu_success(tx, results) {
 
             var today = new Date(currentyear,currentmonth,currentday);
 
-            alert(myDate + " " + today);
+         
             if (mydate == today) {
                 paneltype = "panel panel-primary";
             } else if (myDate > today) {
@@ -227,6 +227,8 @@ function getMenu_success(tx, results) {
             paneltype = "panel panel-danger";
             cancel = "Cancelled";
         }
+
+        alert(paneltype);
 
 
         $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
