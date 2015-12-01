@@ -238,7 +238,7 @@ function getMenu_success(tx, results) {
         $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
             '<div class="panel-heading">' +
             '<div class="row">' +
-            '<div class="col-xs-12 col-md-12"  align="center"><img src="data:image/png;base64,' + getimageclub(menu.HomeClubID) + '"  align="left" height="40">' + menu.HomeName + ' vs <img src="data:image/png;base64,' + getimageclub(menu.AwayClubID) + '"  align="left" height="40">' + menu.AwayName + '</div>' +
+            '<div class="col-xs-12 col-md-12"  align="center"><img src="http://rugby.neosportz.com/Icons/Club/Taradale-Ball.png"  align="left" height="40">' + menu.HomeName + ' vs <img src="http://rugby.neosportz.com/Icons/Club/marist.png"  align="left" height="40">' + menu.AwayName + '</div>' +
                 //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
             '</div>' +
                 '</div>' +
@@ -323,39 +323,6 @@ function loadstatssystem(Gameid1){
 
 
 }
-
-function getimageclub(ID){
-
-    clubID = ID;
-    db.transaction(getimgaeclubdata, errorCBfunc, successCBfunc);
-
-}
-
-
-
-function getimgaeclubdata(tx) {
-
-    var sql = "select Base64 from MobileApp_clubs WHERE DeletedateUTC = 'null' and ID = " + clubID;
-    //alert(sql);
-    tx.executeSql(sql, [], getimgaeclubdata_success);
-}
-
-
-function getimgaeclubdata_success(tx, results) {
-
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-
-    return  menu.base64;
-
-
-}
-
-
-
-
-
 
 function loadinfo(ID) {
     IDhist = ID;
