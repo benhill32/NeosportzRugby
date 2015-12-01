@@ -200,21 +200,44 @@ function getMenu_success(tx, results) {
         var score ="";
        if(currentmonth != m && currentday != day && currentyear != year){
            score =  menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
+
        }
+    }
 
-
+var paneltype = "";
+        var cancel = "";
         if (menu.Cancelled == 0) {
 
+            var myDate = new Date(year, month - 1, day);
 
-            $('#divschedules').append('<div class="panel panel-default" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
+            var today = new Date();
 
+            alert(mydate + " " + today);
+            if(mydate == today) {
+                paneltype="panel panel-primary";
+            }else if(myDate > today) {
+                paneltype="panel panel-info";
+
+            }else if(myDate < today) {
+                paneltype="panel panel-success";
+            }
+
+
+
+
+            } else {
+            paneltype = "panel panel-danger";
+            cancel ="Cancelled";
+        }
+
+
+
+            $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
                 '<div class="panel-heading">' +
                 '<div class="row">' +
                 '<div class="col-xs-8 col-md-8"  align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-                //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
+                    //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
                 '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
-
-
                 '</div>' +
                 '<div class="row">' +
                 '<div class="col-xs-12 col-md-12 size11"   align="left">' + score + '</div>' +
@@ -223,7 +246,7 @@ function getMenu_success(tx, results) {
                 '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '</div>' +
                 '</div>' +
                 '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '</div>' +
+                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '  ' + cancel + '</div>' +
                 '</div>' +
                 '<div class="row">' +
                 '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
@@ -233,31 +256,16 @@ function getMenu_success(tx, results) {
                 '</div>');
 
 
-        } else {
-
-            $('#divschedules').append('<div class="panel panel-danger" id="' + divid + '">' +
-
-                '<div class="panel-heading">' +
-                '<div class="row">' +
-                '<div class="col-xs-8 col-md-8"   align="left">' + menu.HomeName + ' vs ' + menu.AwayName + '</div>' +
-                '<div class="col-xs-4 col-md-4"></div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '  ' + day + '/' + month + '/' + year + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + ' ' + ' Cancelled ' + '</div>' +
-                '</div>' +
-                '<div class="row">' +
-                '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>');
 
 
-        }
-    }
+
+
+
+
+
+
+
+
     }else{
 
         $('#divschedules').append('<div class="panel panel-default">' +

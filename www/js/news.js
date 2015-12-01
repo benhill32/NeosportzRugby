@@ -183,7 +183,7 @@ function getnewfeed_success(tx, results) {
         $('#divNonews').show();
 
     }
-    alert(intcount);
+    //alert(intcount);
 
 
 }
