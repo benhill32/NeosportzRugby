@@ -240,6 +240,9 @@ function getMenu_success(tx, results) {
                 //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
             '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
             '</div>' +
+                '</div>' +
+            '<div class="panel-body">' +
+
             '<div class="row">' +
             '<div class="col-xs-12 col-md-12 size11"   align="left">' + score + '</div>' +
             '</div>' +
