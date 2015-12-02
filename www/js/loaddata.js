@@ -431,6 +431,10 @@ function reloadindividual(){
 
     $('#indexloadingdata').modal('hide');
 
+    if (document.getElementById("divschedules") != null) {
+        $('#loadinggears').hide();
+        db.transaction(getdatasch, errorCBfunc, successCBfunc)
+    }
 
     if (document.getElementById("newsmain") != null) {
         $.mobile.loading().hide();

@@ -396,14 +396,27 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
 
         var obj = JSON.parse(json);
 
-        var count= 0;
-        $.each(obj.App_Games, function (idx, obj) {
 
-            count  = count +1;
-        });
 
-        alert(count);
-        syncmaintableindividual(obj);
+
+        if (document.getElementById("divschedules") != null) {
+            var count= 0;
+            $.each(obj.App_Games, function (idx, obj) {
+                count  = count +1;
+            });
+
+            if(count != 0) {
+                syncmaintableindividual(obj);
+            }else{
+                $('#loadinggears').hide();
+                reloadindividual();
+            }
+        }else{
+
+            syncmaintableindividual(obj);
+        }
+
+
 
 
 

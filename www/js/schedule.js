@@ -42,7 +42,7 @@ function onDeviceReadysch() {
 }
 
 function datecheck(d,a){
-
+    $('#loadinggears').show();
    if(a == 0){
        date = d;
        var z = date.getMonth() + 1;
@@ -118,7 +118,7 @@ function getgameids_success(tx, results) {
 
 
 
-    db.transaction(getdata, errorCBfunc, successCBfunc);
+  ;
 
 }
 
@@ -126,7 +126,7 @@ function getgameids_success(tx, results) {
 
 
 
-function getdata(tx) {
+function getdatasch(tx) {
 
 
 
