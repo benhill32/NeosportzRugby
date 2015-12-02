@@ -394,12 +394,15 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
         var json = xmlHttp.responseText;
        // alert(json);
 
-
-
-
         var obj = JSON.parse(json);
-        var length = Object.keys(obj).length;
-        alert(length);
+
+        var count= 0;
+        $.each(obj.App_Games, function (idx, obj) {
+
+            count  = count +1;
+        });
+
+        alert(count);
         syncmaintableindividual(obj);
 
 
