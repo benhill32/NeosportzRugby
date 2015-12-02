@@ -203,23 +203,14 @@ function getMenu_success(tx, results) {
             score = menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
 
         }
-
+//Logos for the clubs.
         var array = window.localStorage.getItem("clubarray").split(",");
-
-        $.each(array,function(i){
-            alert(array[i]);
-        });
-
-        //alert("sch" + window.localStorage.getItem("clubarray"));
         var homeimage= "";
         var awayimage = "";
-        for	(index = 0; index < window.localStorage.getItem("clubarray").length; index++) {
+        $.each(array,function(i){
+            alert(array[i]);
 
-
-            var clubi = window.localStorage.getItem("clubarray")[index];
-
-            var res = clubi.split("-$$-");
-           // alert(res[0]);
+            var res = array[i].split("-$$-");
             if(res[0] == menu.HomeClubID){
 
                 homeimage =  res[1];
@@ -227,9 +218,7 @@ function getMenu_success(tx, results) {
                 awayimage = res[1];
             }
 
-        }
-
-
+        });
 
         var paneltype = "";
         var cancel = "";
