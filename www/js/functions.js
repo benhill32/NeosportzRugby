@@ -1237,6 +1237,32 @@ function getdata2_success(tx, results) {
     window.localStorage.setItem("listfollow", listfollow);
     //   alert(listfollow);
 
+    db.transaction(getdata3, errorCBfunc, successCBfunc);
+
+
+}
+
+function getdata3(tx) {
+    var sql = "select ID,Base64 from MobileApp_clubs";
+    //alert(sql);
+    tx.executeSql(sql, [], getdata3_success);
+}
+
+function getdata3_success(tx, results) {
+
+    var len = results.rows.length;
+    var array = [];
+
+    if(len != 0) {
+        for (var i=0; i<len; i++) {
+            var menu = results.rows.item(i);
+            array.push(menu.ID + "-$$-" + menu.Base64);
+        }
+    }
+
+    window.localStorage.setItem("clubarray", array);
+       alert(listfollow);
+
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set oneoffs = 1');

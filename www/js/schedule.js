@@ -205,6 +205,9 @@ function getMenu_success(tx, results) {
         }
 
 
+
+        alert(window.localStorage.getItem("clubarray"));
+
         var paneltype = "";
         var cancel = "";
         if (menu.Cancelled == 0) {
@@ -238,7 +241,7 @@ function getMenu_success(tx, results) {
         $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
             '<div class="panel-heading">' +
             '<div class="row">' +
-            '<div class="col-xs-12 col-md-12"  align="center"><img src="http://rugby.neosportz.com/Icons/Club/Taradale-Ball.png"  align="left" height="40">' + menu.HomeName + ' vs <img src="http://rugby.neosportz.com/Icons/Club/marist.png"  align="left" height="40">' + menu.AwayName + '</div>' +
+            '<div class="col-xs-12 col-md-12"  align="center"><img src="http://rugby.neosportz.com/Icons/Club/Taradale-Ball.png" height="40">' + menu.HomeName + ' vs <img src="http://rugby.neosportz.com/Icons/Club/marist.png" height="40">' + menu.AwayName + '</div>' +
                 //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
             '</div>' +
                 '</div>' +
