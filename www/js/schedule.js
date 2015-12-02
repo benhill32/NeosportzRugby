@@ -311,9 +311,7 @@ function getMenu_success(tx, results) {
         if(menu.Latitude != "null" || menu.Longitude != "null" ) {
             $('#Directions' + menu.ID).show();
         }
-        if(menu.RefName != 'null') {
 
-        }
 
 
         $("#modelfooterupdate").click(function () {
@@ -348,8 +346,12 @@ function loadmap(lat,long){
 
 function checkref(ID,name){
     refgameid = ID;
-    $('#txtrefname').val(name);
-alert(ID);
+
+    if(menu.RefName != 'null') {
+        $('#txtrefname').val(name);
+    }
+
+
 }
 
 
@@ -362,7 +364,7 @@ function loadreftosystem(){
     });
 
     passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + window.localStorage.getItem("apptoken"))
-
+    db.transaction(getgameids, errorCBfunc, successCBfunc);
 }
 
 
