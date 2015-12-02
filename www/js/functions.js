@@ -1194,7 +1194,7 @@ function getdatanewssch(tx) {
 function getdatanewssch_success(tx, results) {
 
     var len = results.rows.length;
-//alert(len);
+alert("teamfollow");
 
     if(len == 1) {
         var menu = results.rows.item(0);
@@ -1206,41 +1206,14 @@ function getdatanewssch_success(tx, results) {
 
     }
 
-    db.transaction(getdata2, errorCBfunc, successCBfunc);
-}
-
-
-
-
-
-
-function getdata2(tx) {
-    var sql = "select ID from MobileApp_clubs where Follow = 1";
-    //alert(sql);
-    tx.executeSql(sql, [], getdata2_success);
-}
-
-function getdata2_success(tx, results) {
-
-    var len = results.rows.length;
-    listfollow = 0;
-
-    if(len != 0) {
-        for (var i=0; i<len; i++) {
-            var menu = results.rows.item(i);
-            listfollow = listfollow + menu.ID + ",";
-        }
-    }
-    listfollow =  listfollow + clubidtop + ","
-
-    listfollow = listfollow.substr(0, listfollow.length - 1);
-    window.localStorage.setItem("listfollow", listfollow);
-    //   alert(listfollow);
-
     db.transaction(getdata3, errorCBfunc, successCBfunc);
-
-
 }
+
+
+
+
+
+
 
 function getdata3(tx) {
     var sql = "select ID,Base64 from MobileApp_clubs";
