@@ -1161,7 +1161,7 @@ function getoneoff_success(tx, results) {
        // if(menu.oneoffs == 0) {
 
 
-alert("one off");
+//alert("one off");
 
 
             window.localStorage.setItem("allownewfeed", menu.allownewfeed);
@@ -1174,7 +1174,7 @@ alert("one off");
             window.localStorage.setItem("Clubedit", menu.Clubedit);
             window.localStorage.setItem("Ref", menu.Ref);
 
-        alert("one off");
+       // alert("one off");
 
             db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
       //  }
@@ -1196,7 +1196,7 @@ function getdatanewssch(tx) {
 function getdatanewssch_success(tx, results) {
 
     var len = results.rows.length;
-alert("teamfollow");
+//alert("teamfollow");
 
     if(len == 1) {
         var menu = results.rows.item(0);
@@ -1225,7 +1225,7 @@ function getdata3(tx) {
 
 function getdata3_success(tx, results) {
 
-    alert("Clubs");
+   // alert("Clubs");
     var len = results.rows.length;
     var array = ["test"];
 
