@@ -16,7 +16,7 @@ var scoringname =0;
 
 
 var clubedit = 0;
-var DIVid = getUrlVars()["divID"];
+var DIVid = "";
 var HBonus1= 0;
 var HBonus2= 0;
 var ABonus1= 0;

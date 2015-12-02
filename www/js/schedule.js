@@ -286,7 +286,9 @@ function getMenu_success(tx, results) {
             '<ul class="list-group">' +
             '<li class="list-group-item" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ') >Directions to Park</li>' +
             '<li class="list-group-item" id="socialshare' + menu.ID + '">Share</li>' +
-            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
+            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
+            '<li class="list-group-item" id="score' + menu.ID + '" onclick=loadscorecard('+ menu.ID + ') > Score Card</li>' +
+            '<li class="list-group-item" data-toggle="modal" data-target="#basicModaldefault" id="divdefault' + menu.ID + '" onclick="checkdefault(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Team Defaulted</li> ' +
 
             '</ul>' +
 
@@ -312,12 +314,6 @@ function getMenu_success(tx, results) {
             $('#Directions' + menu.ID).show();
         }
 
-
-
-        $("#modelfooterupdate").click(function () {
-            loadreftosystem();
-        });
-
     }
 
 
@@ -330,14 +326,26 @@ function getMenu_success(tx, results) {
             '</div>' +
             '</div>');
     }
-    //$('#divcircle').show();
-  //  $('#divcircle').click(function() {
-   //     sendinfotoserver("schedules2",0,"0",datesend)
-  //  });
 
 
 
 
+}
+function checkdefault(ID,Home,Away){
+    $('#divhometeam').empty().html('Home Team : ' + Home);
+    $("#divhometeam").click(function () {
+        checkdefaultgames(1,Home);
+    });
+
+    $('#divawayteam').empty().html('Away Team : ' + Away);
+    $("#divawayteam").click(function () {
+        checkdefaultgames(2,Away);
+    });
+
+}
+
+function loadscorecard(ID){
+    window.open("scorecard.html?ID=" + ID);
 }
 
 function loadmap(lat,long){

@@ -571,11 +571,12 @@
         <div class="modal-dialog">
             <div class="modal-content">
 
-                <div id="divaddref">
-                    Referee's Name  <textarea id="txtrefname"></textarea>
+                <div id="divaddref" align="center">
 
+                    <label for="txtrefname"> Referee's Name </label>
+                    <input type="text" name="name" id="txtrefname" value=""  />
                 </div>
-                <div class="modal-footer" id="modelfooterupdate" data-dismiss="modal" align="center" >
+                <div class="modal-footer" id="modelfooterupdate" data-dismiss="modal" align="center" onclick="loadreftosystem()" >
                     Update
 
 
@@ -838,7 +839,7 @@
             </div>
         </div>
         </div>
-    <div id="divschedules" align="center">
+    <div id="divschedules" align="center" >
 
        <!-- <div class="panel panel-primary"  >
             <div class="panel-heading" data-toggle="modal" data-target="#basicModalresults">
