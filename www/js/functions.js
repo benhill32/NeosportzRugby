@@ -1174,6 +1174,8 @@ alert("one off");
             window.localStorage.setItem("Clubedit", menu.Clubedit);
             window.localStorage.setItem("Ref", menu.Ref);
 
+        alert("one off");
+
             db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
       //  }
 
