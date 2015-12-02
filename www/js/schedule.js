@@ -284,8 +284,8 @@ function getMenu_success(tx, results) {
 
             '<div style="" aria-expanded="false" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
             '<ul class="list-group">' +
-            '<li class="list-group-item">Directions</li>' +
-           '<li class="list-group-item">Scoreboard</li>' +
+            '<li class="list-group-item" onclick="window.open("https://www.google.co.nz/maps/dir/Current+Location/' + menu.Latitude + ',+' + menu.Longitude + '", "_system")" >Directions to Park</li>' +
+            '<li class="list-group-item" id="socialshare' + menu.ID + '">Share</li>' +
             '<li class="list-group-item">Screenshot</li> </ul>' +
 
             '</div>' +
@@ -293,10 +293,19 @@ function getMenu_success(tx, results) {
             '</div>' +
 
             '</ul>' +
-
-
-
             '</div>');
+
+        if (devicePlatformsch == "Android") {
+            $("#socialshare" + menu.ID).click(function () {
+                loadsocial(menu.ID);
+            });
+        }else{
+            $("#socialshare" + menu.ID).click(function () {
+                loadsocialIOS2(socialIOS);
+            });
+
+        }
+
 
 
     }
