@@ -1211,12 +1211,6 @@ function getdatanewssch_success(tx, results) {
     db.transaction(getdata3, errorCBfunc, successCBfunc);
 }
 
-
-
-
-
-
-
 function getdata3(tx) {
     var sql = "select ID,Base64 from MobileApp_clubs";
     //alert(sql);
@@ -1227,7 +1221,7 @@ function getdata3_success(tx, results) {
 
    // alert("Clubs");
     var len = results.rows.length;
-    var array = ["test"];
+    var array = ["0-$$-test"];
 
     if(len != 0) {
         for (var i=0; i<len; i++) {
