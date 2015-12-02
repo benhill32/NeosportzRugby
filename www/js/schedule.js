@@ -208,7 +208,7 @@ function getMenu_success(tx, results) {
         var homeimage= "";
         var awayimage = "";
         $.each(array,function(i){
-            alert(array[i]);
+           // alert(array[i]);
 
             var res = array[i].split("-$$-");
             if(res[0] == menu.HomeClubID){
