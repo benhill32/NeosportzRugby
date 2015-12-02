@@ -251,8 +251,8 @@ function getMenu_success(tx, results) {
        // '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
 
 
-        $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
-            '<div class="panel-heading">' +
+        $('#divschedules').append('<div class="' + paneltype + '" >' +
+            '<div class="panel-heading"  data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
             '<div class="row">' +
             '<div class="col-xs-5">' +
             '<img src="http://rugby.neosportz.com/Icons/Club/' + homeimage + '" height="40px" ><br>' + menu.HomeName +
@@ -282,7 +282,7 @@ function getMenu_success(tx, results) {
             '</h4>' +
             '</div>' +
 
-            '<div style="" aria-expanded="true" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
+            '<div style="" aria-expanded="false" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
             '<ul class="list-group">' +
             '<li class="list-group-item">Directions</li>' +
            '<li class="list-group-item">Scoreboard</li>' +
