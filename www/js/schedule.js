@@ -253,26 +253,25 @@ function getMenu_success(tx, results) {
         $('#divschedules').append('<div class="' + paneltype + '" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
             '<div class="panel-heading">' +
             '<div class="row">' +
-            '<div class="col-xs-12 col-md-12"  align="center"><img src="http://rugby.neosportz.com/Icons/Club/' + homeimage + '" height="40">' + menu.HomeName + ' vs <img src="http://rugby.neosportz.com/Icons/Club/' + awayimage + '" height="40">' + menu.AwayName + '</div>' +
-                //'<div class="col-xs-4 col-md-4" onclick="loadinfo(' + menu.ID + ')" data-toggle="modal" data-target="#basicModal"><img height="30px" class="imagesch"  align="right" ></div>' +
+            '<div class="col-xs-5">' +
+            '<img src="http://rugby.neosportz.com/Icons/Club/' + homeimage + '" height="40px" ><br>' + menu.HomeName +
             '</div>' +
-                '</div>' +
-            '<div class="panel-body">' +
+            '<div class="col-xs-2" style="padding-top:10px;">vs </div>' +
+            '<div class="col-xs-5">' +
+            '<img src="http://rugby.neosportz.com/Icons/Club/' + awayimage + '" height="40px" ><br>' + menu.AwayName +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<ul class="list-group">' +
+            '<li class="list-group-item">' + score + '</li>' +
+            '<li class="list-group-item">' + ampm + '</li>' +
+            '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
+            '<li class="list-group-item">' +  menu.Field + '</li>' +
 
-            '<div class="row">' +
-            '<div class="col-xs-12 col-md-12 size11"   align="left">' + score + '</div>' +
-            '</div>' +
-            '<div class="row">' +
-            '<div class="col-xs-12 col-md-12 size11"   align="left">' + ampm + '</div>' +
-            '</div>' +
-            '<div class="row">' +
-            '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.TournamentName + '  ' + cancel + '</div>' +
-            '</div>' +
-            '<div class="row">' +
-            '<div class="col-xs-12 col-md-12 size11"   align="left">' + menu.Field + '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
+            '</ul>' +
+
+
+
             '</div>');
 
 
