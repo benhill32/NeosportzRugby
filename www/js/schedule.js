@@ -206,7 +206,7 @@ function getMenu_success(tx, results) {
 
 
 
-        alert(window.localStorage.getItem("clubarray"));
+        alert("sch" + window.localStorage.getItem("clubarray"));
 
         var paneltype = "";
         var cancel = "";
