@@ -204,6 +204,8 @@ function getMenu_success(tx, results) {
 
         }
 
+
+        alert("sch" + window.localStorage.getItem("clubarray"));
         var homeimage= "";
         var awayimage = "";
         for	(index = 0; index < window.localStorage.getItem("clubarray").length; index++) {
@@ -211,7 +213,7 @@ function getMenu_success(tx, results) {
 
             var clubi = window.localStorage.getItem("clubarray")[index];
             var res = clubi.split("-$$-");
-
+            alert(res[0]);
             if(res[0] == menu.HomeClubID){
 
                 homeimage =  res[1];
@@ -221,7 +223,7 @@ function getMenu_success(tx, results) {
 
         }
 
-        //alert("sch" + window.localStorage.getItem("clubarray"));
+
 
         var paneltype = "";
         var cancel = "";
