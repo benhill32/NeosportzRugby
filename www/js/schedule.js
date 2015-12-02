@@ -284,9 +284,9 @@ function getMenu_success(tx, results) {
 
             '<div style="" aria-expanded="false" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
             '<ul class="list-group">' +
-            '<li class="list-group-item" id="Directions' + menu.ID + '" >Directions to Park</li>' +
+            '<li class="list-group-item" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ') >Directions to Park</li>' +
             '<li class="list-group-item" id="socialshare' + menu.ID + '">Share</li>' +
-            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" > Add Referee</li> ' +
+            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
 
             '</ul>' +
 
@@ -310,16 +310,11 @@ function getMenu_success(tx, results) {
 
         if(menu.Latitude != "null" || menu.Longitude != "null" ) {
             $('#Directions' + menu.ID).show();
-            $("#Directions" + menu.ID).click(function () {
-                window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Latitude + ",+" + menu.Longitude, "_system")
-            });
         }
         if(menu.RefName != 'null') {
-            $('#txtrefname').val(menu.RefName);
+
         }
-        $("#referee" + menu.ID).click(function () {
-            refgameid = menu.ID;
-        });
+
 
         $("#modelfooterupdate").click(function () {
             loadreftosystem();
@@ -345,6 +340,16 @@ function getMenu_success(tx, results) {
 
 
 
+}
+
+function loadmap(lat,long){
+    window.open("https://www.google.co.nz/maps/dir/Current+Location/" + lat + ",+" + long, "_system")
+}
+
+function checkref(ID,name){
+    refgameid = ID;
+    $('#txtrefname').val(name);
+alert(ID);
 }
 
 
