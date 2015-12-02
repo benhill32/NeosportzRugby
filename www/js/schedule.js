@@ -204,6 +204,11 @@ function getMenu_success(tx, results) {
 
         }
 
+        var array = window.localStorage.getItem("clubarray").split("-$$-");
+
+        $.each(array,function(i){
+            alert(array[i]);
+        });
 
         alert("sch" + window.localStorage.getItem("clubarray"));
         var homeimage= "";
@@ -212,8 +217,9 @@ function getMenu_success(tx, results) {
 
 
             var clubi = window.localStorage.getItem("clubarray")[index];
+
             var res = clubi.split("-$$-");
-            alert(res[0]);
+           // alert(res[0]);
             if(res[0] == menu.HomeClubID){
 
                 homeimage =  res[1];
