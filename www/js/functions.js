@@ -1229,7 +1229,7 @@ function getdata3_success(tx, results) {
             array.push(menu.ID + "-$$-" + menu.Base64);
         }
     }
-    alert("functions" + array);
+  //  alert("functions" + array);
     window.localStorage.setItem("clubarray", array);
 
 

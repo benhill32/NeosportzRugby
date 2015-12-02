@@ -204,13 +204,13 @@ function getMenu_success(tx, results) {
 
         }
 
-        var array = window.localStorage.getItem("clubarray").split("-$$-");
+        var array = window.localStorage.getItem("clubarray").split(",");
 
         $.each(array,function(i){
             alert(array[i]);
         });
 
-        alert("sch" + window.localStorage.getItem("clubarray"));
+        //alert("sch" + window.localStorage.getItem("clubarray"));
         var homeimage= "";
         var awayimage = "";
         for	(index = 0; index < window.localStorage.getItem("clubarray").length; index++) {
