@@ -1024,7 +1024,7 @@ function cancelgamenow(ID){
     checkonlinefunctions();
     if(networkconnectionfun !=0) {
         db.transaction(gettoken1, errorCBfunc, successCBfunc);
-       passcancelgametoserver("deviceid=" + deviceIDfunc + "&token=" + apptoken + "&gameid=" + ID);
+       passcancelgametoserver("deviceid=" + deviceIDfunc + "&token=" + window.localStorage.getItem("apptoken") + "&gameid=" + ID);
       //  passcancelgametoserver("deviceid=a07883508d108e26&token=9d190637-2feb-4a26-ba72-9a158a220a2a&gameid=" + ID);
 
 

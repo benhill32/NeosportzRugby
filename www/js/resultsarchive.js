@@ -215,54 +215,7 @@ function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd
 
 }
 
-function getgoals(tx){
-   var sql= "select m.ID,m.CreatedateUTC,m.UpdatedateUTC,m.DeletedateUTC,m.TeamID,m.GameID,m.PlayerID,m.ScoringID,m.Time,p.FullName from Mobilescoringbreakdown as m INNER JOIN " +
-       "MobilevwApp_Base_Players as p  ON p.ID = m.PlayerID " +
-       "where GameID = " + gameid + " order by m.Time";
- //alert(sql);
-    tx.executeSql(sql, [], getgoals_success);
-}
 
-
-function getgoals_success(tx, results) {
-    var len = results.rows.length;
-
-    $('#resulthomegoals').empty();
-    $('#resultawaygoals').empty();
-
-    for (var i=0; i<len; i++) {
-        var menu = results.rows.item(i);
-    var time = menu.Time + "\'";
-
-        if(menu.TeamID == homeid){
-            $('#resulthomegoals').append('<img src="../img/image.php.png">' + ' ' + menu.FullName + " " + time + '<br>');
-        }
-        if(menu.TeamID == awayid){
-            $('#resultawaygoals').append('<img src="../img/image.php.png">' + ' ' + menu.FullName + " "  + time + '<br>');
-        }
-
-        if( $('#resulthomegoals').is(':empty') ) {
-
-            $('#resulthomegoals').append('&nbsp;');
-        }
-        if( $('#resultawaygoals').is(':empty') ) {
-            $('#resultawaygoals').append('&nbsp;');
-        }
-
-    }
-
-
-    if(len==0){
-        $('#divscorers').hide();
-
-    }else{
-        $('#divscorers').show();
-
-    }
-
-
-
-}
 
 function getUrlVars() {
     var vars = [], hash;

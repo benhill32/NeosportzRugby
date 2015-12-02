@@ -27,6 +27,7 @@ var date = "";
 var date2 = "";
 var datesend = "";
 var clubID = "";
+var IDcancel = 0;
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
@@ -274,6 +275,9 @@ function getMenu_success(tx, results) {
             '<li class="list-group-item">' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
             '<li class="list-group-item">' +  menu.Field + '</li>' +
+            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalresults" onclick="resultsmore()">Read More</li>' +
+
+
             '<div class="panel-group" role="tablist">' +
             '<div class="panel panel-default">' +
             '<div class="panel-heading" role="tab" id="collapseListGroupHeading' + menu.ID + '">' +
@@ -289,6 +293,9 @@ function getMenu_success(tx, results) {
             '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
             '<li class="list-group-item" id="score' + menu.ID + '" onclick=loadscorecard('+ menu.ID + ') > Score Card</li>' +
             '<li class="list-group-item" data-toggle="modal" data-target="#basicModaldefault" id="divdefault' + menu.ID + '" onclick="checkdefault(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Team Defaulted</li> ' +
+            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalcancel" id="cancell' + menu.ID + '" onclick="cgame(' + menu.ID + ')" >Cancel Game!</li>' +
+
+
 
             '</ul>' +
 
@@ -331,6 +338,31 @@ function getMenu_success(tx, results) {
 
 
 }
+
+function resultsmore(){
+    //alert(resultID);
+    var values = resultID.split('||');
+
+    resultshowmore(values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
+
+}
+
+
+function cgame(ID){
+    IDcancel = ID;
+}
+
+
+function cancelgame(){
+
+
+
+    cancelgamenow(IDcancel);
+
+
+
+}
+
 function checkdefault(ID,Home,Away){
     $('#divhometeam').empty().html('Home Team : ' + Home);
     $("#divhometeam").click(function () {
@@ -389,6 +421,76 @@ function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd
     db.transaction(getgoals, errorCBfunc, successCBfunc);
 
 }
+
+function getgoals(tx){
+    var sql= "select m.ID,m.CreatedateUTC,m.UpdatedateUTC,m.DeletedateUTC,m.TeamID,m.GameID,m.PlayerID,m.ScoringID,m.Time,p.FullName from Mobilescoringbreakdown as m INNER JOIN " +
+        "MobilevwApp_Base_Players as p  ON p.ID = m.PlayerID " +
+        "where GameID = " + gameid + " order by CAST(m.Time AS INTEGER) ";
+ alert(sql);
+    tx.executeSql(sql, [], getgoals_success);
+}
+
+
+function getgoals_success(tx, results) {
+    var len = results.rows.length;
+//alert(len);
+    $('#resulthomegoals').empty();
+    $('#resultawaygoals').empty();
+
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
+        var time = menu.Time + "\'";
+
+        if(menu.TeamID == homeid){
+            if(menu.ScoringID == 2) {
+                $('#resulthomegoals').append('<img src="../img/image.php.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }else if(menu.ScoringID == 5) {
+                $('#resulthomegoals').append('<img src="../img/conver.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }else if(menu.ScoringID == 6) {
+                $('#resulthomegoals').append('<img src="../img/dropkick.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }else if(menu.ScoringID == 7) {
+                $('#resulthomegoals').append('<img src="../img/pen.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }
+        }
+        if(menu.TeamID == awayid){
+
+            if(menu.ScoringID == 2) {
+                $('#resultawaygoals').append('<img src="../img/image.php.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }else if(menu.ScoringID == 5) {
+                $('#resultawaygoals').append('<img src="../img/conver.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }else if(menu.ScoringID == 6) {
+                $('#resultawaygoals').append('<img src="../img/dropkick.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }else if(menu.ScoringID == 7) {
+                $('#resultawaygoals').append('<img src="../img/pen.png">' + ' ' + menu.FullName + " " + time + '<br>');
+            }
+
+        }
+
+        if( $('#resulthomegoals').is(':empty') ) {
+
+            $('#resulthomegoals').append('&nbsp;');
+        }
+        if( $('#resultawaygoals').is(':empty') ) {
+            $('#resultawaygoals').append('&nbsp;');
+        }
+
+    }
+
+
+    if(len==0){
+        $('#divscorers').hide();
+
+
+
+    }else{
+        $('#divscorers').show();
+
+    }
+
+
+
+}
+
 
 
 function resultssharemore(e,ID,ID2) {
@@ -837,15 +939,7 @@ function createvarforremind(DatetimeStart,text){
     remindtext = text;
 }
 
-function cancelgame(){
 
-
-
-    cancelgamenow(IDhist);
-
-
-
-}
 
 function getpervoiusday(){
 
