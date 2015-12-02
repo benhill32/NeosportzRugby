@@ -199,10 +199,8 @@ function getMenu_success(tx, results) {
         var readmore = menu.ID + "||" + menu.HomeName + "||" + menu.AwayName + "||" + menu.HomeScore + "||" + menu.AwayScore + "||" + menu.HomeTeamID + "||" + menu.AwayTeamID;
 
         var score = "";
-        if (currentmonth != m && currentday != day && currentyear != year) {
-            score = menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
 
-        }
+
 //Logos for the clubs.
         var array = window.localStorage.getItem("clubarray").split(",");
         var homeimage= "";
@@ -233,11 +231,14 @@ function getMenu_success(tx, results) {
 
             if (myDate < today) {
                 paneltype = "panel panel-info";
-
+                score = menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
+                $('lstscore').show();
             } else if (myDate > today) {
                 paneltype = "panel panel-success";
+                $('lstscore').hide();
             }else{
                 paneltype = "panel panel-primary";
+                $('lstscore').hide();
             }
 
 
@@ -263,7 +264,7 @@ function getMenu_success(tx, results) {
             '</div>' +
             '</div>' +
             '<ul class="list-group">' +
-            '<li class="list-group-item">' + score + '</li>' +
+            '<li class="list-group-item" id="lstscore">' + score + '</li>' +
             '<li class="list-group-item">' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
             '<li class="list-group-item">' +  menu.Field + '</li>' +
