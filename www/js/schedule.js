@@ -192,7 +192,7 @@ function getMenu_success(tx, results) {
         } else if (menu.halftime != 'null' && menu.fulltime == 'null') {
             action = "Halftime";
         } else if (menu.halftime == 'null' && menu.fulltime == 'null') {
-            action = "";
+            action = "-";
         }
         var socialIOS = menu.DatetimeStart + "||" + menu.HomeName + ' vs ' + menu.AwayName + "||" + menu.TournamentName + "||" + menu.Field;
 
@@ -264,10 +264,33 @@ function getMenu_success(tx, results) {
             '</div>' +
             '</div>' +
             '<ul class="list-group">' +
-            '<li class="list-group-item" id="lstscore">' + score + '</li>' +
+            '<li class="list-group-item" id="lstscore" style="font-weight: bold;">' +
+            '<div class="row">' +
+            '<div class="col-xs-5">' + menu.HomeScore + '</div>' +
+            '<div class="col-xs-2" >' + action + ' </div>' +
+            '<div class="col-xs-5">' + menu.AwayScore + '</div>' +
+            '</div>' +
+            '</li>' +
             '<li class="list-group-item">' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
             '<li class="list-group-item">' +  menu.Field + '</li>' +
+            '<div class="panel-group" role="tablist">' +
+            '<div class="panel panel-default">' +
+            '<div class="panel-heading" role="tab" id="collapseListGroupHeading' + menu.ID + '">' +
+            '<h4 class="panel-title">' +
+            '<a class="" role="button" data-toggle="collapse" href="#collapseListGroup' + menu.ID + '" aria-expanded="true" aria-controls="collapseListGroup' + menu.ID + '"> More Info </a>' +
+            '</h4>' +
+            '</div>' +
+
+            '<div style="" aria-expanded="true" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
+            '<ul class="list-group">' +
+            '<li class="list-group-item">Directions</li>' +
+           '<li class="list-group-item">Scoreboard</li>' +
+            '<li class="list-group-item">Screenshot</li> </ul>' +
+
+            '</div>' +
+            '</div>' +
+            '</div>' +
 
             '</ul>' +
 

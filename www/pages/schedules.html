@@ -47,6 +47,16 @@
             font-size: 15px;
 
         }
+        a:hover, a:focus{
+            text-decoration: none;
+            color: #333;
+        }
+        a{
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+        }
     </style>
 
     <script type="text/javascript">
@@ -826,8 +836,8 @@
         </div>
     <div id="divschedules" align="center">
 
-       <!-- <div class="panel panel-primary" data-toggle="modal" data-target="#basicModalresults" >
-            <div class="panel-heading">
+        <div class="panel panel-primary"  >
+            <div class="panel-heading" data-toggle="modal" data-target="#basicModalresults">
                 <div class="row">
 
                 <div class="col-xs-5">
@@ -852,9 +862,29 @@
                 <li class="list-group-item">ampm</li>
                 <li class="list-group-item">menu.TournamentName cancel</li>
                 <li class="list-group-item"> menu.Field</li>
-                    </ul>
+                    <div class="panel-group" role="tablist">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                                <h4 class="panel-title">
+                                    <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1"> Collapsible list group </a>
+                                </h4>
+                            </div>
 
-        </div>-->
+                        <div style="" aria-expanded="true" id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                            <ul class="list-group">
+                                <li class="list-group-item">Bootply</li>
+                                <li class="list-group-item">One itmus ac facilin</li>
+                                li class="list-group-item">Second eros</li> </ul>
+                            <div class="panel-footer">Footer</div>
+                        </div>
+                        </div>
+                    </div>
+
+
+                </ul>
+
+
+        </div>
 
 
     </div>
