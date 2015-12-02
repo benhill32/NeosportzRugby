@@ -1161,7 +1161,7 @@ function getoneoff_success(tx, results) {
         if(menu.oneoffs == 0) {
 
 
-//alert("one off");
+alert("one off");
 
 
             window.localStorage.setItem("allownewfeed", menu.allownewfeed);
@@ -1250,8 +1250,9 @@ function getdata3(tx) {
 
 function getdata3_success(tx, results) {
 
+    alert("Clubs");
     var len = results.rows.length;
-    var array = [];
+    var array = ["test"];
 
     if(len != 0) {
         for (var i=0; i<len; i++) {
