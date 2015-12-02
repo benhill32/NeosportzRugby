@@ -284,9 +284,11 @@ function getMenu_success(tx, results) {
 
             '<div style="" aria-expanded="false" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
             '<ul class="list-group">' +
-            '<li class="list-group-item" onclick="window.open("https://www.google.co.nz/maps/dir/Current+Location/' + menu.Latitude + ',+' + menu.Longitude + '", "_system")" >Directions to Park</li>' +
+            '<li class="list-group-item" id="Directions' + menu.ID + '" >Directions to Park</li>' +
             '<li class="list-group-item" id="socialshare' + menu.ID + '">Share</li>' +
-            '<li class="list-group-item">Screenshot</li> </ul>' +
+            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" > Add Referee</li> ' +
+
+            '</ul>' +
 
             '</div>' +
             '</div>' +
@@ -306,7 +308,22 @@ function getMenu_success(tx, results) {
 
         }
 
+        if(menu.Latitude != "null" || menu.Longitude != "null" ) {
+            $('#Directions' + menu.ID).show();
+            $("#Directions" + menu.ID).click(function () {
+                window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Latitude + ",+" + menu.Longitude, "_system")
+            });
+        }
+        if(menu.RefName != 'null') {
+            $('#txtrefname').val(menu.RefName);
+        }
+        $("#referee" + menu.ID).click(function () {
+            refgameid = menu.ID;
+        });
 
+        $("#modelfooterupdate").click(function () {
+            loadreftosystem();
+        });
 
     }
 
@@ -329,6 +346,20 @@ function getMenu_success(tx, results) {
 
 
 }
+
+
+function loadreftosystem(){
+
+   var Gameid1 = refgameid
+    db.transaction(function (tx) {
+        tx.executeSql('Update App_Games set RefName = "' + $('#txtrefname').val() + '" where ID = ' + Gameid1);
+        console.log("Update INTO App_Games");
+    });
+
+    passscoretoserver("gameidref=" + Gameid1 + "&refname=" + $('#txtrefname').val() + "&deviceid=" + device.uuid + "&token=" + window.localStorage.getItem("apptoken"))
+
+}
+
 
 function resultshowmore(ID,hometeam,awayteam,homescore,awayscore,homeidd,awayidd){
 
