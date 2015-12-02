@@ -393,7 +393,13 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
 
         var json = xmlHttp.responseText;
        // alert(json);
+
+
+
+
         var obj = JSON.parse(json);
+        var length = Object.keys(obj).length;
+        alert(length);
         syncmaintableindividual(obj);
 
 
