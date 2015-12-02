@@ -1158,7 +1158,7 @@ function getoneoff_success(tx, results) {
     if(len != 0) {
         var menu = results.rows.item(0);
 
-        if(menu.oneoffs == 0) {
+       // if(menu.oneoffs == 0) {
 
 
 alert("one off");
@@ -1175,7 +1175,7 @@ alert("one off");
             window.localStorage.setItem("Ref", menu.Ref);
 
             db.transaction(getdatanewssch, errorCBfunc, successCBfunc);
-        }
+      //  }
 
     }
 }
