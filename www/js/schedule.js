@@ -324,7 +324,7 @@ function getMenu_success(tx, results) {
         $('#cancell' + menu.ID).hide();
         $('#referee' + menu.ID).hide();
         $('#divdefault' + menu.ID).hide();
-
+        $('#adminmenu' + menu.ID).hide();
         if (myDate < today) {
 
             $('.lstscore').show();
@@ -334,6 +334,7 @@ function getMenu_success(tx, results) {
 
             if(window.localStorage.getItem("isadmin")==1) {
                 if (menu.IsFinalScore == 0) {
+                    $('#adminmenu' + menu.ID).show();
                     $('#score' + menu.ID).show();
                     $('#cancell' + menu.ID).show();
                     $('#referee' + menu.ID).show();
@@ -343,6 +344,7 @@ function getMenu_success(tx, results) {
             }else{
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
+                        $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                     }
                 }
@@ -354,6 +356,7 @@ function getMenu_success(tx, results) {
 
             if(window.localStorage.getItem("isadmin")==1) {
                // $('#score' + menu.ID).show();
+                $('#adminmenu' + menu.ID).show();
                 $('#cancell' + menu.ID).show();
                 $('#referee' + menu.ID).show();
                 $('#divdefault' + menu.ID).show();
@@ -369,6 +372,7 @@ function getMenu_success(tx, results) {
 
 
             if(window.localStorage.getItem("isadmin")==1) {
+                $('#adminmenu' + menu.ID).show();
                 $('#score' + menu.ID).show();
                 $('#cancell' + menu.ID).show();
                 $('#referee' + menu.ID).show();
@@ -377,17 +381,20 @@ function getMenu_success(tx, results) {
             }else{
                 if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
+                        $('#adminmenu' + menu.ID).show();
                         $('#cancell' + menu.ID).show();
                     }
                 }
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
+                        $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                         $('#divdefault' + menu.ID).show();
                     }
                 }
                 if (window.localStorage.getItem("Ref") == 1) {
                     if (menu.IsFinalScore == 0) {
+                        $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                         $('#cancell' + menu.ID).show();
                         $('#divdefault' + menu.ID).show();
