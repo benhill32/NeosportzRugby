@@ -268,7 +268,7 @@ function getMenu_success(tx, results) {
             '</div>' +
             '</div>' +
             '<ul class="list-group">' +
-            '<li class="list-group-item" id="lstscore" style="font-weight: bold;">' +
+            '<li class="list-group-item lstscore" id="lstscore" style="font-weight: bold;">' +
             '<div class="row">' +
             '<div class="col-xs-5">' + menu.HomeScore + '</div>' +
             '<div class="col-xs-2" >' + action + ' </div>' +
@@ -291,12 +291,12 @@ function getMenu_success(tx, results) {
 
             '<div style="" aria-expanded="false" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
             '<ul class="list-group">' +
-            '<li class="list-group-item" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ') >Directions to Park</li>' +
-            '<li class="list-group-item" id="socialshare' + menu.ID + '">Share</li>' +
-            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
-            '<li class="list-group-item" id="score' + menu.ID + '" onclick=loadscorecard('+ menu.ID + ') > Score Card</li>' +
-            '<li class="list-group-item" data-toggle="modal" data-target="#basicModaldefault" id="divdefault' + menu.ID + '" onclick="checkdefault(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Team Defaulted</li> ' +
-            '<li class="list-group-item" data-toggle="modal" data-target="#basicModalcancel" id="cancell' + menu.ID + '" onclick="cgame(' + menu.ID + ')" >Cancel Game!</li>' +
+            '<li class="list-group-item Directions" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ') >Directions to Park</li>' +
+            '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
+            '<li class="list-group-item " data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
+            '<li class="list-group-item " id="score' + menu.ID + '" onclick=loadscorecard('+ menu.ID + ') > Score Card</li>' +
+            '<li class="list-group-item " data-toggle="modal" data-target="#basicModaldefault" id="divdefault' + menu.ID + '" onclick="checkdefault(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Team Defaulted</li> ' +
+            '<li class="list-group-item " data-toggle="modal" data-target="#basicModalcancel" id="cancell' + menu.ID + '" onclick="cgame(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Cancel Game!</li>' +
 
 
 
@@ -323,6 +323,59 @@ function getMenu_success(tx, results) {
         if(menu.Latitude != "null" || menu.Longitude != "null" ) {
             $('#Directions' + menu.ID).show();
         }
+
+
+        if (myDate < today) {
+
+            $('.lstscore').show();
+            $('.Directions').hide();
+
+        } else if (myDate > today) {
+
+            $('.Directions').show();
+            $('.lstscore').hide();
+
+        }else{
+
+            $('.Directions').show();
+            $('.lstscore').show();
+        }
+
+
+        $('#score' + menu.ID).hide();
+        $('#cancell' + menu.ID).hide();
+        $('#referee' + menu.ID).hide();
+        $('#divdefault' + menu.ID).hide();
+
+        if(window.localStorage.getItem("isadmin")==1) {
+            $('#score' + menu.ID).show();
+            $('#cancell' + menu.ID).show();
+            $('#referee' + menu.ID).show();
+            $('#divdefault' + menu.ID).show();
+
+        }else{
+            if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
+                if (menu.IsFinalScore == 0) {
+                    $('#cancell' + menu.ID).show();
+                }
+            }
+            if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
+                if (menu.IsFinalScore == 0) {
+                    $('#score' + menu.ID).show();
+                    $('#divdefault' + menu.ID).show();
+                }
+            }
+            if (window.localStorage.getItem("Ref") == 1) {
+                if (menu.IsFinalScore == 0) {
+                    $('#score' + menu.ID).show();
+                    $('#cancell' + menu.ID).show();
+                    $('#divdefault' + menu.ID).show();
+                    $('#referee' + menu.ID).show();
+                }
+            }
+        }
+
+
 
     }
 
@@ -351,8 +404,10 @@ function resultsmore(){
 }
 
 
-function cgame(ID){
+function cgame(ID,Home,Away){
     IDcancel = ID;
+    var text22 =Home + ' vs ' + Away;
+    $('#divmainheadercancel').empty().append('Do you want to cancel this game </br> ' + text22)
 }
 
 
