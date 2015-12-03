@@ -56,7 +56,7 @@ function datecheck(d,a){
        document.getElementById("btndate").innerHTML=date2;
        datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
    }
-    $('#divschedules').empty();
+
     db.transaction(getgameids, errorCBfunc, successCBfunc);
 }
 
@@ -164,7 +164,7 @@ function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
-
+    $('#divschedules').empty();
     if(len != 0) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);

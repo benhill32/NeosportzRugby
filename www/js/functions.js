@@ -408,7 +408,7 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
             if(count != 0) {
                 syncmaintableindividual(obj);
             }else{
-                $('#loadinggears').hide();
+
                 reloadindividual();
             }
         }else{
