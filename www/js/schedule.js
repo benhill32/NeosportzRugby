@@ -277,8 +277,7 @@ function getMenu_success(tx, results) {
             '</li>' +
             '<li class="list-group-item time" >' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
-            '<li class="list-group-item Field">' +  menu.Field + '</li>' +
-            '<li class="list-group-item Directions " id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ') >Directions to Park</li>' +
+            '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  menu.Field + '</li>' +
             '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
 
             '<li class="list-group-item" data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">Read More</li>' +
@@ -332,7 +331,7 @@ function getMenu_success(tx, results) {
         if (myDate < today) {
 
             $('.lstscore').show();
-            $('.Directions').hide();
+
             $('.time').hide();
             $('.Field').hide();
 
@@ -353,7 +352,7 @@ function getMenu_success(tx, results) {
             }
         } else if (myDate > today) {
 
-            $('.Directions').show();
+            $('.Field').show();
             $('.lstscore').hide();
 
             if(window.localStorage.getItem("isadmin")==1) {
@@ -368,7 +367,7 @@ function getMenu_success(tx, results) {
 
         }else{
 
-            $('.Directions').show();
+            $('.Field').show();
             $('.lstscore').show();
 
 
