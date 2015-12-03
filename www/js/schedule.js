@@ -86,7 +86,9 @@ function onError(error) {
 
 
 function getgameids(tx){
+    $('#divschedules').empty();
     $('#loadinggears').show();
+
     var sql = "";
     var d = new Date(date);
     var secondsnow  = (d.getTime())/1000;
@@ -165,7 +167,7 @@ function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
 //alert(len);
-    $('#divschedules').empty();
+
     if(len != 0) {
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
