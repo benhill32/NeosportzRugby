@@ -323,57 +323,84 @@ function getMenu_success(tx, results) {
         if(menu.Latitude != "null" || menu.Longitude != "null" ) {
             $('#Directions' + menu.ID).show();
         }
-
+        $('#score' + menu.ID).hide();
+        $('#cancell' + menu.ID).hide();
+        $('#referee' + menu.ID).hide();
+        $('#divdefault' + menu.ID).hide();
 
         if (myDate < today) {
 
             $('.lstscore').show();
             $('.Directions').hide();
 
+            if(window.localStorage.getItem("isadmin")==1) {
+                if (menu.IsFinalScore == 0) {
+                    $('#score' + menu.ID).show();
+                    $('#cancell' + menu.ID).show();
+                    $('#referee' + menu.ID).show();
+                    $('#divdefault' + menu.ID).show();
+
+                }
+            }else{
+                if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
+                    if (menu.IsFinalScore == 0) {
+                        $('#score' + menu.ID).show();
+                    }
+                }
+            }
         } else if (myDate > today) {
 
             $('.Directions').show();
             $('.lstscore').hide();
 
+            if(window.localStorage.getItem("isadmin")==1) {
+               // $('#score' + menu.ID).show();
+                $('#cancell' + menu.ID).show();
+                $('#referee' + menu.ID).show();
+                $('#divdefault' + menu.ID).show();
+
+
+            }
+
+
         }else{
 
             $('.Directions').show();
             $('.lstscore').show();
+
+
+            if(window.localStorage.getItem("isadmin")==1) {
+                $('#score' + menu.ID).show();
+                $('#cancell' + menu.ID).show();
+                $('#referee' + menu.ID).show();
+                $('#divdefault' + menu.ID).show();
+
+            }else{
+                if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
+                    if (menu.IsFinalScore == 0) {
+                        $('#cancell' + menu.ID).show();
+                    }
+                }
+                if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
+                    if (menu.IsFinalScore == 0) {
+                        $('#score' + menu.ID).show();
+                        $('#divdefault' + menu.ID).show();
+                    }
+                }
+                if (window.localStorage.getItem("Ref") == 1) {
+                    if (menu.IsFinalScore == 0) {
+                        $('#score' + menu.ID).show();
+                        $('#cancell' + menu.ID).show();
+                        $('#divdefault' + menu.ID).show();
+                        $('#referee' + menu.ID).show();
+                    }
+                }
+            }
+
+
         }
 
 
-        $('#score' + menu.ID).hide();
-        $('#cancell' + menu.ID).hide();
-        $('#referee' + menu.ID).hide();
-        $('#divdefault' + menu.ID).hide();
-
-        if(window.localStorage.getItem("isadmin")==1) {
-            $('#score' + menu.ID).show();
-            $('#cancell' + menu.ID).show();
-            $('#referee' + menu.ID).show();
-            $('#divdefault' + menu.ID).show();
-
-        }else{
-            if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
-                if (menu.IsFinalScore == 0) {
-                    $('#cancell' + menu.ID).show();
-                }
-            }
-            if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
-                if (menu.IsFinalScore == 0) {
-                    $('#score' + menu.ID).show();
-                    $('#divdefault' + menu.ID).show();
-                }
-            }
-            if (window.localStorage.getItem("Ref") == 1) {
-                if (menu.IsFinalScore == 0) {
-                    $('#score' + menu.ID).show();
-                    $('#cancell' + menu.ID).show();
-                    $('#divdefault' + menu.ID).show();
-                    $('#referee' + menu.ID).show();
-                }
-            }
-        }
 
 
 
@@ -445,7 +472,7 @@ function loadmap(lat,long){
 function checkref(ID,name){
     refgameid = ID;
 
-    if(menu.RefName != 'null') {
+    if(name != 'null') {
         $('#txtrefname').val(name);
     }
 
