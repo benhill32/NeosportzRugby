@@ -257,7 +257,7 @@ function getMenu_success(tx, results) {
 
         $('#divschedules').append('<div class="' + paneltype + '" >' +
             '<div class="panel-heading"  data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
-            '<div class="row" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
+            '<div class="row" >' +
             '<div class="col-xs-5">' +
             '<img src="http://rugby.neosportz.com/Icons/Club/' + homeimage + '" height="40px" ><br>' + menu.HomeName +
             '</div>' +
@@ -268,7 +268,7 @@ function getMenu_success(tx, results) {
             '</div>' +
             '</div>' +
             '<ul class="list-group">' +
-            '<li class="list-group-item lstscore" id="lstscore" style="font-weight: bold;">' +
+            '<li class="list-group-item lstscore" id="lstscore" style="font-weight: bold;" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
             '<div class="row">' +
             '<div class="col-xs-5">' + menu.HomeScore + '</div>' +
             '<div class="col-xs-2" >' + action + ' </div>' +
