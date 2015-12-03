@@ -42,7 +42,7 @@ function onDeviceReadysch() {
 }
 
 function datecheck(d,a){
-    $('#loadinggears').show();
+
    if(a == 0){
        date = d;
        var z = date.getMonth() + 1;
@@ -86,6 +86,7 @@ function onError(error) {
 
 
 function getgameids(tx){
+    $('#loadinggears').show();
     var sql = "";
     var d = new Date(date);
     var secondsnow  = (d.getTime())/1000;
