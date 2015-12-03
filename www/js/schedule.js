@@ -256,9 +256,9 @@ function getMenu_success(tx, results) {
 
 
         $('#divschedules').append('<div class="' + paneltype + '" >' +
-            '<div class="panel-heading"  data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
-            '<div class="row" >' +
-            '<div class="col-xs-5">' +
+        '<div class="panel-heading"  data-toggle="modal" data-target="#basicModalresults" onclick="resultshowmore(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\',' + menu.HomeScore + ',' + menu.AwayScore + ',' + menu.HomeTeamID + ',' + menu.AwayTeamID + ')">' +
+         '<div class="row" >' +
+         '<div class="col-xs-5">' +
             '<img src="http://rugby.neosportz.com/Icons/Club/' + homeimage + '" height="40px" ><br>' + menu.HomeName +
             '</div>' +
             '<div class="col-xs-2" style="padding-top:10px;">vs </div>' +
@@ -287,16 +287,12 @@ function getMenu_success(tx, results) {
             '<a class="" role="button" data-toggle="collapse" href="#collapseListGroup' + menu.ID + '" aria-expanded="true" aria-controls="collapseListGroup' + menu.ID + '"> Admin Area </a>' +
             '</h4>' +
             '</div>' +
-
             '<div style="" aria-expanded="false" id="collapseListGroup' + menu.ID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading' + menu.ID + '">' +
             '<ul class="list-group">' +
             '<li class="list-group-item " data-toggle="modal" data-target="#basicModalref" id="referee' + menu.ID + '" onclick="checkref(' + menu.ID + ',\'' + menu.RefName + '\')" > Add Referee</li> ' +
             '<li class="list-group-item " id="score' + menu.ID + '" onclick=loadscorecard('+ menu.ID + ') > Score Card</li>' +
             '<li class="list-group-item " data-toggle="modal" data-target="#basicModaldefault" id="divdefault' + menu.ID + '" onclick="checkdefault(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Team Defaulted</li> ' +
             '<li class="list-group-item " data-toggle="modal" data-target="#basicModalcancel" id="cancell' + menu.ID + '" onclick="cgame(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Cancel Game!</li>' +
-
-
-
             '</ul>' +
 
             '</div>' +
