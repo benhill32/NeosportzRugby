@@ -113,19 +113,18 @@ body {
 
 .panel1{
 
-    border-color: #BCE8F1;
-    border-radius: 4px;
+    border-bottom-color:#BCE8F1 !important;
+    border-radius: 4px !important;
 }
 
 .panel2{
 
-    border-color: #D6E9C6;
-    border-radius: 4px;
+    border-bottom-color: #D6E9C6! important;
+    border-radius: 4px !important;
 }
 .panel3{
-
-    border-color: #337AB7;
-    border-radius: 4px;
+    border-bottom-color: #428bca !important;
+    border-radius: 4px !important;
 }
 
 
