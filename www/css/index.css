@@ -111,6 +111,25 @@ body {
 }
 
 
+.panel1{
+
+    border-color: #BCE8F1;
+    border-radius: 4px;
+}
+
+.panel2{
+
+    border-color: #D6E9C6;
+    border-radius: 4px;
+}
+.panel3{
+
+    border-color: #337AB7;
+    border-radius: 4px;
+}
+
+
+
 .imgheader{
 
     height: 20px;

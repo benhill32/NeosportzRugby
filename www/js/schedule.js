@@ -28,6 +28,7 @@ var date2 = "";
 var datesend = "";
 var clubID = "";
 var IDcancel = 0;
+var panelcolour= "";
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
@@ -235,13 +236,16 @@ function getMenu_success(tx, results) {
 
             if (myDate < today) {
                 paneltype = "panel panel-info";
+                panelcolour ="panel1";
                 score = menu.HomeScore + ' - ' + menu.AwayScore + '  ' + action;
                 $('lstscore').show();
             } else if (myDate > today) {
                 paneltype = "panel panel-success";
+                panelcolour ="panel2";
                 $('lstscore').hide();
             }else{
                 paneltype = "panel panel-primary";
+                panelcolour ="panel3";
                 $('lstscore').hide();
             }
 
@@ -321,6 +325,9 @@ function getMenu_success(tx, results) {
         $('#referee' + menu.ID).hide();
         $('#divdefault' + menu.ID).hide();
         $('#adminmenu' + menu.ID).hide();
+
+        $('#socialshare' + menu.ID).addClass(panelcolour);
+
         if (myDate < today) {
 
             $('.lstscore').show();
@@ -330,6 +337,7 @@ function getMenu_success(tx, results) {
 
             if(window.localStorage.getItem("isadmin")==1) {
                 if (menu.IsFinalScore == 0) {
+                    $('#socialshare' + menu.ID).removeClass(panelcolour);
                     $('#adminmenu' + menu.ID).show();
                     $('#score' + menu.ID).show();
                     $('#cancell' + menu.ID).show();
@@ -340,6 +348,7 @@ function getMenu_success(tx, results) {
             }else{
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
+                        $('#socialshare' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                     }
@@ -351,6 +360,7 @@ function getMenu_success(tx, results) {
             $('.lstscore').hide();
 
             if(window.localStorage.getItem("isadmin")==1) {
+                $('#socialshare' + menu.ID).removeClass(panelcolour);
                // $('#score' + menu.ID).show();
                 $('#adminmenu' + menu.ID).show();
                 $('#cancell' + menu.ID).show();
@@ -368,21 +378,25 @@ function getMenu_success(tx, results) {
 
 
             if(window.localStorage.getItem("isadmin")==1) {
+                $('#socialshare' + menu.ID).removeClass(panelcolour);
                 $('#adminmenu' + menu.ID).show();
                 $('#score' + menu.ID).show();
                 $('#cancell' + menu.ID).show();
                 $('#referee' + menu.ID).show();
                 $('#divdefault' + menu.ID).show();
 
+
             }else{
                 if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
+                        $('#socialshare' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#cancell' + menu.ID).show();
                     }
                 }
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
+                        $('#socialshare' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                         $('#divdefault' + menu.ID).show();
@@ -390,6 +404,7 @@ function getMenu_success(tx, results) {
                 }
                 if (window.localStorage.getItem("Ref") == 1) {
                     if (menu.IsFinalScore == 0) {
+                        $('#socialshare' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                         $('#cancell' + menu.ID).show();
