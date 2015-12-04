@@ -61,10 +61,10 @@
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4348837">
-              <caret line="339" column="73" selection-start-line="339" selection-start-column="73" selection-end-line="339" selection-end-column="73" />
+              <caret line="420" column="57" selection-start-line="420" selection-start-column="57" selection-end-line="420" selection-end-column="57" />
               <folding>
-                <marker date="1449187580056" expanded="true" signature="7564:7581" placeholder="..." />
-                <marker date="1449187580056" expanded="true" signature="7934:7952" placeholder="..." />
+                <marker date="1449189295948" expanded="true" signature="7564:7581" placeholder="..." />
+                <marker date="1449189295948" expanded="true" signature="7934:7952" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -934,14 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.384615">
@@ -976,6 +968,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -987,10 +987,10 @@
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4348837">
-          <caret line="339" column="73" selection-start-line="339" selection-start-column="73" selection-end-line="339" selection-end-column="73" />
+          <caret line="420" column="57" selection-start-line="420" selection-start-column="57" selection-end-line="420" selection-end-column="57" />
           <folding>
-            <marker date="1449187580056" expanded="true" signature="7564:7581" placeholder="..." />
-            <marker date="1449187580056" expanded="true" signature="7934:7952" placeholder="..." />
+            <marker date="1449189295948" expanded="true" signature="7564:7581" placeholder="..." />
+            <marker date="1449189295948" expanded="true" signature="7934:7952" placeholder="..." />
           </folding>
         </state>
       </provider>
