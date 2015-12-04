@@ -418,7 +418,7 @@ function getMenu_success(tx, results) {
         }
 
 
-        alert($('#socialshare' + menu.ID).attr('class'));
+       
 
 
     }
