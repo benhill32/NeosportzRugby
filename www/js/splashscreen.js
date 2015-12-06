@@ -43,7 +43,7 @@ function getoneoff2_success(tx, results) {
         }else if(menu.startpage == 'null'){
             splashpage = "../index.html";
         }else if(menu.startpage == 2){
-            splashpage = "schedule.html";
+            splashpage = "schedules.html";
         }else if(menu.startpage == 3){
             splashpage = "standings.html";
         }else if(menu.startpage == 4){
@@ -52,7 +52,10 @@ function getoneoff2_success(tx, results) {
             splashpage = "news.html";
         }
 
-alert(splashpage);
+        alert(splashpage);
+
+
+
         window.setTimeout(function(){
             window.location.href= splashpage;
         }, 1000);
