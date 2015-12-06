@@ -215,10 +215,18 @@ function getMenu_success(tx, results) {
 
             var res = array[i].split("-$$-");
             if(res[0] == menu.HomeClubID){
+                if(res[1] == ""){
+                     homeimage =  "no_image.png";
+                }else{
+                     homeimage =  res[1];
+                }
 
-                homeimage =  res[1];
             }else if (res[0] == menu.AwayClubID) {
-                awayimage = res[1];
+                if(res[1] == ""){
+                    awayimage =  "no_image.png";
+                }else {
+                    awayimage = res[1];
+                }
             }
 
         });
@@ -366,8 +374,6 @@ function getMenu_success(tx, results) {
                 $('#cancell' + menu.ID).show();
                 $('#referee' + menu.ID).show();
                 $('#divdefault' + menu.ID).show();
-
-
             }
 
 
@@ -413,14 +419,7 @@ function getMenu_success(tx, results) {
                     }
                 }
             }
-
-
         }
-
-
-       
-
-
     }
 
 
