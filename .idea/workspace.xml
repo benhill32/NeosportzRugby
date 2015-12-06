@@ -60,11 +60,11 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.046119235">
-              <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.54330707">
+              <caret line="212" column="7" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
               <folding>
-                <marker date="1449430873315" expanded="true" signature="7637:7654" placeholder="..." />
-                <marker date="1449430873315" expanded="true" signature="8007:8025" placeholder="..." />
+                <marker date="1449431616385" expanded="true" signature="7605:7622" placeholder="..." />
+                <marker date="1449431616385" expanded="true" signature="7975:7993" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -727,6 +727,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.862069">
           <caret line="18" column="38" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -980,11 +981,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.046119235">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.54330707">
+          <caret line="212" column="7" selection-start-line="212" selection-start-column="7" selection-end-line="212" selection-end-column="7" />
           <folding>
-            <marker date="1449430873315" expanded="true" signature="7637:7654" placeholder="..." />
-            <marker date="1449430873315" expanded="true" signature="8007:8025" placeholder="..." />
+            <marker date="1449431616385" expanded="true" signature="7605:7622" placeholder="..." />
+            <marker date="1449431616385" expanded="true" signature="7975:7993" placeholder="..." />
           </folding>
         </state>
       </provider>

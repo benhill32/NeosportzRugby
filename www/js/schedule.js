@@ -208,8 +208,9 @@ function getMenu_success(tx, results) {
 
 //Logos for the clubs.
         var array = window.localStorage.getItem("clubarray").split(",");
-        var homeimage= "";
-        var awayimage = "";
+        var homeimage= "no_image.png";
+        var awayimage = "no_image.png";
+       
         $.each(array,function(i){
            // alert(array[i]);
 
@@ -219,8 +220,6 @@ function getMenu_success(tx, results) {
                      homeimage =  res[1];
             }else if (res[0] == menu.AwayClubID) {
                     awayimage = res[1];
-            }else if (res[0] != menu.AwayClubID && res[0] != menu.HomeClubID){
-                awayimage =  "no_image.png";
             }
 
         });
