@@ -22,10 +22,19 @@ function onDeviceReadynews() {
 
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
-    db.transaction(allnewschk, errorCBfunc, successCBfunc);
-    db.transaction(numbersponsers, errorCBfunc, successCBfunc);
-    db.transaction(getfirstnew, errorCBfunc, successCBfunc);
 
+    if( window.localStorage.getItem("teamfollow") != 0) {
+
+
+        db.transaction(allnewschk, errorCBfunc, successCBfunc);
+        db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+        db.transaction(getfirstnew, errorCBfunc, successCBfunc);
+    }else{
+        $('#divNoclub').show();
+        $('#divyesnews').hide();
+        $('#divNonews').hide();
+
+    }
 }
 
 
@@ -142,7 +151,7 @@ function getnewfeed_success(tx, results) {
     var len = results.rows.length;
 //alert(len);
     $('#newsmain').empty();
-
+    $('#divNoclub').hide();
     if(len!= 0) {
 
             var menu = results.rows.item(0);
@@ -169,7 +178,7 @@ function getnewfeed_success(tx, results) {
 
     }else{
 
-
+        $('#divNoclub').hide();
         $('#divyesnews').hide();
         $('#divNonews').show();
 
