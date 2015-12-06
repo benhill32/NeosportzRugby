@@ -1,13 +1,13 @@
 var db;
 var orientationstand = "";
 var Base64 = "";
-var splashpage= ="";
+var splashpage="";
 document.addEventListener("deviceready", onDeviceReadysplashscreen, false);
 
 function onDeviceReadysplashscreen() {
     deviceIDfunc = device.uuid;
+    db.transaction(getbackground, errorCBfunc, successCBfunc);
 
-    db.transaction(getoneoff2, errorCBfunc, successCBfunc);
 }
 
 function getoneoff2(tx) {
@@ -51,7 +51,9 @@ function getoneoff2_success(tx, results) {
         }
 
 
-        db.transaction(getbackground, errorCBfunc, successCBfunc);
+        window.setTimeout(function(){
+            window.location.href=splashpage;
+        }, 1000);
 
     }
 }
@@ -81,10 +83,8 @@ function getbackground_success(tx, results) {
         db.transaction(getbackground2, errorCBfunc, successCBfunc);
     }else{
       //  runadmob();
+        db.transaction(getoneoff2, errorCBfunc, successCBfunc);
 
-        window.setTimeout(function(){
-            window.location.href=splashpage;
-        }, 1000);
     }
 }
 
@@ -106,11 +106,9 @@ function getbackground_success2(tx, results) {
       //  runadmob();
 
 
-        window.setTimeout(function(){
-            window.location.href=splashpage;
-        }, 1000);
 
 
+        db.transaction(getoneoff2, errorCBfunc, successCBfunc);
     }
 }
 
