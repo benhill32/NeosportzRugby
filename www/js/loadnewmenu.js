@@ -281,6 +281,10 @@ function getregionName2all_success(tx, results) {
         }
     });
 
+
+
+
+
 }
 
 function checksendnews(){
