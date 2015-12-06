@@ -39,7 +39,7 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
 
     nospor = len;
-    // alert(nospor);
+     alert(nospor);
 
 }
 

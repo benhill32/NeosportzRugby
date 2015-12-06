@@ -597,6 +597,31 @@ function syncmaintableindividual(obj){
 
         }
     });
+
+    $.each(obj.sponsorsclub, function (idx, obj) {
+
+        if (obj.DeletedateUTC == null) {
+
+            db.transaction(function (tx) {
+                tx.executeSql('INSERT OR IGNORE INTO Mobilesponsorsclub(ID ,Datetime,Club,Name,Website,Image,UserID,OrderBy,Base64,CreatedateUTC,UpdatedateUTC ,DeletedateUTC ,UpdatedateUTCBase64  ) VALUES (' + obj.ID + ',"' + obj.Datetime + '",' + obj.Club + ',"' + obj.Name + '","' + obj.Website + '","' + obj.Image + '","' + obj.UserID + '",' + obj.OrderBy + ',"' + obj.Base64 + '","' + obj.CreatedateUTC + '","' + obj.UpdatedateUTC + '","' + obj.DeletedateUTC + '","' + obj.UpdatedateUTCBase64 + '")');
+                //   console.log("INSERT INTO Mobilesponsorsclub is created " + obj.DeletedateUTC);
+            });
+            db.transaction(function (tx) {
+                var sql = 'UPDATE Mobilesponsorsclub SET Datetime = "' + obj.Datetime + '", Club = ' + obj.Club + ', Name = "' + obj.Name + '", Website = "' + obj.Website + '", Image = "' + obj.Image + '", UserID = "' + obj.UserID + '", OrderBy = ' + obj.OrderBy + ', Base64 = "' + obj.Base64 + '", CreatedateUTC = "' + obj.CreatedateUTC + '", UpdatedateUTC = "' + obj.UpdatedateUTC + '", DeletedateUTC = "' + obj.DeletedateUTC + '", UpdatedateUTCBase64 = "' + obj.UpdatedateUTCBase64 + '" where ID = ' + obj.ID;
+                tx.executeSql(sql);
+            });
+        }else{
+            db.transaction(function (tx) {
+                tx.executeSql('Delete from Mobilesponsorsclub where ID =' + obj.ID);
+                //   console.log('Delete Mobilesponsorsclub');
+            });
+
+        }
+
+
+    });
+
+
     $.each(obj.App_Games, function (idx, obj) {
 
         if(obj.DeletedateUTC == null){
