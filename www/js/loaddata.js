@@ -18,7 +18,7 @@ var devicePlatformfunc;
 var chkrefreshdata = 0;
 var archiveyear=0;
 document.addEventListener("deviceready", onDeviceReadyloaddata, false);
-var tokenldata ="";
+
 var start = 0;
 var menufrommansync = 0;
 // Cordova is ready
@@ -29,7 +29,7 @@ var appversionlocalf = '1.5.1';
 
 function onDeviceReadyloaddata() {
     pushnotifiy();
-    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
     console.log("LOCALDB - Database ready");
     deviceIDfunc = device.uuid;
@@ -56,20 +56,7 @@ function onOffline()
 }
 
 
-function gettokenloaddata(tx) {
-    var sql = "select token from MobileApp_LastUpdatesec";
-    //  alert(sql);
-    tx.executeSql(sql, [], gettokenloaddata_success);
-}
 
-function gettokenloaddata_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-    tokenldata = menu.token;
-    //alert(apptoken);
-}
 
 
 function getnetworkdetails(){
@@ -97,7 +84,7 @@ function checkonline(){
 
 function refreshdata(){
 
-    db.transaction(gettokenloaddata, errorCBfunc, successCBfunc);
+
     checkonline();
 
   //  $('#indexloadingdata').modal('show');
@@ -123,7 +110,7 @@ function checkdatabaseloaddata(){
 
        // db.transaction(getMenusch, errorCBfunc, successCBfunc);
     }
-
+    alert(json);
     //alert(json);
     if(json == "0"){
 
@@ -170,7 +157,7 @@ function populateDB(tx){
 }
 
 function errorCreatetable(err) {
-
+alert("createtables");
     createtables();
 
 }

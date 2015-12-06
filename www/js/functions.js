@@ -329,7 +329,7 @@ function blankLastUpdatesec(){
     xmlHttp.send();
   //  alert('http://rugby.neosportz.com/registerdevice.aspx?deviceID=' + deviceIDfunc + '&devicemodel=' + devicemodelfunc + '&deviceCordova=' + deviceCordovafunc + '&devicePlatform=' + devicePlatformfunc + '&deviceVersion=' + deviceVersionfunc + '&databasever=' + databaseversion + '&appver=' + appversion);
     var json = xmlHttp.responseText;
-
+    window.localStorage.setItem("apptoken", json);
     db.transaction(function(tx) {
         tx.executeSql('INSERT INTO MobileApp_LastUpdatesec (Datesecs,datemenus,syncwifi,isadmin,token,hasclub,fliterON,allownewfeed ,allowcancel,allowscore,Clubedit,Ref,Versionappnow) VALUES ("0", "0",0,0,"' + json + '",0,0,0,0,0,0,0,"' + appversionlocal + '")');
         console.log("INSERT INTO MobileApp_LastUpdatesec");
@@ -350,8 +350,8 @@ function getregionsdata(tx, results) {
     var datenowsecsync2 = row.Datesecs;
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1', false);
-   // alert('http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
+    xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' +   window.localStorage.getItem("apptoken") + '&sec=' + datenowsecsync2 + '&start=1', false);
+    alert('http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
     xmlHttp.send();
 
     var json = xmlHttp.responseText;
