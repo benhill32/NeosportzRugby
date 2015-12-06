@@ -118,7 +118,7 @@ function getbackground2_error(err) {
     $('#splashscreen').append('<img id="screensplashimg"  src="data:image/png;base64,' + Base64 + '">');
    // runadmob();
     window.setTimeout(function(){
-        window.location.href=splashpage;
+        window.location.href="../index.html";
     }, 1000);
 
 }
@@ -128,7 +128,7 @@ function getbackground_error(err) {
   //  alert("error");
    // runadmob();
     window.setTimeout(function(){
-        window.location.href=splashpage;
+        window.location.href="../index.html";
     }, 1000);
 
 
