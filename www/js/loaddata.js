@@ -110,7 +110,7 @@ function checkdatabaseloaddata(){
 
        // db.transaction(getMenusch, errorCBfunc, successCBfunc);
     }
-    alert(json);
+   // alert(json);
     //alert(json);
     if(json == "0"){
 
