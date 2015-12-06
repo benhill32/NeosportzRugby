@@ -24,8 +24,8 @@
       <file leaf-file-name="schedules.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.418182">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+            <state vertical-scroll-proportion="-3.709091">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#a#0;n#li#6;n#ul#0;n#li#5;n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -88,6 +88,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/news.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,17 +125,20 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13789108">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.14268585">
+              <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -208,18 +221,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="516" selection-start-line="68" selection-start-column="507" selection-end-line="68" selection-end-column="516" />
-              <folding>
-                <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -279,7 +280,6 @@
         <option value="$PROJECT_DIR$/www/js/scorecard.js" />
         <option value="$PROJECT_DIR$/www/js/resultsarchive.js" />
         <option value="$PROJECT_DIR$/www/js/results.js" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
@@ -289,6 +289,7 @@
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/loadnewmenu.js" />
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
@@ -583,7 +584,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/www/index.html</url>
-          <line>478</line>
+          <line>481</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -894,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.275862">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/mainindex.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2413793">
@@ -996,10 +989,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.418182">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+        <state vertical-scroll-proportion="-3.709091">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="64" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#a#0;n#li#6;n#ul#0;n#li#5;n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1040,35 +1057,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/pages/splashscreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/splashscreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13789108">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.14268585">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />

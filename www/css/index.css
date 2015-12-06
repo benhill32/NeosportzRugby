@@ -146,6 +146,9 @@ body {
     padding-bottom: 3px;
 }
 
+.ui-page{
+    outline:none !important;
+}
 
 
 #homescore,#awayscore{
