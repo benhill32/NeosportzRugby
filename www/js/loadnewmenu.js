@@ -59,7 +59,7 @@ function getMenusch(tx) {
 }
 
 function getsyncdateall(tx) {
-    var sql = "select Datesecs, syncwifi,Region,isadmin,allowscore,fliterON from MobileApp_LastUpdatesec";
+    var sql = "select Datesecs, syncwifi,Region,isadmin,allowscore,fliterON,startpage from MobileApp_LastUpdatesec";
     //  alert(sql);
     tx.executeSql(sql, [], getsyncdateall_success2);
 }
@@ -167,6 +167,28 @@ if(menu.allowscore == 0){
 
         $("#switch-onColor").prop("checked", false );
     }
+
+    var page2 = "";
+
+    if(menu.startpage == 1){
+        page2 = "Home";
+    }else if(menu.startpage == 2){
+        page2 = "Games";
+    }else if(menu.startpage == 3){
+        page2 = "Standings";
+    }else if(menu.startpage == 4){
+        page2 = "Clubs";
+    }else if(menu.startpage == 5){
+        page2 = "News";
+    }
+
+
+
+    $('#lblstartingpage').empty().append(page2);
+
+
+
+
 
     db.transaction(getregionName2all, errorCBfunc, successCBfunc);
 

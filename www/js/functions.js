@@ -1271,4 +1271,24 @@ function choosepage(ID){
     });
 
     $('#modelpages').modal('hide')
+
+    var page = "";
+
+    if(ID == 1){
+        page = "Home";
+    }else if(ID == 2){
+        page = "Games";
+    }else if(ID == 3){
+        page = "Standings";
+    }else if(ID == 4){
+        page = "Clubs";
+    }else if(ID == 5){
+        page = "News";
+    }
+
+
+
+    $('#lblstartingpage').empty().append(page);
+
+
 }
