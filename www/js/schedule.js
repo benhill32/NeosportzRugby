@@ -219,7 +219,7 @@ function getMenu_success(tx, results) {
                      homeimage =  res[1];
             }else if (res[0] == menu.AwayClubID) {
                     awayimage = res[1];
-            }else{
+            }else if (res[0] != menu.AwayClubID && res[0] != menu.HomeClubID){
                 awayimage =  "no_image.png";
             }
 
