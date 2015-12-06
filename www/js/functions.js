@@ -1167,7 +1167,7 @@ function loadnewapp(){
 
 
 function getoneoff(tx) {
-    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref,Region,allownewfeed from MobileApp_LastUpdatesec";
+    var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref,Region,allownewfeed,startpage from MobileApp_LastUpdatesec";
     // alert(sql);
     tx.executeSql(sql, [], getoneoff_success);
 }
@@ -1185,7 +1185,7 @@ function getoneoff_success(tx, results) {
 
 //alert("one off");
 
-
+            window.localStorage.setItem("startpage", menu.startpage);
             window.localStorage.setItem("allownewfeed", menu.allownewfeed);
             window.localStorage.setItem("Region", menu.Region);
             window.localStorage.setItem("apptoken", menu.token);
@@ -1261,4 +1261,14 @@ function getdata3_success(tx, results) {
         console.log("Update INTO MobileApp_LastUpdatesec");
     });
 
+}
+
+function choosepage(ID){
+
+    db.transaction(function(tx) {
+        tx.executeSql('Update MobileApp_LastUpdatesec set startpage =' + ID);
+        console.log("Update INTO MobileApp_LastUpdatesec");
+    });
+
+    $('#modelpages').modal('hide')
 }

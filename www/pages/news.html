@@ -144,7 +144,7 @@
                 </a>
                 </li>
 
-                <li><a href="javascript: void(0)">
+                <li><a href="#" data-toggle="modal" data-target="#modelpages">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
                             <strong>Starting Page</strong>
@@ -493,6 +493,40 @@
         </div>
     </div>
 </div>
+<div class="modal" id="modelpages" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Choose your starting page
+            </div>
+            <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(1)">
+                Home
+            </div>
+            <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(2)" >
+                Games
+
+            </div>
+            <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(3)">
+                Standings
+
+            </div>
+            <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(4)">
+                Clubs
+
+            </div>
+            <div class="modal-body" align="center" onclick="choosepage(5)" >
+                News
+
+            </div>
+            <div class="modal-footer" data-dismiss="modal">
+                Close
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 <div class="container-fluid">
 
