@@ -1,7 +1,7 @@
 var db;
 var orientationstand = "";
 var Base64 = "";
-var splashpage="";
+var splashpage="../index.html";
 document.addEventListener("deviceready", onDeviceReadysplashscreen, false);
 
 function onDeviceReadysplashscreen() {
@@ -36,7 +36,7 @@ function getoneoff2_success(tx, results) {
         window.localStorage.setItem("Clubedit", menu.Clubedit);
         window.localStorage.setItem("Ref", menu.Ref);
 
-        alert(menu.startpage);
+     //   alert(menu.startpage);
 
         if(menu.startpage == 1){
             splashpage = "../index.html";
@@ -52,7 +52,7 @@ function getoneoff2_success(tx, results) {
             splashpage = "news.html";
         }
 
-        alert(splashpage);
+    //    alert(splashpage);
 
 
 
