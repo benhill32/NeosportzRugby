@@ -73,16 +73,7 @@ function getfirstnew_success(tx, results) {
     //alert(len + " - " + window.localStorage.getItem("checkfornew"));
 
 if(len == 0){
-
-
-
-    if(window.localStorage.getItem("checkfornew") == null || window.localStorage.getItem("checkfornew") == "0"){
-        window.localStorage.setItem("checkfornew", 1);
         sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
-    }
-
-
-
 
 }else{
     window.localStorage.setItem("checkfornew", 0);
