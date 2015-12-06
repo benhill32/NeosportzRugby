@@ -214,21 +214,13 @@ function getMenu_success(tx, results) {
            // alert(array[i]);
 
             var res = array[i].split("-$$-");
-            alert(res[1]);
+
             if(res[0] == menu.HomeClubID){
-
-                if(res[1] == ""){
-                     homeimage =  "no_image.png";
-                }else{
                      homeimage =  res[1];
-                }
-
             }else if (res[0] == menu.AwayClubID) {
-                if(res[1] == ""){
-                    awayimage =  "no_image.png";
-                }else {
                     awayimage = res[1];
-                }
+            }else{
+                awayimage =  "no_image.png";
             }
 
         });
