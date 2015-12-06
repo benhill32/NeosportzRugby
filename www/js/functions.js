@@ -351,7 +351,7 @@ function getregionsdata(tx, results) {
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' +   window.localStorage.getItem("apptoken") + '&sec=' + datenowsecsync2 + '&start=1', false);
-    alert('http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
+  //  alert('http://rugby.neosportz.com/mobiledata2.aspx?deviceID=' + deviceIDfunc + '&token=' + row.token + '&sec=' + datenowsecsync2 + '&start=1');
     xmlHttp.send();
 
     var json = xmlHttp.responseText;

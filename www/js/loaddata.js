@@ -157,7 +157,7 @@ function populateDB(tx){
 }
 
 function errorCreatetable(err) {
-alert("createtables");
+//alert("createtables");
     createtables();
 
 }
