@@ -214,7 +214,9 @@ function getMenu_success(tx, results) {
            // alert(array[i]);
 
             var res = array[i].split("-$$-");
+            alert(res[1]);
             if(res[0] == menu.HomeClubID){
+
                 if(res[1] == ""){
                      homeimage =  "no_image.png";
                 }else{
