@@ -22,7 +22,7 @@ function onDeviceReadystand() {
 function getfirsttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
-    //   alert(sql);
+       alert(sql);
     tx.executeSql(sql, [], getfirsttournie_success);
 }
 
@@ -42,7 +42,7 @@ function getfirsttournie_success(tx, results) {
 function getlastttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID DESC LIMIT 1";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [],getlastttournie_success);
 }
 
