@@ -52,7 +52,7 @@ function numbersponsers(tx) {
 function numbersponsers_success(tx, results) {
     var len = results.rows.length;
 
-    //alert(nospor);
+    alert(len);
 
 
     var menu = results.rows.item(0);
