@@ -1,7 +1,6 @@
 var db;
 var dbCreated = false;
 
-var orientationstand = "";
 var firstt =0;
 var Lastt= 0;
 var IDt = 0;
@@ -199,7 +198,7 @@ function getdataplus2(tx) {
 
 
 function getpervoiustournie(){
-
+    alert("pervoius");
     if (firstt == ID) {
         db.transaction(getdataminus2, errorCBfunc, successCBfunc);
     } else {
@@ -208,7 +207,7 @@ function getpervoiustournie(){
 }
 function getnexttournie(){
 
-
+alert("next");
     if (Lastt == ID) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
     } else {
