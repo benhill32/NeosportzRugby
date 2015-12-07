@@ -47,12 +47,13 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
     var random = Math.floor((Math.random() * len) + 1)
     var menu = results.rows.item(random-1);
-alert(menu.Website);
+
     if(menu.Website != ""){
         $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     }else{
-        var website  = "http://" + menu.Website;
-        $('#divsponsormodel').empty().append('<img onclick="URLredirect(\'' + website + '\')" class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
+        var website2  = "http://" + menu.Website;
+        alert(website2);
+        $('#divsponsormodel').empty().append('<img onclick="URLredirect(\'' + website2 + '\')" class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     }
 
     $('#Modalsponsor').modal('show')
@@ -162,7 +163,7 @@ function getnewfeed_success(tx, results) {
 
     if(len!= 0) {
 
-            var menu = results.rows.item(0);
+        var menu = results.rows.item(0);
 
 
         var d = new Date(menu.DisplayDateUTC).getDate();
