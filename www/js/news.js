@@ -53,7 +53,10 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
 
     alert(len);
+    for (var i=0; i<len; i++) {
 
+
+    }
 
     var menu = results.rows.item(0);
 
