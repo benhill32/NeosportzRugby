@@ -47,13 +47,13 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
     var random = Math.floor((Math.random() * len) + 1)
     var menu = results.rows.item(random-1);
-
-    if(menu.Website != ""){
+    
+    if(menu.Website == ""){
         $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     }else{
         var website2  = "http://" + menu.Website;
         alert(website2);
-        $('#divsponsormodel').empty().append('<img onclick="URLredirect(\'' + website2 + '\')" class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
+        $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '"></div>')
     }
 
     $('#Modalsponsor').modal('show')
