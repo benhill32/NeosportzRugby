@@ -53,7 +53,7 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
     var menu2 = results.rows.item(0);
     nospor = menu2.Countall;
-   
+
     var random = Math.floor((Math.random() * nospor) + 1);
 
     var count = 1;
