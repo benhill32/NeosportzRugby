@@ -119,7 +119,7 @@ function getstandings_success(tx, results) {
 
 var height= 0;
 
-    IDt = menu.TournamentID;
+
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
@@ -139,9 +139,10 @@ var height= 0;
         $('#idgamesA').append('<Div class="score3" >' + menu.AgainstScore + '</Div>');
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
-
-
-
+        if(i==0) {
+            IDt = menu.TournamentID;
+            $('#btntournie').empty().append(menu.TournamentName);
+        }
     }
 
 
