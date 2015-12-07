@@ -51,22 +51,9 @@ function numbersponsers(tx) {
 
 function numbersponsers_success(tx, results) {
     var len = results.rows.length;
-
-    alert(len);
-
     var random = Math.floor((Math.random() * len) + 1)
-
-  alert(random);
-
     var menu = results.rows.item(random-1);
-
-           $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
-
-
-
-
-
-
+    $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     $('#Modalsponsor').modal('show')
 
 }
