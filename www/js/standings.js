@@ -6,13 +6,22 @@ var Lastt= 0;
 var IDt = 0;
 document.addEventListener("deviceready", onDeviceReadystand(), false);
 var devicePlatformfstand;
+
 function onDeviceReadystand() {
 alert("start");
 
-   // devicePlatformfstand = device.platform;
-    db.transaction(getfirsttournie, errorCBfunc, successCBfunc);
+   devicePlatformfstand = device.platform;
+    db.transaction(getfirsttournie, errorCBfuncst, successCBfunc);
 
 }
+
+
+function errorCBfuncst(err) {
+//   console.log("Error processing SQL: "+err.code);
+alert("Error processing SQL loaddata: "+err.code);
+}
+
+
 
 function getfirsttournie(tx) {
 
