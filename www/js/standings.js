@@ -2,27 +2,71 @@ var db;
 var dbCreated = false;
 var id = getUrlVarsfunc()["id"];
 var orientationstand = "";
+var firstt =0;
+var Lastt= 0;
+var IDt = 0;
 document.addEventListener("deviceready", onDeviceReadystand(), false);
 var devicePlatformfstand;
 function onDeviceReadystand() {
   //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
  //   console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
-    db.transaction(getstandings, errorCBfunc, successCBfunc);
+
     devicePlatformfstand = device.platform;
+    db.transaction(getfirsttournie, errorCBfunc, successCBfunc);
 
 }
-//db.transaction(getstandings, errorCBfunc, successCBfunc);
 
-function getorient(strorein){
-    orientationstand = strorein;
-  //  alert(orientationstand);
+
+
+
+
+function getfirsttournie(tx) {
+
+    var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY ID ASC LIMIT 1";
+    //   alert(sql);
+    tx.executeSql(sql, [], getfirsttournie_success);
+}
+
+
+function getfirsttournie_success(tx, results) {
+        var len = results.rows.length;
+        var menu = results.rows.item(0);
+        firstt = menu.ID;
+    alert(firstt);
+    db.transaction(getlastttournie, errorCBfunc, successCBfunc);
+}
+
+
+
+
+
+function getlastttournie(tx) {
+
+    var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY ID DESC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [],getlastttournie_success);
+}
+
+
+function getlastttournie_success(tx, results) {
+
+    var len = results.rows.length;
+    var menu = results.rows.item(0);
+
+
+    Lastt = menu.ID;
+    alert(Lastt);
+
     db.transaction(getstandings, errorCBfunc, successCBfunc);
 }
+
+
 
 function getstandings(tx) {
 
-    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = '" + id + "' order by (FlagPoints+Bonus) DESC,Difference DESC";
+
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = " + firstt + " order by (FlagPoints+Bonus) DESC,Difference DESC";
    // alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
@@ -76,6 +120,9 @@ function getstandings_success(tx, results) {
     }
 
 var height= 0;
+
+    IDt = menu.TournamentID;
+
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         if (orientationstand == "portrait") {
@@ -122,6 +169,54 @@ var height= 0;
 }
 
 
+function getdataminus(tx) {
+
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where where ID < " + ID + "  ORDER BY ID Desc LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getstandings_success);
+}
+
+function getdataminus2(tx) {
+
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings  ORDER BY ID Desc LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getstandings_success);
+}
+
+function getdataplus(tx) {
+
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where ID > " + ID + " ORDER BY ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getstandings_success);
+}
+function getdataplus2(tx) {
+
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings  ORDER BY ID ASC LIMIT 1";
+    //alert(sql);
+    tx.executeSql(sql, [], getstandings_success);
+}
+
+
+
+
+function getpervoiustournie(){
+
+    if (firstt == ID) {
+        db.transaction(getdataminus2, errorCBfunc, successCBfunc);
+    } else {
+        db.transaction(getdataminus, errorCBfunc, successCBfunc);
+    }
+}
+function getnexttournie(){
+
+
+    if (Lastt == ID) {
+        db.transaction(getdataplus2, errorCBfunc, successCBfunc);
+    } else {
+        db.transaction(getdataplus, errorCBfunc, successCBfunc);
+    }
+
+}
 
 
 
