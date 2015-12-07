@@ -165,10 +165,10 @@ function getnewfeed_success(tx, results) {
             var menu = results.rows.item(0);
 
 
-        var d = new Date(DisplayDateUTC).getDate();
+        var d = new Date(menu.DisplayDateUTC).getDate();
 
-        var m = new Date(DisplayDateUTC).getMonth();
-        var y = new Date(DisplayDateUTC).getFullYear();
+        var m = new Date(menu.DisplayDateUTC).getMonth();
+        var y = new Date(menu.DisplayDateUTC).getFullYear();
 
 
 
