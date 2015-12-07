@@ -53,9 +53,9 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
     var menu2 = results.rows.item(0);
     nospor = menu2.Countall;
-    alert(nospor);
+   
     var random = Math.floor((Math.random() * nospor) + 1);
-alert(random);
+
     var count = 1;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
