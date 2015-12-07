@@ -8,9 +8,7 @@ var IDt = 0;
 document.addEventListener("deviceready", onDeviceReadystand(), false);
 var devicePlatformfstand;
 function onDeviceReadystand() {
-  //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
- //   console.log("LOCALDB - Database ready");
-    $.mobile.loading().hide();
+
 
     devicePlatformfstand = device.platform;
     db.transaction(getfirsttournie, errorCBfunc, successCBfunc);
