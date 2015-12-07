@@ -71,7 +71,7 @@ alert(random);
 
 
 
-    $('#divsponsormodel').modal('show')
+    $('#Modalsponsor').modal('show')
 
 }
 
