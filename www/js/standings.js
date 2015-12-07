@@ -14,10 +14,6 @@ alert("start");
 
 }
 
-
-
-
-
 function getfirsttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
@@ -138,7 +134,7 @@ var height= 0;
         $('#idgamesA').append('<Div class="score3" >' + menu.AgainstScore + '</Div>');
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
-        if(i==0) {
+        if(i==1) {
             IDt = menu.TournamentID;
             $('#btntournie').empty().append(menu.TournamentName);
         }
@@ -169,28 +165,28 @@ var height= 0;
 
 function getdataminus(tx) {
 
-    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where where ID < " + ID + "  ORDER BY ID Desc LIMIT 1";
-    //alert(sql);
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where where ID < " + IDt + "  ORDER BY ID Desc LIMIT 1";
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
 
 function getdataminus2(tx) {
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings  ORDER BY ID Desc LIMIT 1";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
 
 function getdataplus(tx) {
 
-    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where ID > " + ID + " ORDER BY ID ASC LIMIT 1";
-    //alert(sql);
+    var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where ID > " + IDt + " ORDER BY ID ASC LIMIT 1";
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
 function getdataplus2(tx) {
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings  ORDER BY ID ASC LIMIT 1";
-    //alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
 
