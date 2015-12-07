@@ -157,9 +157,25 @@ function getnewfeed_success(tx, results) {
 //alert(len);
     $('#newsmain').empty();
     $('#divNoclub').hide();
+    $('#btndatenews').empty();
+
     if(len!= 0) {
 
             var menu = results.rows.item(0);
+
+
+
+        var d=new Date(menu.DisplayDateUTC +" UTC");
+
+
+
+
+
+
+
+
+
+        
             var imgg = "";
             // alert(menu.Body.substring(0, 200));
         newsid = menu.ID;
@@ -170,6 +186,9 @@ function getnewfeed_success(tx, results) {
 
             $('#divtitle').append(menu.Title);
             $('#divbody').append(menu.Body);
+
+        $('#btndatenews').append(d);
+
 
         if (menu.URL == "") {
             $('#divlinks').hide();
