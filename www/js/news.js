@@ -47,12 +47,12 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
     var random = Math.floor((Math.random() * len) + 1)
     var menu = results.rows.item(random-1);
-    
+
     if(menu.Website == ""){
         $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     }else{
         var website2  = "http://" + menu.Website;
-        alert(website2);
+       // alert(website2);
         $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '"></div>')
     }
 
@@ -142,7 +142,19 @@ function loadnewdata(){
 
 
 
+function getfulldaynew(day){
 
+    var weekday = new Array(7);
+    weekday[0]=  "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    return weekday[day];
+
+}
 
 
 
@@ -165,7 +177,7 @@ function getnewfeed_success(tx, results) {
 
         var menu = results.rows.item(0);
 
-
+var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
         var d = new Date(menu.DisplayDateUTC).getDate();
 
         var m = new Date(menu.DisplayDateUTC).getMonth();
@@ -185,7 +197,7 @@ function getnewfeed_success(tx, results) {
             $('#divtitle').append(menu.Title);
             $('#divbody').append(menu.Body);
 
-        $('#btndatenews').append(d + "/" + m + "/" + y);
+        $('#btndatenews').append(day + "," + d + "/" + m + "/" + y);
 
 
         if (menu.URL == "") {
