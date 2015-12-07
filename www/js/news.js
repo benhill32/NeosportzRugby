@@ -24,11 +24,6 @@ function onDeviceReadynews() {
     $.mobile.loading().hide();
 
     if( window.localStorage.getItem("teamfollow") != 0) {
-
-
-
-
-
         db.transaction(allnewschk, errorCBfunc, successCBfunc);
         db.transaction(numbersponsers, errorCBfunc, successCBfunc);
         db.transaction(getfirstnew, errorCBfunc, successCBfunc);
@@ -36,7 +31,6 @@ function onDeviceReadynews() {
         $('#divNoclub').show();
         $('#divyesnews').hide();
         $('#divNonews').hide();
-
     }
 }
 
@@ -53,7 +47,7 @@ function numbersponsers_success(tx, results) {
     var len = results.rows.length;
     var random = Math.floor((Math.random() * len) + 1)
     var menu = results.rows.item(random-1);
-
+alert(menu.Website);
     if(menu.Website != ""){
         $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     }else{
@@ -171,9 +165,10 @@ function getnewfeed_success(tx, results) {
             var menu = results.rows.item(0);
 
 
-        var d = new Date(menu.DisplaySecondsUTC-48000);
+        var d = new Date(DisplayDateUTC).getDate();
 
-
+        var m = new Date(DisplayDateUTC).getMonth();
+        var y = new Date(DisplayDateUTC).getFullYear();
 
 
 
@@ -189,7 +184,7 @@ function getnewfeed_success(tx, results) {
             $('#divtitle').append(menu.Title);
             $('#divbody').append(menu.Body);
 
-        $('#btndatenews').append(d);
+        $('#btndatenews').append(d + "/" + m + "/" + y);
 
 
         if (menu.URL == "") {

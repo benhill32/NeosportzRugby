@@ -113,8 +113,8 @@
       <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5139535">
-              <caret line="173" column="53" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
+            <state vertical-scroll-proportion="-1.4430232">
+              <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -124,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/www/js/results.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="165" column="1" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="31" />
+              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,8 +171,8 @@
       <file leaf-file-name="CreateOpenDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.758621">
-              <caret line="86" column="311" selection-start-line="86" selection-start-column="297" selection-end-line="86" selection-end-column="311" />
+            <state vertical-scroll-proportion="-12.068966">
+              <caret line="95" column="165" selection-start-line="95" selection-start-column="158" selection-end-line="95" selection-end-column="165" />
               <folding>
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
               </folding>
@@ -210,8 +210,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.172414">
-              <caret line="641" column="15" selection-start-line="641" selection-start-column="15" selection-end-line="641" selection-end-column="15" />
+            <state vertical-scroll-proportion="-9.862069">
+              <caret line="1028" column="25" selection-start-line="1028" selection-start-column="25" selection-end-line="1028" selection-end-column="25" />
               <folding>
                 <element signature="n#!!block;n#URLredirectFacebook#0" expanded="false" />
               </folding>
@@ -286,8 +286,8 @@
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/pages/news.html" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
       </list>
     </option>
@@ -979,14 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/results.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="165" column="1" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/schedules.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.0">
@@ -1062,16 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.758621">
-          <caret line="86" column="311" selection-start-line="86" selection-start-column="297" selection-end-line="86" selection-end-column="311" />
-          <folding>
-            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.689655">
@@ -1089,18 +1071,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.172414">
-          <caret line="641" column="15" selection-start-line="641" selection-start-column="15" selection-end-line="641" selection-end-column="15" />
+        <state vertical-scroll-proportion="-9.862069">
+          <caret line="1028" column="25" selection-start-line="1028" selection-start-column="25" selection-end-line="1028" selection-end-column="25" />
           <folding>
             <element signature="n#!!block;n#URLredirectFacebook#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.068966">
+          <caret line="95" column="165" selection-start-line="95" selection-start-column="158" selection-end-line="95" selection-end-column="165" />
+          <folding>
+            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5139535">
-          <caret line="173" column="53" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
+        <state vertical-scroll-proportion="-1.4430232">
+          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
           <folding />
         </state>
       </provider>

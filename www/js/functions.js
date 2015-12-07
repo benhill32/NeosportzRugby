@@ -1028,7 +1028,7 @@ function checkversionofapp_success(tx, results) {
 
 function URLredirect(ID){
 
-
+    alert(ID);
     window.open(ID, '_system');
 }
 
