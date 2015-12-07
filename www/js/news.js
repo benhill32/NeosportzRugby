@@ -26,6 +26,9 @@ function onDeviceReadynews() {
     if( window.localStorage.getItem("teamfollow") != 0) {
 
 
+
+
+
         db.transaction(allnewschk, errorCBfunc, successCBfunc);
         db.transaction(numbersponsers, errorCBfunc, successCBfunc);
         db.transaction(getfirstnew, errorCBfunc, successCBfunc);
@@ -38,17 +41,37 @@ function onDeviceReadynews() {
 }
 
 
+
+
 function numbersponsers(tx) {
-    var sql = "select ID  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
+    var sql = "select *,Count(*) as Countall  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
     // alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
 function numbersponsers_success(tx, results) {
     var len = results.rows.length;
+    var menu2 = results.rows.item(0);
+    nospor = menu2.Countall;
+    alert(nospor);
+    var random = Math.floor((Math.random() * nospor) + 1);
+alert(random);
+    var count = 1;
+    for (var i=0; i<len; i++) {
+        var menu = results.rows.item(i);
 
-    nospor = len;
-     alert(nospor);
+        if(count == random ){
+
+           $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
+        }
+        count +=1;
+
+    }
+
+
+
+
+    $('#divsponsormodel').modal('show')
 
 }
 
@@ -61,7 +84,6 @@ function allnewschk(tx) {
 function allnewschk_success(tx, results) {
     var len = results.rows.length;
 
-    allnews = len;
     // alert(nospor);
 
 }
