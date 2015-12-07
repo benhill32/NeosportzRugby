@@ -44,7 +44,7 @@ function onDeviceReadynews() {
 
 
 function numbersponsers(tx) {
-    var sql = "select * as Countall  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' ORDER BY RANDOM() LIMIT 1";
+    var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' ORDER BY RANDOM() LIMIT 1";
     // alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
