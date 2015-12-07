@@ -58,7 +58,7 @@ function numbersponsers_success(tx, results) {
 
   alert(random);
 
-    var menu = results.rows.item(random);
+    var menu = results.rows.item(random-1);
 
            $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
 
