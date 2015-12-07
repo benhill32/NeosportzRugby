@@ -44,7 +44,7 @@ function onDeviceReadynews() {
 
 
 function numbersponsers(tx) {
-    var sql = "select *,Count(*) as Countall  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
+    var sql = "select * as Countall  from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
     // alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
@@ -55,7 +55,7 @@ function numbersponsers_success(tx, results) {
     //alert(nospor);
 
 
-    var random = Math.floor((Math.random() * len) + 1);
+    var random = Math.floor((Math.random() * len) + 0);
 alert(random);
     var count = 1;
     for (var i=0; i<len; i++) {
