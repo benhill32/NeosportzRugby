@@ -1,6 +1,6 @@
 var db;
 var dbCreated = false;
-var id = getUrlVarsfunc()["id"];
+
 var orientationstand = "";
 var firstt =0;
 var Lastt= 0;
@@ -8,9 +8,9 @@ var IDt = 0;
 document.addEventListener("deviceready", onDeviceReadystand(), false);
 var devicePlatformfstand;
 function onDeviceReadystand() {
+alert("start");
 
-
-    devicePlatformfstand = device.platform;
+   // devicePlatformfstand = device.platform;
     db.transaction(getfirsttournie, errorCBfunc, successCBfunc);
 
 }
