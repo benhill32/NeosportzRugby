@@ -219,7 +219,7 @@ body {
   //  background-color: lightgray;
 }
 #idteamname{
-    width:40%;
+  //  width:40%;
    // border-right:1px solid lightgray;
    // padding:8px;
     text-align: left;
@@ -239,8 +239,9 @@ body {
 
   //padding-top:40px;
     clear: both;
-    margin: 42px 0 100px 0;
-    margin-top :42px;
+   // margin: 42px 0 100px 0;
+    margin: 0 0 100px 0;
+ //   margin-top :42px;
     margin-bottom: 75px;
     padding-bottom: 75px;
     overflow: auto;
@@ -270,22 +271,24 @@ body {
 }
 #divmenustandings{
 
-    width:100%;
-    clear:both;
+   // width:100%;
+  //  clear:both;
     //position: fixed;
-    font-size:9px !important;
+ //   font-size:9px !important;
 }
 #divstandingsheader{
     overflow: auto;
     width:150%;
 
+    margin-left: 5px;
+    padding-right: 30px;
     clear:both;
 //position: fixed;
 
 
 }
 .score1{
-    width:6.4%;
+   // width:6.4%;
     border-right:1px solid lightgray;
   // padding:8px;
     text-align: center;

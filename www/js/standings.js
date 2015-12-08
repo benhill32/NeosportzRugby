@@ -98,31 +98,35 @@ function getstandings_success(tx, results) {
 //alert("length " + len);
     $('#divstandings').empty();
     $('#divstandingsheader').empty();
-    $('#divstandingsheader').append('<Div align="left" id="divmenustandings" style="float: left;" ></Div>');
+    $('#divstandingsheader').append('<div class="row"><Div align="left" id="divmenustandings" style="float: left;" ></Div></Div>');
 
-    $('#divstandings').append('<Div align="left" id="idteamname" style="float: left;" ></Div>');
+
 
   //  if (orientationstand == "landscape") {
-        $('#divmenustandings').append('<Div  class="standheaderteam bold" >Team name</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >P</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >W</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >D</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >L</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >B</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >F</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >A</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >DF</Div>');
-        $('#divmenustandings').append('<Div  class="standheader bold" >PT</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-3 bold" >Team name</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >P</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >W</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >D</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >L</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >B</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >F</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >A</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >DF</Div>');
+        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >PT</Div>');
 
-    $('#divstandings').append('<Div align="left" id="idgamesp" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="left" id="idgamesW" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="left" id="idgamesD" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="left" id="idgamesL" class="score1"  style="float: left;" ></Div>');
-        $('#divstandings').append('<Div align="left" id="idgamesB" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="left" id="idgamesF" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="left" id="idgamesA" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="left" id="idgamesGD" class="score1"  style="float: left;" ></Div>');
-    $('#divstandings').append('<Div align="right" id="idgamesFP" class="score1"  style="float: left;" ></Div>');
+    $('#divstandings').append('<div class="row"><Div align="left" id="divstandings2" ></Div></div>');
+
+    $('#divstandings2').append('<Div align="left" id="idteamname" class="col-xs-3" ></Div>');
+
+    $('#divstandings2').append('<Div align="left" id="idgamesp" class="score1 col-xs-1"  ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesW" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesD" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesL" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesB" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesF" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesA" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idgamesGD" class="score1 col-xs-1"   ></Div>');
+    $('#divstandings2').append('<Div align="right" id="idgamesFP" class="score1 col-xs-1"   ></Div>');
   //  }
   // if (orientationstand == "portrait") {
  //       $('#divmenustandings').append('<Div  class="standheaderteam  bold" >Team name</Div>');
