@@ -138,11 +138,9 @@
       <file leaf-file-name="standings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/standings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.344207">
-              <caret line="126" column="84" selection-start-line="126" selection-start-column="84" selection-end-line="126" selection-end-column="84" />
-              <folding>
-                <marker date="1449607358911" expanded="true" signature="4676:4708" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.53543305">
+              <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -269,8 +267,8 @@
         <option value="$PROJECT_DIR$/www/pages/news.html" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/standings.js" />
         <option value="$PROJECT_DIR$/www/pages/standings.html" />
+        <option value="$PROJECT_DIR$/www/js/standings.js" />
       </list>
     </option>
   </component>
@@ -1069,11 +1067,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/standings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.344207">
-          <caret line="126" column="84" selection-start-line="126" selection-start-column="84" selection-end-line="126" selection-end-column="84" />
-          <folding>
-            <marker date="1449607358911" expanded="true" signature="4676:4708" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.53543305">
+          <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

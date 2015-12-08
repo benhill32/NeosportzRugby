@@ -140,7 +140,7 @@ var height= 0;
 
          $('#idteamname').append('<Div class="bold"  >' + menu.Name + '</Div>');
 
-        $('#idgamesp').append('<Div style="border-left:1px solid lightgray;"  >' + menu.Games + '</Div>');
+        $('#idgamesp').append('<Div >' + menu.Games + '</Div>');
         $('#idgamesW').append('<Div align="left" >' + menu.Won + '</Div>');
         $('#idgamesD').append('<Div align="left"  >' + menu.Drawn + '</Div>');
         $('#idgamesL').append( '<Div align="left"  >' + menu.Lost + '</Div>');
