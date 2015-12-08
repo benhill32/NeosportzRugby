@@ -189,7 +189,7 @@ var height= 0;
 
 function getdataminus(tx) {
 
-    var sql = "select TournamentID from MobileStandings where where TournamentID < " + IDt + " group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
+    var sql = "select TournamentID from MobileStandings where TournamentID < " + IDt + " group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
     alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
