@@ -81,7 +81,7 @@ function getstandings_success2(tx, results) {
     var menu = results.rows.item(0);
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = " + menu.TournamentID + " order by (FlagPoints+Bonus) DESC,Difference DESC";
-      alert(sql);
+  //    alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 
 }
@@ -95,7 +95,7 @@ function getstandings_success2(tx, results) {
 function getstandings_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-alert("length " + len);
+//alert("length " + len);
     $('#divstandings').empty();
     $('#divstandingsheader').empty();
     $('#divstandingsheader').append('<Div align="left" id="divmenustandings" style="float: left;" ></Div>');
@@ -190,27 +190,27 @@ var height= 0;
 function getdataminus(tx) {
 
     var sql = "select TournamentID from MobileStandings where TournamentID < " + IDt + " group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataminus2(tx) {
 
     var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataplus(tx) {
 
     var sql = "select TournamentID from MobileStandings where TournamentID > " + IDt + " group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 function getdataplus2(tx) {
 
     var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID ASC LIMIT 1";
-   alert(sql);
+  // alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
