@@ -36,7 +36,7 @@ function getfirsttournie(tx) {
 function getfirsttournie_success(tx, results) {
         var len = results.rows.length;
         var menu = results.rows.item(0);
-        firstt = menu.ID;
+        firstt = menu.TournamentID;
     alert(firstt);
     db.transaction(getlastttournie, errorCBfunc, successCBfunc);
 }
@@ -59,7 +59,7 @@ function getlastttournie_success(tx, results) {
     var menu = results.rows.item(0);
 
 
-    Lastt = menu.ID;
+    Lastt = menu.TournamentID;
     alert(Lastt);
 
     db.transaction(getstandings, errorCBfunc, successCBfunc);
