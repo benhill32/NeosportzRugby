@@ -26,7 +26,7 @@ function onDeviceReadynews() {
     if( window.localStorage.getItem("teamfollow") != 0) {
 
         db.transaction(numbersponsers, errorCBfunc, successCBfunc);
-        db.transaction(getfirstnew, errorCBfunc, successCBfunc);
+
     }else{
         $('#divNoclub').show();
         $('#divyesnews').hide();
@@ -57,7 +57,7 @@ function numbersponsers_success(tx, results) {
     }
 
     $('#Modalsponsor').modal('show')
-
+    db.transaction(getfirstnew, errorCBfunc, successCBfunc);
 }
 
 
@@ -85,7 +85,7 @@ if(len == 0){
     var menu = results.rows.item(0);
     firstnews = menu.ID;
 
-alert(firstnews);
+//alert(firstnews);
     db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
 }
@@ -110,7 +110,7 @@ function getlastnews_success(tx, results) {
 
 
     lastnews = menu.ID;
-    alert(lastnews);
+  //  alert(lastnews);
     db.transaction(getdata2, errorCBfunc, successCBfunc);
 
 }
