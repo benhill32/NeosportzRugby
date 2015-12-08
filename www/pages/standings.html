@@ -39,11 +39,51 @@
 
     <script type="text/javascript">
         document.addEventListener("deviceready", onDeviceReadystand, false);
+        var x = "";
+        var y = "";
         function onDeviceReadystand() {
             refreshdata();
         }
 
 
+        $(function(){
+            // Bind the swipeleftHandler callback function to the swipe event on div.box
+
+            $('body').on({
+                'touchmove': function(e) {
+                    $("#scolltop").show();
+                }
+            });
+
+
+
+
+
+            $('#index').live('touchmove vmousemove', function(event){
+                x  = event.pageX;
+                y = event.pageY;
+                
+                if(x == 0){
+                    alert(x);
+                }
+            })
+
+
+
+          //  $( "body" ).on( "swipeleft", swipeleftHandler );
+          //  $( "body" ).on( "swiperight", swiperightHandler );
+
+
+
+            // Callback function references the event target and adds the 'swipeleft' class to it
+            function swipeleftHandler( event ){
+                //getnextday();
+            }
+            function swiperightHandler( event ){
+
+               // getpervoiusday();
+            }
+        });
 
 
 
