@@ -190,27 +190,27 @@ var height= 0;
 function getdataminus(tx) {
 
     var sql = "select TournamentID from MobileStandings where where TournamentID < " + IDt + " group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
-  //  alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataminus2(tx) {
 
     var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataplus(tx) {
 
     var sql = "select TournamentID from MobileStandings where TournamentID > " + IDt + " group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
-  //  alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 function getdataplus2(tx) {
 
     var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID ASC LIMIT 1";
-  // alert(sql);
+   alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
@@ -219,6 +219,10 @@ function getdataplus2(tx) {
 
 function getpervoiustournie(){
   //  alert("pervoius");
+
+    alert(firstt + " - " + IDt);
+
+
     if (firstt == IDt) {
         db.transaction(getdataminus2, errorCBfunc, successCBfunc);
     } else {
@@ -227,6 +231,7 @@ function getpervoiustournie(){
 }
 function getnexttournie(){
 
+    alert(Lastt + " - " + IDt);
 //alert("next");
     if (Lastt == IDt) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
