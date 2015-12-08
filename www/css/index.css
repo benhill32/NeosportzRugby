@@ -219,11 +219,7 @@ body {
   //  background-color: lightgray;
 }
 #idteamname{
-  //  width:40%;
-   // border-right:1px solid lightgray;
-   // padding:8px;
-    //text-align: left;
-   // height: 40px;
+
 }
 .standheaderteam{
     width: 40%;
@@ -243,9 +239,9 @@ body {
     margin-bottom: 75px;
     padding-bottom: 75px;
     overflow: auto;
-    width:150%;
+    width:200%;
 
-    margin-left: 5px;
+    padding-left: 5px;
     padding-right: 30px;
 
 }
@@ -278,9 +274,9 @@ body {
 }
 #divstandingsheader{
     overflow: auto;
-    width:150%;
+    width:200%;
 
-    margin-left: 5px;
+    padding-left: 5px;
     padding-right: 30px;
     clear:both;
 //position: fixed;
