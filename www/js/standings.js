@@ -121,34 +121,27 @@ var height= 0;
 
 
     for (var i=0; i<len; i++) {
-
-        $('#divstandings').append('<div class="row" style="border-bottom:1px solid lightgray; padding-bottom: 5px;"><Div align="left" id="divstandings2" ></Div></div>');
-
-        $('#divstandings2').append('<Div align="left" id="idteamname" class="score1 col-xs-3" ></Div>');
-
-        $('#divstandings2').append('<Div  id="idgamesp" class="score1 col-xs-1"  ></Div>');
-        $('#divstandings2').append('<Div  id="idgamesW" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div a id="idgamesD" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div id="idgamesL" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div  id="idgamesB" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div  id="idgamesF" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div  id="idgamesA" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div  id="idgamesGD" class="score1 col-xs-1"   ></Div>');
-        $('#divstandings2').append('<Div  id="idgamesFP" class="score1 col-xs-1"   ></Div>');
-
         var menu = results.rows.item(i);
 
-         $('#idteamname').append('<Div class="bold"  >' + menu.Name + '</Div>');
+        $('#divstandings').append('<div class="row"  style="border-bottom:1px solid lightgray; padding-bottom: 5px;"><Div align="left" id="divstandings2" ' +
+            '<Div align="left" id="idteamname" class="score1 col-xs-3" >' + menu.Name + '</Div>' +
+            '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Games + '</Div>' +
+            '<Div a id="idgamesD" class="score1 col-xs-1"   >' + menu.Drawn + '</Div>' +
+            '<Div a id="idgamesL" class="score1 col-xs-1"   >' + menu.Lost + '</Div>' +
+            '<Div a id="idgamesB" class="score1 col-xs-1"   >' + menu.Bonus + '</Div>' +
+            '<Div a id="idgamesF" class="score1 col-xs-1"   >' + menu.ForScore + '</Div>' +
+            '<Div a id="idgamesA" class="score1 col-xs-1"   >' + menu.AgainstScore + '</Div>' +
+            '<Div a id="idgamesGD" class="score1 col-xs-1"   >' + menu.Difference + '</Div>' +
+            '<Div a id="idgamesFP" class="score1 col-xs-1"   >' + (menu.FlagPoints + menu.Bonus) + '</Div>' +
 
-        $('#idgamesp').append('<Div >' + menu.Games + '</Div>');
-        $('#idgamesW').append('<Div align="left" >' + menu.Won + '</Div>');
-        $('#idgamesD').append('<Div align="left"  >' + menu.Drawn + '</Div>');
-        $('#idgamesL').append( '<Div align="left"  >' + menu.Lost + '</Div>');
-        $('#idgamesB').append( '<Div align="left"  >' + menu.Bonus + '</Div>');
-        $('#idgamesF').append('<Div align="left"  >' + menu.ForScore + '</Div>');
-        $('#idgamesA').append('<Div align="left"  >' + menu.AgainstScore + '</Div>');
-        $('#idgamesGD').append( '<Div align="left"  >' + menu.Difference + '</Div>');
-        $('#idgamesFP').append('<Div align="left"  >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
+
+            ' ></Div></div>');
+
+
+
+
+
+
         if(i==0) {
             IDt = menu.TournamentID;
             $('#btntournie').empty().append(menu.TournamentName);

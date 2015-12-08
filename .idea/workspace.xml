@@ -162,11 +162,11 @@
       <file leaf-file-name="standings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/standings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47806525">
-              <caret line="124" column="114" selection-start-line="124" selection-start-column="114" selection-end-line="124" selection-end-column="114" />
+            <state vertical-scroll-proportion="0.26771653">
+              <caret line="131" column="91" selection-start-line="131" selection-start-column="91" selection-end-line="131" selection-end-column="91" />
               <folding>
-                <marker date="1449614370216" expanded="true" signature="2503:2537" placeholder="..." />
-                <marker date="1449614370216" expanded="true" signature="3559:3614" placeholder="..." />
+                <marker date="1449615072594" expanded="true" signature="2503:2537" placeholder="..." />
+                <marker date="1449615072594" expanded="true" signature="3601:3656" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1060,11 +1060,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/standings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47806525">
-          <caret line="124" column="114" selection-start-line="124" selection-start-column="114" selection-end-line="124" selection-end-column="114" />
+        <state vertical-scroll-proportion="0.26771653">
+          <caret line="131" column="91" selection-start-line="131" selection-start-column="91" selection-end-line="131" selection-end-column="91" />
           <folding>
-            <marker date="1449614370216" expanded="true" signature="2503:2537" placeholder="..." />
-            <marker date="1449614370216" expanded="true" signature="3559:3614" placeholder="..." />
+            <marker date="1449615072594" expanded="true" signature="2503:2537" placeholder="..." />
+            <marker date="1449615072594" expanded="true" signature="3601:3656" placeholder="..." />
           </folding>
         </state>
       </provider>
