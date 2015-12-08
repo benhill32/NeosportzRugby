@@ -158,7 +158,7 @@ var height= 0;
         $('#idgamesA').append('<Div class="score3" >' + menu.AgainstScore + '</Div>');
         $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
         $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
-        if(i==1) {
+        if(i==0) {
             IDt = menu.TournamentID;
             $('#btntournie').empty().append(menu.TournamentName);
         }
