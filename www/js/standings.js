@@ -8,18 +8,20 @@ document.addEventListener("deviceready", onDeviceReadystand(), false);
 var devicePlatformfstand;
 
 function onDeviceReadystand() {
-alert("start");
 
-   devicePlatformfstand = device.platform;
-    db.transaction(getfirsttournie, errorCBfuncst, successCBfunc);
+
+    window.setTimeout(function(){
+        alert("start");
+
+        devicePlatformfstand = device.platform;
+        db.transaction(getfirsttournie, errorCBfunc, successCBfunc);
+
+    }, 1000);
+
 
 }
 
 
-function errorCBfuncst(err) {
-//   console.log("Error processing SQL: "+err.code);
-alert("Error processing SQL loaddata: "+err.code);
-}
 
 
 

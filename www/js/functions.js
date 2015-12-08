@@ -26,7 +26,7 @@ var listfollow = 0;
 var fliter = 0;
 
 function onDeviceReadyFunc() {
-    db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
+   // db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
 
     checkonlinefunctions();
     deviceIDfunc = device.uuid;
