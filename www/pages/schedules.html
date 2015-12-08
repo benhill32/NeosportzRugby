@@ -29,8 +29,9 @@
     <link href="../css/bootstrap-switch.css" rel="stylesheet"/>
     <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
 
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 
 
@@ -66,12 +67,12 @@
     </style>
 
     <script type="text/javascript">
-        $(function(){
-            $("ul li").click(function(){
-                $("ul li").removeClass("on");
-                $(this).addClass("on");
-            });
-        });
+          //   $(function(){
+          //  $("ul li").click(function(){
+         //       $("ul li").removeClass("on");
+         //       $(this).addClass("on");
+         //   });
+      //  });
 
 
 
@@ -106,13 +107,29 @@
         });
 
 
+
+
     </script>
 
+    <script>
+        $(function() {
+            $( "#sortable" ).sortable({
+                placeholder: "ui-state-highlight"
+            });
+            $( "#sortable" ).disableSelection();
+        });
+    </script>
 
+    <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }
+        html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+        .ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+    </style>
 
 </head>
 <body>
-<nav id="menu" style="display: none;"   >
+<nav id="menu" style="display: none;"    >
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
@@ -381,7 +398,7 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class="modal" id="basicModalclubhistory" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -871,10 +888,28 @@
         </div>
     </div>
 
+    <div class="modal" id="modelorder" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Choose Order By
+                </div>
+                <div class="modal-body" align="center"  >
 
 
+                </div>
 
-    <div>
+                <div class="modal-footer" data-dismiss="modal">
+                    Close
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div data-toggle="modal" data-target="#modelorder">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
@@ -895,6 +930,10 @@
         </div>
         </div>
     <div id="divschedules" align="center" >
+
+
+
+
 
       <!--  <div class="panel panel-primary"  >
             <div class="panel-heading" data-toggle="modal" data-target="#basicModalresults">
@@ -956,6 +995,18 @@
 
 
 </div>
+
+
+<ul id="sortable">
+    <li class="ui-state-default">Item 1</li>
+    <li class="ui-state-default">Item 2</li>
+    <li class="ui-state-default">Item 3</li>
+    <li class="ui-state-default">Item 4</li>
+    <li class="ui-state-default">Item 5</li>
+    <li class="ui-state-default">Item 6</li>
+    <li class="ui-state-default">Item 7</li>
+</ul>
+
 
     <div id="loadinggears" style="display:none;" align="center" >
         <img src="../img/loadingGears.gif" class="img-responsive" style="height:100px;">
