@@ -11,7 +11,7 @@ function onDeviceReadystand() {
 
 
     window.setTimeout(function(){
-        alert("start");
+
 
         devicePlatformfstand = device.platform;
         db.transaction(getfirsttournie, errorCBfunc, successCBfunc);
@@ -28,7 +28,7 @@ function onDeviceReadystand() {
 function getfirsttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
-       alert(sql);
+      // alert(sql);
     tx.executeSql(sql, [], getfirsttournie_success);
 }
 
@@ -37,7 +37,7 @@ function getfirsttournie_success(tx, results) {
         var len = results.rows.length;
         var menu = results.rows.item(0);
         firstt = menu.TournamentID;
-    alert(firstt);
+  //  alert(firstt);
     db.transaction(getlastttournie, errorCBfunc, successCBfunc);
 }
 
@@ -60,7 +60,7 @@ function getlastttournie_success(tx, results) {
 
 
     Lastt = menu.TournamentID;
-    alert(Lastt);
+  //  alert(Lastt);
 
     db.transaction(getstandings, errorCBfunc, successCBfunc);
 }
@@ -71,7 +71,7 @@ function getstandings(tx) {
 
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = " + firstt + " order by (FlagPoints+Bonus) DESC,Difference DESC";
-   // alert(sql);
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
 
@@ -85,7 +85,7 @@ function getstandings_success(tx, results) {
 
     $('#divstandings').append('<Div align="left" id="idteamname" style="float: left;" ></Div>');
 
-    if (orientationstand == "landscape") {
+  //  if (orientationstand == "landscape") {
         $('#divmenustandings').append('<Div  class="standheaderteam bold" >Team name</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >P</Div>');
         $('#divmenustandings').append('<Div  class="standheader bold" >W</Div>');
@@ -106,22 +106,22 @@ function getstandings_success(tx, results) {
     $('#divstandings').append('<Div align="left" id="idgamesA" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="left" id="idgamesGD" class="score1"  style="float: left;" ></Div>');
     $('#divstandings').append('<Div align="right" id="idgamesFP" class="score1"  style="float: left;" ></Div>');
-    }
-    if (orientationstand == "portrait") {
-        $('#divmenustandings').append('<Div  class="standheaderteam  bold" >Team name</Div>');
-        $('#divmenustandings').append('<Div  class="standheader2  bold" >P</Div>');
-        $('#divmenustandings').append('<Div  class="standheader2 bold" >W</Div>');
-        $('#divmenustandings').append('<Div  class="standheader2  bold" >D</Div>');
-        $('#divmenustandings').append('<Div  class="standheader2  bold" >L</Div>');
-        $('#divmenustandings').append('<Div  class="standheader2  bold" >PTS</Div>');
+  //  }
+  // if (orientationstand == "portrait") {
+ //       $('#divmenustandings').append('<Div  class="standheaderteam  bold" >Team name</Div>');
+  //      $('#divmenustandings').append('<Div  class="standheader2  bold" >P</Div>');
+    //    $('#divmenustandings').append('<Div  class="standheader2 bold" >W</Div>');
+      //  $('#divmenustandings').append('<Div  class="standheader2  bold" >D</Div>');
+        //$('#divmenustandings').append('<Div  class="standheader2  bold" >L</Div>');
+ //       $('#divmenustandings').append('<Div  class="standheader2  bold" >PTS</Div>');
 
-        $('#divstandings').append('<Div align="left" id="idgamesp" class="score2"  style="float: left;" ></Div>');
-        $('#divstandings').append('<Div align="left" id="idgamesW" class="score2"  style="float: left;" ></Div>');
-        $('#divstandings').append('<Div align="left" id="idgamesD" class="score2"  style="float: left;" ></Div>');
-        $('#divstandings').append('<Div align="left" id="idgamesL" class="score2"  style="float: left;" ></Div>');
-        $('#divstandings').append('<Div align="right" id="idgamesFP" class="score2"  style="float: left;" ></Div>');
+   //     $('#divstandings').append('<Div align="left" id="idgamesp" class="score2"  style="float: left;" ></Div>');
+     //   $('#divstandings').append('<Div align="left" id="idgamesW" class="score2"  style="float: left;" ></Div>');
+  //      $('#divstandings').append('<Div align="left" id="idgamesD" class="score2"  style="float: left;" ></Div>');
+   //     $('#divstandings').append('<Div align="left" id="idgamesL" class="score2"  style="float: left;" ></Div>');
+     //   $('#divstandings').append('<Div align="right" id="idgamesFP" class="score2"  style="float: left;" ></Div>');
 
-    }
+   // }
 
 var height= 0;
 
