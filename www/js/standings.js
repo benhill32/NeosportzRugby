@@ -98,7 +98,7 @@ function getstandings_success(tx, results) {
 //alert("length " + len);
     $('#divstandings').empty();
     $('#divstandingsheader').empty();
-    $('#divstandingsheader').append('<div class="row"><Div align="left" id="divmenustandings" ></Div></div>');
+    $('#divstandingsheader').append('<div class="row" style="border-bottom:1px solid lightgray;"><Div align="left" id="divmenustandings" ></Div></div>');
 
 
 
@@ -122,7 +122,7 @@ var height= 0;
 
     for (var i=0; i<len; i++) {
 
-        $('#divstandings').append('<div class="row"><Div align="left" id="divstandings2" ></Div></div>');
+        $('#divstandings').append('<div class="row" style="border-bottom:1px solid lightgray; padding-bottom: 5px;"><Div align="left" id="divstandings2" ></Div></div>');
 
         $('#divstandings2').append('<Div align="left" id="idteamname" class="score1 col-xs-3" ></Div>');
 
