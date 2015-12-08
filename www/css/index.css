@@ -237,16 +237,16 @@ body {
 }
 #divstandings{
 
-  //padding-top:40px;
-    clear: both;
-   // margin: 42px 0 100px 0;
+
     margin: 0 0 100px 0;
- //   margin-top :42px;
+
     margin-bottom: 75px;
     padding-bottom: 75px;
     overflow: auto;
     width:150%;
 
+    margin-left: 5px;
+    padding-right: 30px;
 
 }
 .standheader{
