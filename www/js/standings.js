@@ -81,7 +81,7 @@ function getstandings_success2(tx, results) {
     var menu = results.rows.item(0);
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = " + menu.TournamentID + " order by (FlagPoints+Bonus) DESC,Difference DESC";
-      alert(sql);
+    //  alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 
 }
@@ -190,27 +190,27 @@ var height= 0;
 function getdataminus(tx) {
 
     var sql = "select TournamentID from MobileStandings where where TournamentID < " + IDt + " group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
-    alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataminus2(tx) {
 
     var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataplus(tx) {
 
     var sql = "select TournamentID from MobileStandings where TournamentID > " + IDt + " group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
-    alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 function getdataplus2(tx) {
 
     var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID ASC LIMIT 1";
-   alert(sql);
+  // alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
@@ -218,7 +218,7 @@ function getdataplus2(tx) {
 
 
 function getpervoiustournie(){
-    alert("pervoius");
+  //  alert("pervoius");
     if (firstt == IDt) {
         db.transaction(getdataminus2, errorCBfunc, successCBfunc);
     } else {
@@ -227,7 +227,7 @@ function getpervoiustournie(){
 }
 function getnexttournie(){
 
-alert("next");
+//alert("next");
     if (Lastt == IDt) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
     } else {
