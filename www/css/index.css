@@ -245,6 +245,8 @@ body {
     padding-bottom: 75px;
     overflow-y: scroll;
     width:150%;
+    overflow-x: scroll;
+    
 }
 .standheader{
 
@@ -274,7 +276,9 @@ body {
     font-size:9px !important;
 }
 #divstandingsheader{
+    overflow-y: scroll;
     width:150%;
+    overflow-x: scroll;
     clear:both;
 //position: fixed;
 
