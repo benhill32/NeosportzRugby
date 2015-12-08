@@ -95,7 +95,7 @@ function getstandings_success2(tx, results) {
 function getstandings_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-
+alert("length " + len);
     $('#divstandings').empty();
     $('#divstandingsheader').empty();
     $('#divstandingsheader').append('<Div align="left" id="divmenustandings" style="float: left;" ></Div>');
