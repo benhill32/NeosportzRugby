@@ -48,7 +48,7 @@ function getfirsttournie_success(tx, results) {
 function getlastttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID DESC LIMIT 1";
-    alert(sql);
+   // alert(sql);
     tx.executeSql(sql, [],getlastttournie_success);
 }
 
@@ -71,7 +71,7 @@ function getstandings(tx) {
 
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = " + firstt + " order by (FlagPoints+Bonus) DESC,Difference DESC";
-    alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 }
 
