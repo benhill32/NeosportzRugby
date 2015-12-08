@@ -244,6 +244,7 @@ body {
     margin-bottom: 75px;
     padding-bottom: 75px;
     overflow-y: scroll;
+    width:150%;
 }
 .standheader{
 
@@ -273,7 +274,7 @@ body {
     font-size:9px !important;
 }
 #divstandingsheader{
-    width:100%;
+    width:150%;
     clear:both;
 //position: fixed;
 
