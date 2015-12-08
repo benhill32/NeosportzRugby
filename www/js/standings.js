@@ -123,7 +123,7 @@ var height= 0;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
-        $('#divstandings').append('<div class="row"  style="border-bottom:1px solid lightgray; padding-bottom: 5px;"><Div align="left" id="divstandings2" ' +
+        $('#divstandings').append('<div class="row"  style="border-bottom:1px solid lightgray;margin-top: 5px; margin-bottom: 5px;"><Div align="left" id="divstandings2"> ' +
             '<Div align="left" id="idteamname" class="score1 col-xs-3" >' + menu.Name + '</Div>' +
             '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Games + '</Div>' +
             '<Div a id="idgamesD" class="score1 col-xs-1"   >' + menu.Drawn + '</Div>' +
@@ -135,7 +135,7 @@ var height= 0;
             '<Div a id="idgamesFP" class="score1 col-xs-1"   >' + (menu.FlagPoints + menu.Bonus) + '</Div>' +
 
 
-            ' ></Div></div>');
+            ' </Div></div>');
 
 
 
