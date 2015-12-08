@@ -19,7 +19,7 @@ var intcount = 1;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
-
+    $('#loadinggears').show();
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
 
@@ -208,7 +208,7 @@ var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
     }
     //alert(intcount);
 
-
+    $('#loadinggears').hide();
 }
 
 function loadsocialnews(e,ID){
