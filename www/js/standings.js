@@ -81,7 +81,7 @@ function getstandings_success2(tx, results) {
     var menu = results.rows.item(0);
 
     var sql = "select _id,Games,Won,Drawn,Lost,ForScore,AgainstScore,Difference,ClubID,Name,abbreviation,TournamentID,FlagPoints,UpdateDateUTC ,TournamentName,Bonus from MobileStandings where TournamentID = " + menu.TournamentID + " order by (FlagPoints+Bonus) DESC,Difference DESC";
-    //  alert(sql);
+      alert(sql);
     tx.executeSql(sql, [], getstandings_success);
 
 }
@@ -220,7 +220,7 @@ function getdataplus2(tx) {
 function getpervoiustournie(){
   //  alert("pervoius");
 
-    alert(firstt + " - " + IDt);
+    //alert(firstt + " - " + IDt);
 
 
     if (firstt == IDt) {
@@ -231,7 +231,7 @@ function getpervoiustournie(){
 }
 function getnexttournie(){
 
-    alert(Lastt + " - " + IDt);
+   // alert(Lastt + " - " + IDt);
 //alert("next");
     if (Lastt == IDt) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
