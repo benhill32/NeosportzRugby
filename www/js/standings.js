@@ -134,7 +134,7 @@ var height= 0;
         $('#divstandings2').append('<Div  id="idgamesA" class="score1 col-xs-1"   ></Div>');
         $('#divstandings2').append('<Div  id="idgamesGD" class="score1 col-xs-1"   ></Div>');
         $('#divstandings2').append('<Div  id="idgamesFP" class="score1 col-xs-1"   ></Div>');
-        
+
         var menu = results.rows.item(i);
 
          $('#idteamname').append('<Div class="bold"  >' + menu.Name + '</Div>');
