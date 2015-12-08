@@ -127,22 +127,6 @@ function getstandings_success(tx, results) {
     $('#divstandings2').append('<Div align="left" id="idgamesA" class="score1 col-xs-1"   ></Div>');
     $('#divstandings2').append('<Div align="left" id="idgamesGD" class="score1 col-xs-1"   ></Div>');
     $('#divstandings2').append('<Div align="right" id="idgamesFP" class="score1 col-xs-1"   ></Div>');
-  //  }
-  // if (orientationstand == "portrait") {
- //       $('#divmenustandings').append('<Div  class="standheaderteam  bold" >Team name</Div>');
-  //      $('#divmenustandings').append('<Div  class="standheader2  bold" >P</Div>');
-    //    $('#divmenustandings').append('<Div  class="standheader2 bold" >W</Div>');
-      //  $('#divmenustandings').append('<Div  class="standheader2  bold" >D</Div>');
-        //$('#divmenustandings').append('<Div  class="standheader2  bold" >L</Div>');
- //       $('#divmenustandings').append('<Div  class="standheader2  bold" >PTS</Div>');
-
-   //     $('#divstandings').append('<Div align="left" id="idgamesp" class="score2"  style="float: left;" ></Div>');
-     //   $('#divstandings').append('<Div align="left" id="idgamesW" class="score2"  style="float: left;" ></Div>');
-  //      $('#divstandings').append('<Div align="left" id="idgamesD" class="score2"  style="float: left;" ></Div>');
-   //     $('#divstandings').append('<Div align="left" id="idgamesL" class="score2"  style="float: left;" ></Div>');
-     //   $('#divstandings').append('<Div align="right" id="idgamesFP" class="score2"  style="float: left;" ></Div>');
-
-   // }
 
 var height= 0;
 
@@ -151,17 +135,17 @@ var height= 0;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
-         $('#idteamname').append('<Div class="score3 bold"  >' + menu.Name + '</Div>');
+         $('#idteamname').append('<Div class="bold"  >' + menu.Name + '</Div>');
 
-        $('#idgamesp').append('<Div class="score3" style="border-left:1px solid lightgray;"  >' + menu.Games + '</Div>');
-        $('#idgamesW').append('<Div class="score3" >' + menu.Won + '</Div>');
-        $('#idgamesD').append('<Div class="score3"  >' + menu.Drawn + '</Div>');
-        $('#idgamesL').append( '<Div class="score3" >' + menu.Lost + '</Div>');
-        $('#idgamesB').append( '<Div class="score3" >' + menu.Bonus + '</Div>');
-        $('#idgamesF').append('<Div class="score3" >' + menu.ForScore + '</Div>');
-        $('#idgamesA').append('<Div class="score3" >' + menu.AgainstScore + '</Div>');
-        $('#idgamesGD').append( '<Div class="score3" >' + menu.Difference + '</Div>');
-        $('#idgamesFP').append('<Div class="score3" >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
+        $('#idgamesp').append('<Div style="border-left:1px solid lightgray;"  >' + menu.Games + '</Div>');
+        $('#idgamesW').append('<Div >' + menu.Won + '</Div>');
+        $('#idgamesD').append('<Div   >' + menu.Drawn + '</Div>');
+        $('#idgamesL').append( '<Div  >' + menu.Lost + '</Div>');
+        $('#idgamesB').append( '<Div  >' + menu.Bonus + '</Div>');
+        $('#idgamesF').append('<Div  >' + menu.ForScore + '</Div>');
+        $('#idgamesA').append('<Div  >' + menu.AgainstScore + '</Div>');
+        $('#idgamesGD').append( '<Div  >' + menu.Difference + '</Div>');
+        $('#idgamesFP').append('<Div  >' + (menu.FlagPoints + menu.Bonus) + '</Div>');
         if(i==0) {
             IDt = menu.TournamentID;
             $('#btntournie').empty().append(menu.TournamentName);
