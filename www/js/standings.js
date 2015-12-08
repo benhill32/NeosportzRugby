@@ -120,7 +120,7 @@ var height= 0;
 
 
     for (var i=0; i<len; i++) {
-        
+
         $('#divstandings').append('<div class="row"><Div align="left" id="divstandings2" ></Div></div>');
 
         $('#divstandings2').append('<Div align="left" id="idteamname" class="col-xs-3" ></Div>');
