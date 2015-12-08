@@ -189,28 +189,28 @@ var height= 0;
 
 function getdataminus(tx) {
 
-    var sql = "select TournamentID from MobileStandings where where ID < " + IDt + "  ORDER BY ID Desc LIMIT 1";
-   // alert(sql);
+    var sql = "select TournamentID from MobileStandings where where TournamentID < " + IDt + " group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataminus2(tx) {
 
-    var sql = "select TournamentID from MobileStandings  ORDER BY ID Desc LIMIT 1";
-   // alert(sql);
+    var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID Desc LIMIT 1";
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
 function getdataplus(tx) {
 
-    var sql = "select TournamentID from MobileStandings where ID > " + IDt + " ORDER BY ID ASC LIMIT 1";
-   // alert(sql);
+    var sql = "select TournamentID from MobileStandings where TournamentID > " + IDt + " group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
+    alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 function getdataplus2(tx) {
 
-    var sql = "select TournamentID from MobileStandings  ORDER BY ID ASC LIMIT 1";
-   // alert(sql);
+    var sql = "select TournamentID from MobileStandings group by TournamentID  ORDER BY TournamentID ASC LIMIT 1";
+   alert(sql);
     tx.executeSql(sql, [], getstandings_success2);
 }
 
