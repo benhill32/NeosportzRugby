@@ -123,16 +123,19 @@ var height= 0;
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
 
-        $('#divstandings').append('<div class="row"  style="border-bottom:1px solid lightgray;margin-top: 5px; margin-bottom: 5px;"><Div align="left" id="divstandings2"> ' +
+        var score = menu.FlagPoints + menu.Bonus;
+
+        $('#divstandings').append('<div class="row"  style="border-bottom:1px solid lightgray;"><Div align="left" id="divstandings2"> ' +
             '<Div align="left" id="idteamname" class="score1 col-xs-3" >' + menu.Name + '</Div>' +
             '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Games + '</Div>' +
-            '<Div a id="idgamesD" class="score1 col-xs-1"   >' + menu.Drawn + '</Div>' +
-            '<Div a id="idgamesL" class="score1 col-xs-1"   >' + menu.Lost + '</Div>' +
-            '<Div a id="idgamesB" class="score1 col-xs-1"   >' + menu.Bonus + '</Div>' +
-            '<Div a id="idgamesF" class="score1 col-xs-1"   >' + menu.ForScore + '</Div>' +
-            '<Div a id="idgamesA" class="score1 col-xs-1"   >' + menu.AgainstScore + '</Div>' +
-            '<Div a id="idgamesGD" class="score1 col-xs-1"   >' + menu.Difference + '</Div>' +
-            '<Div a id="idgamesFP" class="score1 col-xs-1"   >' + (menu.FlagPoints + menu.Bonus) + '</Div>' +
+            '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Won + '</Div>' +
+            '<Div  id="idgamesD" class="score1 col-xs-1"   >' + menu.Drawn + '</Div>' +
+            '<Div  id="idgamesL" class="score1 col-xs-1"   >' + menu.Lost + '</Div>' +
+            '<Div  id="idgamesB" class="score1 col-xs-1"   >' + menu.Bonus + '</Div>' +
+            '<Div  id="idgamesF" class="score1 col-xs-1"   >' + menu.ForScore + '</Div>' +
+            '<Div id="idgamesA" class="score1 col-xs-1"   >' + menu.AgainstScore + '</Div>' +
+            '<Div  id="idgamesGD" class="score1 col-xs-1"   >' + menu.Difference + '</Div>' +
+            '<Div id="idgamesFP" class="score1 col-xs-1"   >' + score + '</Div>' +
 
 
             ' </Div></div>');
