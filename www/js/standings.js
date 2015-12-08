@@ -202,7 +202,7 @@ function getdataplus2(tx) {
 
 function getpervoiustournie(){
     alert("pervoius");
-    if (firstt == ID) {
+    if (firstt == IDt) {
         db.transaction(getdataminus2, errorCBfunc, successCBfunc);
     } else {
         db.transaction(getdataminus, errorCBfunc, successCBfunc);
@@ -211,7 +211,7 @@ function getpervoiustournie(){
 function getnexttournie(){
 
 alert("next");
-    if (Lastt == ID) {
+    if (Lastt == IDt) {
         db.transaction(getdataplus2, errorCBfunc, successCBfunc);
     } else {
         db.transaction(getdataplus, errorCBfunc, successCBfunc);
