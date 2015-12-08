@@ -98,11 +98,12 @@ function getstandings_success(tx, results) {
 //alert("length " + len);
     $('#divstandings').empty();
     $('#divstandingsheader').empty();
-    $('#divstandingsheader').append('<div class="row"><Div align="left" id="divmenustandings" style="float: left;" ></Div></Div>');
+    $('#divstandingsheader').append('<div class="row"><Div align="left" id="divmenustandings" ></Div></div>');
 
 
 
-  //  if (orientationstand == "landscape") {
+
+    //  if (orientationstand == "landscape") {
         $('#divmenustandings').append('<Div  class="col-xs-3 bold" >Team name</Div>');
         $('#divmenustandings').append('<Div  class="col-xs-1 bold" >P</Div>');
         $('#divmenustandings').append('<Div  class="col-xs-1 bold" >W</Div>');
