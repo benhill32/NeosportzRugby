@@ -57,11 +57,11 @@
             });
             // Callback function references the event target and adds the 'swipeleft' class to it
             function swipeleftHandler( event ){
-                getnexttournie();
+               // getnexttournie();
             }
             function swiperightHandler( event ){
 
-                getpervoiustournie();
+              //  getpervoiustournie();
             }
         });
 
@@ -333,7 +333,7 @@
 </nav>
 
 
-<div class="divmainmenu" >
+<div class="divmainmenu" style="position: fixed;" >
 
     <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()">
         <span id="spanmenu" class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;"></span>   Standings </div>
@@ -451,7 +451,7 @@
         </div>
     </div>
 
-    <div>
+    <div style="margin-top: 60px;position: fixed;width: 100%;">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
@@ -472,7 +472,9 @@
         </div>
     </div>
 
-    <div id="divstandingsheader"></div>
+    <div id="divstandingsheader" style="margin-top: 150px;">
+      
+    </div>
 
 
     <div id="divstandings" align="center">
