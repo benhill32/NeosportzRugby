@@ -46,24 +46,7 @@
 
 
 
-        $(function(){
-            // Bind the swipeleftHandler callback function to the swipe event on div.box
-            $( "body" ).on( "swipeleft", swipeleftHandler );
-            $( "body" ).on( "swiperight", swiperightHandler );
-            $('body').on({
-                'touchmove': function(e) {
-                    $("#scolltop").show();
-                }
-            });
-            // Callback function references the event target and adds the 'swipeleft' class to it
-            function swipeleftHandler( event ){
-               // getnexttournie();
-            }
-            function swiperightHandler( event ){
 
-              //  getpervoiustournie();
-            }
-        });
 
 
 
@@ -511,7 +494,7 @@
 
     $('#divstandings').append('<div class="row"><Div id="divstandings2" ></Div></div>');
 
-    $('#divstandings2').append('<Div align="left" id="idteamname" class="col-xs-3" ></Div>');
+    $('#divstandings2').append('<Div align="left" id="idteamname" class="score1 col-xs-3"  ></Div>');
 
     $('#divstandings2').append('<Div  id="idgamesp" class="score1 col-xs-1"  ></Div>');
     $('#divstandings2').append('<Div  id="idgamesW" class="score1 col-xs-1"   ></Div>');
@@ -526,7 +509,7 @@
 
     $('#idteamname').append('<Div class="bold"   >Horowhenua</Div>');
 
-    $('#idgamesp').append('<Div style="border-left:1px solid lightgray;"align="left"  >10</Div>');
+    $('#idgamesp').append('<Div  align="left"  >10</Div>');
     $('#idgamesW').append('<Div align="left" >8</Div>');
     $('#idgamesD').append('<Div align="left"  >2</Div>');
     $('#idgamesL').append( '<Div align="left" >0</Div>');

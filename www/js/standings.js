@@ -124,7 +124,7 @@ var height= 0;
 
         $('#divstandings').append('<div class="row"><Div align="left" id="divstandings2" ></Div></div>');
 
-        $('#divstandings2').append('<Div align="left" id="idteamname" class="col-xs-3" ></Div>');
+        $('#divstandings2').append('<Div align="left" id="idteamname" class="score1 col-xs-3" ></Div>');
 
         $('#divstandings2').append('<Div  id="idgamesp" class="score1 col-xs-1"  ></Div>');
         $('#divstandings2').append('<Div  id="idgamesW" class="score1 col-xs-1"   ></Div>');
