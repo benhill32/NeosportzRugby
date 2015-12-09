@@ -25,7 +25,7 @@ function onDeviceReadynews() {
 
     alert(window.localStorage.getItem("teamfollow"));
     alert(window.localStorage.getItem("teamnewfeed"));
-    
+
 
     if( window.localStorage.getItem("teamfollow") != 0) {
 

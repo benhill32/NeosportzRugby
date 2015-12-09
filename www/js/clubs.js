@@ -5,6 +5,7 @@ var ID = 0;
 var FirstID = 0;
 var LastID = 0;
 var clubname = 0;
+var clubnewfeed = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
@@ -62,9 +63,9 @@ function getclub(tx) {
     var sql = "";
 
         if(window.localStorage.getItem("teamfollow") == 0){
-            sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
+            sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
         }else{
-            sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
+            sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
         }
 
         $('#spanleft').show();
@@ -92,6 +93,7 @@ function getclub_success(tx, results) {
     $('#btnclub').empty();
     $('#btnclub').append(menu.name);
     clubname = menu.ID;
+    clubnewfeed = menu.Newfeed
     $('#divhistory').append(menu.History);
     $('#divContacts').append(menu.Contacts);
 
@@ -132,7 +134,7 @@ function addfollow() {
 
     addfavclub();
     window.localStorage.setItem("teamfollow", clubname);
-
+    window.localStorage.setItem("teamnewfeed", clubnewfeed);
     checksendnews();
 }
 
@@ -143,7 +145,7 @@ function removefollow() {
 
     clearcurrentfavteam(clubname);
     window.localStorage.setItem("teamfollow", "0");
-
+    window.localStorage.setItem("teamnewfeed", "0");
     if(window.localStorage.getItem("fliter") == 1) {
         window.localStorage.setItem("fliter", "0");
 
