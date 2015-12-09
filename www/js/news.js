@@ -23,6 +23,10 @@ function onDeviceReadynews() {
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
 
+    alert(window.localStorage.getItem("teamfollow"));
+    alert(window.localStorage.getItem("teamnewfeed"));
+    
+
     if( window.localStorage.getItem("teamfollow") != 0) {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
