@@ -271,6 +271,8 @@ body {
 //  clear:both;
 //position: fixed;
 //   font-size:9px !important;
+    border-bottom: 1px solid lightgray
+
 }
 #divstandingsheader{
     overflow: auto;
@@ -282,9 +284,15 @@ body {
 
 
 }
+#divstandings2{
+    border-bottom: 1px solid lightgray;
+
+}
 .score1{
 
     border-right:1px solid lightgray;
+   padding-top:5px;
+    padding-bottom:5px;
 }
 
 .score2{
