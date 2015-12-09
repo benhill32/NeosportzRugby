@@ -28,11 +28,11 @@ function onDeviceReadynews() {
         if( window.localStorage.getItem("teamnewfeed") !=0) {
             db.transaction(numbersponsers, errorCBfunc, successCBfunc);
         }else{
-            $('#divNoclub').show();
+            $('#divNonewfeed').show();
             $('#divyesnews').hide();
             $('#divNonews').hide();
             $('#loadinggears').hide();
-
+            $('#divNoclub').hide();
         }
 
 
