@@ -98,22 +98,25 @@ function getstandings_success(tx, results) {
 //alert("length " + len);
     $('#divstandings').empty();
     $('#divstandingsheader').empty();
-    $('#divstandingsheader').append('<div class="row" style="border-bottom:1px solid lightgray;"><Div align="left" id="divmenustandings" ></Div></div>');
 
 
+    $('#divstandingsheader').append('<div class="row">' +
+        '<div class="col-xs-6" id="divmenustandingsfixed"  >' +
+        '<Div align="left" id="idteamname" class="bold">Team name</Div>' +
+        '</div>' +
+        '<div class="col-xs-9" id="divmenustandings" style="padding-left: 50%">' +
+        '<Div  class="col-xs-1 bold" >P</Div>' +
+        '<Div  class="col-xs-1 bold" >W</Div>' +
+        '<Div  class="col-xs-1 bold" >D</Div>' +
+        '<Div  class="col-xs-1 bold" >L</Div>' +
+        '<Div  class="col-xs-1 bold" >B</Div>' +
+        '<Div  class="col-xs-2 bold" >F</Div>' +
+        '<Div  class="col-xs-2 bold" >A</Div>' +
+        '<Div  class="col-xs-2 bold" >DF</Div>' +
+        '<Div  class="col-xs-1 bold" >PT</Div>' +
+        '</div>' +
+        '</div>');
 
-
-    //  if (orientationstand == "landscape") {
-        $('#divmenustandings').append('<Div  class="col-xs-3 bold" >Team name</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >P</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >W</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >D</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >L</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >B</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >F</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >A</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >DF</Div>');
-        $('#divmenustandings').append('<Div  class="col-xs-1 bold" >PT</Div>');
 
 
 var height= 0;
@@ -125,22 +128,26 @@ var height= 0;
 
         var score = menu.FlagPoints + menu.Bonus;
 
-        $('#divstandings').append('<div class="row"  style="border-bottom:1px solid lightgray;"><Div align="left" id="divstandings2"> ' +
-            '<Div align="left" id="idteamname" class="score1 col-xs-3" >' + menu.Name + '</Div>' +
+
+
+        $('#divstandings').append('<div  class="row" >' +
+            '<div class="col-xs-6" id="divstandingsfixed" >' +
+            '<Div align="left" id="idteamname" class="score1">' + menu.Name + '</Div>' +
+            '</div>' +
+            '<div class="col-xs-9" id="divstandings2" style="padding-left: 50%;">' +
             '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Games + '</Div>' +
-            '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Won + '</Div>' +
-            '<Div  id="idgamesD" class="score1 col-xs-1"   >' + menu.Drawn + '</Div>' +
-            '<Div  id="idgamesL" class="score1 col-xs-1"   >' + menu.Lost + '</Div>' +
-            '<Div  id="idgamesB" class="score1 col-xs-1"   >' + menu.Bonus + '</Div>' +
-            '<Div  id="idgamesF" class="score1 col-xs-1"   >' + menu.ForScore + '</Div>' +
-            '<Div id="idgamesA" class="score1 col-xs-1"   >' + menu.AgainstScore + '</Div>' +
-            '<Div  id="idgamesGD" class="score1 col-xs-1"   >' + menu.Difference + '</Div>' +
+            '<Div  id="idgamesD" class="score1 col-xs-1"   >' + menu.Won + '</Div>' +
+            '<Div  id="idgamesL" class="score1 col-xs-1"   >' + menu.Drawn + '</Div>' +
+            '<Div  id="idgamesB" class="score1 col-xs-1"   >' + menu.Lost + '</Div>' +
+            '<Div  id="idgamesF" class="score1 col-xs-1"   >' + menu.Bonus + '</Div>' +
+            '<Div id="idgamesA" class="score1 col-xs-2"   >' + menu.ForScore + '</Div>' +
+            '<Div  id="idgamesGD" class="score1 col-xs-2"   >' + menu.AgainstScore + '</Div>' +
+            '<Div id="idgamesFP" class="score1 col-xs-2"   >' + menu.Difference + '</Div>' +
             '<Div id="idgamesFP" class="score1 col-xs-1"   >' + score + '</Div>' +
 
+            '</div>' +
 
-            ' </Div></div>');
-
-
+            '</div>');
 
 
 

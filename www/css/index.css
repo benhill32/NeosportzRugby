@@ -231,18 +231,19 @@ body {
     border-right:1px solid lightgray;
 
 }
-#divstandings{
-
+#divstandings {
 
     margin: 0 0 100px 0;
 
     margin-bottom: 75px;
     padding-bottom: 75px;
-    overflow: auto;
-    width:200%;
 
     padding-left: 5px;
     padding-right: 30px;
+
+}
+.borderbottom{
+    border-bottom:1px solid black;
 
 }
 .standheader{
@@ -265,17 +266,43 @@ body {
     width:12%;
     border-right:1px solid lightgray;
 }
+
 #divmenustandings{
 
-   // width:100%;
-  //  clear:both;
-    //position: fixed;
- //   font-size:9px !important;
-}
-#divstandingsheader{
     overflow: auto;
     width:200%;
+}
+#divstandings2
+{
+    overflow: auto;
+    width:200%;
+    border-bottom: 1px solid lightgray;
+}
+#divstandingsfixed{
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    z-index: 100;
+    background-color: #D9D9D9;
+}
+#divstandingsfixed{
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    z-index: 100;
+    background-color: #D9D9D9;
 
+}
+#divmenustandingsfixed{
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    z-index: 100;
+    background-color: #D9D9D9;
+
+
+}
+#divstandingsheader{
+
+    //width:200%;
+   // overflow: hidden;
     padding-left: 5px;
     padding-right: 30px;
     margin-top: 150px;
