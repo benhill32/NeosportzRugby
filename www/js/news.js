@@ -23,8 +23,8 @@ function onDeviceReadynews() {
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
 
-    alert(window.localStorage.getItem("teamfollow"));
-    alert(window.localStorage.getItem("teamnewfeed"));
+ //   alert(window.localStorage.getItem("teamfollow"));
+ //   alert(window.localStorage.getItem("teamnewfeed"));
 
 
     if( window.localStorage.getItem("teamfollow") != 0) {
@@ -64,7 +64,7 @@ function numbersponsers_success(tx, results) {
     var menu = results.rows.item(random-1);
 
 
-    alert(len);
+  //  alert(len);
     if(len != 0) {
         if (menu.Website == "") {
             $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
@@ -94,7 +94,7 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-    alert("Length" + len);
+   // alert("Length" + len);
 
 if(len == 0){
         sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
