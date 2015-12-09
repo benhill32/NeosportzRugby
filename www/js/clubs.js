@@ -169,27 +169,27 @@ function removefollow() {
 
 function getdataminus(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID < " + ID + "  ORDER BY ID Desc LIMIT 1";
+    var sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID < " + ID + "  ORDER BY ID Desc LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
 function getdataminus2(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID Desc LIMIT 1";
+    var sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID Desc LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
 function getdataplus(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID > " + ID + " ORDER BY ID ASC LIMIT 1";
+    var sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs where ID > " + ID + " ORDER BY ID ASC LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 function getdataplus2(tx) {
 
-    var sql = "select ID,_id ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
+    var sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
@@ -218,7 +218,7 @@ function getMenu_success(tx, results) {
         $('#divContacts').append(menu.Contacts);
 
     clubname = menu.ID;
-
+    clubnewfeed = menu.Newfeed
     if(menu.ID == window.localStorage.getItem("teamfollow")){
 
         $('#spanfullstar').show();
