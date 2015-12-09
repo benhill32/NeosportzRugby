@@ -1235,7 +1235,7 @@ function getoneoff_success(tx, results) {
 
 
 function getdatanewssch(tx) {
-    var sql = "select ID from MobileApp_clubs where Fav = 1";
+    var sql = "select ID,Newfeed from MobileApp_clubs where Fav = 1";
     //  alert(sql);
     tx.executeSql(sql, [], getdatanewssch_success);
 }
@@ -1249,10 +1249,11 @@ function getdatanewssch_success(tx, results) {
         var menu = results.rows.item(0);
         //teamfollow = menu.ID;
         window.localStorage.setItem("teamfollow", menu.ID);
+        window.localStorage.setItem("teamnewfeed", menu.Newfeed);
         //   alert("teamfollow : " +  menu.ID)
     }else{
         window.localStorage.setItem("teamfollow", 0);
-
+        window.localStorage.setItem("teamnewfeed", 0);
     }
 
     db.transaction(getdata3, errorCBfunc, successCBfunc);

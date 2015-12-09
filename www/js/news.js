@@ -25,12 +25,22 @@ function onDeviceReadynews() {
 
     if( window.localStorage.getItem("teamfollow") != 0) {
 
-        db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+        if( window.localStorage.getItem("teamnewfeed") !=0) {
+            db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+        }else{
+            $('#divNoclub').show();
+            $('#divyesnews').hide();
+            $('#divNonews').hide();
+            $('#loadinggears').hide();
+
+        }
+
 
     }else{
         $('#divNoclub').show();
         $('#divyesnews').hide();
         $('#divNonews').hide();
+        $('#loadinggears').hide();
     }
 }
 
