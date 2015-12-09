@@ -80,7 +80,7 @@ function numbersponsers_success(tx, results) {
 
 function getfirstnew(tx) {
 
-    var sql = "select ID from MobilevwApp_News_v_2 WHERE  ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' ORDER BY ID Desc LIMIT 1";
+    var sql = "select ID from MobilevwApp_News_v_2 WHERE  ClubID=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null' ORDER BY ID Desc";
     //   alert(sql);
     tx.executeSql(sql, [], getfirstnew_success);
 }
