@@ -45,9 +45,24 @@
 
 
 
+
+
+
+
+
+
+
     </script>
 
+    <style>
+        .col-xs-3,.col-xs-1{
 
+        // padding-left: 1px;
+        // padding-right: 1px;
+
+        }
+
+    </style>
 </head>
 <body>
 
@@ -55,12 +70,12 @@
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
-        <li >
+        <li class="bs-callout bs-callout-warning">
 
             <a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a>
 
         </li>
-        <li class="bs-callout bs-callout-warning"><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
+        <li><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
         <li><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
         <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
         <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
@@ -429,7 +444,7 @@
         </div>
     </div>
 
-    <div style="margin-top: 60px;position: fixed;width: 100%;z-index: 1000">
+    <div style="margin-top: 60px;position: fixed;width: 100%;">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
@@ -450,38 +465,76 @@
         </div>
     </div>
 
-
-
     <div id="divstandingsheader" >
+        <script>
+            $('#divstandings').empty();
+            $('#divstandingsheader').empty();
+            $('#divstandingsheader').append('<div class="row"><Div align="left" id="divmenustandings" ></Div></div>');
 
 
+            $('#divmenustandings').append('<Div  class="col-xs-3 bold" >Team name</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >P</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >W</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >D</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >L</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >B</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >F</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >A</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >DF</Div>');
+            $('#divmenustandings').append('<Div  class="col-xs-1 bold" >PT</Div>');
 
-
-
-
-
+        </script>
 
 
     </div>
 
 
-    <div id="divstandings" >
+    <div id="divstandings">
+        <script>
+
+            $('#divstandings').append('<div class="row"><Div id="divstandings2" ></Div></div>');
+
+            $('#divstandings2').append('<Div align="left" id="idteamname" class="col-xs-3"  ></Div>');
+
+            $('#divstandings2').append('<Div  id="idgamesp" class="score1 col-xs-1" style="border-left:1px solid lightgray;"  ></Div>');
+            $('#divstandings2').append('<Div  id="idgamesW" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div a id="idgamesD" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div id="idgamesL" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div  id="idgamesB" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div  id="idgamesF" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div  id="idgamesA" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div  id="idgamesGD" class="score1 col-xs-1"   ></Div>');
+            $('#divstandings2').append('<Div  id="idgamesFP" class="score1 col-xs-1"   ></Div>');
 
 
+            $('#idteamname').append('<Div class="bold"   >Horowhenua</Div>');
 
+            $('#idgamesp').append('<Div  align="left"  >10</Div>');
+            $('#idgamesW').append('<Div align="left" >8</Div>');
+            $('#idgamesD').append('<Div align="left"  >2</Div>');
+            $('#idgamesL').append( '<Div align="left" >0</Div>');
+            $('#idgamesB').append( '<Div align="left" >5</Div>');
+            $('#idgamesF').append('<Div align="left" >432</Div>');
+            $('#idgamesA').append('<Div align="left" >100</Div>');
+            $('#idgamesGD').append( '<Div align="left" >300</Div>');
+            $('#idgamesFP').append('<Div align="left"  >38</Div>');
 
+            $('#idteamname').append('<Div class="bold"  >Taradale</Div>');
 
+            $('#idgamesp').append('<Div style="border-left:1px solid lightgray;"align="left"  >10</Div>');
+            $('#idgamesW').append('<Div align="left" >8</Div>');
+            $('#idgamesD').append('<Div align="left"  >2</Div>');
+            $('#idgamesL').append( '<Div align="left" >0</Div>');
+            $('#idgamesB').append( '<Div align="left" >5</Div>');
+            $('#idgamesF').append('<Div align="left" >432</Div>');
+            $('#idgamesA').append('<Div align="left" >100</Div>');
+            $('#idgamesGD').append( '<Div align="left" >300</Div>');
+            $('#idgamesFP').append('<Div align="left"  >38</Div>');
 
+        </script>
     </div>
 
 </div>
-
-
-
-
-
-
-
 
 
 <div id="loadinggears" style="display:none;" align="center" >

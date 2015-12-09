@@ -70,7 +70,7 @@ function createDB(tx) {
     console.log("MobileApp_LastUpdatesec table is created");
 
 
-    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_clubs (ID INTEGER NOT NULL primary key,_id INTEGER NOT NULL,name TEXT NOT NULL,UpdateDateUTC TEXT NOT NULL,UpdateDateUTCBase64 TEXT NOT NULL,Base64 TEXT NOT NULL,History TEXT NOT NULL,Contacts TEXT NOT NULL,UpdateSecondsUTC TEXT NOT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL,Color TEXT NOT NULL,TextColor TEXT NOT NULL, Fav INTEGER NOT NULL, Follow INTEGER NOT NULL,DeletedateUTC  TEXT NOT NULL )');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_clubs (ID INTEGER NOT NULL primary key,_id INTEGER NOT NULL,name TEXT NOT NULL,UpdateDateUTC TEXT NOT NULL,UpdateDateUTCBase64 TEXT NOT NULL,Base64 TEXT NOT NULL,History TEXT NOT NULL,Contacts TEXT NOT NULL,UpdateSecondsUTC TEXT NOT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL,Color TEXT NOT NULL,TextColor TEXT NOT NULL, Fav INTEGER NOT NULL, Follow INTEGER NOT NULL,DeletedateUTC  TEXT NOT NULL,Newfeed INTEGER NOT NULL )');
     console.log("Mobileclubs table is created");
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_clubsimages (ID INTEGER NOT NULL primary key,_id INTEGER NOT NULL,UpdateDateUTCBase64 TEXT NULL,Base64 TEXT NULL,UpdateSecondsUTCBase64 TEXT NOT NULL)');

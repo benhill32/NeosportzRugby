@@ -25,16 +25,16 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color: #D9D9D9;
-   // background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
- //   background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
- //   background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-  //  background-image:-webkit-gradient(
-  //      linear,
-  //      left top,
-  //      left bottom,
-  //      color-stop(0, #A7A7A7),
-  //      color-stop(0.51, #E4E4E4)
-  //  );
+// background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+//   background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+//   background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+//  background-image:-webkit-gradient(
+//      linear,
+//      left top,
+//      left bottom,
+//      color-stop(0, #A7A7A7),
+//      color-stop(0.51, #E4E4E4)
+//  );
 
     background-attachment:fixed;
     font-family:"Helvetica Neue",Helvetica,sans-serif;
@@ -42,7 +42,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-  //  text-transform:uppercase;
+//  text-transform:uppercase;
     width:100%;
 
 }
@@ -87,7 +87,7 @@ body {
 
 #backicondiv{
     width: 20px;
-   padding-top: 25px;
+    padding-top: 25px;
     float: left;
     padding-bottom: 10px;
 }
@@ -100,8 +100,8 @@ body {
 {
     padding-top: 5px;
     width: 100%;
-  //  position: fixed;
-  //  top:0;
+//  position: fixed;
+//  top:0;
     text-align: left;
     font-size:16px;
     vertical-align: middle;
@@ -136,9 +136,9 @@ body {
 }
 #divscore,#divbonus{
 
-   padding-top: 15px;
+    padding-top: 15px;
     clear:both;
-    //width:100px;
+//width:100px;
 }
 .mainmenuresult div{
 
@@ -157,11 +157,11 @@ body {
 }
 .floatleft{
 
-     float:left;
-     width:50%;
-     padding:10px;
+    float:left;
+    width:50%;
+    padding:10px;
 
- }
+}
 .floatleftsettings{
     float:left;
     width:50%;
@@ -195,8 +195,8 @@ body {
 #backimg{
 
     width: 40px;
-    
-    
+
+
 }
 .hide{
 
@@ -209,14 +209,14 @@ body {
     padding:10px;
     padding-left:10px;
     padding-right:8px;
-   // background-color: lightgray;
+// background-color: lightgray;
 }
 
 .floatLL{
     width:40%;
     float:left;
     padding:8px;
-  //  background-color: lightgray;
+//  background-color: lightgray;
 }
 #idteamname{
 
@@ -231,19 +231,18 @@ body {
     border-right:1px solid lightgray;
 
 }
-#divstandings {
+#divstandings{
+
 
     margin: 0 0 100px 0;
 
     margin-bottom: 75px;
     padding-bottom: 75px;
+    overflow: auto;
+    width:200%;
 
     padding-left: 5px;
     padding-right: 30px;
-
-}
-.borderbottom{
-    border-bottom:1px solid black;
 
 }
 .standheader{
@@ -266,43 +265,17 @@ body {
     width:12%;
     border-right:1px solid lightgray;
 }
-
 #divmenustandings{
 
-    overflow: auto;
-    width:200%;
-}
-#divstandings2
-{
-    overflow: auto;
-    width:200%;
-    border-bottom: 1px solid lightgray;
-}
-#divstandingsfixed{
-    border-bottom: 1px solid lightgray;
-    position: fixed;
-    z-index: 100;
-    background-color: #D9D9D9;
-}
-#divstandingsfixed{
-    border-bottom: 1px solid lightgray;
-    position: fixed;
-    z-index: 100;
-    background-color: #D9D9D9;
-
-}
-#divmenustandingsfixed{
-    border-bottom: 1px solid lightgray;
-    position: fixed;
-    z-index: 100;
-    background-color: #D9D9D9;
-
-
+// width:100%;
+//  clear:both;
+//position: fixed;
+//   font-size:9px !important;
 }
 #divstandingsheader{
+    overflow: auto;
+    width:200%;
 
-    //width:200%;
-   // overflow: hidden;
     padding-left: 5px;
     padding-right: 30px;
     margin-top: 150px;
@@ -312,8 +285,6 @@ body {
 .score1{
 
     border-right:1px solid lightgray;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .score2{
@@ -321,8 +292,8 @@ body {
     border-right:1px solid lightgray;
 // padding:8px;
     text-align: center;
-  //  padding-top:8px;
-   // padding-bottom: 8px;
+//  padding-top:8px;
+// padding-bottom: 8px;
 
 }
 
@@ -351,7 +322,7 @@ body {
     margin-right:15px;
     margin-top: 10px;
 
-    
+
 }
 #busy{
     margin-top:15px;
@@ -360,7 +331,7 @@ body {
 }
 .mainheaderimg{
     float:left;
-    
+
     padding:1px;
     padding-bottom: 10px;
     padding-top:10px;
@@ -504,10 +475,10 @@ body {
 }
 
 #mainmenustandingmenu,#mainmenuresultsch,#mainmenuschmenu{
-    //margin-top: 20px;
+//margin-top: 20px;
     padding-bottom: 100px;
-  //  padding-left:15px;
-  //  padding-right: 15px;
+//  padding-left:15px;
+//  padding-right: 15px;
 
 }
 
@@ -563,10 +534,10 @@ body {
 }
 #closeregion2:active{
 
-     background-color: #339900;
-     color: white;
-     opacity:0.7;
- }
+    background-color: #339900;
+    color: white;
+    opacity:0.7;
+}
 .closeregion:active{
 
     background-color: #339900;
@@ -574,13 +545,13 @@ body {
     opacity:0.7;
 }
 #splashscreen{
-  //  background: url(../img/img_1575.png) no-repeat center center fixed;
+//  background: url(../img/img_1575.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height:100vh;
-  overflow: hidden;
+    overflow: hidden;
 
 }
 
@@ -616,8 +587,8 @@ body {
 #teamsdiv{
 // padding-top: 30px;
     padding-bottom: 50px;
-   // padding-left:15px;
-   // padding-right: 15px;
+// padding-left:15px;
+// padding-right: 15px;
     text-align: left;
 }
 
@@ -625,9 +596,9 @@ body {
 #indexdiv{
 // padding-top: 30px;
     padding-bottom: 50px;
-  //  padding-left:15px;
-  //  padding-right: 15px;
-  //  overflow: scroll;
+//  padding-left:15px;
+//  padding-right: 15px;
+//  overflow: scroll;
 }
 
 .mainmenuresultcancel{
@@ -638,7 +609,7 @@ body {
     font-size:15px;
     margin-bottom: 10px;
     left:5%;
-   // width: 92%;
+// width: 92%;
     padding:10px;
     clear: both;
 
@@ -668,15 +639,15 @@ body {
 
 
 .mainmenuwifi{
-    //height: 70px;
-  //  text-align: left;
-   // background-color: #ffffff;
-  //  border-bottom: 1px solid gray;
+//height: 70px;
+//  text-align: left;
+// background-color: #ffffff;
+//  border-bottom: 1px solid gray;
     font-size:15px;
 //    margin-bottom: 5px;
-  //  left:5%;
+//  left:5%;
 //  width:80%;
-  //  padding:10px;
+//  padding:10px;
 
 
 }
@@ -702,10 +673,10 @@ body {
 }
 
 #RESULTSright{
-    //width:10%;
+//width:10%;
     float:right;
     height: 80px;
-    //padding-right: 15px;
+//padding-right: 15px;
     padding-top:15px;
 }
 #modelnews{
@@ -717,12 +688,12 @@ body {
 @media (max-width: 480px) {
 
     .modal {
-         height: 100%; /* Set a default max height of the modal (adjusted later)*/
-         position: fixed; /* Display modal in the centre of your screen */
-         overflow-y: scroll; /*  Ensure that the modal is scroll-able */
-         -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
+        height: 100%; /* Set a default max height of the modal (adjusted later)*/
+        position: fixed; /* Display modal in the centre of your screen */
+        overflow-y: scroll; /*  Ensure that the modal is scroll-able */
+        -webkit-overflow-scrolling: touch; /* Avoid having to use 2 finger scroll on iOS    */
 
-     }
+    }
     .modal.fade.in{
         top: 5px; /* Use more screen real estate */
     }
@@ -760,15 +731,15 @@ body {
 
 
 #newsmain,a:active, a:focus{
-   // padding-top: 10px;
-   // color: #333 !important;
-  //  text-decoration: none !important;
-  //  padding-bottom: 10px;
+// padding-top: 10px;
+// color: #333 !important;
+//  text-decoration: none !important;
+//  padding-bottom: 10px;
 }
 
 #addnewfeed,a:active, a:focus{
     padding-top: 80px;
-  //  color: #333 !important;
+//  color: #333 !important;
     text-decoration: none !important;
     padding-bottom: 200px;
     padding-left: 10px;
@@ -790,33 +761,33 @@ body {
     padding-top: 10px;
     width:100%;
     height:100%;
-  //  margin-top: -20px;
+//  margin-top: -20px;
 }
 
 .mainforeground::-webkit-scrollbar { width: 0 !important }
 
 
 .mainforeground{
-   //  position: fixed;
-     width:100%;
-  //   height:100%;
-     z-index: 10;
-   // background:#7f7f7f;
+//  position: fixed;
+    width:100%;
+//   height:100%;
+    z-index: 10;
+// background:#7f7f7f;
     background:rgba(255,255,255,0.75);
- //   top: 65px;
-  //  bottom: 60px;
+//   top: 65px;
+//  bottom: 60px;
     overflow-y: hidden;
-   // margin-top: 60px;
+// margin-top: 60px;
     padding-top:60px;
 
- }
+}
 
 .mainforeground2{
-  //  position: static;
+//  position: static;
     width:100%;
     height:100%;
     z-index: 10;
- //   background:#7f7f7f;
+//   background:#7f7f7f;
     background:rgba(255,255,255,0.75);
     overflow-y: scroll;
     margin-top: 65px;
@@ -824,7 +795,7 @@ body {
 }
 .sponsordiv{
 
-   // padding-left: 20px;
+// padding-left: 20px;
     height: 80px;
 }
 #mainbackground{
@@ -832,13 +803,13 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-position-y: 60%;
-   // opacity : 0.4;
+// opacity : 0.4;
     width:100%;
     height:100%;
     position: absolute;
     filter: alpha(opacity=50);
-   //background:rgba(255,255,255,0.5);
-   display: none    ;
+//background:rgba(255,255,255,0.5);
+    display: none    ;
 }
 
 .mainmenunews{
@@ -901,12 +872,12 @@ overflow-y: scroll !important;
 #modelhistory{
     padding: 10px !important;
     -webkit-overflow-scrolling:touch
-    overflow-y: scroll !important;
+overflow-y: scroll !important;
 }
 #modelnews{
     padding: 10px !important;
     -webkit-overflow-scrolling:touch
-    overflow-y: scroll !important;
+overflow-y: scroll !important;
 }
 
 #clubfav{
@@ -926,7 +897,7 @@ overflow-y: scroll !important;
     font-size:15px;
     margin-bottom: 10px;
     left:5%;
-  //  width: 92%;
+//  width: 92%;
     padding:10px;
     clear: both;
 }
@@ -1016,7 +987,7 @@ overflow-y: scroll !important;
 
 #basicModal{
     max-height: 3000px;
-    
+
 }
 #basicModalshare .modal-body{
 
@@ -1053,8 +1024,8 @@ overflow-y: scroll !important;
     align-content: center;
     padding-top:10px;
     padding-bottom: 10px;
-   // padding-left: 5px;
-  //  padding-right: 5px;
+// padding-left: 5px;
+//  padding-right: 5px;
 }
 .modelfloatleft
 {
@@ -1064,7 +1035,7 @@ overflow-y: scroll !important;
     align-content: center;
     padding-top:10px;
     padding-bottom: 10px;
-    //padding-left: 5px;
+//padding-left: 5px;
     padding-right: 5px;
 
 }
@@ -1163,9 +1134,9 @@ overflow-y: scroll !important;
 .divmainplayer{
     height: 20%;
     text-align: center;
-  //  border-bottom: 1px solid blue;
+//  border-bottom: 1px solid blue;
     font-size:18px;
-  //  padding:15px;
+//  padding:15px;
     clear: both;
     color: blue;
 
@@ -1197,7 +1168,7 @@ overflow-y: scroll !important;
 }
 .modal-footer{
 
-text-align: center !important;
+    text-align: center !important;
 }
 
 
@@ -1227,29 +1198,29 @@ text-align: center !important;
 #divnewmain,.divnewmain{
     clear: both;
     width:100%;
-   // padding-top: 10px;
-   // margin: 5px 0;
-  //  padding-left: 5px;
+// padding-top: 10px;
+// margin: 5px 0;
+//  padding-left: 5px;
     min-height: 110px;
-    //position: relative;
+//position: relative;
 }
 #divnew1image img,.divnew1image img,#divimagenew img{
     position: absolute;
 
     margin: auto;
-   top: 0;
-   bottom: 0;
-   left: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
-   max-height: 100%;
+    max-height: 100%;
     max-width: 100%;
     width: auto;
     height: auto;
-    //margin-bottom: 20px;
+//margin-bottom: 20px;
 
 }
 #divnew1image,.divnew1image{
-   // padding: 0px 10px 0px 0px;
+// padding: 0px 10px 0px 0px;
     min-height: 110px;
     width: 25%;
     float:left;
@@ -1259,8 +1230,8 @@ text-align: center !important;
     border-right:0px;
     position: relative;
     max-height: 110px;
- //   clear: both;
-   // width: 150px;
+//   clear: both;
+// width: 150px;
     overflow:hidden;
 }
 #divimagenew{
@@ -1280,7 +1251,7 @@ text-align: center !important;
 
 }
 #divnew1,.divnew1{
-padding: 20px 0px;
+    padding: 20px 0px;
     min-height: 60px;
     width: 13%;
     float:left;
@@ -1291,13 +1262,13 @@ padding: 20px 0px;
 }
 #divnew2,.divnew2{
     padding: 20px 0px;
-  //  min-height: 60px;
-   // float:left;
-width:100%;
+//  min-height: 60px;
+// float:left;
+    width:100%;
     padding-left: 10px;
- //   padding: 10px 0;
-  //  margin: 2px 0;
-  //  padding-right: 10px;
+//   padding: 10px 0;
+//  margin: 2px 0;
+//  padding-right: 10px;
     border-top:0px solid #eee;
     border-bottom:0px solid #eee;
     border-right:0px solid #eee;
@@ -1308,8 +1279,8 @@ width:100%;
     padding: 20px 0px;
 //  min-height: 60px;
     float:left;
-width:75%;
-  //  padding-left: 10px;
+    width:75%;
+//  padding-left: 10px;
 //   padding: 10px 0;
 //  margin: 2px 0;
 //  padding-right: 10px;
@@ -1358,7 +1329,7 @@ width:75%;
 }
 
 #settingdeleteall,#settingsync{
-   // color: white !important;
+// color: white !important;
 
 }
 
@@ -1370,11 +1341,11 @@ width:75%;
 
 }
 #showmenu{
-   padding-left:15px;
-   float: left;
+    padding-left:15px;
+    float: left;
     padding-top:25px;
     width:200px;
-  z-index: 20;
+    z-index: 20;
     color:black;
 }
 
@@ -1383,7 +1354,7 @@ width:75%;
     padding-left:15px;
     float: left;
     padding-top:25px;
-   // width:200px;
+// width:200px;
     z-index: 20;
     color:black;
 }
@@ -1420,7 +1391,7 @@ width:75%;
     bottom:0;
     text-align: center;
     line-height: normal;
-  //  background-color:#FFFFFF;
+//  background-color:#FFFFFF;
     width: 100%;
     background-color: #D9D9D9;
 }
@@ -1436,7 +1407,7 @@ width:75%;
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+    /* offset horizontal: half of text area width */
 }
 
 /* Landscape layout (with min-width) */
@@ -1445,7 +1416,7 @@ width:75%;
         background-position:left center;
         padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+        /* offset horizontal: half of image width and text area width */
     }
 }
 
@@ -1482,20 +1453,20 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
 
 .modal{
-   // display: block !important; /* I added this to see the modal, you don't need this */
+// display: block !important; /* I added this to see the modal, you don't need this */
 }
 
 /* Important part */
