@@ -54,7 +54,7 @@ function onDeviceReadynews() {
 
 function numbersponsers(tx) {
     var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
-     alert(sql);
+    // alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
@@ -65,15 +65,17 @@ function numbersponsers_success(tx, results) {
 
 
     alert(len);
-    if(menu.Website == ""){
-        $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
-    }else{
-        var website2  = "http://" + menu.Website;
-       // alert(website2);
-        $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '"></div>')
-    }
+    if(len != 0) {
+        if (menu.Website == "") {
+            $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
+        } else {
+            var website2 = "http://" + menu.Website;
+            // alert(website2);
+            $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '"></div>')
+        }
 
-    $('#Modalsponsor').modal('show')
+        $('#Modalsponsor').modal('show')
+    }
     db.transaction(getfirstnew, errorCBfunc, successCBfunc);
 }
 
