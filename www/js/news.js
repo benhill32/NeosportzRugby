@@ -54,7 +54,7 @@ function onDeviceReadynews() {
 
 function numbersponsers(tx) {
     var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
@@ -63,6 +63,8 @@ function numbersponsers_success(tx, results) {
     var random = Math.floor((Math.random() * len) + 1)
     var menu = results.rows.item(random-1);
 
+
+    alert(len);
     if(menu.Website == ""){
         $('#divsponsormodel').empty().append('<img class="img-responsive" src="data:image/png;base64,' + menu.Base64 + '">')
     }else{
