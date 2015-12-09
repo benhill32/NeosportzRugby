@@ -19,7 +19,7 @@ var intcount = 1;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
 function onDeviceReadynews() {
-    $('#loadinggears').show();
+
     console.log("LOCALDB - Database ready");
     $.mobile.loading().hide();
 
@@ -30,6 +30,7 @@ function onDeviceReadynews() {
     if( window.localStorage.getItem("teamfollow") != 0) {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
+            $('#loadinggears').show();
             db.transaction(numbersponsers, errorCBfunc, successCBfunc);
         }else{
             $('#divNonewfeed').show();
@@ -89,7 +90,7 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-    //alert(len + " - " + window.localStorage.getItem("checkfornew"));
+    alert("Length" + len);
 
 if(len == 0){
         sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
