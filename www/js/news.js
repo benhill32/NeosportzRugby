@@ -49,7 +49,7 @@ function onDeviceReadynews() {
         $('#divNonews').hide();
         $('#loadinggears').hide();
 
-        $('#btndatenews').append("No News Feed");
+        $('#btndatenews').append("No Favourite Club");
     }
 }
 
