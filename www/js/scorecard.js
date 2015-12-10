@@ -128,7 +128,7 @@ function getplayerinfo_success(tx, results) {
 }
 
 function getdata(tx) {
-    var sql = "select  from App_Games where ID = " + id;
+    var sql = "select * from App_Games where ID = " + id;
     alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
