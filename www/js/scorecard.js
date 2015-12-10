@@ -417,10 +417,10 @@ function getscorefromtable_success(tx, results) {
 
 
 
-alert("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
+//alert("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
     var response = passscoretoserverscorecard("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
-    alert(response);
+    //alert(response);
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         // alert(response);
