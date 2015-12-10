@@ -129,7 +129,7 @@ function getplayerinfo_success(tx, results) {
 
 function getdata(tx) {
     var sql = "select * from App_Games where ID = " + id;
-    alert(sql);
+    //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
 
@@ -137,7 +137,7 @@ function getdata(tx) {
 function getMenu_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
-alert(len);
+//alert(len);
     var menu = results.rows.item(0);
     var Gameid =menu.ID;
     var res = (menu.DatetimeStart).split("T");

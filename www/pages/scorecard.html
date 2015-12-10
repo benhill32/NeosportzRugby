@@ -33,23 +33,19 @@
 
 <script>
     $(function(){
-        // Bind the swipeleftHandler callback function to the swipe event on div.box
-
         $('body').on({
             'touchmove': function(e) {
                 $("#scolltop").show();
             }
         });
-
     });
-
 </script>
 
 
     <title></title>
 </head>
 <body>
-<nav id="menu" style="display: none;"   >
+<nav id="menu" style="display: none;">
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
@@ -308,12 +304,10 @@
         </li>
 
     </ul>
-
 </nav>
 
 
 <div class="divmainmenu" >
-
     <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()" >
         <span id="spanmenu" class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;"></span> Scorecard </div>
 </div>
