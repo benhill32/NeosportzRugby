@@ -27,10 +27,11 @@ function onDeviceReadyscore() {
 
 
 
-    //if(networkconnectionscore !=0) {
-   //     onclicksyncloaddata();
-   // }
-
+    if(networkconnectionscore !=0) {
+        onclicksyncloaddata();
+    }
+    db.transaction(getMenusch, errorCBfunc, successCBfunc);
+    
     window.setTimeout(function(){
         db.transaction(getdata, errorCBfunc, successCBfunc);
         db.transaction(getscoredata, errorCBfunc, successCBfunc);
