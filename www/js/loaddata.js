@@ -560,8 +560,15 @@ function chooseregionloaddata(ID){
 
 function onclicksyncloaddata(){
     closemenu();
+
+    window.setTimeout(function(){
+
+
     $('#indexloadingdata').modal('show');
     db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc);
+    }, 1000);
+    
+
 }
 
 function onclicksyncloaddata2(tx){
