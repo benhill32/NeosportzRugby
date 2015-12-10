@@ -80,7 +80,7 @@ function numbersponsers_success(tx, results) {
 
        // alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
 
-
+        $('#loadinggears').hide();
         $('#Modalsponsor').modal('show')
     }
     db.transaction(getfirstnew, errorCBfunc, successCBfunc);
