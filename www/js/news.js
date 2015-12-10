@@ -25,7 +25,7 @@ function onDeviceReadynews() {
 
  //   alert(window.localStorage.getItem("teamfollow"));
  //   alert(window.localStorage.getItem("teamnewfeed"));
-
+    $('#btndatenews').empty();
 
     if( window.localStorage.getItem("teamfollow") != 0) {
 
@@ -38,6 +38,8 @@ function onDeviceReadynews() {
             $('#divNonews').hide();
             $('#loadinggears').hide();
             $('#divNoclub').hide();
+
+            $('#btndatenews').append("New Feed Disabled");
         }
 
 
@@ -46,6 +48,8 @@ function onDeviceReadynews() {
         $('#divyesnews').hide();
         $('#divNonews').hide();
         $('#loadinggears').hide();
+
+        $('#btndatenews').append("No News Feed");
     }
 }
 
