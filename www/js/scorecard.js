@@ -5,7 +5,7 @@ var id = getUrlVars()["ID"];
 
 var team1all = 0;
 var team2all = 0;
-var deviceIDscorecard;
+
 var networkconnectionscore = 0;
 document.addEventListener("deviceready", onDeviceReadyscore, false);
 var playerhome = 0;
@@ -23,8 +23,8 @@ var ABonus1= 0;
 var ABonus2= 0;
 
 function onDeviceReadyscore() {
-    checkonlinescore()
-    deviceIDscorecard = device.uuid;
+    checkonlinescore();
+
 
 
     //if(networkconnectionscore !=0) {
@@ -350,7 +350,7 @@ function getbonus(){
     }
 
 
-        var response =   passscoretoserverscorecard("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"))
+        var response =   passscoretoserverscorecard("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"))
 
 
 
@@ -412,12 +412,12 @@ function getscorefromtable_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    //  alert("gameid=" + menu.ID + "&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"));
+    //  alert("gameid=" + menu.ID + "&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
 
 
 
-    var response = passscoretoserverscorecard("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"))
+    var response = passscoretoserverscorecard("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"))
 
     //alert(response);
 

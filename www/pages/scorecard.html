@@ -31,7 +31,19 @@
     <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
 
 
+<script>
+    $(function(){
+        // Bind the swipeleftHandler callback function to the swipe event on div.box
 
+        $('body').on({
+            'touchmove': function(e) {
+                $("#scolltop").show();
+            }
+        });
+
+    });
+
+</script>
 
 
     <title></title>
@@ -480,7 +492,7 @@
     <div id="scorecard">
 
 
-</div>
+    </div>
 
 </div>
 <div id="loadinggears" style="display:none;" align="center" >
