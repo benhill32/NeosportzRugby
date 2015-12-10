@@ -998,11 +998,9 @@ function checkversionofapp_success(tx, results) {
                     $('#modelnewdatabaseapple').modal('show');
                 }
             } else {
-                if (datenow.getFullYear() == functionyear) {
+
                     closemodel();
-                } else {
-                    closemodelarchive();
-                }
+
             }
         }
 
