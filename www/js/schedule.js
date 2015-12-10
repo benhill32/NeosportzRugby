@@ -377,12 +377,14 @@ function getMenu_success(tx, results) {
 
 
             if(window.localStorage.getItem("isadmin")==1) {
-                $('#socialshare' + menu.ID).removeClass(panelcolour);
-                $('#adminmenu' + menu.ID).show();
-                $('#score' + menu.ID).show();
-                $('#cancell' + menu.ID).show();
-                $('#referee' + menu.ID).show();
-                $('#divdefault' + menu.ID).show();
+                if (menu.IsFinalScore == 0) {
+                    $('#socialshare' + menu.ID).removeClass(panelcolour);
+                    $('#adminmenu' + menu.ID).show();
+                    $('#score' + menu.ID).show();
+                    $('#cancell' + menu.ID).show();
+                    $('#referee' + menu.ID).show();
+                    $('#divdefault' + menu.ID).show();
+                }
 
 
             }else{
@@ -676,7 +678,7 @@ function loadinfo_success2(tx, results) {
 
     if (day == d.getDate() && month == ("0" + (d.getMonth()+1)).slice(-2) && year == d.getFullYear()){
 
-        if(isadmin==1) {
+        if(window.localStorage.getItem("isadmin")==1) {
 
 
 

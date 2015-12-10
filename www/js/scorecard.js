@@ -2,7 +2,7 @@ var db;
 var dbCreated = false;
 var IDhist = 0;
 var id = getUrlVars()["ID"];
-
+alert(id);
 var team1all = 0;
 var team2all = 0;
 var deviceIDscorecard;
@@ -15,7 +15,7 @@ var timeaway = 0;
 var scoringname =0;
 
 
-var clubedit = 0;
+
 var DIVid = "";
 var HBonus1= 0;
 var HBonus2= 0;
@@ -32,35 +32,12 @@ function onDeviceReadyscore() {
     }
 
     window.setTimeout(function(){
-        db.transaction(getfliter1, errorCBfunc, successCBfunc);
+        db.transaction(getdata, errorCBfunc, successCBfunc);
+        db.transaction(getscoredata, errorCBfunc, successCBfunc);
     }, 1500);
 }
 
-function getfliter1(tx) {
 
-    //  updateadmin();
-
-    var sql = "select Ref,isadmin,Clubedit from MobileApp_LastUpdatesec";
-    // alert(sql);
-    tx.executeSql(sql, [], getfliter1_success);
-
-}
-
-
-function getfliter1_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-
-
-    if(len != 0) {
-        var menu = results.rows.item(0);
-        Clubedit = menu.Clubedit;
-        Ref= menu.Ref;
-        isadmin = menu.isadmin;
-        db.transaction(getdata, errorCBfunc, successCBfunc);
-        db.transaction(getscoredata, errorCBfunc, successCBfunc);
-    }
-}
 
 function checkonlinescore(){
     var networkState = navigator.connection.type;
@@ -225,7 +202,7 @@ function getMenu_success(tx, results) {
 
         if (menu.IsFinalScore == 0 && (menu.halftime != 'null') && (menu.fulltime != 'null')) {
 
-            if (Ref == 0) {
+            if (window.localStorage.getItem("Ref") == 0) {
                 $("#btnapprove").hide();
                 $("#divbonus").hide();
             } else {
@@ -233,7 +210,7 @@ function getMenu_success(tx, results) {
                 $("#btnapprove").show();
             }
 
-            if(isadmin == 1){
+            if(window.localStorage.getItem("isadmin") == 1){
                 $("#divbonus").show();
                 $("#btnapprove").show();
             }
