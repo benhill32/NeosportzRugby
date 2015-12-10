@@ -98,7 +98,7 @@ function getgameids(tx){
     var day = d.getDate();
 
     sql = "select ID from App_Games where Month = " + month + " and Year = " + year + " and Day = " + day + " and DeletedateUTC= 'null'";
-
+alert(sql);
     tx.executeSql(sql, [], getgameids_success);
 
 }
