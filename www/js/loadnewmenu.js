@@ -606,6 +606,10 @@ function cleardata4Changeregaionall(){
         window.setTimeout(function(){
             createtables4Changeregaionall();
         }, 2500);
+    }else{
+
+        window.plugins.toast.showShortBottom("You don't have access to internet!", function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
     }
     }, 1000);
 
