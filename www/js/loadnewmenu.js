@@ -8,7 +8,7 @@ var IDconall =0;
 var styleall= "";
 var favidall= 0;
 var networkconall = "";
-var wifiallset = 0;
+
 var regionID = 0;
 var clubfavall = 0;
 var menucol = "";
@@ -73,7 +73,7 @@ function getsyncdateall_success2(tx, results) {
     //   alert(menu.Datesecs);
     var dateme = new Date((menu.Datesecs)*1000);
     var wifi = menu.syncwifi;
-    wifiallset = wifi;
+    window.localStorage.setItem("syncwifi", menu.syncwifi);
     var month = new Array();
     month[0] = "Jan";
     month[1] = "Feb";
@@ -160,12 +160,13 @@ if(menu.allowscore == 0){
     if(wifi==1) {
 
         $("#switch-onColor").prop("checked", true );
-
+        window.localStorage.setItem("syncwifi", "1");
 
 
     }else if(wifi==0) {
 
         $("#switch-onColor").prop("checked", false );
+        window.localStorage.setItem("syncwifi", "0");
     }
 
     var page2 = "";
@@ -265,8 +266,10 @@ function getregionName2all_success(tx, results) {
     $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
 
         if(state == true){
+
             chkmobiledataall(1);
         }else{
+
             chkmobiledataall(0);
         }
     });
@@ -275,8 +278,10 @@ function getregionName2all_success(tx, results) {
     $("#switch-filter").on('switchChange.bootstrapSwitch', function(event, state) {
 
         if(state == true){
+
             chkfilter(1);
         }else{
+
             chkfilter(0);
         }
     });
@@ -348,7 +353,8 @@ function chkmobiledataall(id){
             tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 1');
             console.log("syncwifi on");
         });
-        wifiallset = 1;
+        window.localStorage.setItem("syncwifi", 1);
+
     }
     else if(id== 0)
     {
@@ -356,8 +362,8 @@ function chkmobiledataall(id){
             tx.executeSql('Update MobileApp_LastUpdatesec set syncwifi = 0');
             console.log("syncwifi off");
         });
-        wifiallset =0;
 
+        window.localStorage.setItem("syncwifi", 0);
     }
 
 
@@ -591,9 +597,9 @@ function loadcontactsall_next_success(tx, results) {
 function cleardata4Changeregaionall(){
 
     onOfflineall();
-
-
-    if((wifiallset ==1 &&  networkconall==2) || ((wifiallset ==0 &&  networkconall!=0))) {
+    closemenu();
+    window.setTimeout(function(){
+    if((window.localStorage.getItem("syncwifi") ==1 &&  networkconall==2) || ((window.localStorage.getItem("syncwifi") ==0 &&  networkconall!=0))) {
         $('#indexloadingdata').modal('show');
         db.transaction(droptables, errorCBfunc,successCBfunc);
 
@@ -601,7 +607,7 @@ function cleardata4Changeregaionall(){
             createtables4Changeregaionall();
         }, 2500);
     }
-
+    }, 1000);
 
 }
 

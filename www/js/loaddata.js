@@ -567,7 +567,7 @@ function onclicksyncloaddata(){
     $('#indexloadingdata').modal('show');
     db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc);
     }, 1000);
-    
+
 
 }
 
