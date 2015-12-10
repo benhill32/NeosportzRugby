@@ -246,22 +246,22 @@ function gamestate(IDD,id){
 
     if (IDD == 1) {
         db.transaction(function (tx) {
-            tx.executeSql('Update MobileApp_Results set halftime = 1 where ID = ' + id);
-            console.log("Update INTO MobileApp_Results");
+            tx.executeSql('Update App_Games set halftime = 1 where ID = ' + id);
+            console.log("Update INTO App_Games");
         });
 
 
     }else if (IDD == 2) {
 
         db.transaction(function (tx) {
-            tx.executeSql('Update MobileApp_Results set halftime = 1, fulltime= 1 where ID = ' + id);
-            console.log("Update INTO MobileApp_Results");
+            tx.executeSql('Update App_Games set halftime = 1, fulltime= 1 where ID = ' + id);
+            console.log("Update INTO App_Games");
         });
     }else if (IDD == 3) {
 
         db.transaction(function (tx) {
-            tx.executeSql('Update MobileApp_Results set IsFinalScore = 1 where ID = ' + id);
-            console.log("Update INTO MobileApp_Results");
+            tx.executeSql('Update App_Games set IsFinalScore = 1 where ID = ' + id);
+            console.log("Update INTO App_Games");
         });
     }
   //  db.transaction(getdata, errorCBfunc, successCBfunc);
@@ -378,13 +378,13 @@ function getscore(team,value,name){
 
         if (team == 0) {
             db.transaction(function (tx) {
-                tx.executeSql('Update MobileApp_Results set AwayScore = AwayScore+' + value + ' where ID = ' + id);
-                console.log("Update INTO MobileApp_Results");
+                tx.executeSql('Update App_Games set AwayScore = AwayScore+' + value + ' where ID = ' + id);
+                console.log("Update INTO App_Games");
             });
         } else if (team == 1) {
             db.transaction(function (tx) {
-                tx.executeSql('Update MobileApp_Results set HomeScore = HomeScore+' + value + '  where ID = ' + id);
-                console.log("Update INTO MobileApp_Results");
+                tx.executeSql('Update App_Games set HomeScore = HomeScore+' + value + '  where ID = ' + id);
+                console.log("Update INTO App_Games");
             });
         }
 
@@ -402,7 +402,7 @@ function getscore(team,value,name){
 }
 
 function getscorefromtable(tx) {
-    var sql = "select ID,HomeScore ,AwayScore from MobileApp_Results where ID = '" + id + "'";
+    var sql = "select ID,HomeScore ,AwayScore from App_Games where ID = '" + id + "'";
     //  alert(sql);
     tx.executeSql(sql, [], getscorefromtable_success);
 }
