@@ -71,12 +71,15 @@ function numbersponsers_success(tx, results) {
   //  alert(len);
     if(len != 0) {
         if (menu.Website == "") {
-            $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Icons/Club/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '">')
+            $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '">')
         } else {
             var website2 = "http://" + menu.Website;
             // alert(website2);
-            $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="http://rugby.neosportz.com/Icons/Club/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '"></div>')
+            $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '"></div>')
         }
+
+        alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
+
 
         $('#Modalsponsor').modal('show')
     }
