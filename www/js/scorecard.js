@@ -128,7 +128,7 @@ function getplayerinfo_success(tx, results) {
 }
 
 function getdata(tx) {
-    var sql = "select ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Final,halftime,fulltime,IsFinalScore,HBonus1,HBonus2,ABonus1,ABonus2  from MobileApp_Results where ID = '" + id + "'";
+    var sql = "select  from App_Games where ID = '" + id + "'";
     //alert(sql);
     tx.executeSql(sql, [], getMenu_success);
 }
