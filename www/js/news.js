@@ -75,7 +75,7 @@ function numbersponsers_success(tx, results) {
         } else {
             var website2 = "http://" + menu.Website;
             // alert(website2);
-            $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '"></div>')
+            $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '"></div>')
         }
 
         alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
@@ -101,7 +101,7 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-   // alert("Length" + len);
+    alert("Length" + len);
 
 if(len == 0){
         sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
