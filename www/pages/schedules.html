@@ -10,25 +10,28 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <!-- <link rel="stylesheet" type="text/css" href="../css/onoff.css" />-->
     <link rel="stylesheet" type="text/css" href="../css/cropper.css" />
-   <!-- <script type="text/javascript" src="../js/dbconnection.js"></script>-->
+    <script type="text/javascript" src="../js/dbconnection.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../Bootstrap/css/docs.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
     <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
-   <script type="text/javascript" src="../js/cropper.js"></script>
+    <script type="text/javascript" src="../js/cropper.js"></script>
     <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
     <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../js/bootstrap-switch.js"></script>
-   <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/schedule.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
     <script type="text/javascript" src="../js/loadnewmenu.js"></script>
     <link href="../css/fullcalendar.css" rel="stylesheet"/>
     <link href="../css/bootstrap-switch.css" rel="stylesheet"/>
-  <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../js/fullcalendar.min.js"></script>
+
+
+
 
 
 
@@ -63,12 +66,12 @@
     </style>
 
     <script type="text/javascript">
-          //   $(function(){
-          //  $("ul li").click(function(){
-         //       $("ul li").removeClass("on");
-         //       $(this).addClass("on");
-         //   });
-      //  });
+        $(function(){
+            $("ul li").click(function(){
+                $("ul li").removeClass("on");
+                $(this).addClass("on");
+            });
+        });
 
 
 
@@ -103,14 +106,13 @@
         });
 
 
-
-
     </script>
+
 
 
 </head>
 <body>
-<nav id="menu" style="display: none;"    >
+<nav id="menu" style="display: none;"   >
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
@@ -183,31 +185,6 @@
                     </div>
                 </a>
                 </li>
-                <li><a href="#" id="settingsync"  >
-                    <div class="row ">
-                        <div class="col-xs-8 col-md-8 ">
-                            <strong>Sync</strong>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-xs-8 col-md-8 mainmenuwifi">
-                            <p>Check for Updates</p>
-
-                        </div>
-                    </div>
-
-                </a></li>
-                <li><a href="javascript: void(0)"  >
-                    <div class="row ">
-                        <div class="col-xs-8 col-md-8 mainmenuwifi">
-                            <p id="lastsyncdate"></p>
-
-                        </div>
-                    </div>
-                </a></li>
-
-
-
                 <li><a href="#" data-toggle="modal" data-target="#modelpages">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
@@ -222,7 +199,20 @@
                     </div>
                 </a>
                 </li>
+                <li><a href="#" id="settingsync"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Sync</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 mainmenuwifi">
+                            <p>Check for Updates</p>
 
+                        </div>
+                    </div>
+
+                </a></li>
 
 
                 <li><a href="#" id="regioniddiv" >
@@ -363,7 +353,14 @@
                     </ul>
 
                 </li>
+                <li><a href="javascript: void(0)"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 mainmenuwifi">
+                            <p id="lastsyncdate"></p>
 
+                        </div>
+                    </div>
+                </a></li>
 
 
 
@@ -384,7 +381,7 @@
 
 
 
-<div class="container-fluid" >
+<div class="container-fluid">
     <div class="modal" id="basicModalclubhistory" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -876,6 +873,7 @@
 
 
 
+
     <div>
         <div class="panel panel-default">
             <div class="panel-body">
@@ -895,62 +893,58 @@
 
             </div>
         </div>
-        </div>
+    </div>
     <div id="divschedules" align="center" >
 
+        <!--  <div class="panel panel-primary"  >
+              <div class="panel-heading" data-toggle="modal" data-target="#basicModalresults">
+                  <div class="row">
+
+                  <div class="col-xs-5">
+                      <img src="http://rugby.neosportz.com/Icons/Club/Taradale-Ball.png" height="40px" ><br>
+
+                      Taradale
+                      </div>
+                  <div class="col-xs-2" style="padding-top:10px;">
+                      vs
+                  </div>
+                  <div class="col-xs-5"  >
 
 
+                      <img src="http://rugby.neosportz.com/Icons/Club/marist.png"  height="40px" ><br>
+                      Marist
+                  </div>
+              </div>
+                  </div>
+
+                  <ul class="list-group">
+                  <li class="list-group-item"> score</li>
+                  <li class="list-group-item">ampm</li>
+                  <li class="list-group-item">menu.TournamentName cancel</li>
+                  <li class="list-group-item panel3"> menu.Field</li>
+                      <div class="panel-group" role="tablist" style="display: none;">
+                          <div class="panel panel-default">
+                              <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                                  <h4 class="panel-title">
+                                      <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1"> Collapsible list group </a>
+                                  </h4>
+                              </div>
+
+                          <div style="" aria-expanded="true" id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                              <ul class="list-group">
+                                  <li class="list-group-item">Bootply</li>
+                                  <li class="list-group-item">One itmus ac facilin</li>
+                                  <li class="list-group-item">Second eros</li> </ul>
+
+                          </div>
+                          </div>
+                      </div>
 
 
-      <!--  <div class="panel panel-primary"  >
-            <div class="panel-heading" data-toggle="modal" data-target="#basicModalresults">
-                <div class="row">
-
-                <div class="col-xs-5">
-                    <img src="http://rugby.neosportz.com/Icons/Club/Taradale-Ball.png" height="40px" ><br>
-
-                    Taradale
-                    </div>
-                <div class="col-xs-2" style="padding-top:10px;">
-                    vs
-                </div>
-                <div class="col-xs-5"  >
+                  </ul>
 
 
-                    <img src="http://rugby.neosportz.com/Icons/Club/marist.png"  height="40px" ><br>
-                    Marist
-                </div>
-            </div>
-                </div>
-
-                <ul class="list-group">
-                <li class="list-group-item"> score</li>
-                <li class="list-group-item">ampm</li>
-                <li class="list-group-item">menu.TournamentName cancel</li>
-                <li class="list-group-item panel3"> menu.Field</li>
-                    <div class="panel-group" role="tablist" style="display: none;">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
-                                <h4 class="panel-title">
-                                    <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1"> Collapsible list group </a>
-                                </h4>
-                            </div>
-
-                        <div style="" aria-expanded="true" id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
-                            <ul class="list-group">
-                                <li class="list-group-item">Bootply</li>
-                                <li class="list-group-item">One itmus ac facilin</li>
-                                <li class="list-group-item">Second eros</li> </ul>
-
-                        </div>
-                        </div>
-                    </div>
-
-
-                </ul>
-
-
-        </div>-->
+          </div>-->
 
 
     </div>
@@ -963,17 +957,12 @@
 
 </div>
 
-
-
-
-
-
-    <div id="loadinggears" style="display:none;" align="center" >
-        <img src="../img/loadingGears.gif" class="img-responsive" style="height:100px;">
-    </div>
+<div id="loadinggears" style="display:none;" align="center" >
+    <img src="../img/loadingGears.gif" class="img-responsive" style="height:100px;">
+</div>
 
 <div style="position: fixed; bottom: 0px;right: 0px; display: none;" id="scolltop">
-     <span style=" margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
+    <span style=" margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
 </div>
 
 </body>
