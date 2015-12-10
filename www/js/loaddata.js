@@ -559,6 +559,7 @@ function chooseregionloaddata(ID){
 }
 
 function onclicksyncloaddata(){
+    closemenu();
     $('#indexloadingdata').modal('show');
     db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc);
 }
