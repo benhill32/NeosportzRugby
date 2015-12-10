@@ -79,7 +79,7 @@
       <file leaf-file-name="scorecard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/scorecard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
+            <state vertical-scroll-proportion="5.6923075">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -103,6 +103,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="scorecard.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5129108">
+              <caret line="419" column="280" selection-start-line="419" selection-start-column="280" selection-end-line="419" selection-end-column="280" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,16 +126,6 @@
                 <element signature="n#!!block;n#updatedatapush#0" expanded="false" />
                 <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scorecard.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -155,8 +155,8 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.206897">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.137931">
+              <caret line="340" column="73" selection-start-line="340" selection-start-column="72" selection-end-line="340" selection-end-column="73" />
               <folding>
                 <marker date="1449712245131" expanded="true" signature="7611:7628" placeholder="..." />
               </folding>
@@ -1011,16 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.206897">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <marker date="1449712245131" expanded="true" signature="7611:7628" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/news.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6545453">
@@ -1162,24 +1152,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="204" column="11" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="67" />
-          <folding>
-            <element signature="n#!!block;n#countProperties#0" expanded="false" />
-            <element signature="n#!!block;n#loadarchiveyeardata2#0" expanded="false" />
-            <element signature="n#!!block;n#loadarchiveyeardata2_sync#0" expanded="false" />
-            <element signature="n#!!block;n#pushnotifiy#0" expanded="false" />
-            <element signature="n#!!block;n#updatedatapush#0" expanded="false" />
-            <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/scorecard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
+        <state vertical-scroll-proportion="5.6923075">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1202,10 +1177,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="204" column="11" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!block;n#countProperties#0" expanded="false" />
+            <element signature="n#!!block;n#loadarchiveyeardata2#0" expanded="false" />
+            <element signature="n#!!block;n#loadarchiveyeardata2_sync#0" expanded="false" />
+            <element signature="n#!!block;n#pushnotifiy#0" expanded="false" />
+            <element signature="n#!!block;n#updatedatapush#0" expanded="false" />
+            <element signature="n#!!block;n#updatedatapushappclosed#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.137931">
+          <caret line="340" column="73" selection-start-line="340" selection-start-column="72" selection-end-line="340" selection-end-column="73" />
+          <folding>
+            <marker date="1449712245131" expanded="true" signature="7611:7628" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/scorecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.5129108">
+          <caret line="419" column="280" selection-start-line="419" selection-start-column="280" selection-end-line="419" selection-end-column="280" />
           <folding />
         </state>
       </provider>
