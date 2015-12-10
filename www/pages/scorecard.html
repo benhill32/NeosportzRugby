@@ -8,96 +8,104 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
-    <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+
 
     <script type="text/javascript" src="../js/dbconnection.js"></script>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Bootstrap/css/docs.min.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
-    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+    <script type="text/javascript" src="../js/cropper.js"></script>
     <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
-    <script type="text/javascript" src="../js/functions.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/bootstrap-switch.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
+     <script type="text/javascript" src="../js/functions.js"></script>
     <script type="text/javascript" src="../js/loaddata.js"></script>
     <script type="text/javascript" src="../js/scorecard.js"></script>
     <script type="text/javascript" src="../js/loadnewmenu.js"></script>
-
+    <link href="../css/bootstrap-switch.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
 
     <title></title>
 </head>
 <body>
-<nav id="menu"  style="display: none;" >
+<nav id="menu" style="display: none;"   >
     <ul>
 
-        <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span>Home</a></li>
-        <li><a href="#schedulemenudiv" data-target="#schedulemenudiv"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Schedules</a>
-            <ul id="schedulemenudiv">
+        <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
+        <li class="bs-callout bs-callout-warning">
 
-
-            </ul>
-
+            <a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a>
 
         </li>
-
-        <li><a href="#resultmenudiv" data-target="#resultmenudiv" ><span class="glyphicon glyphicon-star padding" aria-hidden="true" ></span>Results</a>
-            <ul id="resultmenudiv">
-            </ul>
-        </li>
-
-        <li><a href="#standingsmenudiv" data-target="#standingsmenudiv"><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a>
-            <ul id="standingsmenudiv">
-            </ul>
-        </li>
-        <li><a href="#clubsmenudiv" data-target="#clubsmenudiv"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a>
-            <ul id="clubsmenudiv">
-            </ul>
-        </li>
-
-
-
-
+        <li><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
+        <li><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
         <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
         <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
             <ul id="settingmenudiv">
                 <li><a href="javascript: void(0)">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
-                            <strong> Mobile Data</strong>
+                            <strong>Use Wifi Only</strong>
 
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <div class="btn-group btn-toggle">
-                                <button id="btnmenu1" class="btn btn-xs btn-default"  onclick="chkmobiledataall('btn1')">ON</button>
-                                <button id="btnmenu2" class="btn btn-xs btn-success"   onclick="chkmobiledataall('btn2')">OFF</button>
-                            </div>
 
+                            <input id="switch-onColor" type="checkbox" data-on-color="info" data-size="small" >
+
+
+
+                            <script>
+
+
+
+                            </script>
                         </div>
 
                     </div>
+
+
                     <div class="row ">
                         <div class="col-xs-12 col-md-12 mainmenuwifi">
-                            <p>Only Sync on a Wi-Fi network</p>
+                            <p>Only Sync's on a Wi-Fi networks</p>
 
                         </div>
                     </div>
                 </a>
                 </li>
-
-                <li><a href="#" id="regioniddiv"  >
+                <li><a href="javascript: void(0)">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
-                            <strong>Region</strong>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-xs-6 col-md-4 ">
-                            <p id="regionlbl"></p>
-                        </div>
-                    </div>
-                </a></li>
+                            <strong>Apply Filter</strong>
 
-                <li><a href="#" id="settingsync" >
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+
+                            <input id="switch-filter" type="checkbox" data-on-color="info" data-size="small" >
+
+
+                            <script>
+
+
+
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 mainmenuwifi">
+                            <p>Only shows your favourite clubs info</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+                <li><a href="#" id="settingsync"  >
                     <div class="row ">
                         <div class="col-xs-8 col-md-8 ">
                             <strong>Sync</strong>
@@ -110,7 +118,7 @@
                         </div>
                     </div>
 
-                    </a></li>
+                </a></li>
                 <li><a href="javascript: void(0)"  >
                     <div class="row ">
                         <div class="col-xs-8 col-md-8 mainmenuwifi">
@@ -119,6 +127,39 @@
                         </div>
                     </div>
                 </a></li>
+
+                <li><a href="#" data-toggle="modal" data-target="#modelpages">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Starting Page</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12">
+                            <p id="lblstartingpage">Choose your starting page</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+
+
+
+                <li><a href="#" id="regioniddiv" >
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Region</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <p id="regionlbl"></p>
+                        </div>
+                    </div>
+                </a></li>
+
+
+
                 <li><a href="#"  id="settingdeleteall"  >
                     <div class="row ">
                         <div class="col-xs-8 col-md-8 ">
@@ -191,6 +232,16 @@
                             </div>
                         </a>
                         </li>
+                        <li id="divloadnews"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/addnewfeed.html')">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Send News Feed
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
                         <li><a href="mailto:helpdesk@neocom.co.nz?Subject=Neosportz Basketball App" >
                             <div class="row ">
                                 <div class="col-xs-8 col-md-8 ">
@@ -200,8 +251,8 @@
 
                         </a>
                         </li>
-                        <li id="scoringreqdiv"><a href="../pages/Scoringrequest.html" >
-                            <div class="row ">
+                        <li id="scoringreqdiv"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/Scoringrequest.html')">
                                 <div class="col-xs-8 col-md-8 ">
                                     Scoring Request
                                 </div>
@@ -219,8 +270,8 @@
                         </a>
                         </li>
 
-                        <li id="divadminarea"><a href="../pages/scoringadminarea.html" >
-                            <div class="row ">
+                        <li id="divadminarea"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/scoringadminarea.html')">
                                 <div class="col-xs-8 col-md-8 ">
                                     Scoring Admin Area
                                 </div>
@@ -239,19 +290,18 @@
             </ul>
         </li>
 
-
-
-
     </ul>
 
 </nav>
 
 
-<div class="divmainmenu">
-    <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()">
-        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> Scorecard </div>
+<div class="divmainmenu" >
 
+    <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()" >
+        <span id="spanmenu" class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;"></span> Scorecard </div>
 </div>
+
+
 <div class="container-fluid">
     <div class="modal" id="indexloadingdata" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog" align="center">
@@ -272,15 +322,168 @@
 
         </div>
     </div>
-<div id="scorecard">
+    <div class="modal" id="modelnewversion" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    There is a New Version of this App!
+                </div>
+                <div class="modal-body">
+                    <div  id="opennewversion" data-dismiss="modal" align="center" onclick="loadnewapp()">
+                        Download Now
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer" id="closenewversion" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
+                    Exit App
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="modelnewdatabase" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    The Database has changed for this App.
+                </div>
+                <div class="modal-body">
+                    <div  id="opennewdatabase" data-dismiss="modal" align="center" onclick="loadnewadatabase()">
+                        Please Update now
+                    </div>
+                </div>
+                <div class="modal-footer" id="closenewdatabase" data-dismiss="modal" align="center" onclick="navigator.app.exitApp();">
+                    Exit App
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="modelnewdatabaseapple" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    The Database has changed for this App.
+                </div>
+                <div class="modal-body">
+                    <div  id="opennewdatabaseapple" data-dismiss="modal" align="center" onclick="loadnewadatabase()">
+                        Please Update now
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="modelnewversionapple" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    There is a New Version of this App!
+                </div>
+                <div class="modal-body">
+                    <div  id="opennewversion1" data-dismiss="modal" align="center" onclick="loadnewapp()">
+                        Download Now
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="modelpages" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Choose your starting page
+                </div>
+                <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(1)">
+                    Home
+                </div>
+                <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(2)" >
+                    Games
+
+                </div>
+                <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(3)">
+                    Standings
+
+                </div>
+                <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;" onclick="choosepage(4)">
+                    Clubs
+
+                </div>
+                <div class="modal-body" align="center" onclick="choosepage(5)" >
+                    News
+
+                </div>
+                <div class="modal-footer" data-dismiss="modal">
+                    Close
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="basicModalregions2" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="divmainheader">
+
+                        Change Region.
+                    </div>
+                </div>
+                <div class="modal-body" >
+
+                    <div align="center">
+                        <p> Note: If you change Region it will clear current data and download the new regions data.</p>
+
+                    </div>
+                    <div id="regiondivID2">
+                        <Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" onclick="cleardata4Changeregaionall()" >
+                            <div class="bold size13"   >Yes</div>
+                        </Div>
+                        <Div class="modal-body"  data-dismiss="modal" align="left" style="border-bottom: 1px solid #e5e5e5;" >
+                            <div class="bold size13"   >No</div>
+                        </Div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="closeregion2" data-dismiss="modal" align="center">
+                    Close
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="scorecard">
 
 
 </div>
 
 </div>
-<div class="footer" align="center" data-toggle="modal" data-target="" >
-    <img src="../img/neocom.png" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-    <span style="position: absolute; margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
+<div id="loadinggears" style="display:none;" align="center" >
+    <img src="../img/loadingGears.gif" class="img-responsive" style="height:100px;">
+</div>
+
+<div style="position: fixed; bottom: 0px;right: 0px; display: none;" id="scolltop">
+    <span style=" margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
 </div>
 
 </body>

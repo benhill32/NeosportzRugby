@@ -2,7 +2,7 @@ var db;
 var dbCreated = false;
 var IDhist = 0;
 var id = getUrlVars()["ID"];
-var gtoken =0;
+
 var team1all = 0;
 var team2all = 0;
 var deviceIDscorecard;
@@ -25,14 +25,12 @@ var ABonus2= 0;
 function onDeviceReadyscore() {
     checkonlinescore()
     deviceIDscorecard = device.uuid;
-    //  db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
-    //  console.log("LOCALDB - Database ready");
-    // db.transaction(gettoken, errorCBfunc, successCBfunc);
+
 
     if(networkconnectionscore !=0) {
         onclicksyncloaddata();
     }
-    db.transaction(gettoken, errorCBfunc, successCBfunc);
+
     window.setTimeout(function(){
         db.transaction(getfliter1, errorCBfunc, successCBfunc);
     }, 1500);
@@ -355,7 +353,7 @@ function getscoredata_success(tx, results) {
 }
 
 function getbonus(){
-    db.transaction(gettoken, errorCBfunc, successCBfunc);
+
     var home1 = 0;
     var home2 =0;
     var away1=0;
@@ -375,7 +373,7 @@ function getbonus(){
     }
 
 
-        var response =   passscoretoserverscorecard("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
+        var response =   passscoretoserverscorecard("gameidbonus=" + id + "&bonushome1=" + home1 + "&bonushome2=" + home2 + "&bonusaway1=" + away1 + "&bonusaway2=" + away2 + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"))
 
 
 
@@ -418,7 +416,7 @@ function getscore(team,value,name){
         //update buttons
       //  db.transaction(getscoredata, errorCBfunc, successCBfunc);
         //getting token for sync
-        db.transaction(gettoken, errorCBfunc, successCBfunc);
+
         db.transaction(getscorefromtable, errorCBfunc, successCBfunc);
     }else{
 
@@ -437,12 +435,12 @@ function getscorefromtable_success(tx, results) {
     $('#busy').hide();
     var len = results.rows.length;
     var menu = results.rows.item(0);
-    //  alert("gameid=" + menu.ID + "&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken);
+    //  alert("gameid=" + menu.ID + "&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"));
 
 
 
 
-    var response = passscoretoserverscorecard("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" + gtoken)
+    var response = passscoretoserverscorecard("gameid=" + menu.ID + "&scoringname=" + scoringname + "&homeplayer=" + playerhome + "&awayplayer=" + playeraway + "&hometime=0&awaytime=0&home=" + menu.HomeScore + "&away=" + menu.AwayScore + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"))
 
     //alert(response);
 
@@ -457,20 +455,6 @@ function getscorefromtable_success(tx, results) {
 
 
 
-function gettoken(tx) {
-    var sql = "select token from MobileApp_LastUpdatesec";
-    //  alert(sql);
-    tx.executeSql(sql, [], gettoken_success);
-}
-
-function gettoken_success(tx, results) {
-    $('#busy').hide();
-    var len = results.rows.length;
-    var menu = results.rows.item(0);
-
-    gtoken = menu.token;
-
-}
 
 function getUrlVars() {
     var vars = [], hash;

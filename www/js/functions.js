@@ -1208,7 +1208,7 @@ function getoneoff_success(tx, results) {
 
 //alert("one off");
 
-        window.localStorage.setItem("syncwifi", menu.syncwifi);
+            window.localStorage.setItem("syncwifi", menu.syncwifi);
             window.localStorage.setItem("startpage", menu.startpage);
             window.localStorage.setItem("allownewfeed", menu.allownewfeed);
             window.localStorage.setItem("Region", menu.Region);
