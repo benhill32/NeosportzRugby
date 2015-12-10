@@ -117,9 +117,15 @@ function getclub_success(tx, results) {
     }
 
 
-    $('#divContacts').append(contacts);
 
 
+    var emails = extractEmails(contacts);
+    for (i = 0; i < emails.length; i++) {
+        contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
+    }
+
+
+    $("#divContacts").append(contacts);
 
 if(menu.ID == window.localStorage.getItem("teamfollow")){
 
@@ -259,7 +265,13 @@ function getMenu_success(tx, results) {
     }
 
 
-    $('#divContacts').append(contacts);
+    var emails = extractEmails(contacts);
+    for (i = 0; i < emails.length; i++) {
+        contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
+    }
+
+
+    $("#divContacts").append(contacts);
 
 
     clubname = menu.ID;
@@ -398,3 +410,10 @@ var PhoneNumberParser = function() {
 
 
 };
+
+function extractEmails (text)
+{
+    return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+}
+
+
