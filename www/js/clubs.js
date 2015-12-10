@@ -5,7 +5,6 @@ var ID = 0;
 var FirstID = 0;
 var LastID = 0;
 var clubname = 0;
-var pnumbers = [];
 var clubnewfeed = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -99,20 +98,19 @@ function getclub_success(tx, results) {
 
 
     // parse a string for numbers
-    var numbers = "";
-     numbers = new PhoneNumberParser();
+    var numbers = new PhoneNumberParser();
 
-    var contacts = menu.Contacts
+    var contacts = menu.Contacts;
 
     numbers.parse(contacts);
-
+    var pnumbers = [];
     for (i = 0; i < numbers.items.length; i++) {
 
-        alert(numbers.items[i]);
+
 
         if(jQuery.inArray( numbers.items[i], pnumbers ) == "-1") {
             contacts = contacts.replace(new RegExp(numbers.items[i],'g'),"<a href='tel:" + numbers.items[i] + "'>" + numbers.items[i] + "</a>");
-
+            //
             pnumbers.push(numbers.items[i]);
         }
 
@@ -241,7 +239,28 @@ function getMenu_success(tx, results) {
 
 
         $('#divhistory').append(menu.History);
-        $('#divContacts').append(menu.Contacts);
+    // parse a string for numbers
+    var numbers = new PhoneNumberParser();
+
+    var contacts = menu.Contacts;
+
+    numbers.parse(contacts);
+    var pnumbers = [];
+    for (i = 0; i < numbers.items.length; i++) {
+
+
+
+        if(jQuery.inArray( numbers.items[i], pnumbers ) == "-1") {
+            contacts = contacts.replace(new RegExp(numbers.items[i],'g'),"<a href='tel:" + numbers.items[i] + "'>" + numbers.items[i] + "</a>");
+            //
+            pnumbers.push(numbers.items[i]);
+        }
+
+    }
+
+
+    $('#divContacts').append(contacts);
+
 
     clubname = menu.ID;
     clubnewfeed = menu.Newfeed
