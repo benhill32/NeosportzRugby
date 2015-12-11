@@ -95,7 +95,7 @@ function getclub_success(tx, results) {
     clubname = menu.ID;
     clubnewfeed = menu.Newfeed
     $('#divhistory').append(menu.History);
-
+    alert(clubname);
 
     // parse a string for numbers
     var numbers = new PhoneNumberParser();

@@ -147,20 +147,6 @@ function getlastnews_success(tx, results) {
 
 
 
-
-
-function loadnewdata(){
-
-    refreshdata();
-    $('#newsmain').empty();
-    spon = 1;
-    spon2 =1 ;
-    db.transaction(getdatanews, errorCBfunc, successCBfunc);
-}
-
-
-
-
 function getfulldaynew(day){
 
     var weekday = new Array(7);
@@ -196,7 +182,7 @@ function getnewfeed_success(tx, results) {
 
         var menu = results.rows.item(0);
 
-var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
+        var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
         var d = new Date(menu.DisplayDateUTC).getDate();
 
         var m = new Date(menu.DisplayDateUTC).getMonth();
