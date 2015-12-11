@@ -93,7 +93,7 @@ function getclub_success(tx, results) {
     $('#btnclub').empty();
     $('#btnclub').append(menu.name);
     clubname = menu.ID;
-    clubnewfeed = menu.Newfeed
+    clubnewfeed = menu.Newfeed;
     $('#divhistory').append(menu.History);
     alert(clubname);
 
@@ -276,6 +276,7 @@ function getMenu_success(tx, results) {
 
     clubname = menu.ID;
     clubnewfeed = menu.Newfeed
+    alert(clubname);
     if(menu.ID == window.localStorage.getItem("teamfollow")){
 
         $('#spanfullstar').show();

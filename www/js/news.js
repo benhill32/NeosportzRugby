@@ -223,7 +223,7 @@ function getnewfeed_success(tx, results) {
 
     }
   //  alert("finsih");
-  //  db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+    db.transaction(numbersponsers, errorCBfunc, successCBfunc);
     $('#loadinggears').hide();
 }
 
