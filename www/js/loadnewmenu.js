@@ -466,9 +466,9 @@ function updatefollowall(ID,Color,Name,Base64,textcol) {
 
     if (document.getElementById("newsmain") != null) {
 
-        window.setTimeout(function(){
-            location.reload();
-        }, 1500);
+     //   window.setTimeout(function(){
+      //      location.reload();
+      //  }, 1500);
 
     }
 
