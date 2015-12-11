@@ -31,7 +31,7 @@ function onDeviceReadynews() {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
             $('#loadinggears').show();
-            db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+
             db.transaction(getdata2, errorCBfunc, successCBfunc);
             db.transaction(getfirstnew, errorCBfunc, successCBfunc);
             db.transaction(getlastnews, errorCBfunc, successCBfunc);
@@ -83,10 +83,10 @@ function numbersponsers_success(tx, results) {
 
        // alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
 
-        $('#loadinggears').hide();
+
         $('#Modalsponsor').modal('show')
     }
-
+    $('#loadinggears').hide();
 
 }
 
@@ -237,7 +237,7 @@ var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
 
     }
   //  alert("finsih");
-
+    db.transaction(numbersponsers, errorCBfunc, successCBfunc);
     $('#loadinggears').hide();
 }
 
