@@ -239,7 +239,7 @@ function getMenu_success(tx, results) {
         var imgg = "";
 
 
-    $("#divContacts").append(contacts);
+
 
 
     clubname = menu.ID;
@@ -288,12 +288,15 @@ function getMenu_success(tx, results) {
     }
 
 
+
+
     var emails = extractEmails(contacts);
     for (i = 0; i < emails.length; i++) {
         contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
     }
 
 
+    $("#divContacts").append(contacts);
 
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
