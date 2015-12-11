@@ -197,7 +197,7 @@ function populateDB1(tx,results) {
 
         var sql = "select Datesecs,datemenus,token,Region from MobileApp_LastUpdatesec";
 
-        if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))){
+        if((window.localStorage.getItem("syncwifi") ==1 && networkconnection==2) || ((window.localStorage.getItem("syncwifi") &&  networkconnection!=0))){
 
              tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
@@ -254,9 +254,7 @@ function getchecksync(tx, results) {
 
         var dif = (timenow/1000)-(datenowsecsync);
 
-        if (document.getElementById("newsmain") != null) {
-            dif = 100000000;
-        }
+        
 
         if (dif >= "600") {
 
