@@ -67,11 +67,11 @@ function numbersponsers(tx) {
 
 function numbersponsers_success(tx, results) {
     var len = results.rows.length;
-    var random = Math.floor((Math.random() * len) + 1)
+    var random = Math.floor((Math.random() * len) + 1);
     var menu = results.rows.item(random-1);
 
 
-  //  alert(len);
+    alert(len);
     if(len != 0) {
         if (menu.Website == "") {
             $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '">')
@@ -105,7 +105,7 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-  //  alert("Length " + len);
+
 
 if(len == 0){
         sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
@@ -116,7 +116,7 @@ if(len == 0){
     firstnews = menu.ID;
 
 
-
+ //   alert(firstnews);
 
 }
 
@@ -140,7 +140,7 @@ function getlastnews_success(tx, results) {
 
 
     lastnews = menu.ID;
-  //  alert(lastnews);
+//   alert(lastnews);
 
 
 }
@@ -236,7 +236,7 @@ var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
         $('#divNonews').show();
 
     }
-    //alert(intcount);
+    alert("finsih");
 
     $('#loadinggears').hide();
 }
