@@ -101,7 +101,7 @@ function getfirstnew_success(tx, results) {
 
     var len = results.rows.length;
 
-    alert("Length " + len);
+  //  alert("Length " + len);
 
 if(len == 0){
         sendinfotoserver("newsfeed2","0",window.localStorage.getItem("teamfollow"),0,0);
