@@ -237,7 +237,7 @@ var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
 
     }
   //  alert("finsih");
-    db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+  //  db.transaction(numbersponsers, errorCBfunc, successCBfunc);
     $('#loadinggears').hide();
 }
 
