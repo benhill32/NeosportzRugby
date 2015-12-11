@@ -95,37 +95,43 @@ function getclub_success(tx, results) {
     clubname = menu.ID;
     clubnewfeed = menu.Newfeed;
     $('#divhistory').append(menu.History);
-    alert(clubname);
+   // alert(clubname);
 
     // parse a string for numbers
-    var numbers = new PhoneNumberParser();
+    try {
+        var numbers = new PhoneNumberParser();
 
-    var contacts = menu.Contacts;
+        var contacts = menu.Contacts;
 
-    numbers.parse(contacts);
-    var pnumbers = [];
-    for (i = 0; i < numbers.items.length; i++) {
+        numbers.parse(contacts);
+        var pnumbers = [];
+        for (i = 0; i < numbers.items.length; i++) {
 
 
 
-        if(jQuery.inArray( numbers.items[i], pnumbers ) == "-1") {
-            contacts = contacts.replace(new RegExp(numbers.items[i],'g'),"<a href='tel:" + numbers.items[i] + "'>" + numbers.items[i] + "</a>");
-            //
-            pnumbers.push(numbers.items[i]);
+            if(jQuery.inArray( numbers.items[i], pnumbers ) == "-1") {
+                contacts = contacts.replace(new RegExp(numbers.items[i],'g'),"<a href='tel:" + numbers.items[i] + "'>" + numbers.items[i] + "</a>");
+                //
+                pnumbers.push(numbers.items[i]);
+            }
+
         }
 
+
+
+
+        var emails = extractEmails(contacts);
+        for (i = 0; i < emails.length; i++) {
+            contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
+        }
+
+
+        $("#divContacts").append(contacts);
     }
+    catch(err) {
+        $("#divContacts").append(menu.Contacts);
 
-
-
-
-    var emails = extractEmails(contacts);
-    for (i = 0; i < emails.length; i++) {
-        contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
     }
-
-
-    $("#divContacts").append(contacts);
 
 if(menu.ID == window.localStorage.getItem("teamfollow")){
 
@@ -244,7 +250,7 @@ function getMenu_success(tx, results) {
 
     clubname = menu.ID;
     clubnewfeed = menu.Newfeed
-    alert(clubname);
+  //  alert(clubname);
     if(menu.ID == window.localStorage.getItem("teamfollow")){
 
         $('#spanfullstar').show();
@@ -268,7 +274,9 @@ function getMenu_success(tx, results) {
 
 
         $('#divhistory').append(menu.History);
-    // parse a string for numbers
+
+
+    try {
     var numbers = new PhoneNumberParser();
 
     var contacts = menu.Contacts;
@@ -297,7 +305,11 @@ function getMenu_success(tx, results) {
 
 
     $("#divContacts").append(contacts);
+    }
+    catch(err) {
+        $("#divContacts").append(menu.Contacts);
 
+    }
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
     db.transaction(getplayers, errorCBfunc, successCBfunc);
