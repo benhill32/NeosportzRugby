@@ -71,7 +71,7 @@ function numbersponsers_success(tx, results) {
     var menu = results.rows.item(random-1);
 
 
-    alert(len);
+    //alert(len);
     if(len != 0) {
         if (menu.Website == "") {
             $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '">')
@@ -236,7 +236,7 @@ var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
         $('#divNonews').show();
 
     }
-    alert("finsih");
+  //  alert("finsih");
 
     $('#loadinggears').hide();
 }
