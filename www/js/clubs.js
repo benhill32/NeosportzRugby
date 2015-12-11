@@ -239,6 +239,29 @@ function getMenu_success(tx, results) {
         var imgg = "";
 
 
+    $("#divContacts").append(contacts);
+
+
+    clubname = menu.ID;
+    clubnewfeed = menu.Newfeed
+    alert(clubname);
+    if(menu.ID == window.localStorage.getItem("teamfollow")){
+
+        $('#spanfullstar').show();
+        $('#spanemptystar').hide();
+
+
+    }else{
+        $('#spanfullstar').hide();
+        $('#spanemptystar').show();
+
+
+    }
+
+
+
+
+
 
     $('#btnclub').append(menu.name);
     ID = menu.ID;
@@ -271,24 +294,6 @@ function getMenu_success(tx, results) {
     }
 
 
-    $("#divContacts").append(contacts);
-
-
-    clubname = menu.ID;
-    clubnewfeed = menu.Newfeed
-    alert(clubname);
-    if(menu.ID == window.localStorage.getItem("teamfollow")){
-
-        $('#spanfullstar').show();
-        $('#spanemptystar').hide();
-
-
-    }else{
-        $('#spanfullstar').hide();
-        $('#spanemptystar').show();
-
-
-    }
 
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
