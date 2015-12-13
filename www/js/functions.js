@@ -1322,7 +1322,8 @@ function is_cached(img_url){
     var imgEle = document.createElement("img");
     imgEle.src = img_url;
 
-    alert(imgEle.complete);
+    alert(imgEle.complete || (imgEle.width+imgEle.height) > 0);
+
 
     return imgEle.complete || (imgEle.width+imgEle.height) > 0;
 }

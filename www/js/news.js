@@ -117,7 +117,7 @@ function numbersponsers_success(tx, results) {
 
          //   alert("!" + check + "!");
 
-            if(check == "true") {
+            if(check == true) {
 
 
                 if (menu.Website == "") {
