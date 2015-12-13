@@ -31,7 +31,7 @@ function onDeviceReadynews() {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
             $('#loadinggears').show();
-
+            db.transaction(numbersponsers, errorCBfunc, successCBfunc);
             db.transaction(getdata2, errorCBfunc, successCBfunc);
             db.transaction(getfirstnew, errorCBfunc, successCBfunc);
             db.transaction(getlastnews, errorCBfunc, successCBfunc);
@@ -271,7 +271,7 @@ function getnewfeed_success(tx, results) {
 
     }
   //  alert("finsih");
-    db.transaction(numbersponsers, errorCBfunc, successCBfunc);
+
     $('#loadinggears').hide();
 }
 
