@@ -350,10 +350,21 @@ function getteams(tx) {
 function getteam_success(tx, results) {
 
     var len = results.rows.length;
+    $("#divcreateteams").empty();
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
         $('#divTeams').append(menu.Name + " - " + menu.DivisionName + "<br>");
+
+        $("#divcreateteams").append('<div class="panel panel-info">' +
+            '<div class="panel-heading">" + menu.DivisionName + " /div>' +
+            '<div class="panel-body" id="divTeamss' + menu.ID + '">' +
+            '</div>' +
+            '</div>' +
+        '');
+
+
+
     }
 
 }
@@ -374,6 +385,11 @@ function getteamplayer_success(tx, results) {
 
 
         $('#divPlayers').append(menu.FullName + " - " + menu.Position + "<br>");
+
+
+        $("#divTeamss" + menu.TeamID).append(menu.FullName + " - " + menu.Position + "<br>");
+
+
     }
 
 
