@@ -342,7 +342,7 @@ function getnextclub(){
 
 
 function getteams(tx) {
-    var sql = "select Name ,DivisionName,ClubID from MobileApp_vwApp_Teams where ClubID=" + ID;
+    var sql = "select ID, Name ,DivisionName,ClubID from MobileApp_vwApp_Teams where ClubID=" + ID;
     tx.executeSql(sql, [], getteam_success);
 }
 
