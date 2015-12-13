@@ -32,9 +32,9 @@ function onDeviceReadynews() {
         if( window.localStorage.getItem("teamnewfeed") !=0) {
             $('#loadinggears').show();
             db.transaction(numbersponsers, errorCBfunc, successCBfunc);
-            db.transaction(getdata2, errorCBfunc, successCBfunc);
+
             db.transaction(getfirstnew, errorCBfunc, successCBfunc);
-            db.transaction(getlastnews, errorCBfunc, successCBfunc);
+
         }else{
             $('#divNonewfeed').show();
             $('#divyesnews').hide();
@@ -168,7 +168,7 @@ if(len == 0){
 
 }
 
-
+    db.transaction(getlastnews, errorCBfunc, successCBfunc);
 
 }
 
@@ -190,7 +190,7 @@ function getlastnews_success(tx, results) {
     lastnews = menu.ID;
 //   alert(lastnews);
 
-
+    db.transaction(getdata2, errorCBfunc, successCBfunc);
 }
 
 
