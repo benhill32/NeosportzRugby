@@ -232,7 +232,7 @@ function getMenu_success(tx, results) {
                 if(networkconnectionsch !=0) {
                     homeimage =  res[1];
                 }else{
-                    if(is_cached(res[1]) == true){
+                    if(is_cached("http://rugby.neosportz.com/Icons/Club/" + res[1]) == true){
                         homeimage =  res[1];
                     }else{
                         homeimage= "no_image.png";
@@ -245,7 +245,7 @@ function getMenu_success(tx, results) {
                 if(networkconnectionsch !=0) {
                     awayimage = res[1];
                 }else{
-                    if(is_cached(res[1]) == true){
+                    if(is_cached("http://rugby.neosportz.com/Icons/Club/" + res[1]) == true){
                         awayimage = res[1];
                     }else{
                         awayimage= "no_image.png";
