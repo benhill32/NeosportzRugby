@@ -58,7 +58,14 @@ function datecheck(d,a){
        datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
    }
 
-    db.transaction(getgameids, errorCBfunc, successCBfunc);
+
+    if(networkconnectionsch !=0) {
+        db.transaction(getgameids, errorCBfunc, successCBfunc);
+    }else{
+        db.transaction(getdatasch, errorCBfunc, successCBfunc);
+    }
+
+
 }
 
 
