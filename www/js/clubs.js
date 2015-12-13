@@ -364,7 +364,7 @@ function getteam_success(tx, results) {
             '</div>' +
         '');
 
-
+        $("#divTeamtop" + menu.ID).hide();
 
     }
 
@@ -382,9 +382,13 @@ function getteamplayer_success(tx, results) {
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
+        $("#divTeamtop" + menu.TeamID).show();
+        if(menu.Position != "") {
+            $("#divTeamss" + menu.TeamID).append(menu.FullName + " - " + menu.Position + "<br>");
+        }else{
+            $("#divTeamss" + menu.TeamID).append(menu.FullName + "<br>");
 
-
-        $("#divTeamss" + menu.TeamID).append(menu.FullName + " - " + menu.Position + "<br>");
+        }
 
     }
 
