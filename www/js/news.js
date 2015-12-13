@@ -115,7 +115,7 @@ function numbersponsers_success(tx, results) {
 
         }else{
             alert(is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64));
-            
+
             if(is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64) == "true") {
 
                 if (menu.Website == "") {
