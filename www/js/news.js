@@ -115,7 +115,7 @@ function numbersponsers_success(tx, results) {
 
         }else{
 
-            alert(check);
+            alert("!" + check + "!");
 
             if(check == "true") {
                 alert(check);
