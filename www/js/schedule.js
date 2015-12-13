@@ -1070,7 +1070,13 @@ function getpervoiusday(){
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 
-    db.transaction(getgameids, errorCBfunc, successCBfunc);
+    if(networkconnectionsch !=0) {
+        db.transaction(getgameids, errorCBfunc, successCBfunc);
+    }else{
+        $('#indexloadingdata').modal('hide');
+        $('#loadinggears').hide();
+        db.transaction(getdatasch, errorCBfunc, successCBfunc);
+    }
 }
 function getnextday(){
 
@@ -1084,7 +1090,18 @@ function getnextday(){
     //alert(date);
     document.getElementById("btndate").innerHTML=date2;
 
-    db.transaction(getgameids, errorCBfunc, successCBfunc);
+
+    if(networkconnectionsch !=0) {
+        db.transaction(getgameids, errorCBfunc, successCBfunc);
+    }else{
+        $('#indexloadingdata').modal('hide');
+        $('#loadinggears').hide();
+        db.transaction(getdatasch, errorCBfunc, successCBfunc);
+    }
+
+
+
+
 }
 
 
