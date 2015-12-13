@@ -16,10 +16,12 @@ var newsid = 0;
 var checkfornew= 0;
 var allnews  = 0;
 var intcount = 1;
+var networkconnectionnew =0;
 document.addEventListener("deviceready", onDeviceReadynews, false);
 
-function onDeviceReadynews() {
 
+function onDeviceReadynews() {
+    checkonlinenews();
 
     $.mobile.loading().hide();
 
@@ -55,6 +57,25 @@ function onDeviceReadynews() {
 }
 
 
+function checkonlinenews(){
+
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = '0';
+    states[Connection.ETHERNET] = '2';
+    states[Connection.WIFI]     = '2';
+    states[Connection.CELL_2G]  = '1';
+    states[Connection.CELL_3G]  = '1';
+    states[Connection.CELL_4G]  = '1';
+    states[Connection.NONE]     = '0';
+
+    networkconnectionnew = states[networkState];
+//alert(states[networkState]);
+
+}
+
+
 
 
 function numbersponsers(tx) {
@@ -75,18 +96,43 @@ function numbersponsers_success(tx, results) {
 
     //alert(len);
     if(len != 0) {
-        if (menu.Website == "") {
-            $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '">')
-        } else {
-            var website2 = "http://" + menu.Website;
-            // alert(website2);
-            $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64 + '"></div>')
+
+        if(networkconnectionnew !=0) {
+
+
+
+            if (menu.Website == "") {
+                $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' + window.localStorage.getItem("teamfollow") + '/' + menu.Base64 + '">')
+            } else {
+                var website2 = "http://" + menu.Website;
+                // alert(website2);
+                $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' + window.localStorage.getItem("teamfollow") + '/' + menu.Base64 + '"></div>')
+            }
+
+            // alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
+
+
+            $('#Modalsponsor').modal('show')
+
+        }else{
+
+            if(is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64) == "true") {
+
+                if (menu.Website == "") {
+                    $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' + window.localStorage.getItem("teamfollow") + '/' + menu.Base64 + '">')
+                } else {
+                    var website2 = "http://" + menu.Website;
+                    // alert(website2);
+                    $('#divsponsormodel').empty().append('<div onclick="URLredirect(\'' + website2 + '\')"><img  class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' + window.localStorage.getItem("teamfollow") + '/' + menu.Base64 + '"></div>')
+                }
+
+                // alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
+
+
+                $('#Modalsponsor').modal('show')
+            }
         }
 
-       // alert("http://rugby.neosportz.com/Sponsors/Clubs/" +  window.localStorage.getItem("teamfollow")  + "/" + menu.Base64)
-
-
-        $('#Modalsponsor').modal('show')
     }
     $('#loadinggears').hide();
 
