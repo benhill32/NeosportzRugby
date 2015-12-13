@@ -316,7 +316,7 @@ function getMenu_success(tx, results) {
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
             '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  menu.Field + '</li>' +
             '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
-            '<li class="list-group-item " id="POTD' + menu.ID + '">Player of the Day</li>' +
+            '<li class="list-group-item " id="POTD' + menu.ID + '"  onclick="POTDclick(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')"    >Player of the Day</li>' +
 
             '<div class="panel-group" role="tablist" id="adminmenu' + menu.ID + '">' +
             '<div class="panel panel-default">' +
@@ -480,6 +480,17 @@ function resultsmore(){
     resultshowmore(values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
 
 }
+
+
+
+function POTDclick(ID,Home,Away) {
+    $('#modelPOTD').show();
+    $('#switch-onText').attr("data-on-text",Home);
+    $('#switch-onText').attr("data-off-text",Away);
+    $("#switch-onText").bootstrapSwitch();
+}
+
+
 
 
 function cgame(ID,Home,Away){
