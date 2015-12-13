@@ -89,7 +89,7 @@ function numbersponsers_success(tx, results) {
     var random = Math.floor((Math.random() * len) + 1);
     var menu = results.rows.item(random-1);
 
-
+    var check = is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow") + '/' + menu.Base64);
 
 
 
@@ -114,10 +114,11 @@ function numbersponsers_success(tx, results) {
             $('#Modalsponsor').modal('show')
 
         }else{
-            alert(is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64));
 
-            if(is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow")  + '/' + menu.Base64) == "true") {
+            alert(check);
 
+            if(check == "true") {
+                alert(check);
                 if (menu.Website == "") {
                     $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' + window.localStorage.getItem("teamfollow") + '/' + menu.Base64 + '">')
                 } else {
