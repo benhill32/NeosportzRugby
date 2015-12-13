@@ -229,9 +229,29 @@ function getMenu_success(tx, results) {
             var res = array[i].split("-$$-");
 
             if(res[0] == menu.HomeClubID){
-                     homeimage =  res[1];
+                if(networkconnectionsch !=0) {
+                    homeimage =  res[1];
+                }else{
+                    if(is_cached(res[1]) == true){
+                        homeimage =  res[1];
+                    }else{
+                        homeimage= "no_image.png";
+                    }
+
+                }
+
+
             }else if (res[0] == menu.AwayClubID) {
+                if(networkconnectionsch !=0) {
                     awayimage = res[1];
+                }else{
+                    if(is_cached(res[1]) == true){
+                        awayimage = res[1];
+                    }else{
+                        awayimage= "no_image.png";
+                    }
+
+                }
             }
 
         });
