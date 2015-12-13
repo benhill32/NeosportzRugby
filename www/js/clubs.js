@@ -365,9 +365,7 @@ function getteam_success(tx, results) {
         '');
 
         $("#divTeamtop" + menu.ID).hide();
-
     }
-
 }
 
 function getplayers(tx) {
@@ -389,11 +387,7 @@ function getteamplayer_success(tx, results) {
             $("#divTeamss" + menu.TeamID).append(menu.FullName + "<br>");
 
         }
-
     }
-
-
-
 }
 
 

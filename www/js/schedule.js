@@ -316,6 +316,7 @@ function getMenu_success(tx, results) {
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
             '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  menu.Field + '</li>' +
             '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
+            '<li class="list-group-item " id="POTD' + menu.ID + '">Player of the Day</li>' +
 
             '<div class="panel-group" role="tablist" id="adminmenu' + menu.ID + '">' +
             '<div class="panel panel-default">' +
@@ -338,6 +339,13 @@ function getMenu_success(tx, results) {
 
             '</ul>' +
             '</div>');
+
+        if(menu.POTD != "1"){
+            $("#POTD" + menu.ID).show();
+        }else{
+            $("#POTD" + menu.ID).hide();
+        }
+
 
         if (devicePlatformsch == "Android") {
             $("#socialshare" + menu.ID).click(function () {
