@@ -354,10 +354,10 @@ function getteam_success(tx, results) {
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        var idd = "#divTeamss" + menu.ID;
+        var idd = "#divTeamtop" + menu.ID;
         $('#divTeams').append('<div onclick="scrooltop(\'' + idd + '\')">' + menu.Name + " - " + menu.DivisionName + "</div><br>");
 
-        $("#divcreateteams").append('<div class="panel panel-info">' +
+        $("#divcreateteams").append('<div class="panel panel-info" id="divTeamtop' + menu.ID + '">' +
             '<div class="panel-heading">' + menu.DivisionName + '</div>' +
             '<div class="panel-body" id="divTeamss' + menu.ID + '">' +
             '</div>' +
