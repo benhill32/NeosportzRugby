@@ -254,7 +254,7 @@ function getchecksync(tx, results) {
 
         var dif = (timenow/1000)-(datenowsecsync);
 
-        
+
 
         if (dif >= "600") {
 
