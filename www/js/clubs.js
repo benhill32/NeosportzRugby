@@ -357,7 +357,7 @@ function getteam_success(tx, results) {
         $('#divTeams').append(menu.Name + " - " + menu.DivisionName + "<br>");
 
         $("#divcreateteams").append('<div class="panel panel-info">' +
-            '<div class="panel-heading">" + menu.DivisionName + " /div>' +
+            '<div class="panel-heading">' + menu.DivisionName + '</div>' +
             '<div class="panel-body" id="divTeamss' + menu.ID + '">' +
             '</div>' +
             '</div>' +
