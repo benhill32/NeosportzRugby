@@ -129,8 +129,8 @@
       <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38592508">
-              <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.57888764">
+              <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
               <folding>
                 <element signature="n#!!block;n#getfirstnew_success#0" expanded="false" />
                 <element signature="n#!!block;n#getlastnews#0" expanded="false" />
@@ -1093,8 +1093,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38592508">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.57888764">
+          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
           <folding>
             <element signature="n#!!block;n#getfirstnew_success#0" expanded="false" />
             <element signature="n#!!block;n#getlastnews#0" expanded="false" />
