@@ -115,10 +115,11 @@ function numbersponsers_success(tx, results) {
 
         }else{
 
-            alert("!" + check + "!");
+         //   alert("!" + check + "!");
 
             if(check == "true") {
-                alert(check);
+
+
                 if (menu.Website == "") {
                     $('#divsponsormodel').empty().append('<img class="img-responsive" src="http://rugby.neosportz.com/Sponsors/Clubs/' + window.localStorage.getItem("teamfollow") + '/' + menu.Base64 + '">')
                 } else {
