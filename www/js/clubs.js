@@ -88,7 +88,7 @@ function getclub_success(tx, results) {
     $('#divhistory').empty();
     $('#divContacts').empty();
     $('#divTeams').empty();
-    $('#divPlayers').empty();
+
     $('#btnclub').empty();
     $('#btnclub').empty();
     $('#btnclub').append(menu.name);
@@ -238,7 +238,7 @@ function getMenu_success(tx, results) {
     $('#divhistory').empty();
     $('#divContacts').empty();
     $('#divTeams').empty();
-    $('#divPlayers').empty();
+
     $('#btnclub').empty();
 
         var menu = results.rows.item(0);
@@ -354,7 +354,8 @@ function getteam_success(tx, results) {
 
     for (var i=0; i<len; i++) {
         var menu = results.rows.item(i);
-        $('#divTeams').append(menu.Name + " - " + menu.DivisionName + "<br>");
+        var idd = "#divTeamss" + menu.ID;
+        $('#divTeams').append('<div onclick="scrooltop(\'' + idd + '\')">' + menu.Name + " - " + menu.DivisionName + "</div><br>");
 
         $("#divcreateteams").append('<div class="panel panel-info">' +
             '<div class="panel-heading">' + menu.DivisionName + '</div>' +
@@ -383,12 +384,7 @@ function getteamplayer_success(tx, results) {
         var menu = results.rows.item(i);
 
 
-
-        $('#divPlayers').append(menu.FullName + " - " + menu.Position + "<br>");
-
-
         $("#divTeamss" + menu.TeamID).append(menu.FullName + " - " + menu.Position + "<br>");
-
 
     }
 
@@ -453,4 +449,10 @@ function extractEmails (text)
     return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
 }
 
+function scrooltop(ID){
 
+    $('body').animate({
+        scrollTop: $(ID).offset().top
+    });
+
+}
