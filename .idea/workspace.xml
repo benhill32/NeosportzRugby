@@ -50,10 +50,11 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2167991">
-              <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.28830874">
+              <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
               <folding>
-                <marker date="1450034087264" expanded="true" signature="7815:7832" placeholder="..." />
+                <element signature="e#4277#15233#0" expanded="false" />
+                <marker date="1450034594736" expanded="true" signature="7849:7866" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1054,10 +1055,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2167991">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.28830874">
+          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
           <folding>
-            <marker date="1450034087264" expanded="true" signature="7815:7832" placeholder="..." />
+            <element signature="e#4277#15233#0" expanded="false" />
+            <marker date="1450034594736" expanded="true" signature="7849:7866" placeholder="..." />
           </folding>
         </state>
       </provider>
