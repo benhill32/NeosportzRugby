@@ -513,7 +513,7 @@ function sendPOTD(){
 
     var response = passscoretoserverscorecard("gameidPOTD=" + POTDID + "&POTD=1&playerno=" + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
-    alert(response);
+
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         // alert(response);
@@ -526,7 +526,7 @@ function sendPOTD(){
 
 function POTDclick(ID,Home,Away) {
     $('#modelPOTD').show();
-
+    POTDID = ID;
 
     var options = {
         onText: Home,
@@ -539,7 +539,7 @@ function POTDclick(ID,Home,Away) {
 
     $('#switch-onText').bootstrapSwitch('destroy', true);
     $("#switch-onText").bootstrapSwitch(options);
-    POTDID = ID;
+
 }
 
 function closePOTD(){
