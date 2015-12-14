@@ -29,6 +29,7 @@ var datesend = "";
 var clubID = "";
 var IDcancel = 0;
 var panelcolour= "";
+var POTDID=0;
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
@@ -482,12 +483,21 @@ function resultsmore(){
 }
 
 
+function sendPOTD(){
+
+    db.transaction(function (tx) {
+        tx.executeSql('Update App_Games set POTD = 1 where ID = ' + POTDID);
+        console.log("Update INTO App_Games");
+    });
+
+}
 
 function POTDclick(ID,Home,Away) {
     $('#modelPOTD').show();
     $('#switch-onText').attr("data-on-text",Home);
     $('#switch-onText').attr("data-off-text",Away);
     $("#switch-onText").bootstrapSwitch();
+    POTDID = ID;
 }
 
 
