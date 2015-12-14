@@ -341,6 +341,8 @@ function getMenu_success(tx, results) {
             '<li class="list-group-item " id="score' + menu.ID + '" onclick=loadscorecard('+ menu.ID + ') > Score Card</li>' +
             '<li class="list-group-item " data-toggle="modal" data-target="#basicModaldefault" id="divdefault' + menu.ID + '" onclick="checkdefault(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Team Defaulted</li> ' +
             '<li class="list-group-item " data-toggle="modal" data-target="#basicModalcancel" id="cancell' + menu.ID + '" onclick="cgame(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')" >Cancel Game!</li>' +
+            '<li class="list-group-item " id="POTDadmin' + menu.ID + '" onclick="GetPOTDAdmin(' + menu.ID + ')" > POTD Admin</li>' +
+
             '</ul>' +
 
             '</div>' +
@@ -354,7 +356,7 @@ function getMenu_success(tx, results) {
         $('#POTD' + menu.ID).hide();
 
 
-
+        $('#POTDadmin' + menu.ID).hide();
 
         if (devicePlatformsch == "Android") {
             $("#socialshare" + menu.ID).click(function () {
@@ -366,7 +368,7 @@ function getMenu_success(tx, results) {
             });
 
         }
-    
+
 
         $('#score' + menu.ID).hide();
         $('#cancell' + menu.ID).hide();
@@ -391,6 +393,7 @@ function getMenu_success(tx, results) {
                     $('#cancell' + menu.ID).show();
                     $('#referee' + menu.ID).show();
                     $('#divdefault' + menu.ID).show();
+                    $('#POTDadmin' + menu.ID).show();
 
                 }
             }else{
@@ -418,6 +421,7 @@ function getMenu_success(tx, results) {
                 $('#cancell' + menu.ID).show();
                 $('#referee' + menu.ID).show();
                 $('#divdefault' + menu.ID).show();
+                $('#POTDadmin' + menu.ID).show();
             }
 
 
@@ -445,6 +449,7 @@ function getMenu_success(tx, results) {
                     $('#cancell' + menu.ID).show();
                     $('#referee' + menu.ID).show();
                     $('#divdefault' + menu.ID).show();
+                    $('#POTDadmin' + menu.ID).show();
                 }
 
 
@@ -493,6 +498,11 @@ function getMenu_success(tx, results) {
 
 
 }
+function GetPOTDAdmin(ID){
+
+    sendinfotoserverPYOD(ID);
+}
+
 
 function resultsmore(){
     //alert(resultID);
@@ -520,6 +530,10 @@ function sendPOTD(){
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         // alert(response);
         db.transaction(getdatasch, errorCBfunc, successCBfunc);
+    }else{
+        alert(response);
+        db.transaction(getdatasch, errorCBfunc, successCBfunc);
+
     }
 
 

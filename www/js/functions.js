@@ -430,6 +430,66 @@ function sendinfotoserver(type,division,club,datesendback,IDs){
 
 }
 
+function sendinfotoserverPYOD(ID){
+
+
+    if(networkconnectionfun !=0) {
+
+        //db.transaction(gettokenindividual, errorCBfunc, successCBfunc);
+
+        var datenow = new Date();
+
+        var yearnow = datenow.getFullYear();
+
+
+        var xmlHttp = null;
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", 'http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback + '&IDs=' + IDs, false);
+
+        //   alert('http://rugby.neosportz.com/mobiledataindividual.aspx?deviceID=' + deviceIDfunc + '&token=' + window.localStorage.getItem("apptoken") + '&type=' + typesend + '&region=' +  window.localStorage.getItem("Region") + '&year=' + yearnow + '&teamid=' + teamsend + '&club=' + clubsend + '&division=' + divisionsend + '&date=' + datesendback);
+        xmlHttp.send();
+
+        var json = xmlHttp.responseText;
+        // alert(json);
+
+        var obj = JSON.parse(json);
+
+
+
+
+        if (document.getElementById("divschedules") != null) {
+            var count= 0;
+            $.each(obj.App_Games, function (idx, obj) {
+                count  = count +1;
+            });
+
+            if(count != 0) {
+                syncmaintableindividual(obj);
+            }else{
+
+                reloadindividual();
+            }
+        }else{
+
+            syncmaintableindividual(obj);
+        }
+
+
+
+
+
+    }else{
+        $('#indexloadingdata').modal('hide');
+        //  alert("You don't have access to internet!");
+
+        window.plugins.toast.showShortBottom("You don't have access to internet!", function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
+
+    }
+
+}
+
+
+
 
 
 function gettokenindividual(tx) {
