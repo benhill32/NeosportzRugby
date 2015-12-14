@@ -484,7 +484,7 @@ function resultsmore(){
 
 
 function sendPOTD(){
-
+    $('#modelPOTD').hide();
     db.transaction(function (tx) {
         tx.executeSql('Update App_Games set POTD = 1 where ID = ' + POTDID);
         console.log("Update INTO App_Games");
@@ -494,12 +494,21 @@ function sendPOTD(){
 
 function POTDclick(ID,Home,Away) {
     $('#modelPOTD').show();
+    $('#switch-onText').removeAttr("data-on-text");
+    $('#switch-onText').removeAttr("data-off-text");
+
     $('#switch-onText').attr("data-on-text",Home);
     $('#switch-onText').attr("data-off-text",Away);
+
     $("#switch-onText").bootstrapSwitch();
     POTDID = ID;
 }
 
+function closePOTD(){
+    $('#modelPOTD').hide();
+
+
+}
 
 
 
