@@ -291,6 +291,15 @@ function getMenu_success(tx, results) {
 
 
        // '<div class="col-xs-4 col-md-4"  onclick="resultssharemore(event,\'' + readmore + '\',' + menu.ID + ')" ><img height="30px" class="imagesch"  align="right" ></div>' +
+        var directions  = "";
+        if(menu.Field == null){
+
+            directions = "Directions";
+        }else{
+            directions = menu.Field;
+        }
+
+
 
 
         $('#divschedules').append('<div class="' + paneltype + '" >' +
@@ -315,7 +324,7 @@ function getMenu_success(tx, results) {
             '</li>' +
             '<li class="list-group-item time" >' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
-            '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  menu.Field + '>Directions</li>' +
+            '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  directions + '></li>' +
             '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
             '<li class="list-group-item " id="POTD' + menu.ID + '"  onclick="POTDclick(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')"    >Player of the Day</li>' +
 
