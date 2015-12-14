@@ -599,7 +599,7 @@ function POTDclick(ID,Home,Away) {
 function closePOTD(){
 
     $('#modelPOTD').hide();
-
+    $('#modelPOTDdata').hide();
 }
 
 
