@@ -504,7 +504,7 @@ function loadPOTDdata(ID){
 
 
     sql = "select * from MobileApp_POTD where GameID =" + ID + " Order by COUNT desc";
-//alert(sql);
+alert(sql);
     tx.executeSql(sql, [], loadPOTDdata_success);
 
 

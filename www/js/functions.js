@@ -450,7 +450,7 @@ function sendinfotoserverPYOD(ID){
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
-         alert(json);
+      //   alert(json);
 
         var obj = JSON.parse(json);
 
