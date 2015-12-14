@@ -455,23 +455,42 @@ function sendinfotoserverPYOD(ID){
         var obj = JSON.parse(json);
 
 
-
+        alert(obj);
 
         if (document.getElementById("divschedules") != null) {
-            var count= 0;
-            $.each(obj.App_Games, function (idx, obj) {
-                count  = count +1;
+            var count = 0;
+            $.each(obj.APP_POTD, function (idx, obj) {
+                count = count + 1;
             });
 
-            if(count != 0) {
-                syncmaintableindividual(obj);
-            }else{
+            if (count != 0) {
 
-                reloadindividual();
+                db.transaction(function (tx) {
+                    tx.executeSql('Delete from MobileApp_POTD where GameID ==' + ID);
+                });
+
+                $.each(obj.APP_POTD, function (idx, obj) {
+                    db.transaction(function (tx) {
+                        tx.executeSql('INSERT OR IGNORE INTO MobileApp_POTD(GameID,Team,PlayerNo,COUNT,ClubID,UpdateDateUTC) VALUES (' + obj.GameID + ',"' + obj.Team + '",' + obj.PlayerNo + ',' + obj.COUNT + ',' + obj.ClubID + ',"' + obj.UpdateDateUTC + '")');
+                    });
+                });
+
+
+
+
+                $.each(obj.Isadmin, function (idx, obj) {
+                    db.transaction(function (tx) {
+                        tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
+                        //      alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
+
+                    });
+                });
+
+
+            } else {
+
+
             }
-        }else{
-
-            syncmaintableindividual(obj);
         }
 
 

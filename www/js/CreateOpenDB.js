@@ -53,12 +53,18 @@ function droptables(tx){
     tx.executeSql('Drop TABLE App_Games ');
     console.log("MobileRegion table is Dropped");
 
+    tx.executeSql('Drop TABLE MobileApp_POTD ');
+    console.log("MobileApp_POTD table is Dropped");
 
 }
 
 
 
 function createDB(tx) {
+
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_POTD (GameID INTEGER NOT NULL,Team TEXT NOT NULL,UpdateDateUTC TEXT NOT NULL,PlayerNo INTEGER NOT NULL, COUNT INTEGER NOT NULL,ClubID INTEGER NOT NULL )');
+    console.log("POTD table is created");
+
 
     tx.executeSql('CREATE TABLE IF NOT EXISTS App_Games (ID INTEGER NOT NULL primary key,_id INTEGER NOT NULL,DatetimeStart TEXT NOT NULL,HomeName TEXT NOT NULL,AwayName TEXT NOT NULL,Field TEXT NOT NULL,Latitude TEXT NOT NULL,Longitude TEXT NOT NULL,DivisionID INTEGER NOT NULL,DivisionName TEXT NOT NULL,HomeRegionID INTEGER NOT NULL,AwayRegionID INTEGER NOT NULL,HomeClubID INTEGER NOT NULL,AwayClubID INTEGER NOT NULL,HomeTeamID INTEGER NOT NULL,AwayTeamID INTEGER NOT NULL,HomeScore INTEGER NOT NULL,AwayScore INTEGER NOT NULL,UpdateDateUTC TEXT NOT NULL,TournamentName TEXT NOT NULL,TournamentID INTEGER NOT NULL,DatetimeStartSeconds TEXT NOT NULL,DivisionOrderID INTEGER NOT NULL,ShowToAll INTEGER NOT NULL,Semi INTEGER NOT NULL,Final INTEGER NOT NULL,Cancelled INTEGER NOT NULL,DeletedateUTC TEXT NOT NULL,halftime TEXT NOT NULL,fulltime TEXT NOT NULL,IsFinalScore INTEGER NOT NULL, RefName Text Null,DefaultHome INTEGER NOT NULL,DefaultAway INTEGER NOT NULL,HBonus1 INTEGER NOT NULL,HBonus2 INTEGER NOT NULL,ABonus1 INTEGER NOT NULL,ABonus2 INTEGER NOT NULL,Month INTEGER NOT NULL,Day INTEGER NOT NULL,Year INTEGER NOT NULL,POTD INTEGER NULL)');
     console.log("App_Games table is created");
