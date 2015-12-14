@@ -1270,7 +1270,7 @@ function swiperightHandler( event ){
     getpervoiusday();
 }
 function noswipe( event ){
-
+    alert("noswipe");
 }
 
 

@@ -105,7 +105,15 @@
 
         });
 
+        $('.modal').on('show.bs.modal', function() {
+            $( "body" ).on( "swipeleft", noswipe );
+            $( "body" ).on( "swiperight", noswipe );
+        });
 
+        $('.modal').on('hide.bs.modal', function() {
+            $( "body" ).on( "swipeleft", swipeleftHandler );
+            $( "body" ).on( "swiperight", swiperightHandler );
+        });
 
 
     </script>
@@ -1025,19 +1033,7 @@
 
             </div>
         </div>
-        <script>
 
-            $('#modelPOTDdata').on('show.bs.modal', function() {
-                $( "body" ).on( "swipeleft", noswipe );
-                $( "body" ).on( "swiperight", noswipe );
-            });
-
-            $('#modelPOTDdata').on('hide.bs.modal', function() {
-                $( "body" ).on( "swipeleft", swipeleftHandler );
-                $( "body" ).on( "swiperight", swiperightHandler );
-            });
-
-        </script>
     </div>
 
 
