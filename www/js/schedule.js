@@ -511,7 +511,7 @@ function sendPOTD(){
     //alert("gameidPOTD=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
 
-    var response = passscoretoserverscorecard("gameidPOTD=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
+    var response = passscoretoserverscorecard("gameidPOTD=" + POTDID + "&POTD=1&playerno=" + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
     //alert(response);
 
