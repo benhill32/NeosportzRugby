@@ -393,9 +393,10 @@ function getMenu_success(tx, results) {
                     $('#cancell' + menu.ID).show();
                     $('#referee' + menu.ID).show();
                     $('#divdefault' + menu.ID).show();
-                    $('#POTDadmin' + menu.ID).show();
+
 
                 }
+                $('#POTDadmin' + menu.ID).show();
             }else{
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
@@ -449,9 +450,9 @@ function getMenu_success(tx, results) {
                     $('#cancell' + menu.ID).show();
                     $('#referee' + menu.ID).show();
                     $('#divdefault' + menu.ID).show();
-                    $('#POTDadmin' + menu.ID).show();
-                }
 
+                }
+                $('#POTDadmin' + menu.ID).show();
 
             }else{
                 if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
