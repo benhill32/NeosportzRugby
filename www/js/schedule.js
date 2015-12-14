@@ -509,23 +509,26 @@ function sendPOTD(){
 
 function POTDclick(ID,Home,Away) {
     $('#modelPOTD').show();
+
+
+    var options = {
+        onText: Home,
+        onColor: 'primary',
+        offColor: 'warning',
+        offText: Away,
+        animate: true,
+    };
+
+
     $('#switch-onText').bootstrapSwitch('destroy', true);
-    $('#switch-onText').removeAttr("data-on-text");
-    $('#switch-onText').removeAttr("data-off-text");
-
-    $('#switch-onText').attr("data-on-text",Home);
-    $('#switch-onText').attr("data-off-text",Away);
-
-    $("#switch-onText").bootstrapSwitch();
+    $("#switch-onText").bootstrapSwitch(options);
     POTDID = ID;
 }
 
 function closePOTD(){
-    $('#switch-onText').removeAttr("data-on-text");
-    $('#switch-onText').removeAttr("data-off-text");
+
     $('#modelPOTD').hide();
 
-    $('#switch-onText').bootstrapSwitch('destroy', true);
 }
 
 
