@@ -499,6 +499,43 @@ function getMenu_success(tx, results) {
 
 
 }
+function loadPOTDdata(ID){
+
+
+
+    sql = "select * from MobileApp_POTD where GameID =" + ID + " Order by COUNT desc";
+//alert(sql);
+    tx.executeSql(sql, [], loadPOTDdata_success);
+
+
+}
+
+
+function loadPOTDdata_success(tx, results) {
+    $('#busy').hide();
+    var len = results.rows.length;
+//alert(len);
+
+    $('#modelPOTDdata').show();
+
+    $("#loadpotddata").empty();
+
+        alert(len);
+        if (len != 0) {
+            for (var i = 0; i < len; i++) {
+                var menu = results.rows.item(i);
+                $("#loadpotddata").append('<div class="row">' +
+                    '<div class="col-xs-6">' + menu.Team + '</div>' +
+                    '<div class="col-xs-3">' + menu.PlayerNo + '</div>' +
+                    '<div class="col-xs-3">' + menu.COUNT + '</div>' +
+
+                    '</div>');
+
+            }
+    }
+}
+
+
 function GetPOTDAdmin(ID){
 
     sendinfotoserverPYOD(ID);

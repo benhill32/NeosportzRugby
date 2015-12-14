@@ -482,7 +482,7 @@ function sendinfotoserverPYOD(ID){
                     db.transaction(function (tx) {
                         tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
                         //      alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin);
-
+                        loadPOTDdata(ID);
                     });
                 });
 
