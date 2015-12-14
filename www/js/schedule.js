@@ -324,7 +324,7 @@ function getMenu_success(tx, results) {
             '</li>' +
             '<li class="list-group-item time" >' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
-            '<li class="list-group-item Field" id="Directionss' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  directions + '</li>' +
+            '<li class="list-group-item" id="Directionss' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  directions + '</li>' +
             '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
             '<li class="list-group-item " id="POTD' + menu.ID + '"  onclick="POTDclick(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')"    >Player of the Day</li>' +
 
@@ -366,17 +366,8 @@ function getMenu_success(tx, results) {
             });
 
         }
-        alert("!" + menu.Field + "!");
-        if(menu.Field != "null"){
+    
 
-           // alert("!" + menu.Field + "!");
-            $('#Directionss' + menu.ID).show();
-
-        }else{
-            $('#Directionss' + menu.ID).hide();
-
-
-        }
         $('#score' + menu.ID).hide();
         $('#cancell' + menu.ID).hide();
         $('#referee' + menu.ID).hide();
@@ -390,7 +381,7 @@ function getMenu_success(tx, results) {
             $('.lstscore').show();
 
             $('.time').hide();
-            $('.Field').hide();
+            $('#Directionss' + menu.ID).hide();
 
             if(window.localStorage.getItem("isadmin")==1) {
                 if (menu.IsFinalScore == 0) {
@@ -413,7 +404,11 @@ function getMenu_success(tx, results) {
             }
         } else if (myDate > today) {
 
-            $('.Field').show();
+            if(menu.Field != "null"){
+                $('#Directionss' + menu.ID).show();
+            }else{
+                $('#Directionss' + menu.ID).hide();
+            }
             $('.lstscore').hide();
 
             if(window.localStorage.getItem("isadmin")==1) {
@@ -428,7 +423,11 @@ function getMenu_success(tx, results) {
 
         }else{
 
-            $('.Field').show();
+            if(menu.Field != "null"){
+                $('#Directionss' + menu.ID).show();
+            }else{
+                $('#Directionss' + menu.ID).hide();
+            }
             $('.lstscore').show();
 
             if(menu.POTD != "1"){
