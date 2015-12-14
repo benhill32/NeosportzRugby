@@ -353,7 +353,7 @@ function getMenu_success(tx, results) {
 
         $("#POTD" + menu.ID).hide();
 
-
+        $('#Directions' + menu.ID).hide();
 
 
 
@@ -370,8 +370,7 @@ function getMenu_success(tx, results) {
 
         if(menu.Latitude != "null" || menu.Longitude != "null" ) {
             $('#Directions' + menu.ID).show();
-        }else{
-            $('#Directions' + menu.ID).hide();
+
         }
         $('#score' + menu.ID).hide();
         $('#cancell' + menu.ID).hide();
@@ -506,6 +505,20 @@ function sendPOTD(){
         tx.executeSql('Update App_Games set POTD = 1 where ID = ' + POTDID);
         console.log("Update INTO App_Games");
     });
+
+    alert("gameid=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
+
+
+   // var response = passscoretoserverscorecard("gameid=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
+
+    //alert(response);
+
+  //  if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
+        // alert(response);
+   //     db.transaction(getdatasch, errorCBfunc, successCBfunc);
+  //  }
+
+
 
 }
 
