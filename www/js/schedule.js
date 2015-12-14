@@ -367,10 +367,10 @@ function getMenu_success(tx, results) {
             });
 
         }
-
+        alert("!" + menu.Field + "!");
         if(menu.Field != "null"){
 
-            alert("!" + menu.Field + "!");
+           // alert("!" + menu.Field + "!");
             $('#Directions' + menu.ID).show();
 
         }
@@ -869,10 +869,10 @@ function loadinfo_success2(tx, results) {
 
 
     if(menu.Latitude != "null" || menu.Longitude != "null" ) {
-        $('#Directions').show();
-        $("#Directions").click(function () {
-            window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Latitude + ",+" + menu.Longitude, "_system")
-        });
+   //     $('#Directions').show();
+      //  $("#Directions").click(function () {
+    //        window.open("https://www.google.co.nz/maps/dir/Current+Location/" + menu.Latitude + ",+" + menu.Longitude, "_system")
+    //    });
     }
 }
 

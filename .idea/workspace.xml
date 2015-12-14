@@ -91,18 +91,17 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61748016">
-              <caret line="350" column="22" selection-start-line="350" selection-start-column="21" selection-end-line="350" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.57276994">
+              <caret line="368" column="9" selection-start-line="368" selection-start-column="9" selection-end-line="368" selection-end-column="9" />
               <folding>
                 <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
-                <element signature="n#!!block;n#loadinfo_success2#0" expanded="false" />
                 <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
                 <element signature="n#!!block;n#loadsocialIOS2#0" expanded="false" />
                 <element signature="n#!!block;n#loaddefaultgames#0" expanded="false" />
                 <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
                 <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
                 <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
-                <marker date="1450120306764" expanded="true" signature="8687:8704" placeholder="..." />
+                <marker date="1450120673925" expanded="true" signature="8687:8704" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1037,18 +1036,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61748016">
-          <caret line="350" column="22" selection-start-line="350" selection-start-column="21" selection-end-line="350" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.57276994">
+          <caret line="368" column="9" selection-start-line="368" selection-start-column="9" selection-end-line="368" selection-end-column="9" />
           <folding>
             <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
-            <element signature="n#!!block;n#loadinfo_success2#0" expanded="false" />
             <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
             <element signature="n#!!block;n#loadsocialIOS2#0" expanded="false" />
             <element signature="n#!!block;n#loaddefaultgames#0" expanded="false" />
             <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
             <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
             <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
-            <marker date="1450120306764" expanded="true" signature="8687:8704" placeholder="..." />
+            <marker date="1450120673925" expanded="true" signature="8687:8704" placeholder="..." />
           </folding>
         </state>
       </provider>
