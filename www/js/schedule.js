@@ -532,7 +532,7 @@ function sendPOTD(){
         // alert(response);
         db.transaction(getdatasch, errorCBfunc, successCBfunc);
     }else{
-       
+
         db.transaction(getdatasch, errorCBfunc, successCBfunc);
 
     }

@@ -450,12 +450,12 @@ function sendinfotoserverPYOD(ID){
         xmlHttp.send();
 
         var json = xmlHttp.responseText;
-        // alert(json);
+         alert(json);
 
         var obj = JSON.parse(json);
 
 
-        alert(obj);
+       // alert(obj);
 
         if (document.getElementById("divschedules") != null) {
             var count = 0;
