@@ -351,7 +351,7 @@ function getMenu_success(tx, results) {
             '</div>');
 
 
-        $("#POTD" + menu.ID).hide();
+        $('#POTD' + menu.ID).hide();
 
         $('#Directions' + menu.ID).hide();
 
