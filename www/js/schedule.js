@@ -30,6 +30,7 @@ var clubID = "";
 var IDcancel = 0;
 var panelcolour= "";
 var POTDID=0;
+var POTDdataid=0;
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
@@ -502,11 +503,18 @@ function getMenu_success(tx, results) {
 function loadPOTDdata(ID){
 
 
+    db.transaction(loadPOTDdata2, errorCBfunc, successCBfunc);
 
-    sql = "select * from MobileApp_POTD where GameID =" + ID + " Order by COUNT desc";
-alert(sql);
+    POTDdataid = ID;
+
+
+}
+
+function loadPOTDdata2(tx)
+{
+    sql = "select * from MobileApp_POTD where GameID =" + POTDdataid + " ORDER BY COUNT DESC";
+    alert(sql);
     tx.executeSql(sql, [], loadPOTDdata_success);
-
 
 }
 
