@@ -532,7 +532,7 @@ function loadPOTDdata_success(tx, results) {
         if (len != 0) {
             for (var i = 0; i < len; i++) {
                 var menu = results.rows.item(i);
-                $("#loadpotddata").append('<div class="row">' +
+                $("#loadpotddata").append('<div class="row" style="border-bottom: 1px solid #e5e5e5;padding-top: 5px;padding-bottom: 5px;">' +
                     '<div class="col-xs-6">' + menu.Team + '</div>' +
                     '<div class="col-xs-3">' + menu.PlayerNo + '</div>' +
                     '<div class="col-xs-3">' + menu.COUNT + '</div>' +
