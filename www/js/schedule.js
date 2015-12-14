@@ -377,7 +377,7 @@ function getMenu_success(tx, results) {
         $('#divdefault' + menu.ID).hide();
         $('#adminmenu' + menu.ID).hide();
 
-        $('#socialshare' + menu.ID).addClass(panelcolour);
+        $('#POTD' + menu.ID).addClass(panelcolour);
 
         if (myDate < today) {
 
@@ -388,7 +388,7 @@ function getMenu_success(tx, results) {
 
             if(window.localStorage.getItem("isadmin")==1) {
                 if (menu.IsFinalScore == 0) {
-                    $('#socialshare' + menu.ID).removeClass(panelcolour);
+                    $('#POTD' + menu.ID).removeClass(panelcolour);
                     $('#adminmenu' + menu.ID).show();
                     $('#score' + menu.ID).show();
                     $('#cancell' + menu.ID).show();
@@ -401,7 +401,7 @@ function getMenu_success(tx, results) {
             }else{
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
-                        $('#socialshare' + menu.ID).removeClass(panelcolour);
+                        $('#POTD' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                     }
@@ -417,7 +417,7 @@ function getMenu_success(tx, results) {
             $('.lstscore').hide();
 
             if(window.localStorage.getItem("isadmin")==1) {
-                $('#socialshare' + menu.ID).removeClass(panelcolour);
+                $('#POTD' + menu.ID).removeClass(panelcolour);
                // $('#score' + menu.ID).show();
                 $('#adminmenu' + menu.ID).show();
                 $('#cancell' + menu.ID).show();
@@ -445,7 +445,7 @@ function getMenu_success(tx, results) {
 
             if(window.localStorage.getItem("isadmin")==1) {
                 if (menu.IsFinalScore == 0) {
-                    $('#socialshare' + menu.ID).removeClass(panelcolour);
+                    $('#POTD' + menu.ID).removeClass(panelcolour);
                     $('#adminmenu' + menu.ID).show();
                     $('#score' + menu.ID).show();
                     $('#cancell' + menu.ID).show();
@@ -458,14 +458,14 @@ function getMenu_success(tx, results) {
             }else{
                 if (window.localStorage.getItem("allowcancel") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
-                        $('#socialshare' + menu.ID).removeClass(panelcolour);
+                        $('#POTD' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#cancell' + menu.ID).show();
                     }
                 }
                 if (window.localStorage.getItem("allowscore") == 1 && (menu.HomeClubID == window.localStorage.getItem("Clubedit") || menu.AwayClubID == window.localStorage.getItem("Clubedit"))) {
                     if (menu.IsFinalScore == 0) {
-                        $('#socialshare' + menu.ID).removeClass(panelcolour);
+                        $('#POTD' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                         $('#divdefault' + menu.ID).show();
@@ -473,7 +473,7 @@ function getMenu_success(tx, results) {
                 }
                 if (window.localStorage.getItem("Ref") == 1) {
                     if (menu.IsFinalScore == 0) {
-                        $('#socialshare' + menu.ID).removeClass(panelcolour);
+                        $('#POTD' + menu.ID).removeClass(panelcolour);
                         $('#adminmenu' + menu.ID).show();
                         $('#score' + menu.ID).show();
                         $('#cancell' + menu.ID).show();
@@ -571,13 +571,13 @@ function sendPOTD(){
 
     var response = passscoretoserverscorecard("gameidPOTD=" + POTDID + "&POTD=1&playerno=" + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
-    alert(response);
+
 
     if(response == "{'Success' : [{'Message': 'Everything is Good'}]"){
         // alert(response);
         db.transaction(getdatasch, errorCBfunc, successCBfunc);
     }else{
-
+        alert(response);
         db.transaction(getdatasch, errorCBfunc, successCBfunc);
 
     }
