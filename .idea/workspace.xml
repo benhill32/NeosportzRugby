@@ -87,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedule.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.965517">
-              <caret line="503" column="19" selection-start-line="503" selection-start-column="19" selection-end-line="503" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.45305166">
+              <caret line="534" column="7" selection-start-line="534" selection-start-column="7" selection-end-line="534" selection-end-column="7" />
               <folding>
                 <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
                 <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
@@ -100,7 +100,7 @@
                 <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
                 <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
                 <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
-                <marker date="1450126084520" expanded="true" signature="8687:8704" placeholder="..." />
+                <marker date="1450127440594" expanded="true" signature="8687:8704" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -167,11 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13380282">
-              <caret line="456" column="0" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.068966">
+              <caret line="475" column="19" selection-start-line="475" selection-start-column="19" selection-end-line="475" selection-end-column="19" />
               <folding>
                 <element signature="n#!!block;n#URLredirectFacebook#0" expanded="false" />
               </folding>
@@ -272,9 +272,9 @@
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
         <option value="$PROJECT_DIR$/www/js/clubs.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
-        <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/js/CreateOpenDB.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
+        <option value="$PROJECT_DIR$/www/js/schedule.js" />
       </list>
     </option>
   </component>
@@ -1021,23 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.965517">
-          <caret line="503" column="19" selection-start-line="503" selection-start-column="19" selection-end-line="503" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
-            <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
-            <element signature="n#!!block;n#loadsocialIOS2#0" expanded="false" />
-            <element signature="n#!!block;n#loaddefaultgames#0" expanded="false" />
-            <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
-            <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
-            <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
-            <marker date="1450126084520" expanded="true" signature="8687:8704" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/clubs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.269231">
@@ -1075,10 +1058,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13380282">
-          <caret line="456" column="0" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
+        <state vertical-scroll-proportion="-15.068966">
+          <caret line="475" column="19" selection-start-line="475" selection-start-column="19" selection-end-line="475" selection-end-column="19" />
           <folding>
             <element signature="n#!!block;n#URLredirectFacebook#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45305166">
+          <caret line="534" column="7" selection-start-line="534" selection-start-column="7" selection-end-line="534" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
+            <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
+            <element signature="n#!!block;n#loadsocialIOS2#0" expanded="false" />
+            <element signature="n#!!block;n#loaddefaultgames#0" expanded="false" />
+            <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
+            <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
+            <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
+            <marker date="1450127440594" expanded="true" signature="8687:8704" placeholder="..." />
           </folding>
         </state>
       </provider>
