@@ -315,7 +315,7 @@ function getMenu_success(tx, results) {
             '</li>' +
             '<li class="list-group-item time" >' + ampm + '</li>' +
             '<li class="list-group-item">' + menu.TournamentName + '  ' + cancel + '</li>' +
-            '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  menu.Field + '</li>' +
+            '<li class="list-group-item Field" id="Directions' + menu.ID + '" onclick=loadmap(' + menu.Latitude + ',' + menu.Longitude + ')>' +  menu.Field + '>Directions</li>' +
             '<li class="list-group-item " id="socialshare' + menu.ID + '">Share</li>' +
             '<li class="list-group-item " id="POTD' + menu.ID + '"  onclick="POTDclick(' + menu.ID + ',\'' + menu.HomeName + '\',\'' + menu.AwayName + '\')"    >Player of the Day</li>' +
 
@@ -341,11 +341,11 @@ function getMenu_success(tx, results) {
             '</ul>' +
             '</div>');
 
-        if(menu.POTD != "1"){
-            $("#POTD" + menu.ID).show();
-        }else{
-            $("#POTD" + menu.ID).hide();
-        }
+
+        $("#POTD" + menu.ID).hide();
+
+
+
 
 
         if (devicePlatformsch == "Android") {
@@ -415,6 +415,12 @@ function getMenu_success(tx, results) {
 
             $('.Field').show();
             $('.lstscore').show();
+
+            if(menu.POTD != "1"){
+                $("#POTD" + menu.ID).show();
+            }else{
+                $("#POTD" + menu.ID).hide();
+            }
 
 
             if(window.localStorage.getItem("isadmin")==1) {
@@ -494,6 +500,7 @@ function sendPOTD(){
 
 function POTDclick(ID,Home,Away) {
     $('#modelPOTD').show();
+    $('#switch-onText').bootstrapSwitch('destroy', true);
     $('#switch-onText').removeAttr("data-on-text");
     $('#switch-onText').removeAttr("data-off-text");
 
@@ -509,7 +516,7 @@ function closePOTD(){
     $('#switch-onText').removeAttr("data-off-text");
     $('#modelPOTD').hide();
 
-
+    $('#switch-onText').bootstrapSwitch('destroy', true);
 }
 
 
