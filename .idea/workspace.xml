@@ -91,14 +91,14 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6983568">
-              <caret line="521" column="0" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.23239437">
+              <caret line="513" column="117" selection-start-line="513" selection-start-column="117" selection-end-line="513" selection-end-column="117" />
               <folding>
                 <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
                 <element signature="n#!!block;n#loadinfo_success2#0" expanded="false" />
                 <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
                 <element signature="n#!!block;n#loadsocialIOS2#0" expanded="false" />
-                <marker date="1450056023872" expanded="true" signature="8687:8704" placeholder="..." />
+                <marker date="1450057792163" expanded="true" signature="8687:8704" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1065,14 +1065,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6983568">
-          <caret line="521" column="0" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.23239437">
+          <caret line="513" column="117" selection-start-line="513" selection-start-column="117" selection-end-line="513" selection-end-column="117" />
           <folding>
             <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
             <element signature="n#!!block;n#loadinfo_success2#0" expanded="false" />
             <element signature="n#!!block;n#saveImageToPhone#0" expanded="false" />
             <element signature="n#!!block;n#loadsocialIOS2#0" expanded="false" />
-            <marker date="1450056023872" expanded="true" signature="8687:8704" placeholder="..." />
+            <marker date="1450057792163" expanded="true" signature="8687:8704" placeholder="..." />
           </folding>
         </state>
       </provider>
