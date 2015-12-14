@@ -513,7 +513,7 @@ function sendPOTD(){
 
     var response = passscoretoserverscorecard("gameidPOTD=" + POTDID + "&POTD=1&playerno=" + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
-    //alert(response);
+    alert(response);
 
     if(response = "{'Success' : [{'Message': 'Everything is Good'}]"){
         // alert(response);
