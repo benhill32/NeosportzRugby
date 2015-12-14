@@ -369,6 +369,8 @@ function getMenu_success(tx, results) {
         }
 
         if(menu.Latitude != "null" || menu.Longitude != "null" ) {
+
+            alert(menu.Latitude);
             $('#Directions' + menu.ID).show();
 
         }
@@ -506,7 +508,7 @@ function sendPOTD(){
         console.log("Update INTO App_Games");
     });
 
-    alert("gameid=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
+    alert("gameid=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val() + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
 
 
    // var response = passscoretoserverscorecard("gameid=" + POTDID + "&POTD=1&playerno= " + $('#txtplayerno').val + "&teamname=" + $('#switch-onText').bootstrapSwitch('state') + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"));
