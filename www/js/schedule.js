@@ -370,7 +370,7 @@ function getMenu_success(tx, results) {
 
         if(menu.Field != "null"){
 
-
+            alert("!" + menu.Field + "!");
             $('#Directions' + menu.ID).show();
 
         }
