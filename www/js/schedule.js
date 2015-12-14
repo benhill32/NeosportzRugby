@@ -353,7 +353,6 @@ function getMenu_success(tx, results) {
 
         $('#POTD' + menu.ID).hide();
 
-        $('#Directionss' + menu.ID).hide();
 
 
 
@@ -372,6 +371,10 @@ function getMenu_success(tx, results) {
 
            // alert("!" + menu.Field + "!");
             $('#Directionss' + menu.ID).show();
+
+        }else{
+            $('#Directionss' + menu.ID).hide();
+
 
         }
         $('#score' + menu.ID).hide();
