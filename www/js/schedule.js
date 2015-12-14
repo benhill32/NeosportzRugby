@@ -34,7 +34,7 @@ var POTDdataid=0;
 function onDeviceReadysch() {
     checkonlinesch();
     devicePlatformsch = device.platform;
-
+    window.localStorage.setItem("modelactive", 0);
 
 
      // alert(window.localStorage.getItem("fliter"));
@@ -524,7 +524,7 @@ function loadPOTDdata_success(tx, results) {
     var len = results.rows.length;
 //alert(len);
 
-    $('#modelPOTDdata').modal('show')
+    $('#modelPOTDdata').modal('show');
 
     $("#loadpotddata").empty();
 
@@ -1216,61 +1216,53 @@ function createvarforremind(DatetimeStart,text){
 
 
 function getpervoiusday(){
+    if(window.localStorage.getItem("modelactive") == 0) {
+        //  alert(date);
+        date = new Date(date).setDate(date.getDate() - 1); //+1 or +x
 
-  //  alert(date);
-    date =new Date(date).setDate(date.getDate()-1); //+1 or +x
+        date = new Date(date);
+        //  alert(date);
+        var z = date.getMonth() + 1;
+        datesend = date.getDate() + "/" + z + "/" + date.getFullYear();
+        date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
+        //alert(date);
+        document.getElementById("btndate").innerHTML = date2;
 
-    date = new Date(date);
-  //  alert(date);
-    var z = date.getMonth() + 1;
-    datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
-    date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
-    //alert(date);
-    document.getElementById("btndate").innerHTML=date2;
-
-    if(networkconnectionsch !=0) {
-        db.transaction(getgameids, errorCBfunc, successCBfunc);
-    }else{
-        $('#indexloadingdata').modal('hide');
-        $('#loadinggears').hide();
-        db.transaction(getdatasch, errorCBfunc, successCBfunc);
+        if (networkconnectionsch != 0) {
+            db.transaction(getgameids, errorCBfunc, successCBfunc);
+        } else {
+            $('#indexloadingdata').modal('hide');
+            $('#loadinggears').hide();
+            db.transaction(getdatasch, errorCBfunc, successCBfunc);
+        }
     }
 }
 function getnextday(){
 
 
+    if(window.localStorage.getItem("modelactive") == 0) {
+        date = new Date(date).setDate(date.getDate() + 1); //+1 or +x
+        date = new Date(date);
+        var z = date.getMonth() + 1;
+        datesend = date.getDate() + "/" + z + "/" + date.getFullYear();
+        date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
+        //alert(date);
+        document.getElementById("btndate").innerHTML = date2;
 
-    date = new Date(date).setDate(date.getDate()+1); //+1 or +x
-    date = new Date(date);
-    var z = date.getMonth() + 1;
-    datesend =date.getDate() + "/" + z + "/" + date.getFullYear();
-    date2 = getfullday(date.getDay()) + "," + date.getDate() + "/" + z + "/" + date.getFullYear();
-    //alert(date);
-    document.getElementById("btndate").innerHTML=date2;
 
-
-    if(networkconnectionsch !=0) {
-        db.transaction(getgameids, errorCBfunc, successCBfunc);
-    }else{
-        $('#indexloadingdata').modal('hide');
-        $('#loadinggears').hide();
-        db.transaction(getdatasch, errorCBfunc, successCBfunc);
+        if (networkconnectionsch != 0) {
+            db.transaction(getgameids, errorCBfunc, successCBfunc);
+        } else {
+            $('#indexloadingdata').modal('hide');
+            $('#loadinggears').hide();
+            db.transaction(getdatasch, errorCBfunc, successCBfunc);
+        }
     }
 
 
 
-
 }
 
-function swipeleftHandler( event ){
-    getnextday();
-}
-function swiperightHandler( event ){
 
-    getpervoiusday();
-}
-function noswipe( event ){
-    alert("noswipe");
-}
 
 
