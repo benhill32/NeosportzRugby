@@ -513,7 +513,7 @@ function loadPOTDdata(ID){
 function loadPOTDdata2(tx)
 {
     sql = "select * from MobileApp_POTD where GameID =" + POTDdataid + " ORDER BY COUNT DESC";
-    alert(sql);
+  //  alert(sql);
     tx.executeSql(sql, [], loadPOTDdata_success);
 
 }
@@ -528,7 +528,7 @@ function loadPOTDdata_success(tx, results) {
 
     $("#loadpotddata").empty();
 
-        alert(len);
+      //  alert(len);
         if (len != 0) {
             for (var i = 0; i < len; i++) {
                 var menu = results.rows.item(i);
