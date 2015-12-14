@@ -505,6 +505,8 @@ function POTDclick(ID,Home,Away) {
 }
 
 function closePOTD(){
+    $('#switch-onText').removeAttr("data-on-text");
+    $('#switch-onText').removeAttr("data-off-text");
     $('#modelPOTD').hide();
 
 
