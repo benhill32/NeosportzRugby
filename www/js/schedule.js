@@ -1262,4 +1262,15 @@ function getnextday(){
 
 }
 
+function swipeleftHandler( event ){
+    getnextday();
+}
+function swiperightHandler( event ){
+
+    getpervoiusday();
+}
+function noswipe( event ){
+
+}
+
 

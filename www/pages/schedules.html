@@ -101,13 +101,8 @@
                 }
             });
             // Callback function references the event target and adds the 'swipeleft' class to it
-            function swipeleftHandler( event ){
-                getnextday();
-            }
-            function swiperightHandler( event ){
 
-                getpervoiusday();
-            }
+
         });
 
 
@@ -1007,7 +1002,7 @@
                 <div class="modal-header" align="center">
                     Player of the Day Totals
                 </div>
-                <div class="modal-body" align="center" style="border-bottom: 1px solid #e5e5e5;">
+                <div class="modal-body" align="center" >
                     <div class="row" style="border-bottom: 1px solid #e5e5e5;">
                         <div class="col-xs-6">Team</div>
                         <div class="col-xs-3">Player</div>
@@ -1027,15 +1022,29 @@
 
 
                 </div>
+
             </div>
         </div>
+        <script>
+
+            $('#modelPOTDdata').on('show.bs.modal', function() {
+                $( "body" ).on( "swipeleft", noswipe );
+                $( "body" ).on( "swiperight", noswipe );
+            });
+
+            $('#modelPOTDdata').on('hide.bs.modal', function() {
+                $( "body" ).on( "swipeleft", swipeleftHandler );
+                $( "body" ).on( "swiperight", swiperightHandler );
+            });
+
+        </script>
     </div>
 
 
 
 
     <div>
-        <div class="panel panel-default" >
+        <div class="panel panel-default"  >
             <div class="panel-body">
                 <div class="row">
 
