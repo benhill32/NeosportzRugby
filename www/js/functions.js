@@ -24,7 +24,7 @@ var Clubedit= 0;
 var Ref= 0;
 var listfollow = 0;
 var fliter = 0;
-
+var scheme;
 function onDeviceReadyFunc() {
     //db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
 
@@ -1266,9 +1266,35 @@ function loadnewapp(){
     }
 }
 
+function checkappsinstalled(){
+
+    if(device.platform === 'iOS') {
+        scheme = 'fb://';
+    }
+    else if(device.platform === 'Android') {
+        scheme = 'com.facebook.katana';
+    }
+
+    appAvailability.check(
+        scheme,       // URI Scheme or Package Name
+        function() {  // Success callback
+            alert(scheme + ' is available :)');
+        },
+        function() {  // Error callback
+            alert(scheme + ' is not available :(');
+        }
+    );
+
+}
+
+
+
+
+
 
 
 function getoneoff(tx) {
+    checkappsinstalled();
     var sql = "select oneoffs,token,fliterON,isadmin,allowscore,allowcancel,Clubedit,Ref,Region,allownewfeed,startpage,syncwifi from MobileApp_LastUpdatesec";
     // alert(sql);
     tx.executeSql(sql, [], getoneoff_success);
@@ -1328,6 +1354,7 @@ function getdatanewssch_success(tx, results) {
         //teamfollow = menu.ID;
         window.localStorage.setItem("teamfollow", menu.ID);
         window.localStorage.setItem("teamnewfeed", menu.Newfeed);
+
         //   alert("teamfollow : " +  menu.ID)
     }else{
         window.localStorage.setItem("teamfollow", 0);
