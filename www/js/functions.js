@@ -1170,7 +1170,7 @@ function halftimefulltimenow(GameID,outcome){
     if(networkconnectionfun !=0) {
 
 
-        passscoretoserver("gameid=" + GameID + "&outcome=" + outcome  + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"))
+        passscoretoserver("gameid=" + GameID + "&outcome=" + outcome  + "&deviceid=" + deviceIDfunc + "&token=" +  window.localStorage.getItem("apptoken"))
 
 
 
