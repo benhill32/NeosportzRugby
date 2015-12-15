@@ -1269,11 +1269,11 @@ function loadnewapp(){
 
 function checkappsinstalled(){
 
-    if(device.platform === 'iOS') {
+    if(devicePlatformfunc == 'iOS') {
         scheme = 'fb://';
         scheme1 = 'twitter://';
     }
-    else if(device.platform === 'Android') {
+    else if(devicePlatformfunc == 'Android') {
         scheme = 'com.facebook.katana';
         scheme1 = 'com.twitter.android';
     }
