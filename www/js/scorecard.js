@@ -175,7 +175,7 @@ function getMenu_success(tx, results) {
 
 
 
-alert(menu.halftime + "-" + menu.fulltime + "-" + menu.IsFinalScore);
+//alert(menu.halftime + "-" + menu.fulltime + "-" + menu.IsFinalScore);
 
         $('#divtime').hide();
 
@@ -243,7 +243,7 @@ function gamestate(IDD,id){
   //  alert(IDD + "_" + id);
 
     if (IDD == 1) {
-        alert(IDD + "_" + id);
+       // alert(IDD + "_" + id);
 
         db.transaction(function (tx) {
             tx.executeSql('Update App_Games set halftime = "1" where ID = ' + id);
@@ -337,7 +337,7 @@ function getbonus(){
     var away2 = 0;
 
     if ($('#homebonus1').prop('checked') == true){
-        home1 = 1;
+            home1 = 1;
     }
     if ($('#homebonus2').prop('checked') == true){
         home2 =1;
