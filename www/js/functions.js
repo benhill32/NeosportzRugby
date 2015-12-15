@@ -1299,19 +1299,7 @@ function checkappsinstalled(){
     );
 
 
-    CanOpen('fb://', function(isInstalled) {
 
-        if(isInstalled) {
-
-           alert("installed");
-            window.localStorage.setItem("chkfacebook", "1");
-        } else {
-
-            alert('Facebook is not installed');
-            window.localStorage.setItem("chkfacebook", "0");
-
-        }
-    });
 
 
 }
