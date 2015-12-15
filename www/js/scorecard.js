@@ -245,6 +245,9 @@ function syncscore(){
 
 function gamestate(IDD,id){
 
+
+alert(IDD + "_" + id);
+
     if (IDD == 1) {
         db.transaction(function (tx) {
             tx.executeSql('Update App_Games set halftime = "1" where ID = ' + id);

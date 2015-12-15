@@ -1154,7 +1154,7 @@ function cancelgamenow(ID){
 
 
 
-   onclicksyncloaddata();
+        onclicksyncloaddata();
 
     }else{
 
