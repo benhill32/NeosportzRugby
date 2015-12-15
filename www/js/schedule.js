@@ -1269,6 +1269,10 @@ function getnextday(){
 
 }
 
+function fbcheck(){
 
+    window.open('https://www.facebook.com/111289242234718', '_system');
+
+}
 
 
