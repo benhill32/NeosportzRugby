@@ -1277,7 +1277,7 @@ if( window.localStorage.getItem("chkfacebook")==0){
 
 }else{
 
-    window.open('fb://www.facebook.com/111289242234718', '_system');
+    window.open('fb://page/111289242234718', '_system');
 
 }
 
