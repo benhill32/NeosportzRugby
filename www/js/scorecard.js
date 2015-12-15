@@ -175,7 +175,7 @@ function getMenu_success(tx, results) {
 
 
 
-
+alert(menu.halftime + "-" + menu.fulltime + "-" + menu.IsFinalScore);
 
         $('#divtime').hide();
 
