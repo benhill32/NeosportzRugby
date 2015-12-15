@@ -25,6 +25,7 @@ var Ref= 0;
 var listfollow = 0;
 var fliter = 0;
 var scheme;
+var scheme1;
 function onDeviceReadyFunc() {
     //db = window.openDatabase("Neosportz_Football", "1.1", "Neosportz_Football", 200000);
 
@@ -1270,18 +1271,30 @@ function checkappsinstalled(){
 
     if(device.platform === 'iOS') {
         scheme = 'fb://';
+        scheme1 = 'twitter://';
     }
     else if(device.platform === 'Android') {
         scheme = 'com.facebook.katana';
+        scheme1 = 'com.twitter.android';
     }
 
     appAvailability.check(
         scheme,       // URI Scheme or Package Name
         function() {  // Success callback
-            alert(scheme + ' is available :)');
+            window.localStorage.setItem("chkfacebook", "1");
         },
         function() {  // Error callback
-            alert(scheme + ' is not available :(');
+            window.localStorage.setItem("chkfacebook", "0");
+        }
+    );
+
+    appAvailability.check(
+        scheme1,       // URI Scheme or Package Name
+        function() {  // Success callback
+            window.localStorage.setItem("chktwitter", "1");
+        },
+        function() {  // Error callback
+            window.localStorage.setItem("chktwitter", "0");
         }
     );
 
