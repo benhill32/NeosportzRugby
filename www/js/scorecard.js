@@ -240,7 +240,7 @@ function syncscore(){
 function gamestate(IDD,id){
 
 
-    alert(IDD + "_" + id);
+  //  alert(IDD + "_" + id);
 
     if (IDD == 1) {
         alert(IDD + "_" + id);
