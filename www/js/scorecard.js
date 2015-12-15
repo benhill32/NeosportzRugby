@@ -247,7 +247,7 @@ function gamestate(IDD,id){
 
     if (IDD == 1) {
         db.transaction(function (tx) {
-            tx.executeSql('Update App_Games set halftime = 1 where ID = ' + id);
+            tx.executeSql('Update App_Games set halftime = "1" where ID = ' + id);
             console.log("Update INTO App_Games");
         });
 
@@ -255,13 +255,13 @@ function gamestate(IDD,id){
     }else if (IDD == 2) {
 
         db.transaction(function (tx) {
-            tx.executeSql('Update App_Games set halftime = 1, fulltime= 1 where ID = ' + id);
+            tx.executeSql('Update App_Games set halftime = "1", fulltime= "1" where ID = ' + id);
             console.log("Update INTO App_Games");
         });
     }else if (IDD == 3) {
 
         db.transaction(function (tx) {
-            tx.executeSql('Update App_Games set IsFinalScore = 1 where ID = ' + id);
+            tx.executeSql('Update App_Games set IsFinalScore = "1" where ID = ' + id);
             console.log("Update INTO App_Games");
         });
     }

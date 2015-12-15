@@ -450,7 +450,7 @@ function getMenu_success(tx, results) {
             if(window.localStorage.getItem("isadmin")==1) {
                 $('#socialshare' + menu.ID).removeClass(panelcolour);
                 $('#POTD' + menu.ID).removeClass(panelcolour);
-                
+
                 $('#adminmenu' + menu.ID).show();
                 $('#POTDadmin' + menu.ID).show();
                 if (menu.IsFinalScore == 0) {
