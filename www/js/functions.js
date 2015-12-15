@@ -259,7 +259,7 @@ function passscoretoserver(testvar){
     var params = "?" + testvar;
 
     http.open("POST", url + params, true);
-    //alert(url + params);
+    alert(url + params);
 
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
@@ -1168,9 +1168,9 @@ function cancelgamenow(ID){
 function halftimefulltimenow(GameID,outcome){
     checkonlinefunctions();
     if(networkconnectionfun !=0) {
-        db.transaction(gettoken1, errorCBfunc, successCBfunc);
 
-        passscoretoserver("gameid=" + GameID + "&outcome=" + outcome  + "&deviceid=" + deviceIDscorecard + "&token=" + apptoken)
+
+        passscoretoserver("gameid=" + GameID + "&outcome=" + outcome  + "&deviceid=" + deviceIDscorecard + "&token=" +  window.localStorage.getItem("apptoken"))
 
 
 

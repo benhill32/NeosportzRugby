@@ -193,12 +193,6 @@ function getMenu_success(tx, results) {
 
         }
 
-      //  if (menu.halftime == 'null') {
-        //    $("#btnfull").hide();
-        //    $("#btnapprove").hide();
-       // } else {
-         //   $("#btnhalf").hide();
-       // }
 
 
         if (menu.IsFinalScore == 0 && (menu.halftime != 'null') && (menu.fulltime != 'null')) {
@@ -246,9 +240,11 @@ function syncscore(){
 function gamestate(IDD,id){
 
 
-alert(IDD + "_" + id);
+    alert(IDD + "_" + id);
 
     if (IDD == 1) {
+        alert(IDD + "_" + id);
+
         db.transaction(function (tx) {
             tx.executeSql('Update App_Games set halftime = "1" where ID = ' + id);
             console.log("Update INTO App_Games");
@@ -271,10 +267,10 @@ alert(IDD + "_" + id);
   //  db.transaction(getdata, errorCBfunc, successCBfunc);
  //   db.transaction(getscoredata, errorCBfunc, successCBfunc);
 
-    halftimefulltimenow(id,IDD);
-    window.setTimeout(function(){
-        location.reload(true);
-    }, 1000);
+   halftimefulltimenow(id,IDD);
+   // window.setTimeout(function(){
+   //     location.reload(true);
+   // }, 1000);
 
 
 
