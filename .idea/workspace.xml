@@ -137,15 +137,15 @@
       <file leaf-file-name="schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50281215">
-              <caret line="1270" column="0" selection-start-line="1270" selection-start-column="0" selection-end-line="1270" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.54105735">
+              <caret line="1272" column="25" selection-start-line="1272" selection-start-column="25" selection-end-line="1272" selection-end-column="25" />
               <folding>
                 <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
                 <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
                 <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
                 <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
-                <marker date="1450294384723" expanded="true" signature="8803:8820" placeholder="..." />
-                <marker date="1450294384723" expanded="true" signature="18007:18077" placeholder="..." />
+                <marker date="1450294576574" expanded="true" signature="8803:8820" placeholder="..." />
+                <marker date="1450294576574" expanded="true" signature="18007:18077" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1039,15 +1039,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50281215">
-          <caret line="1270" column="0" selection-start-line="1270" selection-start-column="0" selection-end-line="1270" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.54105735">
+          <caret line="1272" column="25" selection-start-line="1272" selection-start-column="25" selection-end-line="1272" selection-end-column="25" />
           <folding>
             <element signature="n#!!block;n#getgoals_success#0" expanded="false" />
             <element signature="n#!!block;n#loaddefaultgames_data#0" expanded="false" />
             <element signature="n#!!block;n#loaddefaultgames_data_success2#0" expanded="false" />
             <element signature="n#!!block;n#checkdefaultgames#0" expanded="false" />
-            <marker date="1450294384723" expanded="true" signature="8803:8820" placeholder="..." />
-            <marker date="1450294384723" expanded="true" signature="18007:18077" placeholder="..." />
+            <marker date="1450294576574" expanded="true" signature="8803:8820" placeholder="..." />
+            <marker date="1450294576574" expanded="true" signature="18007:18077" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -1270,11 +1270,11 @@ function getnextday(){
 }
 
 function fbcheck(){
-
+alert(devicePlatformsch);
 
     if(devicePlatformsch == 'iOS') {
 
-        window.open(encodeURI("https://www.facebook.com/111289242234718"), '_system', 'location=no','closebuttoncaption=back');
+        window.open("https://www.facebook.com/111289242234718", '_system', 'location=no','closebuttoncaption=back');
       //  window.open('facebook://page/111289242234718', '_system');
         // window.open('https://www.facebook.com/111289242234718', '_system');
 
