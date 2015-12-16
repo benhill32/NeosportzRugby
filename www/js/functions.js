@@ -1304,7 +1304,30 @@ function checkappsinstalled(){
 
 }
 
+function fbcheck(ID){
+    alert(devicePlatformsch);
 
+    if(devicePlatformfunc == 'iOS') {
+
+        cordova.InAppBrowser.open("https://www.facebook.com/" + ID, '_blank', 'location=no');
+
+    }else if(devicePlatformfunc == 'Android') {
+
+        if(window.localStorage.getItem("chkfacebook")==1){
+
+            window.open('fb://page/' + ID, '_system');
+
+        }else{
+
+            cordova.InAppBrowser.open("https://www.facebook.com/" + ID, '_blank', 'location=no');
+
+        }
+
+
+
+    }
+
+}
 
 
 

@@ -63,9 +63,9 @@ function getclub(tx) {
     var sql = "";
 
         if(window.localStorage.getItem("teamfollow") == 0){
-            sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
+            sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color,Facebook from MobileApp_clubs ORDER BY ID ASC LIMIT 1";
         }else{
-            sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
+            sql = "select ID,_id,Newfeed ,name,UpdateDateUTC ,Base64,replace(History, '###$$###', '<br>') as History,replace(Contacts, '###$$###', '<br>') as Contacts,UpdateSecondsUTC,Color,Facebook from MobileApp_clubs WHERE ID = " + window.localStorage.getItem("teamfollow");
         }
 
         $('#spanleft').show();
@@ -89,15 +89,24 @@ function getclub_success(tx, results) {
     $('#divContacts').empty();
     $('#divTeams').empty();
 
+    $('#divTeams').empty();
+    $('#divscoial').empty();
+
     $('#btnclub').empty();
     $('#btnclub').empty();
     $('#btnclub').append(menu.name);
     clubname = menu.ID;
     clubnewfeed = menu.Newfeed;
     $('#divhistory').append(menu.History);
+
    // alert(clubname);
 
     // parse a string for numbers
+
+
+    $('#divscoial').empty().append('<img src="../img/fb.png" onclick="fbcheck(\'' + menu.Facebook + '\')" width="40px" >');
+
+
     try {
         var numbers = new PhoneNumberParser();
 

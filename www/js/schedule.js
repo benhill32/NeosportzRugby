@@ -1269,19 +1269,6 @@ function getnextday(){
 
 }
 
-function fbcheck(){
-alert(devicePlatformsch);
 
-    if(devicePlatformsch == 'iOS') {
-
-        cordova.InAppBrowser.open("https://www.facebook.com/111289242234718", '_blank', 'location=no');
-
-    }else if(devicePlatformsch == 'Android') {
-
-    window.open('fb://page/111289242234718', '_system');
-
-    }
-
-}
 
 
