@@ -1270,13 +1270,13 @@ function getnextday(){
 }
 
 function fbcheck(){
- 
+
 
 if( window.localStorage.getItem("chkfacebook")==0){
 
 
-
-        window.open('https://www.facebook.com/111289242234718', '_system');
+    window.open('facebook://page/111289242234718', '_system');
+       // window.open('https://www.facebook.com/111289242234718', '_system');
 
 
 }else{
