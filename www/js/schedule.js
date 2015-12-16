@@ -1270,15 +1270,14 @@ function getnextday(){
 }
 
 function fbcheck(){
-    alert(window.localStorage.getItem("chkfacebook"));
+ 
 
 if( window.localStorage.getItem("chkfacebook")==0){
-    alert(devicePlatformfunc);
-    if(devicePlatformfunc == 'iOS') {
-        window.open('fb://page/111289242234718', '_system');
-    }else {
+
+
+
         window.open('https://www.facebook.com/111289242234718', '_system');
-    }
+
 
 }else{
 
