@@ -78,4 +78,17 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <content src="/pages/splashscreen.html"/>
     <access origin="*" />
+
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <key>LSApplicationQueriesSchemes</key>
+            <array>
+                <string>fb</string>
+                <string>twitter</string>
+                <string>whatsapp</string>
+            </array>
+        </config-file>
+    </platform>
+
+
 </widget>
