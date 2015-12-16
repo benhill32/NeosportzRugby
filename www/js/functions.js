@@ -1270,7 +1270,7 @@ function loadnewapp(){
 function checkappsinstalled(){
 
     if(devicePlatformfunc == 'iOS') {
-        scheme = 'fb://';
+        scheme = 'fb';
         scheme1 = 'twitter://';
     }
     else if(devicePlatformfunc == 'Android') {
