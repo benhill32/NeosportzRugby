@@ -104,7 +104,7 @@ function getclub_success(tx, results) {
     // parse a string for numbers
 
 
-    $('#divscoial').empty().append('<img src="../img/fb.png" onclick="fbcheck(\'' + menu.Facebook + '\')" width="40px" >');
+    $('#divscoial').empty().append('<img src="../img/fb.png" onclick="fbcheck(' + menu.Facebook + ')" width="40px" >');
 
 
     try {
@@ -284,7 +284,7 @@ function getMenu_success(tx, results) {
 
 
 
-    $('#divscoial').empty().append('<img src="../img/fb.png" onclick="fbcheck(\'' + menu.Facebook + '\')" width="40px" >');
+    $('#divscoial').empty().append('<img src="../img/fb.png" onclick="fbcheck(' + menu.Facebook + ')" width="40px" >');
 
 
     $('#btnclub').append(menu.name);
