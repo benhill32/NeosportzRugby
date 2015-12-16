@@ -159,7 +159,10 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
     ID = menu.ID;
     $('.panel-info').show();
 
+    alert("!" + menu.Facebook + "!");
+
 if(menu.Facebook == 'null'){
+
     $('#divscoialtop').hide();
 
 }else{
