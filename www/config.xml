@@ -90,5 +90,19 @@
         </config-file>
     </platform>
 
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <key>LSApplicationQueriesSchemes</key>
+            <array>
+                <string>fb</string>
+                <string>twitter</string>
+                <string>whatsapp</string>
+            </array>
+        </config-file>
+    </platform>
+
+    <platform name="android">
+        <preference name="Fullscreen" value="true" />
+    </platform>
 
 </widget>
