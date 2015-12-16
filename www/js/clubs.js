@@ -159,7 +159,7 @@ if(menu.ID == window.localStorage.getItem("teamfollow")){
     ID = menu.ID;
     $('.panel-info').show();
 
-    alert("!" + menu.Facebook + "!");
+
 
 if(menu.Facebook == 'null'){
 
@@ -256,7 +256,7 @@ function getMenu_success(tx, results) {
     $('#divhistory').empty();
     $('#divContacts').empty();
     $('#divTeams').empty();
-
+    $('#divscoial').empty();
     $('#btnclub').empty();
 
         var menu = results.rows.item(0);
@@ -284,7 +284,7 @@ function getMenu_success(tx, results) {
 
 
 
-
+    $('#divscoial').empty().append('<img src="../img/fb.png" onclick="fbcheck(\'' + menu.Facebook + '\')" width="40px" >');
 
 
     $('#btnclub').append(menu.name);
@@ -328,6 +328,17 @@ function getMenu_success(tx, results) {
         $("#divContacts").append(menu.Contacts);
 
     }
+
+
+    if(menu.Facebook == 'null'){
+
+        $('#divscoialtop').hide();
+
+    }else{
+
+        $('#divscoialtop').show();
+    }
+
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
     db.transaction(getplayers, errorCBfunc, successCBfunc);
