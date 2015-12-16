@@ -1305,7 +1305,8 @@ function checkappsinstalled(){
 }
 
 function fbcheck(ID){
-    alert(devicePlatformsch);
+    alert(ID);
+    alert(devicePlatformfunc);
 
     if(devicePlatformfunc == 'iOS') {
 

@@ -161,11 +161,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clubs.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clubs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/clubs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.644186">
-              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -181,11 +181,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.896551">
-              <caret line="811" column="525" selection-start-line="811" selection-start-column="525" selection-end-line="811" selection-end-column="525" />
+            <state vertical-scroll-proportion="0.3127907">
+              <caret line="1305" column="0" selection-start-line="1305" selection-start-column="0" selection-end-line="1305" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#sendtoast#0" expanded="false" />
               </folding>
@@ -271,8 +271,8 @@
         <option value="$PROJECT_DIR$/www/js/schedule.js" />
         <option value="$PROJECT_DIR$/www/pages/schedules.html" />
         <option value="$PROJECT_DIR$/www/pages/clubs.html" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/clubs.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
       </list>
     </option>
   </component>
@@ -1041,6 +1041,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/clubs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/CreateOpenDB.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.103448">
@@ -1051,19 +1059,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.896551">
-          <caret line="811" column="525" selection-start-line="811" selection-start-column="525" selection-end-line="811" selection-end-column="525" />
+        <state vertical-scroll-proportion="0.3127907">
+          <caret line="1305" column="0" selection-start-line="1305" selection-start-column="0" selection-end-line="1305" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#sendtoast#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/clubs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.644186">
-          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
