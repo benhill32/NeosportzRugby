@@ -80,8 +80,7 @@
     <access origin="*" />
 
     <platform name="ios">
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
-            <key>LSApplicationQueriesSchemes</key>
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>
                 <string>fb</string>
                 <string>twitter</string>
