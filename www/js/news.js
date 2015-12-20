@@ -31,6 +31,7 @@ function onDeviceReadynews() {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
             $('#loadinggears').show();
+            window.localStorage.setItem("newfeesactive", 0);
             db.transaction(numbersponsers, errorCBfunc, successCBfunc);
 
             db.transaction(getfirstnew, errorCBfunc, successCBfunc);
@@ -43,6 +44,8 @@ function onDeviceReadynews() {
             $('#divNoclub').hide();
 
             $('#btndatenews').append("New Feed Disabled");
+            window.localStorage.setItem("newfeesactive", 1);
+
         }
 
 
@@ -53,6 +56,7 @@ function onDeviceReadynews() {
         $('#loadinggears').hide();
 
         $('#btndatenews').append("No Favourite Club");
+        window.localStorage.setItem("newfeesactive", 1);
     }
 }
 
@@ -264,7 +268,7 @@ function getnewfeed_success(tx, results) {
 
 
     }else{
-
+        window.localStorage.setItem("newfeesactive", 1);
         $('#divNoclub').hide();
         $('#divyesnews').hide();
         $('#divNonews').show();
@@ -441,30 +445,33 @@ function showclubsfun(){
 
 function getnextnewfeed(){
 
+    if(window.localStorage.getItem("newfeesactive") == 0) {
 
-    if (lastnews == newsid) {
-        db.transaction(getdataplus2, errorCBfunc, successCBfunc);
-        intcount = 1;
-    } else {
-        db.transaction(getdataplus, errorCBfunc, successCBfunc);
-        intcount = intcount +1;
+
+        if (lastnews == newsid) {
+            db.transaction(getdataplus2, errorCBfunc, successCBfunc);
+            intcount = 1;
+        } else {
+            db.transaction(getdataplus, errorCBfunc, successCBfunc);
+            intcount = intcount + 1;
+        }
     }
-
 }
 
 function getpervoiusnewfeed(){
 
+    if(window.localStorage.getItem("newfeesactive") == 0) {
 
 
-    if (firstnews == newsid) {
-        db.transaction(getdataminus2, errorCBfunc, successCBfunc);
-        intcount = allnews;
-    } else {
+        if (firstnews == newsid) {
+            db.transaction(getdataminus2, errorCBfunc, successCBfunc);
+            intcount = allnews;
+        } else {
 
-        db.transaction(getdataminus, errorCBfunc, successCBfunc);
-        intcount = intcount -1;
+            db.transaction(getdataminus, errorCBfunc, successCBfunc);
+            intcount = intcount - 1;
+        }
     }
-
 }
 
 function getdataminus(tx) {
