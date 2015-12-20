@@ -54,11 +54,11 @@ function getoneoff2_success(tx, results) {
 
     //    alert(splashpage);
 
-
+        runadmob();
 
         window.setTimeout(function(){
             window.location.href= splashpage;
-        }, 1000);
+        }, 3000);
 
     }
 }
@@ -108,7 +108,7 @@ function getbackground_success2(tx, results) {
         $('#splashscreen').empty();
         $('#splashscreen').append('<img id="screensplashimg"  onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
 
-      //  runadmob();
+        runadmob();
 
 
 
@@ -121,20 +121,20 @@ function getbackground_success2(tx, results) {
 function getbackground2_error(err) {
     $('#splashscreen').empty();
     $('#splashscreen').append('<img id="screensplashimg"  src="data:image/png;base64,' + Base64 + '">');
-   // runadmob();
+   runadmob();
     window.setTimeout(function(){
         window.location.href="../index.html";
-    }, 1000);
+    }, 3000);
 
 }
 
 function getbackground_error(err) {
     //Alert("Error processing SQL: " + err.code);
   //  alert("error");
-   // runadmob();
+    runadmob();
     window.setTimeout(function(){
         window.location.href="../index.html";
-    }, 1000);
+    }, 3000);
 
 
 }
