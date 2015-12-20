@@ -106,7 +106,7 @@ function getclub_success(tx, results) {
 
     $('#divscoial').empty().append('<img src="../img/facebook.png" id="fbscocial" onclick="fbcheck(\'' + menu.Facebook + '\')" width="40px" >');
 
-    $('#divscoial').empty().append('<img src="../img/website.png" id="websocial" onclick="websitecheck(\'' + menu.Facebook + '\')" width="40px" >');
+    $('#divscoial').append('<img src="../img/website.png" id="websocial" onclick="websitecheck(\'' + menu.Website + '\')" width="40px" >');
 
     try {
         var numbers = new PhoneNumberParser();
@@ -294,7 +294,7 @@ function getMenu_success(tx, results) {
 
     $('#divscoial').empty().append('<img src="../img/facebook.png" id="fbscocial" onclick="fbcheck(\'' + menu.Facebook + '\')" width="40px" >');
 
-    $('#divscoial').empty().append('<img src="../img/website.png" id="websocial" onclick="websitecheck(\'' + menu.Facebook + '\')" width="40px" >');
+    $('#divscoial').append('<img src="../img/website.png" id="websocial" onclick="websitecheck(\'' + menu.Website + '\')" width="40px" >');
 
 
 
