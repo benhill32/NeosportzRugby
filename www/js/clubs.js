@@ -282,7 +282,7 @@ function getMenu_success(tx, results) {
         var imgg = "";
 
 
-
+    checksocail = 0;
 
 
     clubname = menu.ID;
