@@ -184,6 +184,9 @@ if(menu.Facebook == 'null'){
     if( checksocail == 1){
 
         $('#divscoialtop').show();
+    }else{
+
+        $('#divscoialtop').hide();
     }
 
 
@@ -369,6 +372,9 @@ function getMenu_success(tx, results) {
     if( checksocail == 1){
 
         $('#divscoialtop').show();
+    }else{
+
+        $('#divscoialtop').hide();
     }
 
 
