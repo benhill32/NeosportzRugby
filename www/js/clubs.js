@@ -6,6 +6,7 @@ var FirstID = 0;
 var LastID = 0;
 var clubname = 0;
 var clubnewfeed = 0;
+var checksocail = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
@@ -167,7 +168,7 @@ if(menu.Facebook == 'null'){
     $('#fbscocial').hide();
 
 }else{
-
+    checksocail = 1;
     $('#fbscocial').show();
 }
     if(menu.Website == 'null'){
@@ -175,9 +176,16 @@ if(menu.Facebook == 'null'){
         $('#websocial').hide();
 
     }else{
-
+        checksocail = 1;
         $('#websocial').show();
     }
+
+
+    if( checksocail == 1){
+
+        $('#divscoialtop').show();
+    }
+
 
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
@@ -346,7 +354,7 @@ function getMenu_success(tx, results) {
         $('#fbscocial').hide();
 
     }else{
-
+        checksocail = 1;
         $('#fbscocial').show();
     }
     if(menu.Website == 'null'){
@@ -354,9 +362,15 @@ function getMenu_success(tx, results) {
         $('#websocial').hide();
 
     }else{
-
+        checksocail = 1;
         $('#websocial').show();
     }
+
+    if( checksocail == 1){
+
+        $('#divscoialtop').show();
+    }
+
 
     db.transaction(getteams, errorCBfunc, successCBfunc);
     db.transaction(getplayers, errorCBfunc, successCBfunc);
