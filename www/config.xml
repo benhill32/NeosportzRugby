@@ -78,4 +78,21 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <content src="/pages/splashscreen.html"/>
     <access origin="*" />
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="connectivity">
+                <param name="android-package" value="cordova-connectivity-monitor" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+        <source-file src="src/android/CPConnectivity.java" target-dir="src/com/appfeel/cordova/connectivity" />
+        <source-file src="src/android/Connectivity.java" target-dir="src/com/appfeel/cordova/connectivity" />
+    </platform>
+
 </widget>
