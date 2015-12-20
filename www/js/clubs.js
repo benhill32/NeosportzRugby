@@ -343,11 +343,11 @@ function getMenu_success(tx, results) {
 
     if(menu.Facebook == 'null'){
 
-        $('#divscoialtop').hide();
+        $('#fbscocial').hide();
 
     }else{
 
-        $('#divscoialtop').show();
+        $('#fbscocial').show();
     }
     if(menu.Website == 'null'){
 
