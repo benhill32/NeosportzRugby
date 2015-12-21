@@ -262,7 +262,24 @@ function getnewfeed_success(tx, results) {
         }else{
             $('#divlinks').show();
             $('#divlinks').empty();
-            $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >Website Link</li>');
+
+            if ((menu.URL).search("facebook.com") != -1) {
+
+                $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >Facebook Link</li>');
+
+            } else if ((menu.URL).search(".pdf") != -1) {
+
+                $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >View Adobe File</li>');
+
+            } else if ((menu.URL).search("youtu.be") != -1 || (menu.URL).search("youtube") != -1) {
+
+                $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >YouTube Link</li>');
+            } else {
+
+                $('#divlinks').append('<li class="list-group-item" onclick="URLredirect(\'' + menu.URL + '\')" >Website Link</li>');
+            }
+
+
 
         }
 
