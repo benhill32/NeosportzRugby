@@ -562,6 +562,7 @@ body {
     background-size: cover;
     height:100vh;
     overflow: hidden;
+    padding-top: 30px;
 
 }
 
@@ -1415,6 +1416,7 @@ overflow-y: scroll !important;
 //  background-color:#FFFFFF;
     width: 100%;
   //  background-color: #D9D9D9;
+    background-color: white;
 }
 
 /* Portrait layout (default) */
