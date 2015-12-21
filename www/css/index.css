@@ -1399,6 +1399,7 @@ overflow-y: scroll !important;
     top: 30px;
     width:150px;
     color:white;
+    min-height:60px;
 }
 #showmenumain a,a:active, a:focus{
 
