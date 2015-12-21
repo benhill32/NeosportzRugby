@@ -105,8 +105,8 @@ function getbackground_success2(tx, results) {
      //alert(len);
     if(len != 0) {
         var menu = results.rows.item(0);
-        $('#splashscreen').empty();
-        $('#splashscreen').append('<img id="screensplashimg"  onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
+      //  $('#splashscreen').empty();
+      //  $('#splashscreen').append('<img id="screensplashimg"  onclick="URLredirect(\'' + menu.URLLINK + '\')" src="data:image/png;base64,' + Base64 + '">');
 
         runadmob();
 
@@ -119,8 +119,8 @@ function getbackground_success2(tx, results) {
 
 
 function getbackground2_error(err) {
-    $('#splashscreen').empty();
-    $('#splashscreen').append('<img id="screensplashimg"  src="data:image/png;base64,' + Base64 + '">');
+  //  $('#splashscreen').empty();
+  //  $('#splashscreen').append('<img id="screensplashimg"  src="data:image/png;base64,' + Base64 + '">');
    runadmob();
     window.setTimeout(function(){
         window.location.href="../index.html";
