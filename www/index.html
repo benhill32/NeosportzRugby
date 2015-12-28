@@ -67,7 +67,8 @@
 
                  function onDeviceReadyindex() {
                      //db.transaction(createDB, errorCBfunc, successCBfunc);
-                     $('#indexloadingdata').modal('show');
+                    // $('#indexloadingdata').modal('show');
+                     window.plugins.spinnerDialog.show(null, null, true);
                      refreshdata();
 
                  }
