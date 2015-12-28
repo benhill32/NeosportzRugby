@@ -295,7 +295,7 @@ function getchecksync(tx, results) {
 function errorclosemodel(){
    // $('#mainfore').removeClass('mainforeground2');
    // $('#mainfore').addClass('mainforeground');
-    $('#indexloadingdata').modal('hide');
+   // $('#indexloadingdata').modal('hide');
     window.plugins.spinnerDialog.hide();
     if (document.getElementById("indexdiv") != null) {
         showdivindex();
@@ -309,7 +309,7 @@ function errorclosemodel(){
 function closemodel(){
    // alert("close");
 
-    $('#indexloadingdata').modal('hide');
+ //   $('#indexloadingdata').modal('hide');
     window.plugins.spinnerDialog.hide();
     db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
@@ -395,7 +395,7 @@ function getsyncdateload_success2(tx, results) {
 
 function closemodelarchive(){
 
-    $('#indexloadingdata').modal('hide');
+  // $('#indexloadingdata').modal('hide');
     window.plugins.spinnerDialog.hide();
   //  window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
@@ -407,7 +407,7 @@ function closemodelarchive(){
 function closemodelRegion(){
   //  $('#mainfore').removeClass('mainforeground2');
  //   $('#mainfore').addClass('mainforeground');
-    $('#indexloadingdata').modal('hide');
+  //  $('#indexloadingdata').modal('hide');
     window.plugins.spinnerDialog.hide();
   //  window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     showregion();
@@ -416,7 +416,7 @@ function closemodelRegion(){
 function reloadindividual(){
 
 
-    $('#indexloadingdata').modal('hide');
+   // $('#indexloadingdata').modal('hide');
     window.plugins.spinnerDialog.hide();
     if (document.getElementById("divschedules") != null) {
         $('#loadinggears').hide();

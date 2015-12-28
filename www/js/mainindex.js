@@ -348,7 +348,8 @@ function getshowregion_success(tx, results) {
 
 function chooseregion(ID){
 
-    $('#indexloadingdata').modal('show')
+   // $('#indexloadingdata').modal('show')
+    window.plugins.spinnerDialog.show(null, null, true);
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
     $('#mainbackground').hide();
@@ -405,8 +406,8 @@ function getclubsfav_success(tx, results) {
 
 function benclick(){
 
-    $('#indexloadingdata').modal('show')
-
+   // $('#indexloadingdata').modal('show')
+    window.plugins.spinnerDialog.show(null, null, true);
 
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
