@@ -183,7 +183,7 @@ function populateDB1(tx,results) {
 
            // $('#indexloadingdata').modal('show');
 
-        window.plugins.spinnerDialog.show(null, null, true);
+       // window.plugins.spinnerDialog.show(null, null, true);
         $.when(blankLastUpdatesec()).done(function() {
           // $.when( pushnotifiy()).done(function() {
                // db.transaction(populateDB, errorCBfunc, successCBfunc);
@@ -531,7 +531,7 @@ function countProperties(obj) {
 
 
 function onclickloadregion(){
-
+    window.plugins.spinnerDialog.hide();
         $('#basicModalregions2').modal('show');
 
     //db.transaction(onclickloadregiondata, errorCBfunc, successCBfunc)

@@ -259,7 +259,7 @@ function getregionName2all_success(tx, results) {
 
     });
 
-   //$('#indexloadingdata').modal('hide');
+ //   $('#indexloadingdata').modal('hide');
     window.plugins.spinnerDialog.hide();
 
     $("#switch-onColor").bootstrapSwitch();
