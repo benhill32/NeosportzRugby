@@ -588,7 +588,7 @@ function onclickresync(tx, results) {
    // alert(row.syncwifi + " " + networkconnection);
     if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))) {
        // $('#indexloadingdata').modal('show');
-        window.plugins.spinnerDialog.show(null, null, true);
+       // window.plugins.spinnerDialog.show(null, null, true);
        // alert("here1")
         var datemenus = row.datemenus;
         var datenowsecsync = row.Datesecs;
@@ -620,7 +620,7 @@ function onclickresync(tx, results) {
 
     }else{
         window.plugins.toast.showShortCenter('Sorry couldnt update Server No Internet', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
-
+        window.plugins.spinnerDialog.hide();
     }
 }
 
