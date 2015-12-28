@@ -1479,3 +1479,8 @@ function is_cached(img_url){
     imgEle.src = img_url;
     return imgEle.complete || (imgEle.width+imgEle.height) > 0;
 }
+
+function startspinner(){
+
+    window.plugins.spinnerDialog.show(null, null, true);
+}
