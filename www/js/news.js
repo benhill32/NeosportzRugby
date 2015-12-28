@@ -30,7 +30,8 @@ function onDeviceReadynews() {
     if( window.localStorage.getItem("teamfollow") != 0) {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
-            $('#loadinggears').show();
+         //   $('#loadinggears').show();
+            window.plugins.spinnerDialog.show(null, null, true);
             window.localStorage.setItem("newfeesactive", 0);
             db.transaction(numbersponsers, errorCBfunc, successCBfunc);
 
@@ -41,6 +42,7 @@ function onDeviceReadynews() {
             $('#divyesnews').hide();
             $('#divNonews').hide();
             $('#loadinggears').hide();
+            window.plugins.spinnerDialog.hide();
             $('#divNoclub').hide();
 
             $('#btndatenews').append("New Feed Disabled");
@@ -54,7 +56,7 @@ function onDeviceReadynews() {
         $('#divyesnews').hide();
         $('#divNonews').hide();
         $('#loadinggears').hide();
-
+        window.plugins.spinnerDialog.hide();
         $('#btndatenews').append("No Favourite Club");
         window.localStorage.setItem("newfeesactive", 1);
     }
@@ -139,7 +141,7 @@ function numbersponsers_success(tx, results) {
 
     }
     $('#loadinggears').hide();
-
+    window.plugins.spinnerDialog.hide();
 }
 
 
@@ -292,7 +294,7 @@ function getnewfeed_success(tx, results) {
 
     }
   //  alert("finsih");
-
+    window.plugins.spinnerDialog.hide();
     $('#loadinggears').hide();
 }
 
