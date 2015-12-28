@@ -259,8 +259,8 @@ function getregionName2all_success(tx, results) {
 
     });
 
-    $('#indexloadingdata').modal('hide');
-
+   //$('#indexloadingdata').modal('hide');
+    window.plugins.spinnerDialog.hide();
 
     $("#switch-onColor").bootstrapSwitch();
     $("#switch-onColor").on('switchChange.bootstrapSwitch', function(event, state) {
@@ -600,7 +600,8 @@ function cleardata4Changeregaionall(){
     closemenu();
     window.setTimeout(function(){
     if((window.localStorage.getItem("syncwifi") ==1 &&  networkconall==2) || ((window.localStorage.getItem("syncwifi") ==0 &&  networkconall!=0))) {
-        $('#indexloadingdata').modal('show');
+       // $('#indexloadingdata').modal('show');
+        window.plugins.spinnerDialog.show(null, null, true);
         db.transaction(droptables, errorCBfunc,successCBfunc);
 
         window.setTimeout(function(){
@@ -617,7 +618,8 @@ function cleardata4Changeregaionall(){
 
 function createtables4Changeregaionall(){
 
-    $('#indexloadingdata').modal('hide');
+  //  $('#indexloadingdata').modal('hide');
+    window.plugins.spinnerDialog.hide();
     if (document.getElementById("indexdiv") != null)
     {
         weblink('index.html')
