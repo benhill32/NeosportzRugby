@@ -100,8 +100,8 @@ function onError(error) {
 
 function getgameids(tx){
     $('#divschedules').empty();
-    $('#loadinggears').show();
-
+    //$('#loadinggears').show();
+    window.plugins.spinnerDialog.show(null, null, true);
     var sql = "";
     var d = new Date(date);
     var secondsnow  = (d.getTime())/1000;
@@ -1241,6 +1241,7 @@ function getpervoiusday(){
          //   $('#indexloadingdata').modal('hide');
             window.plugins.spinnerDialog.hide();
             $('#loadinggears').hide();
+            window.plugins.spinnerDialog.hide();
             db.transaction(getdatasch, errorCBfunc, successCBfunc);
         }
     }
@@ -1264,6 +1265,7 @@ function getnextday(){
            // $('#indexloadingdata').modal('hide');
             window.plugins.spinnerDialog.hide();
             $('#loadinggears').hide();
+
             db.transaction(getdatasch, errorCBfunc, successCBfunc);
         }
     }
