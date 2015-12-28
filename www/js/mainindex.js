@@ -119,6 +119,10 @@ function showregion(){
 
     db.transaction(getshowregion, errorCBfunc, successCBfunc);
     $('#basicModalregions').modal('show');
+    window.plugins.spinnerDialog.hide();
+    window.plugins.spinnerDialog.hide();
+    window.plugins.spinnerDialog.hide();
+    window.plugins.spinnerDialog.hide();
     $('#mainfore').removeClass('mainforeground');
     $('#mainfore').addClass('mainforeground2');
 
