@@ -118,8 +118,8 @@ function checkdatabaseloaddata(){
     }else  if(json == "1"){
         // alert(json);
         if(document.getElementById("indexdiv")!=null) {
-            $('#indexloadingdata').modal('hide');
-
+           // $('#indexloadingdata').modal('hide');
+            window.plugins.spinnerDialog.hide();
 
             if (devicePlatformfunc == "Android") {
                 $('#modelnewdatabase').modal('show');
@@ -181,9 +181,9 @@ function populateDB1(tx,results) {
     if(row.Count ==0){
 
 
-            $('#indexloadingdata').modal('show');
+           // $('#indexloadingdata').modal('show');
 
-
+        window.plugins.spinnerDialog.show(null, null, true);
         $.when(blankLastUpdatesec()).done(function() {
           // $.when( pushnotifiy()).done(function() {
                // db.transaction(populateDB, errorCBfunc, successCBfunc);
@@ -201,7 +201,8 @@ function populateDB1(tx,results) {
 
              tx.executeSql(sql, [], getchecksync,errorCBfunc);
         }else{
-            $('#indexloadingdata').modal('hide')
+            //$('#indexloadingdata').modal('hide')
+            window.plugins.spinnerDialog.hide();
             db.transaction(getMenusch, errorCBfunc, successCBfunc);
         }
     }
@@ -259,8 +260,8 @@ function getchecksync(tx, results) {
         if (dif >= "600") {
 
 
-                    $('#indexloadingdata').modal('show');
-
+                   // $('#indexloadingdata').modal('show');
+            window.plugins.spinnerDialog.show(null, null, true);
 
 
             var xmlHttp = null;
@@ -295,6 +296,7 @@ function errorclosemodel(){
    // $('#mainfore').removeClass('mainforeground2');
    // $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
+    window.plugins.spinnerDialog.hide();
     if (document.getElementById("indexdiv") != null) {
         showdivindex();
     }
@@ -308,7 +310,7 @@ function closemodel(){
    // alert("close");
 
     $('#indexloadingdata').modal('hide');
-
+    window.plugins.spinnerDialog.hide();
     db.transaction(getoneoff, errorCBfunc, successCBfunc);
 
 
@@ -394,7 +396,7 @@ function getsyncdateload_success2(tx, results) {
 function closemodelarchive(){
 
     $('#indexloadingdata').modal('hide');
-
+    window.plugins.spinnerDialog.hide();
   //  window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
 
 
@@ -406,7 +408,7 @@ function closemodelRegion(){
   //  $('#mainfore').removeClass('mainforeground2');
  //   $('#mainfore').addClass('mainforeground');
     $('#indexloadingdata').modal('hide');
-
+    window.plugins.spinnerDialog.hide();
   //  window.plugins.toast.showLongBottom('Your App is Updated!', function (a) {console.log('toast success: ' + a)}, function (b) {alert('toast error: ' + b)});
     showregion();
 
@@ -415,7 +417,7 @@ function reloadindividual(){
 
 
     $('#indexloadingdata').modal('hide');
-
+    window.plugins.spinnerDialog.hide();
     if (document.getElementById("divschedules") != null) {
         $('#loadinggears').hide();
         db.transaction(getdatasch, errorCBfunc, successCBfunc)
@@ -539,8 +541,8 @@ function onclickloadregion(){
 
 function chooseregionloaddata(ID){
 
-    $('#indexloadingdata').modal('show')
-
+    //$('#indexloadingdata').modal('show')
+    window.plugins.spinnerDialog.show(null, null, true);
 
 
 
@@ -562,7 +564,8 @@ function onclicksyncloaddata(){
     window.setTimeout(function(){
 
 
-    $('#indexloadingdata').modal('show');
+    //$('#indexloadingdata').modal('show');
+        window.plugins.spinnerDialog.show(null, null, true);
     db.transaction(onclicksyncloaddata2, errorCBfunc, successCBfunc);
     }, 1000);
 
@@ -584,7 +587,8 @@ function onclickresync(tx, results) {
     var row = results.rows.item(0);
    // alert(row.syncwifi + " " + networkconnection);
     if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))) {
-        $('#indexloadingdata').modal('show');
+       // $('#indexloadingdata').modal('show');
+        window.plugins.spinnerDialog.show(null, null, true);
        // alert("here1")
         var datemenus = row.datemenus;
         var datenowsecsync = row.Datesecs;
@@ -641,8 +645,8 @@ function loadarchiveyeardata2_sync(tx, results) {
     var row = results.rows.item(0);
 
     if((row.syncwifi ==1 && networkconnection==2) || ((row.syncwifi ==0 &&  networkconnection!=0))) {
-        $('#indexloadingdata').modal('show');
-
+     //   $('#indexloadingdata').modal('show');
+        window.plugins.spinnerDialog.show(null, null, true);
         var datemenus = row.datemenus;
         var datenowsecsync = row.Datesecs;
         var region = row.Region;

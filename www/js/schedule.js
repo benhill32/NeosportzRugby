@@ -64,7 +64,8 @@ function datecheck(d,a){
     if(networkconnectionsch !=0) {
         db.transaction(getgameids, errorCBfunc, successCBfunc);
     }else{
-        $('#indexloadingdata').modal('hide');
+      //  $('#indexloadingdata').modal('hide');
+        window.plugins.spinnerDialog.hide();
         $('#loadinggears').hide();
         db.transaction(getdatasch, errorCBfunc, successCBfunc);
     }
@@ -1237,7 +1238,8 @@ function getpervoiusday(){
         if (networkconnectionsch != 0) {
             db.transaction(getgameids, errorCBfunc, successCBfunc);
         } else {
-            $('#indexloadingdata').modal('hide');
+         //   $('#indexloadingdata').modal('hide');
+            window.plugins.spinnerDialog.hide();
             $('#loadinggears').hide();
             db.transaction(getdatasch, errorCBfunc, successCBfunc);
         }
@@ -1259,7 +1261,8 @@ function getnextday(){
         if (networkconnectionsch != 0) {
             db.transaction(getgameids, errorCBfunc, successCBfunc);
         } else {
-            $('#indexloadingdata').modal('hide');
+           // $('#indexloadingdata').modal('hide');
+            window.plugins.spinnerDialog.hide();
             $('#loadinggears').hide();
             db.transaction(getdatasch, errorCBfunc, successCBfunc);
         }
