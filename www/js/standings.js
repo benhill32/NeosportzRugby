@@ -120,7 +120,7 @@ function getstandings_success(tx, results) {
         var menu = results.rows.item(i);
 
 
-        $('#divstandings').append('<Div align="left" id="divstandings2" ><div class="row">' +
+        $('#divstandings').append('<Div align="left"><div class="row"  id="divstandings2" >' +
             '<Div align="left" id="idteamname" class="score1 col-xs-3 bold" >' + menu.Name + '</Div>' +
             '<Div  id="idgamesp" class="score1 col-xs-1"  >' + menu.Games + '</Div>' +
             '<Div  id="idgamesW" class="score1 col-xs-1"   >' + menu.Won + '</Div>' +
