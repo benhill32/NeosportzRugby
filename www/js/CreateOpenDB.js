@@ -56,6 +56,9 @@ function droptables(tx){
     tx.executeSql('Drop TABLE IF EXISTS MobileApp_POTD ');
     console.log("MobileApp_POTD table is Dropped");
 
+    tx.executeSql('Drop TABLE MobileApp_Scoringapplied ');
+    console.log("MobileApp_Scoringapplied table is Dropped");
+
 }
 
 
@@ -112,7 +115,8 @@ function createDB(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS MobileRegion (ID INTEGER NOT NULL primary key,DeletedateUTC TEXT NULL,Name TEXT NOT NULL)');
     console.log("MobileRegion table is created");
 
-
+    tx.executeSql('CREATE TABLE IF NOT EXISTS MobileApp_Scoringapplied (ID INTEGER NOT NULL primary key,UpdateDateUTC TEXT NULL,CreatedateUTC TEXT NULL,DeletedateUTC TEXT NULL,Name TEXT NULL,ClubID INTEGER NULL,DeviceID TEXT NULL,approved INTEGER NULL )');
+    console.log("MobileApp_Scoringapplied table is created");
 
 }
 
