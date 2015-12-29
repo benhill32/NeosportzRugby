@@ -239,7 +239,7 @@ body {
     margin-bottom: 75px;
     padding-bottom: 75px;
     overflow: auto;
-    width:200%;
+  //  width:200%;
 
     padding-left: 5px;
     padding-right: 30px;
@@ -276,11 +276,11 @@ body {
 }
 #divstandingsheader{
     overflow: auto;
-    width:200%;
+   // width:200%;
 
     padding-left: 5px;
     padding-right: 30px;
-    margin-top: 150px;
+ //   margin-top: 150px;
 
 
 }
