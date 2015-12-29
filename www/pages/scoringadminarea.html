@@ -43,76 +43,79 @@
 </head>
 <body>
 
-<nav id="menu"  style="display: none;" >
+<nav id="menu" style="display: none;">
     <ul>
 
         <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
-        <li><a href="#schedulemenudiv" data-target="#schedulemenudiv"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Schedules</a>
-            <ul id="schedulemenudiv">
+        <li class="bs-callout bs-callout-warning">
 
-
-            </ul>
-
+            <a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a>
 
         </li>
-
-        <li><a href="#resultmenudiv" data-target="#resultmenudiv" ><span class="glyphicon glyphicon-star padding" aria-hidden="true" ></span> Results</a>
-            <ul id="resultmenudiv">
-            </ul>
-        </li>
-
-        <li><a href="#standingsmenudiv" data-target="#standingsmenudiv"><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a>
-            <ul id="standingsmenudiv">
-            </ul>
-        </li>
-        <li><a href="#clubsmenudiv" data-target="#clubsmenudiv"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a>
-            <ul id="clubsmenudiv">
-            </ul>
-        </li>
-
-
-
-
+        <li><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
+        <li><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
         <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
         <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
             <ul id="settingmenudiv">
                 <li><a href="javascript: void(0)">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
-                            <strong> Mobile Data</strong>
+                            <strong>Use Wifi Only</strong>
 
                         </div>
                         <div class="col-xs-6 col-md-4">
-                            <div class="btn-group btn-toggle">
-                                <button id="btnmenu1" class="btn btn-xs btn-default"  onclick="chkmobiledataall('btn1')">ON</button>
-                                <button id="btnmenu2" class="btn btn-xs btn-success"   onclick="chkmobiledataall('btn2')">OFF</button>
-                            </div>
 
+                            <input id="switch-onColor" type="checkbox" data-on-color="info" data-size="small" >
+
+
+
+                            <script>
+
+
+
+                            </script>
                         </div>
 
                     </div>
+
+
                     <div class="row ">
                         <div class="col-xs-12 col-md-12 mainmenuwifi">
-                            <p>Only Sync on a Wi-Fi network</p>
+                            <p>Only Sync's on a Wi-Fi networks</p>
 
                         </div>
                     </div>
                 </a>
                 </li>
-
-                <li><a href="#" id="regioniddiv"  >
+                <li><a href="javascript: void(0)">
                     <div class="row ">
                         <div class="col-xs-6 col-md-4 ">
-                            <strong>Region</strong>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-xs-6 col-md-4 ">
-                            <p id="regionlbl"></p>
-                        </div>
-                    </div>
-                </a></li>
+                            <strong>Apply Filter</strong>
 
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+
+                            <input id="switch-filter" type="checkbox" data-on-color="info" data-size="small" >
+
+
+                            <script>
+
+
+
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 mainmenuwifi">
+                            <p>Only shows your favourite clubs info</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
                 <li><a href="#" id="settingsync"  >
                     <div class="row ">
                         <div class="col-xs-8 col-md-8 ">
@@ -135,7 +138,40 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="#"  id="settingdeleteall" >
+
+                <li><a href="#" data-toggle="modal" data-target="#modelpages">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Starting Page</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12">
+                            <p id="lblstartingpage">Choose your starting page</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+
+
+
+                <li><a href="#" id="regioniddiv" >
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Region</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <p id="regionlbl"></p>
+                        </div>
+                    </div>
+                </a></li>
+
+
+
+                <li><a href="#"  id="settingdeleteall"  >
                     <div class="row ">
                         <div class="col-xs-8 col-md-8 ">
                             <strong>Delete all data & Sync</strong>
@@ -207,6 +243,16 @@
                             </div>
                         </a>
                         </li>
+                        <li id="divloadnews"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/addnewfeed.html')">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Send News Feed
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
                         <li><a href="mailto:helpdesk@neocom.co.nz?Subject=Neosportz Basketball App" >
                             <div class="row ">
                                 <div class="col-xs-8 col-md-8 ">
@@ -216,8 +262,8 @@
 
                         </a>
                         </li>
-                        <li id="scoringreqdiv"><a href="../pages/Scoringrequest.html" >
-                            <div class="row ">
+                        <li id="scoringreqdiv"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/Scoringrequest.html')">
                                 <div class="col-xs-8 col-md-8 ">
                                     Scoring Request
                                 </div>
@@ -235,8 +281,8 @@
                         </a>
                         </li>
 
-                        <li id="divadminarea"><a href="../pages/scoringadminarea.html" >
-                            <div class="row ">
+                        <li id="divadminarea"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/scoringadminarea.html')">
                                 <div class="col-xs-8 col-md-8 ">
                                     Scoring Admin Area
                                 </div>
@@ -255,18 +301,15 @@
             </ul>
         </li>
 
-
-
-
     </ul>
 
 </nav>
-<div class="divmainmenu" >
+<div class="divmainmenu" style="position: fixed;padding-bottom: 20px;" >
 
-<div id="showmenu" style="width:300px;" onclick="$('nav#menu').data( 'mmenu' ).open()">
-    <span class="glyphicon glyphicon-align-justify" aria-hidden="true">   Scoring  Admin Area</span>
+    <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()">
+        <span id="spanmenu" class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;"></span>   Scoring Admin </div>
 
-</div>
+
 </div>
 <div class="container-fluid">
 
