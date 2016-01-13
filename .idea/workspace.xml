@@ -62,6 +62,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3127907">
+              <caret line="1359" column="0" selection-start-line="1359" selection-start-column="0" selection-end-line="1359" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="clubs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/clubs.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -119,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="standings.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="standings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/pages/standings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.019698726">
-              <caret line="219" column="75" selection-start-line="219" selection-start-column="75" selection-end-line="219" selection-end-column="75" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="219" column="42" selection-start-line="219" selection-start-column="36" selection-end-line="219" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#10;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -152,16 +162,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.65384614">
               <caret line="200" column="75" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Help.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/pages/Help.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.192308">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -226,7 +226,6 @@
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
         <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/pages/scoringadminarea.html" />
         <option value="$PROJECT_DIR$/www/pages/help.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
@@ -237,6 +236,7 @@
         <option value="$PROJECT_DIR$/www/pages/scorecard.html" />
         <option value="$PROJECT_DIR$/www/pages/Scoringrequest.html" />
         <option value="$PROJECT_DIR$/www/pages/standings.html" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
       </list>
     </option>
   </component>
@@ -813,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8275862">
-          <caret line="1385" column="10" selection-start-line="1385" selection-start-column="10" selection-end-line="1385" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Scoringrequest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -970,8 +962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/standings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019698726">
-          <caret line="219" column="75" selection-start-line="219" selection-start-column="75" selection-end-line="219" selection-end-column="75" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="219" column="42" selection-start-line="219" selection-start-column="36" selection-end-line="219" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#10;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -981,6 +973,14 @@
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3127907">
+          <caret line="1359" column="0" selection-start-line="1359" selection-start-column="0" selection-end-line="1359" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
