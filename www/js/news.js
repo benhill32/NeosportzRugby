@@ -239,7 +239,7 @@ function getnewfeed_success(tx, results) {
         var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
         var d = new Date(menu.DisplayDateUTC).getDate();
 
-        var m = new Date(menu.DisplayDateUTC).getMonth();
+        var m = new Date(menu.DisplayDateUTC).getMonth() + 1;
         var y = new Date(menu.DisplayDateUTC).getFullYear();
 
 
