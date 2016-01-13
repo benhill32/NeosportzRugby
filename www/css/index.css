@@ -1358,7 +1358,13 @@ overflow-y: scroll !important;
 
 }
 
+#idhelp:active
+{
+   // background-color: #339900;
+    //color: white;
+   // opacity:0.7;
 
+}
 #showmenu{
     padding-left:15px;
     float: left;
