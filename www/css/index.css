@@ -1404,6 +1404,18 @@ overflow-y: scroll !important;
     width:150px;
     color:black;
     min-height:60px;
+
+}
+#showmenumain2{
+
+    z-index: 20;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width:50px;
+    color:black;
+    min-height:60px;
+    font-size: 20px;
 }
 #showmenumain a,a:active, a:focus{
 
