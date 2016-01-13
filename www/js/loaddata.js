@@ -177,7 +177,7 @@ function populateDB1(tx,results) {
     checkonline();
     var row = results.rows.item(0);
  //   alert(row);
-  //  alert(row.Count);
+
     if(row.Count ==0){
 
 

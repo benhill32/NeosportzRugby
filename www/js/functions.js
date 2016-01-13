@@ -1354,7 +1354,7 @@ function fbcheck(ID){
 
 
 function websitecheck(ID){
-    alert(ID);
+   // alert(ID);
     //alert(devicePlatformfunc);
 
 
