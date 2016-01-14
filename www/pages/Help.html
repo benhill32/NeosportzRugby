@@ -12,18 +12,312 @@
 
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="../js/CreateOpenDB.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-switch.js"></script>
+    <script type="text/javascript" src="../cordova.js"  charset="utf-8"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
+
+    <script type="text/javascript" src="../js/loaddata.js"></script>
+    <script type="text/javascript" src="../js/loadnewmenu.js"></script>
+    <link href="../css/bootstrap-switch.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReadyhelp, false);
+        function onDeviceReadyhelp() {
+            db.transaction(getMenusch, errorCBfunc, successCBfunc);
+        }
+
+        $(function(){
+            // Bind the swipeleftHandler callback function to the swipe event on div.box
+
+            $('body').on({
+                'touchmove': function(e) {
+                    $("#scolltop").show();
+                }
+            });
+
+        });
+
+
+
+    </script>
+
 </head>
 <body>
-<div class="divmainmenu">
-    <div id="backicondiv"   onclick="weblink('../pages/settings.html')">
-        <img src="../img/back_off.png"  style="vertical-align:middle;height:20px;">
-    </div>
-    <div class="mainheaderimgicon" onclick="weblink('../pages/settings.html')">
-        <img src="../img/neosportz.png"  style="vertical-align:middle;height:40px;" align="middle">
-        Neosportz Rugby
-    </div>
+<nav id="menu" style="display: none;"   >
+    <ul>
+
+        <li><a href="#" onclick="weblink('../index.html')"> <span class="glyphicon glyphicon-home padding" aria-hidden="true" ></span> Home</a></li>
+        <li >
+
+            <a href="#" onclick="weblink('../pages/schedules.html')"><span class="  glyphicon glyphicon-list-alt padding" aria-hidden="true" ></span>Games</a>
+
+        </li>
+        <li><a href="#standingsmenudiv"  onclick="weblink('../pages/standings.html')" ><span class="glyphicon glyphicon-stats padding" aria-hidden="true" ></span>Standings</a></li>
+        <li class="bs-callout bs-callout-warning"><a href="#clubsmenudiv" onclick="weblink('../pages/clubs.html')"> <span class="glyphicon glyphicon-info-sign padding" aria-hidden="true" ></span>Clubs</a></li>
+        <li><a href="#" onclick="weblink('../pages/news.html')"> <span class="glyphicon glyphicon-comment padding" aria-hidden="true" ></span>News</a></li>
+        <li ><a href="#settingmenudiv"  > <span class=" glyphicon glyphicon-cog padding" aria-hidden="true" ></span>Settings</a>
+            <ul id="settingmenudiv">
+                <li><a href="javascript: void(0)">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Use Wifi Only</strong>
+
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+
+                            <input id="switch-onColor" type="checkbox" data-on-color="info" data-size="small" >
+
+
+
+                            <script>
+
+
+
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 mainmenuwifi">
+                            <p>Only Sync's on a Wi-Fi networks</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+                <li><a href="javascript: void(0)">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Apply Filter</strong>
+
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+
+                            <input id="switch-filter" type="checkbox" data-on-color="info" data-size="small" >
+
+
+                            <script>
+
+
+
+                            </script>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12 mainmenuwifi">
+                            <p>Only shows your favourite clubs info</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+                <li><a href="#" id="settingsync"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Sync</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 mainmenuwifi">
+                            <p>Check for Updates</p>
+
+                        </div>
+                    </div>
+
+                </a></li>
+
+                <li><a href="javascript: void(0)"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 mainmenuwifi">
+                            <p id="lastsyncdate"></p>
+
+                        </div>
+                    </div>
+                </a></li>
+
+                <li><a href="#" data-toggle="modal" data-target="#modelpages">
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Starting Page</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-12 col-md-12">
+                            <p id="lblstartingpage">Choose your starting page</p>
+
+                        </div>
+                    </div>
+                </a>
+                </li>
+
+
+
+
+                <li><a href="#" id="regioniddiv" >
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <strong>Region</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-6 col-md-4 ">
+                            <p id="regionlbl"></p>
+                        </div>
+                    </div>
+                </a></li>
+
+
+
+                <li><a href="#"  id="settingdeleteall"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Delete all data & Sync</strong>
+
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-xs-8  col-sm-3">
+                            <p>Sometimes things just don't go right!.</p>
+
+                        </div>
+                        <div class="col-xs-4  col-sm-3">
+
+                        </div>
+                    </div>
+
+
+
+                </a>
+                </li>
+
+                <li><a href="#" id="idhelp" onclick="weblink('../pages/Help.html')" >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8">
+                            <strong>Application tutorial</strong>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <p>Some handy hints</p>
+                        </div>
+                    </div>
+                </a></li>
+
+
+                <li><a href="#admindata" data-target="#admindata"  >
+                    <div class="row ">
+                        <div class="col-xs-8 col-md-8 ">
+                            <strong>Device & App Info</strong>
+                        </div>
+                    </div>
+
+                </a>
+                    <ul id="admindata">
+                        <li><a href="javascript: void(0)"  >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <strong>Device ID</strong>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <p id="deviceid"></p>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                        <li><a href="javascript: void(0)"  >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <strong>App Version</strong>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    <p id="appversion"></p>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                        <li id="divloadnews"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/addnewfeed.html')">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Send News Feed
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
+                        <li><a href="mailto:helpdesk@neocom.co.nz?Subject=Neosportz Basketball App" >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Send Feedback
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+                        <li id="scoringreqdiv"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/Scoringrequest.html')">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Scoring Request
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+                        <li id="scoringreqdiv2"><a href="javascript: void(0)" >
+                            <div class="row ">
+                                <div class="col-xs-8 col-md-8 " id="scoringreqdiv22">
+                                    Scoring Request <span class='glyphicon glyphicon-ok' aria-hidden='true'></span>
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
+                        <li id="divadminarea"><a href="#" >
+                            <div class="row " onclick="weblink('../pages/scoringadminarea.html')">
+                                <div class="col-xs-8 col-md-8 ">
+                                    Scoring Admin Area
+                                </div>
+                            </div>
+
+                        </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+
+            </ul>
+        </li>
+
+    </ul>
+
+</nav>
+<div class="divmainmenu" >
+
+    <div id="showmenu" onclick="$('nav#menu').data( 'mmenu' ).open()" >
+        <span id="spanmenu" class="glyphicon glyphicon-align-justify" aria-hidden="true" style="display: none;" ></span> App Information </div>
 </div>
+
+
 <div class="container-fluid">
     <div id="divhelp">
     <div align="center">
@@ -83,9 +377,8 @@
         </div>
 </div>
 </div>
-<div class="footer">
-    <img src="../img/neocom.jpg" Height="50px" onclick="URLredirect('http://www.neocom.co.nz')">
-
+<div style="position: fixed; bottom: 0px;right: 0px;display: none;" id="scolltop">
+    <span style=" margin-left: 5%;Height:50px;width:50px;padding-top: 8px;"  class="glyphicon glyphicon-chevron-up" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');"></span>
 </div>
 </body>
 </html>
