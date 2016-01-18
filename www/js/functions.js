@@ -1086,6 +1086,7 @@ function checkversionofapp_success(tx, results) {
     if (appversionlocal == menu.Versionappthen) {
         if(document.getElementById("indexdiv")==null) {
             closemodel();
+
         }else {
 
 
