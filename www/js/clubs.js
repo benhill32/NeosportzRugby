@@ -111,11 +111,13 @@ function getclub_success(tx, results) {
 
     try {
         var regex = /\d{6,10}/g;
+        var emailPattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g;
+
         var contacts = menu.Contacts;
 
         contacts = contacts.replace(regex, "<a href=\"tel:$&\">$&</a>");
 
-
+        contacts = contacts.replace(emailPattern, "<a href=\"mailto:$&\">$&</a>");
        // var numbers = new PhoneNumberParser();
 
        // var contacts = menu.Contacts;
@@ -325,10 +327,14 @@ function getMenu_success(tx, results) {
     try {
   //  var numbers = new PhoneNumberParser();
 
-   var regex = /\d{6,10}/g;
-    var contacts = menu.Contacts;
+        var regex = /\d{6,10}/g;
+        var emailPattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g;
 
-    contacts = contacts.replace(regex, "<a href=\"tel:$&\">$&</a>");
+        var contacts = menu.Contacts;
+
+        contacts = contacts.replace(regex, "<a href=\"tel:$&\">$&</a>");
+
+        contacts = contacts.replace(emailPattern, "<a href=\"mailto:$&\">$&</a>");
 
    // numbers.parse(contacts);
    // var pnumbers = [];
