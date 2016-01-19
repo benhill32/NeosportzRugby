@@ -44,12 +44,12 @@
     <gap:plugin name="org.apache.cordova.core.file-transfer" />
     <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />
     <gap:plugin name="nl.x-services.plugins.calendar" version="4.2.4" />
-    <gap:plugin name="com.phonegap.plugins.pushplugin" source="pgb" />
+    <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />
     <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
     <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
     <gap:plugin name="com.millerjames01.sqlite-plugin" version="1.0.1" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
-    <gap:plugin name="cordova-plugin-admob" source="npm"/>
+   
     <dependency id="cordova-plugin-googleplayservices"/>
     <icon src="../img/neosportz.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
