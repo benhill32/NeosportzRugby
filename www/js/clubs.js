@@ -317,34 +317,38 @@ function getMenu_success(tx, results) {
 
 
     try {
-    var numbers = new PhoneNumberParser();
+  //  var numbers = new PhoneNumberParser();
 
+   var regex = /\d{6,10}/g;
     var contacts = menu.Contacts;
 
-    numbers.parse(contacts);
-    var pnumbers = [];
-    for (i = 0; i < numbers.items.length; i++) {
+    contacts = contacts.replace(regex, "<a href=\"tel:$&\">$&</a>");
+
+   // numbers.parse(contacts);
+   // var pnumbers = [];
+   // for (i = 0; i < numbers.items.length; i++) {
 
 
 
-        if(jQuery.inArray( numbers.items[i], pnumbers ) == "-1") {
-            contacts = contacts.replace(new RegExp(numbers.items[i],'g'),"<a href='tel:" + numbers.items[i] + "'>" + numbers.items[i] + "</a>");
+    //    if(jQuery.inArray( numbers.items[i], pnumbers ) == "-1") {
+    //        contacts = contacts.replace(new RegExp(numbers.items[i],'g'),"<a href='tel:" + numbers.items[i] + "'>" + numbers.items[i] + "</a>");
             //
-            pnumbers.push(numbers.items[i]);
-        }
+    //        pnumbers.push(numbers.items[i]);
+    //    }
 
-    }
-
-
+   // }
 
 
-    var emails = extractEmails(contacts);
-    for (i = 0; i < emails.length; i++) {
-        contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
-    }
+
+
+   // var emails = extractEmails(contacts);
+   // for (i = 0; i < emails.length; i++) {
+   //     contacts = contacts.replace(new RegExp(emails[i],'g'),"<a href='mailto:" + emails[i] + "'>" + emails[i] + "</a>");
+   // }
 
 
     $("#divContacts").append(contacts);
+
     }
     catch(err) {
         $("#divContacts").append(menu.Contacts);
