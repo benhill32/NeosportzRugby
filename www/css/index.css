@@ -760,7 +760,10 @@ body {
    // padding-left: 10px;
    // padding-right: 10px;
 }
+#addnewfeed{
 
+    padding-top: 100px;
+}
 #loadnews{
     height: 50px;
     top: 15px;
