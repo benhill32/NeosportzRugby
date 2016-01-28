@@ -29,20 +29,20 @@
     <preference name="android-minSdkVersion" value="13" />
     <preference name="android-installLocation" value="auto" />
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" spec="1.2.0" source="pgb" />
-    <gap:plugin name="com.darktalker.cordova.screenshot" version="0.1.0" />
-    <gap:plugin name="org.apache.cordova.file"/>
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.core.file-transfer" />
-   <!-- <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />-->
+    <!--  <gap:plugin name="com.darktalker.cordova.screenshot" version="0.1.0" />-->
+   <gap:plugin name="org.apache.cordova.file"/>
+   <gap:plugin name="org.apache.cordova.console" />
+   <gap:plugin name="org.apache.cordova.device" />
+   <gap:plugin name="org.apache.cordova.device-motion" />
+   <gap:plugin name="org.apache.cordova.device-orientation" />
+   <gap:plugin name="org.apache.cordova.dialogs" />
+   <gap:plugin name="org.apache.cordova.globalization" />
+   <gap:plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
+   <gap:plugin name="org.apache.cordova.media" />
+   <gap:plugin name="org.apache.cordova.network-information" />
+   <gap:plugin name="org.apache.cordova.splashscreen" />
+   <gap:plugin name="org.apache.cordova.core.file-transfer" />
+  <!-- <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />-->
     <gap:plugin name="nl.x-services.plugins.calendar" version="4.2.4" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />
     <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
