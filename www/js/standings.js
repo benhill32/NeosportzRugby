@@ -37,7 +37,7 @@ function getfirsttournie_success(tx, results) {
     var len = results.rows.length;
     var menu = results.rows.item(0);
     firstt = menu.TournamentID;
-    //  alert(firstt);
+      alert(firstt);
     db.transaction(getlastttournie, errorCBfunc, successCBfunc);
 }
 
