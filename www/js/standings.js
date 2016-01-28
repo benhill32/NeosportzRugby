@@ -29,24 +29,29 @@ function getfirsttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
     // alert(sql);
-    tx.executeSql(sql, [], getfirsttournie_success,errornotournies);
+    tx.executeSql(sql, [], getfirsttournie_success);
 }
 
-function errornotournies(){
 
-    $("menubartournie").hide();
-    $("menubartournie2").hide();
-
-}
 
 
 
 function getfirsttournie_success(tx, results) {
     var len = results.rows.length;
-    var menu = results.rows.item(0);
-    firstt = menu.TournamentID;
-      alert("dsad");
-    db.transaction(getlastttournie, errorCBfunc, successCBfunc);
+
+    if(len!= 0){
+        var menu = results.rows.item(0);
+        firstt = menu.TournamentID;
+
+        db.transaction(getlastttournie, errorCBfunc, successCBfunc);
+    }else{
+
+        alert("dsad");
+        $("menubartournie").hide();
+        $("menubartournie2").hide();
+    }
+
+
 }
 
 
