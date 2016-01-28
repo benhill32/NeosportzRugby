@@ -29,8 +29,16 @@ function getfirsttournie(tx) {
 
     var sql = "select TournamentID from MobileStandings WHERE DeletedateUTC = 'null' group by TournamentID ORDER BY TournamentID ASC LIMIT 1";
     // alert(sql);
-    tx.executeSql(sql, [], getfirsttournie_success);
+    tx.executeSql(sql, [], getfirsttournie_success,errornotournies);
 }
+
+function errornotournies(){
+
+    $("menubartournie").hide();
+    $("menubartournie2").hide();
+
+}
+
 
 
 function getfirsttournie_success(tx, results) {
