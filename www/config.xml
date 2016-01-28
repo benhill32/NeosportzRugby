@@ -51,7 +51,7 @@
 
     <plugin name="cordova-sqlite-storage" version="v0.7.14" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
-    <!--<gap:plugin name="cordova-plugin-admob" source="npm"/>-->
+    <gap:plugin name="cordova-plugin-admob" source="npm"/>
     <dependency id="cordova-plugin-googleplayservices"/>
     <icon src="../img/neosportz.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
