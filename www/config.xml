@@ -29,7 +29,7 @@
     <preference name="android-minSdkVersion" value="13" />
     <preference name="android-installLocation" value="auto" />
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" spec="1.2.0" source="pgb" />
-    <plugin name="com.darktalker.cordova.screenshot" spec="0.1.0" source="pgb" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="0.1.4" source="npm" />
    <gap:plugin name="org.apache.cordova.file"/>
    <gap:plugin name="org.apache.cordova.console" />
    <gap:plugin name="org.apache.cordova.device" />
