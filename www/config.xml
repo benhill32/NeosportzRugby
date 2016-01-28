@@ -9,7 +9,7 @@
     </author>
     <preference name="iosExtraFilesystems" value="cache" />
     <preference name="permissions" value="none" />
-    <preference name="phonegap-version" value="cli-5.1.1" />
+    <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="Fullscreen" value="true" />
@@ -29,29 +29,27 @@
     <preference name="android-minSdkVersion" value="13" />
     <preference name="android-installLocation" value="auto" />
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" spec="1.2.0" source="pgb" />
-    <plugin name="com.darktalker.cordova.screenshot" spec="0.1.4" source="npm" />
-   <gap:plugin name="org.apache.cordova.file"/>
-   <gap:plugin name="org.apache.cordova.console" />
-   <gap:plugin name="org.apache.cordova.device" />
-   <gap:plugin name="org.apache.cordova.device-motion" />
-   <gap:plugin name="org.apache.cordova.device-orientation" />
-   <gap:plugin name="org.apache.cordova.dialogs" />
-   <gap:plugin name="org.apache.cordova.globalization" />
-   <gap:plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
-   <gap:plugin name="org.apache.cordova.media" />
-   <gap:plugin name="org.apache.cordova.network-information" />
-   <gap:plugin name="org.apache.cordova.splashscreen" />
-   <gap:plugin name="org.apache.cordova.core.file-transfer" />
-    <plugin name="org.devgeeks.canvas2imageplugin" spec="0.6.0" source="pgb" />
+    <gap:plugin name="com.darktalker.cordova.screenshot" version="0.1.0" />
+    <gap:plugin name="org.apache.cordova.file"/>
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.core.file-transfer" />
+    <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.6.0" />
     <gap:plugin name="nl.x-services.plugins.calendar" version="4.2.4" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />
     <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
     <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
- <!--   <plugin name="com.millerjames01.sqlite-plugin" spec="1.0.1" source="pgb" />-->
-
-    <plugin name="cordova-sqlite-storage" version="v0.7.14" />
+    <gap:plugin name="com.millerjames01.sqlite-plugin" version="1.0.1" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
-    <gap:plugin name="cordova-plugin-admob" source="npm"/>
+  <!--<gap:plugin name="cordova-plugin-admob" source="npm"/>-->
     <dependency id="cordova-plugin-googleplayservices"/>
     <icon src="../img/neosportz.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
