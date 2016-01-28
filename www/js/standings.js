@@ -47,8 +47,8 @@ function getfirsttournie_success(tx, results) {
     }else{
 
         alert("dsad");
-        $("menubartournie").hide();
-        $("menubartournie2").hide();
+        $("#menubartournie").hide();
+        $("#menubartournie2").hide();
     }
 
 
