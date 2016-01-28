@@ -46,7 +46,6 @@ function getfirsttournie_success(tx, results) {
         db.transaction(getlastttournie, errorCBfunc, successCBfunc);
     }else{
 
-        alert("dsad");
         $("#menubartournie").hide();
         $("#menubartournie2").hide();
     }
