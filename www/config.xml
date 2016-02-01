@@ -49,7 +49,7 @@
     <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
     <gap:plugin name="com.millerjames01.sqlite-plugin" version="1.0.1" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
-  <gap:plugin name="cordova-plugin-admob" source="npm"/>
+    <gap:plugin name="com.google.cordova.admob" source="npm"/>
     <dependency id="cordova-plugin-googleplayservices"/>
     <icon src="../img/neosportz.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
