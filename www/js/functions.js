@@ -232,6 +232,7 @@ function runadmob(){
        position:AdMob.AD_POSITION.BOTTOM_CENTER,
         autoShow:true} );
 
+
 }
 
 function passscoretoserverscorecard(testvar){

@@ -56,6 +56,7 @@ function getoneoff2_success(tx, results) {
 
         runadmob();
 
+
         window.setTimeout(function(){
             window.location.href= splashpage;
         }, 3000);
