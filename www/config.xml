@@ -18,7 +18,6 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="BackupWebStorage" value="none"/>
     <preference name="StatusBarOverlaysWebView" value="true" />
-
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
@@ -28,6 +27,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="android-build-tool" value="gradle" />
     <gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" spec="1.2.0" source="pgb" />
     <gap:plugin name="com.darktalker.cordova.screenshot" version="0.1.0" />
     <gap:plugin name="org.apache.cordova.file"/>
