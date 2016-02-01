@@ -124,7 +124,7 @@ function getbackground2_error(err) {
    runadmob();
     window.setTimeout(function(){
         window.location.href="../index.html";
-    }, 1000);
+    }, 3000);
 
 }
 
@@ -134,7 +134,7 @@ function getbackground_error(err) {
     runadmob();
     window.setTimeout(function(){
         window.location.href="../index.html";
-    }, 1000);
+    }, 3000);
 
 
 }
