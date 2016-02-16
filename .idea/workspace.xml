@@ -67,12 +67,13 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25348836">
-              <caret line="876" column="8" selection-start-line="876" selection-start-column="8" selection-end-line="876" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.56860465">
+              <caret line="1066" column="32" selection-start-line="1066" selection-start-column="32" selection-end-line="1066" selection-end-column="32" />
               <folding>
                 <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
                 <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+                <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
                 <element signature="n#!!block;n#CleanDB#0" expanded="false" />
               </folding>
             </state>
@@ -880,12 +881,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25348836">
-          <caret line="876" column="8" selection-start-line="876" selection-start-column="8" selection-end-line="876" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.56860465">
+          <caret line="1066" column="32" selection-start-line="1066" selection-start-column="32" selection-end-line="1066" selection-end-column="32" />
           <folding>
             <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
             <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
             <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
             <element signature="n#!!block;n#CleanDB#0" expanded="false" />
           </folding>
         </state>
