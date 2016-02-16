@@ -44,8 +44,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-96.0">
-              <caret line="871" column="75" selection-start-line="871" selection-start-column="75" selection-end-line="871" selection-end-column="75" />
+            <state vertical-scroll-proportion="-38.551723">
+              <caret line="878" column="3" selection-start-line="878" selection-start-column="3" selection-end-line="878" selection-end-column="3" />
               <folding>
                 <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
@@ -70,8 +70,8 @@
       <file leaf-file-name="loadnewmenu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.965517">
-              <caret line="110" column="26" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="31" />
+            <state vertical-scroll-proportion="-12.206897">
+              <caret line="110" column="24" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -123,8 +123,8 @@
       <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56242967">
-              <caret line="617" column="22" selection-start-line="617" selection-start-column="22" selection-end-line="617" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.7536558">
+              <caret line="617" column="10" selection-start-line="617" selection-start-column="10" selection-end-line="617" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -865,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-96.0">
-          <caret line="871" column="75" selection-start-line="871" selection-start-column="75" selection-end-line="871" selection-end-column="75" />
+        <state vertical-scroll-proportion="-38.551723">
+          <caret line="878" column="3" selection-start-line="878" selection-start-column="3" selection-end-line="878" selection-end-column="3" />
           <folding>
             <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
             <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
@@ -879,16 +879,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.965517">
-          <caret line="110" column="26" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="31" />
+        <state vertical-scroll-proportion="-12.206897">
+          <caret line="110" column="24" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56242967">
-          <caret line="617" column="22" selection-start-line="617" selection-start-column="22" selection-end-line="617" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.7536558">
+          <caret line="617" column="10" selection-start-line="617" selection-start-column="10" selection-end-line="617" selection-end-column="10" />
           <folding />
         </state>
       </provider>

@@ -615,7 +615,7 @@ function onclickresync(tx, results) {
             errorclosemodel();
         } else {
             var obj = JSON.parse(json);
-            alert(json);
+        //    alert(json);
             syncmaintables(obj,yearnow);
         }
 

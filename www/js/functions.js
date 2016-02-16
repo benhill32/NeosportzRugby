@@ -876,10 +876,7 @@ function syncmaintables(obj,year){
 
 
     $.each(obj.vwApp_News_v_2, function (idx, obj) {
-        alert("vwApp_News_v_2");
-
-
-        if (obj.DeletedateUTC == null) {
+           if (obj.DeletedateUTC == null) {
 
             db.transaction(function (tx) {
                 tx.executeSql('INSERT OR IGNORE INTO MobilevwApp_News_v_2(ID,_id,UpdateDateUTC,Title,Body,ClubID,TeamID,Hide,IsAd,Base64,URL,Hint,DisplayDateUTC,DisplaySecondsUTC,DeletedateUTC,FromPhone) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.UpdateDateUTC + '","' + obj.Title + '","' + obj.Body + '",' + obj.ClubID + ',"' + obj.TeamID + '","' + obj.Hide + '","' + obj.IsAd + '","' + obj.Base64 + '","' + obj.URL + '","' + obj.Hint + '","' + obj.DisplayDateUTC + '","' + obj.DisplaySecondsUTC + '","' + obj.DeletedateUTC + '","' + obj.FromPhone + '")');
@@ -1068,7 +1065,7 @@ function syncmaintables(obj,year){
             tx.executeSql('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ',allownewfeed= ' + obj.allownewfeed + ',allowcancel= ' + obj.allowcancel + ',allowscore= ' + obj.allowscore + ',Clubedit= ' + obj.Clubedit + ',Ref= ' + obj.Ref + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '",Versionappthen ="' + obj.Appversionlatest + '",Database =' + obj.Database + ',oneoffs = 0');
             //  console.log("Update INTO MobileApp_LastUpdatesec " + Math.round((timenow/1000)));
             //  alert('Update MobileApp_LastUpdatesec set isadmin= ' + obj.Isadmin + ', Datesecs = "' + Math.round((timenow/1000)) + '",datemenus= "' + datenow1 + '"');
-           alert("ISadmin sql");
+
             db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
 
 
