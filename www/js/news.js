@@ -87,13 +87,13 @@ function checkonlinenews(){
 
 function numbersponsers(tx) {
     var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow");
-     alert(sql);
+     //alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
 function numbersponsers_success(tx, results) {
     var len = results.rows.length;
-    alert(len);
+   // alert(len);
 
     var random = Math.floor((Math.random() * len) + 1);
     var menu = results.rows.item(random-1);
