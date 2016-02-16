@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-38.551723">
-              <caret line="878" column="3" selection-start-line="878" selection-start-column="3" selection-end-line="878" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.23372093">
+              <caret line="876" column="0" selection-start-line="876" selection-start-column="0" selection-end-line="876" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
                 <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
@@ -120,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loaddata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7536558">
+            <state vertical-scroll-proportion="0.0">
               <caret line="617" column="10" selection-start-line="617" selection-start-column="10" selection-end-line="617" selection-end-column="10" />
               <folding />
             </state>
@@ -211,8 +211,8 @@
         <option value="$PROJECT_DIR$/www/js/splashscreen.js" />
         <option value="$PROJECT_DIR$/www/js/mainindex.js" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/www/js/loaddata.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
       </list>
     </option>
   </component>
@@ -863,20 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.551723">
-          <caret line="878" column="3" selection-start-line="878" selection-start-column="3" selection-end-line="878" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
-            <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
-            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
-            <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
-            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loadnewmenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.206897">
@@ -887,9 +873,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/loaddata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7536558">
+        <state vertical-scroll-proportion="0.0">
           <caret line="617" column="10" selection-start-line="617" selection-start-column="10" selection-end-line="617" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23372093">
+          <caret line="876" column="0" selection-start-line="876" selection-start-column="0" selection-end-line="876" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#sendinfotoserverPYOD#0" expanded="false" />
+            <element signature="n#!!block;n#updatemenutables#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintablesregions#0" expanded="false" />
+            <element signature="n#!!block;n#syncmaintableindividual#0" expanded="false" />
+            <element signature="n#!!block;n#CleanDB#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
