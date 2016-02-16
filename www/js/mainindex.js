@@ -354,9 +354,9 @@ function chooseregion(ID){
 
    // $('#indexloadingdata').modal('show')
     window.plugins.spinnerDialog.show(null, null, true);
-    $('#mainfore').removeClass('mainforeground');
-    $('#mainfore').addClass('mainforeground2');
-    $('#mainbackground').hide();
+   // $('#mainfore').removeClass('mainforeground');
+  //  $('#mainfore').addClass('mainforeground2');
+  //  $('#mainbackground').hide();
 
     db.transaction(function(tx) {
         tx.executeSql('Update MobileApp_LastUpdatesec set  Region = "' + ID + '"');

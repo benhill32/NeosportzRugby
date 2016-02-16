@@ -86,7 +86,7 @@ function checkonlinenews(){
 
 function numbersponsers(tx) {
     var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
-    // alert(sql);
+     alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
@@ -97,7 +97,7 @@ function numbersponsers_success(tx, results) {
 
     var check = is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow") + '/' + menu.Base64);
 
-
+alert(len);
 
 
     if(len != 0) {
