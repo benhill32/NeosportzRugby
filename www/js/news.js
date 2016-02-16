@@ -31,7 +31,7 @@ function onDeviceReadynews() {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
          //   $('#loadinggears').show();
-            alert("here");
+
             window.plugins.spinnerDialog.show(null, null, true);
             window.localStorage.setItem("newfeesactive", 0);
             db.transaction(numbersponsers, errorCBfunc, successCBfunc);
@@ -86,19 +86,21 @@ function checkonlinenews(){
 
 
 function numbersponsers(tx) {
-    var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow") + " and DeletedateUTC = 'null'";
+    var sql = "select * from Mobilesponsorsclub where Club=" + window.localStorage.getItem("teamfollow");
      alert(sql);
     tx.executeSql(sql, [], numbersponsers_success);
 }
 
 function numbersponsers_success(tx, results) {
     var len = results.rows.length;
+    alert(len);
+
     var random = Math.floor((Math.random() * len) + 1);
     var menu = results.rows.item(random-1);
 
     var check = is_cached('http://rugby.neosportz.com/Sponsors/Clubs/' +  window.localStorage.getItem("teamfollow") + '/' + menu.Base64);
 
-    alert(len);
+
 
 
     if(len != 0) {
