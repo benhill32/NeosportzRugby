@@ -782,7 +782,7 @@ function syncmaintables(obj,year){
 
 
     $.each(obj.App_Games, function (idx, obj) {
-alert("App_Games");
+        alert("App_Games");
         if(obj.DeletedateUTC == null){
           //  alert('INSERT OR IGNORE INTO App_Games(ID,_id,DatetimeStart,HomeName,AwayName,Field,Latitude,Longitude,DivisionID ,DivisionName,HomeRegionID,AwayRegionID,HomeClubID,AwayClubID,HomeTeamID,AwayTeamID,HomeScore ,AwayScore ,UpdateDateUTC ,TournamentName,TournamentID ,DatetimeStartSeconds ,DivisionOrderID,ShowToAll,Semi,Final,Cancelled,DeletedateUTC,halftime ,fulltime ,IsFinalScore,RefName,DefaultHome,DefaultAway,HBonus1,HBonus2,ABonus1,ABonus2 ) VALUES (' + obj.ID + ',' + obj._id + ',"' + obj.DatetimeStart + '","' + obj.HomeName + '","' + obj.AwayName + '","' + obj.Field + '","' + obj.Latitude + '","' + obj.Longitude + '", ' + obj.DivisionID + ',"' + obj.DivisionName + '", ' + obj.HomeRegionID + ', ' + obj.AwayRegionID + ', ' + obj.HomeClubID + ', ' + obj.AwayClubID + ', ' + obj.HomeTeamID + ', ' + obj.AwayTeamID + ', ' + obj.HomeScore + ',' + obj.AwayScore + ' , "' + obj.UpdateDateUTC + '", "' + obj.TournamentName + '",' + obj.TournamentID + ', "' + obj.DatetimeStartSeconds + '",' + obj.DivisionOrderID + ',' + obj.ShowToAll + ',' + obj.Semi + ',' + obj.Final + ',' + obj.Cancelled + ',"' + obj.DeletedateUTC + '","' + obj.halftime + '","' + obj.fulltime + '",' + obj.IsFinalScore + ',"' + obj.RefName + '", ' + obj.DefaultHome + ',' + obj.DefaultAway +',' + obj.HBonus1 + ',' + obj.HBonus2 + ',' + obj.ABonus1 + ',' + obj.ABonus2 + ')');
             db.transaction(function (tx) {
@@ -877,7 +877,7 @@ alert("App_Games");
 
     $.each(obj.vwApp_News_v_2, function (idx, obj) {
         alert("vwApp_News_v_2");
-      
+
 
         if (obj.DeletedateUTC == null) {
 
