@@ -30,7 +30,7 @@ function onDeviceReadynews() {
     if( window.localStorage.getItem("teamfollow") != 0) {
 
         if( window.localStorage.getItem("teamnewfeed") !=0) {
-         //   $('#loadinggears').show();
+         //               $('#loadinggears').show();
 
             window.plugins.spinnerDialog.show(null, null, true);
             window.localStorage.setItem("newfeesactive", 0);
@@ -160,7 +160,7 @@ function getfirstnew(tx) {
 
 function getfirstnew_success(tx, results) {
 
-    var len = results.rows.length;
+        var len = results.rows.length;
 
 
 
@@ -169,7 +169,7 @@ if(len == 0){
 
 }else{
 
-    var menu = results.rows.item(0);
+       var menu = results.rows.item(0);
     firstnews = menu.ID;
 
 

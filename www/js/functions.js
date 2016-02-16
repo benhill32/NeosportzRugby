@@ -882,6 +882,7 @@ function syncmaintables(obj,year){
             db.transaction(function (tx) {
                 var sql = 'UPDATE MobilevwApp_News_v_2 SET UpdateDateUTC = "' + obj.UpdateDateUTC + '", Title = "' + obj.Title + '", Body = "' + obj.Body + '", ClubID = ' + obj.ClubID + ', TeamID = "' + obj.TeamID + '",Hide = "' + obj.Hide + '",IsAd = "' + obj.IsAd + '",Base64 = "' + obj.Base64 + '",URL = "' + obj.URL + '",Hint = "' + obj.Hint + '",DisplayDateUTC = "' + obj.DisplayDateUTC + '",DisplaySecondsUTC = "' + obj.DisplaySecondsUTC + '",DeletedateUTC = "' + obj.DeletedateUTC + '",FromPhone = "' + obj.FromPhone + '" where ID = ' + obj.ID;
                 tx.executeSql(sql);
+                alert(sql);
             });
 
         }else{
