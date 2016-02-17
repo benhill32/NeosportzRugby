@@ -23,6 +23,21 @@
 
     <!--<link href="../Bootstrap/css/docs.min.css" rel="stylesheet">-->
     <title></title>
+    <script>
+        var date = "2016-02-18 07:46:24.190";
+
+        var targetTime = new Date(date);
+        var timeZoneFromDB = -13.00; //time zone value from database
+        //get the timezone offset from local time in minutes
+        var tzDifference = targetTime.getTimezoneOffset();
+       // alert(targetTime);
+        //convert the offset to milliseconds, add to targetTime, and make a new Date
+        var offsetTime = new Date(targetTime.getTime() + tzDifference * 60 * 1000);
+       // alert(offsetTime);
+    </script>
+
+
+
     <script type="text/javascript"  charset="utf-8">
         $.mobile.loading().hide();
         document.addEventListener("deviceready", onDeviceReadynew2, false);

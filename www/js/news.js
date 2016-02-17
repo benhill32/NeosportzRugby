@@ -241,9 +241,11 @@ function getnewfeed_success(tx, results) {
 
         var bbb = new Date(menu.DisplayDateUTC)
 
-        alert(bbb.getTimezoneOffset());
+        var tzDifference = bbb.getTimezoneOffset();
 
-        var newdate = new Date(menu.DisplayDateUTC.valueOf() - (bbb.getTimezoneOffset() * 60000))
+
+
+        var newdate = new Date(bbb.getTime() + (tzDifference * 60000))
 
         alert(newdate);
 
