@@ -243,13 +243,7 @@ function getnewfeed_success(tx, results) {
 
         var tzDifference = bbb.getTimezoneOffset();
 
-
-
         var newdate = new Date(bbb.getTime() + (tzDifference * 60000))
-
-        alert(newdate);
-
-
 
         var day = getfulldaynew(newdate.getDay());
 
