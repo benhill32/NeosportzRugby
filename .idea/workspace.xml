@@ -95,8 +95,8 @@
       <file leaf-file-name="news.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80697674">
-              <caret line="248" column="8" selection-start-line="248" selection-start-column="8" selection-end-line="248" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.6883721">
+              <caret line="245" column="96" selection-start-line="245" selection-start-column="96" selection-end-line="245" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -461,7 +461,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26845238" sideWeight="0.62704474" order="0" side_tool="false" content_ui="combo" />
@@ -897,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80697674">
-          <caret line="248" column="8" selection-start-line="248" selection-start-column="8" selection-end-line="248" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.6883721">
+          <caret line="245" column="96" selection-start-line="245" selection-start-column="96" selection-end-line="245" selection-end-column="96" />
           <folding />
         </state>
       </provider>
