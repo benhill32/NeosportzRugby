@@ -243,10 +243,12 @@ function getnewfeed_success(tx, results) {
 
         alert(bbb.getTimezoneOffset());
 
+        var newdate = new Date(menu.DisplayDateUTC.valueOf() + bbb.getTimezoneOffset() * 60000)
 
+        alert(newdate);
+        
 
-        alert(bbb);
-        alert(bbb.getDay());
+        //alert(bbb.getDay());
         var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
 
         var d = new Date(menu.DisplayDateUTC).getDate();
