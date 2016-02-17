@@ -240,6 +240,11 @@ function getnewfeed_success(tx, results) {
         var menu = results.rows.item(0);
 
         var bbb = new Date(menu.DisplayDateUTC)
+
+        alert(bbb.getTimezoneOffset());
+
+
+
         alert(bbb);
         alert(bbb.getDay());
         var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
