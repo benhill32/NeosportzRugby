@@ -239,7 +239,11 @@ function getnewfeed_success(tx, results) {
 
         var menu = results.rows.item(0);
 
+        var bbb = new Date(menu.DisplayDateUTC)
+        alert(bbb);
+        alert(bbb.getDay());
         var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
+
         var d = new Date(menu.DisplayDateUTC).getDate();
 
         var m = new Date(menu.DisplayDateUTC).getMonth() + 1;
