@@ -250,13 +250,13 @@ function getnewfeed_success(tx, results) {
         alert(newdate);
 
 
-        //alert(bbb.getDay());
-        var day = getfulldaynew(new Date(menu.DisplayDateUTC).getDay());
 
-        var d = new Date(menu.DisplayDateUTC).getDate();
+        var day = getfulldaynew(newdate.getDay());
 
-        var m = new Date(menu.DisplayDateUTC).getMonth() + 1;
-        var y = new Date(menu.DisplayDateUTC).getFullYear();
+        var d = newdate.getDate();
+
+        var m = newdate.getMonth() + 1;
+        var y = newdate.getFullYear();
 
 
 
