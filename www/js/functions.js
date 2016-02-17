@@ -14,7 +14,7 @@ var typesend = "";
 var divisionsend = "";
 var clubsend = "";
 var teamsend = "";
-var appversionlocal = '2.1';
+var appversionlocal = '2.11';
 var teamfollow = 0;
 var admobid = {};
 var allowscore = 0;
@@ -1125,11 +1125,12 @@ function checkversionofapp_success(tx, results) {
         window.plugins.spinnerDialog.hide();
             if (devicePlatformfunc == "Android")
             {
+                window.plugins.spinnerDialog.hide();
                 $('#modelnewversion').modal('show');
             }
             else if (devicePlatformfunc == "iOS")
             {
-
+                window.plugins.spinnerDialog.hide();
                 $('#modelnewversionapple').modal('show');
             }
 
