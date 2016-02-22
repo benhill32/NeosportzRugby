@@ -222,7 +222,7 @@ function getMenu_success(tx, results) {
         var array = window.localStorage.getItem("clubarray").split(",");
         var homeimage= "no_image.png";
         var awayimage = "no_image.png";
-
+alert(array);
         $.each(array,function(i){
            // alert(array[i]);
 
