@@ -71,6 +71,12 @@ function datecheck(d,a){
     }
 
 
+    $('#showmenumain2').click(function() {
+        URLredirect('http://rugby.neosportz.com/Rules/Rules' + window.localStorage.getItem("Region") + '.pdf')
+    });
+
+
+
 }
 
 
@@ -222,7 +228,7 @@ function getMenu_success(tx, results) {
         var array = window.localStorage.getItem("clubarray").split(",");
         var homeimage= "no_image.png";
         var awayimage = "no_image.png";
-alert(array);
+//alert(array);
         $.each(array,function(i){
            // alert(array[i]);
 
