@@ -259,7 +259,7 @@ function getchecksync(tx, results) {
 
 
 
-        if (dif >= "600") {
+       // if (dif >= "600") {
 
 
                    // $('#indexloadingdata').modal('show');
@@ -285,12 +285,12 @@ function getchecksync(tx, results) {
 
             syncmaintables(obj,yearnow);
             }
-        }else{
+      //  }else{
 
-            db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
+        //    db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
            // db.transaction(getMenusch, errorCBfunc, successCBfunc);
-
-        }
+//
+       // }
 
 }
 
