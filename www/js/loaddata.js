@@ -203,6 +203,8 @@ function populateDB1(tx,results) {
         }else{
             //$('#indexloadingdata').modal('hide')
             window.plugins.spinnerDialog.hide();
+
+
             db.transaction(getMenusch, errorCBfunc, successCBfunc);
         }
     }
@@ -285,8 +287,8 @@ function getchecksync(tx, results) {
             }
         }else{
 
-
-            db.transaction(getMenusch, errorCBfunc, successCBfunc);
+            db.transaction(checkversionofapp, errorCBfunc, successCBfunc);
+           // db.transaction(getMenusch, errorCBfunc, successCBfunc);
 
         }
 
